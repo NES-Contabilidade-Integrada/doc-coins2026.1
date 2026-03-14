@@ -18,6 +18,22 @@ plugins:
       enable_creation_date: true
       type: datetime
 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
 nav:
   - Início: index.md
   - Arquitetura:
@@ -46,9 +62,13 @@ nav:
       - Cronograma: gerencia-projeto/cronograma.md
       - Riscos: gerencia-projeto/riscos.md
   - DevOps:
-      - Pipeline: devops/pipeline.md
-      - Infraestrutura: devops/infraestrutura.md
-      - Deploy: devops/deploy.md
+      - Visão Geral: devops/visao-geral.md
+      - Modelo de Ramificação: devops/modelo-ramificacao.md
+      - Versionamento: devops/versionamento.md
+      - Padrao de Commits: devops/padrao-commits.md
+      - Fluxo: devops/fluxo.md
+      - DoD: devops/dod.md
+      - CI/CD: devops/ci-cd.md
   - Decisões:
       - ADR 001 - Escolha de Arquitetura: decisoes/adr-001-escolha-arquitetura.md
       - ADR 002 - Escolha de Banco: decisoes/adr-002-escolha-banco.md
