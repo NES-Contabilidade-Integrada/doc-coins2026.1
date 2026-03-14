@@ -5,15 +5,28 @@ Repositório destinado à documentação técnica e acompanhamento do sistema.
 ## Link da Documentação
 
 
-## 🛠️ Como contribuir para a Documentação
-Para editar ou visualizar a documentação localmente:
+## 🚀 Como Executar Localmente
 
-1. **Crie o ambiente virtual:** `python3 -m venv .venv`
-2. **Ative:** `source .venv/bin/activate`
-3. **Instale as dependências:** `pip install -r requirements.txt` (Dica: crie esse arquivo com o comando `pip freeze > requirements.txt`)
-4. **Suba o servidor local:** `mkdocs serve`
-5. Acesse: `http://127.0.0.1:8000`
+1. **Clonar o Repositório:**
+   ```bash
+   git clone https://github.com/NES-Contabilidade-Integrada/doc-coins2026.1
+   cd doc-coins2026.1
+   ```
 
-## 🚀 Gerência de Configuração e Deploy
-- **Branch Principal:** `main` (estável)
-- **Deploy:** Automático via GitHub Actions para o GitHub Pages a cada merge na `main`.
+2. **Criar e Ativar o Ambiente:**
+   - **No Ubuntu / Linux:**
+     ```bash
+     python3 -m venv .venv
+     source .venv/bin/activate
+     ```
+   - **No Windows (PowerShell):**
+     ```powershell
+     python -m venv .venv
+     .\.venv\Scripts\Activate.ps1
+     ```
+
+3. **Instalar Dependências e Rodar:**
+   ```bash
+   pip install -r requirements.txt
+   mkdocs serve
+   ```

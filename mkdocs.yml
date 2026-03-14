@@ -1,1 +1,15 @@
-site_name: COINS 2026.1
+site_name: COINS NES 2026.1
+theme:
+  name: material 
+
+plugins:
+  - search
+  - awesome-pages
+  - minify
+  - mermaid2
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: datetime
+
+nav:
+  - Início: index.md
