@@ -1,6 +1,13 @@
 site_name: COINS NES 2026.1
 theme:
-  name: material 
+  name: material
+  language: pt-BR
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - content.code.annotate
 
 plugins:
   - search
@@ -13,3 +20,36 @@ plugins:
 
 nav:
   - Início: index.md
+  - Arquitetura:
+      - Visão Geral: arquitetura/visao-geral.md
+      - Diagramas: arquitetura/diagramas.md
+      - Decisões Arquiteturais: arquitetura/decisoes-arquiteturais.md
+  - Requisitos:
+      - Visão do Produto: requisitos/visao-produto.md
+      - Requisitos Funcionais: requisitos/requisitos-funcionais.md
+      - Requisitos Não Funcionais: requisitos/requisitos-nao-funcionais.md
+      - Histórias de Usuário: requisitos/historias-usuario.md
+  - Banco de Dados:
+      - Modelo Conceitual: banco-de-dados/modelo-conceitual.md
+      - Modelo Lógico: banco-de-dados/modelo-logico.md
+      - Dicionário de Dados: banco-de-dados/dicionario-dados.md
+  - IHC:
+      - Personas: ihc/personas.md
+      - Jornada do Usuário: ihc/jornada-usuario.md
+      - Protótipos: ihc/prototipos.md
+  - Qualidade e Testes:
+      - Estratégia de Testes: qualidade-testes/estrategia-testes.md
+      - Casos de Teste: qualidade-testes/casos-teste.md
+      - Cobertura: qualidade-testes/cobertura.md
+  - Gerência de Projeto:
+      - Planejamento: gerencia-projeto/planejamento.md
+      - Cronograma: gerencia-projeto/cronograma.md
+      - Riscos: gerencia-projeto/riscos.md
+  - DevOps:
+      - Pipeline: devops/pipeline.md
+      - Infraestrutura: devops/infraestrutura.md
+      - Deploy: devops/deploy.md
+  - Decisões:
+      - ADR 001 - Escolha de Arquitetura: decisoes/adr-001-escolha-arquitetura.md
+      - ADR 002 - Escolha de Banco: decisoes/adr-002-escolha-banco.md
+      - ADR Template: decisoes/adr-template.md
