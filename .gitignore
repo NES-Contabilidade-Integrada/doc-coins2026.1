@@ -1,0 +1,22 @@
+# Ambiente Virtual
+.venv/
+venv/
+env/
+ENV/
+
+# MkDocs - Pasta onde o site final é gerado
+/site/
+
+# Python - Arquivos de cache e compilados
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.tox/
+
+# Variáveis de Ambiente (Segurança)
+.env
+
+# Arquivos do Sistema
+.DS_Store
+Thumbs.db   
