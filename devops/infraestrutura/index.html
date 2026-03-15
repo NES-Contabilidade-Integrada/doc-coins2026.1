@@ -1584,46 +1584,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#relatorio-do-atual-ci" class="md-nav__link">
+  <a href="#instrucoes-do-copilot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Relatório do Atual CI:
+        Instruções do Copilot
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Relatório do Atual CI:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pull-requests" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pull Requests
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#push" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Push
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcionalidades-e-aplicações" class="md-nav__link">
+  <a href="#funcionalidades-e-aplicacoes" class="md-nav__link">
     <span class="md-ellipsis">
       
         Funcionalidades e Aplicações
@@ -1634,7 +1606,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#integração-no-fluxo-de-trabalho" class="md-nav__link">
+  <a href="#integracao-no-fluxo-de-trabalho" class="md-nav__link">
     <span class="md-ellipsis">
       
         Integração no Fluxo de Trabalho
@@ -1830,46 +1802,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#relatorio-do-atual-ci" class="md-nav__link">
+  <a href="#instrucoes-do-copilot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Relatório do Atual CI:
+        Instruções do Copilot
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Relatório do Atual CI:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pull-requests" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pull Requests
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#push" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Push
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcionalidades-e-aplicações" class="md-nav__link">
+  <a href="#funcionalidades-e-aplicacoes" class="md-nav__link">
     <span class="md-ellipsis">
       
         Funcionalidades e Aplicações
@@ -1880,7 +1824,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#integração-no-fluxo-de-trabalho" class="md-nav__link">
+  <a href="#integracao-no-fluxo-de-trabalho" class="md-nav__link">
     <span class="md-ellipsis">
       
         Integração no Fluxo de Trabalho
@@ -1908,7 +1852,9 @@
 
 
 <h1 id="infraestrutura">Infraestrutura</h1>
-<h2 id="relatorio-do-atual-ci"><strong>Relatório do Atual CI:</strong></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Pipeline CI</label><label for="__tabbed_1_2">Revisão do Copilot</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>A pipeline de CI possui os seguintes objetivos:</p>
 <ul>
 <li>Executar <strong>testes automatizados</strong> do backend.</li>
@@ -1916,8 +1862,8 @@
 <li>Fornecer <strong>feedback automático em Pull Requests</strong>.</li>
 <li>Impedir integração de código que <strong>não atenda aos critérios de qualidade</strong>.</li>
 </ul>
-<p>A pipeline é acionada automaticamente nas seguintes situações:</p>
-<h3 id="pull-requests">Pull Requests</h3>
+<p><strong>A pipeline é acionada nas seguintes situações:</strong></p>
+<p><strong>1. Pull Requests</strong></p>
 <p>Executada quando um Pull Request é aberto ou atualizado para as branches:</p>
 <div class="highlight"><pre><span></span><code>main
 develop
@@ -1930,37 +1876,36 @@ my-app/package-lock.json
 my-app/jest.config.js
 .github/workflows/ci.yml
 </code></pre></div>
-<h3 id="push">Push</h3>
+<p><strong>2. Push</strong></p>
 <p>Executada automaticamente quando ocorre push direto nas branches:</p>
 <div class="highlight"><pre><span></span><code>main
 develop
 </code></pre></div>
+</div>
+<div class="tabbed-block">
 <p>O GitHub Copilot foi integrado ao processo de desenvolvimento do sistema COINS com o objetivo de aprimorar a qualidade do código e aumentar a eficiência das revisões técnicas. A ferramenta atua como um mecanismo complementar de análise automatizada, auxiliando na identificação de problemas e na manutenção dos padrões estabelecidos neste documento.</p>
-<ol>
-<li><strong>Instruções do copilot</strong></li>
-<li>
-<p><a href="https://docs.google.com/document/d/1Wp_bDh5UTZ9743nyTy1MNr-uIZD0SD_iqtQQkKMoLZ8/edit?usp=sharing">Instruções</a></p>
-</li>
-<li>
-<h2 id="funcionalidades-e-aplicações"><strong>Funcionalidades e Aplicações</strong></h2>
-</li>
-</ol>
+<h2 id="instrucoes-do-copilot">Instruções do Copilot</h2>
+<ul>
+<li><a href="https://docs.google.com/document/d/1Wp_bDh5UTZ9743nyTy1MNr-uIZD0SD_iqtQQkKMoLZ8/edit?usp=sharing">Instruções</a></li>
+</ul>
+<h2 id="funcionalidades-e-aplicacoes">Funcionalidades e Aplicações</h2>
 <p>O Copilot desempenha as seguintes funções no ciclo de desenvolvimento:</p>
 <ul>
-<li><strong>Análise de Código em Tempo Real</strong>: Identifica erros de sintaxe, más práticas e potenciais bugs durante a escrita do código;</li>
-<li><strong>Conformidade com Padrões</strong>: Auxilia na aplicação das convenções de nomenclatura e estruturação definidas (camelCase, PascalCase, SCREAMING_SNAKE_CASE);</li>
-<li><strong>Detecção de Vulnerabilidades</strong>: Identifica possíveis falhas de segurança e práticas inseguras no código;</li>
-<li><strong>Sugestões de Refatoração</strong>: Propõe melhorias de legibilidade, performance e manutenibilidade do código; e</li>
-<li>
-<p><strong>Suporte à Documentação</strong>: Sugere aprimoramentos em comentários e documentação quando aplicável.</p>
-</li>
-<li>
-<h2 id="integração-no-fluxo-de-trabalho"><strong>Integração no Fluxo de Trabalho</strong></h2>
-</li>
+<li><strong>Análise de Código em Tempo Real</strong>: Identifica erros de sintaxe, más práticas e potenciais bugs durante a escrita do código.</li>
+<li><strong>Conformidade com Padrões</strong>: Auxilia na aplicação das convenções de nomenclatura e estruturação definidas (camelCase, PascalCase, SCREAMING_SNAKE_CASE).</li>
+<li><strong>Detecção de Vulnerabilidades</strong>: Identifica possíveis falhas de segurança e práticas inseguras no código.</li>
+<li><strong>Sugestões de Refatoração</strong>: Propõe melhorias de legibilidade, performance e manutenibilidade do código.</li>
+<li><strong>Suporte à Documentação</strong>: Sugere aprimoramentos em comentários e documentação quando aplicável.</li>
 </ul>
+<h2 id="integracao-no-fluxo-de-trabalho">Integração no Fluxo de Trabalho</h2>
 <p>A ferramenta Copilot está disponível nas seguintes etapas do processo de desenvolvimento:</p>
-<p><strong>Fase de Desenvolvimento</strong>: Oferece sugestões e autocomplete durante a codificação</p>
-<p><strong>Pull Request</strong>: Atua como recurso adicional de verificação antes da revisão formal</p>
+<ul>
+<li><strong>Fase de Desenvolvimento</strong>: Oferece sugestões e autocomplete durante a codificação.</li>
+<li><strong>Pull Request</strong>: Atua como recurso adicional de verificação antes da revisão formal.</li>
+</ul>
+</div>
+</div>
+</div>
 
 
 
@@ -1983,7 +1928,7 @@ develop
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="14 de março de 2026 22:41:53 UTC">14 de março de 2026 22:41:53</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="15 de março de 2026 01:01:09 UTC">15 de março de 2026 01:01:09</span>
   </span>
 
     
@@ -1993,7 +1938,7 @@ develop
     <span class="md-icon" title="Criado em">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="14 de março de 2026 22:41:53 UTC">14 de março de 2026 22:41:53</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="14 de março de 2026 21:03:11 UTC">14 de março de 2026 21:03:11</span>
   </span>
 
     
