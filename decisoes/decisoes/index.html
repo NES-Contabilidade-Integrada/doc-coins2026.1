@@ -12,7 +12,7 @@
         <link rel="prev" href="../../devops/infraestrutura/">
       
       
-        <link rel="next" href="../adr-002-escolha-banco/">
+        <link rel="next" href="../rd-template/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>ADR 001 - Escolha de Arquitetura - COINS NES 2026.1</title>
+        <title>Diário de Decisões - COINS NES 2026.1</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adr-001-escolha-da-arquitetura" class="md-skip">
+        <a href="#diario-de-decisoes-rds" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ADR 001 - Escolha de Arquitetura
+              Diário de Decisões
             
           </span>
         </div>
@@ -1620,6 +1620,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário de Decisões
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1627,7 +1645,7 @@
   <span class="md-ellipsis">
     
   
-    ADR 001 - Escolha de Arquitetura
+    Diário de Decisões
   
 
     
@@ -1636,6 +1654,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sumario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sumário
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rd-001-adicoes-nas-diretrizes-de-gerencia-de-configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RD 001 — Adições nas Diretrizes de Gerência de Configuração
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rd-002-reavaliacao-da-terminologia-de-agrupamento-de-funcionalidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RD 002 — Reavaliação da Terminologia de Agrupamento de Funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rd-003-modelo-de-descoberta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RD 003 — Modelo de Descoberta
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1649,42 +1730,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../adr-002-escolha-banco/" class="md-nav__link">
+      <a href="../rd-template/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    ADR 002 - Escolha de Banco
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../adr-template/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    ADR Template
+    Template de RD
   
 
     
@@ -1725,6 +1778,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sumario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sumário
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rd-001-adicoes-nas-diretrizes-de-gerencia-de-configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RD 001 — Adições nas Diretrizes de Gerência de Configuração
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rd-002-reavaliacao-da-terminologia-de-agrupamento-de-funcionalidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RD 002 — Reavaliação da Terminologia de Agrupamento de Funcionalidades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rd-003-modelo-de-descoberta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RD 003 — Modelo de Descoberta
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1740,7 +1845,89 @@
 
 
 
-<h1 id="adr-001-escolha-da-arquitetura">ADR 001: Escolha da Arquitetura</h1>
+<h1 id="diario-de-decisoes-rds">Diário de Decisões (RDs)</h1>
+<p>Este documento centraliza todos os registros de decisões de processo do projeto COINS.</p>
+<h2 id="sumario">Sumário</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Título</th>
+<th>Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#rd-001--adições-nas-diretrizes-de-gerência-de-configuração">RD 001</a></td>
+<td>Adições nas Diretrizes de Gerência de Configuração</td>
+<td>2026-03-14</td>
+</tr>
+<tr>
+<td><a href="#rd-002--reavaliação-da-terminologia-de-agrupamento-de-funcionalidades">RD 002</a></td>
+<td>Reavaliação da Terminologia de Agrupamento de Funcionalidades</td>
+<td>2026-03-14</td>
+</tr>
+<tr>
+<td><a href="#rd-003--modelo-de-descoberta">RD 003</a></td>
+<td>Modelo de Descoberta</td>
+<td>2026-03-14</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Para registrar uma nova decisão, consulte o <a href="../rd-template/">Template de RD</a>.</p>
+</blockquote>
+<hr />
+<h2 id="rd-001-adicoes-nas-diretrizes-de-gerencia-de-configuracao">RD 001 — Adições nas Diretrizes de Gerência de Configuração</h2>
+<ul>
+<li><strong>Data:</strong> 2026-03-09</li>
+<li><strong>Decisores:</strong> Equipe de DevOps</li>
+</ul>
+<h4 id="contexto">Contexto</h4>
+<p>Após revisão dos documentos que constavam informações relevantes para Gerência de Configuração, foram anotadas possíveis mudanças que a pessoa responsável gostaria de fazer.
+A equipe se reuniu para discussão da melhor decisão, abrangendo <strong>Modelo de Ramificação</strong>, <strong>Modelo de Commits</strong>, <strong>Versionamento</strong> e <strong>Fluxo de Trabalho</strong> no GitHub.</p>
+<h4 id="decisao">Decisão</h4>
+<p>Foi decidido continuar com o modelo já utilizado no projeto anteriormente, pois se encaixa na forma de trabalho prevista pela equipe. Porém, foi identificada a falta de algumas informações e, para uma estrutura clara e bem definida, as informações faltantes foram adicionadas:</p>
+<ol>
+<li><strong>Definição do Versionamento</strong> — Foram adicionadas instruções sobre a criação de <strong>Tags</strong> das versões das branches <strong>Releases</strong> e <strong>Main</strong>.</li>
+<li><strong>Fluxo com Homologação do QA</strong> — Foi definido que o QA realizará as homologações das features novas dentro da branch <strong>develop</strong>.</li>
+</ol>
+<h4 id="consequencias">Consequências</h4>
+<ul>
+<li>Processo de versionamento mais claro e rastreável com uso de tags.</li>
+<li>Homologações centralizadas na branch <code>develop</code>, deixando a branch <code>release</code> estável para homologação com proponete.</li>
+</ul>
+<hr />
+<h2 id="rd-002-reavaliacao-da-terminologia-de-agrupamento-de-funcionalidades">RD 002 — Reavaliação da Terminologia de Agrupamento de Funcionalidades</h2>
+<ul>
+<li><strong>Data:</strong> 2026-03-10</li>
+<li><strong>Decisores:</strong> Equipe COINS 2026.1</li>
+</ul>
+<h4 id="contexto_1">Contexto</h4>
+<p>O documento de Encerramento de Projeto do ciclo anterior continha uma sugestão para reavaliar a terminologia utilizada para agrupamento de funcionalidades.</p>
+<p>O termo <strong>"épico"</strong> foi empregado como forma de agrupar conjuntos de funcionalidades, porém, no contexto de metodologias ágeis, "épico" pressupõe a existência de histórias de usuário derivadas, o que não foi adotado nesta iniciativa. Isso gerava imprecisão conceitual na comunicação da equipe e na documentação do projeto.</p>
+<h4 id="decisao_1">Decisão</h4>
+<p>Adotamos o termo <strong>"Módulo"</strong> para agrupamento de funcionalidades, em substituição ao termo "épico", garantindo maior precisão conceitual alinhada ao modelo de desenvolvimento utilizado.</p>
+<h4 id="consequencias_1">Consequências</h4>
+<ul>
+<li>Terminologia mais precisa e coerente com a forma de trabalho da equipe.</li>
+<li>Maior clareza para equipes futuras ao interpretar a documentação e o backlog do projeto.</li>
+</ul>
+<hr />
+<h2 id="rd-003-modelo-de-descoberta">RD 003 — Modelo de Descoberta</h2>
+<ul>
+<li><strong>Data:</strong> 2026-03-10</li>
+<li><strong>Decisores:</strong> Equipe COINS 2026.1</li>
+</ul>
+<h4 id="contexto_2">Contexto</h4>
+<p>Após uma apresentação para o grupo sobre possíveis modelos para levantamento de requisitos, foram avaliadas diversas técnicas e métodos. As opções consideradas, juntamente com suas vantagens e desvantagens, podem ser visualizadas no <a href="https://miro.com/app/board/uXjVG0HEXeY=/?share_link_id=578964212735">board do Miro</a>.</p>
+<h4 id="decisao_2">Decisão</h4>
+<p>Foi decidido adotar o método de <strong>Entrevistas</strong> para o levantamento de requisitos do projeto.</p>
+<h4 id="consequencias_2">Consequências</h4>
+<ul>
+<li>Coleta de requisitos mais direcionada e aprofundada com os stakeholders.</li>
+<li>Maior clareza sobre as necessidades reais dos usuários e do proponente.</li>
+</ul>
 
 
 
@@ -1763,7 +1950,7 @@
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="14 de março de 2026 21:03:11 UTC">14 de março de 2026 21:03:11</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="15 de março de 2026 01:30:51 UTC">15 de março de 2026 01:30:51</span>
   </span>
 
     
@@ -1773,7 +1960,7 @@
     <span class="md-icon" title="Criado em">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="14 de março de 2026 21:03:11 UTC">14 de março de 2026 21:03:11</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="15 de março de 2026 01:30:51 UTC">15 de março de 2026 01:30:51</span>
   </span>
 
     
