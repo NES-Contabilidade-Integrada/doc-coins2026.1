@@ -4,6 +4,7 @@ Repositório destinado à documentação técnica e acompanhamento do sistema.
 
 ## Link da Documentação
 
+https://nes-contabilidade-integrada.github.io/doc-coins2026.1/
 
 ## 🚀 Como Executar Localmente
 
