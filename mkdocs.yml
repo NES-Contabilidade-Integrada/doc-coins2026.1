@@ -20,6 +20,8 @@ plugins:
 
 markdown_extensions:
   - admonition
+  - toc:
+      toc_depth: 3
   - pymdownx.details
   - pymdownx.superfences:
       custom_fences:
@@ -70,6 +72,5 @@ nav:
       - DoD: devops/dod.md
       - CI/CD: devops/infraestrutura.md
   - Decisões:
-      - ADR 001 - Escolha de Arquitetura: decisoes/adr-001-escolha-arquitetura.md
-      - ADR 002 - Escolha de Banco: decisoes/adr-002-escolha-banco.md
-      - ADR Template: decisoes/adr-template.md
+      - Diário de Decisões: decisoes/decisoes.md
+      - Template de RD: decisoes/rd-template.md

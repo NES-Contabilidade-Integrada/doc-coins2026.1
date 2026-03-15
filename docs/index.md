@@ -13,7 +13,7 @@ Abaixo estão os artefatos técnicos organizados por disciplina:
 - **[Qualidade e Testes](qualidade-testes/estrategia-testes.md)**: Estratégias de testes, relatórios de cobertura e métricas de qualidade.
 - **[Gerência de Projeto](gerencia-projeto/planejamento.md)**: Planejamento (Cronograma, Backlog, Atos de Reunião).
 - **[DevOps](devops/infraestrutura.md)**: Esteira de CI/CD, infraestrutura e processos de deploy.
-- **[Decisões (ADRs)](decisoes/adr-template.md)**: Registros de decisões arquiteturais.
+- **[Decisões (RDs)](decisoes/decisoes.md)**: Registros de decisões de processo do projeto.
 
 ---
 
