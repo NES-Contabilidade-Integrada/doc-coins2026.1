@@ -1739,10 +1739,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#custos-e-despesas-saldo-devedor" class="md-nav__link">
+  <a href="#custosdespesas-saldo-devedor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Custos e Despesas (saldo devedor)
+        Custos/Despesas (saldo devedor)
       
     </span>
   </a>
@@ -1856,54 +1856,57 @@
 
 <h1 id="regras-da-apuracao-de-resultado">🧾 Regras da Apuração de Resultado</h1>
 <h2 id="1-objetivo">🎯 1. Objetivo</h2>
-<p>Encerrar (zerar) todas as contas de resultado (Receitas, Custos e Despesas) e transferir seus saldos para a conta de Apuração do Resultado (ARE), apurando o lucro ou prejuízo do período.</p>
+<p>Encerrar (zerar) todas as contas de resultado (Receitas e Custos/Despesas) e transferir seus saldos para a conta de Apuração do Resultado (ARE), apurando o lucro ou prejuízo do período.</p>
 <hr />
 <h2 id="2-contas-consideradas">📊 2. Contas consideradas</h2>
-<p>Contas de resultado:
+<p><strong>Contas de resultado:</strong>
 - Receitas (natureza credora)
-- Custos (natureza devedora)
-- Despesas (natureza devedora)</p>
-<p>Não participam da apuração:
+- Custos/Despesas (natureza devedora)</p>
+<p><strong>Não participam da apuração:</strong>
 - Ativo
 - Passivo
 - Patrimônio Líquido (exceto no encerramento final)</p>
 <hr />
 <h2 id="3-regra-principal">🔄 3. Regra principal</h2>
-<p>Após a execução da apuração:
+<p>Após a apuração:
 - Todas as contas de resultado devem ficar com saldo igual a zero
 - A conta ARE deve refletir temporariamente o resultado do período</p>
 <hr />
 <h2 id="4-encerramento-das-contas">💰 4. Encerramento das contas</h2>
 <h3 id="receitas-saldo-credor">Receitas (saldo credor)</h3>
-<p>Para cada conta de receita:
-- Debitar a conta de Receita (para zerar)
-- Creditar a conta ARE</p>
+<p>Para cada conta de receita:</p>
+<ul>
+<li><strong>Debitar a conta de Receita pelo valor total do saldo (para zerar)</strong></li>
+<li><strong>Creditar a conta ARE pelo mesmo valor</strong></li>
+</ul>
 <p>Lançamento:
-<div class="highlight"><pre><span></span><code>D - Receita
+<div class="highlight"><pre><span></span><code>D - Receita (valor total da conta)
 C - Apuração do Resultado (ARE)
 </code></pre></div></p>
 <hr />
-<h3 id="custos-e-despesas-saldo-devedor">Custos e Despesas (saldo devedor)</h3>
-<p>Para cada conta de custo ou despesa:
-- Creditar a conta de Custo/Despesa (para zerar)
-- Debitar a conta ARE</p>
+<h3 id="custosdespesas-saldo-devedor">Custos/Despesas (saldo devedor)</h3>
+<p>Para cada conta de custo/despesa:</p>
+<ul>
+<li><strong>Creditar a conta de Custo/Despesa pelo valor total do saldo (para zerar)</strong></li>
+<li><strong>Debitar a conta ARE pelo mesmo valor</strong></li>
+</ul>
 <p>Lançamento:
 <div class="highlight"><pre><span></span><code>D - Apuração do Resultado (ARE)
-C - Custo/Despesa
+C - Custos/Despesas (valor total da conta)
 </code></pre></div></p>
 <hr />
 <h2 id="5-apuracao-do-resultado-na-are">📈 5. Apuração do resultado na ARE</h2>
 <p>Após o encerramento:</p>
 <ul>
-<li>Se o saldo da ARE for credor → houve lucro</li>
-<li>Se o saldo da ARE for devedor → houve prejuízo</li>
+<li>Se o saldo da ARE for credor → Lucro</li>
+<li>Se o saldo da ARE for devedor → Prejuízo</li>
 </ul>
 <hr />
 <h2 id="6-transferencia-do-resultado">🧾 6. Transferência do resultado</h2>
 <h3 id="caso-haja-lucro-are-com-saldo-credor">Caso haja lucro (ARE com saldo credor)</h3>
 <ul>
-<li>Debitar a ARE (zerando a conta)</li>
-<li>Creditar Lucros Acumulados (Patrimônio Líquido)</li>
+<li><strong>Debitar a ARE pelo valor total do lucro (zerando a conta)</strong></li>
+<li><strong>Creditar Lucros Acumulados pelo mesmo valor</strong></li>
 </ul>
 <div class="highlight"><pre><span></span><code>D - Apuração do Resultado (ARE)
 C - Lucros Acumulados
@@ -1911,8 +1914,8 @@ C - Lucros Acumulados
 <hr />
 <h3 id="caso-haja-prejuizo-are-com-saldo-devedor">Caso haja prejuízo (ARE com saldo devedor)</h3>
 <ul>
-<li>Creditar a ARE (zerando a conta)</li>
-<li>Debitar Prejuízos Acumulados (Patrimônio Líquido)</li>
+<li><strong>Creditar a ARE pelo valor total do prejuízo (zerando a conta)</strong></li>
+<li><strong>Debitar Prejuízos Acumulados pelo mesmo valor</strong></li>
 </ul>
 <div class="highlight"><pre><span></span><code>D - Prejuízos Acumulados
 C - Apuração do Resultado (ARE)
@@ -1923,7 +1926,7 @@ C - Apuração do Resultado (ARE)
 <ul>
 <li>Todas as contas de resultado = 0</li>
 <li>Conta ARE = 0</li>
-<li>Resultado transferido para o Patrimônio Líquido</li>
+<li>Resultado transferido para o Patrimônio Líquido:</li>
 <li>Lucros Acumulados ou</li>
 <li>Prejuízos Acumulados</li>
 </ul>
@@ -1931,25 +1934,25 @@ C - Apuração do Resultado (ARE)
 <h2 id="8-validacoes-do-sistema">⚠️ 8. Validações do sistema</h2>
 <p>Antes de permitir a apuração:</p>
 <ul>
-<li>Todos os lançamentos devem estar balanceados (débitos = créditos)</li>
-<li>Todas as contas devem possuir classificação correta (Receita, Custo ou Despesa)</li>
-<li>O período de apuração deve estar definido</li>
-<li>Não deve haver inconsistências contábeis</li>
+<li>Débitos = Créditos (balanço consistente)</li>
+<li>Todas as contas possuem classificação correta</li>
+<li>Período definido</li>
+<li>Sem inconsistências contábeis</li>
 </ul>
 <hr />
 <h2 id="9-regra-logica-para-implementacao">🧠 9. Regra lógica (para implementação)</h2>
 <div class="highlight"><pre><span></span><code>Para cada conta de Receita:
-    debitar conta
+    debitar pelo valor total
     creditar ARE
 
-Para cada conta de Custo/Despesa:
-    creditar conta
+Para cada conta de Custos/Despesas:
+    creditar pelo valor total
     debitar ARE
 
-Se saldo ARE &gt; 0 (credor):
+Se saldo ARE for credor:
     transferir para Lucros Acumulados
 
-Se saldo ARE &lt; 0 (devedor):
+Se saldo ARE for devedor:
     transferir para Prejuízos Acumulados
 </code></pre></div>
 
@@ -1974,7 +1977,7 @@ Se saldo ARE &lt; 0 (devedor):
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="25 de março de 2026 23:41:51 UTC">25 de março de 2026 23:41:51</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="25 de março de 2026 23:53:22 UTC">25 de março de 2026 23:53:22</span>
   </span>
 
     
