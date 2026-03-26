@@ -1728,10 +1728,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#receitas-saldo-credor" class="md-nav__link">
+  <a href="#receitas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Receitas (saldo credor)
+        Receitas
       
     </span>
   </a>
@@ -1739,10 +1739,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#custosdespesas-saldo-devedor" class="md-nav__link">
+  <a href="#custosdespesas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Custos/Despesas (saldo devedor)
+        Custos/Despesas
       
     </span>
   </a>
@@ -1870,27 +1870,43 @@
 <h2 id="3-regra-principal">🔄 3. Regra principal</h2>
 <p>Após a apuração:
 - Todas as contas de resultado devem ficar com saldo igual a zero
-- A conta ARE deve refletir temporariamente o resultado do período</p>
+- A conta ARE deve refletir <em>temporariamente</em> o resultado do período, pois é uma conta transitória</p>
 <hr />
 <h2 id="4-encerramento-das-contas">💰 4. Encerramento das contas</h2>
-<h3 id="receitas-saldo-credor">Receitas (saldo credor)</h3>
+<h3 id="receitas">Receitas</h3>
 <p>Para cada conta de receita:</p>
 <ul>
-<li><strong>Debitar a conta de Receita pelo valor total do saldo (para zerar)</strong></li>
-<li><strong>Creditar a conta ARE pelo mesmo valor</strong></li>
+<li><strong>Se o saldo for credor (normal):</strong></li>
+<li>Debitar a conta de Receita pelo valor total</li>
+<li>
+<p>Creditar a conta ARE</p>
+</li>
+<li>
+<p><strong>Se o saldo for devedor (invertido):</strong></p>
+</li>
+<li>Creditar a conta de Receita pelo valor total</li>
+<li>Debitar a conta ARE</li>
 </ul>
-<p>Lançamento:
+<p>Lançamento (caso padrão):
 <div class="highlight"><pre><span></span><code>D - Receita (valor total da conta)
 C - Apuração do Resultado (ARE)
 </code></pre></div></p>
 <hr />
-<h3 id="custosdespesas-saldo-devedor">Custos/Despesas (saldo devedor)</h3>
+<h3 id="custosdespesas">Custos/Despesas</h3>
 <p>Para cada conta de custo/despesa:</p>
 <ul>
-<li><strong>Creditar a conta de Custo/Despesa pelo valor total do saldo (para zerar)</strong></li>
-<li><strong>Debitar a conta ARE pelo mesmo valor</strong></li>
+<li><strong>Se o saldo for devedor (normal):</strong></li>
+<li>Creditar a conta de Custo/Despesa pelo valor total</li>
+<li>
+<p>Debitar a conta ARE</p>
+</li>
+<li>
+<p><strong>Se o saldo for credor (invertido):</strong></p>
+</li>
+<li>Debitar a conta de Custo/Despesa pelo valor total</li>
+<li>Creditar a conta ARE</li>
 </ul>
-<p>Lançamento:
+<p>Lançamento (caso padrão):
 <div class="highlight"><pre><span></span><code>D - Apuração do Resultado (ARE)
 C - Custos/Despesas (valor total da conta)
 </code></pre></div></p>
@@ -1942,12 +1958,20 @@ C - Apuração do Resultado (ARE)
 <hr />
 <h2 id="9-regra-logica-para-implementacao">🧠 9. Regra lógica (para implementação)</h2>
 <div class="highlight"><pre><span></span><code>Para cada conta de Receita:
-    debitar pelo valor total
-    creditar ARE
+    if saldo &gt; 0 (credor):
+        debitar conta
+        creditar ARE
+    else:
+        creditar conta
+        debitar ARE
 
 Para cada conta de Custos/Despesas:
-    creditar pelo valor total
-    debitar ARE
+    if saldo &gt; 0 (devedor):
+        creditar conta
+        debitar ARE
+    else:
+        debitar conta
+        creditar ARE
 
 Se saldo ARE for credor:
     transferir para Lucros Acumulados
@@ -1977,7 +2001,7 @@ Se saldo ARE for devedor:
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="25 de março de 2026 23:53:22 UTC">25 de março de 2026 23:53:22</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="26 de março de 2026 00:09:40 UTC">26 de março de 2026 00:09:40</span>
   </span>
 
     
