@@ -21,20 +21,25 @@ Encerrar (zerar) todas as contas de resultado (Receitas e Custos/Despesas) e tra
 ## 🔄 3. Regra principal
 Após a apuração:
 - Todas as contas de resultado devem ficar com saldo igual a zero
-- A conta ARE deve refletir temporariamente o resultado do período
+- A conta ARE deve refletir *temporariamente* o resultado do período, pois é uma conta transitória
 
 ---
 
 ## 💰 4. Encerramento das contas
 
-### Receitas (saldo credor)
+### Receitas
 
 Para cada conta de receita:
 
-- **Debitar a conta de Receita pelo valor total do saldo (para zerar)**
-- **Creditar a conta ARE pelo mesmo valor**
+- **Se o saldo for credor (normal):**
+  - Debitar a conta de Receita pelo valor total
+  - Creditar a conta ARE
 
-Lançamento:
+- **Se o saldo for devedor (invertido):**
+  - Creditar a conta de Receita pelo valor total
+  - Debitar a conta ARE
+
+Lançamento (caso padrão):
 ```
 D - Receita (valor total da conta)
 C - Apuração do Resultado (ARE)
@@ -42,14 +47,19 @@ C - Apuração do Resultado (ARE)
 
 ---
 
-### Custos/Despesas (saldo devedor)
+### Custos/Despesas
 
 Para cada conta de custo/despesa:
 
-- **Creditar a conta de Custo/Despesa pelo valor total do saldo (para zerar)**
-- **Debitar a conta ARE pelo mesmo valor**
+- **Se o saldo for devedor (normal):**
+  - Creditar a conta de Custo/Despesa pelo valor total
+  - Debitar a conta ARE
 
-Lançamento:
+- **Se o saldo for credor (invertido):**
+  - Debitar a conta de Custo/Despesa pelo valor total
+  - Creditar a conta ARE
+
+Lançamento (caso padrão):
 ```
 D - Apuração do Resultado (ARE)
 C - Custos/Despesas (valor total da conta)
@@ -119,12 +129,20 @@ Antes de permitir a apuração:
 
 ```
 Para cada conta de Receita:
-    debitar pelo valor total
-    creditar ARE
+    if saldo > 0 (credor):
+        debitar conta
+        creditar ARE
+    else:
+        creditar conta
+        debitar ARE
 
 Para cada conta de Custos/Despesas:
-    creditar pelo valor total
-    debitar ARE
+    if saldo > 0 (devedor):
+        creditar conta
+        debitar ARE
+    else:
+        debitar conta
+        creditar ARE
 
 Se saldo ARE for credor:
     transferir para Lucros Acumulados
