@@ -1,152 +1,166 @@
 # 🧾 Regras da Apuração de Resultado
 
 ## 🎯 1. Objetivo
-Encerrar (zerar) todas as contas de resultado (Receitas e Custos/Despesas) e transferir seus saldos para a conta de Apuração do Resultado (ARE), apurando o lucro ou prejuízo do período.
+Encerrar (zerar) todas as contas de resultado e apurar o resultado do período:
+
+- Receitas → natureza credora  
+- Custos/Despesas → natureza devedora  
+
+Transferir tudo para a conta:
+**Apuração do Resultado (ARE)**
 
 ---
 
-## 📊 2. Contas consideradas
+## 📊 2. Escopo da apuração
 
-**Contas de resultado:**
-- Receitas (natureza credora)
-- Custos/Despesas (natureza devedora)
+### ✔️ Participam:
+- Contas de Receita  
+- Contas de Custos/Despesas  
 
-**Não participam da apuração:**
-- Ativo
-- Passivo
-- Patrimônio Líquido (exceto no encerramento final)
+### ❌ Não participam:
+- Ativo  
+- Passivo  
+- Patrimônio Líquido (exceto no encerramento final)  
 
 ---
 
-## 🔄 3. Regra principal
+## 📅 3. Regra de período
+
+- A apuração usa uma **data final (data da apuração)**  
+- Considera **todos os lançamentos até essa data**  
+- A data inicial é:
+  → **dia seguinte da última apuração**
+
+Se nunca houve apuração:
+→ considera todos os lançamentos históricos
+
+---
+
+## 🔄 4. Regra principal
+
 Após a apuração:
-- Todas as contas de resultado devem ficar com saldo igual a zero
-- A conta ARE deve refletir *temporariamente* o resultado do período, pois é uma conta transitória
+
+- Todas as contas de resultado devem ficar = **0**
+- A conta ARE:
+  - acumula temporariamente o resultado
+  - depois também deve ser zerada
 
 ---
 
-## 💰 4. Encerramento das contas
+## 💰 5. Encerramento das contas
 
-### Receitas
+### 🟢 Receitas
 
-Para cada conta de receita:
-
-- **Se o saldo for credor (normal):**
-  - Debitar a conta de Receita pelo valor total
-  - Creditar a conta ARE
-
-- **Se o saldo for devedor (invertido):**
-  - Creditar a conta de Receita pelo valor total
-  - Debitar a conta ARE
-
-Lançamento (caso padrão):
-```
-D - Receita (valor total da conta)
-C - Apuração do Resultado (ARE)
-```
+| Situação | Lançamento |
+|--------|-----------|
+| Saldo credor (normal) | D Receita / C ARE |
+| Saldo devedor (invertido) | C Receita / D ARE |
 
 ---
 
-### Custos/Despesas
+### 🔴 Custos/Despesas
 
-Para cada conta de custo/despesa:
-
-- **Se o saldo for devedor (normal):**
-  - Creditar a conta de Custo/Despesa pelo valor total
-  - Debitar a conta ARE
-
-- **Se o saldo for credor (invertido):**
-  - Debitar a conta de Custo/Despesa pelo valor total
-  - Creditar a conta ARE
-
-Lançamento (caso padrão):
-```
-D - Apuração do Resultado (ARE)
-C - Custos/Despesas (valor total da conta)
-```
+| Situação | Lançamento |
+|--------|-----------|
+| Saldo devedor (normal) | D ARE / C Custo |
+| Saldo credor (invertido) | D Custo / C ARE |
 
 ---
 
-## 📈 5. Apuração do resultado na ARE
+## 📈 6. Apuração do resultado (ARE)
 
 Após o encerramento:
 
-- Se o saldo da ARE for credor → Lucro
-- Se o saldo da ARE for devedor → Prejuízo
+- ARE credor → **Lucro**
+- ARE devedor → **Prejuízo**
 
 ---
 
-## 🧾 6. Transferência do resultado
+## 🧾 7. Transferência do resultado
 
-### Caso haja lucro (ARE com saldo credor)
+### 🟢 Caso Lucro (ARE credor)
 
-- **Debitar a ARE pelo valor total do lucro (zerando a conta)**
-- **Creditar Lucros Acumulados pelo mesmo valor**
-
-```
-D - Apuração do Resultado (ARE)
-C - Lucros Acumulados
-```
+D - ARE  
+C - Lucros Acumulados  
 
 ---
 
-### Caso haja prejuízo (ARE com saldo devedor)
+### 🔴 Caso Prejuízo (ARE devedor)
 
-- **Creditar a ARE pelo valor total do prejuízo (zerando a conta)**
-- **Debitar Prejuízos Acumulados pelo mesmo valor**
-
-```
-D - Prejuízos Acumulados
-C - Apuração do Resultado (ARE)
-```
+D - Prejuízos Acumulados  
+C - ARE  
 
 ---
 
-## ✅ 7. Estado final esperado
+## ✅ 8. Estado final esperado
 
 Após a apuração:
 
-- Todas as contas de resultado = 0
-- Conta ARE = 0
-- Resultado transferido para o Patrimônio Líquido:
-  - Lucros Acumulados ou
-  - Prejuízos Acumulados
+- Contas de Receita = 0  
+- Contas de Custos/Despesas = 0  
+- ARE = 0  
+
+Resultado transferido para:
+
+- Lucros Acumulados  
+ou  
+- Prejuízos Acumulados  
 
 ---
 
-## ⚠️ 8. Validações do sistema
+## ⚠️ 9. Validações do sistema
 
 Antes de permitir a apuração:
 
-- Débitos = Créditos (balanço consistente)
-- Todas as contas possuem classificação correta
-- Período definido
-- Sem inconsistências contábeis
+- Débitos = Créditos  
+- Todas as contas possuem classificação correta  
+- Data da apuração definida  
+- Sem inconsistências contábeis  
 
 ---
 
-## 🧠 9. Regra lógica (para implementação)
+## 🔁 10. Regras de operação do sistema
 
-```
-Para cada conta de Receita:
-    if saldo > 0 (credor):
-        debitar conta
-        creditar ARE
+### 📌 Apuração
+- Tela mostra um **resumo antes de executar**
+- Cálculo pode ser em tempo real
+
+### 📌 Desfazer apuração
+- Só pode desfazer **a última apuração**
+- Para desfazer uma anterior:
+  → precisa desfazer as mais recentes antes
+
+### 📌 Histórico (recomendado)
+- Manter lista de apurações por data
+- Permite rastreabilidade
+
+---
+
+## 🧠 11. Regra lógica (pseudocódigo)
+
+```python
+# Receitas
+for conta in receitas:
+    if saldo > 0:  # credor
+        debitar(conta)
+        creditar(ARE)
     else:
-        creditar conta
-        debitar ARE
+        creditar(conta)
+        debitar(ARE)
 
-Para cada conta de Custos/Despesas:
-    if saldo > 0 (devedor):
-        creditar conta
-        debitar ARE
+# Custos/Despesas
+for conta in custos:
+    if saldo > 0:  # devedor
+        creditar(conta)
+        debitar(ARE)
     else:
-        debitar conta
-        creditar ARE
+        debitar(conta)
+        creditar(ARE)
 
-Se saldo ARE for credor:
-    transferir para Lucros Acumulados
-
-Se saldo ARE for devedor:
-    transferir para Prejuízos Acumulados
-```
+# Resultado
+if ARE.saldo > 0:  # lucro
+    debitar(ARE)
+    creditar(lucros_acumulados)
+else:  # prejuízo
+    debitar(prejuizos_acumulados)
+    creditar(ARE)
