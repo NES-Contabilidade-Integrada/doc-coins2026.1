@@ -1,166 +1,270 @@
-# 🧾 Regras da Apuração de Resultado
+# Apuração de Resultado
 
-## 🎯 1. Objetivo
-Encerrar (zerar) todas as contas de resultado e apurar o resultado do período:
+## 1. Objetivo
 
-- Receitas → natureza credora  
-- Custos/Despesas → natureza devedora  
+A tela de **Apuração** deve apresentar ao usuário uma **prévia completa** do que será executado na apuração do resultado do período, antes da confirmação.
 
-Transferir tudo para a conta:
-**Apuração do Resultado (ARE)**
-
----
-
-## 📊 2. Escopo da apuração
-
-### ✔️ Participam:
-- Contas de Receita  
-- Contas de Custos/Despesas  
-
-### ❌ Não participam:
-- Ativo  
-- Passivo  
-- Patrimônio Líquido (exceto no encerramento final)  
+A prévia deve permitir visualizar:
+- valores considerados;
+- contas envolvidas;
+- lançamentos contábeis de encerramento;
+- resultado final (lucro ou prejuízo);
+- conta de destino.
 
 ---
 
-## 📅 3. Regra de período
+## 2. Filtro de Data da Apuração
 
-- A apuração usa uma **data final (data da apuração)**  
-- Considera **todos os lançamentos até essa data**  
-- A data inicial é:
-  → **dia seguinte da última apuração**
+### 2.1 Campo
+- **Data da Apuração**
 
-Se nunca houve apuração:
-→ considera todos os lançamentos históricos
+### 2.2 Regras
 
----
+#### Primeira apuração
+- Considerar **todos os lançamentos** com data **≤ Data da Apuração**
 
-## 🔄 4. Regra principal
+#### Demais apurações
+- Considerar lançamentos:
+  - **posteriores à última apuração**
+  - e com data **≤ Data da Apuração**
 
-Após a apuração:
-
-- Todas as contas de resultado devem ficar = **0**
-- A conta ARE:
-  - acumula temporariamente o resultado
-  - depois também deve ser zerada
-
----
-
-## 💰 5. Encerramento das contas
-
-### 🟢 Receitas
-
-| Situação | Lançamento |
-|--------|-----------|
-| Saldo credor (normal) | D Receita / C ARE |
-| Saldo devedor (invertido) | C Receita / D ARE |
+#### Sem valores
+- Exibir mensagem: **"Não há valores a serem apurados"**
+- Não exibir lançamentos
+- Impedir execução da apuração
 
 ---
 
-### 🔴 Custos/Despesas
+## 3. Estrutura da Prévia
 
-| Situação | Lançamento |
-|--------|-----------|
-| Saldo devedor (normal) | D ARE / C Custo |
-| Saldo credor (invertido) | D Custo / C ARE |
+A tela deve conter as seções:
 
----
-
-## 📈 6. Apuração do resultado (ARE)
-
-Após o encerramento:
-
-- ARE credor → **Lucro**
-- ARE devedor → **Prejuízo**
+1. Resumo do Resultado  
+2. Contas de Resultado  
+3. Lançamentos de Encerramento  
+4. Resultado Final  
 
 ---
 
-## 🧾 7. Transferência do resultado
+## 4. Resumo do Resultado
 
-### 🟢 Caso Lucro (ARE credor)
+### Campos
 
-D - ARE  
-C - Lucros Acumulados  
+- Total de Receitas  
+- Total de Custos e Despesas  
+- Resultado do Período  
+- Indicador: **Lucro** ou **Prejuízo**
 
----
+### Origem dos dados
 
-### 🔴 Caso Prejuízo (ARE devedor)
+- Receitas → grupo **CONTAS DE RESULTADO - RECEITAS**
+- Custos/Despesas → grupo **CONTAS DE RESULTADO - CUSTOS E DESPESAS**
 
-D - Prejuízos Acumulados  
-C - ARE  
+### Regra do resultado
+Resultado = Receitas - Custos e Despesas
 
----
 
-## ✅ 8. Estado final esperado
+### Classificação
 
-Após a apuração:
-
-- Contas de Receita = 0  
-- Contas de Custos/Despesas = 0  
-- ARE = 0  
-
-Resultado transferido para:
-
-- Lucros Acumulados  
-ou  
-- Prejuízos Acumulados  
+- **Lucro** → saldo credor  
+- **Prejuízo** → saldo devedor  
 
 ---
 
-## ⚠️ 9. Validações do sistema
+## 5. Contas de Resultado
 
-Antes de permitir a apuração:
+### Contas exibidas
 
-- Débitos = Créditos  
-- Todas as contas possuem classificação correta  
-- Data da apuração definida  
-- Sem inconsistências contábeis  
+- Todas as contas dos grupos:
+  - CONTAS DE RESULTADO - RECEITAS
+  - CONTAS DE RESULTADO - CUSTOS E DESPESAS
 
----
+### Campos
 
-## 🔁 10. Regras de operação do sistema
+- Código  
+- Descrição  
+- Tipo  
+- Saldo Atual  
+- D/C  
 
-### 📌 Apuração
-- Tela mostra um **resumo antes de executar**
-- Cálculo pode ser em tempo real
+### Tipo
 
-### 📌 Desfazer apuração
-- Só pode desfazer **a última apuração**
-- Para desfazer uma anterior:
-  → precisa desfazer as mais recentes antes
-
-### 📌 Histórico (recomendado)
-- Manter lista de apurações por data
-- Permite rastreabilidade
+- Receita  
+- Custo e Despesa  
 
 ---
 
-## 🧠 11. Regra lógica (pseudocódigo)
+## 6. Lançamentos de Encerramento
 
-```python
-# Receitas
-for conta in receitas:
-    if saldo > 0:  # credor
-        debitar(conta)
-        creditar(ARE)
-    else:
-        creditar(conta)
-        debitar(ARE)
+Exibe a prévia dos lançamentos que serão gerados.
 
-# Custos/Despesas
-for conta in custos:
-    if saldo > 0:  # devedor
-        creditar(conta)
-        debitar(ARE)
-    else:
-        debitar(conta)
-        creditar(ARE)
+---
 
-# Resultado
-if ARE.saldo > 0:  # lucro
-    debitar(ARE)
-    creditar(lucros_acumulados)
-else:  # prejuízo
-    debitar(prejuizos_acumulados)
-    creditar(ARE)
+## 7. Encerramento das Receitas
+
+### Campos
+
+- Conta  
+- Código  
+- Débito  
+- Crédito  
+
+### Regras
+
+#### Receita com saldo credor
+- Débito → Contas de Receita  
+- Crédito → Apuração do Resultado  
+
+#### Receita com saldo devedor
+- Crédito → Contas de Receita  
+- Débito → Apuração do Resultado  
+
+---
+
+## 8. Encerramento de Custos e Despesas
+
+### Campos
+
+- Conta  
+- Código  
+- Débito  
+- Crédito  
+
+### Regras
+
+#### Saldo devedor (caso normal)
+- Crédito → Custos e Despesas  
+- Débito → Apuração do Resultado  
+
+#### Saldo credor (exceção)
+- Débito → Custos e Despesas  
+- Crédito → Apuração do Resultado  
+
+### Sem valores
+- Exibir: **"Não há valores a serem apurados nas contas de Custos e Despesas"**
+
+---
+
+## 9. Confronto da Apuração
+
+### Campos
+
+- Descrição  
+- Valor  
+- D/C  
+
+### Linhas
+
+- Total de Custos e Despesas  
+- Total de Receitas  
+- Resultado  
+
+### Regra
+
+- Resultado = confronto entre receitas e custos/despesas
+
+### Indicador
+
+- C → Lucro  
+- D → Prejuízo  
+
+---
+
+## 10. Transferência do Resultado
+
+### Campos
+
+- Conta  
+- Código  
+- Débito  
+- Crédito  
+
+### Regras
+
+#### Lucro (saldo credor)
+- Débito → Apuração do Resultado  
+- Crédito → Lucros Acumulados  
+
+#### Prejuízo (saldo devedor)
+- Crédito → Apuração do Resultado  
+- Débito → Prejuízos Acumulados  
+
+---
+
+## 11. Resultado Final
+
+### Campos
+
+- Tipo de Resultado  
+- Valor  
+- Conta Destino  
+
+### Conta destino
+
+- Lucro → **Lucros Acumulados**  
+- Prejuízo → **Prejuízos Acumulados**  
+
+---
+
+## 12. Realizar Apuração
+
+### Ação
+- Botão: **Realizar Apuração**
+
+### Regra
+
+- Deve executar exatamente os lançamentos exibidos na prévia
+
+---
+
+## 13. Histórico de Apurações
+
+### Conteúdo
+
+- Lista de apurações realizadas
+
+### Campos
+
+- Data  
+- Tipo (Lucro/Prejuízo)  
+- Valor  
+- Conta Destino  
+- Ação  
+
+### Ação disponível
+
+- **Desfazer**
+
+---
+
+## 14. Regras de Desfazer
+
+### Regras
+
+- Deve ser feito **individualmente**
+- Só pode desfazer a **última apuração**
+- Não pode desfazer anteriores sem desfazer as posteriores
+
+---
+
+## Regras de Negócio
+
+### RN01
+Considerar apenas lançamentos dentro do intervalo da apuração
+
+### RN02
+Utilizar contas dos grupos:
+- RESULTADO - RECEITAS
+- RESULTADO - CUSTOS E DESPESAS
+
+### RN03
+A prévia deve refletir exatamente os lançamentos finais
+
+### RN04
+Sistema deve identificar corretamente lucro ou prejuízo
+
+### RN05
+Saldo da conta Apuração deve ser transferido integralmente
+
+### RN06
+Desfazer apuração respeita ordem cronológica inversa
