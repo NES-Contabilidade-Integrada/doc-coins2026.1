@@ -1,43 +1,56 @@
 # Apuração de Resultado
 
-## 1. Objetivo
+## 1. Objetivo da tela
 
-A tela de **Apuração** deve apresentar ao usuário uma **prévia completa** do que será executado na apuração do resultado do período, antes da confirmação.
+A tela de **Apuração** deve apresentar ao usuário uma **prévia completa** do que será efetivamente executado no momento da apuração do resultado do período, antes da confirmação da ação.
 
-A prévia deve permitir visualizar:
-- valores considerados;
-- contas envolvidas;
-- lançamentos contábeis de encerramento;
-- resultado final (lucro ou prejuízo);
-- conta de destino.
+A prévia deve permitir que o usuário visualize:
+- os valores considerados na apuração;
+- as contas envolvidas;
+- os lançamentos contábeis de encerramento que serão gerados;
+- o resultado final do período, indicando se houve **lucro** ou **prejuízo**;
+- a conta de destino do resultado.
 
 ---
 
-## 2. Filtro de Data da Apuração
+## 2. Filtro de data da apuração
 
 ### 2.1 Campo
+
+A tela deve possuir o campo:
+
 - **Data da Apuração**
 
-### 2.2 Regras
+### 2.2 Regra de consideração dos lançamentos
 
-#### Primeira apuração
-- Considerar **todos os lançamentos** com data **≤ Data da Apuração**
+A data informada definirá quais lançamentos contábeis serão considerados na apuração, com base na **data do lançamento**.
 
-#### Demais apurações
-- Considerar lançamentos:
-  - **posteriores à última apuração**
-  - e com data **≤ Data da Apuração**
+### 2.3 Primeira apuração
 
-#### Sem valores
-- Exibir mensagem: **"Não há valores a serem apurados"**
-- Não exibir lançamentos
-- Impedir execução da apuração
+Se ainda não existir nenhuma apuração anterior, o sistema deve considerar:
+
+- todos os lançamentos do sistema com data **menor ou igual à Data da Apuração**.
+
+### 2.4 Demais apurações
+
+Se já existir apuração anterior, o sistema deve considerar apenas os lançamentos:
+
+- posteriores à última apuração realizada; e  
+- com data **menor ou igual à Data da Apuração**.
+
+### 2.5 Ausência de valores
+
+Se não existirem lançamentos elegíveis para apuração no intervalo calculado, a tela deve:
+
+- informar que **não há valores a serem apurados**;
+- não exibir lançamentos de encerramento;
+- impedir ou tratar adequadamente a execução da apuração.
 
 ---
 
-## 3. Estrutura da Prévia
+## 3. Estrutura da prévia da apuração
 
-A tela deve conter as seções:
+A prévia da apuração deve conter as seguintes seções:
 
 1. Resumo do Resultado  
 2. Contas de Resultado  
@@ -46,225 +59,283 @@ A tela deve conter as seções:
 
 ---
 
-## 4. Resumo do Resultado
+## 4. Resumo do resultado
 
-### Campos
+A seção **Resumo do Resultado** deve exibir, no mínimo, os seguintes campos:
 
 - Total de Receitas  
 - Total de Custos e Despesas  
 - Resultado do Período  
-- Indicador: **Lucro** ou **Prejuízo**
+- Indicador do resultado: **Lucro** ou **Prejuízo**
 
-### Origem dos dados
+### 4.1 Origem dos valores
 
-- Receitas → grupo **CONTAS DE RESULTADO - RECEITAS**
-- Custos/Despesas → grupo **CONTAS DE RESULTADO - CUSTOS E DESPESAS**
+Os totais devem ser obtidos a partir da soma dos saldos das contas de resultado do plano de contas:
 
-### Regra do resultado
-Resultado = Receitas - Custos e Despesas
+- **Receitas** → contas do grupo **CONTAS DE RESULTADO - RECEITAS**
+- **Custos e Despesas** → contas do grupo **CONTAS DE RESULTADO - CUSTOS E DESPESAS**
 
+### 4.2 Regra do resultado
+Resultado do Período = Total de Receitas - Total de Custos e Despesas
 
-### Classificação
+### 4.3 Classificação do resultado
 
 - **Lucro** → saldo credor  
 - **Prejuízo** → saldo devedor  
 
 ---
 
-## 5. Contas de Resultado
+## 5. Contas de resultado
 
-### Contas exibidas
+A seção **Contas de Resultado** deve listar todas as contas que participaram da apuração.
 
-- Todas as contas dos grupos:
-  - CONTAS DE RESULTADO - RECEITAS
-  - CONTAS DE RESULTADO - CUSTOS E DESPESAS
+### 5.1 Contas exibidas
 
-### Campos
+Devem ser exibidas todas as contas pertencentes aos grupos de primeiro nível:
+
+- CONTAS DE RESULTADO - RECEITAS  
+- CONTAS DE RESULTADO - CUSTOS E DESPESAS  
+
+### 5.2 Campos da listagem
+
+Para cada conta, devem ser exibidos:
 
 - Código  
-- Descrição  
+- Descrição da Conta  
 - Tipo  
 - Saldo Atual  
-- D/C  
+- D/C (Devedor ou Credor)  
 
-### Tipo
+### 5.3 Regras do campo Tipo
 
-- Receita  
-- Custo e Despesa  
+- Receita → contas do grupo de receitas  
+- Custo e Despesa → contas do grupo de custos e despesas  
+
+### 5.4 Regra do saldo
+
+O **Saldo Atual** deve corresponder ao saldo da conta dentro do período considerado pela apuração.
 
 ---
 
-## 6. Lançamentos de Encerramento
+## 6. Lançamentos de encerramento
 
-Exibe a prévia dos lançamentos que serão gerados.
+A seção **Lançamentos de Encerramento** deve demonstrar, em formato de prévia, os lançamentos contábeis que serão gerados caso o usuário confirme a apuração.
 
 ---
 
 ## 7. Encerramento das Receitas
 
-### Campos
+A subseção **1. Encerramento das Receitas** deve demonstrar o lançamento necessário para zerar as contas de receita e transferir sua contrapartida para a conta **Apuração do Resultado**.
+
+### 7.1 Campos exibidos
 
 - Conta  
 - Código  
 - Débito  
 - Crédito  
 
-### Regras
+### 7.2 Regras de encerramento
 
-#### Receita com saldo credor
+#### a) Quando o total das receitas for credor
+
 - Débito → Contas de Receita  
 - Crédito → Apuração do Resultado  
 
-#### Receita com saldo devedor
+#### b) Quando o total das receitas for devedor
+
 - Crédito → Contas de Receita  
 - Débito → Apuração do Resultado  
+
+### 7.3 Exibição da prévia
+
+A prévia deve demonstrar:
+
+- uma linha consolidada para **Contas de Receita**;
+- uma linha para **Apuração do Resultado**;
+- os respectivos valores de débito e crédito.
 
 ---
 
 ## 8. Encerramento de Custos e Despesas
 
-### Campos
+A subseção **2. Encerramento de Custos e Despesas** deve demonstrar o lançamento necessário para zerar as contas de custo e despesa e transferir sua contrapartida para a conta **Apuração do Resultado**.
+
+### 8.1 Campos exibidos
 
 - Conta  
 - Código  
 - Débito  
 - Crédito  
 
-### Regras
+### 8.2 Regras de encerramento
 
-#### Saldo devedor (caso normal)
+#### a) Quando o total for devedor (caso normal)
+
 - Crédito → Custos e Despesas  
 - Débito → Apuração do Resultado  
 
-#### Saldo credor (exceção)
+#### b) Quando o total for credor (exceção)
+
 - Débito → Custos e Despesas  
 - Crédito → Apuração do Resultado  
 
-### Sem valores
-- Exibir: **"Não há valores a serem apurados nas contas de Custos e Despesas"**
+### 8.3 Exibição da prévia
+
+A prévia deve demonstrar:
+
+- uma linha consolidada para **Contas de Custos e Despesas**;
+- uma linha para **Apuração do Resultado**;
+- os respectivos valores de débito e crédito.
+
+### 8.4 Ausência de valores
+
+Se não houver valores:
+
+- Exibir mensagem:  
+  **"Não há valores a serem apurados nas contas de custos e despesas"**
 
 ---
 
-## 9. Confronto da Apuração
+## 9. Confronto da Apuração do Resultado
 
-### Campos
+A subseção **3. Confronto da Apuração do Resultado** deve demonstrar a composição do resultado apurado.
+
+### 9.1 Campos exibidos
 
 - Descrição  
 - Valor  
 - D/C  
 
-### Linhas
+### 9.2 Linhas obrigatórias
 
 - Total de Custos e Despesas  
 - Total de Receitas  
 - Resultado  
 
-### Regra
+### 9.3 Regra do cálculo
 
-- Resultado = confronto entre receitas e custos/despesas
+O resultado deve corresponder ao confronto entre:
 
-### Indicador
+- valores das **Receitas**;  
+- valores de **Custos e Despesas**.
 
-- C → Lucro  
-- D → Prejuízo  
+### 9.4 Regra do indicador
+
+- **C (Credor)** → Lucro  
+- **D (Devedor)** → Prejuízo  
 
 ---
 
-## 10. Transferência do Resultado
+## 10. Transferência do resultado
 
-### Campos
+A subseção **4. Transferência do Resultado** deve demonstrar a transferência do saldo final da conta **Apuração do Resultado**.
+
+### 10.1 Campos exibidos
 
 - Conta  
 - Código  
 - Débito  
 - Crédito  
 
-### Regras
+### 10.2 Regra para lucro
 
-#### Lucro (saldo credor)
 - Débito → Apuração do Resultado  
 - Crédito → Lucros Acumulados  
 
-#### Prejuízo (saldo devedor)
+### 10.3 Regra para prejuízo
+
 - Crédito → Apuração do Resultado  
 - Débito → Prejuízos Acumulados  
 
 ---
 
-## 11. Resultado Final
+## 11. Resultado final
 
-### Campos
+A seção **Resultado Final** deve exibir:
 
-- Tipo de Resultado  
+- Tipo de Resultado (Lucro do Período ou Prejuízo do Período)  
 - Valor  
 - Conta Destino  
 
-### Conta destino
+### 11.1 Conta destino
 
 - Lucro → **Lucros Acumulados**  
 - Prejuízo → **Prejuízos Acumulados**  
 
 ---
 
-## 12. Realizar Apuração
+## 12. Ação de realizar apuração
 
-### Ação
-- Botão: **Realizar Apuração**
+### 12.1 Ação
 
-### Regra
+Botão: **Realizar Apuração**
 
-- Deve executar exatamente os lançamentos exibidos na prévia
+### 12.2 Comportamento
+
+Ao confirmar, o sistema deve:
+
+- efetivar exatamente os lançamentos exibidos na prévia.
+
+### 12.3 Integridade
+
+- Os valores e lançamentos devem ser idênticos à prévia.
 
 ---
 
-## 13. Histórico de Apurações
+## 13. Histórico de apurações
 
-### Conteúdo
+### 13.1 Conteúdo
 
-- Lista de apurações realizadas
+Listagem de apurações realizadas.
 
-### Campos
+### 13.2 Campos
 
 - Data  
-- Tipo (Lucro/Prejuízo)  
+- Tipo (Lucro ou Prejuízo)  
 - Valor  
 - Conta Destino  
 - Ação  
 
-### Ação disponível
+### 13.3 Ação
 
 - **Desfazer**
 
 ---
 
-## 14. Regras de Desfazer
+## 14. Regras para desfazer apuração
 
-### Regras
+### 14.1 Desfazer individualmente
 
-- Deve ser feito **individualmente**
-- Só pode desfazer a **última apuração**
-- Não pode desfazer anteriores sem desfazer as posteriores
+Cada apuração deve ser desfeita individualmente.
+
+### 14.2 Ordem obrigatória
+
+Só pode desfazer a **última apuração realizada**.
+
+### 14.3 Bloqueio
+
+Não é permitido desfazer apurações anteriores sem desfazer as posteriores.
 
 ---
 
 ## Regras de Negócio
 
 ### RN01
-Considerar apenas lançamentos dentro do intervalo da apuração
+Considerar apenas lançamentos dentro do intervalo da apuração.
 
 ### RN02
 Utilizar contas dos grupos:
-- RESULTADO - RECEITAS
-- RESULTADO - CUSTOS E DESPESAS
+- RESULTADO - RECEITAS  
+- RESULTADO - CUSTOS E DESPESAS  
 
 ### RN03
-A prévia deve refletir exatamente os lançamentos finais
+A prévia deve refletir exatamente os lançamentos finais.
 
 ### RN04
-Sistema deve identificar corretamente lucro ou prejuízo
+O sistema deve identificar corretamente lucro ou prejuízo.
 
 ### RN05
-Saldo da conta Apuração deve ser transferido integralmente
+O saldo da conta Apuração deve ser transferido integralmente.
 
 ### RN06
-Desfazer apuração respeita ordem cronológica inversa
+Desfazer apuração respeita ordem cronológica inversa.
