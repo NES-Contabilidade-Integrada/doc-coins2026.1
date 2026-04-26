@@ -52,7 +52,7 @@ Receita Bruta – Deduções da Receita
 
 ---
 
-### 4. (-) Custos CMV/
+### 4. (-) CMV / CPV
 
 Soma de todas as contas analíticas que estão em:
 **“CUSTOS”**
