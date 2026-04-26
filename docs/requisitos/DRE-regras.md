@@ -1,5 +1,11 @@
 ## DRE – Regras de composição
 
+A Demonstração do Resultado do Exercício (DRE) é um relatório contábil que apresenta o desempenho da empresa em determinado período, evidenciando receitas, custos, despesas e o resultado final (lucro ou prejuízo).
+
+A DRE deve considerar apenas os valores **apurados** no período, ou seja, receitas e despesas já reconhecidas contabilmente conforme o regime de competência. Não devem ser considerados saldos patrimoniais, mas apenas contas de resultado.
+
+---
+
 ### 1. Receita Bruta
 
 Soma de todas as contas analíticas que estão em:
