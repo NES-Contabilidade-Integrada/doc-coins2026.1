@@ -89,6 +89,14 @@ Soma de todas as contas analíticas que estão em:
 **OUTRAS DESPESAS OPERACIONAIS**
 (dentro de DESPESAS ADMINISTRATIVAS → DESPESAS OPERACIONAIS → CONTAS DE RESULTADO – CUSTOS E DESPESAS)
 
+**Valor apresentado na DRE:**
+Outras Operacionais = (Outras Receitas Operacionais) – (Outras Despesas Operacionais)
+
+Ou seja, o valor exibido nesta linha deve ser o resultado líquido entre outras receitas e outras despesas operacionais.
+
+* Se o resultado for positivo: apresentar como (+)
+* Se o resultado for negativo: apresentar como (-)
+
 ---
 
 ### 8. (=) LAJIR
