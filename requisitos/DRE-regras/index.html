@@ -1781,10 +1781,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#9-resultado-nao-operacional" class="md-nav__link">
+  <a href="#9-resultado-financeiro" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9. (+/-) Resultado Não Operacional
+        9. (+/-) Resultado Financeiro
       
     </span>
   </a>
@@ -1792,10 +1792,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#10-resultado-antes-dos-impostos" class="md-nav__link">
+  <a href="#10-resultado-antes-do-nao-operacional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10. Resultado Antes dos Impostos
+        10. Resultado Antes do Não Operacional
       
     </span>
   </a>
@@ -1803,10 +1803,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#11-impostos-sobre-o-lucro-ircsll" class="md-nav__link">
+  <a href="#11-resultado-nao-operacional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11. (-) Impostos sobre o Lucro (IR/CSLL)
+        11. (+/-) Resultado Não Operacional
       
     </span>
   </a>
@@ -1814,10 +1814,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-lucro-liquido" class="md-nav__link">
+  <a href="#12-resultado-antes-dos-impostos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        12. Lucro Líquido
+        12. Resultado Antes dos Impostos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-impostos-sobre-o-lucro-ircsll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. (-) Impostos sobre o Lucro (IR/CSLL)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-lucro-liquido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Lucro Líquido
       
     </span>
   </a>
@@ -1887,6 +1909,8 @@
 <h3 id="6-despesas-operacionais">6. (-) Despesas Operacionais</h3>
 <p>Soma de todas as contas analíticas que estão em:
 <strong>“DESPESAS OPERACIONAIS”</strong>
+<strong>exceto</strong> as contas que estão em:
+<strong>“DESPESAS FINANCEIRAS”</strong>
 (dentro de CONTAS DE RESULTADO – CUSTOS E DESPESAS)</p>
 <hr />
 <h3 id="7-outras-receitas-despesas-operacionais">7. (+/-) Outras Receitas / Despesas Operacionais</h3>
@@ -1902,7 +1926,20 @@ Soma de todas as contas analíticas que estão em:
 <h3 id="8-resultado-operacional">8. Resultado Operacional</h3>
 <p>Lucro Bruto – Despesas Operacionais ± Outras Operacionais</p>
 <hr />
-<h3 id="9-resultado-nao-operacional">9. (+/-) Resultado Não Operacional</h3>
+<h3 id="9-resultado-financeiro">9. (+/-) Resultado Financeiro</h3>
+<p><strong>Receitas Financeiras</strong>
+Soma de todas as contas analíticas que estão em:
+<strong>“RECEITAS FINANCEIRAS”</strong>
+(dentro de CONTAS DE RESULTADO – RECEITAS)</p>
+<p><strong>Despesas Financeiras</strong>
+Soma de todas as contas analíticas que estão em:
+<strong>“DESPESAS FINANCEIRAS”</strong>
+(dentro de DESPESAS ADMINISTRATIVAS → DESPESAS OPERACIONAIS → CONTAS DE RESULTADO – CUSTOS E DESPESAS)</p>
+<hr />
+<h3 id="10-resultado-antes-do-nao-operacional">10. Resultado Antes do Não Operacional</h3>
+<p>Resultado Operacional ± Resultado Financeiro</p>
+<hr />
+<h3 id="11-resultado-nao-operacional">11. (+/-) Resultado Não Operacional</h3>
 <p><strong>Despesas Não Operacionais</strong>
 Soma de todas as contas analíticas que estão em:
 <strong>“DESPESAS NÃO OPERACIONAIS”</strong>
@@ -1912,14 +1949,14 @@ Soma de todas as contas analíticas que estão em:
 <strong>“RECEITAS NÃO OPERACIONAIS”</strong>
 (dentro de CONTAS DE RESULTADO – RECEITAS)</p>
 <hr />
-<h3 id="10-resultado-antes-dos-impostos">10. Resultado Antes dos Impostos</h3>
-<p>Resultado Operacional ± Resultado Não Operacional</p>
+<h3 id="12-resultado-antes-dos-impostos">12. Resultado Antes dos Impostos</h3>
+<p>Resultado Antes do Não Operacional ± Resultado Não Operacional</p>
 <hr />
-<h3 id="11-impostos-sobre-o-lucro-ircsll">11. (-) Impostos sobre o Lucro (IR/CSLL)</h3>
+<h3 id="13-impostos-sobre-o-lucro-ircsll">13. (-) Impostos sobre o Lucro (IR/CSLL)</h3>
 <p>Soma das contas analíticas de impostos sobre o lucro
 (dentro de CONTAS DE RESULTADO – RECEITAS, normalmente em deduções ou grupo próprio)</p>
 <hr />
-<h3 id="12-lucro-liquido">12. Lucro Líquido</h3>
+<h3 id="14-lucro-liquido">14. Lucro Líquido</h3>
 <p>Resultado Antes dos Impostos – Impostos</p>
 <hr />
 <h3 id="regra-geral">Regra geral</h3>
@@ -1947,7 +1984,7 @@ A estrutura da DRE deve seguir a hierarquia do plano de contas, não os códigos
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="26 de abril de 2026 23:05:27 UTC">26 de abril de 2026 23:05:27</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="26 de abril de 2026 23:11:04 UTC">26 de abril de 2026 23:11:04</span>
   </span>
 
     
