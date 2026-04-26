@@ -29,15 +29,17 @@ A tela deve carregar automaticamente a DRE com esses valores, sem necessidade de
 
 ### 1. Receita Bruta
 
-Soma de todas as contas analíticas em:
+Soma de todas as contas analíticas que estão em:
 **RECEITA BRUTA DE VENDAS E SERVIÇOS**
+(dentro de CONTAS DE RESULTADO – RECEITAS)
 
 ---
 
 ### 2. (-) Deduções da Receita
 
-Soma de todas as contas analíticas em:
+Soma de todas as contas analíticas que estão em:
 **DEDUÇÕES DA RECEITA BRUTA**
+(dentro de CONTAS DE RESULTADO – RECEITAS)
 
 ---
 
@@ -52,8 +54,9 @@ Receita Bruta – Deduções
 **CMV (Custo das Mercadorias Vendidas)**: custo das mercadorias vendidas
 **CPV (Custo dos Produtos Vendidos)**: custo dos produtos fabricados e vendidos
 
-Soma de todas as contas analíticas em:
+Soma de todas as contas analíticas que estão em:
 **CUSTOS**
+(dentro de CONTAS DE RESULTADO – CUSTOS E DESPESAS)
 
 ---
 
@@ -65,19 +68,26 @@ Receita Líquida – CMV/CPV
 
 ### 6. (-) Despesas Operacionais
 
-Soma de todas as contas analíticas em:
+Soma de todas as contas analíticas que estão em:
 **DESPESAS OPERACIONAIS**
-**exceto DESPESAS FINANCEIRAS**
+(dentro de CONTAS DE RESULTADO – CUSTOS E DESPESAS)
+
+Exceto as contas analíticas que estão em:
+**DESPESAS FINANCEIRAS**
 
 ---
 
 ### 7. (+/-) Outras Receitas / Despesas Operacionais
 
 **Outras Receitas Operacionais**
-Soma das contas em: OUTRAS RECEITAS OPERACIONAIS
+Soma de todas as contas analíticas que estão em:
+**OUTRAS RECEITAS OPERACIONAIS**
+(dentro de CONTAS DE RESULTADO – RECEITAS)
 
 **Outras Despesas Operacionais**
-Soma das contas em: OUTRAS DESPESAS OPERACIONAIS
+Soma de todas as contas analíticas que estão em:
+**OUTRAS DESPESAS OPERACIONAIS**
+(dentro de DESPESAS ADMINISTRATIVAS → DESPESAS OPERACIONAIS → CONTAS DE RESULTADO – CUSTOS E DESPESAS)
 
 ---
 
@@ -94,8 +104,15 @@ Representa o resultado operacional da empresa, sem considerar efeitos financeiro
 
 ### 9. (+/-) Resultado Financeiro
 
-**Receitas Financeiras**: rendimentos, juros recebidos
-**Despesas Financeiras**: juros pagos, encargos financeiros
+**Receitas Financeiras**
+Soma de todas as contas analíticas que estão em:
+**RECEITAS FINANCEIRAS**
+(dentro de CONTAS DE RESULTADO – RECEITAS)
+
+**Despesas Financeiras**
+Soma de todas as contas analíticas que estão em:
+**DESPESAS FINANCEIRAS**
+(dentro de DESPESAS ADMINISTRATIVAS → DESPESAS OPERACIONAIS → CONTAS DE RESULTADO – CUSTOS E DESPESAS)
 
 ---
 
@@ -112,10 +129,15 @@ Representa o lucro antes da incidência de impostos.
 
 ### 11. (+/-) Resultado Não Operacional
 
-Resultados não ligados à atividade principal:
+**Receitas Não Operacionais**
+Soma de todas as contas analíticas que estão em:
+**RECEITAS NÃO OPERACIONAIS**
+(dentro de CONTAS DE RESULTADO – RECEITAS)
 
-* venda de imobilizado
-* eventos não recorrentes
+**Despesas Não Operacionais**
+Soma de todas as contas analíticas que estão em:
+**DESPESAS NÃO OPERACIONAIS**
+(dentro de CONTAS DE RESULTADO – CUSTOS E DESPESAS)
 
 ---
 
@@ -130,13 +152,15 @@ LAIR ± Resultado Não Operacional
 **IR = Imposto de Renda**
 **CSLL = Contribuição Social sobre o Lucro Líquido**
 
-Soma das contas de impostos sobre o lucro.
+Soma de todas as contas analíticas que estão em:
+**IMPOSTOS SOBRE O LUCRO (IR/CSLL)**
+(dentro de CONTAS DE RESULTADO – RECEITAS ou grupo específico de resultado)
 
 ---
 
 ### 14. (=) Lucro Líquido
 
-Resultado final da DRE após todos os descontos.
+Resultado Antes dos Impostos – Impostos
 
 ---
 
