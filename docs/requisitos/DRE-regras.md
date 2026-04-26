@@ -6,6 +6,30 @@ A DRE deve considerar apenas os valores **apurados** no período, ou seja, recei
 
 ---
 
+### Filtros da tela
+
+A tela da DRE deve possuir os filtros:
+
+**Período Inicial**
+Data inicial considerada para a apuração da DRE.
+
+**Período Final**
+Data final considerada para a apuração da DRE.
+
+Por padrão, ao acessar a tela, os filtros devem ser carregados automaticamente com:
+
+**Período Inicial:** primeiro dia do ano atual
+**Período Final:** último dia do ano atual
+
+Exemplo: se o ano atual for 2026:
+
+**Período Inicial:** 01/01/2026
+**Período Final:** 31/12/2026
+
+A tela deve carregar automaticamente a DRE usando esses valores padrão, sem necessidade de o usuário pressionar Enter ou executar qualquer ação manual.
+
+---
+
 ### 1. Receita Bruta
 
 Soma de todas as contas analíticas que estão em:
@@ -28,7 +52,7 @@ Receita Bruta – Deduções da Receita
 
 ---
 
-### 4. (-) Custos (CPV / CMV / CSP)
+### 4. (-) Custos CMV/
 
 Soma de todas as contas analíticas que estão em:
 **“CUSTOS”**
