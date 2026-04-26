@@ -114,6 +114,14 @@ Soma de todas as contas analíticas que estão em:
 **DESPESAS FINANCEIRAS**
 (dentro de DESPESAS ADMINISTRATIVAS → DESPESAS OPERACIONAIS → CONTAS DE RESULTADO – CUSTOS E DESPESAS)
 
+**Valor apresentado na DRE:**
+Resultado Financeiro = (Receitas Financeiras) – (Despesas Financeiras)
+
+Ou seja, o valor exibido nesta linha deve ser o resultado líquido entre receitas e despesas financeiras, e não a soma.
+
+* Se o resultado for positivo: apresentar como (+)
+* Se o resultado for negativo: apresentar como (-)
+
 ---
 
 ### 10. (=) LAIR
