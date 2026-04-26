@@ -46,6 +46,8 @@ Receita Líquida – Custos
 
 Soma de todas as contas analíticas que estão em:
 **“DESPESAS OPERACIONAIS”**
+**exceto** as contas que estão em:
+**“DESPESAS FINANCEIRAS”**
 (dentro de CONTAS DE RESULTADO – CUSTOS E DESPESAS)
 
 ---
@@ -70,7 +72,27 @@ Lucro Bruto – Despesas Operacionais ± Outras Operacionais
 
 ---
 
-### 9. (+/-) Resultado Não Operacional
+### 9. (+/-) Resultado Financeiro
+
+**Receitas Financeiras**
+Soma de todas as contas analíticas que estão em:
+**“RECEITAS FINANCEIRAS”**
+(dentro de CONTAS DE RESULTADO – RECEITAS)
+
+**Despesas Financeiras**
+Soma de todas as contas analíticas que estão em:
+**“DESPESAS FINANCEIRAS”**
+(dentro de DESPESAS ADMINISTRATIVAS → DESPESAS OPERACIONAIS → CONTAS DE RESULTADO – CUSTOS E DESPESAS)
+
+---
+
+### 10. Resultado Antes do Não Operacional
+
+Resultado Operacional ± Resultado Financeiro
+
+---
+
+### 11. (+/-) Resultado Não Operacional
 
 **Despesas Não Operacionais**
 Soma de todas as contas analíticas que estão em:
@@ -84,20 +106,20 @@ Soma de todas as contas analíticas que estão em:
 
 ---
 
-### 10. Resultado Antes dos Impostos
+### 12. Resultado Antes dos Impostos
 
-Resultado Operacional ± Resultado Não Operacional
+Resultado Antes do Não Operacional ± Resultado Não Operacional
 
 ---
 
-### 11. (-) Impostos sobre o Lucro (IR/CSLL)
+### 13. (-) Impostos sobre o Lucro (IR/CSLL)
 
 Soma das contas analíticas de impostos sobre o lucro
 (dentro de CONTAS DE RESULTADO – RECEITAS, normalmente em deduções ou grupo próprio)
 
 ---
 
-### 12. Lucro Líquido
+### 14. Lucro Líquido
 
 Resultado Antes dos Impostos – Impostos
 
