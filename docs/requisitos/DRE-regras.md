@@ -202,3 +202,34 @@ Receita Bruta
 
 Somar sempre contas analíticas por grupo pai.
 A DRE deve seguir a hierarquia do plano de contas, não os códigos.
+
+---
+
+## Composição das contas (resumo para a seção inferior da tela)
+
+Os blocos de composição exibem o detalhamento das contas analíticas que formam cada linha da DRE. Cada bloco deve buscar as contas conforme abaixo:
+
+**Receita Bruta**
+Contas analíticas que estão em: **RECEITA BRUTA DE VENDAS E SERVIÇOS**
+(dentro de CONTAS DE RESULTADO – RECEITAS)
+
+**Deduções da Receita**
+Contas analíticas que estão em: **DEDUÇÕES DA RECEITA BRUTA**
+(dentro de CONTAS DE RESULTADO – RECEITAS)
+
+**CMV / CPV**
+Contas analíticas que estão em: **CUSTOS**
+(dentro de CONTAS DE RESULTADO – CUSTOS E DESPESAS)
+
+**Despesas Operacionais**
+Contas analíticas que estão em: **DESPESAS OPERACIONAIS**
+(dentro de CONTAS DE RESULTADO – CUSTOS E DESPESAS),
+exceto as contas em **DESPESAS FINANCEIRAS**
+
+**Resultado Financeiro**
+Contas analíticas que estão em:
+
+* **RECEITAS FINANCEIRAS** (CONTAS DE RESULTADO – RECEITAS)
+* **DESPESAS FINANCEIRAS** (CONTAS DE RESULTADO – CUSTOS E DESPESAS)
+
+O valor exibido no cabeçalho de cada bloco deve corresponder exatamente ao valor calculado na DRE para aquela linha.
