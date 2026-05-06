@@ -36,18 +36,18 @@
 
 [**8\. Organização dos Casos de Teste	5**](#organização-dos-casos-de-teste)
 
-1. # Introdução {#introdução}
+## Introdução {#introdução}
 Este documento define a estratégia de validação do COIN'S. O objetivo é garantir que a lógica financeira e os fluxos de interface Electron/React funcionem conforme o esperado, utilizando uma abordagem de pirâmide de testes para assegurar a qualidade e confiabilidade dos dados.
 
-2. # Análise da Situação Atual dos Testes {#análise-da-situação-atual-dos-testes}
+## Análise da Situação Atual dos Testes {#análise-da-situação-atual-dos-testes}
 Atualmente, a cobertura de testes do sistema é composta exclusivamente por testes unitários desenvolvidos com o Jest. Estes testes validam funções isoladas, cálculos e componentes do React. Identificou-se uma lacuna na validação de fluxos completos de usuário e na integração real entre o frontend (Renderer) e o backend (Main/Electron).
 
-3. # Objetivos dos Testes {#objetivos-dos-testes}
+## Objetivos dos Testes {#objetivos-dos-testes}
 * Validar a corretude das regras de negócio contábeis em fluxos reais.  
 * Assegurar a integridade da persistência de dados no banco de dados através da interface.  
 * Evitar regressões em funcionalidades críticas a cada novo deploy.
 
-4. # Escopo {#escopo}
+## Escopo {#escopo}
 **Dentro do Escopo:**
 
 * Validação de interface e navegação entre módulos (Plano de Contas, Razão, Balancete).  
@@ -59,7 +59,7 @@ Atualmente, a cobertura de testes do sistema é composta exclusivamente por test
 * Performance e Carga: Por ser um app local, o foco é a eficiência do código e não a concorrência de acessos simultâneos.  
 * Rede e Latência: O executável opera majoritariamente offline ou com chamadas locais, tornando testes de latência de rede irrelevantes para este MVP.
 
-5. # Tipo de Testes {#tipo-de-testes}
+## Tipo de Testes {#tipo-de-testes}
 Para os testes de interface, adotamos uma separação em quatro níveis:
 
 1. **Funcional:** Valida componentes isolados da interface (ex: o botão de salvar habilita/desabilita corretamente?).  
@@ -67,7 +67,7 @@ Para os testes de interface, adotamos uma separação em quatro níveis:
 3. **Regressão:** Testes de segurança que rodam em cada alteração para garantir que funções críticas (como o cálculo do Balancete) não quebraram.  
 4. **E2E:** Fluxos de negócio completos, como "Criar uma empresa e realizar o primeiro lançamento".
 
-6. # Estratégia de Execução {#estratégia-de-execução}
+## Estratégia de Execução {#estratégia-de-execução}
 A estratégia de execução é determinada automaticamente pelo sistema com base na branch em que o código está sendo enviado. Isso garante que alterações pequenas recebam feedback rápido, enquanto merges críticos passem por uma validação exaustiva.
 
 **a. Execução Seletiva (strategy: affected)**  
@@ -90,7 +90,7 @@ Para permitir que um aplicativo desktop (Electron) rode em servidores Linux do G
 * **Isolamento de Ambiente:** Cada execução limpa o banco de dados e utiliza Fixtures (dados de teste controlados) para garantir que um teste não influencie o resultado do outro.  
 * **Captura de Evidências:** Em caso de falha no CI, o sistema realiza automaticamente o upload de screenshots, vídeos e traces para a pasta *artifacts/*, permitindo que o desenvolvedor visualize exatamente onde o erro ocorreu na interface
 
-7. # Ferramentas {#ferramentas}
+## Ferramentas {#ferramentas}
 Nesta seção, detalhamos o conjunto de ferramentas selecionado para garantir a qualidade do ciclo de vida do software, desde a lógica de negócio até a interface final.
 
 | Jest | Teste Unitários e de Lógica |
@@ -99,7 +99,7 @@ Nesta seção, detalhamos o conjunto de ferramentas selecionado para garantir a 
 | GitHub Actions | Orquestração de CI |
 | Xvfb | Emulador de display para servidores Linux. |
 
-8. # Organização dos Casos de Teste {#organização-dos-casos-de-teste}
+## Organização dos Casos de Teste {#organização-dos-casos-de-teste}
 A arquitetura de testes do COIN'S utiliza uma estrutura Multicamadas, organizada por Tipo e Módulo. Essa abordagem permite que o sistema cresça sem perder a rastreabilidade e a facilidade de manutenção.
 
 **1\. Distribuição por Tipo de Teste**  

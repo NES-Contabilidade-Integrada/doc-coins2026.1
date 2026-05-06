@@ -40,10 +40,10 @@
 
 [10\. Revisão do copilot	10](#10.-revisão-do-copilot)
 
-1. ## Introdução {#introdução}
+## Introdução {#introdução}
 Este documento estabelece as **Diretrizes de Gerência de Configuração** para o sistema **COINS**. Ele define o conjunto de normas, padrões e procedimentos essenciais para o gerenciamento eficaz de mudanças, controle de versão e manutenção da qualidade do código-fonte. O objetivo é garantir a integridade, a estabilidade e a rastreabilidade do desenvolvimento ao longo do ciclo de vida do sistema. 
 
-2. ## Modelo de Ramificação {#modelo-de-ramificação}
+## Modelo de Ramificação {#modelo-de-ramificação}
 O modelo de ramificação utilizado é o GitFlow, conforme ilustrado na figura abaixo e descrito a seguir.  
 
 **![][image1]**

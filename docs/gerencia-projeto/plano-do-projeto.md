@@ -51,13 +51,13 @@
 
 [14\. Análise de Viabilidade e Comprometimento	12](#análise-de-viabilidade-e-comprometimento)
 
-# 
+## 
 
-1. # Introdução {#introdução}
+## Introdução {#introdução}
 Este documento apresenta o Plano de Projeto para o desenvolvimento do Sistema COIN’S (Contabilidade Integrada). O sistema tem como objetivo oferecer uma plataforma prática e didática para que os alunos dos primeiros semestres do curso de Ciências Contábeis da UFMS tenham um contato inicial com as práticas contábeis.  
 Atualmente, os softwares contábeis avançados são utilizados apenas nos últimos semestres do curso. O COIN’S busca preencher essa lacuna, proporcionando aos alunos uma experiência introdutória que facilita a compreensão dos conceitos básicos e serve como motivação para o aprendizado contínuo.
 
-2. # Proponentes {#proponentes}
+## Proponentes {#proponentes}
 Os proponentes são os responsáveis por solicitar, validar e acompanhar o desenvolvimento do Sistema COIN’S ao longo do semestre, atuando como representantes do curso de Ciências Contábeis e garantindo alinhamento acadêmico-pedagógico do projeto.
 
 | Nome | Telefone | E-mail |
@@ -65,7 +65,7 @@ Os proponentes são os responsáveis por solicitar, validar e acompanhar o desen
 | Professor Robert Espejo | \+55 67 8137-9154 | robert.espejo@ufms.br |
 | Aluno Jean Pleutim | \+55 67 9208-3908 | jean\_pleutim@ufms.br |
 
-3. # Escopo do Projeto {#escopo-do-projeto}
+## Escopo do Projeto {#escopo-do-projeto}
 O escopo do Sistema COIN’S define as funcionalidades que serão desenvolvidas ao longo do projeto, seguindo um plano incremental baseado na priorização definida durante a entrevista com o proponente. O desenvolvimento será dividido em etapas, dando continuidade à implementação do sistema que iniciou em 2025\.
 
 ### 2.1 Funcionalidades do MVP (Versão Inicial \- 2025.2) As funcionalidades essenciais que compõem o MVP são:
@@ -114,7 +114,7 @@ O escopo do Sistema COIN’S define as funcionalidades que serão desenvolvidas 
 | Não existente | Importação e Exportação de Dados Empresariais | Não existente | Próximas versões |
 | Não existente | Gerenciamento de Empresas | Não existente | Próximas versões |
 
-4. # Equipe e Infraestrutura {#equipe-e-infraestrutura}
+## Equipe e Infraestrutura {#equipe-e-infraestrutura}
    
 
 | Papel | Responsável Primário | Responsável Secundário | Contato |
@@ -130,7 +130,7 @@ O escopo do Sistema COIN’S define as funcionalidades que serão desenvolvidas 
 | DevOps | Amanda Gois | Vinicius Carneiro | [amanda.gois@ufms.br](mailto:amanda.gois@ufms.br), [vinicius.aguiar@ufms.br](mailto:vinicius.aguiar@ufms.br) |
 | Banco de Dados | Lohan Toledo, Vinicius Carneiro |  | [lohan.toledo@ufms.br](mailto:lohan.toledo@ufms.br), [vinicius.aguiar@ufms.br](mailto:vinicius.aguiar@ufms.br) |
 
-5. # Cronograma do Projeto {#cronograma-do-projeto}
+## Cronograma do Projeto {#cronograma-do-projeto}
    
 
 | Sprint | Período | Funcionalidade | Feature |
@@ -143,11 +143,11 @@ O escopo do Sistema COIN’S define as funcionalidades que serão desenvolvidas 
  
 
 
-6. # Riscos {#riscos}
+## Riscos {#riscos}
    Por se tratar de um sistema educacional orientado a aprendizado, não foram identificados riscos críticos relacionados a impacto financeiro, regulatório ou corporativo. Os principais riscos são associados à expectativa dos proponentes, continuidade acadêmica e disponibilidade da equipe.  
    
 
-7. # Planejamento de Gerência de Dados {#planejamento-de-gerência-de-dados}
+## Planejamento de Gerência de Dados {#planejamento-de-gerência-de-dados}
      
    Os artefatos e código do projeto estão armazenados em:  
      
@@ -158,7 +158,7 @@ O escopo do Sistema COIN’S define as funcionalidades que serão desenvolvidas 
   
 
 
-8. # Planejamento do Acompanhamento do Projeto {#planejamento-do-acompanhamento-do-projeto}
+## Planejamento do Acompanhamento do Projeto {#planejamento-do-acompanhamento-do-projeto}
    
 
 * Dailies seguindo o Scrum  
@@ -174,7 +174,7 @@ O escopo do Sistema COIN’S define as funcionalidades que serão desenvolvidas 
   
 
 
-9. # Planejamento da Comunicação {#planejamento-da-comunicação}
+## Planejamento da Comunicação {#planejamento-da-comunicação}
      
    Nesta seção é descrito o plano de comunicação do projeto, conforme as definições da Tabela 6\. Para cada comunicação relevante, o responsável por realizá-la, assim como seu meio e momento de realização são definidos.  
    
@@ -192,7 +192,7 @@ O escopo do Sistema COIN’S define as funcionalidades que serão desenvolvidas 
 
    
 
-10. # Ferramentas e Tecnologias de Desenvolvimento {#ferramentas-e-tecnologias-de-desenvolvimento}
+## Ferramentas e Tecnologias de Desenvolvimento {#ferramentas-e-tecnologias-de-desenvolvimento}
 | Categoria | Ferramenta | Justificativa |
 | :---- | :---- | :---- |
 | Controle de Versão | GitHub | Utilizado para versionamento do código, colaboração entre a equipe e integração com GitHub Projects. |
@@ -220,7 +220,7 @@ O escopo do Sistema COIN’S define as funcionalidades que serão desenvolvidas 
 
     
 
-11. # Projeto de Interface e Interação {#projeto-de-interface-e-interação}
+## Projeto de Interface e Interação {#projeto-de-interface-e-interação}
     Os protótipos de interface foram desenvolvidos no Figma e validados com os proponentes ao longo das sprints. Estes protótipos serviram como base para a construção das telas do sistema. Além disso, antes de serem criados protótipos, trabalhamos com Sketchs (esboços a mão) para validar as ideias iniciais.   
       
     Sketchs disponíveis em: [https://drive.google.com/drive/folders/16aMUyvXe49CFAoiDYZO-J0BOQJ\_HPYPh?usp=sharing](https://drive.google.com/drive/folders/16aMUyvXe49CFAoiDYZO-J0BOQJ_HPYPh?usp=sharing)   
@@ -234,14 +234,14 @@ O escopo do Sistema COIN’S define as funcionalidades que serão desenvolvidas 
     [https://drive.google.com/drive/folders/1HkFLJtOT9pKymSfiwGUwvJVbgP38gO9e](https://drive.google.com/drive/folders/1HkFLJtOT9pKymSfiwGUwvJVbgP38gO9e)   
     
 
-12. # Arquitetura de Software {#arquitetura-de-software}
+## Arquitetura de Software {#arquitetura-de-software}
     A arquitetura do Sistema COIN’S está detalhada no artefato específico dedicado à Arquitetura de Software, que descreve os componentes, camadas, interações e decisões arquiteturais adotadas.  
     Este plano de projeto apenas referencia esse documento como a fonte oficial das definições arquiteturais.  
       
     Documentação completa disponível em: [https://docs.google.com/document/d/14JxRcIGH7QDPQTHxo652JSl\_OJUCMZCo/edit?usp=drive\_link\&ouid=108261102528406926829\&rtpof=true\&sd=true](https://docs.google.com/document/d/14JxRcIGH7QDPQTHxo652JSl_OJUCMZCo/edit?usp=drive_link&ouid=108261102528406926829&rtpof=true&sd=true)   
     
 
-13. # Validação, Verificação & Teste {#validação,-verificação-&-teste}
+## Validação, Verificação & Teste {#validação,-verificação-&-teste}
       
     A estratégia de Validação e Verificação do Sistema COIN’S foi definida para garantir que todas as funcionalidades atendam aos requisitos especificados e que o sistema opere de forma estável, coerente e alinhada ao objetivo educacional do projeto.  
     Os artefatos oficiais de teste estão distribuídos da seguinte forma:  
@@ -262,7 +262,7 @@ O escopo do Sistema COIN’S define as funcionalidades que serão desenvolvidas 
     [https://github.com/orgs/NES-Contabilidade-Integrada/projects/9/views/1](https://github.com/orgs/NES-Contabilidade-Integrada/projects/9/views/1)   
     
 
-14. # Análise de Viabilidade e Comprometimento {#análise-de-viabilidade-e-comprometimento}
+## Análise de Viabilidade e Comprometimento {#análise-de-viabilidade-e-comprometimento}
     Nesta seção é feito o registro da análise de viabilidade do projeto. A Tabela 8 apresenta cada aspecto avaliado e o resultado da análise.  
       
     

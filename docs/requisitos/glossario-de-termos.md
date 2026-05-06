@@ -77,134 +77,134 @@
 
 [**29\. Receita Operacional Líquida	8**](#receita-operacional-líquida)
 
-# 
+## 
 
-# **Objetivos**
+## **Objetivos**
 
 Este documento registra o glossário de termos do Sistema COIN’S (Contabilidade Integrada). Por meio dele, são especificados os termos contábeis de forma a explicar de forma clara e simples o significado de termos técnicos e jargões utilizados na área da contabilidade. Por meio deste, é possível facilitar a compreensão e a comunicação, tanto para profissionais da área quanto para pessoas alheias ao domínio contábil, como desenvolvedores. Dessa forma, atua como uma ferramenta de desmistificação e educação que transforma o que é complexo e técnico em algo compreensível para um público mais amplo, contribuindo para uma melhor gestão financeira e maior transparência.
 
-1. # Apuração do Resultado do Exercício {#apuração-do-resultado-do-exercício}
+## Apuração do Resultado do Exercício {#apuração-do-resultado-do-exercício}
 Processo de cálculo do lucro ou prejuízo obtido por uma empresa em determinado período contábil.
 
-2. # Ativo {#ativo}
+## Ativo {#ativo}
 Conjunto de bens e direitos da entidade, com capacidade de gerar benefícios econômicos futuros. Exemplo: caixa, estoque, veículos, contas a receber.
 
 Exemplo: caixa, estoque, veículos, contas a receber.
 
 Natureza: Devedora.
 
-3. # Balancete {#balancete}
+## Balancete {#balancete}
 Relatório contábil que reúne os saldos de todas as contas em determinada data, permitindo a verificação do equilíbrio entre débitos e créditos. 
 
-4. # Balancete de Verificação {#balancete-de-verificação}
+## Balancete de Verificação {#balancete-de-verificação}
 Tipo específico de balancete que apresenta os saldos de todas as contas em determinado período, permitindo a conferência da igualdade entre débitos e créditos.
 
 No COIN’S, o balancete é gerado para uma empresa específica e é utilizado como instrumento de controle e verificação da consistência dos lançamentos.
 
-5. # Balanço Patrimonial {#balanço-patrimonial}
+## Balanço Patrimonial {#balanço-patrimonial}
 Relatório contábil que apresenta, em determinada data, a posição patrimonial e financeira da empresa, estruturado em Ativo, Passivo e Patrimônio Líquido.
 
 Evidencia, em um “retrato” de determinado momento, quais são os bens, direitos, obrigações e o patrimônio líquido da entidade.
 
-6. # Conta Analítica {#conta-analítica}
+## Conta Analítica {#conta-analítica}
 Conta que não possui subdivisões e que pode ser utilizada diretamente em lançamentos contábeis.
 
 No sistema COIN’S, apenas contas analíticas são válidas para movimentações financeiras.
 
-7. # Conta Contábil {#conta-contábil}
+## Conta Contábil {#conta-contábil}
 Elemento individual do Plano de Contas, que representa uma categoria de movimentação, como Caixa, Banco, Fornecedores, Clientes, etc.
 
 Cada conta pertence a um Plano de Contas vinculado a uma empresa.
 
-8. # Conta Sintética {#conta-sintética}
+## Conta Sintética {#conta-sintética}
 Conta utilizada para agrupar outras contas dentro do Plano de Contas, funcionando como uma categoria geral (conta “mãe”).
 
 Não pode ser utilizada diretamente em lançamentos contábeis.
 
-9. # CSLL (Contribuição Social sobre o Lucro Líquido) {#csll-(contribuição-social-sobre-o-lucro-líquido)}
+## CSLL (Contribuição Social sobre o Lucro Líquido) {#csll-(contribuição-social-sobre-o-lucro-líquido)}
 Tributo federal que incide sobre o lucro líquido ajustado da empresa, destinado ao financiamento da seguridade social.
 
-10. # Custo {#custo}
+## Custo {#custo}
 Despesas diretamente relacionadas à produção ou aquisição de bens e serviços vendidos.
 
 Natureza: Devedora.
 
-11. # Demonstração de Resultado (ou DRE simplificada) {#demonstração-de-resultado-(ou-dre-simplificada)}
+## Demonstração de Resultado (ou DRE simplificada) {#demonstração-de-resultado-(ou-dre-simplificada)}
 Documento contábil que apresenta, de forma resumida, o desempenho da empresa em um período, evidenciando receitas, custos, despesas e o resultado (lucro ou prejuízo).
 
-12. # Demonstração do Resultado do Exercício (DRE) {#demonstração-do-resultado-do-exercício-(dre)}
+## Demonstração do Resultado do Exercício (DRE) {#demonstração-do-resultado-do-exercício-(dre)}
 Relatório contábil oficial que evidencia receitas, custos e despesas de uma empresa em um determinado período, confrontando esses valores até chegar ao resultado líquido (lucro ou prejuízo) do exercício.
 
-13. # Despesa {#despesa}
+## Despesa {#despesa}
 Gastos necessários à manutenção das atividades operacionais da empresa, como energia, salários e aluguel.
 
 Natureza: Devedora.
 
-14. # Fato Contábil {#fato-contábil}
+## Fato Contábil {#fato-contábil}
 Todo acontecimento que provoca alterações no patrimônio da entidade, podendo ser:
 
 * Permutativo (troca de elementos patrimoniais, sem alterar o patrimônio líquido),  
 * Modificativo (gera resultado, alterando o patrimônio líquido) ou  
 * Misto (combina características dos dois anteriores).
 
-15. # IRPJ (Imposto de Renda da Pessoa Jurídica) {#irpj-(imposto-de-renda-da-pessoa-jurídica)}
+## IRPJ (Imposto de Renda da Pessoa Jurídica) {#irpj-(imposto-de-renda-da-pessoa-jurídica)}
 Tributo federal que incide sobre o lucro das empresas, variando conforme o regime de tributação adotado.
 
-16. # Lançamento Contábil {#lançamento-contábil}
+## Lançamento Contábil {#lançamento-contábil}
 Registro de um fato contábil em livros ou sistemas, obedecendo ao método das partidas dobradas (um débito e um crédito de mesmo valor).
 
 No contexto do sistema COIN’S, é o registro de movimentação financeira em débito e crédito, sempre associado a contas do Plano de Contas e vinculado a uma empresa específica.
 
-17. # Lançamento nos Razonetes {#lançamento-nos-razonetes}
+## Lançamento nos Razonetes {#lançamento-nos-razonetes}
 Representação visual, em forma de razonete (em “T”), dos lançamentos contábeis realizados, facilitando o estudo e a conferência dos débitos e créditos.
 
-18. # Livro Diário {#livro-diário}
+## Livro Diário {#livro-diário}
 Livro (ou relatório) contábil no qual são registrados, de forma cronológica e completa, todos os lançamentos contábeis da empresa, seguindo o método das partidas dobradas.
 
-19. # Lucro Bruto {#lucro-bruto}
+## Lucro Bruto {#lucro-bruto}
 Resultado obtido após deduzir do total de receitas os custos diretos das mercadorias ou serviços vendidos.
 
-20. # Lucro Líquido antes do IRPJ e da CSLL {#lucro-líquido-antes-do-irpj-e-da-csll}
+## Lucro Líquido antes do IRPJ e da CSLL {#lucro-líquido-antes-do-irpj-e-da-csll}
 Lucro obtido após considerar receitas, custos e despesas, mas antes da dedução do Imposto de Renda de Pessoas Jurídicas (IRPJ) e da Contribuição Social sobre o Lucro Líquido (CSLL).
 
-21. # Passivo {#passivo}
+## Passivo {#passivo}
 Obrigações da entidade perante terceiros, como dívidas e compromissos.
 
 Exemplo: fornecedores, empréstimos, salários a pagar.
 
 Natureza: Credora.
 
-22. # Patrimônio Líquido {#patrimônio-líquido}
+## Patrimônio Líquido {#patrimônio-líquido}
 Representa os recursos próprios da empresa, resultantes da diferença entre Ativo e Passivo. Inclui capital social, reservas e lucros ou prejuízos acumulados.
 
 Exemplo: caixa, estoque, veículos, contas a receber.
 
 Natureza: Credora.
 
-23. # Plano de Contas {#plano-de-contas}
+## Plano de Contas {#plano-de-contas}
 Conjunto organizado e padronizado de contas contábeis utilizado para classificar e registrar os fatos contábeis de uma empresa.
 
 É a base para os lançamentos e relatórios, funcionando como uma estrutura hierárquica que organiza grupos, subgrupos, contas sintéticas e contas analíticas.
 
-24. # Razão (ou Livro Razão) {#razão-(ou-livro-razão)}
+## Razão (ou Livro Razão) {#razão-(ou-livro-razão)}
 Livro contábil que reúne, de forma organizada por conta, todos os lançamentos feitos no Livro Diário. Permite acompanhar a movimentação e o saldo de cada conta contábil, sendo derivado do Livro Diário e associado a uma empresa específica.
 
-25. # Razão Social {#razão-social}
+## Razão Social {#razão-social}
 Nome legal e oficial de uma empresa, usado em documentos formais como contratos e notas fiscais.
 
 É a identidade jurídica do negócio, única e registrada na Junta Comercial.
 
-26. # Razonete {#razonete}
+## Razonete {#razonete}
 Representação gráfica simplificada em forma de “T” utilizada para registrar movimentações em contas específicas, facilitando o entendimento de débitos e créditos.
 
-27. # Receita {#receita}
+## Receita {#receita}
 Valores obtidos pela venda de bens ou serviços, ou outras entradas que aumentam o patrimônio líquido da entidade.
 
 Natureza: Credora.
 
-28. # Receita Bruta {#receita-bruta}
+## Receita Bruta {#receita-bruta}
 Total de vendas de bens e serviços, sem qualquer dedução.
 
-29. # Receita Operacional Líquida {#receita-operacional-líquida}
+## Receita Operacional Líquida {#receita-operacional-líquida}
 Receita bruta menos deduções como devoluções, impostos sobre vendas e descontos concedidos.
 

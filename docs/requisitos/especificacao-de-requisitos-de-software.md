@@ -91,16 +91,16 @@
 
 [Responsividade:	24](#responsividade:)
 
-# 
+## 
 
-1. # Introdução {#introdução}
+## Introdução {#introdução}
    
 
 Este documento apresenta a Especificação de Requisitos de Software (ERS) do Sistema COIN’S – Contabilidade Integrada. O sistema tem como objetivo oferecer uma plataforma prática, didática e acessível para que os alunos dos primeiros semestres do curso de Ciências Contábeis da UFMS tenham um contato inicial com as atividades fundamentais do processo contábil.  
 Enquanto softwares contábeis profissionais — amplamente utilizados no mercado e introduzidos apenas nos semestres avançados do curso — exigem conhecimento prévio e maior maturidade técnica, o COIN’S preenche uma lacuna essencial ao permitir que os estudantes vivenciem práticas contábeis semelhantes às do mundo real, mas em um ambiente simplificado e focado na aprendizagem.  
 No COIN’S, os alunos realizam lançamentos contábeis alinhados ao Plano de Contas, registram movimentações no Livro Diário, consultam informações no Livro Razão e geram relatórios estruturados, como o Balancete de Verificação, Balancete Consolidado e Demonstração do Resultado do Exercício (DRE). Dessa forma, compreendem como os dados são registrados, organizados e transformados em informações relevantes para análise contábil, desenvolvendo desde cedo uma visão prática e aplicada da disciplina.
 
-2. # Classes de Usuários {#classes-de-usuários}
+## Classes de Usuários {#classes-de-usuários}
    
 
 	No Sistema COINS, foram identificadas duas classes de usuários relevantes: **Aluno** e **Professor**. Ambas utilizam o sistema com o mesmo conjunto de funcionalidades, sem distinção de permissões ou papéis nesta versão. A Tabela 1 apresenta suas responsabilidades, restrições de acesso e características típicas.
@@ -110,7 +110,7 @@ No COIN’S, os alunos realizam lançamentos contábeis alinhados ao Plano de Co
 | Aluno | Registrar lançamentos, consultar livros (Diário/Razão), gerar/exibir relatórios (Balancete, DRE, Balanço) | Não há distinções | Usuário iniciante; conhecimento técnico básico |
 | Professor | Registrar lançamentos, consultar livros (Diário/Razão), gerar/exibir relatórios (Balancete, DRE, Balanço) | Não há distinções | Usa o sistema para fins didáticos/demonstração |
 
-3. # Definição de conceitos {#definição-de-conceitos}
+## Definição de conceitos {#definição-de-conceitos}
 Os conceitos utilizados neste documento estão consolidados no Glossário de Termos do Sistema COIN’S (Contabilidade Integrada): [Glossario de Termos](https://docs.google.com/document/d/1fWNvAuHWdnDFCu3-luM2oZ-49I2bVVsvHIz6awT9p3g/edit?usp=sharing)  
 Para evitar redundâncias e facilitar a manutenção da documentação, este documento apenas referencia o glossário como fonte única de definições.  
 Os principais termos de domínio utilizados na especificação de requisitos incluem (consultar definições no Glossário de Termos):
@@ -129,7 +129,7 @@ Os principais termos de domínio utilizados na especificação de requisitos inc
 * Razão Social
 
 
-4. # Épicos {#épicos}
+## Épicos {#épicos}
 A seção de Épicos apresenta uma visão macro das grandes funcionalidades do sistema e serve como base de rastreabilidade para os Requisitos Funcionais descritos posteriormente. Cada requisito está vinculado ao épico correspondente, permitindo rastrear a relação entre funcionalidades detalhadas e seus objetivos de alto nível.
 
 | Épico 1 | Plano de Contas |
@@ -139,7 +139,7 @@ A seção de Épicos apresenta uma visão macro das grandes funcionalidades do s
 | **Épico 4** | Balancete de Verificação |
 | **Épico 5** | Apuração |
 
-5. # Modelo dos Requisitos Funcionais {#modelo-dos-requisitos-funcionais}
+## Modelo dos Requisitos Funcionais {#modelo-dos-requisitos-funcionais}
 O seguinte exemplo demonstra o modelo adotado para os requisitos funcionais. O uso foi especificado no documento [Fundamento da Estrutura dos Requisitos](https://docs.google.com/document/u/0/d/1eAsVxnGFQnY8Fp2fKZukeNej2aNxZxu0_dLkIjcqvxE/edit).
 
 | Nome do Requisito Funcional | Épico 1 |
@@ -152,17 +152,17 @@ O seguinte exemplo demonstra o modelo adotado para os requisitos funcionais. O u
 
 Modelo de Especificação \- Requisitos Funcionais. 
 
-# 
+## 
 
-# 
+## 
 
-6. # Requisitos de Software {#requisitos-de-software}
+## Requisitos de Software {#requisitos-de-software}
 Esta seção descreve os requisitos que definem o comportamento e as características do sistema COIN’S (Contabilidade Integrada). Os requisitos foram organizados em duas categorias: Requisitos Funcionais, que descrevem o que o sistema deve fazer, e Requisitos Não-Funcionais, que especificam restrições e qualidades esperadas. Cada requisito funcional está associado a um Épico, de forma a manter a rastreabilidade entre as funcionalidades e os objetivos do projeto.
 
-1. # Requisitos Funcionais {#requisitos-funcionais}
+## Requisitos Funcionais {#requisitos-funcionais}
 Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer para atender às necessidades dos usuários. Eles estão organizados por seções que correspondem aos principais módulos do sistema: Menu, Empresas, Plano de Contas, Livro Diário, Livro Razão, Balancete e Apuração. Cada requisito segue o padrão definido no modelo apresentado anteriormente, contendo sua descrição, critérios de aceite e exceções associadas aos critérios especificados.
 
-1. ### Menu {#menu}
+### Menu {#menu}
 Esta subseção apresenta os requisitos relacionados à navegação do sistema. O menu é o ponto central de acesso às funcionalidades, permitindo ao usuário visualizar as opções disponíveis e alternar entre diferentes seções de forma intuitiva e consistente. 
 
 | Exibir Menu Principal | Épico 1 |
@@ -173,7 +173,7 @@ Esta subseção apresenta os requisitos relacionados à navegação do sistema. 
 | **Exceções dos Critérios de Aceite:** |  |
 |  |  |
 
-2. ### Empresas {#empresas}
+### Empresas {#empresas}
    1. #### Estrutura da Empresa {#estrutura-da-empresa}
       
 
@@ -195,7 +195,7 @@ Esta subseção detalha os requisitos referentes à visualização de informaç�
 | **Exceções dos Critérios de Aceite:** |  |
 | \[CA-2\] Caso uma aba não consiga carregar seu conteúdo, o sistema deve exibir uma mensagem de erro. |  |
 
-2. #### Plano de Contas {#plano-de-contas}
+#### Plano de Contas {#plano-de-contas}
 Esta subseção especifica os requisitos relacionados à exibição do Plano de Contas por cada empresa cadastrada no sistema. Sendo utilizado como base para a organização das contas de forma hierárquica e padronizada, além de fornecer informações necessárias para a realização de lançamentos contábeis e relatórios gerenciais.
 
 | Exibir Plano de Contas Padrão | Épico 1 |
@@ -206,7 +206,7 @@ Esta subseção especifica os requisitos relacionados à exibição do Plano de 
 | **Exceções dos Critérios de Aceite:** |  |
 |  |  |
 
-3. #### Livro Diário {#livro-diário}
+#### Livro Diário {#livro-diário}
 Esta subseção descreve as funcionalidades vinculadas ao Livro Diário, que registra de forma cronológica todos os lançamentos contábeis realizados pela empresa. O foco é garantir a integridade dos registros e permitir sua visualização, edição, exclusão e filtragem conforme critérios definidos pelo usuário.
 
 | Gerenciar Lançamento Contábil | Épico 2 |
@@ -233,7 +233,7 @@ Esta subseção descreve as funcionalidades vinculadas ao Livro Diário, que reg
 | **Exceções dos Critérios de Aceite:** |  |
 |  |  |
 
-4. #### Livro Razão {#livro-razão}
+#### Livro Razão {#livro-razão}
 Esta subseção define os requisitos referentes ao Livro Razão, responsável por apresentar as movimentações organizadas por conta contábil. Seu propósito é permitir a análise detalhada de débitos, créditos e saldos, possibilitando o acompanhamento do histórico e da evolução de cada conta.
 
 | Exibir Livro Razão | Épico 3 |
@@ -244,7 +244,7 @@ Esta subseção define os requisitos referentes ao Livro Razão, responsável po
 | **Exceções dos Critérios de Aceite:** |  |
 | **\[CA-06.1\]** Caso os filtros selecionados não retornem movimentações, o sistema deve exibir uma mensagem avisando. **\[CA-06.2\]** Caso a base de dados não possua lançamentos para o período selecionado, o sistema não deve exibir uma tabela para essa conta. **\[CA-06.3\]** Caso o usuário selecione um período inválido (por exemplo, Data Inicial \> Data Final), o sistema deve exibir uma mensagem de erro solicitando correção dos filtros. |  |
 
-5. #### Balancete {#balancete}
+#### Balancete {#balancete}
    
 
 Esta subseção descreve as funcionalidades relacionadas ao Balancete de Verificação, que tem como objetivo apresentar, de forma organizada e consolidada, os saldos das contas contábeis de uma empresa em determinado período.  
@@ -275,7 +275,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 | **Exceções dos Critérios de Aceite:** |  |
 |  |  |
 
-6. #### **Apuração**
+#### **Apuração**
 
    
 
@@ -355,13 +355,13 @@ Ao confirmar a realização da apuração, o sistema deve realizar os devidos la
 | **Exceções dos Critérios de Aceite:** |  |
 |  |  |
 
-7. #### **Demonstração do Resultado do Exercício**
+#### **Demonstração do Resultado do Exercício**
 
    
 
 Esta subseção descreve as funcionalidades relacionadas à Demonstração do Resultado do Exercício que é um relatório contábil oficial que evidencia as receitas, custos e despesas de uma empresa em um determinado período. Seu objetivo principal é confrontar esses valores para chegar ao resultado líquido do exercício, indicando se a organização obteve lucro ou prejuízo.
 
-2. # Requisitos Não-Funcionais {#requisitos-não-funcionais}
+## Requisitos Não-Funcionais {#requisitos-não-funcionais}
    
 
 ### Compatibilidade: 1. O sistema deve ser executado corretamente no sistema operacional Windows, nas versões 10 e 11\.
