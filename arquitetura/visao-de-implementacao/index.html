@@ -1025,62 +1025,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../gerencia-projeto/pull-request-template/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Pull Request Template
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../gerencia-projeto/instrucoes-do-copilot/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Instruções do Copilot
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1364,6 +1308,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/pull-request-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pull Request Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/instrucoes-do-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instruções do Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1602,22 +1602,19 @@
 <p><a href="#conclusão">3. Conclusão  3</a></p>
 <ol>
 <li>
-<h1 id="introdução"><strong>Introdução</strong></h1>
-</li>
+<h1 id="introdução">Introdução</h1>
+Esse documento tem por objetivo especificar a estrutura organizacional do código-fonte do software COIN’S, desenvolvido na disciplina de Núcleo de Práticas de Engenharia de Software 2025/2.</li>
 </ol>
-<p>Esse documento tem por objetivo especificar a estrutura organizacional do código-fonte do software COIN’S, desenvolvido na disciplina de Núcleo de Práticas de Engenharia de Software 2025/2.</p>
 <p>Ele serve como um guia para a equipe de desenvolvimento, detalhando a responsabilidade de cada camada e diretório principal. O objetivo é facilitar a manutenção e a implementação de novas funcionalidades, garantindo que a estrutura do código seja preservada.</p>
 <p>As decisões arquiteturais de alto nível estão registradas no Documento de Registro de Decisões (ADRs), e a visão geral dos componentes pode ser vista nos diagramas C4 do projeto. Este documento foca exclusivamente na Visão de Implementação.</p>
 <ol>
 <li>
-<h1 id="arquitetura-geral-do-sistema"><strong>Arquitetura Geral do Sistema</strong></h1>
-</li>
-</ol>
-<p>O sistema em geral é constituído por uma arquitetura monolítica modular baseada em camadas. Essa decisão foi tomada por conta do contexto de que a solução desenvolvida seria um sistema desktop offline, facilitando a integração frontend/backend/banco de dados local.<br />
+<h1 id="arquitetura-geral-do-sistema">Arquitetura Geral do Sistema</h1>
+O sistema em geral é constituído por uma arquitetura monolítica modular baseada em camadas. Essa decisão foi tomada por conta do contexto de que a solução desenvolvida seria um sistema desktop offline, facilitando a integração frontend/backend/banco de dados local.<br />
 Essa arquitetura consiste basicamente em agrupar todo o sistema em um único repositório, separando os componentes em camadas de acordo com suas responsabilidades. <br />
-Mais adiante será detalhado como separamos nossas camadas tanto para o frontend quanto para o backend.</p>
-<h3 id="2.1-arquitetura-do-backend">2.1 Arquitetura do Backend</h3>
-<p>Para o backend(diretório “main”), separamos nosso código em 8 camadas principais:</p>
+Mais adiante será detalhado como separamos nossas camadas tanto para o frontend quanto para o backend.</li>
+</ol>
+<h3 id="21-arquitetura-do-backend-para-o-backenddiretorio-main-separamos-nosso-codigo-em-8-camadas-principais">2.1 Arquitetura do Backend Para o backend(diretório “main”), separamos nosso código em 8 camadas principais:</h3>
 <ul>
 <li><strong>Database:</strong> Essa camada fica responsável por configurar o banco de dados local.  </li>
 <li><strong>Migrations:</strong> Alinhada à database, essa camada tem como objetivo gerar as tabelas do banco de dados em conformidade com o modelo de dados do código.  </li>
@@ -1628,8 +1625,7 @@ Mais adiante será detalhado como separamos nossas camadas tanto para o frontend
 <li><strong>Controllers:</strong> Essa camada é responsável por disponibilizar rotas de acesso aos dados do backend para o frontend.  </li>
 <li><strong>Tests:</strong> Essa camada basicamente engloba os testes unitários da aplicação.</li>
 </ul>
-<h3 id="2.2-arquitetura-do-frontend">2.2 Arquitetura do frontend</h3>
-<p>Para o frontend(diretório “renderer”), separamos nosso código em 4 camadas principais:</p>
+<h3 id="22-arquitetura-do-frontend-para-o-frontenddiretorio-renderer-separamos-nosso-codigo-em-4-camadas-principais">2.2 Arquitetura do frontend Para o frontend(diretório “renderer”), separamos nosso código em 4 camadas principais:</h3>
 <ul>
 <li><strong>Components:</strong> Essa camada fica responsável por armazenar os componentes principais e as páginas do sistema.  </li>
 <li><strong>Pages:</strong> Essa camada fica responsável por renderizar as páginas da aplicação.  </li>
@@ -1639,10 +1635,10 @@ Mais adiante será detalhado como separamos nossas camadas tanto para o frontend
 <p><strong>Schemas:</strong> Essa camada é responsável por definir as estruturas de dados que serão utilizadas nos componentes.</p>
 </li>
 <li>
-<h1 id="conclusão"><strong>Conclusão</strong></h1>
+<h1 id="conclusão">Conclusão</h1>
+<p>A arquitetura definida pelo time entrega uma estrutura robusta e organizada para o escopo do projeto, garantindo clareza no desenvolvimento e manutenção do software.  </p>
 </li>
 </ul>
-<p>A arquitetura definida pelo time entrega uma estrutura robusta e organizada para o escopo do projeto, garantindo clareza no desenvolvimento e manutenção do software.  </p>
 
 
 
@@ -1665,7 +1661,7 @@ Mais adiante será detalhado como separamos nossas camadas tanto para o frontend
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="6 de maio de 2026 02:07:16 UTC">6 de maio de 2026 02:07:16</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="6 de maio de 2026 02:14:39 UTC">6 de maio de 2026 02:14:39</span>
   </span>
 
     

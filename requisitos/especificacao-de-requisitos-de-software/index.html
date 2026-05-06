@@ -1025,62 +1025,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../gerencia-projeto/pull-request-template/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Pull Request Template
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../gerencia-projeto/instrucoes-do-copilot/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Instruções do Copilot
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1351,6 +1295,62 @@
     
   
     CI/CD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/pull-request-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pull Request Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/instrucoes-do-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instruções do Copilot
   
 
     
@@ -1702,7 +1702,7 @@
 <h1 id="_1"></h1>
 <ol>
 <li>
-<h1 id="introdução"><strong>Introdução</strong></h1>
+<h1 id="introdução">Introdução</h1>
 </li>
 </ol>
 <p>Este documento apresenta a Especificação de Requisitos de Software (ERS) do Sistema COIN’S – Contabilidade Integrada. O sistema tem como objetivo oferecer uma plataforma prática, didática e acessível para que os alunos dos primeiros semestres do curso de Ciências Contábeis da UFMS tenham um contato inicial com as atividades fundamentais do processo contábil.<br />
@@ -1710,7 +1710,7 @@ Enquanto softwares contábeis profissionais — amplamente utilizados no mercado
 No COIN’S, os alunos realizam lançamentos contábeis alinhados ao Plano de Contas, registram movimentações no Livro Diário, consultam informações no Livro Razão e geram relatórios estruturados, como o Balancete de Verificação, Balancete Consolidado e Demonstração do Resultado do Exercício (DRE). Dessa forma, compreendem como os dados são registrados, organizados e transformados em informações relevantes para análise contábil, desenvolvendo desde cedo uma visão prática e aplicada da disciplina.</p>
 <ol>
 <li>
-<h1 id="classes-de-usuários"><strong>Classes de Usuários</strong></h1>
+<h1 id="classes-de-usuários">Classes de Usuários</h1>
 <p>No Sistema COINS, foram identificadas duas classes de usuários relevantes: <strong>Aluno</strong> e <strong>Professor</strong>. Ambas utilizam o sistema com o mesmo conjunto de funcionalidades, sem distinção de permissões ou papéis nesta versão. A Tabela 1 apresenta suas responsabilidades, restrições de acesso e características típicas.</p>
 </li>
 </ol>
@@ -1740,14 +1740,14 @@ No COIN’S, os alunos realizam lançamentos contábeis alinhados ao Plano de Co
 </table>
 <ol>
 <li>
-<h1 id="definição-de-conceitos"><strong>Definição de conceitos</strong></h1>
-</li>
-</ol>
+<h1 id="definição-de-conceitos">Definição de conceitos</h1>
 <p>Os conceitos utilizados neste documento estão consolidados no Glossário de Termos do Sistema COIN’S (Contabilidade Integrada): <a href="https://docs.google.com/document/d/1fWNvAuHWdnDFCu3-luM2oZ-49I2bVVsvHIz6awT9p3g/edit?usp=sharing">Glossario de Termos</a><br />
 Para evitar redundâncias e facilitar a manutenção da documentação, este documento apenas referencia o glossário como fonte única de definições.<br />
 Os principais termos de domínio utilizados na especificação de requisitos incluem (consultar definições no Glossário de Termos):</p>
-<ul>
-<li>Apuração do Resultado do Exercício  </li>
+</li>
+<li>
+<p>Apuração do Resultado do Exercício  </p>
+</li>
 <li>Balancete de Verificação  </li>
 <li>Balanço Patrimonial  </li>
 <li>Conta Analítica  </li>
@@ -1762,10 +1762,10 @@ Os principais termos de domínio utilizados na especificação de requisitos inc
 <p>Razão Social</p>
 </li>
 <li>
-<h1 id="épicos"><strong>Épicos</strong></h1>
-</li>
-</ul>
+<h1 id="épicos">Épicos</h1>
 <p>A seção de Épicos apresenta uma visão macro das grandes funcionalidades do sistema e serve como base de rastreabilidade para os Requisitos Funcionais descritos posteriormente. Cada requisito está vinculado ao épico correspondente, permitindo rastrear a relação entre funcionalidades detalhadas e seus objetivos de alto nível.</p>
+</li>
+</ol>
 <table>
 <thead>
 <tr>
@@ -1794,10 +1794,9 @@ Os principais termos de domínio utilizados na especificação de requisitos inc
 </table>
 <ol>
 <li>
-<h1 id="modelo-dos-requisitos-funcionais"><strong>Modelo dos Requisitos Funcionais</strong></h1>
-</li>
+<h1 id="modelo-dos-requisitos-funcionais">Modelo dos Requisitos Funcionais</h1>
+O seguinte exemplo demonstra o modelo adotado para os requisitos funcionais. O uso foi especificado no documento <a href="https://docs.google.com/document/u/0/d/1eAsVxnGFQnY8Fp2fKZukeNej2aNxZxu0_dLkIjcqvxE/edit">Fundamento da Estrutura dos Requisitos</a>.</li>
 </ol>
-<p>O seguinte exemplo demonstra o modelo adotado para os requisitos funcionais. O uso foi especificado no documento <a href="https://docs.google.com/document/u/0/d/1eAsVxnGFQnY8Fp2fKZukeNej2aNxZxu0_dLkIjcqvxE/edit">Fundamento da Estrutura dos Requisitos</a>.</p>
 <table>
 <thead>
 <tr>
@@ -1833,22 +1832,18 @@ Os principais termos de domínio utilizados na especificação de requisitos inc
 <h1 id="_3"></h1>
 <ol>
 <li>
-<h1 id="requisitos-de-software"><strong>Requisitos de Software</strong></h1>
-</li>
-</ol>
+<h1 id="requisitos-de-software">Requisitos de Software</h1>
 <p>Esta seção descreve os requisitos que definem o comportamento e as características do sistema COIN’S (Contabilidade Integrada). Os requisitos foram organizados em duas categorias: Requisitos Funcionais, que descrevem o que o sistema deve fazer, e Requisitos Não-Funcionais, que especificam restrições e qualidades esperadas. Cada requisito funcional está associado a um Épico, de forma a manter a rastreabilidade entre as funcionalidades e os objetivos do projeto.</p>
-<ol>
-<li>
-<h1 id="requisitos-funcionais"><strong>Requisitos Funcionais</strong></h1>
 </li>
-</ol>
+<li>
+<h1 id="requisitos-funcionais">Requisitos Funcionais</h1>
 <p>Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer para atender às necessidades dos usuários. Eles estão organizados por seções que correspondem aos principais módulos do sistema: Menu, Empresas, Plano de Contas, Livro Diário, Livro Razão, Balancete e Apuração. Cada requisito segue o padrão definido no modelo apresentado anteriormente, contendo sua descrição, critérios de aceite e exceções associadas aos critérios especificados.</p>
-<ol>
+</li>
 <li>
-<h3 id="menu"><strong>Menu</strong></h3>
+<h3 id="menu">Menu</h3>
+<p>Esta subseção apresenta os requisitos relacionados à navegação do sistema. O menu é o ponto central de acesso às funcionalidades, permitindo ao usuário visualizar as opções disponíveis e alternar entre diferentes seções de forma intuitiva e consistente. </p>
 </li>
 </ol>
-<p>Esta subseção apresenta os requisitos relacionados à navegação do sistema. O menu é o ponto central de acesso às funcionalidades, permitindo ao usuário visualizar as opções disponíveis e alternar entre diferentes seções de forma intuitiva e consistente. </p>
 <table>
 <thead>
 <tr>
@@ -1881,10 +1876,10 @@ Os principais termos de domínio utilizados na especificação de requisitos inc
 </table>
 <ol>
 <li>
-<h3 id="empresas"><strong>Empresas</strong></h3>
+<h3 id="empresas">Empresas</h3>
 </li>
 <li>
-<h4 id="estrutura-da-empresa"><strong>Estrutura da Empresa</strong></h4>
+<h4 id="estrutura-da-empresa">Estrutura da Empresa</h4>
 </li>
 </ol>
 <p>Esta subseção detalha os requisitos referentes à visualização de informações e acesso às funcionalidades para as empresas cadastradas no sistema. O objetivo é fornecer ao usuário uma visão informativa e padronizada das empresas utilizadas nos lançamentos contábeis, assegurando consistência e similaridade com práticas reais. Além disso, permite a navegação entre as diferentes funcionalidades oferecidas para a realização de operações contábeis em uma determinada empresa.</p>
@@ -1950,10 +1945,9 @@ Os principais termos de domínio utilizados na especificação de requisitos inc
 </table>
 <ol>
 <li>
-<h4 id="plano-de-contas"><strong>Plano de Contas</strong></h4>
-</li>
+<h4 id="plano-de-contas">Plano de Contas</h4>
+Esta subseção especifica os requisitos relacionados à exibição do Plano de Contas por cada empresa cadastrada no sistema. Sendo utilizado como base para a organização das contas de forma hierárquica e padronizada, além de fornecer informações necessárias para a realização de lançamentos contábeis e relatórios gerenciais.</li>
 </ol>
-<p>Esta subseção especifica os requisitos relacionados à exibição do Plano de Contas por cada empresa cadastrada no sistema. Sendo utilizado como base para a organização das contas de forma hierárquica e padronizada, além de fornecer informações necessárias para a realização de lançamentos contábeis e relatórios gerenciais.</p>
 <table>
 <thead>
 <tr>
@@ -1986,10 +1980,9 @@ Os principais termos de domínio utilizados na especificação de requisitos inc
 </table>
 <ol>
 <li>
-<h4 id="livro-diário"><strong>Livro Diário</strong></h4>
-</li>
+<h4 id="livro-diário">Livro Diário</h4>
+Esta subseção descreve as funcionalidades vinculadas ao Livro Diário, que registra de forma cronológica todos os lançamentos contábeis realizados pela empresa. O foco é garantir a integridade dos registros e permitir sua visualização, edição, exclusão e filtragem conforme critérios definidos pelo usuário.</li>
 </ol>
-<p>Esta subseção descreve as funcionalidades vinculadas ao Livro Diário, que registra de forma cronológica todos os lançamentos contábeis realizados pela empresa. O foco é garantir a integridade dos registros e permitir sua visualização, edição, exclusão e filtragem conforme critérios definidos pelo usuário.</p>
 <table>
 <thead>
 <tr>
@@ -2082,10 +2075,9 @@ Os principais termos de domínio utilizados na especificação de requisitos inc
 </table>
 <ol>
 <li>
-<h4 id="livro-razão"><strong>Livro Razão</strong></h4>
-</li>
+<h4 id="livro-razão">Livro Razão</h4>
+Esta subseção define os requisitos referentes ao Livro Razão, responsável por apresentar as movimentações organizadas por conta contábil. Seu propósito é permitir a análise detalhada de débitos, créditos e saldos, possibilitando o acompanhamento do histórico e da evolução de cada conta.</li>
 </ol>
-<p>Esta subseção define os requisitos referentes ao Livro Razão, responsável por apresentar as movimentações organizadas por conta contábil. Seu propósito é permitir a análise detalhada de débitos, créditos e saldos, possibilitando o acompanhamento do histórico e da evolução de cada conta.</p>
 <table>
 <thead>
 <tr>
@@ -2118,7 +2110,7 @@ Os principais termos de domínio utilizados na especificação de requisitos inc
 </table>
 <ol>
 <li>
-<h4 id="balancete"><strong>Balancete</strong></h4>
+<h4 id="balancete">Balancete</h4>
 </li>
 </ol>
 <p>Esta subseção descreve as funcionalidades relacionadas ao Balancete de Verificação, que tem como objetivo apresentar, de forma organizada e consolidada, os saldos das contas contábeis de uma empresa em determinado período.<br />
@@ -2500,33 +2492,15 @@ Ao confirmar a realização da apuração, o sistema deve realizar os devidos la
 <p>Esta subseção descreve as funcionalidades relacionadas à Demonstração do Resultado do Exercício que é um relatório contábil oficial que evidencia as receitas, custos e despesas de uma empresa em um determinado período. Seu objetivo principal é confrontar esses valores para chegar ao resultado líquido do exercício, indicando se a organização obteve lucro ou prejuízo.</p>
 <ol>
 <li>
-<h1 id="requisitos-não-funcionais"><strong>Requisitos Não-Funcionais</strong></h1>
+<h1 id="requisitos-não-funcionais">Requisitos Não-Funcionais</h1>
 </li>
 </ol>
-<h3 id="compatibilidade:">Compatibilidade:</h3>
-<ol>
-<li>O sistema deve ser executado corretamente no sistema operacional Windows, nas versões 10 e 11.</li>
-</ol>
-<h3 id="portabilidade:">Portabilidade:</h3>
-<ol>
-<li>A instalação do software deve ser executada sem a necessidade de exigir permissões de administrador.</li>
-</ol>
-<h3 id="desempenho:">Desempenho:</h3>
-<ol>
-<li>Após instalado, as telas principais devem responder de forma fluida.</li>
-</ol>
-<h3 id="armazenamento:">Armazenamento:</h3>
-<ol>
-<li>Os dados devem ficar salvos localmente na pasta do usuário (banco local do aplicativo).</li>
-</ol>
-<h3 id="disponibilidade:">Disponibilidade:</h3>
-<ol>
-<li>O sistema deve ser capaz de operar de forma autônoma (modo offline), sem a necessidade de uma conexão com a internet ativa para a execução de suas funcionalidades.</li>
-</ol>
-<h3 id="responsividade:">Responsividade:</h3>
-<ol>
-<li>A interface deve ser responsiva, adaptando-se a diferentes resoluções de tela, sem distorções ou sobreposição de elementos.</li>
-</ol>
+<h3 id="compatibilidade-1-o-sistema-deve-ser-executado-corretamente-no-sistema-operacional-windows-nas-versoes-10-e-11">Compatibilidade: 1. O sistema deve ser executado corretamente no sistema operacional Windows, nas versões 10 e 11.</h3>
+<h3 id="portabilidade-2-a-instalacao-do-software-deve-ser-executada-sem-a-necessidade-de-exigir-permissoes-de-administrador">Portabilidade: 2. A instalação do software deve ser executada sem a necessidade de exigir permissões de administrador.</h3>
+<h3 id="desempenho-3-apos-instalado-as-telas-principais-devem-responder-de-forma-fluida">Desempenho: 3. Após instalado, as telas principais devem responder de forma fluida.</h3>
+<h3 id="armazenamento-4-os-dados-devem-ficar-salvos-localmente-na-pasta-do-usuario-banco-local-do-aplicativo">Armazenamento: 4. Os dados devem ficar salvos localmente na pasta do usuário (banco local do aplicativo).</h3>
+<h3 id="disponibilidade-5-o-sistema-deve-ser-capaz-de-operar-de-forma-autonoma-modo-offline-sem-a-necessidade-de-uma-conexao-com-a-internet-ativa-para-a-execucao-de-suas-funcionalidades">Disponibilidade: 5. O sistema deve ser capaz de operar de forma autônoma (modo offline), sem a necessidade de uma conexão com a internet ativa para a execução de suas funcionalidades.</h3>
+<h3 id="responsividade-6-a-interface-deve-ser-responsiva-adaptando-se-a-diferentes-resolucoes-de-tela-sem-distorcoes-ou-sobreposicao-de-elementos">Responsividade: 6. A interface deve ser responsiva, adaptando-se a diferentes resoluções de tela, sem distorções ou sobreposição de elementos.</h3>
 
 
 
@@ -2549,7 +2523,7 @@ Ao confirmar a realização da apuração, o sistema deve realizar os devidos la
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="6 de maio de 2026 02:07:16 UTC">6 de maio de 2026 02:07:16</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="6 de maio de 2026 02:14:39 UTC">6 de maio de 2026 02:14:39</span>
   </span>
 
     

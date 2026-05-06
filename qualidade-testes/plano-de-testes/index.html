@@ -1025,62 +1025,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../gerencia-projeto/pull-request-template/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Pull Request Template
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../gerencia-projeto/instrucoes-do-copilot/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Instruções do Copilot
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1364,6 +1308,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/pull-request-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pull Request Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/instrucoes-do-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instruções do Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1624,37 +1624,31 @@
 <p><a href="#organização-dos-casos-de-teste"><strong>8. Organização dos Casos de Teste   5</strong></a></p>
 <ol>
 <li>
-<h1 id="introdução"><strong>Introdução</strong></h1>
-</li>
-</ol>
+<h1 id="introdução">Introdução</h1>
 <p>Este documento define a estratégia de validação do COIN'S. O objetivo é garantir que a lógica financeira e os fluxos de interface Electron/React funcionem conforme o esperado, utilizando uma abordagem de pirâmide de testes para assegurar a qualidade e confiabilidade dos dados.</p>
-<ol>
-<li>
-<h1 id="análise-da-situação-atual-dos-testes"><strong>Análise da Situação Atual dos Testes</strong></h1>
 </li>
-</ol>
+<li>
+<h1 id="análise-da-situação-atual-dos-testes">Análise da Situação Atual dos Testes</h1>
 <p>Atualmente, a cobertura de testes do sistema é composta exclusivamente por testes unitários desenvolvidos com o Jest. Estes testes validam funções isoladas, cálculos e componentes do React. Identificou-se uma lacuna na validação de fluxos completos de usuário e na integração real entre o frontend (Renderer) e o backend (Main/Electron).</p>
-<ol>
-<li>
-<h1 id="objetivos-dos-testes"><strong>Objetivos dos Testes</strong></h1>
 </li>
 <li>
-<p>Validar a corretude das regras de negócio contábeis em fluxos reais.  </p>
+<h1 id="objetivos-dos-testes">Objetivos dos Testes</h1>
 </li>
+<li>Validar a corretude das regras de negócio contábeis em fluxos reais.  </li>
 <li>Assegurar a integridade da persistência de dados no banco de dados através da interface.  </li>
 <li>
 <p>Evitar regressões em funcionalidades críticas a cada novo deploy.</p>
 </li>
 <li>
-<h1 id="escopo"><strong>Escopo</strong></h1>
-</li>
-</ol>
+<h1 id="escopo">Escopo</h1>
 <p><strong>Dentro do Escopo:</strong></p>
-<ul>
-<li>Validação de interface e navegação entre módulos (Plano de Contas, Razão, Balancete).  </li>
+</li>
+<li>
+<p>Validação de interface e navegação entre módulos (Plano de Contas, Razão, Balancete).  </p>
+</li>
 <li>Integridade da gravação e leitura de dados no banco local.  </li>
 <li>Testes funcionais por módulo e testes de regressão crítica.</li>
-</ul>
+</ol>
 <p><strong>Fora do Escopo (Não Prioritários):</strong></p>
 <ul>
 <li>Performance e Carga: Por ser um app local, o foco é a eficiência do código e não a concorrência de acessos simultâneos.  </li>
@@ -1662,22 +1656,22 @@
 <p>Rede e Latência: O executável opera majoritariamente offline ou com chamadas locais, tornando testes de latência de rede irrelevantes para este MVP.</p>
 </li>
 <li>
-<h1 id="tipo-de-testes"><strong>Tipo de Testes</strong></h1>
-</li>
-</ul>
+<h1 id="tipo-de-testes">Tipo de Testes</h1>
 <p>Para os testes de interface, adotamos uma separação em quatro níveis:</p>
-<ol>
-<li><strong>Funcional:</strong> Valida componentes isolados da interface (ex: o botão de salvar habilita/desabilita corretamente?).  </li>
+</li>
+<li>
+<p><strong>Funcional:</strong> Valida componentes isolados da interface (ex: o botão de salvar habilita/desabilita corretamente?).  </p>
+</li>
 <li><strong>Integração:</strong> Valida se a interface consegue ler e gravar dados no banco local com sucesso.  </li>
 <li><strong>Regressão:</strong> Testes de segurança que rodam em cada alteração para garantir que funções críticas (como o cálculo do Balancete) não quebraram.  </li>
 <li>
 <p><strong>E2E:</strong> Fluxos de negócio completos, como "Criar uma empresa e realizar o primeiro lançamento".</p>
 </li>
 <li>
-<h1 id="estratégia-de-execução"><strong>Estratégia de Execução</strong></h1>
-</li>
-</ol>
+<h1 id="estratégia-de-execução">Estratégia de Execução</h1>
 <p>A estratégia de execução é determinada automaticamente pelo sistema com base na branch em que o código está sendo enviado. Isso garante que alterações pequenas recebam feedback rápido, enquanto merges críticos passem por uma validação exaustiva.</p>
+</li>
+</ul>
 <p><strong>a. Execução Seletiva (strategy: affected)</strong><br />
 Esta modalidade é ativada em branches de desenvolvimento, como Subtask/* ou develop. O objetivo é validar apenas o que foi alterado, reduzindo o tempo de CI</p>
 <ol>
@@ -1700,10 +1694,10 @@ Esta modalidade é obrigatória em branches de entrega, como main ou release-can
 <p><strong>Captura de Evidências:</strong> Em caso de falha no CI, o sistema realiza automaticamente o upload de screenshots, vídeos e traces para a pasta <em>artifacts/</em>, permitindo que o desenvolvedor visualize exatamente onde o erro ocorreu na interface</p>
 </li>
 <li>
-<h1 id="ferramentas"><strong>Ferramentas</strong></h1>
+<h1 id="ferramentas">Ferramentas</h1>
+<p>Nesta seção, detalhamos o conjunto de ferramentas selecionado para garantir a qualidade do ciclo de vida do software, desde a lógica de negócio até a interface final.</p>
 </li>
 </ul>
-<p>Nesta seção, detalhamos o conjunto de ferramentas selecionado para garantir a qualidade do ciclo de vida do software, desde a lógica de negócio até a interface final.</p>
 <table>
 <thead>
 <tr>
@@ -1728,10 +1722,9 @@ Esta modalidade é obrigatória em branches de entrega, como main ou release-can
 </table>
 <ol>
 <li>
-<h1 id="organização-dos-casos-de-teste"><strong>Organização dos Casos de Teste</strong></h1>
-</li>
+<h1 id="organização-dos-casos-de-teste">Organização dos Casos de Teste</h1>
+A arquitetura de testes do COIN'S utiliza uma estrutura Multicamadas, organizada por Tipo e Módulo. Essa abordagem permite que o sistema cresça sem perder a rastreabilidade e a facilidade de manutenção.</li>
 </ol>
-<p>A arquitetura de testes do COIN'S utiliza uma estrutura Multicamadas, organizada por Tipo e Módulo. Essa abordagem permite que o sistema cresça sem perder a rastreabilidade e a facilidade de manutenção.</p>
 <p><strong>1. Distribuição por Tipo de Teste</strong><br />
 A suíte atual conta com 19 arquivos de especificação distribuídos estrategicamente para cobrir desde interações simples até fluxos complexos:</p>
 <table>
@@ -1803,7 +1796,7 @@ A organização técnica segue o padrão DRY (Don't Repeat Yourself), utilizando
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="6 de maio de 2026 01:53:17 UTC">6 de maio de 2026 01:53:17</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="6 de maio de 2026 02:13:33 UTC">6 de maio de 2026 02:13:33</span>
   </span>
 
     
