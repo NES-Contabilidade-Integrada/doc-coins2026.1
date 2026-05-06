@@ -19,6 +19,7 @@ When working with documentation:
 - Remove empty or redundant documents
 - Use standard Markdown headers (# ## ###) without bold formatting or custom anchors ({#anchor})
 - Main document title should be #, sections ##, subsections ###, etc.
+- Do not modify docs/devops/instrucoes-do-copilot.md as it pertains to code repository practices, not documentation standards
 - Avoid custom anchor tags in titles as MkDocs generates them automatically
 
 ## Semantic Commits
