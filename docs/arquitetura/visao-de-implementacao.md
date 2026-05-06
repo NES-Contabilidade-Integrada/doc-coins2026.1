@@ -1,4 +1,4 @@
-**Documento de Visão de Implementação**
+# Documento de Visão de Implementação
 
 **Histórico de Versões** 
 
@@ -25,19 +25,20 @@
 
 [3\. Conclusão	3](#conclusão)
 
-1. # Introdução {#introdução}
+## Introdução
 Esse documento tem por objetivo especificar a estrutura organizacional do código-fonte do software COIN’S, desenvolvido na disciplina de Núcleo de Práticas de Engenharia de Software 2025/2.
 
 Ele serve como um guia para a equipe de desenvolvimento, detalhando a responsabilidade de cada camada e diretório principal. O objetivo é facilitar a manutenção e a implementação de novas funcionalidades, garantindo que a estrutura do código seja preservada.
 
 As decisões arquiteturais de alto nível estão registradas no Documento de Registro de Decisões (ADRs), e a visão geral dos componentes pode ser vista nos diagramas C4 do projeto. Este documento foca exclusivamente na Visão de Implementação.
 
-2. # Arquitetura Geral do Sistema {#arquitetura-geral-do-sistema}
+## Arquitetura Geral do Sistema
 O sistema em geral é constituído por uma arquitetura monolítica modular baseada em camadas. Essa decisão foi tomada por conta do contexto de que a solução desenvolvida seria um sistema desktop offline, facilitando a integração frontend/backend/banco de dados local.  
 Essa arquitetura consiste basicamente em agrupar todo o sistema em um único repositório, separando os componentes em camadas de acordo com suas responsabilidades.   
 Mais adiante será detalhado como separamos nossas camadas tanto para o frontend quanto para o backend.
 
-### 2.1 Arquitetura do Backend Para o backend(diretório “main”), separamos nosso código em 8 camadas principais:
+### 2.1 Arquitetura do Backend
+Para o backend(diretório “main”), separamos nosso código em 8 camadas principais:
 
 * **Database:** Essa camada fica responsável por configurar o banco de dados local.  
 * **Migrations:** Alinhada à database, essa camada tem como objetivo gerar as tabelas do banco de dados em conformidade com o modelo de dados do código.  
@@ -49,7 +50,8 @@ Mais adiante será detalhado como separamos nossas camadas tanto para o frontend
 * **Tests:** Essa camada basicamente engloba os testes unitários da aplicação.
 
 
-### 2.2 Arquitetura do frontend Para o frontend(diretório “renderer”), separamos nosso código em 4 camadas principais:
+### 2.2 Arquitetura do frontend
+Para o frontend(diretório “renderer”), separamos nosso código em 4 camadas principais:
 
 * **Components:** Essa camada fica responsável por armazenar os componentes principais e as páginas do sistema.  
 * **Pages:** Essa camada fica responsável por renderizar as páginas da aplicação.  
@@ -57,5 +59,5 @@ Mais adiante será detalhado como separamos nossas camadas tanto para o frontend
 * **Services:** Essa camada estabelece a comunicação com o backend para retorno dos endpoints.  
 * **Schemas:** Essa camada é responsável por definir as estruturas de dados que serão utilizadas nos componentes.
 
-3. # Conclusão {#conclusão}
+## Conclusão
 A arquitetura definida pelo time entrega uma estrutura robusta e organizada para o escopo do projeto, garantindo clareza no desenvolvimento e manutenção do software.  

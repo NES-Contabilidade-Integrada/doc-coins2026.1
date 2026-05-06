@@ -17,6 +17,9 @@ When working with documentation:
 - Include relevant diagrams and examples
 - Keep navigation links accurate in index.md
 - Remove empty or redundant documents
+- Use standard Markdown headers (# ## ###) without bold formatting or custom anchors ({#anchor})
+- Main document title should be #, sections ##, subsections ###, etc.
+- Avoid custom anchor tags in titles as MkDocs generates them automatically
 
 ## Semantic Commits
 
@@ -27,5 +30,6 @@ For commit messages:
 - Use imperative mood in description
 - Keep messages under 72 characters
 - Reference issues when applicable
+- Always use semantic prefixes like docs:, fix:, feat:, etc.
 
 When invoked, analyze the current state and provide guidance or make corrections as needed.
