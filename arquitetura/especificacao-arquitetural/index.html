@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../planejamento/">
+        <link rel="prev" href="../diagramas/">
       
       
-        <link rel="next" href="../plano-do-projeto/">
+        <link rel="next" href="../visao-de-implementacao/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Cronograma - DOCS COINS 2026.1</title>
+        <title>Especificação Arquitetural - DOCS COINS 2026.1</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cronograma" class="md-skip">
+        <a href="#especificacao-de-arquitetura-de-software" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cronograma
+              Especificação Arquitetural
             
           </span>
         </div>
@@ -188,11 +188,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../arquitetura/visao-geral/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../visao-geral/" class="md-tabs__link">
           
   
   
@@ -288,13 +290,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../planejamento/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../gerencia-projeto/planejamento/" class="md-tabs__link">
           
   
   
@@ -410,26 +410,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -447,7 +452,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -465,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arquitetura/visao-geral/" class="md-nav__link">
+      <a href="../visao-geral/" class="md-nav__link">
         
   
   
@@ -493,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arquitetura/diagramas/" class="md-nav__link">
+      <a href="../diagramas/" class="md-nav__link">
         
   
   
@@ -518,10 +523,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../arquitetura/especificacao-arquitetural/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificação Arquitetural
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -537,6 +569,192 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introdução" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escopo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Escopo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#restrições-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restrições do sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#framework-e-plataforma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Framework e Plataforma
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Banco de Dados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#padrão-arquitetural" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Padrão Arquitetural
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#representação-arquitetural" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Representação arquitetural
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Representação arquitetural">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nível-1-–-diagrama-de-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nível 1 – Diagrama de Contexto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nível-2-–-diagrama-de-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nível 2 – Diagrama de Container
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nível-3-–-diagrama-de-componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nível 3 – Diagrama de Componentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nível-4-–-código" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nível 4 – Código
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagramas-suplementares-–-diagrama-de-implantação" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagramas suplementares – Diagrama de Implantação
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -549,7 +767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arquitetura/visao-de-implementacao/" class="md-nav__link">
+      <a href="../visao-de-implementacao/" class="md-nav__link">
         
   
   
@@ -577,7 +795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arquitetura/decisoes-arquiteturais/" class="md-nav__link">
+      <a href="../decisoes-arquiteturais/" class="md-nav__link">
         
   
   
@@ -1405,31 +1623,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -1447,7 +1660,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1465,7 +1678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../planejamento/" class="md-nav__link">
+      <a href="../../gerencia-projeto/planejamento/" class="md-nav__link">
         
   
   
@@ -1490,19 +1703,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../gerencia-projeto/cronograma/" class="md-nav__link">
         
   
   
@@ -1518,7 +1722,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1531,7 +1734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../plano-do-projeto/" class="md-nav__link">
+      <a href="../../gerencia-projeto/plano-do-projeto/" class="md-nav__link">
         
   
   
@@ -1559,7 +1762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../riscos/" class="md-nav__link">
+      <a href="../../gerencia-projeto/riscos/" class="md-nav__link">
         
   
   
@@ -1587,7 +1790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../template-de-documento/" class="md-nav__link">
+      <a href="../../gerencia-projeto/template-de-documento/" class="md-nav__link">
         
   
   
@@ -1615,7 +1818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pull-request-template/" class="md-nav__link">
+      <a href="../../gerencia-projeto/pull-request-template/" class="md-nav__link">
         
   
   
@@ -1643,7 +1846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../instrucoes-do-copilot/" class="md-nav__link">
+      <a href="../../gerencia-projeto/instrucoes-do-copilot/" class="md-nav__link">
         
   
   
@@ -2117,6 +2320,180 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introdução" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escopo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Escopo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#restrições-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restrições do sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#framework-e-plataforma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Framework e Plataforma
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Banco de Dados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#padrão-arquitetural" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Padrão Arquitetural
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#representação-arquitetural" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Representação arquitetural
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Representação arquitetural">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nível-1-–-diagrama-de-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nível 1 – Diagrama de Contexto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nível-2-–-diagrama-de-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nível 2 – Diagrama de Container
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nível-3-–-diagrama-de-componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nível 3 – Diagrama de Componentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nível-4-–-código" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nível 4 – Código
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagramas-suplementares-–-diagrama-de-implantação" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagramas suplementares – Diagrama de Implantação
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2132,7 +2509,177 @@
 
 
 
-<h1 id="cronograma">Cronograma</h1>
+<h1 id="especificacao-de-arquitetura-de-software"><strong>Especificação de Arquitetura de Software</strong></h1>
+<p><strong>Histórico de Versões</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Versão</th>
+<th style="text-align: center;">Data</th>
+<th style="text-align: center;">Descrição</th>
+<th style="text-align: center;">Autor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: center;">11/11/2025</td>
+<td style="text-align: center;">Adicionando Primeira versão do documento</td>
+<td style="text-align: center;">Pedro Nicoletti Sotoma</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Histórico de Revisões</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Versão</th>
+<th style="text-align: center;">Data</th>
+<th style="text-align: center;">Revisor</th>
+<th>Observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: center;">25/11/2025</td>
+<td style="text-align: center;">Fernanda Pessoa</td>
+<td>Aprovada</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sumário</strong></p>
+<p><a href="#introdução">1. Introdução 2</a></p>
+<p><a href="#escopo">2. Escopo 2</a></p>
+<p><a href="#restrições-do-sistema">2.1. Restrições do sistema 2</a></p>
+<p><a href="#framework-e-plataforma">Framework e Plataforma 2</a></p>
+<p><a href="#frontend">Frontend   3</a></p>
+<p><a href="#backend">Backend    3</a></p>
+<p><a href="#banco-de-dados">Banco de Dados 3</a></p>
+<p><a href="#padrão-arquitetural">Padrão Arquitetural    3</a></p>
+<p><a href="#representação-arquitetural">3. Representação arquitetural 4</a></p>
+<p><a href="#nível-1-–-diagrama-de-contexto">3.1. Nível 1 – Diagrama de Contexto    4</a></p>
+<p><a href="#nível-2-–-diagrama-de-container">3.2. Nível 2 – Diagrama de Container   4</a></p>
+<p><a href="#nível-3-–-diagrama-de-componentes">3.3. Nível 3 – Diagrama de Componentes 5</a></p>
+<p><a href="#nível-4-–-código">3.4. Nível 4 – Código  5</a></p>
+<p><a href="#diagramas-suplementares-–-diagrama-de-implantação">3.5. Diagramas suplementares – Diagrama de Implantação 6</a></p>
+<ol>
+<li>
+<h2 id="introdução"><strong>Introdução</strong></h2>
+</li>
+</ol>
+<p>Este documento tem como objetivo descrever a arquitetura do Sistema COIN’S, seguindo o modelo de visualização arquitetural de software C4[^1]. </p>
+<p>O C4 é o padrão ideal para representar a arquitetura porque equilibra clareza, consistência e praticidade. Ele comunica o que importa em cada nível de detalhe, é simples de manter, se integra às ferramentas modernas de desenvolvimento e fortalece a governança técnica da organização.</p>
+<p>Mesmo em um contexto de software desktop monolítico e offline, com escopo inicial pequeno, o uso do modelo C4 faz sentido por promover clareza estrutural desde o início do projeto, facilitando a evolução futura da aplicação — seja para modularização, integração online ou expansão arquitetural. Além disso, o C4 permite documentar decisões arquiteturais de forma leve e acessível, garantindo que o conhecimento do sistema não se perca com o tempo e possa ser facilmente comunicado a novos desenvolvedores ou stakeholders.</p>
+<ol>
+<li>
+<h2 id="escopo"><strong>Escopo</strong></h2>
+</li>
+</ol>
+<p>Este documento auxilia os envolvidos no projeto a compreender os aspectos arquiteturais do sistema que são  necessários para desenvolver uma solução que atenda as necessidades do proponente. Além de auxiliar equipes futuras no entendimento do projeto.</p>
+<ol>
+<li>
+<h3 id="restrições-do-sistema"><strong>Restrições do sistema</strong></h3>
+</li>
+</ol>
+<p>As principais restrições e decisões arquiteturais do <strong>Sistema COIN’S</strong> são as seguintes:</p>
+<h3 id="framework-e-plataforma"><strong>Framework e Plataforma</strong></h3>
+<ul>
+<li><strong>Electron + Electron Forge</strong>: A escolha do <em>Electron</em> foi feita para permitir o desenvolvimento de uma aplicação <strong>desktop multiplataforma</strong>, mantendo o mesmo código base em Windows, Linux e macOS.<br />
+   O <em>Electron Forge</em> foi adotado para facilitar o empacotamento, distribuição e atualização do aplicativo, garantindo consistência no ciclo de build e distribuição offline.</li>
+</ul>
+<h3 id="frontend"><strong>Frontend</strong></h3>
+<ul>
+<li><strong>Vue 3 com TypeScript</strong>: Escolhido por sua <strong>produtividade</strong>, <strong>reatividade nativa</strong> e <strong>integração simples com Electron</strong>. O uso de TypeScript aumenta a confiabilidade do código e facilita a manutenção e refatoração futura.</li>
+</ul>
+<h3 id="backend"><strong>Backend</strong></h3>
+<ul>
+<li><strong>Express.js com TypeScript</strong>: Utilizado como camada de backend local dentro do mesmo processo do Electron, responsável por expor endpoints REST internos e centralizar a lógica de negócio.<br />
+   Essa escolha mantém a <strong>separação lógica entre frontend e backend</strong>, ainda que no mesmo container, o que facilita futura migração para um modelo cliente-servidor se o sistema vier a evoluir para ambiente online.</li>
+</ul>
+<h3 id="banco-de-dados"><strong>Banco de Dados</strong></h3>
+<ul>
+<li>
+<p><strong>SQLite3</strong>: O banco de dados local foi escolhido por ser <strong>leve, embarcado e adequado ao uso offline</strong>. Ele não requer servidor dedicado, reduzindo complexidade e facilitando a instalação.</p>
+</li>
+<li>
+<p><strong>Knex.js</strong>: Biblioteca de query builder que provê <strong>abstração de acesso ao banco</strong>, portabilidade e migrações estruturadas, além de facilitar a manutenção do esquema de dados.</p>
+</li>
+</ul>
+<h3 id="padrão-arquitetural"><strong>Padrão Arquitetural</strong></h3>
+<p>O sistema é formado por uma arquitetura monolítica modularizada em camadas. Essa decisão foi tomada considerando o contexto de um software offline desktop, visando a facilidade de integração entre banco/backend/frontend. O diretório “main” fica responsável por encapsular a lógica e as camadas do backend enquanto o diretório “renderer” fica responsável pelo frontend.</p>
+<p>Para uma definição mais técnica da responsabilidade de cada camada, visualizar o documento de Visão de Implementação: <a href="https://docs.google.com/document/d/1O2Qf1cnLYiqCjFxQCzfQZ4MwuyMp6zRecco6XBTN5NA/edit?tab=t.0">https://docs.google.com/document/d/1O2Qf1cnLYiqCjFxQCzfQZ4MwuyMp6zRecco6XBTN5NA/edit?tab=t.0</a> </p>
+<ol>
+<li>
+<h2 id="representação-arquitetural"><strong>Representação arquitetural</strong></h2>
+</li>
+</ol>
+<p>O modelo C4 considera as estruturas estáticas de um sistema de software em termos de containers (aplicativos, armazenamentos de dados, microservices, etc.), componentes e código. Também considera as pessoas que usam os sistemas de software que construímos.</p>
+<ol>
+<li>
+<h3 id="nível-1-–-diagrama-de-contexto"><strong>Nível 1 – Diagrama de Contexto</strong></h3>
+</li>
+</ol>
+<p>O diagrama de contexto do sistema mostra o <strong>Sistema COIN’S</strong> e como ele se encaixa no mundo em termos das pessoas que o utilizam e dos outros sistemas de software com os quais ele interage.</p>
+<p><strong>Link do diagrama (alta resolução / online):</strong><br />
+<a href="https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B&quot;pageId&quot;%3A&quot;zNMGI6wU0Mi8Qe2H5Q59&quot;%7D">https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"zNMGI6wU0Mi8Qe2H5Q59"%7D</a> </p>
+<p>O diagrama evidencia:</p>
+<ul>
+<li>O <strong>usuário principal</strong>, que interage diretamente com o aplicativo desktop.  </li>
+<li>A ausência de dependências externas (sistema <strong>offline</strong>).  </li>
+<li>
+<p>O escopo restrito ao ambiente local da máquina do usuário.</p>
+</li>
+<li>
+<h3 id="nível-2-–-diagrama-de-container"><strong>Nível 2 – Diagrama de Container</strong></h3>
+</li>
+</ul>
+<p>O diagrama de container detalha a estrutura interna do sistema, evidenciando os <strong>principais containers</strong> que o compõem:</p>
+<ul>
+<li><strong>Frontend (Vue + Electron Renderer)</strong>: responsável pela interface gráfica e interação com o usuário.  </li>
+<li><strong>Backend Local (Express + TypeScript)</strong>: lida com as regras de negócio e comunicação com o banco de dados.  </li>
+<li><strong>Banco de Dados (SQLite3)</strong>: armazena dados localmente.  </li>
+<li><strong>Camada de Acesso a Dados (Knex)</strong>: abstrai as operações SQL e garante consistência.</li>
+</ul>
+<p><strong>Link do diagrama (alta resolução / online):</strong><br />
+<a href="https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B&quot;pageId&quot;%3A&quot;7UhaJ9ljh7ebol46HkWr&quot;%7D">https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"7UhaJ9ljh7ebol46HkWr"%7D</a> </p>
+<ol>
+<li>
+<h3 id="nível-3-–-diagrama-de-componentes"><strong>Nível 3 – Diagrama de Componentes</strong></h3>
+</li>
+</ol>
+<p>O diagrama de componentes amplia o container principal (aplicação desktop) e mostra os <strong>componentes internos</strong> que compõem a aplicação.</p>
+<p>Entre os principais componentes:</p>
+<ul>
+<li><strong>Camada de UI (Vue Components)</strong>: telas e componentes visuais.  </li>
+<li><strong>Camada de Serviços (Services Layer)</strong>: coordena comunicação entre UI e backend.  </li>
+<li><strong>Camada de API Interna (Express Controllers)</strong>: expõe endpoints locais.  </li>
+<li><strong>Camada de Persistência (Repositories e Models)</strong>: implementa acesso ao banco via Knex.</li>
+</ul>
+<p><strong>Link do diagrama (alta resolução / online):</strong><br />
+<a href="https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B&quot;pageId&quot;%3A&quot;2XVK7RYDKxdhMDquu4st&quot;%7D">https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"2XVK7RYDKxdhMDquu4st"%7D</a> </p>
+<ol>
+<li>
+<h3 id="nível-4-–-código"><strong>Nível 4 – Código</strong></h3>
+</li>
+</ol>
+<p>Neste nível, podem ser representados diagramas de classes ou entidades para os componentes mais importantes.</p>
+<p>No caso do Sistema COIN’S, recomenda-se a elaboração de um Diagrama de Entidade-Relacionamento (DER) com base no schema do banco SQLite3, destacando tabelas, colunas e relacionamentos. </p>
+<p><strong>Link para documentação do DER:</strong> <a href="https://docs.google.com/document/d/1NIrxoi_JZqYGeUrJK2uUcePTO2prriPYV1HKR5y8Hxo/edit?tab=t.0">https://docs.google.com/document/d/1NIrxoi_JZqYGeUrJK2uUcePTO2prriPYV1HKR5y8Hxo/edit?tab=t.0</a>  </p>
+<ol>
+<li>
+<h3 id="diagramas-suplementares-–-diagrama-de-implantação"><strong>Diagramas suplementares – Diagrama de Implantação</strong></h3>
+</li>
+</ol>
+<p>Por se tratar de um sistema monolítico offline, não é necessário um diagrama de implantação detalhado.<br />
+ O sistema é distribuído como um executável único via Electron Forge, contendo em si:</p>
+<ul>
+<li>A camada de frontend (Vue + Electron Renderer);  </li>
+<li>A camada de backend (Express embarcado);  </li>
+<li>O banco de dados SQLite3 (armazenado localmente no diretório da aplicação).</li>
+</ul>
+<p>Toda a execução ocorre <strong>no ambiente local do usuário</strong>, sem dependência de servidores externos ou infraestrutura de rede.</p>
+<p>[^1]: </p>
 
 
 
@@ -2155,7 +2702,7 @@
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="14 de março de 2026 21:03:11 UTC">14 de março de 2026 21:03:11</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="6 de maio de 2026 01:53:17 UTC">6 de maio de 2026 01:53:17</span>
   </span>
 
     
@@ -2165,7 +2712,7 @@
     <span class="md-icon" title="Criado em">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="14 de março de 2026 21:03:11 UTC">14 de março de 2026 21:03:11</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="6 de maio de 2026 01:53:17 UTC">6 de maio de 2026 01:53:17</span>
   </span>
 
     

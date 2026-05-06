@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../historias-usuario/">
+      
+      
+        <link rel="next" href="../DRE-regras/">
       
       
         
@@ -19,7 +23,7 @@
     
     
       
-        <title>📦 Apuração de Resultado - DOCS COINS 2026.1</title>
+        <title>Apuração de Regras - DOCS COINS 2026.1</title>
       
     
     
@@ -94,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              📦 Apuração de Resultado
+              Apuração de Regras
             
           </span>
         </div>
@@ -204,10 +208,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../visao-produto/" class="md-tabs__link">
           
   
@@ -515,6 +521,62 @@
   
   
     <li class="md-nav__item">
+      <a href="../../arquitetura/especificacao-arquitetural/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificação Arquitetural
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/visao-de-implementacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão de Implementação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../arquitetura/decisoes-arquiteturais/" class="md-nav__link">
         
   
@@ -547,26 +609,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -584,7 +651,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -707,6 +774,581 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuração de Regras
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuração de Regras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivo-da-tela" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivo da tela
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-filtro-de-data-da-apuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Filtro de data da apuração
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Filtro de data da apuração">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-campo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Campo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-valor-padrao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Valor padrão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-persistencia-durante-a-sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Persistência durante a sessão
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-regra-de-consideracao-dos-lancamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Regra de consideração dos lançamentos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Regra de consideração dos lançamentos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regra-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❗ Regra principal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-primeira-apuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Primeira apuração
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-demais-apuracoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Demais apurações
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-lancamentos-retroativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Lançamentos retroativos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-controle-de-apuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Controle de apuração
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-ausencia-de-valores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Ausência de valores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-estrutura-da-tela" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Estrutura da tela
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-resumo-do-resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Resumo do resultado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Resumo do resultado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-regra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Regra
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-classificacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 Classificação
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-regra-de-saldo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Regra de saldo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-regra-de-sinal-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Regra de sinal (UI)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-contas-de-resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Contas de resultado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-lancamentos-de-encerramento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Lançamentos de encerramento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-encerramento-das-receitas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Encerramento das Receitas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Encerramento das Receitas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ausencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausência:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-encerramento-de-custos-e-despesas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Encerramento de Custos e Despesas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. Encerramento de Custos e Despesas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ausencia_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ausência:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-confronto-da-apuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Confronto da apuração
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-transferencia-do-resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Transferência do resultado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18. Transferência do resultado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lucro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lucro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prejuizo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prejuízo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-resultado-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Resultado final
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-execucao-da-apuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. Execução da apuração
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-historico-de-apuracoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21. Histórico de apurações
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-regras-para-desfazer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        22. Regras para desfazer
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DRE-regras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DRE e Regras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../especificacao-de-requisitos-de-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificação de Requisitos de Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundamento-estrutura-requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fundamento e Estrutura de Requisitos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossario-de-termos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossário de Termos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -809,6 +1451,34 @@
     
   
     Modelo Lógico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../banco-de-dados/documentacao-modelo-dados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentação do Modelo de Dados
   
 
     
@@ -1087,6 +1757,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../qualidade-testes/plano-de-testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plano de Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../qualidade-testes/casos-teste/" class="md-nav__link">
         
   
@@ -1258,6 +1956,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../gerencia-projeto/plano-do-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plano de Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../gerencia-projeto/riscos/" class="md-nav__link">
         
   
@@ -1266,6 +1992,90 @@
     
   
     Riscos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gerencia-projeto/template-de-documento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Template de Documento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gerencia-projeto/pull-request-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pull Request Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gerencia-projeto/instrucoes-do-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instruções do Copilot
   
 
     
@@ -1373,6 +2183,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../devops/diretrizes-gerencia-configuracao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diretrizes de Gerência de Configuração
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../devops/modelo-ramificacao/" class="md-nav__link">
         
   
@@ -1436,7 +2274,7 @@
   <span class="md-ellipsis">
     
   
-    Padrao de Commits
+    Padrão de Commits
   
 
     
@@ -1608,6 +2446,34 @@
     
   
     Diário de Decisões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../decisoes/diario-de-decisoes-importado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decisões Importadas
   
 
     

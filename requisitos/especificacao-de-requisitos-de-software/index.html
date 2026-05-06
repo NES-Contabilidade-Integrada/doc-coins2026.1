@@ -1,0 +1,3207 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../DRE-regras/">
+      
+      
+        <link rel="next" href="../fundamento-estrutura-requisitos/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Especificação de Requisitos de Software - DOCS COINS 2026.1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="DOCS COINS 2026.1" class="md-header__button md-logo" aria-label="DOCS COINS 2026.1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DOCS COINS 2026.1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Especificação de Requisitos de Software
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../arquitetura/visao-geral/" class="md-tabs__link">
+          
+  
+  
+  Arquitetura
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../visao-produto/" class="md-tabs__link">
+          
+  
+  
+  Requisitos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../banco-de-dados/modelo-conceitual/" class="md-tabs__link">
+          
+  
+  
+  Banco de Dados
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ihc/personas/" class="md-tabs__link">
+          
+  
+  
+  IHC
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../qualidade-testes/estrategia-testes/" class="md-tabs__link">
+          
+  
+  
+  Qualidade e Testes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../gerencia-projeto/planejamento/" class="md-tabs__link">
+          
+  
+  
+  Gerência de Projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../devops/visao-geral/" class="md-tabs__link">
+          
+  
+  
+  DevOps
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../decisoes/decisoes/" class="md-tabs__link">
+          
+  
+  
+  Decisões
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DOCS COINS 2026.1" class="md-nav__button md-logo" aria-label="DOCS COINS 2026.1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DOCS COINS 2026.1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Arquitetura
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/visao-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/diagramas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diagramas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/especificacao-arquitetural/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificação Arquitetural
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/visao-de-implementacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão de Implementação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/decisoes-arquiteturais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decisões Arquiteturais
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Requisitos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visao-produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão do Produto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requisitos-funcionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitos Funcionais
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requisitos-nao-funcionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitos Não Funcionais
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../historias-usuario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Histórias de Usuário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apuracao-regras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apuração de Regras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DRE-regras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DRE e Regras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificação de Requisitos de Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundamento-estrutura-requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fundamento e Estrutura de Requisitos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossario-de-termos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossário de Termos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Banco de Dados
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Banco de Dados
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../banco-de-dados/modelo-conceitual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo Conceitual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../banco-de-dados/modelo-logico/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo Lógico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../banco-de-dados/documentacao-modelo-dados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentação do Modelo de Dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../banco-de-dados/dicionario-dados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dicionário de Dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IHC
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IHC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ihc/personas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ihc/jornada-usuario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jornada do Usuário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ihc/prototipos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protótipos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qualidade e Testes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Qualidade e Testes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qualidade-testes/estrategia-testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estratégia de Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qualidade-testes/plano-de-testes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plano de Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qualidade-testes/casos-teste/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos de Teste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../qualidade-testes/cobertura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cobertura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gerência de Projeto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gerência de Projeto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gerencia-projeto/planejamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planejamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gerencia-projeto/cronograma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cronograma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gerencia-projeto/plano-do-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plano de Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gerencia-projeto/riscos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Riscos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gerencia-projeto/template-de-documento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Template de Documento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gerencia-projeto/pull-request-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pull Request Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gerencia-projeto/instrucoes-do-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instruções do Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DevOps
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/visao-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/diretrizes-gerencia-configuracao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diretrizes de Gerência de Configuração
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/modelo-ramificacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Ramificação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/versionamento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versionamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/padrao-commits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Padrão de Commits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/fluxo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fluxo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/dod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DoD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/infraestrutura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CI/CD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decisões
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Decisões
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../decisoes/decisoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário de Decisões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../decisoes/diario-de-decisoes-importado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decisões Importadas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../decisoes/rd-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Template de RD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><strong>Especificação de Requisitos de Software</strong></p>
+<p><strong>Histórico de Versões</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Versão</th>
+<th style="text-align: center;">Data</th>
+<th>Descrição</th>
+<th style="text-align: center;">Autor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: center;">25/08/2025</td>
+<td>Adiciona base dos requisitos funcionais</td>
+<td style="text-align: center;">Fernanda Pessoa</td>
+</tr>
+<tr>
+<td style="text-align: center;">1.1</td>
+<td style="text-align: center;">03/09/2025</td>
+<td>Atualiza requisitos funcionais do RF-01 ao RF-06</td>
+<td style="text-align: center;">Fernanda Pessoa</td>
+</tr>
+<tr>
+<td style="text-align: center;">1.2</td>
+<td style="text-align: center;">22/09/2025</td>
+<td>Adição do requisito de Limpar dados da Empresa</td>
+<td style="text-align: center;">Fernanda Pessoa</td>
+</tr>
+<tr>
+<td style="text-align: center;">1.3</td>
+<td style="text-align: center;">21/10/2025</td>
+<td>Adição de referências aos Épicos para cada requisito</td>
+<td style="text-align: center;">Jerfferson Júnior</td>
+</tr>
+<tr>
+<td style="text-align: center;">2.0</td>
+<td style="text-align: center;">22/10/2025</td>
+<td>Documento em geral: atualizada a estrutura da documentação - agora a documentação das funcionalidades está alinhada com a hierarquia das informações do sistema; Retirada de critérios de aceite relacionados à responsividade, tendo em vista que este faz parte de requisitos não funcionais de usabilidade do sistema. RF-01: reestruturação completa do RF considerando a retirada do plano de contas do menu principal; Referência as abas de funcionalidades adicionada ao CA-3. RF-03: Reformulação focada na adição do plano de contas como mais uma funcionalidade, retirada da contagem de funcionalidades no CA-1 considerando a expansão futura (agora são apenas listadas as funcionalidades existentes).</td>
+<td style="text-align: center;">Jerfferson Júnior</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.0</td>
+<td style="text-align: center;">23/10/2025</td>
+<td>Adição de Requisitos Funcionais referentes ao Balancete</td>
+<td style="text-align: center;">Fernanda Pessoa</td>
+</tr>
+<tr>
+<td style="text-align: center;">4.0</td>
+<td style="text-align: center;">27/10</td>
+<td>Adição de Requisitos não funcionais</td>
+<td style="text-align: center;">Fernanda Pessoa</td>
+</tr>
+<tr>
+<td style="text-align: center;">4.1</td>
+<td style="text-align: center;">16/11</td>
+<td>Adição do RNF de responsividade</td>
+<td style="text-align: center;">Fernanda Pessoa</td>
+</tr>
+<tr>
+<td style="text-align: center;">4.2</td>
+<td style="text-align: center;">17/11</td>
+<td>Migração dos Conceitos para Glossário de Termos</td>
+<td style="text-align: center;">Fernanda Pessoa</td>
+</tr>
+<tr>
+<td style="text-align: center;">4.3</td>
+<td style="text-align: center;">25/11</td>
+<td>Correções de alinhamento, adição de link para Glossário de Termos</td>
+<td style="text-align: center;">Jerfferson Júnior</td>
+</tr>
+<tr>
+<td style="text-align: center;">4.4</td>
+<td style="text-align: center;">08/04</td>
+<td>Adição dos RFs de Apuração do Resultado do Exercício (ARE)</td>
+<td style="text-align: center;">Elise Lissa Hasegawa</td>
+</tr>
+<tr>
+<td style="text-align: center;">4.5</td>
+<td style="text-align: center;"></td>
+<td>Adição dos RFs da Demonstração do Resultado do Exercício (DRE)</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Histórico de Revisões</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Versão</th>
+<th style="text-align: center;">Data</th>
+<th style="text-align: center;">Revisor</th>
+<th>Observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1.2</td>
+<td style="text-align: center;">25/09/2025</td>
+<td style="text-align: center;">Jerfferson Júnior</td>
+<td>Aprovada</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.0</td>
+<td style="text-align: center;">30/10/2025</td>
+<td style="text-align: center;">Jerfferson Júnior</td>
+<td>Aprovada</td>
+</tr>
+<tr>
+<td style="text-align: center;">4.2</td>
+<td style="text-align: center;">25/11/2025</td>
+<td style="text-align: center;">Jerfferson Júnior</td>
+<td>Aprovada</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sumário</strong></p>
+<p><a href="#introdução">1. Introdução 4</a></p>
+<p><a href="#classes-de-usuários">2. Classes de Usuários    4</a></p>
+<p><a href="#definição-de-conceitos">3. Definição de conceitos 5</a></p>
+<p><a href="#épicos"><strong>4. Épicos   5</strong></a></p>
+<p><a href="#modelo-dos-requisitos-funcionais"><strong>5. Modelo dos Requisitos Funcionais 6</strong></a></p>
+<p><a href="#requisitos-de-software"><strong>6. Requisitos de Software   7</strong></a></p>
+<p><a href="#requisitos-funcionais"><strong>6.1. Requisitos Funcionais   7</strong></a></p>
+<p><a href="#menu">6.1.1. Menu    7</a></p>
+<p><a href="#exibir-menu-principal">RF-01 Exibir Menu Principal    7</a></p>
+<p><a href="#empresas">6.1.2. Empresas    8</a></p>
+<p><a href="#estrutura-da-empresa">6.1.2.1. Estrutura da Empresa  8</a></p>
+<p><a href="#exibir-empresa-estática">RF-02 Exibir Empresa Estática  8</a></p>
+<p><a href="#exibir-abas-de-funcionalidades-da-empresa">RF-03 Exibir Abas de Funcionalidades da Empresa    9</a></p>
+<p><a href="#plano-de-contas">6.1.2.2. Plano de Contas   10</a></p>
+<p><a href="#exibir-plano-de-contas-padrão">RF-04 Exibir Plano de Contas Padrão    10</a></p>
+<p><a href="#livro-diário">6.1.2.3. Livro Diário  12</a></p>
+<p><a href="#gerenciar-lançamento-contábil">RF-05 Gerenciar Lançamento Contábil    12</a></p>
+<p><a href="#listar-lançamentos-contábeis-no-livro-diário">RF-06 Listar Lançamentos Contábeis no Livro Diário 14</a></p>
+<p><a href="#deletar-dados-da-empresa">RF-07 Deletar dados da Empresa 16</a></p>
+<p><a href="#livro-razão">6.1.2.4. Livro Razão   17</a></p>
+<p><a href="#exibir-livro-razão">RF-08 Exibir Livro Razão   17</a></p>
+<p><a href="#balancete">6.1.2.5. Balancete 19</a></p>
+<p><a href="#aplicar-filtros-do-balancete">RF-09 Aplicar Filtros do Balancete 19</a></p>
+<p><a href="#exibir-balancete-de-verificação">RF-010 Exibir Balancete de Verificação 20</a></p>
+<p><a href="#exibir-resumo-do-balancete">RF-011 Exibir Resumo do Balancete  21</a></p>
+<p><a href="#requisitos-não-funcionais"><strong>6.2. Requisitos Não-Funcionais   23</strong></a></p>
+<p><a href="#compatibilidade:">Compatibilidade:   23</a></p>
+<p><a href="#portabilidade:">Portabilidade: 23</a></p>
+<p><a href="#desempenho:">Desempenho:    23</a></p>
+<p><a href="#armazenamento:">Armazenamento: 23</a></p>
+<p><a href="#disponibilidade:">Disponibilidade:   24</a></p>
+<p><a href="#responsividade:">Responsividade:    24</a></p>
+<h1 id="_1"></h1>
+<ol>
+<li>
+<h1 id="introdução"><strong>Introdução</strong></h1>
+</li>
+</ol>
+<p>Este documento apresenta a Especificação de Requisitos de Software (ERS) do Sistema COIN’S – Contabilidade Integrada. O sistema tem como objetivo oferecer uma plataforma prática, didática e acessível para que os alunos dos primeiros semestres do curso de Ciências Contábeis da UFMS tenham um contato inicial com as atividades fundamentais do processo contábil.<br />
+Enquanto softwares contábeis profissionais — amplamente utilizados no mercado e introduzidos apenas nos semestres avançados do curso — exigem conhecimento prévio e maior maturidade técnica, o COIN’S preenche uma lacuna essencial ao permitir que os estudantes vivenciem práticas contábeis semelhantes às do mundo real, mas em um ambiente simplificado e focado na aprendizagem.<br />
+No COIN’S, os alunos realizam lançamentos contábeis alinhados ao Plano de Contas, registram movimentações no Livro Diário, consultam informações no Livro Razão e geram relatórios estruturados, como o Balancete de Verificação, Balancete Consolidado e Demonstração do Resultado do Exercício (DRE). Dessa forma, compreendem como os dados são registrados, organizados e transformados em informações relevantes para análise contábil, desenvolvendo desde cedo uma visão prática e aplicada da disciplina.</p>
+<ol>
+<li>
+<h1 id="classes-de-usuários"><strong>Classes de Usuários</strong></h1>
+<p>No Sistema COINS, foram identificadas duas classes de usuários relevantes: <strong>Aluno</strong> e <strong>Professor</strong>. Ambas utilizam o sistema com o mesmo conjunto de funcionalidades, sem distinção de permissões ou papéis nesta versão. A Tabela 1 apresenta suas responsabilidades, restrições de acesso e características típicas.</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Classe</th>
+<th style="text-align: left;">Responsabilidades principais</th>
+<th style="text-align: left;">Restrições de acesso</th>
+<th style="text-align: left;">Características típicas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Aluno</td>
+<td style="text-align: left;">Registrar lançamentos, consultar livros (Diário/Razão), gerar/exibir relatórios (Balancete, DRE, Balanço)</td>
+<td style="text-align: left;">Não há distinções</td>
+<td style="text-align: left;">Usuário iniciante; conhecimento técnico básico</td>
+</tr>
+<tr>
+<td style="text-align: left;">Professor</td>
+<td style="text-align: left;">Registrar lançamentos, consultar livros (Diário/Razão), gerar/exibir relatórios (Balancete, DRE, Balanço)</td>
+<td style="text-align: left;">Não há distinções</td>
+<td style="text-align: left;">Usa o sistema para fins didáticos/demonstração</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<h1 id="definição-de-conceitos"><strong>Definição de conceitos</strong></h1>
+</li>
+</ol>
+<p>Os conceitos utilizados neste documento estão consolidados no Glossário de Termos do Sistema COIN’S (Contabilidade Integrada): <a href="https://docs.google.com/document/d/1fWNvAuHWdnDFCu3-luM2oZ-49I2bVVsvHIz6awT9p3g/edit?usp=sharing">Glossario de Termos</a><br />
+Para evitar redundâncias e facilitar a manutenção da documentação, este documento apenas referencia o glossário como fonte única de definições.<br />
+Os principais termos de domínio utilizados na especificação de requisitos incluem (consultar definições no Glossário de Termos):</p>
+<ul>
+<li>Apuração do Resultado do Exercício  </li>
+<li>Balancete de Verificação  </li>
+<li>Balanço Patrimonial  </li>
+<li>Conta Analítica  </li>
+<li>Conta Contábil  </li>
+<li>Conta Sintética  </li>
+<li>Demonstração do Resultado do Exercício (DRE)  </li>
+<li>Lançamento Contábil  </li>
+<li>Livro Diário  </li>
+<li>Livro Razão  </li>
+<li>Plano de Contas  </li>
+<li>
+<p>Razão Social</p>
+</li>
+<li>
+<h1 id="épicos"><strong>Épicos</strong></h1>
+</li>
+</ul>
+<p>A seção de Épicos apresenta uma visão macro das grandes funcionalidades do sistema e serve como base de rastreabilidade para os Requisitos Funcionais descritos posteriormente. Cada requisito está vinculado ao épico correspondente, permitindo rastrear a relação entre funcionalidades detalhadas e seus objetivos de alto nível.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Épico 1</th>
+<th style="text-align: center;">Plano de Contas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Épico 2</strong></td>
+<td style="text-align: center;">Empresa</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Épico 3</strong></td>
+<td style="text-align: center;">Livro Razão</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Épico 4</strong></td>
+<td style="text-align: center;">Balancete de Verificação</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Épico 5</strong></td>
+<td style="text-align: center;">Apuração</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<h1 id="modelo-dos-requisitos-funcionais"><strong>Modelo dos Requisitos Funcionais</strong></h1>
+</li>
+</ol>
+<p>O seguinte exemplo demonstra o modelo adotado para os requisitos funcionais. O uso foi especificado no documento <a href="https://docs.google.com/document/u/0/d/1eAsVxnGFQnY8Fp2fKZukeNej2aNxZxu0_dLkIjcqvxE/edit">Fundamento da Estrutura dos Requisitos</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Nome do Requisito Funcional</th>
+<th style="text-align: center;">Épico 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Descrição do Requisito.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Critérios de Aceite do Requisito.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>[CA-1] Exceções do Critério de Aceite.</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>Modelo de Especificação - Requisitos Funcionais. </p>
+<h1 id="_2"></h1>
+<h1 id="_3"></h1>
+<ol>
+<li>
+<h1 id="requisitos-de-software"><strong>Requisitos de Software</strong></h1>
+</li>
+</ol>
+<p>Esta seção descreve os requisitos que definem o comportamento e as características do sistema COIN’S (Contabilidade Integrada). Os requisitos foram organizados em duas categorias: Requisitos Funcionais, que descrevem o que o sistema deve fazer, e Requisitos Não-Funcionais, que especificam restrições e qualidades esperadas. Cada requisito funcional está associado a um Épico, de forma a manter a rastreabilidade entre as funcionalidades e os objetivos do projeto.</p>
+<ol>
+<li>
+<h1 id="requisitos-funcionais"><strong>Requisitos Funcionais</strong></h1>
+</li>
+</ol>
+<p>Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer para atender às necessidades dos usuários. Eles estão organizados por seções que correspondem aos principais módulos do sistema: Menu, Empresas, Plano de Contas, Livro Diário, Livro Razão, Balancete e Apuração. Cada requisito segue o padrão definido no modelo apresentado anteriormente, contendo sua descrição, critérios de aceite e exceções associadas aos critérios especificados.</p>
+<ol>
+<li>
+<h3 id="menu"><strong>Menu</strong></h3>
+</li>
+</ol>
+<p>Esta subseção apresenta os requisitos relacionados à navegação do sistema. O menu é o ponto central de acesso às funcionalidades, permitindo ao usuário visualizar as opções disponíveis e alternar entre diferentes seções de forma intuitiva e consistente. </p>
+<table>
+<thead>
+<tr>
+<th>Exibir Menu Principal</th>
+<th style="text-align: center;">Épico 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O sistema deve exibir um menu principal fixo que permita a navegação entre as funcionalidades principais. Esse menu deve conter a seção de Empresas, contendo subopções expansíveis. Dentro da seção Empresas, o sistema deve exibir subopções referentes às empresas cadastradas no sistema, incluindo a empresa estática previamente cadastrada.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>O menu principal deve exibir a seção “Empresas”. A seção “Empresas” deve conter as subopções com o nome das empresas cadastradas (razão social).  Ao selecionar uma empresa cadastrada, o sistema deve exibir a tela referente a empresa com suas informações (Nome e CNPJ), bem como as abas de funcionalidades disponíveis [<a href="#exibir-abas-de-funcionalidades-da-empresa">RF-03 – Exibir Abas de Funcionalidades da Empresa</a>]. O menu deve iniciar contendo uma empresa previamente cadastrada, estática, utilizada como base para realizar os lançamentos contábeis no sistema. [<a href="#exibir-empresa-estática">RF-02 – Exibir Empresa Estática</a>] O menu deve destacar visualmente a seção e a subopção ativa, indicando ao usuário onde ele está navegando. O menu deve permanecer acessível durante a navegação entre telas.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<h3 id="empresas"><strong>Empresas</strong></h3>
+</li>
+<li>
+<h4 id="estrutura-da-empresa"><strong>Estrutura da Empresa</strong></h4>
+</li>
+</ol>
+<p>Esta subseção detalha os requisitos referentes à visualização de informações e acesso às funcionalidades para as empresas cadastradas no sistema. O objetivo é fornecer ao usuário uma visão informativa e padronizada das empresas utilizadas nos lançamentos contábeis, assegurando consistência e similaridade com práticas reais. Além disso, permite a navegação entre as diferentes funcionalidades oferecidas para a realização de operações contábeis em uma determinada empresa.</p>
+<table>
+<thead>
+<tr>
+<th><a href="#exibir-empresa-estática">Exibir Empresa Estática</a></th>
+<th style="text-align: center;">Épico 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O sistema deve permitir que o usuário visualize uma empresa previamente cadastrada, utilizada como base para realizar os lançamentos contábeis. Essa empresa será a primeira subopção da seção “Empresas”, exibida de forma estática e sem permitir alteração de informações (Nome e CNPJ) por parte do usuário.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>O nome da empresa exibida deve corresponder à empresa previamente cadastrada no sistema. O CNPJ exibido deve corresponder ao CPNJ da empresa previamente cadastrada. As informações da empresa devem ser exibidas no formato padronizado: Nome: “Nome da Empresa”. CNPJ: “CNPJ: 00.000.000/0000-00”. O usuário não deve ser capaz de incluir, alterar ou remover as informações dessa empresa estática. As informações da empresa devem permanecer visíveis em todas as abas de funcionalidades da empresa.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><a href="#exibir-abas-de-funcionalidades-da-empresa">Exibir Abas de Funcionalidades da Empresa</a></th>
+<th style="text-align: center;">Épico 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O sistema deve exibir um conjunto fixo de abas ao acessar uma empresa em “Empresas”, permitindo que o usuário acesse as principais funcionalidades contábeis da empresa selecionada. As abas devem representar as seguintes seções: Plano de Contas, Livro Diário, Livro Razão, Balancete de Verificação e Apuração. As abas devem estar sempre visíveis enquanto o usuário navega entre as funcionalidades, permitindo alternância sem que ocorra perda de dados ou descarte de informações que estejam em processo de preenchimento, garantindo que o progresso do usuário seja preservado até que ele confirme ou cancele as operações.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>As abas devem exibir as seguintes seções: Plano de Contas, Livro Diário, Livro Razão, Balancete de Verificação e Apuração. Ao selecionar uma aba, o sistema deve exibir o conteúdo correspondente à seção escolhida. As informações em processo de preenchimento devem ser preservadas ao alternar entre abas. A aba atualmente selecionada deve ser destacada visualmente, indicando ao usuário a seção ativa.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>[CA-2] Caso uma aba não consiga carregar seu conteúdo, o sistema deve exibir uma mensagem de erro.</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<h4 id="plano-de-contas"><strong>Plano de Contas</strong></h4>
+</li>
+</ol>
+<p>Esta subseção especifica os requisitos relacionados à exibição do Plano de Contas por cada empresa cadastrada no sistema. Sendo utilizado como base para a organização das contas de forma hierárquica e padronizada, além de fornecer informações necessárias para a realização de lançamentos contábeis e relatórios gerenciais.</p>
+<table>
+<thead>
+<tr>
+<th>Exibir Plano de Contas Padrão</th>
+<th style="text-align: center;">Épico 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O sistema deve permitir que o usuário visualize o Plano de Contas Padrão a qualquer momento sem perda de dados ou do progresso atual no sistema. Por ser o plano de contas da empresa estática, a exibição deve apresentar todos os campos essenciais, incluindo Código, Classificação e Descrição da Conta, seguindo o formato estabelecido no documento oficial. O plano de contas deve ser exibido com hierarquia e indentação adequadas, de forma a diferenciar grupos, subdivisões, contas sintéticas (agrupadoras) e contas analíticas (utilizadas em lançamentos contábeis). Além disso, o sistema deve permitir que o usuário filtre os resultados do Plano de Contas com base em qualquer um dos campos disponíveis, incluindo Código, Classificação e Descrição da Conta, possibilitando localizar rapidamente informações específicas.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>O Plano de Contas Padrão deve seguir exatamente os dados do documento oficial disponibilizado em <a href="https://docs.google.com/spreadsheets/d/1eYd4BTtSIW6IggKeMR8KJp0oBfOmKuRALwSfzIBAEEw/edit?usp=drive_link">https://docs.google.com/spreadsheets/d/1eYd4BTtSIW6IggKeMR8KJp0oBfOmKuRALwSfzIBAEEw/edit?usp=drive_link</a>  O Plano de Contas deve ser estático e padrão para todas as empresas do sistema. O sistema deve exibir a indentação correta para diferenciar níveis hierárquicos, incluindo grupos, subdivisões, contas sintéticas e contas analíticas. O usuário não deve ser capaz de incluir, alterar ou remover contas no Plano de Contas Padrão. O sistema deve permitir a filtragem independente por qualquer um dos campos: Código Classificação Descrição da Conta O sistema deve permitir a combinação de filtros, exibindo apenas as contas que satisfaçam todas as condições aplicadas simultaneamente. A filtragem deve ser dinâmica, atualizando os resultados sem necessidade de recarregar a página. Os filtros devem preservar a hierarquia visual das contas (grupos, sintéticas e analíticas), exibindo apenas as que correspondem ao critério (ex.: não deve mostrar o grupo-pai de uma conta filtrada se ele não conter o que está no filtro). A busca por Descrição da Conta deve ser insensível a maiúsculas/minúsculas e permitir correspondências parciais (ex.: “Caixa” retorna “Caixa Geral” e “Caixa Pequeno Valor”). Caso nenhum resultado seja encontrado, o sistema deve exibir uma mensagem informativa. A remoção de todos os filtros deve restaurar a exibição completa do Plano de Contas Padrão.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<h4 id="livro-diário"><strong>Livro Diário</strong></h4>
+</li>
+</ol>
+<p>Esta subseção descreve as funcionalidades vinculadas ao Livro Diário, que registra de forma cronológica todos os lançamentos contábeis realizados pela empresa. O foco é garantir a integridade dos registros e permitir sua visualização, edição, exclusão e filtragem conforme critérios definidos pelo usuário.</p>
+<table>
+<thead>
+<tr>
+<th>Gerenciar Lançamento Contábil</th>
+<th style="text-align: center;">Épico 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O sistema deve permitir que o usuário realize lançamentos contábeis para uma empresa previamente cadastrada, informando os seguintes campos: data do lançamento, código da conta de débito e/ou código da conta de crédito, valor e histórico (descrição). O nome das contas associadas aos códigos informados deve ser exibido automaticamente pelo sistema, não devendo ser informado manualmente pelo usuário.  Além disso, o usuário deve poder editar e excluir lançamentos previamente cadastrados, desde que todas as regras estabelecidas sejam respeitadas.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>A data do lançamento é obrigatória, deve ser especificada manualmente pelo usuário e estar obrigatoriamente no formato DD/MM/AAAA e dentro do intervalo de 01/01 do ano atual à 31/01/2050. O usuário deve informar manualmente os códigos das contas de débito e crédito (campos obrigatórios), que devem obrigatoriamente seguir a estrutura definida no Plano de Contas Padrão. O sistema deve exibir automaticamente o nome da conta correspondente aos códigos de débito e crédito informados pelo usuário. O campo de nome da conta não deve ser editável nem preenchido manualmente em nenhuma tela de cadastro ou edição de lançamento contábil. Caso o usuário informe um código de conta inexistente, o campo de nome da conta deve permanecer em branco e o sistema deve exibir mensagem de erro ou alerta informando que o código é inválido. O vínculo entre código e nome da conta deve seguir os dados do Plano de Contas Padrão (documento oficial). O sistema deve aceitar apenas códigos de contas analíticas para lançamentos contábeis. Caso seja informado um código inexistente ou correspondente a uma conta sintética, o sistema deve bloquear o lançamento e lançar uma mensagem de exceção. O lançamento pode conter, no máximo, 6 contas de débito e 6 contas de crédito; caso o limite seja excedido, o sistema deve impedir a operação e exibir uma mensagem de erro. O campo valor é obrigatório, deve ser informado em Reais (R$), possuir duas casas decimais e respeitar um valor mínimo de R$ 0,01 e máximo de R$ 99.999.999,99. Caso o valor esteja fora deste intervalo, o sistema deve lançar uma mensagem de exceção. O campo histórico (descrição) é opcional, mas, quando preenchido, deve respeitar o limite máximo de 200 caracteres; caso o limite seja excedido, o sistema deve lançar uma mensagem de exceção. O usuário deve poder editar qualquer campo do lançamento contábil que ele cadastrou anteriormente: data do lançamento, código da conta de débito, código da conta de crédito, valor e histórico (descrição). Assim como no momento do lançamento, o nome da conta não deve ser informado manualmente pelo usuário. O usuário deve poder excluir um lançamento contábil existente. O sistema deve suportar, no mínimo, 1.000 lançamentos contábeis por empresa. O sistema deve validar que a soma total dos valores dos lançamentos das contas de débito seja igual à soma total dos valores das contas de crédito.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>[CA-3] Caso o usuário informe uma conta inexistente ou sintética, o sistema deve bloquear o lançamento e exibir mensagem de erro. [CA-4] Caso o valor informado seja inferior ao mínimo permitido ou superior ao máximo aceito, o sistema deve lançar uma mensagem de exceção. [CA-6] Caso o histórico (descrição) ultrapasse o número máximo de caracteres permitido, o sistema deve lançar uma mensagem de exceção. [CA-10] Caso a soma total de crédito e débito não sejam iguais, o lançamento contábil deve ser bloqueado e uma mensagem de erro deve ser exibida.</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Listar Lançamentos Contábeis no Livro Diário</th>
+<th style="text-align: center;">Épico 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O sistema deve permitir que o usuário visualize os lançamentos contábeis na aba do Livro Diário, apresentando de forma clara, organizada e interativa todas as informações essenciais de cada movimentação registrada. A listagem deve exibir para cada lançamento: data, códigos e nomes das contas de débito e crédito, valores e histórico (descrição), caso informada. Quando um lançamento contiver mais de uma conta de débito ou crédito, o sistema deve agrupar a linha principal com uma descrição indicando que o lançamento se trata de Partidas Múltiplas, exibindo um ícone de expansão no lugar do número da conta. Ao expandir a linha, o sistema deve exibir, de forma detalhada, cada conta participante do lançamento, com código, nome, tipo (débito/crédito) e valor.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>O sistema deve exibir todos os lançamentos contábeis registrados para a empresa selecionada, respeitando o filtro. A data apresentada em cada lançamento deve ser a data informada pelo usuário no momento do cadastro, mas a ordenação deve considerar o horário real de registro no sistema. [CA-3] O sistema deve permitir que o usuário aplique filtros avançados para visualizar os lançamentos, incluindo os seguintes campos: Número da Conta (código numérico); Nome da Conta (texto livre); Período Início e Período Fim, ambos no formato DD/MM/AAAA. O filtro de período deve considerar todos os períodos disponíveis na base de dados, sem limitações adicionais. Quando houver partidas múltiplas, o lançamento principal deve exibir a descrição “Partidas múltiplas” e, ao expandir a linha, o sistema deve detalhar cada conta individual com suas informações correspondentes. O sistema deve permitir que o usuário ordene os lançamentos por data do lançamento, código da conta, nome da conta ou valor, sendo permitido apenas um critério de ordenação por vez. Ao selecionar um critério de ordenação, qualquer outro critério previamente aplicado deve ser desmarcado automaticamente, mantendo apenas um critério ativo. O sistema deve permitir que o usuário selecione a quantidade de registros exibidos por página, com as opções <strong>10, 20 ou 50 registros</strong>, mantendo sempre os filtros aplicados entre as páginas. A paginação deve permitir que o usuário navegue entre todas as páginas de registros, preservando os filtros ativos. Para cada lançamento, o sistema deve exibir a data informada no formato DD/MM/AAAA, o código e o nome da conta de débito, o código e o nome da conta de crédito, a descrição (histórico) se informada — ou “—” quando ausente — e o valor formatado em Reais (R$) com duas casas decimais. Caso não existam lançamentos para os filtros aplicados, o sistema deve exibir uma mensagem informativa.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>[CA-06.1] Caso o usuário selecione filtros que não resultem em lançamentos, o sistema deve exibir uma mensagem informativa.</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Deletar dados da Empresa</th>
+<th style="text-align: center;">Épico 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O sistema deve permitir que o usuário exclua todos os lançamentos contábeis vinculados à empresa estática utilizada no sistema, mantendo intactos os dados da própria empresa, bem como o Plano de Contas Padrão associado. Essa funcionalidade tem como objetivo restaurar o ambiente da empresa para o estado inicial, removendo apenas os registros de movimentações e lançamentos realizados durante o uso do sistema, sem comprometer as informações estruturais e de referência.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>O sistema deve excluir todos os lançamentos contábeis cadastrados no Livro Diário e no Livro Razão da empresa selecionada. Os dados da empresa estática (nome, CNPJ e demais informações cadastrais) devem ser preservados. O Plano de Contas Padrão da empresa deve ser mantido sem alterações. Após a exclusão, o sistema deve exibir uma mensagem de confirmação informando que os lançamentos foram removidos com sucesso. Caso o usuário tente acessar o Livro Diário, Livro Razão ou Balancete após a exclusão, o sistema deve exibir uma mensagem informativa indicando que não há lançamentos disponíveis. O sistema deve exigir confirmação explícita do usuário antes de realizar a exclusão.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<h4 id="livro-razão"><strong>Livro Razão</strong></h4>
+</li>
+</ol>
+<p>Esta subseção define os requisitos referentes ao Livro Razão, responsável por apresentar as movimentações organizadas por conta contábil. Seu propósito é permitir a análise detalhada de débitos, créditos e saldos, possibilitando o acompanhamento do histórico e da evolução de cada conta.</p>
+<table>
+<thead>
+<tr>
+<th>Exibir Livro Razão</th>
+<th style="text-align: center;">Épico 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O sistema deve permitir que o usuário visualize o <strong>Livro Razão</strong> ao acessar a respectiva aba na interface de funcionalidades da empresa. O Livro Razão deve apresentar as movimentações organizadas por grupos de contas, divididas nas seguintes categorias principais: <strong>Contas Patrimoniais do Ativo Contas Patrimoniais do Passivo e Patrimônio Líquido Contas de Resultado</strong> <em>(Custos e Despesas; Receitas)</em> <strong>Contas de Encerramento</strong> <em>(Contas de Apuração)</em> Para cada <strong>conta sintética</strong> listada, o sistema deve exibir as informações de forma clara, detalhada e interativa, permitindo a visualização das movimentações associadas. O Livro Razão deve apresentar: <strong>Saldo Inicial</strong> — calculado com base no período informado nos filtros. <strong>Entradas e Saídas</strong> — exibindo valores separados por <strong>Débito</strong> e <strong>Crédito</strong>. <strong>Saldo Atual</strong> — resultado do cálculo entre saldo inicial, débitos e créditos. <strong>Saldo Final</strong> — correspondente ao fechamento do período filtrado. <strong>Indicador D/C</strong> — coluna obrigatória para todos os saldos, onde: <strong>D</strong> \= Saldo Devedor <strong>C</strong> \= Saldo Credor A interface deve exibir os dados em formato tabular, organizando cada grupo de contas em seções separadas e destacando visualmente os títulos, conforme mostrado na interface do sistema.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>O sistema deve exibir os lançamentos do Livro Razão com base nos filtros aplicados pelo usuário. O Livro Razão deve apresentar as contas agrupadas de acordo com suas categorias (Ativo, Passivo, Resultado e Encerramento). Para cada conta sintética, o sistema deve exibir: Saldo inicial. Valores de débito e crédito. Saldo atualizado após cada movimentação. Saldo final calculado para o período filtrado. Indicador <strong>D/C</strong> corretamente preenchido para o saldo inicial e final, apenas. A listagem deve atualizar dinamicamente ao alterar os filtros de Nome do Grupo, Nome da Conta, Período Inicial e Período Final. Caso o usuário não aplique filtros, o sistema deve exibir o Livro Razão completo da empresa. O sistema deve ordenar as movimentações por data do lançamento em ordem crescente. Ao final de cada tabela de conta, o sistema deve exibir um resumo totalizador com a soma de débitos, créditos e o saldo final.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>[CA-06.1]</strong> Caso os filtros selecionados não retornem movimentações, o sistema deve exibir uma mensagem avisando. <strong>[CA-06.2]</strong> Caso a base de dados não possua lançamentos para o período selecionado, o sistema não deve exibir uma tabela para essa conta. <strong>[CA-06.3]</strong> Caso o usuário selecione um período inválido (por exemplo, Data Inicial &gt; Data Final), o sistema deve exibir uma mensagem de erro solicitando correção dos filtros.</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<h4 id="balancete"><strong>Balancete</strong></h4>
+</li>
+</ol>
+<p>Esta subseção descreve as funcionalidades relacionadas ao Balancete de Verificação, que tem como objetivo apresentar, de forma organizada e consolidada, os saldos das contas contábeis de uma empresa em determinado período.<br />
+O balancete é um instrumento essencial para conferência da igualdade entre débitos e créditos, auxiliando na verificação da consistência dos lançamentos contábeis realizados no Livro Diário e refletidos no Livro Razão.<br />
+O sistema deve permitir a aplicação de filtros de consulta, a visualização detalhada das contas analíticas com seus respectivos saldos e a exibição de um resumo consolidado por natureza contábil, possibilitando a análise do Resultado do Exercício (lucro ou prejuízo) dentro do período selecionado.</p>
+<table>
+<thead>
+<tr>
+<th>Aplicar Filtros do Balancete</th>
+<th style="text-align: center;">Épico 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O sistema deve permitir que o usuário filtre as informações exibidas no Balancete de Verificação com base nos campos Nome do Grupo, Nome da Conta, Período Inicial e Período Final.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>O sistema deve exibir os campos de filtro Nome do Grupo (texto livre) Nome da Conta (texto livre); Período Inicial (DD/MM/AAAA); Período Final (DD/MM/AAAA). O filtro de período deve determinar o intervalo considerado para os cálculos de Saldo Anterior, Débito, Crédito e Saldo Atual. Caso o usuário não preencha o filtro de período, o sistema deve considerar todos os registros disponíveis no banco de dados. O sistema não deve permitir que o Período Final seja anterior a data do Período Inicial. O sistema deve permitir múltiplos filtros combinados e atualizar automaticamente a tabela conforme os parâmetros informados. Caso nenhum resultado seja encontrado, deve ser exibida uma mensagem informativa. Os filtros devem ser aplicados integralmente tanto ao Balancete de Verificação quanto ao Resumo do Balancete, mantendo consistência entre ambas as visualizações.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Exibir Balancete de Verificação</th>
+<th style="text-align: center;">Épico 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O sistema deve permitir a visualização do Balancete de Verificação, exibindo apenas as contas analíticas do Plano de Contas Padrão, agrupadas por: Ativo, Passivo, Contas de Resultado – Custos e Despesas, Contas de Resultado – Receita e Contas de Apuração. Para cada conta listada, devem ser apresentados os campos obrigatórios e os valores consolidados de acordo com os lançamentos contábeis registrados no Livro Diário, considerando o período informado nos filtros. O Saldo Anterior e o Saldo Atual devem refletir todas as movimentações compreendidas entre o início e o fim do período selecionado, garantindo a precisão dos valores exibidos.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>O Balancete deve exibir as colunas: Código Classificação Descrição da Conta Saldo Anterior (R$) Débito (R$) Crédito (R$) Saldo Atual (R$) D/C (Indicador de saldo devedor ou credor) Devem ser exibidas exclusivamente as contas analíticas, agrupadas por: Ativo Passivo Contas de Resultados - Custos e Despesas Contas de Resultado - Receita Contas de Apuração O Saldo Anterior deve representar o saldo da conta antes do Período Inicial informado. O Débito e o Crédito devem somar todas as movimentações no período informado. O campo D/C deve exibir “D” quando o saldo for devedor e “C” quando for credor. A tabela deve conter uma linha de TOTAL, somando apenas as colunas de Débito e Crédito do período. A ordenação padrão deve ser pela coluna “Classificação”, em ordem crescente.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Exibir Resumo do Balancete</th>
+<th style="text-align: center;">Épico 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Após a tabela de contas analíticas, o sistema deve apresentar um resumo consolidado do balancete, agrupando as contas por natureza contábil, de modo a evidenciar a composição global dos saldos e o Resultado do Exercício. O resumo tem como finalidade facilitar a interpretação das demonstrações contábeis e permitir a verificação da posição financeira e do desempenho da empresa dentro do período selecionado. Grupos do resumo: Contas de Resultado – Receitas Contas de Resultado – Custos e Despesas Contas Devedoras Contas Credoras Resultado do Exercício</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Cada grupo deve exibir as colunas: Saldo Anterior Débito Crédito Saldo Atual D/C (indicador de natureza do saldo) O agrupamento deve considerar as naturezas contábeis conforme o Plano de Contas Padrão, da seguinte forma: Contas Devedoras: Ativo Contas de Resultado - Custos e Despesas Contas Credoras: Passivo,  Patrimônio Líquido Contas de Resultado - Receitas O cálculo do Resultado do Exercício deve ser obtido pela fórmula: <strong>(Soma das Contas de Resultado – Receitas) – (Soma das Contas de Resultado – Custos e Despesas),</strong> indicando Lucro (saldo credor) ou Prejuízo (saldo devedor) conforme o resultado final. Caso o período não contenha movimentações nas contas de resultado, o grupo “Resultado do Exercício” deve exibir R$ 0,00 em todas as colunas.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<h4 id="apuracao"><strong>Apuração</strong></h4>
+</li>
+</ol>
+<p>Esta subseção descreve as funcionalidades relacionadas à Apuração do Resultado, que tem como objetivo apresentar uma prévia completa do que será efetivamente executado no momento da apuração do resultado do período, antes da confirmação da ação.<br />
+O sistema deve permitir a aplicação de filtros de consulta, a visualização do resumo do resultado, os saldos das contas analíticas, os lançamentos de encerramento e o resultado final, indicando lucro ou prejuízo no período.<br />
+Ao confirmar a realização da apuração, o sistema deve realizar os devidos lançamentos para na conta de apuração e zerar as contas de resultados.</p>
+<table>
+<thead>
+<tr>
+<th>Definir Período da Apuração</th>
+<th style="text-align: center;">Módulo 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O sistema deve permitir a definição da Data da Apuração, que servirá como parâmetro para filtrar quais lançamentos contábeis do Livro Diário serão considerados no encerramento do período.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>O sistema deve disponibilizar um campo para inserção da "Data da Apuração" e realizar o cálculo dos resultados até a data selecionada. Ao abrir a tela, a data deve ser preenchida com o último dia do ano atual (31/12/YYYY). <strong>Regra para Primeira Apuração:</strong> Se não houver apurações anteriores, o sistema deve considerar todos os lançamentos com data menor ou igual à informada</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>[CA-01.1]</strong> Caso não existam lançamentos elegíveis no intervalo calculado, o sistema deve exibir uma mensagem informativa e não permitir a apuração.</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Exibir Resumo do Resultado</th>
+<th style="text-align: center;">Módulo 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O sistema deve permitir que o usuário visualize um resumo do resultado contendo: o total das contas de resultados e custos e despesas e o Resultado do Período com um indicador de lucro ou prejuízo. Os valores deverão ser apresentados com sinal (positivo ou negativo) de acordo com a natureza padrão, ou seja, deve considerar que Receitas possuem natureza credora e Custos/Despesas possuem natureza devedora, se o saldo estiver invertido (contra a natureza) deve mostrar valor negativo (-). Esta funcionalidade visa dar segurança ao usuário, permitindo conferir rapidamente os valores e resultado do período selecionado antes de gerar os lançamentos definitivos de encerramento.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>O resumo deve exibir obrigatoriamente os campos: Total de Receitas, Total de Custos e Despesas, Resultado do Período e Indicador de Resultado (Lucro ou Prejuízo).</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>[CA-01.1]</strong> Caso não existam lançamentos elegíveis no intervalo calculado, o sistema deve exibir uma mensagem informativa e não permitir a apuração.</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Exibir Detalhamento das Contas de Resultado</th>
+<th style="text-align: center;">Módulo 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O sistema deve apresentar uma listagem detalhada de todas as contas analíticas que participaram da apuração, permitindo ao usuário conferir a origem dos valores que compõem o resumo do resultado</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>O sistema deve listar obrigatoriamente todas as contas analíticas com saldo diferente de 0, pertencentes aos grupos de primeiro nível "CONTAS DE RESULTADO - RECEITAS" e "CONTAS DE RESULTADO - CUSTOS E DESPESAS".  A tabela de exibição deve conter os campos: Código, Descrição da Conta, Tipo, Saldo Atual e D/C (indicador de débito ou crédito).</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Encerramento das Receitas e Custos e Despesas</th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O sistema deve calcular e apresentar, exclusivamente em caráter de prévia, os lançamentos contábeis necessários para zerar os saldos das contas de resultado (Receitas, Custos e Despesas) e transferi-los para a conta transitória "Apuração do Resultado do Exercício (ARE)". Nesta etapa, o sistema não deve realizar nenhum lançamento real nem qualquer alteração nas tabelas do banco de dados.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>O sistema deve calcular o saldo das contas de receita e demonstrar a lógica de zeramento: Se saldo credor (natureza normal): Simular Débito na conta de Receita e Crédito na conta ARE. Se saldo devedor (natureza invertida): Simular Crédito na conta de Receita e Débito na conta ARE Ausência de Receitas: Caso não existam valores elegíveis, o sistema deve exibir a mensagem: "Não há valores a serem apurados nas contas de Receita" Simulação do Encerramento de Custos e Despesas: O sistema deve calcular o saldo das contas de custos e despesas e demonstrar a lógica de zeramento:  Se saldo devedor (natureza normal): Simular Crédito na conta de Custos/Despesas e Débito na conta ARE. Se saldo credor (natureza invertida): Simular Débito na conta de Custos/Despesas e Crédito na conta ARE Ausência de Custos/Despesas: Caso não existam valores elegíveis, o sistema deve exibir a mensagem: "Não há valores a serem apurados nas contas de Custos e Despesas" Restrição de Persistência: Os lançamentos gerados nesta funcionalidade devem ser processados apenas em memória (camada de serviço/UI) para fins de conferência. Exibição na Interface: A prévia deve listar as linhas de conta, códigos, e os respectivos valores de débito e crédito simulados para cada grupo de encerramento.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>[CA-01.1]</strong> Caso não existam valores a serem apurados nas contas de resultado de receitas ou custos e despesas, o sistema deve exibir uma mensagem informativa e prosseguir normalmente com a apuração.</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Demonstrar Confronto da Apuração do Resultado</th>
+<th style="text-align: center;">Módulo 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O sistema deve apresentar uma subseção denominada "Confronto da Apuração do Resultado", com o objetivo de demonstrar detalhadamente a composição do saldo final acumulado na conta transitória "Apuração do Resultado do Exercício (ARE)".</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>A seção deve exibir obrigatoriamente as colunas: Descrição, Valor e D/C (indicador de débito ou crédito) e três linhas de consolidação: Total de Custos e Despesas, Total de Receitas e Resultado.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>[CA-01.1]</strong> Caso não existam valores de receitas ou despesas no período, a linha de Resultado deve exibir R$ 0,00 e o indicador D/C deve permanecer vazio</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Demonstrar Confronto da Apuração do Resultado</th>
+<th style="text-align: center;">Módulo 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O sistema deve calcular e apresentar, exclusivamente em caráter de simulação, o lançamento contábil necessário para transferir o saldo final da conta transitória "Apuração do Resultado do Exercício (ARE)" para a conta de Lucros Acumulados ou para a conta de Prejuízos Acumulados.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Caso o resultado da apuração seja lucro (saldo credor na conta ARE), o sistema deve demonstrar o lançamento: Debitar a conta "Apuração do Resultado" e Creditar a conta "Lucros Acumulados". Caso o resultado da apuração seja prejuízo (saldo devedor na conta ARE), o sistema deve demonstrar o lançamento: creditar a conta "Apuração do Resultado" e debitar a conta "Prejuízos Acumulados".</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Exibir Resumo do Resultado Final</th>
+<th style="text-align: center;">Módulo 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O sistema deve apresentar uma seção de Resultado Final, consolidando as informações conclusivas da apuração para que o usuário identifique rapidamente o desfecho do exercício contábil.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>A seção deve exibir os campos: Tipo de Resultado (Lucro ou Prejuízo do Período), Valor (formatado em R$) e Conta Destino.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Realizar Apuração do Resultado</th>
+<th style="text-align: center;">Módulo 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O sistema deve permitir que o usuário efetive a apuração do resultado através de uma ação de confirmação final. Ao confirmar, o sistema deve efetuar todos os cálculos e lançamentos demonstrados na prévia da Apuração.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>O sistema deve disponibilizar o botão "Realizar Apuração". A operação só deve ocorrer após o clique de confirmação do usuário.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Desfazer Última Apuração Realizada</th>
+<th style="text-align: center;">Módulo 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O sistema deve permitir que o usuário reverta a apuração do resultado mais recente, restaurando o estado das contas e removendo os registros de encerramento gerados anteriormente.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>A funcionalidade de desfazer deve estar disponível dentro da seção de "Histórico de Apurações", associada a cada registro individual de apuração concluída. O sistema deve permitir desfazer exclusivamente a última apuração realizada no sistema. O sistema deve permitir desfazer exclusivamente a última apuração realizada no sistema, exibindo uma mensagem informativa e solicitando confirmação do usuário.</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><strong>Exceções dos Critérios de Aceite:</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<h4 id="demonstracao-do-resultado-do-exercicio"><strong>Demonstração do Resultado do Exercício</strong></h4>
+</li>
+</ol>
+<p>Esta subseção descreve as funcionalidades relacionadas à Demonstração do Resultado do Exercício que é um relatório contábil oficial que evidencia as receitas, custos e despesas de uma empresa em um determinado período. Seu objetivo principal é confrontar esses valores para chegar ao resultado líquido do exercício, indicando se a organização obteve lucro ou prejuízo.</p>
+<ol>
+<li>
+<h1 id="requisitos-não-funcionais"><strong>Requisitos Não-Funcionais</strong></h1>
+</li>
+</ol>
+<h3 id="compatibilidade:"><strong>Compatibilidade:</strong></h3>
+<ol>
+<li>O sistema deve ser executado corretamente no sistema operacional Windows, nas versões 10 e 11.</li>
+</ol>
+<h3 id="portabilidade:"><strong>Portabilidade:</strong></h3>
+<ol>
+<li>A instalação do software deve ser executada sem a necessidade de exigir permissões de administrador.</li>
+</ol>
+<h3 id="desempenho:"><strong>Desempenho:</strong></h3>
+<ol>
+<li>Após instalado, as telas principais devem responder de forma fluida.</li>
+</ol>
+<h3 id="armazenamento:"><strong>Armazenamento:</strong></h3>
+<ol>
+<li>Os dados devem ficar salvos localmente na pasta do usuário (banco local do aplicativo).</li>
+</ol>
+<h3 id="disponibilidade:"><strong>Disponibilidade:</strong></h3>
+<ol>
+<li>O sistema deve ser capaz de operar de forma autônoma (modo offline), sem a necessidade de uma conexão com a internet ativa para a execução de suas funcionalidades.</li>
+</ol>
+<h3 id="responsividade:"><strong>Responsividade:</strong></h3>
+<ol>
+<li>A interface deve ser responsiva, adaptando-se a diferentes resoluções de tela, sem distorções ou sobreposição de elementos.</li>
+</ol>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Última atualização">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="6 de maio de 2026 01:53:17 UTC">6 de maio de 2026 01:53:17</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Criado em">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="6 de maio de 2026 01:53:17 UTC">6 de maio de 2026 01:53:17</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
