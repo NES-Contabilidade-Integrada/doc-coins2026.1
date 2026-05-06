@@ -1,4 +1,4 @@
-# **Especificação de Arquitetura de Software**
+# Especificação de Arquitetura de Software
 
 **Histórico de Versões**
 
@@ -42,39 +42,43 @@
 
 [3.5. Diagramas suplementares – Diagrama de Implantação	6](#diagramas-suplementares-–-diagrama-de-implantação)
 
-## Introdução {#introdução}
+## Introdução 
 Este documento tem como objetivo descrever a arquitetura do Sistema COIN’S, seguindo o modelo de visualização arquitetural de software C4[^1]. 
 
 O C4 é o padrão ideal para representar a arquitetura porque equilibra clareza, consistência e praticidade. Ele comunica o que importa em cada nível de detalhe, é simples de manter, se integra às ferramentas modernas de desenvolvimento e fortalece a governança técnica da organização.
 
 Mesmo em um contexto de software desktop monolítico e offline, com escopo inicial pequeno, o uso do modelo C4 faz sentido por promover clareza estrutural desde o início do projeto, facilitando a evolução futura da aplicação — seja para modularização, integração online ou expansão arquitetural. Além disso, o C4 permite documentar decisões arquiteturais de forma leve e acessível, garantindo que o conhecimento do sistema não se perca com o tempo e possa ser facilmente comunicado a novos desenvolvedores ou stakeholders.
 
-## Escopo {#escopo}
+## Escopo 
 Este documento auxilia os envolvidos no projeto a compreender os aspectos arquiteturais do sistema que são  necessários para desenvolver uma solução que atenda as necessidades do proponente. Além de auxiliar equipes futuras no entendimento do projeto.
 
-### Restrições do sistema {#restrições-do-sistema}
+### Restrições do sistema 
 As principais restrições e decisões arquiteturais do **Sistema COIN’S** são as seguintes:
 
 ### Framework e Plataforma * **Electron \+ Electron Forge**: A escolha do *Electron* foi feita para permitir o desenvolvimento de uma aplicação **desktop multiplataforma**, mantendo o mesmo código base em Windows, Linux e macOS.  
    O *Electron Forge* foi adotado para facilitar o empacotamento, distribuição e atualização do aplicativo, garantindo consistência no ciclo de build e distribuição offline.
 
-### Frontend * **Vue 3 com TypeScript**: Escolhido por sua **produtividade**, **reatividade nativa** e **integração simples com Electron**. O uso de TypeScript aumenta a confiabilidade do código e facilita a manutenção e refatoração futura.
+### Frontend: Vue 3 com TypeScript
+Escolhido por sua **produtividade**, **reatividade nativa** e **integração simples com Electron**. O uso de TypeScript aumenta a confiabilidade do código e facilita a manutenção e refatoração futura.
 
-### Backend * **Express.js com TypeScript**: Utilizado como camada de backend local dentro do mesmo processo do Electron, responsável por expor endpoints REST internos e centralizar a lógica de negócio.  
-   Essa escolha mantém a **separação lógica entre frontend e backend**, ainda que no mesmo container, o que facilita futura migração para um modelo cliente-servidor se o sistema vier a evoluir para ambiente online.
+### Backend: Express.js com TypeScript
+Utilizado como camada de backend local dentro do mesmo processo do Electron, responsável por expor endpoints REST internos e centralizar a lógica de negócio.  
+Essa escolha mantém a **separação lógica entre frontend e backend**, ainda que no mesmo container, o que facilita futura migração para um modelo cliente-servidor se o sistema vier a evoluir para ambiente online.
 
-### Banco de Dados * **SQLite3**: O banco de dados local foi escolhido por ser **leve, embarcado e adequado ao uso offline**. Ele não requer servidor dedicado, reduzindo complexidade e facilitando a instalação.
+### Banco de Dados: SQLite3
+O banco de dados local foi escolhido por ser **leve, embarcado e adequado ao uso offline**. Ele não requer servidor dedicado, reduzindo complexidade e facilitando a instalação.
 
 * **Knex.js**: Biblioteca de query builder que provê **abstração de acesso ao banco**, portabilidade e migrações estruturadas, além de facilitar a manutenção do esquema de dados.
 
-### Padrão Arquitetural O sistema é formado por uma arquitetura monolítica modularizada em camadas. Essa decisão foi tomada considerando o contexto de um software offline desktop, visando a facilidade de integração entre banco/backend/frontend. O diretório “main” fica responsável por encapsular a lógica e as camadas do backend enquanto o diretório “renderer” fica responsável pelo frontend.
+### Padrão Arquitetural
+O sistema é formado por uma arquitetura monolítica modularizada em camadas. Essa decisão foi tomada considerando o contexto de um software offline desktop, visando a facilidade de integração entre banco/backend/frontend. O diretório "main" fica responsável por encapsular a lógica e as camadas do backend enquanto o diretório "renderer" fica responsável pelo frontend.
 
 Para uma definição mais técnica da responsabilidade de cada camada, visualizar o documento de Visão de Implementação: [https://docs.google.com/document/d/1O2Qf1cnLYiqCjFxQCzfQZ4MwuyMp6zRecco6XBTN5NA/edit?tab=t.0](https://docs.google.com/document/d/1O2Qf1cnLYiqCjFxQCzfQZ4MwuyMp6zRecco6XBTN5NA/edit?tab=t.0) 
 
-## Representação arquitetural {#representação-arquitetural}
+## Representação arquitetural 
 O modelo C4 considera as estruturas estáticas de um sistema de software em termos de containers (aplicativos, armazenamentos de dados, microservices, etc.), componentes e código. Também considera as pessoas que usam os sistemas de software que construímos.
 
-### Nível 1 – Diagrama de Contexto {#nível-1-–-diagrama-de-contexto}
+### Nível 1 – Diagrama de Contexto 
 O diagrama de contexto do sistema mostra o **Sistema COIN’S** e como ele se encaixa no mundo em termos das pessoas que o utilizam e dos outros sistemas de software com os quais ele interage.
 
 **Link do diagrama (alta resolução / online):**  
@@ -98,7 +102,7 @@ O diagrama de container detalha a estrutura interna do sistema, evidenciando os 
 **Link do diagrama (alta resolução / online):**  
  [https://app.diagrams.net/\#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc\#%7B"pageId"%3A"7UhaJ9ljh7ebol46HkWr"%7D](https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"7UhaJ9ljh7ebol46HkWr"%7D) 
 
-### Nível 3 – Diagrama de Componentes {#nível-3-–-diagrama-de-componentes}
+### Nível 3 – Diagrama de Componentes 
 O diagrama de componentes amplia o container principal (aplicação desktop) e mostra os **componentes internos** que compõem a aplicação.
 
 Entre os principais componentes:
@@ -111,14 +115,14 @@ Entre os principais componentes:
 **Link do diagrama (alta resolução / online):**  
  [https://app.diagrams.net/\#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc\#%7B"pageId"%3A"2XVK7RYDKxdhMDquu4st"%7D](https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"2XVK7RYDKxdhMDquu4st"%7D) 
 
-### Nível 4 – Código {#nível-4-–-código}
+### Nível 4 – Código 
 Neste nível, podem ser representados diagramas de classes ou entidades para os componentes mais importantes.
 
 No caso do Sistema COIN’S, recomenda-se a elaboração de um Diagrama de Entidade-Relacionamento (DER) com base no schema do banco SQLite3, destacando tabelas, colunas e relacionamentos. 
 
 **Link para documentação do DER:** [https://docs.google.com/document/d/1NIrxoi\_JZqYGeUrJK2uUcePTO2prriPYV1HKR5y8Hxo/edit?tab=t.0](https://docs.google.com/document/d/1NIrxoi_JZqYGeUrJK2uUcePTO2prriPYV1HKR5y8Hxo/edit?tab=t.0)  
 
-### Diagramas suplementares – Diagrama de Implantação {#diagramas-suplementares-–-diagrama-de-implantação}
+### Diagramas suplementares – Diagrama de Implantação 
 Por se tratar de um sistema monolítico offline, não é necessário um diagrama de implantação detalhado.  
  O sistema é distribuído como um executável único via Electron Forge, contendo em si:
 
