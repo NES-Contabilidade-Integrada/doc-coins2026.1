@@ -379,27 +379,21 @@ Esta subseção descreve as funcionalidades relacionadas à Demonstração do Re
 
    
 
-### **Compatibilidade:** {#compatibilidade:}
-
+### Compatibilidade: {#compatibilidade:}
 1. O sistema deve ser executado corretamente no sistema operacional Windows, nas versões 10 e 11\.
 
-### **Portabilidade:** {#portabilidade:}
-
+### Portabilidade: {#portabilidade:}
 2. A instalação do software deve ser executada sem a necessidade de exigir permissões de administrador.
 
-### **Desempenho:** {#desempenho:}
-
+### Desempenho: {#desempenho:}
 3. Após instalado, as telas principais devem responder de forma fluida.
 
-### **Armazenamento:** {#armazenamento:}
-
+### Armazenamento: {#armazenamento:}
 4. Os dados devem ficar salvos localmente na pasta do usuário (banco local do aplicativo).
 
-### **Disponibilidade:** {#disponibilidade:}
-
+### Disponibilidade: {#disponibilidade:}
 5. O sistema deve ser capaz de operar de forma autônoma (modo offline), sem a necessidade de uma conexão com a internet ativa para a execução de suas funcionalidades.
 
-### **Responsividade:** {#responsividade:}
-
+### Responsividade: {#responsividade:}
 6. A interface deve ser responsiva, adaptando-se a diferentes resoluções de tela, sem distorções ou sobreposição de elementos.
 

@@ -71,8 +71,7 @@ Os proponentes são os responsáveis por solicitar, validar e acompanhar o desen
 
 O escopo do Sistema COIN’S define as funcionalidades que serão desenvolvidas ao longo do projeto, seguindo um plano incremental baseado na priorização definida durante a entrevista com o proponente. O desenvolvimento será dividido em etapas, dando continuidade à implementação do sistema que iniciou em 2025\.
 
-### **2.1 Funcionalidades do MVP (Versão Inicial \- 2025.2)** {#2.1-funcionalidades-do-mvp-(versão-inicial---2025.2)}
-
+### 2.1 Funcionalidades do MVP (Versão Inicial \- 2025.2) {#2.1-funcionalidades-do-mvp-(versão-inicial---2025.2)}
 As funcionalidades essenciais que compõem o MVP são:
 
 * **Exibição do Plano de Contas Padrão:** Disponibilizar um plano de contas pré-definido para consulta pelos usuários.  
@@ -86,8 +85,7 @@ As funcionalidades essenciais que compõem o MVP são:
 | Épico 2 \- Empresa | Visualização de Lançamentos no Livro Diário | [https://github.com/NES-Contabilidade-Integrada/coins/issues/12](https://github.com/NES-Contabilidade-Integrada/coins/issues/12)  | Implementado Anteriormente |
 
 
-### **2.2 Funcionalidades de expansão (2026.1)** {#2.2-funcionalidades-de-expansão-(2026.1)}
-
+### 2.2 Funcionalidades de expansão (2026.1) {#2.2-funcionalidades-de-expansão-(2026.1)}
 As funcionalidades complementares agregam valor ao sistema e serão desenvolvidas após a entrega do MVP:
 
 * **Transferência Automática para o Livro Razão:** Realizar a movimentação dos lançamentos do Livro Diário para o Livro Razão.  
@@ -109,8 +107,7 @@ As funcionalidades complementares agregam valor ao sistema e serão desenvolvida
 
 ### 
 
-### **2.3 Incrementos Planejados** {#2.3-incrementos-planejados}
-
+### 2.3 Incrementos Planejados {#2.3-incrementos-planejados}
 Os incrementos planejados consistem em funcionalidades adicionais previstas para versões futuras, visando ampliar a flexibilidade e a interatividade do sistema:
 
 * **Gerenciamento Personalizado de Contas:** Permitir a inclusão, edição e exclusão de novas contas no plano contábil de acordo com a necessidade do usuário, sem alterar as contas estáticas do plano.  

@@ -1,5 +1,4 @@
-# **Diretrizes de Gerência de Configuração**  {#diretrizes-de-gerência-de-configuração}
-
+# Diretrizes de Gerência de Configuração {#diretrizes-de-gerência-de-configuração}
 **Histórico de Versões**
 
 | Versão | Data | Descrição | Autor |
@@ -90,8 +89,7 @@ Após a implementação da tarefa, o desenvolvedor deve abrir uma **Pull Request
 
 Com os testes validados, a PR aprovada e ao final da sprint, é criada uma **branch de release**, responsável por consolidar as funcionalidades concluídas. Após os testes finais, a release é integrada (merge) na **main**, onde o código é empacotado para disponibilização ao proponente.
 
-## **4\.  Padrão de Commit Semântico** {#4.-padrão-de-commit-semântico}
-
+## 4\.  Padrão de Commit Semântico {#4.-padrão-de-commit-semântico}
 A adoção do Padrão de Commit Semântico não é apenas uma convenção, mas um requisito técnico que traz benefícios cruciais para a gestão de projetos e o ciclo de vida do software:
 
 Vantagens:
@@ -117,8 +115,7 @@ Tipos permitidos:
 * **chore** → mudanças que não afetam o código de produção (ex.: .gitignore)  
 * **build** → mudanças em build ou dependências
 
-## **5\. Convenções de Código** {#5.-convenções-de-código}
-
+## 5\. Convenções de Código {#5.-convenções-de-código}
 * **Variáveis, funções e métodos** → camelCase  
 * **Constantes** → SCREAMING\_SNAKE\_CASE  
 * **Classes** → PascalCase  
@@ -135,13 +132,11 @@ Definições de Incremento:
 2. **MINOR:** Deve ser incrementado quando uma nova funcionalidade é adicionada ao software, mas mantendo a compatibilidade com as versões anteriores.  
 3. **PATCH:** Deve ser incrementado quando são realizadas apenas correções de bugs ou ajustes menores que não alteram a funcionalidade existente.
 
-## **7\. Solicitação de mudança (Pull Request)** {#7.-solicitação-de-mudança-(pull-request)}
-
+## 7\. Solicitação de mudança (Pull Request) {#7.-solicitação-de-mudança-(pull-request)}
 A cada solicitação de mudança do sistema, modificações, implementações ou alterações no código, deverá ser aberta uma Pull Request(PR), em que deve constar  tudo o que está sendo solicitado de forma descritiva, seguindo o seguinte template de PR.  
 [Pull Request](https://docs.google.com/document/d/1ymcrbteUBmAbUydj0FyhLMDI67dwt384rYgiICHWx7M/edit?usp=sharing)
 
-## **8\. Definição de Pronto (DoD).** {#8.-definição-de-pronto-(dod).}
-
+## 8\. Definição de Pronto (DoD). {#8.-definição-de-pronto-(dod).}
 A **Definição de Pronto (DoD)** é um conjunto de critérios de qualidade e padrões obrigatórios que toda funcionalidade ou alteração deve satisfazer para ser considerada completa e aceitável. Este checklist assegura a estabilidade, a rastreabilidade e o cumprimento das diretrizes de código e desenvolvimento estabelecidas neste documento, antes que o item de trabalho possa ser integrado ou entregue.
 
 **Código**
@@ -166,8 +161,7 @@ A **Definição de Pronto (DoD)** é um conjunto de critérios de qualidade e pa
 
 * Revisão por pelo menos 1 revisor técnico aprovado.
 
-## **9\. Automação de Build e Geração do Executável** {#9.-automação-de-build-e-geração-do-executável}
-
+## 9\. Automação de Build e Geração do Executável {#9.-automação-de-build-e-geração-do-executável}
 O sistema COINS utiliza o framework Electron (com Squirrel.Windows) para empacotamento desktop. A geração do instalador (.exe) é totalmente automatizada via GitHub Actions, garantindo que a versão em produção seja sempre fiel ao código da branch main.
 
 **Fluxo de Integração e Entrega Contínua (CI/CD)**
