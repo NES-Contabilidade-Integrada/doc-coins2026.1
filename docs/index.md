@@ -1,70 +1,68 @@
-# 📘 COINS — Contabilidade Integrada Simplificada
+# COINS — Contabilidade Integrada Simplificada
 
-### Documentação Oficial | NES 2026.1
-
-Bem-vindo à documentação do **COIN'S**, um sistema educacional desenvolvido para apoiar o ensino de contabilidade na **UFMS**.
+Documentação técnica do projeto COINS 2026.1, desenvolvido para apoiar o ensino de contabilidade na UFMS.
 
 ---
 
-## 🎯 O que é o COINS?
+## Objetivo
 
-O **COIN'S (Contabilidade Integrada)** é um software criado para ajudar estudantes iniciantes em Ciências Contábeis a aprender, na prática, os fundamentos da contabilidade.
+O COINS é um sistema educacional que permite a execução de atividades contábeis em um ambiente controlado. O foco está em:
 
-Ele funciona como um **laboratório digital**, permitindo que o aluno simule atividades reais de um escritório contábil de forma simples, intuitiva e guiada.
-
-> 💡 Pense no COINS como uma “escola de pilotagem” para futuros contadores.
-
----
-
-## 🧑‍🎓 Para quem é?
-
-* Estudantes iniciantes de Ciências Contábeis
-* Professores que desejam apoio prático em disciplinas introdutórias
-* Qualquer pessoa que queira aprender contabilidade do zero
+* apoiar o aprendizado prático de registros contábeis;
+* permitir a análise de resultados financeiros por meio de relatórios;
+* oferecer uma base para avaliações acadêmicas e revisão de processos.
 
 ---
 
-## 🧩 O que você pode fazer no sistema?
+## Escopo desta documentação
 
-Com o COIN'S, é possível:
+Este repositório reúne os principais artefatos do projeto, incluindo:
 
-* 📂 **Organizar contas** através do Plano de Contas
-* 📝 **Registrar movimentações** no Livro Diário
-* 📊 **Acompanhar saldos** no Livro Razão
-* 📈 **Gerar relatórios** como o Balancete de Verificação
-
----
-
-## 💻 Como o sistema funciona?
-
-* 🖥️ Aplicação **desktop** (instalada nos computadores da UFMS)
-* 🔌 Funciona **offline** (sem necessidade de internet)
-* 🎨 Interface com identidade visual familiar da universidade
+* arquitetura e decisões de projeto;
+* requisitos de produto e requisitos de software;
+* modelagem de dados e dicionário de dados;
+* interface e experiência do usuário;
+* estratégia de qualidade e testes;
+* governança de projeto e práticas de DevOps.
 
 ---
 
-## 📚 Estrutura da documentação
+## Navegação
 
-Abaixo estão os artefatos técnicos organizados por disciplina:
+Use o menu lateral para acessar cada área do projeto:
 
-* **[Arquitetura](arquitetura/visao-geral.md)**: Stack tecnológica e padrões arquiteturais (C4 Model, etc)
-* **[Requisitos](requisitos/visao-produto.md)**: Requisitos funcionais e não funcionais
-* **[Banco de Dados](banco-de-dados/modelo-conceitual.md)**: Modelagem, dicionário de dados e scripts
-* **[IHC](ihc/personas.md)**: UX, usabilidade e prototipação
-* **[Qualidade e Testes](qualidade-testes/estrategia-testes.md)**: Estratégias e métricas
-* **[Gerência de Projeto](gerencia-projeto/planejamento.md)**: Planejamento e acompanhamento
-* **[DevOps](devops/infraestrutura.md)**: CI/CD e infraestrutura
-* **[Decisões (RDs)](decisoes/decisoes.md)**: Registros de decisões do projeto
-
----
-
-## 🚀 Como contribuir
-
-Para adicionar novos documentos ou atualizar os existentes, siga o
-👉 [Fluxo de trabalho](devops/fluxo.md)
+* **Arquitetura**: visão geral, diagramas e decisões arquiteturais.
+* **Requisitos**: visão do produto, requisitos funcionais e não funcionais, e documentação de regras.
+* **Banco de Dados**: modelo conceitual, modelo lógico, documentação do modelo e dicionário de dados.
+* **IHC**: personas, jornada do usuário e protótipos.
+* **Qualidade e Testes**: estratégia, plano, casos de teste e cobertura.
+* **Gerência de Projeto**: planejamento, cronograma, riscos e templates de documentos.
+* **DevOps**: infraestrutura, fluxo de trabalho, versionamento e integração contínua.
+* **Decisões**: registros de decisão e templates de requisitos.
 
 ---
 
-## 🧠 Objetivo do projeto
+## Como usar esta documentação
 
-O COIN'S busca transformar o aprendizado teórico em prática, oferecendo uma ferramenta acessível, gratuita e alinhada à realidade acadêmica.
+No diretório raiz do projeto, execute:
+
+```bash
+python -m mkdocs serve
+```
+
+Em seguida, acesse:
+
+```
+http://127.0.0.1:8000
+```
+
+---
+
+## Público-alvo
+
+Esta documentação é destinada a:
+
+* estudantes de Ciências Contábeis;
+* professores e tutores do curso;
+* desenvolvedores e analistas que mantêm o sistema;
+* avaliadores de qualidade e gestores acadêmicos.

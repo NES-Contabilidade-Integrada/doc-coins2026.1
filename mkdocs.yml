@@ -41,15 +41,23 @@ nav:
   - Arquitetura:
       - Visão Geral: arquitetura/visao-geral.md
       - Diagramas: arquitetura/diagramas.md
+      - Especificação Arquitetural: arquitetura/especificacao-arquitetural.md
+      - Visão de Implementação: arquitetura/visao-de-implementacao.md
       - Decisões Arquiteturais: arquitetura/decisoes-arquiteturais.md
   - Requisitos:
       - Visão do Produto: requisitos/visao-produto.md
       - Requisitos Funcionais: requisitos/requisitos-funcionais.md
       - Requisitos Não Funcionais: requisitos/requisitos-nao-funcionais.md
       - Histórias de Usuário: requisitos/historias-usuario.md
+      - Apuração de Regras: requisitos/apuracao-regras.md
+      - DRE e Regras: requisitos/DRE-regras.md
+      - Especificação de Requisitos de Software: requisitos/especificacao-de-requisitos-de-software.md
+      - Fundamento e Estrutura de Requisitos: requisitos/fundamento-estrutura-requisitos.md
+      - Glossário de Termos: requisitos/glossario-de-termos.md
   - Banco de Dados:
       - Modelo Conceitual: banco-de-dados/modelo-conceitual.md
       - Modelo Lógico: banco-de-dados/modelo-logico.md
+      - Documentação do Modelo de Dados: banco-de-dados/documentacao-modelo-dados.md
       - Dicionário de Dados: banco-de-dados/dicionario-dados.md
   - IHC:
       - Personas: ihc/personas.md
@@ -57,20 +65,27 @@ nav:
       - Protótipos: ihc/prototipos.md
   - Qualidade e Testes:
       - Estratégia de Testes: qualidade-testes/estrategia-testes.md
+      - Plano de Testes: qualidade-testes/plano-de-testes.md
       - Casos de Teste: qualidade-testes/casos-teste.md
       - Cobertura: qualidade-testes/cobertura.md
   - Gerência de Projeto:
       - Planejamento: gerencia-projeto/planejamento.md
       - Cronograma: gerencia-projeto/cronograma.md
+      - Plano de Projeto: gerencia-projeto/plano-do-projeto.md
       - Riscos: gerencia-projeto/riscos.md
+      - Template de Documento: gerencia-projeto/template-de-documento.md
+      - Pull Request Template: gerencia-projeto/pull-request-template.md
+      - Instruções do Copilot: gerencia-projeto/instrucoes-do-copilot.md
   - DevOps:
       - Visão Geral: devops/visao-geral.md
+      - Diretrizes de Gerência de Configuração: devops/diretrizes-gerencia-configuracao.md
       - Modelo de Ramificação: devops/modelo-ramificacao.md
       - Versionamento: devops/versionamento.md
-      - Padrao de Commits: devops/padrao-commits.md
+      - Padrão de Commits: devops/padrao-commits.md
       - Fluxo: devops/fluxo.md
       - DoD: devops/dod.md
       - CI/CD: devops/infraestrutura.md
   - Decisões:
       - Diário de Decisões: decisoes/decisoes.md
+      - Decisões Importadas: decisoes/diario-de-decisoes-importado.md
       - Template de RD: decisoes/rd-template.md
