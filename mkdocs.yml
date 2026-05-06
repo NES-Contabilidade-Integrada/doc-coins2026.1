@@ -55,7 +55,7 @@ nav:
   - Gerência de Projeto:
       - Plano de Projeto: gerencia-projeto/plano-do-projeto.md
       - Template de Documento: gerencia-projeto/template-de-documento.md
-  DevOps:
+  - DevOps:
       - Visão Geral: devops/visao-geral.md
       - Diretrizes de Gerência de Configuração: devops/diretrizes-gerencia-configuracao.md
       - Modelo de Ramificação: devops/modelo-ramificacao.md
