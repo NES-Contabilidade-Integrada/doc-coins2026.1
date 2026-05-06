@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introdução" class="md-skip">
+        <a href="#documento-de-visao-de-implementacao" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -487,6 +487,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão de Implementação
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -503,6 +521,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitetura-geral-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitetura Geral do Sistema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arquitetura Geral do Sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-arquitetura-do-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Arquitetura do Backend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-arquitetura-do-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Arquitetura do frontend
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1534,6 +1632,75 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitetura-geral-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitetura Geral do Sistema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arquitetura Geral do Sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-arquitetura-do-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Arquitetura do Backend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-arquitetura-do-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Arquitetura do frontend
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1549,7 +1716,7 @@
 
 
 
-<p><strong>Documento de Visão de Implementação</strong></p>
+<h1 id="documento-de-visao-de-implementacao">Documento de Visão de Implementação</h1>
 <p><strong>Histórico de Versões</strong> </p>
 <table>
 <thead>
@@ -1600,21 +1767,16 @@
 <p><a href="#2.1-arquitetura-do-backend">2.1 Arquitetura do Backend 2</a></p>
 <p><a href="#2.2-arquitetura-do-frontend">2.2 Arquitetura do frontend    3</a></p>
 <p><a href="#conclusão">3. Conclusão  3</a></p>
-<ol>
-<li>
-<h1 id="introdução">Introdução</h1>
-Esse documento tem por objetivo especificar a estrutura organizacional do código-fonte do software COIN’S, desenvolvido na disciplina de Núcleo de Práticas de Engenharia de Software 2025/2.</li>
-</ol>
+<h2 id="introducao">Introdução</h2>
+<p>Esse documento tem por objetivo especificar a estrutura organizacional do código-fonte do software COIN’S, desenvolvido na disciplina de Núcleo de Práticas de Engenharia de Software 2025/2.</p>
 <p>Ele serve como um guia para a equipe de desenvolvimento, detalhando a responsabilidade de cada camada e diretório principal. O objetivo é facilitar a manutenção e a implementação de novas funcionalidades, garantindo que a estrutura do código seja preservada.</p>
 <p>As decisões arquiteturais de alto nível estão registradas no Documento de Registro de Decisões (ADRs), e a visão geral dos componentes pode ser vista nos diagramas C4 do projeto. Este documento foca exclusivamente na Visão de Implementação.</p>
-<ol>
-<li>
-<h1 id="arquitetura-geral-do-sistema">Arquitetura Geral do Sistema</h1>
-O sistema em geral é constituído por uma arquitetura monolítica modular baseada em camadas. Essa decisão foi tomada por conta do contexto de que a solução desenvolvida seria um sistema desktop offline, facilitando a integração frontend/backend/banco de dados local.<br />
+<h2 id="arquitetura-geral-do-sistema">Arquitetura Geral do Sistema</h2>
+<p>O sistema em geral é constituído por uma arquitetura monolítica modular baseada em camadas. Essa decisão foi tomada por conta do contexto de que a solução desenvolvida seria um sistema desktop offline, facilitando a integração frontend/backend/banco de dados local.<br />
 Essa arquitetura consiste basicamente em agrupar todo o sistema em um único repositório, separando os componentes em camadas de acordo com suas responsabilidades. <br />
-Mais adiante será detalhado como separamos nossas camadas tanto para o frontend quanto para o backend.</li>
-</ol>
-<h3 id="21-arquitetura-do-backend-para-o-backenddiretorio-main-separamos-nosso-codigo-em-8-camadas-principais">2.1 Arquitetura do Backend Para o backend(diretório “main”), separamos nosso código em 8 camadas principais:</h3>
+Mais adiante será detalhado como separamos nossas camadas tanto para o frontend quanto para o backend.</p>
+<h3 id="21-arquitetura-do-backend">2.1 Arquitetura do Backend</h3>
+<p>Para o backend(diretório “main”), separamos nosso código em 8 camadas principais:</p>
 <ul>
 <li><strong>Database:</strong> Essa camada fica responsável por configurar o banco de dados local.  </li>
 <li><strong>Migrations:</strong> Alinhada à database, essa camada tem como objetivo gerar as tabelas do banco de dados em conformidade com o modelo de dados do código.  </li>
@@ -1625,20 +1787,17 @@ Mais adiante será detalhado como separamos nossas camadas tanto para o frontend
 <li><strong>Controllers:</strong> Essa camada é responsável por disponibilizar rotas de acesso aos dados do backend para o frontend.  </li>
 <li><strong>Tests:</strong> Essa camada basicamente engloba os testes unitários da aplicação.</li>
 </ul>
-<h3 id="22-arquitetura-do-frontend-para-o-frontenddiretorio-renderer-separamos-nosso-codigo-em-4-camadas-principais">2.2 Arquitetura do frontend Para o frontend(diretório “renderer”), separamos nosso código em 4 camadas principais:</h3>
+<h3 id="22-arquitetura-do-frontend">2.2 Arquitetura do frontend</h3>
+<p>Para o frontend(diretório “renderer”), separamos nosso código em 4 camadas principais:</p>
 <ul>
 <li><strong>Components:</strong> Essa camada fica responsável por armazenar os componentes principais e as páginas do sistema.  </li>
 <li><strong>Pages:</strong> Essa camada fica responsável por renderizar as páginas da aplicação.  </li>
 <li><strong>Router:</strong> Essa camada é responsável por gerenciar as rotas da aplicação.  </li>
 <li><strong>Services:</strong> Essa camada estabelece a comunicação com o backend para retorno dos endpoints.  </li>
-<li>
-<p><strong>Schemas:</strong> Essa camada é responsável por definir as estruturas de dados que serão utilizadas nos componentes.</p>
-</li>
-<li>
-<h1 id="conclusão">Conclusão</h1>
-<p>A arquitetura definida pelo time entrega uma estrutura robusta e organizada para o escopo do projeto, garantindo clareza no desenvolvimento e manutenção do software.  </p>
-</li>
+<li><strong>Schemas:</strong> Essa camada é responsável por definir as estruturas de dados que serão utilizadas nos componentes.</li>
 </ul>
+<h2 id="conclusao">Conclusão</h2>
+<p>A arquitetura definida pelo time entrega uma estrutura robusta e organizada para o escopo do projeto, garantindo clareza no desenvolvimento e manutenção do software.  </p>
 
 
 
@@ -1661,7 +1820,7 @@ Mais adiante será detalhado como separamos nossas camadas tanto para o frontend
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="6 de maio de 2026 02:14:39 UTC">6 de maio de 2026 02:14:39</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="6 de maio de 2026 02:24:23 UTC">6 de maio de 2026 02:24:23</span>
   </span>
 
     
