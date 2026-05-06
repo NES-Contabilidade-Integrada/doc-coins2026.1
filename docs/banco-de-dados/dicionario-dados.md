@@ -24,13 +24,11 @@
 
 [3\. Relacionamentos entre Tabelas	6](#relacionamentos-entre-tabelas)
 
-1. # **Introdução**  {#introdução}
-
+1. # Introdução {#introdução}
 O banco de dados do Sistema COIN’S (Contabilidade Integrada Simplificada) foi desenvolvido para gerenciar informações contábeis de empresas, permitindo o registro de lançamentos no Livro Diário e Livro Razão.  
 O modelo é composto por quatro tabelas principais: chart\_of\_account, companies, journal\_entries e journal\_entry\_lines.
 
-2. # **Estrutura de Tabelas** {#estrutura-de-tabelas}
-
+2. # Estrutura de Tabelas {#estrutura-de-tabelas}
 Tabela: chart\_of\_account
 
 | Campo | Tipo | Nulo | Chave | Padrão | Descrição |
@@ -77,8 +75,7 @@ Tabela: journal\_entry\_lines
 | amount | NUMERIC(14,2) | Não | \- | \- | Valor da movimentação (\> 0). |
 | created\_at | DATETIME | Sim | \- | CURRENT\_TIMESTAMP | Data de criação do registro. |
 
-3. # **Relacionamentos entre Tabelas** {#relacionamentos-entre-tabelas}
-
+3. # Relacionamentos entre Tabelas {#relacionamentos-entre-tabelas}
 | Origem | Destino | Tipo | Descrição |
 | :---- | :---- | :---- | :---- |
 | companies.id | journal\_entries.company\_id | 1:N | Uma empresa possui vários lançamentos contábeis. |

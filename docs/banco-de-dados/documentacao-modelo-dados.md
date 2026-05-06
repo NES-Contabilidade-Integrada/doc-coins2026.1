@@ -26,8 +26,7 @@
 
 [**4\. Regras de Negócio no Modelo	2**](#regras-de-negócio-no-modelo)
 
-1. # **Introdução** {#introdução}
-
+1. # Introdução {#introdução}
 O banco de dados do Sistema COIN’S foi desenvolvido para dar suporte ao gerenciamento de informações contábeis de empresas.  
 Sua estrutura é composta por quatro tabelas principais:
 
@@ -38,15 +37,13 @@ Sua estrutura é composta por quatro tabelas principais:
 
 O banco foi projetado para registrar lançamentos contábeis de diferentes empresas. O plano de contas (chart\_of\_account) organiza as contas de forma hierárquica. Cada empresa (companies) pode ter múltiplos lançamentos (journal\_entries), que por sua vez são detalhados em partidas (journal\_entry\_lines) vinculadas ao plano de contas.
 
-2. # **DER (Diagrama entidade relacionamento)** {#der-(diagrama-entidade-relacionamento)}
-
+2. # DER (Diagrama entidade relacionamento) {#der-(diagrama-entidade-relacionamento)}
 ![][image1]
 
 Versão em PDF no Drive em:   
 [https://drive.google.com/drive/u/1/folders/1gNYYj-rfqD-diTy5nt39V9tuCNshJ-2j](https://drive.google.com/drive/u/1/folders/1gNYYj-rfqD-diTy5nt39V9tuCNshJ-2j) 
 
-3. # **Script para criação das tabelas** {#script-para-criação-das-tabelas}
-
+3. # Script para criação das tabelas {#script-para-criação-das-tabelas}
  	O script com o SQL para criação das tabelas está no Drive em: [https://drive.google.com/drive/u/1/folders/1gNYYj-rfqD-diTy5nt39V9tuCNshJ-2j](https://drive.google.com/drive/u/1/folders/1gNYYj-rfqD-diTy5nt39V9tuCNshJ-2j) 
 
 ### **3.1 DER Gerado no [dbdiagram.io](http://dbdiagram.io)**
@@ -109,8 +106,7 @@ Table journal\_entry\_lines {
   }  
 }
 
-4. # **Regras de Negócio no Modelo** {#regras-de-negócio-no-modelo}
-
+4. # Regras de Negócio no Modelo {#regras-de-negócio-no-modelo}
 O modelo de dados incorpora algumas regras de negócio diretamente na estrutura das tabelas, por meio de restrições (CHECK) e chaves estrangeiras (FKs). Essas regras aumentam a confiabilidade do sistema, evitando registros inconsistentes.
 
 *  **is\_compound** (tabela journal\_entries)

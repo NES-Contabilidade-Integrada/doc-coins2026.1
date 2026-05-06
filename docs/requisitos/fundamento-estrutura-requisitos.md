@@ -34,14 +34,12 @@
 
 # 
 
-1. # **Introdução** {#introdução}
-
+1. # Introdução {#introdução}
 O Sistema COIN’S (Contabilidade Integrada Simplificada) foi desenvolvido com o objetivo de proporcionar uma plataforma didática e prática para o ensino e simulação de processos contábeis.  
 Durante a elaboração da sua Especificação de Requisitos de Software, foi adotada uma estrutura textual organizada por épicos e requisitos funcionais, em vez dos modelos tradicionais baseados em histórias de usuário ou casos de uso.  
 Essa decisão buscou garantir clareza, flexibilidade e rastreabilidade, considerando o domínio contábil altamente regrado e técnico, e a necessidade de que o documento fosse compreensível tanto por profissionais técnicos (desenvolvedores e testadores) quanto por profissionais de negócio (professores e contadores).
 
-2. # **Fundamentação da Estrutura Adotada** {#fundamentação-da-estrutura-adotada}
-
+2. # Fundamentação da Estrutura Adotada {#fundamentação-da-estrutura-adotada}
 ### 2.1 Clareza e comunicação entre áreas {#2.1-clareza-e-comunicação-entre-áreas}
 A estrutura adotada foi pensada para eliminar barreiras de interpretação entre o time técnico e o público de negócio.  
 Enquanto as histórias de usuário priorizam a perspectiva do usuário final (“Como \<usuário\>, desejo \<ação\> para \<benefício\>”), o domínio contábil exige detalhamento exato de regras, exceções e restrições lógicas  algo que não pode ser plenamente representado em formato narrativo.  
@@ -67,8 +65,7 @@ O formato textual adotado permite:
 Além disso, o uso de uma estrutura de tabelas por requisito garante legibilidade e mantém o padrão de rastreabilidade esperado em projetos de engenharia de software.  
 Os critérios de aceite e suas exceções bem definidos também reforçam o processo de QA (*Quality Assurance*), pois funcionam como referência direta para o desenho e automação de testes, garantindo que cada funcionalidade implementada seja validada conforme o comportamento descrito no requisito.
 
-3. # **Organização em Épicos** {#organização-em-épicos}
-
+3. # Organização em Épicos {#organização-em-épicos}
 Os épicos representam agrupamentos de requisitos funcionais relacionados à mesma entrega ou funcionalidade geral, promovendo organização, rastreabilidade e controle de progresso.  
 Além disso, essa estrutura reflete diretamente o modelo de versionamento e desenvolvimento utilizado no projeto, no qual cada branch do repositório Git segue o padrão:
 
@@ -102,8 +99,7 @@ No contexto do projeto COIN’S, o termo “Épico” foi mantido por convençã
 Essa adaptação foi necessária porque o projeto não utiliza histórias de usuário nem casos de uso, dado o seu domínio contábil altamente técnico, que exige descrição precisa de regras, cálculos e exceções.  
 Assim, cada Épico funciona como um container de funcionalidades, assegurando rastreabilidade entre documentação, código e entregas sem perder clareza ou alinhamento metodológico.
 
-4. # **Modelo de Estrutura da Especificação dos Requisitos Funcionais** {#modelo-de-estrutura-da-especificação-dos-requisitos-funcionais}
-
+4. # Modelo de Estrutura da Especificação dos Requisitos Funcionais {#modelo-de-estrutura-da-especificação-dos-requisitos-funcionais}
 Para padronizar a escrita dos requisitos e garantir consistência em todo o documento, foi utilizado o modelo a seguir:
 
 | Nome do Requisito Funcional | Épico 1 |
@@ -116,8 +112,7 @@ Para padronizar a escrita dos requisitos e garantir consistência em todo o docu
 
 Modelo \- Requisitos Funcionais.
 
-5. # **Comparativo com Outras Estruturas** {#comparativo-com-outras-estruturas}
-
+5. # Comparativo com Outras Estruturas {#comparativo-com-outras-estruturas}
 A escolha pela estrutura de requisitos adotada no COIN’S foi feita com base em uma análise de trade-off entre os modelos tradicionais (Histórias de Usuário e Casos de Uso) e a necessidade de profundidade técnica e rastreabilidade exigida por um sistema de domínio contábil.  
 A tabela a seguir sintetiza os ganhos e perdas de cada abordagem, considerando clareza, flexibilidade, rastreabilidade e adequação ao contexto do projeto.
 
@@ -130,8 +125,7 @@ A tabela a seguir sintetiza os ganhos e perdas de cada abordagem, considerando c
 | **Flexibilidade** | ❌ Estrutura rígida e curta. | ⚙️ Moderada: permite expansão limitada. | ✅ Ampla: comporta textos, tabelas, exemplos e exceções. |
 | **Rastreabilidade de entregas** | ❌ Depende de artefatos externos (sprints, issues). | ⚙️ Parcial: rastreia interações, mas não implementações. | ✅ Implícita via épicos e padronização de branchs (feat/epXX, subtask/epXX). |
 
-6. # **Conclusão** {#conclusão}
-
+6. # Conclusão {#conclusão}
    
 
 A estrutura dos Requisitos Funcionais do Sistema COIN’S foi planejada para atender a um domínio técnico e rigoroso, preservando clareza, rastreabilidade e alinhamento entre documentação e código.  

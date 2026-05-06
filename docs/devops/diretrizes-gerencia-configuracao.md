@@ -41,12 +41,10 @@
 
 [10\. Revisão do copilot	10](#10.-revisão-do-copilot)
 
-1. ## **Introdução** {#introdução}
-
+1. ## Introdução {#introdução}
 Este documento estabelece as **Diretrizes de Gerência de Configuração** para o sistema **COINS**. Ele define o conjunto de normas, padrões e procedimentos essenciais para o gerenciamento eficaz de mudanças, controle de versão e manutenção da qualidade do código-fonte. O objetivo é garantir a integridade, a estabilidade e a rastreabilidade do desenvolvimento ao longo do ciclo de vida do sistema. 
 
-2. ## **Modelo de Ramificação** {#modelo-de-ramificação}
-
+2. ## Modelo de Ramificação {#modelo-de-ramificação}
 O modelo de ramificação utilizado é o GitFlow, conforme ilustrado na figura abaixo e descrito a seguir.  
 
 **![][image1]**
@@ -70,8 +68,7 @@ O modelo de ramificação utilizado é o GitFlow, conforme ilustrado na figura a
    1. **Propósito:** Subtask não é padrão no Gitflow. Pode ser uma variação usada para dividir uma feature muito grande em partes menores, ou para *branches* de tarefas internas/menores que não justificam uma feature completa.  
    2. **Processo:** Geralmente uma subtask é criada a partir da feature principal ou de develop. Ela é mergeada de volta na sua *branch* de origem (feature ou develop) após a sua conclusão.
 
-   ## **3\. Fluxo Básico** {#3.-fluxo-básico}
-
+   ## 3\. Fluxo Básico {#3.-fluxo-básico}
 O fluxo de desenvolvimento segue a criação de novas branches a partir da branch **develop**, garantindo um isolamento das mudanças e fluxo contínuo de desenvolvimento. Para iniciar um desenvolvimento, deve-se criar uma nova branch utilizando a convenção:
 
 ```
@@ -122,8 +119,7 @@ Tipos permitidos:
 * Nomes claros e em **inglês**  
 * Comentários em português, **apenas quando necessário** para explicar lógica complexa.
 
-  ## **6\. Estratégia de Versionamento** {#6.-estratégia-de-versionamento}
-
+  ## 6\. Estratégia de Versionamento {#6.-estratégia-de-versionamento}
 O projeto adota o Versionamento Semântico (SemVer) para padronizar a evolução do software e comunicar claramente o impacto de cada alteração. A versão é representada pelo formato MAJOR.MINOR.PATCH.
 
 Definições de Incremento:
@@ -184,8 +180,7 @@ O executável aparece na aba Releases do Github da seguinte forma
 * **Por Push na main:** Gera uma release automática com o SHA do commit para fins de rastreabilidade.  
 * **Por Tag de Versão (v\*):** Ao realizar um git push origin v1.2.3, o workflow build-windows.yml é acionado. Ele atualiza o package.json e gera o executável oficial daquela versão semântica.
 
-  ## **10\. Revisão do copilot**  {#10.-revisão-do-copilot}
-
+  ## 10\. Revisão do copilot {#10.-revisão-do-copilot}
 O GitHub Copilot foi integrado ao processo de desenvolvimento do sistema COINS com o objetivo de aprimorar a qualidade do código e aumentar a eficiência das revisões técnicas. A ferramenta atua como um mecanismo complementar de análise automatizada, auxiliando na identificação de problemas e na manutenção dos padrões estabelecidos neste documento.
 
 1. **Instruções do copilot**  

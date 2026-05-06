@@ -55,9 +55,7 @@ nav:
   - Gerência de Projeto:
       - Plano de Projeto: gerencia-projeto/plano-do-projeto.md
       - Template de Documento: gerencia-projeto/template-de-documento.md
-      - Pull Request Template: gerencia-projeto/pull-request-template.md
-      - Instruções do Copilot: gerencia-projeto/instrucoes-do-copilot.md
-  - DevOps:
+  DevOps:
       - Visão Geral: devops/visao-geral.md
       - Diretrizes de Gerência de Configuração: devops/diretrizes-gerencia-configuracao.md
       - Modelo de Ramificação: devops/modelo-ramificacao.md
@@ -66,6 +64,8 @@ nav:
       - Fluxo: devops/fluxo.md
       - DoD: devops/dod.md
       - CI/CD: devops/infraestrutura.md
+      - Pull Request Template: devops/pull-request-template.md
+      - Instruções do Copilot: devops/instrucoes-do-copilot.md
   - Decisões:
       - Diário de Decisões: decisoes/decisoes.md
       - Decisões Importadas: decisoes/diario-de-decisoes-importado.md

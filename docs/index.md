@@ -4,6 +4,19 @@ Documentação técnica do projeto COINS 2026.1, desenvolvido para apoiar o ensi
 
 ---
 
+## Navegação Rápida
+
+- [Início](index.md)
+- [Arquitetura](arquitetura/especificacao-arquitetural.md)
+- [Requisitos](requisitos/apuracao-regras.md)
+- [Banco de Dados](banco-de-dados/documentacao-modelo-dados.md)
+- [Qualidade e Testes](qualidade-testes/plano-de-testes.md)
+- [Gerência de Projeto](gerencia-projeto/plano-do-projeto.md)
+- [DevOps](devops/visao-geral.md)
+- [Decisões](decisoes/decisoes.md)
+
+---
+
 ## Objetivo
 
 O COINS é um sistema educacional que permite a execução de atividades contábeis em um ambiente controlado. O foco está em:

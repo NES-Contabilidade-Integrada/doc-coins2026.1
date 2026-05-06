@@ -42,20 +42,17 @@
 
 [3.5. Diagramas suplementares – Diagrama de Implantação	6](#diagramas-suplementares-–-diagrama-de-implantação)
 
-1. ## **Introdução** {#introdução}
-
+1. ## Introdução {#introdução}
 Este documento tem como objetivo descrever a arquitetura do Sistema COIN’S, seguindo o modelo de visualização arquitetural de software C4[^1]. 
 
 O C4 é o padrão ideal para representar a arquitetura porque equilibra clareza, consistência e praticidade. Ele comunica o que importa em cada nível de detalhe, é simples de manter, se integra às ferramentas modernas de desenvolvimento e fortalece a governança técnica da organização.
 
 Mesmo em um contexto de software desktop monolítico e offline, com escopo inicial pequeno, o uso do modelo C4 faz sentido por promover clareza estrutural desde o início do projeto, facilitando a evolução futura da aplicação — seja para modularização, integração online ou expansão arquitetural. Além disso, o C4 permite documentar decisões arquiteturais de forma leve e acessível, garantindo que o conhecimento do sistema não se perca com o tempo e possa ser facilmente comunicado a novos desenvolvedores ou stakeholders.
 
-2. ## **Escopo** {#escopo}
-
+2. ## Escopo {#escopo}
 Este documento auxilia os envolvidos no projeto a compreender os aspectos arquiteturais do sistema que são  necessários para desenvolver uma solução que atenda as necessidades do proponente. Além de auxiliar equipes futuras no entendimento do projeto.
 
-1. ### **Restrições do sistema** {#restrições-do-sistema}
-
+1. ### Restrições do sistema {#restrições-do-sistema}
 As principais restrições e decisões arquiteturais do **Sistema COIN’S** são as seguintes:
 
 ### Framework e Plataforma {#framework-e-plataforma}
@@ -79,12 +76,10 @@ O sistema é formado por uma arquitetura monolítica modularizada em camadas. Es
 
 Para uma definição mais técnica da responsabilidade de cada camada, visualizar o documento de Visão de Implementação: [https://docs.google.com/document/d/1O2Qf1cnLYiqCjFxQCzfQZ4MwuyMp6zRecco6XBTN5NA/edit?tab=t.0](https://docs.google.com/document/d/1O2Qf1cnLYiqCjFxQCzfQZ4MwuyMp6zRecco6XBTN5NA/edit?tab=t.0) 
 
-3. ## **Representação arquitetural** {#representação-arquitetural}
-
+3. ## Representação arquitetural {#representação-arquitetural}
 O modelo C4 considera as estruturas estáticas de um sistema de software em termos de containers (aplicativos, armazenamentos de dados, microservices, etc.), componentes e código. Também considera as pessoas que usam os sistemas de software que construímos.
 
-1. ### **Nível 1 – Diagrama de Contexto** {#nível-1-–-diagrama-de-contexto}
-
+1. ### Nível 1 – Diagrama de Contexto {#nível-1-–-diagrama-de-contexto}
 O diagrama de contexto do sistema mostra o **Sistema COIN’S** e como ele se encaixa no mundo em termos das pessoas que o utilizam e dos outros sistemas de software com os quais ele interage.
 
 **Link do diagrama (alta resolução / online):**  
@@ -97,8 +92,7 @@ O diagrama evidencia:
 * O escopo restrito ao ambiente local da máquina do usuário.
 
 
-  2. ### **Nível 2 – Diagrama de Container** {#nível-2-–-diagrama-de-container}
-
+  2. ### Nível 2 – Diagrama de Container {#nível-2-–-diagrama-de-container}
 O diagrama de container detalha a estrutura interna do sistema, evidenciando os **principais containers** que o compõem:
 
 * **Frontend (Vue \+ Electron Renderer)**: responsável pela interface gráfica e interação com o usuário.  
@@ -109,8 +103,7 @@ O diagrama de container detalha a estrutura interna do sistema, evidenciando os 
 **Link do diagrama (alta resolução / online):**  
  [https://app.diagrams.net/\#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc\#%7B"pageId"%3A"7UhaJ9ljh7ebol46HkWr"%7D](https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"7UhaJ9ljh7ebol46HkWr"%7D) 
 
-3. ### **Nível 3 – Diagrama de Componentes** {#nível-3-–-diagrama-de-componentes}
-
+3. ### Nível 3 – Diagrama de Componentes {#nível-3-–-diagrama-de-componentes}
 O diagrama de componentes amplia o container principal (aplicação desktop) e mostra os **componentes internos** que compõem a aplicação.
 
 Entre os principais componentes:
@@ -123,16 +116,14 @@ Entre os principais componentes:
 **Link do diagrama (alta resolução / online):**  
  [https://app.diagrams.net/\#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc\#%7B"pageId"%3A"2XVK7RYDKxdhMDquu4st"%7D](https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"2XVK7RYDKxdhMDquu4st"%7D) 
 
-4. ### **Nível 4 – Código** {#nível-4-–-código}
-
+4. ### Nível 4 – Código {#nível-4-–-código}
 Neste nível, podem ser representados diagramas de classes ou entidades para os componentes mais importantes.
 
 No caso do Sistema COIN’S, recomenda-se a elaboração de um Diagrama de Entidade-Relacionamento (DER) com base no schema do banco SQLite3, destacando tabelas, colunas e relacionamentos. 
 
 **Link para documentação do DER:** [https://docs.google.com/document/d/1NIrxoi\_JZqYGeUrJK2uUcePTO2prriPYV1HKR5y8Hxo/edit?tab=t.0](https://docs.google.com/document/d/1NIrxoi_JZqYGeUrJK2uUcePTO2prriPYV1HKR5y8Hxo/edit?tab=t.0)  
 
-5. ### **Diagramas suplementares – Diagrama de Implantação** {#diagramas-suplementares-–-diagrama-de-implantação}
-
+5. ### Diagramas suplementares – Diagrama de Implantação {#diagramas-suplementares-–-diagrama-de-implantação}
 Por se tratar de um sistema monolítico offline, não é necessário um diagrama de implantação detalhado.  
  O sistema é distribuído como um executável único via Electron Forge, contendo em si:
 
