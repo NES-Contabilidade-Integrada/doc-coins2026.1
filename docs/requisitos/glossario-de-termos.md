@@ -1,4 +1,4 @@
-**Glossário de Termos**
+# Glossário de Termos
 
 **Histórico de Versões**
 

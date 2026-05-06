@@ -1,4 +1,4 @@
-**Documentação do Modelo de Dados – Sistema COIN’S**
+# Documentação do Modelo de Dados – Sistema COIN’S
 
 **Histórico de Versões**
 

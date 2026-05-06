@@ -1,4 +1,4 @@
-**Especificação de Requisitos de Software**
+# Especificação de Requisitos de Software
 
 **Histórico de Versões**
 
