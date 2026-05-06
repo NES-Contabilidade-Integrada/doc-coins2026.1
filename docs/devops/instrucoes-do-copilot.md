@@ -54,6 +54,30 @@ These guidelines describe how Copilot should evaluate pull requests for this rep
 
 Copilot should block approval if any critical issue remains unresolved. Suggestions are welcome, but green approvals require confidence that runtime behavior, data integrity, and developer tooling remain intact.
 
+## Agente Personalizado para Documentação e Commits
 
-```
+Foi criado um agente personalizado chamado `docs-agent` para auxiliar na manutenção de boas práticas de documentação e no uso de commits semânticos no projeto COINS.
+
+### Como Usar o Agente
+
+- Para revisar a qualidade da documentação: invoque o agente com consultas relacionadas à documentação.
+- Para verificar commits: o agente pode analisar mensagens de commit e sugerir correções para seguir o padrão semântico.
+
+### Boas Práticas de Documentação
+
+O agente enfatiza:
+- Clareza e concisão nos documentos.
+- Formatação Markdown compatível com MkDocs.
+- Estrutura consistente.
+- Inclusão de diagramas e exemplos relevantes.
+- Manutenção de links de navegação precisos.
+
+### Commits Semânticos
+
+O agente reforça o uso do formato conventional commit:
+- `type(scope): description`
+- Tipos comuns: feat, fix, docs, style, refactor, test, chore
+- Descrições em modo imperativo, curtas (até 72 caracteres).
+
+Para mais detalhes, consulte o arquivo `.github/agents/docs-agent.agent.md`.
 

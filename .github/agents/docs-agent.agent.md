@@ -31,6 +31,6 @@ For commit messages:
 - Keep messages under 72 characters
 - Reference issues when applicable
 - Always use semantic prefixes like docs:, fix:, feat:, etc.
-- Write commit messages in Portuguese
+- Write commit messages in Brazilian Portuguese
 
 When invoked, analyze the current state and provide guidance or make corrections as needed.
