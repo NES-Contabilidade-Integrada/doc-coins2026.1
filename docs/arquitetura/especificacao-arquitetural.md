@@ -55,24 +55,19 @@ Este documento auxilia os envolvidos no projeto a compreender os aspectos arquit
 1. ### Restrições do sistema {#restrições-do-sistema}
 As principais restrições e decisões arquiteturais do **Sistema COIN’S** são as seguintes:
 
-### Framework e Plataforma {#framework-e-plataforma}
-* **Electron \+ Electron Forge**: A escolha do *Electron* foi feita para permitir o desenvolvimento de uma aplicação **desktop multiplataforma**, mantendo o mesmo código base em Windows, Linux e macOS.  
+### Framework e Plataforma * **Electron \+ Electron Forge**: A escolha do *Electron* foi feita para permitir o desenvolvimento de uma aplicação **desktop multiplataforma**, mantendo o mesmo código base em Windows, Linux e macOS.  
    O *Electron Forge* foi adotado para facilitar o empacotamento, distribuição e atualização do aplicativo, garantindo consistência no ciclo de build e distribuição offline.
 
-### Frontend {#frontend}
-* **Vue 3 com TypeScript**: Escolhido por sua **produtividade**, **reatividade nativa** e **integração simples com Electron**. O uso de TypeScript aumenta a confiabilidade do código e facilita a manutenção e refatoração futura.
+### Frontend * **Vue 3 com TypeScript**: Escolhido por sua **produtividade**, **reatividade nativa** e **integração simples com Electron**. O uso de TypeScript aumenta a confiabilidade do código e facilita a manutenção e refatoração futura.
 
-### Backend {#backend}
-* **Express.js com TypeScript**: Utilizado como camada de backend local dentro do mesmo processo do Electron, responsável por expor endpoints REST internos e centralizar a lógica de negócio.  
+### Backend * **Express.js com TypeScript**: Utilizado como camada de backend local dentro do mesmo processo do Electron, responsável por expor endpoints REST internos e centralizar a lógica de negócio.  
    Essa escolha mantém a **separação lógica entre frontend e backend**, ainda que no mesmo container, o que facilita futura migração para um modelo cliente-servidor se o sistema vier a evoluir para ambiente online.
 
-### Banco de Dados {#banco-de-dados}
-* **SQLite3**: O banco de dados local foi escolhido por ser **leve, embarcado e adequado ao uso offline**. Ele não requer servidor dedicado, reduzindo complexidade e facilitando a instalação.
+### Banco de Dados * **SQLite3**: O banco de dados local foi escolhido por ser **leve, embarcado e adequado ao uso offline**. Ele não requer servidor dedicado, reduzindo complexidade e facilitando a instalação.
 
 * **Knex.js**: Biblioteca de query builder que provê **abstração de acesso ao banco**, portabilidade e migrações estruturadas, além de facilitar a manutenção do esquema de dados.
 
-### Padrão Arquitetural {#padrão-arquitetural}
-O sistema é formado por uma arquitetura monolítica modularizada em camadas. Essa decisão foi tomada considerando o contexto de um software offline desktop, visando a facilidade de integração entre banco/backend/frontend. O diretório “main” fica responsável por encapsular a lógica e as camadas do backend enquanto o diretório “renderer” fica responsável pelo frontend.
+### Padrão Arquitetural O sistema é formado por uma arquitetura monolítica modularizada em camadas. Essa decisão foi tomada considerando o contexto de um software offline desktop, visando a facilidade de integração entre banco/backend/frontend. O diretório “main” fica responsável por encapsular a lógica e as camadas do backend enquanto o diretório “renderer” fica responsável pelo frontend.
 
 Para uma definição mais técnica da responsabilidade de cada camada, visualizar o documento de Visão de Implementação: [https://docs.google.com/document/d/1O2Qf1cnLYiqCjFxQCzfQZ4MwuyMp6zRecco6XBTN5NA/edit?tab=t.0](https://docs.google.com/document/d/1O2Qf1cnLYiqCjFxQCzfQZ4MwuyMp6zRecco6XBTN5NA/edit?tab=t.0) 
 

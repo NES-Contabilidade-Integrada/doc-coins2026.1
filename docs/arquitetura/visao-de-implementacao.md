@@ -37,8 +37,7 @@ O sistema em geral é constituído por uma arquitetura monolítica modular basea
 Essa arquitetura consiste basicamente em agrupar todo o sistema em um único repositório, separando os componentes em camadas de acordo com suas responsabilidades.   
 Mais adiante será detalhado como separamos nossas camadas tanto para o frontend quanto para o backend.
 
-### 2.1 Arquitetura do Backend {#2.1-arquitetura-do-backend}
-Para o backend(diretório “main”), separamos nosso código em 8 camadas principais:
+### 2.1 Arquitetura do Backend Para o backend(diretório “main”), separamos nosso código em 8 camadas principais:
 
 * **Database:** Essa camada fica responsável por configurar o banco de dados local.  
 * **Migrations:** Alinhada à database, essa camada tem como objetivo gerar as tabelas do banco de dados em conformidade com o modelo de dados do código.  
@@ -50,8 +49,7 @@ Para o backend(diretório “main”), separamos nosso código em 8 camadas prin
 * **Tests:** Essa camada basicamente engloba os testes unitários da aplicação.
 
 
-### 2.2 Arquitetura do frontend {#2.2-arquitetura-do-frontend}
-Para o frontend(diretório “renderer”), separamos nosso código em 4 camadas principais:
+### 2.2 Arquitetura do frontend Para o frontend(diretório “renderer”), separamos nosso código em 4 camadas principais:
 
 * **Components:** Essa camada fica responsável por armazenar os componentes principais e as páginas do sistema.  
 * **Pages:** Essa camada fica responsável por renderizar as páginas da aplicação.  

@@ -40,8 +40,7 @@ Durante a elaboração da sua Especificação de Requisitos de Software, foi ado
 Essa decisão buscou garantir clareza, flexibilidade e rastreabilidade, considerando o domínio contábil altamente regrado e técnico, e a necessidade de que o documento fosse compreensível tanto por profissionais técnicos (desenvolvedores e testadores) quanto por profissionais de negócio (professores e contadores).
 
 2. # Fundamentação da Estrutura Adotada {#fundamentação-da-estrutura-adotada}
-### 2.1 Clareza e comunicação entre áreas {#2.1-clareza-e-comunicação-entre-áreas}
-A estrutura adotada foi pensada para eliminar barreiras de interpretação entre o time técnico e o público de negócio.  
+### 2.1 Clareza e comunicação entre áreas A estrutura adotada foi pensada para eliminar barreiras de interpretação entre o time técnico e o público de negócio.  
 Enquanto as histórias de usuário priorizam a perspectiva do usuário final (“Como \<usuário\>, desejo \<ação\> para \<benefício\>”), o domínio contábil exige detalhamento exato de regras, exceções e restrições lógicas  algo que não pode ser plenamente representado em formato narrativo.  
 A escrita textual dos requisitos, apoiada em tabelas padronizadas, torna possível explicitar:
 
@@ -53,8 +52,7 @@ A escrita textual dos requisitos, apoiada em tabelas padronizadas, torna possív
 
 Dessa forma, o documento se torna autoexplicativo e auditável, sem depender de interpretação subjetiva.
 
-### 2.2 Flexibilidade e profundidade técnica {#2.2-flexibilidade-e-profundidade-técnica}
-O domínio contábil é um dos mais rigorosos em termos de regras e validações cruzadas.  
+### 2.2 Flexibilidade e profundidade técnica O domínio contábil é um dos mais rigorosos em termos de regras e validações cruzadas.  
 Ao contrário de sistemas administrativos genéricos, o COIN’S exige uma abordagem que permita inserir todas as regras diretamente no corpo dos requisitos, sem fragmentá-las entre diversos artefatos (casos de uso, fluxogramas ou narrativas).  
 O formato textual adotado permite:
 
@@ -94,8 +92,7 @@ Os épicos definidos para o projeto COIN’S são:
 
 Essa organização por épicos permite alinhar entregas técnicas com entregas de negócio, além de promover rastreabilidade entre código, tarefas e requisitos em todo o ciclo de vida do projeto.
 
-### 3.1 Nota sobre a terminologia adotada {#3.1-nota-sobre-a-terminologia-adotada}
-No contexto do projeto COIN’S, o termo “Épico” foi mantido por convenção organizacional, porém com um significado adaptado. Diferentemente do uso tradicional em metodologias ágeis, onde um épico representa uma história de usuário de grande porte, aqui o termo é utilizado para agrupar requisitos funcionais técnicos relacionados a um mesmo módulo do sistema.  
+### 3.1 Nota sobre a terminologia adotada No contexto do projeto COIN’S, o termo “Épico” foi mantido por convenção organizacional, porém com um significado adaptado. Diferentemente do uso tradicional em metodologias ágeis, onde um épico representa uma história de usuário de grande porte, aqui o termo é utilizado para agrupar requisitos funcionais técnicos relacionados a um mesmo módulo do sistema.  
 Essa adaptação foi necessária porque o projeto não utiliza histórias de usuário nem casos de uso, dado o seu domínio contábil altamente técnico, que exige descrição precisa de regras, cálculos e exceções.  
 Assim, cada Épico funciona como um container de funcionalidades, assegurando rastreabilidade entre documentação, código e entregas sem perder clareza ou alinhamento metodológico.
 
