@@ -28,127 +28,67 @@
 
 **Sumário**
 
-[1\. Introdução	4](#introdução)
+- [1. Introdução](#introdução)
+- [2. Classes de Usuários](#classes-de-usuários)
+- [3. Definição de conceitos](#definição-de-conceitos)
+- [4. Épicos](#épicos)
+- [5. Modelo dos Requisitos Funcionais](#modelo-dos-requisitos-funcionais)
+- [6. Requisitos de Software](#requisitos-de-software)
+    - [6.1. Requisitos Funcionais](#requisitos-funcionais)
+        - [6.1.1. Menu](#menu)
+            - [RF-01 Exibir Menu Principal](#exibir-menu-principal)
+        - [6.1.2. Empresas](#empresas)
+            - [6.1.2.1. Estrutura da Empresa](#estrutura-da-empresa)
+                - [RF-02 Exibir Empresa Estática](#exibir-empresa-estática)
+                - [RF-03 Exibir Abas de Funcionalidades da Empresa](#exibir-abas-de-funcionalidades-da-empresa)
+            - [6.1.2.2. Plano de Contas](#plano-de-contas)
+                - [RF-04 Exibir Plano de Contas Padrão](#exibir-plano-de-contas-padrão)
+            - [6.1.2.3. Livro Diário](#livro-diário)
+                - [RF-05 Gerenciar Lançamento Contábil](#gerenciar-lançamento-contábil)
+                - [RF-06 Listar Lançamentos Contábeis no Livro Diário](#listar-lançamentos-contábeis-no-livro-diário)
+                - [RF-07 Deletar dados da Empresa](#deletar-dados-da-empresa)
+            - [6.1.2.4. Livro Razão](#livro-razão)
+                - [RF-08 Exibir Livro Razão](#exibir-livro-razão)
+            - [6.1.2.5. Balancete](#balancete)
+                - [RF-09 Aplicar Filtros do Balancete](#aplicar-filtros-do-balancete)
+                - [RF-010 Exibir Balancete de Verificação](#exibir-balancete-de-verificação)
+                - [RF-011 Exibir Resumo do Balancete](#exibir-resumo-do-balancete)
+            - [6.1.2.6. Apuração do Resultado](#apuração-do-resultado)
+                - [RF-012 Filtrar Data da Apuração](#filtrar-data-da-apuração)
+                - [RF-013 Exibir Resumo do Resultado](#exibir-resumo-do-resultado)
+                - [RF-014 Exibir Contas de Resultado](#exibir-contas-de-resultado)
+                - [RF-015 Exibir Lançamentos de Encerramento](#exibir-lançamentos-de-encerramento)
+                - [RF-016 Exibir Confronto da Apuração](#exibir-confronto-da-apuração)
+                - [RF-017 Exibir Transferência do Resultado](#exibir-transferência-do-resultado)
+                - [RF-018 Exibir Resultado Final](#exibir-resultado-final)
+                - [RF-019 Realizar Apuração](#realizar-apuração)
+                - [RF-020 Exibir Histórico de Apurações](#exibir-histórico-de-apurações)
+                - [RF-021 Desfazer Última Apuração](#desfazer-última-apuração)
+            - [6.1.2.7. Demonstração do Resultado do Exercício](#demonstração-do-resultado-do-exercício)
+                - [RF-022 Filtrar Período da DRE](#filtrar-período-da-dre)
+                - [RF-023 Exibir Receita Bruta](#exibir-receita-bruta)
+                - [RF-024 Exibir Deduções da Receita](#exibir-deduções-da-receita)
+                - [RF-025 Calcular e Exibir Receita Líquida](#calcular-e-exibir-receita-líquida)
+                - [RF-026 Exibir CMV / CPV](#exibir-cmv--cpv)
+                - [RF-027 Calcular e Exibir Lucro Bruto](#calcular-e-exibir-lucro-bruto)
+                - [RF-028 Exibir Despesas Operacionais](#exibir-despesas-operacionais)
+                - [RF-029 Exibir Outras Receitas/Despesas Operacionais](#exibir-outras-receitas-despesas-operacionais)
+                - [RF-030 Calcular e Exibir LAJIR](#calcular-e-exibir-lajir)
+                - [RF-031 Exibir Resultado Financeiro](#exibir-resultado-financeiro)
+                - [RF-032 Calcular e Exibir LAIR](#calcular-e-exibir-lair)
+                - [RF-033 Exibir Resultado Não Operacional](#exibir-resultado-não-operacional)
+                - [RF-034 Calcular Resultado Antes dos Impostos](#calcular-resultado-antes-dos-impostos)
+                - [RF-035 Exibir Impostos sobre o Lucro](#exibir-impostos-sobre-o-lucro)
+                - [RF-036 Calcular e Exibir Lucro Líquido](#calcular-e-exibir-lucro-líquido)
+                - [RF-037 Exibir Composição das Contas da DRE](#exibir-composição-das-contas-da-dre)
+    - [6.2. Requisitos Não-Funcionais](#requisitos-não-funcionais)
+        - [Compatibilidade](#compatibilidade)
+        - [Portabilidade](#portabilidade)
+        - [Desempenho](#desempenho)
+        - [Armazenamento](#armazenamento)
+        - [Disponibilidade](#disponibilidade)
+        - [Responsividade](#responsividade)
 
-[2\. Classes de Usuários	4](#classes-de-usuários)
-
-[3\. Definição de conceitos	5](#definição-de-conceitos)
-
-[**4\. Épicos	5**](#épicos)
-
-[**5\. Modelo dos Requisitos Funcionais	6**](#modelo-dos-requisitos-funcionais)
-
-[**6\. Requisitos de Software	7**](#requisitos-de-software)
-
-[**6.1. Requisitos Funcionais	7**](#requisitos-funcionais)
-
-[6.1.1. Menu	7](#menu)
-
-[RF-01 Exibir Menu Principal	7](#exibir-menu-principal)
-
-[6.1.2. Empresas	8](#empresas)
-
-[6.1.2.1. Estrutura da Empresa	8](#estrutura-da-empresa)
-
-[RF-02 Exibir Empresa Estática	8](#exibir-empresa-estática)
-
-[RF-03 Exibir Abas de Funcionalidades da Empresa	9](#exibir-abas-de-funcionalidades-da-empresa)
-
-[6.1.2.2. Plano de Contas	10](#plano-de-contas)
-
-[RF-04 Exibir Plano de Contas Padrão	10](#exibir-plano-de-contas-padrão)
-
-[6.1.2.3. Livro Diário	12](#livro-diário)
-
-[RF-05 Gerenciar Lançamento Contábil	12](#gerenciar-lançamento-contábil)
-
-[RF-06 Listar Lançamentos Contábeis no Livro Diário	14](#listar-lançamentos-contábeis-no-livro-diário)
-
-[RF-07 Deletar dados da Empresa	16](#deletar-dados-da-empresa)
-
-[6.1.2.4. Livro Razão	17](#livro-razão)
-
-[RF-08 Exibir Livro Razão	17](#exibir-livro-razão)
-
-[6.1.2.5. Balancete	19](#balancete)
-
-[RF-09 Aplicar Filtros do Balancete	19](#aplicar-filtros-do-balancete)
-
-[RF-010 Exibir Balancete de Verificação	20](#exibir-balancete-de-verificação)
-
-[RF-011 Exibir Resumo do Balancete	21](#exibir-resumo-do-balancete)
-
-[6.1.2.6. Apuração do Resultado	22](#apuração-do-resultado)
-
-[RF-012 Filtrar Data da Apuração	22](#filtrar-data-da-apuração)
-
-[RF-013 Exibir Resumo do Resultado	22](#exibir-resumo-do-resultado)
-
-[RF-014 Exibir Contas de Resultado	23](#exibir-contas-de-resultado)
-
-[RF-015 Exibir Lançamentos de Encerramento	23](#exibir-lançamentos-de-encerramento)
-
-[RF-016 Exibir Confronto da Apuração	24](#exibir-confronto-da-apuração)
-
-[RF-017 Exibir Transferência do Resultado	24](#exibir-transferência-do-resultado)
-
-[RF-018 Exibir Resultado Final	25](#exibir-resultado-final)
-
-[RF-019 Realizar Apuração	25](#realizar-apuração)
-
-[RF-020 Exibir Histórico de Apurações	26](#exibir-histórico-de-apurações)
-
-[RF-021 Desfazer Última Apuração	26](#desfazer-última-apuração)
-
-[6.1.2.7. Demonstração do Resultado do Exercício	27](#demonstração-do-resultado-do-exercício)
-
-[RF-022 Filtrar Período da DRE	27](#filtrar-período-da-dre)
-
-[RF-023 Exibir Receita Bruta	27](#exibir-receita-bruta)
-
-[RF-024 Exibir Deduções da Receita	28](#exibir-deduções-da-receita)
-
-[RF-025 Calcular e Exibir Receita Líquida	28](#calcular-e-exibir-receita-líquida)
-
-[RF-026 Exibir CMV / CPV	28](#exibir-cmv--cpv)
-
-[RF-027 Calcular e Exibir Lucro Bruto	29](#calcular-e-exibir-lucro-bruto)
-
-[RF-028 Exibir Despesas Operacionais	29](#exibir-despesas-operacionais)
-
-[RF-029 Exibir Outras Receitas/Despesas Operacionais	29](#exibir-outras-receitas-despesas-operacionais)
-
-[RF-030 Calcular e Exibir LAJIR	30](#calcular-e-exibir-lajir)
-
-[RF-031 Exibir Resultado Financeiro	30](#exibir-resultado-financeiro)
-
-[RF-032 Calcular e Exibir LAIR	31](#calcular-e-exibir-lair)
-
-[RF-033 Exibir Resultado Não Operacional	31](#exibir-resultado-não-operacional)
-
-[RF-034 Calcular Resultado Antes dos Impostos	32](#calcular-resultado-antes-dos-impostos)
-
-[RF-035 Exibir Impostos sobre o Lucro	32](#exibir-impostos-sobre-o-lucro)
-
-[RF-036 Calcular e Exibir Lucro Líquido	33](#calcular-e-exibir-lucro-líquido)
-
-[RF-037 Exibir Composição das Contas da DRE	33](#exibir-composição-das-contas-da-dre)
-
-[**6.2. Requisitos Não-Funcionais	34**](#requisitos-não-funcionais)
-
-[Compatibilidade:	23](#compatibilidade:)
-
-[Portabilidade:	23](#portabilidade:)
-
-[Desempenho:	23](#desempenho:)
-
-[Armazenamento:	23](#armazenamento:)
-
-[Disponibilidade:	24](#disponibilidade:)
-
-[Responsividade:	24](#responsividade:)
-
-## 
 
 ## Introdução {#introdução}
    
@@ -221,109 +161,119 @@ Modelo de Especificação - Requisitos Funcionais.
 ## Requisitos de Software {#requisitos-de-software}
 Esta seção descreve os requisitos que definem o comportamento e as características do sistema COIN’S (Contabilidade Integrada). Os requisitos foram organizados em duas categorias: Requisitos Funcionais, que descrevem o que o sistema deve fazer, e Requisitos Não-Funcionais, que especificam restrições e qualidades esperadas. Cada requisito funcional está associado a um Épico, de forma a manter a rastreabilidade entre as funcionalidades e os objetivos do projeto.
 
-## Requisitos Funcionais {#requisitos-funcionais}
+### Requisitos Funcionais {#requisitos-funcionais}
 Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer para atender às necessidades dos usuários. Eles estão organizados por seções que correspondem aos principais módulos do sistema: Menu, Empresas, Plano de Contas, Livro Diário, Livro Razão, Balancete, Apuração do Resultado e Demonstração do Resultado do Exercício. Cada requisito segue o padrão definido no modelo apresentado anteriormente, contendo sua descrição, critérios de aceite e exceções associadas aos critérios especificados.
 
 ### Menu {#menu}
 Esta subseção apresenta os requisitos relacionados à navegação do sistema. O menu é o ponto central de acesso às funcionalidades, permitindo ao usuário visualizar as opções disponíveis e alternar entre diferentes seções de forma intuitiva e consistente. 
 
+#### RF-01 Exibir Menu Principal {#exibir-menu-principal}
+
 <table>
 <thead>
 <tr>
-  <th style=”background-color:#2E74B5; color:white;”>Exibir Menu Principal</th>
-  <th style=”background-color:#2E74B5; color:white; text-align:center; width:120px;”>Épico 1</th>
+  <th style="background-color:#2E74B5; color:white;">Exibir Menu Principal</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 1</th>
 </tr>
 </thead>
 <tbody>
-<tr><td colspan=”2”>O sistema deve exibir um menu principal fixo que permita a navegação entre as funcionalidades principais. Esse menu deve conter a seção de Empresas, contendo subopções expansíveis. Dentro da seção Empresas, o sistema deve exibir subopções referentes às empresas cadastradas no sistema, incluindo a empresa estática previamente cadastrada.</td></tr>
-<tr><td colspan=”2” style=”background-color:#BDD7EE; text-align:center;”><strong>Critérios de Aceite:</strong></td></tr>
-<tr><td colspan=”2”><strong>CA-1.</strong> O menu principal deve exibir a seção “Empresas”.</td></tr>
-<tr><td colspan=”2”><strong>CA-2.</strong> A seção “Empresas” deve conter as subopções com o nome das empresas cadastradas (razão social).</td></tr>
-<tr><td colspan=”2”><strong>CA-3.</strong> Ao selecionar uma empresa cadastrada, o sistema deve exibir a tela referente à empresa com suas informações (Nome e CNPJ), bem como as abas de funcionalidades disponíveis [<a href=”#exibir-abas-de-funcionalidades-da-empresa”>RF-03 – Exibir Abas de Funcionalidades da Empresa</a>].</td></tr>
-<tr><td colspan=”2”><strong>CA-4.</strong> O menu deve iniciar contendo uma empresa previamente cadastrada, estática, utilizada como base para realizar os lançamentos contábeis no sistema [<a href=”#exibir-empresa-estática”>RF-02 – Exibir Empresa Estática</a>].</td></tr>
-<tr><td colspan=”2”><strong>CA-5.</strong> O menu deve destacar visualmente a seção e a subopção ativa, indicando ao usuário onde ele está navegando.</td></tr>
-<tr><td colspan=”2”><strong>CA-6.</strong> O menu deve permanecer acessível durante a navegação entre telas.</td></tr>
-<tr><td colspan=”2” style=”background-color:#BDD7EE; text-align:center;”><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
-<tr><td colspan=”2”></td></tr>
+<tr><td colspan="2">O sistema deve exibir um menu principal fixo que permita a navegação entre as funcionalidades principais. Esse menu deve conter a seção de Empresas, contendo subopções expansíveis. Dentro da seção Empresas, o sistema deve exibir subopções referentes às empresas cadastradas no sistema, incluindo a empresa estática previamente cadastrada.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"><strong>CA-1.</strong> O menu principal deve exibir a seção "Empresas".</td></tr>
+<tr><td colspan="2"><strong>CA-2.</strong> A seção "Empresas" deve conter as subopções com o nome das empresas cadastradas (razão social).</td></tr>
+<tr><td colspan="2"><strong>CA-3.</strong> Ao selecionar uma empresa cadastrada, o sistema deve exibir a tela referente à empresa com suas informações (Nome e CNPJ), bem como as abas de funcionalidades disponíveis [<a href="#exibir-abas-de-funcionalidades-da-empresa">RF-03 – Exibir Abas de Funcionalidades da Empresa</a>].</td></tr>
+<tr><td colspan="2"><strong>CA-4.</strong> O menu deve iniciar contendo uma empresa previamente cadastrada, estática, utilizada como base para realizar os lançamentos contábeis no sistema [<a href="#exibir-empresa-estática">RF-02 – Exibir Empresa Estática</a>].</td></tr>
+<tr><td colspan="2"><strong>CA-5.</strong> O menu deve destacar visualmente a seção e a subopção ativa, indicando ao usuário onde ele está navegando.</td></tr>
+<tr><td colspan="2"><strong>CA-6.</strong> O menu deve permanecer acessível durante a navegação entre telas.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"></td></tr>
 </tbody>
 </table>
 
 ### Empresas {#empresas}
-   1. #### Estrutura da Empresa {#estrutura-da-empresa}
+#### Estrutura da Empresa {#estrutura-da-empresa}
       
 
 Esta subseção detalha os requisitos referentes à visualização de informações e acesso às funcionalidades para as empresas cadastradas no sistema. O objetivo é fornecer ao usuário uma visão informativa e padronizada das empresas utilizadas nos lançamentos contábeis, assegurando consistência e similaridade com práticas reais. Além disso, permite a navegação entre as diferentes funcionalidades oferecidas para a realização de operações contábeis em uma determinada empresa.
 
-<table>
-<thead>
-<tr>
-  <th style=”background-color:#2E74B5; color:white;”><a href=”#exibir-empresa-estática”>Exibir Empresa Estática</a></th>
-  <th style=”background-color:#2E74B5; color:white; text-align:center; width:120px;”>Épico 2</th>
-</tr>
-</thead>
-<tbody>
-<tr><td colspan=”2”>O sistema deve permitir que o usuário visualize uma empresa previamente cadastrada, utilizada como base para realizar os lançamentos contábeis. Essa empresa será a primeira subopção da seção “Empresas”, exibida de forma estática e sem permitir alteração de informações (Nome e CNPJ) por parte do usuário.</td></tr>
-<tr><td colspan=”2” style=”background-color:#BDD7EE; text-align:center;”><strong>Critérios de Aceite:</strong></td></tr>
-<tr><td colspan=”2”><strong>CA-1.</strong> O nome da empresa exibida deve corresponder à empresa previamente cadastrada no sistema.</td></tr>
-<tr><td colspan=”2”><strong>CA-2.</strong> O CNPJ exibido deve corresponder ao CNPJ da empresa previamente cadastrada.</td></tr>
-<tr><td colspan=”2”><strong>CA-3.</strong> As informações da empresa devem ser exibidas no formato padronizado: Nome: “Nome da Empresa”. CNPJ: “CNPJ: 00.000.000/0000-00”.</td></tr>
-<tr><td colspan=”2”><strong>CA-4.</strong> O usuário não deve ser capaz de incluir, alterar ou remover as informações dessa empresa estática.</td></tr>
-<tr><td colspan=”2”><strong>CA-5.</strong> As informações da empresa devem permanecer visíveis em todas as abas de funcionalidades da empresa.</td></tr>
-<tr><td colspan=”2” style=”background-color:#BDD7EE; text-align:center;”><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
-<tr><td colspan=”2”></td></tr>
-</tbody>
-</table>
+#### RF-02 Exibir Empresa Estática {#exibir-empresa-estática}
 
 <table>
 <thead>
 <tr>
-  <th style=”background-color:#2E74B5; color:white;”><a href=”#exibir-abas-de-funcionalidades-da-empresa”>Exibir Abas de Funcionalidades da Empresa</a></th>
-  <th style=”background-color:#2E74B5; color:white; text-align:center; width:120px;”>Épico 2</th>
+  <th style="background-color:#2E74B5; color:white;"><a href="#exibir-empresa-estática">Exibir Empresa Estática</a></th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 2</th>
 </tr>
 </thead>
 <tbody>
-<tr><td colspan=”2”>O sistema deve exibir um conjunto fixo de abas ao acessar uma empresa em “Empresas”, permitindo que o usuário acesse as principais funcionalidades contábeis da empresa selecionada. As abas devem representar as seguintes seções: Plano de Contas, Livro Diário, Livro Razão, Balancete de Verificação e Apuração. As abas devem estar sempre visíveis enquanto o usuário navega entre as funcionalidades, permitindo alternância sem que ocorra perda de dados ou descarte de informações que estejam em processo de preenchimento.</td></tr>
-<tr><td colspan=”2” style=”background-color:#BDD7EE; text-align:center;”><strong>Critérios de Aceite:</strong></td></tr>
-<tr><td colspan=”2”><strong>CA-1.</strong> As abas devem exibir as seguintes seções: Plano de Contas, Livro Diário, Livro Razão, Balancete de Verificação e Apuração.</td></tr>
-<tr><td colspan=”2”><strong>CA-2.</strong> Ao selecionar uma aba, o sistema deve exibir o conteúdo correspondente à seção escolhida.</td></tr>
-<tr><td colspan=”2”><strong>CA-3.</strong> As informações em processo de preenchimento devem ser preservadas ao alternar entre abas.</td></tr>
-<tr><td colspan=”2”><strong>CA-4.</strong> A aba atualmente selecionada deve ser destacada visualmente, indicando ao usuário a seção ativa.</td></tr>
-<tr><td colspan=”2” style=”background-color:#BDD7EE; text-align:center;”><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
-<tr><td colspan=”2”><strong>EX- 2.</strong> [CA-2] Caso uma aba não consiga carregar seu conteúdo, o sistema deve exibir uma mensagem de erro.</td></tr>
+<tr><td colspan="2">O sistema deve permitir que o usuário visualize uma empresa previamente cadastrada, utilizada como base para realizar os lançamentos contábeis. Essa empresa será a primeira subopção da seção "Empresas", exibida de forma estática e sem permitir alteração de informações (Nome e CNPJ) por parte do usuário.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"><strong>CA-1.</strong> O nome da empresa exibida deve corresponder à empresa previamente cadastrada no sistema.</td></tr>
+<tr><td colspan="2"><strong>CA-2.</strong> O CNPJ exibido deve corresponder ao CNPJ da empresa previamente cadastrada.</td></tr>
+<tr><td colspan="2"><strong>CA-3.</strong> As informações da empresa devem ser exibidas no formato padronizado: Nome: "Nome da Empresa". CNPJ: "CNPJ: 00.000.000/0000-00".</td></tr>
+<tr><td colspan="2"><strong>CA-4.</strong> O usuário não deve ser capaz de incluir, alterar ou remover as informações dessa empresa estática.</td></tr>
+<tr><td colspan="2"><strong>CA-5.</strong> As informações da empresa devem permanecer visíveis em todas as abas de funcionalidades da empresa.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"></td></tr>
+</tbody>
+</table>
+
+#### RF-03 Exibir Abas de Funcionalidades da Empresa {#exibir-abas-de-funcionalidades-da-empresa}
+
+<table>
+<thead>
+<tr>
+  <th style="background-color:#2E74B5; color:white;"><a href="#exibir-abas-de-funcionalidades-da-empresa">Exibir Abas de Funcionalidades da Empresa</a></th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 2</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="2">O sistema deve exibir um conjunto fixo de abas ao acessar uma empresa em "Empresas", permitindo que o usuário acesse as principais funcionalidades contábeis da empresa selecionada. As abas devem representar as seguintes seções: Plano de Contas, Livro Diário, Livro Razão, Balancete de Verificação e Apuração. As abas devem estar sempre visíveis enquanto o usuário navega entre as funcionalidades, permitindo alternância sem que ocorra perda de dados ou descarte de informações que estejam em processo de preenchimento.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"><strong>CA-1.</strong> As abas devem exibir as seguintes seções: Plano de Contas, Livro Diário, Livro Razão, Balancete de Verificação e Apuração.</td></tr>
+<tr><td colspan="2"><strong>CA-2.</strong> Ao selecionar uma aba, o sistema deve exibir o conteúdo correspondente à seção escolhida.</td></tr>
+<tr><td colspan="2"><strong>CA-3.</strong> As informações em processo de preenchimento devem ser preservadas ao alternar entre abas.</td></tr>
+<tr><td colspan="2"><strong>CA-4.</strong> A aba atualmente selecionada deve ser destacada visualmente, indicando ao usuário a seção ativa.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"><strong>EX- 2.</strong> [CA-2] Caso uma aba não consiga carregar seu conteúdo, o sistema deve exibir uma mensagem de erro.</td></tr>
 </tbody>
 </table>
 
 #### Plano de Contas {#plano-de-contas}
 Esta subseção especifica os requisitos relacionados à exibição do Plano de Contas por cada empresa cadastrada no sistema. Sendo utilizado como base para a organização das contas de forma hierárquica e padronizada, além de fornecer informações necessárias para a realização de lançamentos contábeis e relatórios gerenciais.
 
+#### RF-04 Exibir Plano de Contas Padrão {#exibir-plano-de-contas-padrão}
+
 <table>
 <thead>
 <tr>
-  <th style=”background-color:#2E74B5; color:white;”>Exibir Plano de Contas Padrão</th>
-  <th style=”background-color:#2E74B5; color:white; text-align:center; width:120px;”>Épico 1</th>
+  <th style="background-color:#2E74B5; color:white;">Exibir Plano de Contas Padrão</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 1</th>
 </tr>
 </thead>
 <tbody>
-<tr><td colspan=”2”>O sistema deve permitir que o usuário visualize o Plano de Contas Padrão a qualquer momento sem perda de dados ou do progresso atual no sistema. Por ser o plano de contas da empresa estática, a exibição deve apresentar todos os campos essenciais, incluindo Código, Classificação e Descrição da Conta, seguindo o formato estabelecido no documento oficial. O plano de contas deve ser exibido com hierarquia e indentação adequadas, de forma a diferenciar grupos, subdivisões, contas sintéticas (agrupadoras) e contas analíticas (utilizadas em lançamentos contábeis). Além disso, o sistema deve permitir que o usuário filtre os resultados do Plano de Contas com base em qualquer um dos campos disponíveis.</td></tr>
-<tr><td colspan=”2” style=”background-color:#BDD7EE; text-align:center;”><strong>Critérios de Aceite:</strong></td></tr>
-<tr><td colspan=”2”><strong>CA-1.</strong> O Plano de Contas Padrão deve seguir exatamente os dados do documento oficial disponibilizado em <a href=”https://docs.google.com/spreadsheets/d/1eYd4BTtSIW6IggKeMR8KJp0oBfOmKuRALwSfzIBAEEw/edit?usp=drive_link”>Plano de Contas Padrão</a>.</td></tr>
-<tr><td colspan=”2”><strong>CA-2.</strong> O Plano de Contas deve ser estático e padrão para todas as empresas do sistema.</td></tr>
-<tr><td colspan=”2”><strong>CA-3.</strong> O sistema deve exibir a indentação correta para diferenciar níveis hierárquicos, incluindo grupos, subdivisões, contas sintéticas e contas analíticas.</td></tr>
-<tr><td colspan=”2”><strong>CA-4.</strong> O usuário não deve ser capaz de incluir, alterar ou remover contas no Plano de Contas Padrão.</td></tr>
-<tr><td colspan=”2”><strong>CA-5.</strong> O sistema deve permitir a filtragem independente por qualquer um dos campos: Código, Classificação, Descrição da Conta.</td></tr>
-<tr><td colspan=”2”><strong>CA-6.</strong> O sistema deve permitir a combinação de filtros, exibindo apenas as contas que satisfaçam todas as condições aplicadas simultaneamente.</td></tr>
-<tr><td colspan=”2”><strong>CA-7.</strong> A filtragem deve ser dinâmica, atualizando os resultados sem necessidade de recarregar a página.</td></tr>
-<tr><td colspan=”2”><strong>CA-8.</strong> Os filtros devem preservar a hierarquia visual das contas (grupos, sintéticas e analíticas), exibindo apenas as que correspondem ao critério.</td></tr>
-<tr><td colspan=”2”><strong>CA-9.</strong> A busca por Descrição da Conta deve ser insensível a maiúsculas/minúsculas e permitir correspondências parciais (ex.: “Caixa” retorna “Caixa Geral” e “Caixa Pequeno Valor”).</td></tr>
-<tr><td colspan=”2”><strong>CA-10.</strong> Caso nenhum resultado seja encontrado, o sistema deve exibir uma mensagem informativa.</td></tr>
-<tr><td colspan=”2”><strong>CA-11.</strong> A remoção de todos os filtros deve restaurar a exibição completa do Plano de Contas Padrão.</td></tr>
-<tr><td colspan=”2” style=”background-color:#BDD7EE; text-align:center;”><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
-<tr><td colspan=”2”></td></tr>
+<tr><td colspan="2">O sistema deve permitir que o usuário visualize o Plano de Contas Padrão a qualquer momento sem perda de dados ou do progresso atual no sistema. Por ser o plano de contas da empresa estática, a exibição deve apresentar todos os campos essenciais, incluindo Código, Classificação e Descrição da Conta, seguindo o formato estabelecido no documento oficial. O plano de contas deve ser exibido com hierarquia e indentação adequadas, de forma a diferenciar grupos, subdivisões, contas sintéticas (agrupadoras) e contas analíticas (utilizadas em lançamentos contábeis). Além disso, o sistema deve permitir que o usuário filtre os resultados do Plano de Contas com base em qualquer um dos campos disponíveis.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"><strong>CA-1.</strong> O Plano de Contas Padrão deve seguir exatamente os dados do documento oficial disponibilizado em <a href="https://docs.google.com/spreadsheets/d/1eYd4BTtSIW6IggKeMR8KJp0oBfOmKuRALwSfzIBAEEw/edit?usp=drive_link">Plano de Contas Padrão</a>.</td></tr>
+<tr><td colspan="2"><strong>CA-2.</strong> O Plano de Contas deve ser estático e padrão para todas as empresas do sistema.</td></tr>
+<tr><td colspan="2"><strong>CA-3.</strong> O sistema deve exibir a indentação correta para diferenciar níveis hierárquicos, incluindo grupos, subdivisões, contas sintéticas e contas analíticas.</td></tr>
+<tr><td colspan="2"><strong>CA-4.</strong> O usuário não deve ser capaz de incluir, alterar ou remover contas no Plano de Contas Padrão.</td></tr>
+<tr><td colspan="2"><strong>CA-5.</strong> O sistema deve permitir a filtragem independente por qualquer um dos campos: Código, Classificação, Descrição da Conta.</td></tr>
+<tr><td colspan="2"><strong>CA-6.</strong> O sistema deve permitir a combinação de filtros, exibindo apenas as contas que satisfaçam todas as condições aplicadas simultaneamente.</td></tr>
+<tr><td colspan="2"><strong>CA-7.</strong> A filtragem deve ser dinâmica, atualizando os resultados sem necessidade de recarregar a página.</td></tr>
+<tr><td colspan="2"><strong>CA-8.</strong> Os filtros devem preservar a hierarquia visual das contas (grupos, sintéticas e analíticas), exibindo apenas as que correspondem ao critério.</td></tr>
+<tr><td colspan="2"><strong>CA-9.</strong> A busca por Descrição da Conta deve ser insensível a maiúsculas/minúsculas e permitir correspondências parciais (ex.: "Caixa" retorna "Caixa Geral" e "Caixa Pequeno Valor").</td></tr>
+<tr><td colspan="2"><strong>CA-10.</strong> Caso nenhum resultado seja encontrado, o sistema deve exibir uma mensagem informativa.</td></tr>
+<tr><td colspan="2"><strong>CA-11.</strong> A remoção de todos os filtros deve restaurar a exibição completa do Plano de Contas Padrão.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"></td></tr>
 </tbody>
 </table>
 
 #### Livro Diário {#livro-diário}
 Esta subseção descreve as funcionalidades vinculadas ao Livro Diário, que registra de forma cronológica todos os lançamentos contábeis realizados pela empresa. O foco é garantir a integridade dos registros e permitir sua visualização, edição, exclusão e filtragem conforme critérios definidos pelo usuário.
+
+#### RF-05 Gerenciar Lançamento Contábil {#gerenciar-lançamento-contábil}
 
 <table>
 <thead>
@@ -357,28 +307,32 @@ Esta subseção descreve as funcionalidades vinculadas ao Livro Diário, que reg
 </tbody>
 </table>
 
+#### RF-06 Listar Lançamentos Contábeis no Livro Diário {#listar-lançamentos-contábeis-no-livro-diário}
+
 <table>
 <thead>
 <tr>
-  <th style=”background-color:#2E74B5; color:white;”>Listar Lançamentos Contábeis no Livro Diário</th>
-  <th style=”background-color:#2E74B5; color:white; text-align:center; width:120px;”>Épico 2</th>
+  <th style="background-color:#2E74B5; color:white;">Listar Lançamentos Contábeis no Livro Diário</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 2</th>
 </tr>
 </thead>
 <tbody>
-<tr><td colspan=”2”>O sistema deve permitir que o usuário visualize os lançamentos contábeis na aba do Livro Diário, apresentando de forma clara, organizada e interativa todas as informações essenciais de cada movimentação registrada. A listagem deve exibir para cada lançamento: data, códigos e nomes das contas de débito e crédito, valores e histórico (descrição), caso informada. Quando um lançamento contiver mais de uma conta de débito ou crédito, o sistema deve agrupar a linha principal com uma descrição indicando Partidas Múltiplas, exibindo um ícone de expansão no lugar do número da conta.</td></tr>
-<tr><td colspan=”2” style=”background-color:#BDD7EE; text-align:center;”><strong>Critérios de Aceite:</strong></td></tr>
-<tr><td colspan=”2”><strong>CA-1.</strong> O sistema deve exibir todos os lançamentos contábeis registrados para a empresa selecionada, respeitando os filtros aplicados.</td></tr>
-<tr><td colspan=”2”><strong>CA-2.</strong> A data apresentada em cada lançamento deve ser a data informada pelo usuário no momento do cadastro; a ordenação deve considerar o horário real de registro no sistema.</td></tr>
-<tr><td colspan=”2”><strong>CA-3.</strong> O sistema deve permitir que o usuário aplique filtros avançados: Número da Conta (código numérico), Nome da Conta (texto livre), Período Início e Período Fim (DD/MM/AAAA). O filtro de período deve considerar todos os períodos disponíveis na base de dados.</td></tr>
-<tr><td colspan=”2”><strong>CA-4.</strong> Quando houver partidas múltiplas, o lançamento principal deve exibir a descrição “Partidas múltiplas” e, ao expandir a linha, o sistema deve detalhar cada conta individual com código, nome, tipo (débito/crédito) e valor.</td></tr>
-<tr><td colspan=”2”><strong>CA-5.</strong> O sistema deve permitir que o usuário ordene os lançamentos por data do lançamento, código da conta, nome da conta ou valor, sendo permitido apenas um critério de ordenação por vez. Ao selecionar um novo critério, o anterior deve ser desmarcado automaticamente.</td></tr>
-<tr><td colspan=”2”><strong>CA-6.</strong> O sistema deve permitir que o usuário selecione a quantidade de registros exibidos por página: <strong>10, 20 ou 50 registros</strong>, mantendo sempre os filtros aplicados entre as páginas.</td></tr>
-<tr><td colspan=”2”><strong>CA-7.</strong> Para cada lançamento, o sistema deve exibir: data (DD/MM/AAAA), código e nome da conta de débito, código e nome da conta de crédito, descrição (histórico) ou “—“ quando ausente, e valor formatado em R$ com duas casas decimais.</td></tr>
-<tr><td colspan=”2”><strong>CA-8.</strong> Caso não existam lançamentos para os filtros aplicados, o sistema deve exibir uma mensagem informativa.</td></tr>
-<tr><td colspan=”2” style=”background-color:#BDD7EE; text-align:center;”><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
-<tr><td colspan=”2”><strong>EX- 8.</strong> [CA-8] Caso o usuário selecione filtros que não resultem em lançamentos, o sistema deve exibir uma mensagem informativa.</td></tr>
+<tr><td colspan="2">O sistema deve permitir que o usuário visualize os lançamentos contábeis na aba do Livro Diário, apresentando de forma clara, organizada e interativa todas as informações essenciais de cada movimentação registrada. A listagem deve exibir para cada lançamento: data, códigos e nomes das contas de débito e crédito, valores e histórico (descrição), caso informada. Quando um lançamento contiver mais de uma conta de débito ou crédito, o sistema deve agrupar a linha principal com uma descrição indicando Partidas Múltiplas, exibindo um ícone de expansão no lugar do número da conta.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"><strong>CA-1.</strong> O sistema deve exibir todos os lançamentos contábeis registrados para a empresa selecionada, respeitando os filtros aplicados.</td></tr>
+<tr><td colspan="2"><strong>CA-2.</strong> A data apresentada em cada lançamento deve ser a data informada pelo usuário no momento do cadastro; a ordenação deve considerar o horário real de registro no sistema.</td></tr>
+<tr><td colspan="2"><strong>CA-3.</strong> O sistema deve permitir que o usuário aplique filtros avançados: Número da Conta (código numérico), Nome da Conta (texto livre), Período Início e Período Fim (DD/MM/AAAA). O filtro de período deve considerar todos os períodos disponíveis na base de dados.</td></tr>
+<tr><td colspan="2"><strong>CA-4.</strong> Quando houver partidas múltiplas, o lançamento principal deve exibir a descrição "Partidas múltiplas" e, ao expandir a linha, o sistema deve detalhar cada conta individual com código, nome, tipo (débito/crédito) e valor.</td></tr>
+<tr><td colspan="2"><strong>CA-5.</strong> O sistema deve permitir que o usuário ordene os lançamentos por data do lançamento, código da conta, nome da conta ou valor, sendo permitido apenas um critério de ordenação por vez. Ao selecionar um novo critério, o anterior deve ser desmarcado automaticamente.</td></tr>
+<tr><td colspan="2"><strong>CA-6.</strong> O sistema deve permitir que o usuário selecione a quantidade de registros exibidos por página: <strong>10, 20 ou 50 registros</strong>, mantendo sempre os filtros aplicados entre as páginas.</td></tr>
+<tr><td colspan="2"><strong>CA-7.</strong> Para cada lançamento, o sistema deve exibir: data (DD/MM/AAAA), código e nome da conta de débito, código e nome da conta de crédito, descrição (histórico) ou "—" quando ausente, e valor formatado em R$ com duas casas decimais.</td></tr>
+<tr><td colspan="2"><strong>CA-8.</strong> Caso não existam lançamentos para os filtros aplicados, o sistema deve exibir uma mensagem informativa.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"><strong>EX- 8.</strong> [CA-8] Caso o usuário selecione filtros que não resultem em lançamentos, o sistema deve exibir uma mensagem informativa.</td></tr>
 </tbody>
 </table>
+
+#### RF-07 Deletar dados da Empresa {#deletar-dados-da-empresa}
 
 <table>
 <thead>
@@ -403,6 +357,8 @@ Esta subseção descreve as funcionalidades vinculadas ao Livro Diário, que reg
 
 #### Livro Razão {#livro-razão}
 Esta subseção define os requisitos referentes ao Livro Razão, responsável por apresentar as movimentações organizadas por conta contábil. Seu propósito é permitir a análise detalhada de débitos, créditos e saldos, possibilitando o acompanhamento do histórico e da evolução de cada conta.
+
+#### RF-08 Exibir Livro Razão {#exibir-livro-razão}
 
 <table>
 <thead>
@@ -435,6 +391,8 @@ Esta subseção descreve as funcionalidades relacionadas ao Balancete de Verific
 O balancete é um instrumento essencial para conferência da igualdade entre débitos e créditos, auxiliando na verificação da consistência dos lançamentos contábeis realizados no Livro Diário e refletidos no Livro Razão.  
 O sistema deve permitir a aplicação de filtros de consulta, a visualização detalhada das contas analíticas com seus respectivos saldos e a exibição de um resumo consolidado por natureza contábil, possibilitando a análise do Resultado do Exercício (lucro ou prejuízo) dentro do período selecionado.
 
+#### RF-09 Aplicar Filtros do Balancete {#aplicar-filtros-do-balancete}
+
 <table>
 <thead>
 <tr>
@@ -457,44 +415,48 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 </tbody>
 </table>
 
-<table>
-<thead>
-<tr>
-  <th style=”background-color:#2E74B5; color:white;”>Exibir Balancete de Verificação</th>
-  <th style=”background-color:#2E74B5; color:white; text-align:center; width:120px;”>Épico 4</th>
-</tr>
-</thead>
-<tbody>
-<tr><td colspan=”2”>O sistema deve permitir a visualização do Balancete de Verificação, exibindo apenas as contas analíticas do Plano de Contas Padrão, agrupadas por: Ativo, Passivo, Contas de Resultado – Custos e Despesas, Contas de Resultado – Receita e Contas de Apuração. Para cada conta listada, devem ser apresentados os valores consolidados de acordo com os lançamentos contábeis registrados no Livro Diário, considerando o período informado nos filtros.</td></tr>
-<tr><td colspan=”2” style=”background-color:#BDD7EE; text-align:center;”><strong>Critérios de Aceite:</strong></td></tr>
-<tr><td colspan=”2”><strong>CA-1.</strong> O Balancete deve exibir as colunas: Código, Classificação, Descrição da Conta, Saldo Anterior (R$), Débito (R$), Crédito (R$), Saldo Atual (R$), D/C.</td></tr>
-<tr><td colspan=”2”><strong>CA-2.</strong> Devem ser exibidas exclusivamente as contas analíticas, agrupadas por: Ativo, Passivo, Contas de Resultados – Custos e Despesas, Contas de Resultado – Receita, Contas de Apuração.</td></tr>
-<tr><td colspan=”2”><strong>CA-3.</strong> O Saldo Anterior deve representar o saldo da conta antes do Período Inicial informado.</td></tr>
-<tr><td colspan=”2”><strong>CA-4.</strong> O Débito e o Crédito devem somar todas as movimentações no período informado.</td></tr>
-<tr><td colspan=”2”><strong>CA-5.</strong> O campo D/C deve exibir “D” quando o saldo for devedor e “C” quando for credor.</td></tr>
-<tr><td colspan=”2”><strong>CA-6.</strong> A tabela deve conter uma linha de TOTAL, somando apenas as colunas de Débito e Crédito do período.</td></tr>
-<tr><td colspan=”2”><strong>CA-7.</strong> A ordenação padrão deve ser pela coluna “Classificação”, em ordem crescente.</td></tr>
-<tr><td colspan=”2” style=”background-color:#BDD7EE; text-align:center;”><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
-<tr><td colspan=”2”></td></tr>
-</tbody>
-</table>
+#### RF-010 Exibir Balancete de Verificação {#exibir-balancete-de-verificação}
 
 <table>
 <thead>
 <tr>
-  <th style=”background-color:#2E74B5; color:white;”>Exibir Resumo do Balancete</th>
-  <th style=”background-color:#2E74B5; color:white; text-align:center; width:120px;”>Épico 4</th>
+  <th style="background-color:#2E74B5; color:white;">Exibir Balancete de Verificação</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 4</th>
 </tr>
 </thead>
 <tbody>
-<tr><td colspan=”2”>Após a tabela de contas analíticas, o sistema deve apresentar um resumo consolidado do balancete, agrupando as contas por natureza contábil, de modo a evidenciar a composição global dos saldos e o Resultado do Exercício. Grupos do resumo: Contas de Resultado – Receitas, Contas de Resultado – Custos e Despesas, Contas Devedoras, Contas Credoras e Resultado do Exercício.</td></tr>
-<tr><td colspan=”2” style=”background-color:#BDD7EE; text-align:center;”><strong>Critérios de Aceite:</strong></td></tr>
-<tr><td colspan=”2”><strong>CA-1.</strong> Cada grupo deve exibir as colunas: Saldo Anterior, Débito, Crédito, Saldo Atual, D/C.</td></tr>
-<tr><td colspan=”2”><strong>CA-2.</strong> O agrupamento deve considerar as naturezas contábeis conforme o Plano de Contas Padrão: Contas Devedoras (Ativo, Contas de Resultado – Custos e Despesas) e Contas Credoras (Passivo, Patrimônio Líquido, Contas de Resultado – Receitas).</td></tr>
-<tr><td colspan=”2”><strong>CA-3.</strong> O cálculo do Resultado do Exercício deve seguir a fórmula: <strong>(Soma das Contas de Resultado – Receitas) – (Soma das Contas de Resultado – Custos e Despesas)</strong>, indicando Lucro (saldo credor) ou Prejuízo (saldo devedor).</td></tr>
-<tr><td colspan=”2”><strong>CA-4.</strong> Caso o período não contenha movimentações nas contas de resultado, o grupo “Resultado do Exercício” deve exibir R$ 0,00 em todas as colunas.</td></tr>
-<tr><td colspan=”2” style=”background-color:#BDD7EE; text-align:center;”><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
-<tr><td colspan=”2”></td></tr>
+<tr><td colspan="2">O sistema deve permitir a visualização do Balancete de Verificação, exibindo apenas as contas analíticas do Plano de Contas Padrão, agrupadas por: Ativo, Passivo, Contas de Resultado – Custos e Despesas, Contas de Resultado – Receita e Contas de Apuração. Para cada conta listada, devem ser apresentados os valores consolidados de acordo com os lançamentos contábeis registrados no Livro Diário, considerando o período informado nos filtros.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"><strong>CA-1.</strong> O Balancete deve exibir as colunas: Código, Classificação, Descrição da Conta, Saldo Anterior (R$), Débito (R$), Crédito (R$), Saldo Atual (R$), D/C.</td></tr>
+<tr><td colspan="2"><strong>CA-2.</strong> Devem ser exibidas exclusivamente as contas analíticas, agrupadas por: Ativo, Passivo, Contas de Resultados – Custos e Despesas, Contas de Resultado – Receita, Contas de Apuração.</td></tr>
+<tr><td colspan="2"><strong>CA-3.</strong> O Saldo Anterior deve representar o saldo da conta antes do Período Inicial informado.</td></tr>
+<tr><td colspan="2"><strong>CA-4.</strong> O Débito e o Crédito devem somar todas as movimentações no período informado.</td></tr>
+<tr><td colspan="2"><strong>CA-5.</strong> O campo D/C deve exibir "D" quando o saldo for devedor e "C" quando for credor.</td></tr>
+<tr><td colspan="2"><strong>CA-6.</strong> A tabela deve conter uma linha de TOTAL, somando apenas as colunas de Débito e Crédito do período.</td></tr>
+<tr><td colspan="2"><strong>CA-7.</strong> A ordenação padrão deve ser pela coluna "Classificação", em ordem crescente.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"></td></tr>
+</tbody>
+</table>
+
+#### RF-011 Exibir Resumo do Balancete {#exibir-resumo-do-balancete}
+
+<table>
+<thead>
+<tr>
+  <th style="background-color:#2E74B5; color:white;">Exibir Resumo do Balancete</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 4</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="2">Após a tabela de contas analíticas, o sistema deve apresentar um resumo consolidado do balancete, agrupando as contas por natureza contábil, de modo a evidenciar a composição global dos saldos e o Resultado do Exercício. Grupos do resumo: Contas de Resultado – Receitas, Contas de Resultado – Custos e Despesas, Contas Devedoras, Contas Credoras e Resultado do Exercício.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"><strong>CA-1.</strong> Cada grupo deve exibir as colunas: Saldo Anterior, Débito, Crédito, Saldo Atual, D/C.</td></tr>
+<tr><td colspan="2"><strong>CA-2.</strong> O agrupamento deve considerar as naturezas contábeis conforme o Plano de Contas Padrão: Contas Devedoras (Ativo, Contas de Resultado – Custos e Despesas) e Contas Credoras (Passivo, Patrimônio Líquido, Contas de Resultado – Receitas).</td></tr>
+<tr><td colspan="2"><strong>CA-3.</strong> O cálculo do Resultado do Exercício deve seguir a fórmula: <strong>(Soma das Contas de Resultado – Receitas) – (Soma das Contas de Resultado – Custos e Despesas)</strong>, indicando Lucro (saldo credor) ou Prejuízo (saldo devedor).</td></tr>
+<tr><td colspan="2"><strong>CA-4.</strong> Caso o período não contenha movimentações nas contas de resultado, o grupo "Resultado do Exercício" deve exibir R$ 0,00 em todas as colunas.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"></td></tr>
 </tbody>
 </table>
 
@@ -503,6 +465,8 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 Esta subseção descreve as funcionalidades relacionadas à **Apuração do Resultado do Exercício (ARE)**, que tem como objetivo apresentar uma prévia completa do que será efetivamente executado no momento da apuração do resultado do período, antes da confirmação da ação.
 
 O sistema deve permitir a definição da data de apuração, a visualização do resumo do resultado, os saldos das contas analíticas, os lançamentos de encerramento e o resultado final, indicando lucro ou prejuízo no período.
+
+#### RF-012 Filtrar Data da Apuração {#filtrar-data-da-apuração}
 
 <table>
 <thead>
@@ -524,6 +488,8 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 </tbody>
 </table>
 
+#### RF-013 Exibir Resumo do Resultado {#exibir-resumo-do-resultado}
+
 <table>
 <thead>
 <tr>
@@ -544,6 +510,8 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 </tbody>
 </table>
 
+#### RF-014 Exibir Contas de Resultado {#exibir-contas-de-resultado}
+
 <table>
 <thead>
 <tr>
@@ -561,6 +529,8 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <tr><td colspan="2"></td></tr>
 </tbody>
 </table>
+
+#### RF-015 Exibir Lançamentos de Encerramento {#exibir-lançamentos-de-encerramento}
 
 <table>
 <thead>
@@ -581,6 +551,8 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 </tbody>
 </table>
 
+#### RF-016 Exibir Confronto da Apuração {#exibir-confronto-da-apuração}
+
 <table>
 <thead>
 <tr>
@@ -600,6 +572,8 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 </tbody>
 </table>
 
+#### RF-017 Exibir Transferência do Resultado {#exibir-transferência-do-resultado}
+
 <table>
 <thead>
 <tr>
@@ -618,6 +592,8 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 </tbody>
 </table>
 
+#### RF-018 Exibir Resultado Final {#exibir-resultado-final}
+
 <table>
 <thead>
 <tr>
@@ -633,6 +609,8 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <tr><td colspan="2"></td></tr>
 </tbody>
 </table>
+
+#### RF-019 Realizar Apuração {#realizar-apuração}
 
 <table>
 <thead>
@@ -653,6 +631,8 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 </tbody>
 </table>
 
+#### RF-020 Exibir Histórico de Apurações {#exibir-histórico-de-apurações}
+
 <table>
 <thead>
 <tr>
@@ -670,6 +650,8 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <tr><td colspan="2"></td></tr>
 </tbody>
 </table>
+
+#### RF-021 Desfazer Última Apuração {#desfazer-última-apuração}
 
 <table>
 <thead>
@@ -695,6 +677,8 @@ Esta subseção descreve as funcionalidades relacionadas à **Demonstração do 
 
 A DRE é um instrumento essencial de análise contábil que confronta receitas com despesas, apresentando de forma estruturada e hierárquica o desempenho financeiro do exercício, desde a receita bruta até o lucro (ou prejuízo) líquido.
 
+#### RF-022 Filtrar Período da DRE {#filtrar-período-da-dre}
+
 <table>
 <thead>
 <tr>
@@ -715,6 +699,8 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 </tbody>
 </table>
 
+#### RF-023 Exibir Receita Bruta {#exibir-receita-bruta}
+
 <table>
 <thead>
 <tr>
@@ -732,6 +718,8 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <tr><td colspan="2"></td></tr>
 </tbody>
 </table>
+
+#### RF-024 Exibir Deduções da Receita {#exibir-deduções-da-receita}
 
 <table>
 <thead>
@@ -752,6 +740,8 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 </tbody>
 </table>
 
+#### RF-025 Calcular e Exibir Receita Líquida {#calcular-e-exibir-receita-líquida}
+
 <table>
 <thead>
 <tr>
@@ -769,6 +759,8 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <tr><td colspan="2"></td></tr>
 </tbody>
 </table>
+
+#### RF-026 Exibir CMV / CPV {#exibir-cmv--cpv}
 
 <table>
 <thead>
@@ -788,6 +780,8 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 </tbody>
 </table>
 
+#### RF-027 Calcular e Exibir Lucro Bruto {#calcular-e-exibir-lucro-bruto}
+
 <table>
 <thead>
 <tr>
@@ -806,6 +800,8 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 </tbody>
 </table>
 
+#### RF-028 Exibir Despesas Operacionais {#exibir-despesas-operacionais}
+
 <table>
 <thead>
 <tr>
@@ -823,6 +819,8 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <tr><td colspan="2"></td></tr>
 </tbody>
 </table>
+
+#### RF-029 Exibir Outras Receitas/Despesas Operacionais {#exibir-outras-receitas-despesas-operacionais}
 
 <table>
 <thead>
@@ -844,6 +842,8 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 </tbody>
 </table>
 
+#### RF-030 Calcular e Exibir LAJIR {#calcular-e-exibir-lajir}
+
 <table>
 <thead>
 <tr>
@@ -861,6 +861,8 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <tr><td colspan="2"></td></tr>
 </tbody>
 </table>
+
+#### RF-031 Exibir Resultado Financeiro {#exibir-resultado-financeiro}
 
 <table>
 <thead>
@@ -882,6 +884,8 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 </tbody>
 </table>
 
+#### RF-032 Calcular e Exibir LAIR {#calcular-e-exibir-lair}
+
 <table>
 <thead>
 <tr>
@@ -899,6 +903,8 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <tr><td colspan="2"></td></tr>
 </tbody>
 </table>
+
+#### RF-033 Exibir Resultado Não Operacional {#exibir-resultado-não-operacional}
 
 <table>
 <thead>
@@ -920,6 +926,8 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 </tbody>
 </table>
 
+#### RF-034 Calcular Resultado Antes dos Impostos {#calcular-resultado-antes-dos-impostos}
+
 <table>
 <thead>
 <tr>
@@ -938,6 +946,8 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 </tbody>
 </table>
 
+#### RF-035 Exibir Impostos sobre o Lucro {#exibir-impostos-sobre-o-lucro}
+
 <table>
 <thead>
 <tr>
@@ -955,6 +965,8 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <tr><td colspan="2"></td></tr>
 </tbody>
 </table>
+
+#### RF-036 Calcular e Exibir Lucro Líquido {#calcular-e-exibir-lucro-líquido}
 
 <table>
 <thead>
@@ -975,6 +987,8 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 </tbody>
 </table>
 
+#### RF-037 Exibir Composição das Contas da DRE {#exibir-composição-das-contas-da-dre}
+
 <table>
 <thead>
 <tr>
@@ -993,23 +1007,23 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 </tbody>
 </table>
 
-## Requisitos Não-Funcionais {#requisitos-não-funcionais}
+### Requisitos Não-Funcionais {#requisitos-não-funcionais}
 
-### Compatibilidade
+#### Compatibilidade
 O sistema deve ser executado corretamente no sistema operacional Windows, nas versões 10 e 11.
 
-### Portabilidade
+#### Portabilidade
 A instalação do software deve ser executada sem a necessidade de exigir permissões de administrador.
 
-### Desempenho
+#### Desempenho
 Após instalado, as telas principais devem responder de forma fluida.
 
-### Armazenamento
+#### Armazenamento
 Os dados devem ficar salvos localmente na pasta do usuário (banco local do aplicativo).
 
-### Disponibilidade
+#### Disponibilidade
 O sistema deve ser capaz de operar de forma autônoma (modo offline), sem a necessidade de uma conexão com a internet ativa para a execução de suas funcionalidades.
 
-### Responsividade
+#### Responsividade
 A interface deve ser responsiva, adaptando-se a diferentes resoluções de tela, sem distorções ou sobreposição de elementos.
 

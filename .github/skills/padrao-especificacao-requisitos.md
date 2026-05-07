@@ -398,6 +398,73 @@ Antes de finalizar um requisito, verifique:
 
 ---
 
+## Hierarquia de Headings e Sumário no Documento ERS
+
+### Estrutura de Headings
+
+O documento ERS usa a seguinte hierarquia (com `toc_depth: 3` no MkDocs, apenas `##` e `###` aparecem no TOC lateral):
+
+| Nível | Tipo | Exemplo |
+|-------|------|---------|
+| `##` | Seções principais | `## Requisitos de Software` |
+| `###` | Subseções de 1º nível | `### Requisitos Funcionais`, `### Menu`, `### Empresas` |
+| `####` | Subseções de 2º nível e **headings individuais de RF** | `#### Plano de Contas`, `#### RF-04 Exibir Plano de Contas Padrão {#anchor}` |
+
+**Regras:**
+- `## Requisitos Funcionais` e `## Requisitos Não-Funcionais` devem ser `###` (são filhos de `## Requisitos de Software`)
+- Cada RF **obrigatoriamente** deve ter um heading `####` imediatamente antes de sua tabela HTML
+- O heading do RF cria a âncora usada no sumário e nos links internos
+- RNF sub-seções (Compatibilidade, Portabilidade, etc.) devem ser `####`
+
+### Heading Obrigatório Antes de Cada Tabela de RF
+
+Antes de toda tabela de requisito funcional, adicione:
+
+```markdown
+#### RF-XX Nome do Requisito Funcional {#anchor-do-sumario}
+
+<table>
+...
+```
+
+O `{#anchor}` é o ID que o MkDocs usa para o link. Use o mesmo anchor que está no sumário, em kebab-case minúsculo, sem acentos.
+
+**EXEMPLO:**
+```markdown
+#### RF-05 Gerenciar Lançamento Contábil {#gerenciar-lancamento-contabil}
+
+<table>
+<thead>
+<tr>
+  <th style="background-color:#2E74B5; color:white;">Gerenciar Lançamento Contábil</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 2</th>
+</tr>
+</thead>
+...
+</table>
+```
+
+### Formato do Sumário
+
+O sumário deve ser uma lista Markdown aninhada (não links planos linha-por-linha). Use 4 espaços por nível de indentação:
+
+```markdown
+**Sumário**
+
+- [1. Introdução](#introdução)
+- [6. Requisitos de Software](#requisitos-de-software)
+    - [6.1. Requisitos Funcionais](#requisitos-funcionais)
+        - [6.1.1. Menu](#menu)
+            - [RF-01 Exibir Menu Principal](#exibir-menu-principal)
+        - [6.1.2. Empresas](#empresas)
+            - [6.1.2.1. Estrutura da Empresa](#estrutura-da-empresa)
+                - [RF-02 Exibir Empresa Estática](#exibir-empresa-estática)
+```
+
+**Nunca** use o formato exportado do Google Drive (links planos com número de página no texto do link).
+
+---
+
 ## Quando Usar Esta Skill
 
 - Redigindo novos requisitos funcionais (RF)
