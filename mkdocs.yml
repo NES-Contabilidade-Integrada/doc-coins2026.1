@@ -54,6 +54,7 @@ nav:
       - Plano de Testes: qualidade-testes/plano-de-testes.md
   - Gerência de Projeto:
       - Plano de Projeto: gerencia-projeto/plano-do-projeto.md
+      - Política de Uso de IA: gerencia-projeto/politica-uso-ia.md
       - Template de Documento: gerencia-projeto/template-de-documento.md
   - DevOps:
       - Visão Geral: devops/visao-geral.md
