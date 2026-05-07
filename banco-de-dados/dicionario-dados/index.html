@@ -1660,7 +1660,7 @@
 
 
 
-<h1 id="dicionario-de-dados-sistema-coins">Dicionário de Dados – Sistema COIN’S</h1>
+<h1 id="dicionario-de-dados-sistema-coins">Dicionário de Dados – Sistema COIN'S</h1>
 <p><strong>Histórico de Versões</strong></p>
 <table>
 <thead>
@@ -1685,10 +1685,10 @@
 <td style="text-align: center;">Pedro Nicoletti Sotoma</td>
 </tr>
 <tr>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">1.2</td>
+<td style="text-align: center;">06/05</td>
+<td style="text-align: center;">Atualização do esquema: novas tabelas account_types, actors e apuracoes; renomeação de tabelas; novos campos</td>
+<td style="text-align: center;">Fernanda Pessoa</td>
 </tr>
 </tbody>
 </table>
@@ -1728,9 +1728,71 @@
 <p><a href="#estrutura-de-tabelas">2. Estrutura de Tabelas   2</a></p>
 <p><a href="#relacionamentos-entre-tabelas">3. Relacionamentos entre Tabelas  6</a></p>
 <h2 id="introdução">Introdução</h2>
-<p>O banco de dados do Sistema COIN’S (Contabilidade Integrada Simplificada) foi desenvolvido para gerenciar informações contábeis de empresas, permitindo o registro de lançamentos no Livro Diário e Livro Razão.<br />
-O modelo é composto por quatro tabelas principais: chart_of_account, companies, journal_entries e journal_entry_lines.</p>
+<p>O banco de dados do Sistema COIN'S (Contabilidade Integrada Simplificada) foi desenvolvido para gerenciar informações contábeis de empresas, permitindo o registro de lançamentos no Livro Diário e Livro Razão.<br />
+O modelo é composto por sete tabelas de negócio: <code>account_types</code>, <code>actors</code>, <code>chart_of_account</code>, <code>company</code>, <code>apuracoes</code>, <code>journal_entry</code> e <code>journal_entry_line</code>. Além dessas, existem tabelas de infraestrutura de migração (<code>knex_migrations</code>, <code>knex_migrations_lock</code> e <code>app_data_migrations</code>), gerenciadas pelo framework e não documentadas neste dicionário.</p>
 <h2 id="estrutura-de-tabelas">Estrutura de Tabelas</h2>
+<p>Tabela: account_types</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: left;">Nulo</th>
+<th style="text-align: left;">Chave</th>
+<th style="text-align: left;">Padrão</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">Não</td>
+<td style="text-align: left;">PK</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Identificador único do tipo de conta.</td>
+</tr>
+<tr>
+<td style="text-align: left;">descricao</td>
+<td style="text-align: left;">TEXT</td>
+<td style="text-align: left;">Não</td>
+<td style="text-align: left;">Único</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Descrição do tipo de conta (ex: Ativo, Passivo).</td>
+</tr>
+</tbody>
+</table>
+<p>Tabela: actors</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: left;">Nulo</th>
+<th style="text-align: left;">Chave</th>
+<th style="text-align: left;">Padrão</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">Não</td>
+<td style="text-align: left;">PK</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Identificador único do ator.</td>
+</tr>
+<tr>
+<td style="text-align: left;">descricao</td>
+<td style="text-align: left;">TEXT</td>
+<td style="text-align: left;">Não</td>
+<td style="text-align: left;">Único</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Descrição do ator responsável pelos lançamentos.</td>
+</tr>
+</tbody>
+</table>
 <p>Tabela: chart_of_account</p>
 <table>
 <thead>
@@ -1756,7 +1818,7 @@ O modelo é composto por quatro tabelas principais: chart_of_account, companies,
 <td style="text-align: left;">code</td>
 <td style="text-align: left;">TEXT</td>
 <td style="text-align: left;">Não</td>
-<td style="text-align: left;">-</td>
+<td style="text-align: left;">Único</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">Código contábil da conta (ex: 1).</td>
 </tr>
@@ -1764,9 +1826,9 @@ O modelo é composto por quatro tabelas principais: chart_of_account, companies,
 <td style="text-align: left;">classification</td>
 <td style="text-align: left;">TEXT</td>
 <td style="text-align: left;">Não</td>
+<td style="text-align: left;">Único</td>
 <td style="text-align: left;">-</td>
-<td style="text-align: left;">-</td>
-<td style="text-align: left;">Classificação hierárquica da conta. (ex: 1.01.001).</td>
+<td style="text-align: left;">Classificação hierárquica da conta (ex: 1.01.001).</td>
 </tr>
 <tr>
 <td style="text-align: left;">description</td>
@@ -1778,11 +1840,11 @@ O modelo é composto por quatro tabelas principais: chart_of_account, companies,
 </tr>
 <tr>
 <td style="text-align: left;">is_analytic</td>
-<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">BOOLEAN</td>
 <td style="text-align: left;">Não</td>
 <td style="text-align: left;">-</td>
-<td style="text-align: left;">-</td>
-<td style="text-align: left;">Indica se a conta é analítica (1) ou sintética (0).</td>
+<td style="text-align: left;">false</td>
+<td style="text-align: left;">Indica se a conta é analítica (true) ou sintética (false).</td>
 </tr>
 <tr>
 <td style="text-align: left;">created_at</td>
@@ -1808,9 +1870,17 @@ O modelo é composto por quatro tabelas principais: chart_of_account, companies,
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">Classificação da conta pai (hierarquia).</td>
 </tr>
+<tr>
+<td style="text-align: left;">account_type_id</td>
+<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">Sim</td>
+<td style="text-align: left;">FK → account_types.id</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Tipo de conta contábil associado.</td>
+</tr>
 </tbody>
 </table>
-<p>Tabela: companies</p>
+<p>Tabela: company</p>
 <table>
 <thead>
 <tr>
@@ -1865,7 +1935,70 @@ O modelo é composto por quatro tabelas principais: chart_of_account, companies,
 </tr>
 </tbody>
 </table>
-<p>Tabela: journal_entries</p>
+<p>Tabela: apuracoes</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: left;">Nulo</th>
+<th style="text-align: left;">Chave</th>
+<th style="text-align: left;">Padrão</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">TEXT</td>
+<td style="text-align: left;">Não</td>
+<td style="text-align: left;">PK</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Identificador único da apuração (UUID).</td>
+</tr>
+<tr>
+<td style="text-align: left;">created_at</td>
+<td style="text-align: left;">DATETIME</td>
+<td style="text-align: left;">Sim</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">CURRENT_TIMESTAMP</td>
+<td style="text-align: left;">Data de criação do registro.</td>
+</tr>
+<tr>
+<td style="text-align: left;">data_apuracao</td>
+<td style="text-align: left;">DATE</td>
+<td style="text-align: left;">Não</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Data de referência da apuração.</td>
+</tr>
+<tr>
+<td style="text-align: left;">tipo</td>
+<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">Não</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Tipo da apuração: 1 ou 2.</td>
+</tr>
+<tr>
+<td style="text-align: left;">valor</td>
+<td style="text-align: left;">FLOAT</td>
+<td style="text-align: left;">Não</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Valor apurado.</td>
+</tr>
+<tr>
+<td style="text-align: left;">conta_destino_id</td>
+<td style="text-align: left;">TEXT</td>
+<td style="text-align: left;">Não</td>
+<td style="text-align: left;">FK → chart_of_account.id</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Conta contábil de destino da apuração.</td>
+</tr>
+</tbody>
+</table>
+<p>Tabela: journal_entry</p>
 <table>
 <thead>
 <tr>
@@ -1890,7 +2023,7 @@ O modelo é composto por quatro tabelas principais: chart_of_account, companies,
 <td style="text-align: left;">company_id</td>
 <td style="text-align: left;">TEXT</td>
 <td style="text-align: left;">Não</td>
-<td style="text-align: left;">FK → companies.id</td>
+<td style="text-align: left;">FK → company.id</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">Empresa relacionada ao lançamento.</td>
 </tr>
@@ -1904,11 +2037,11 @@ O modelo é composto por quatro tabelas principais: chart_of_account, companies,
 </tr>
 <tr>
 <td style="text-align: left;">amount</td>
-<td style="text-align: left;">NUMERIC(14,2)</td>
+<td style="text-align: left;">FLOAT</td>
 <td style="text-align: left;">Não</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">-</td>
-<td style="text-align: left;">Valor total do lançamento.</td>
+<td style="text-align: left;">Valor total do lançamento (deve ser &gt; 0).</td>
 </tr>
 <tr>
 <td style="text-align: left;">is_compound</td>
@@ -1934,9 +2067,25 @@ O modelo é composto por quatro tabelas principais: chart_of_account, companies,
 <td style="text-align: left;">CURRENT_TIMESTAMP</td>
 <td style="text-align: left;">Última atualização do registro.</td>
 </tr>
+<tr>
+<td style="text-align: left;">actor_id</td>
+<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">Não</td>
+<td style="text-align: left;">FK → actors.id</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Ator responsável pelo lançamento.</td>
+</tr>
+<tr>
+<td style="text-align: left;">apuration_id</td>
+<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">Sim</td>
+<td style="text-align: left;">FK → apuracoes.id</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Apuração associada ao lançamento, quando aplicável.</td>
+</tr>
 </tbody>
 </table>
-<p>Tabela: journal_entry_lines</p>
+<p>Tabela: journal_entry_line</p>
 <table>
 <thead>
 <tr>
@@ -1961,12 +2110,12 @@ O modelo é composto por quatro tabelas principais: chart_of_account, companies,
 <td style="text-align: left;">journal_entry_id</td>
 <td style="text-align: left;">TEXT</td>
 <td style="text-align: left;">Não</td>
-<td style="text-align: left;">FK → journal_entries.id</td>
+<td style="text-align: left;">FK → journal_entry.id</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">Referência ao lançamento principal.</td>
 </tr>
 <tr>
-<td style="text-align: left;">account_id</td>
+<td style="text-align: left;">account_code</td>
 <td style="text-align: left;">TEXT</td>
 <td style="text-align: left;">Não</td>
 <td style="text-align: left;">FK → chart_of_account.id</td>
@@ -1983,7 +2132,7 @@ O modelo é composto por quatro tabelas principais: chart_of_account, companies,
 </tr>
 <tr>
 <td style="text-align: left;">amount</td>
-<td style="text-align: left;">NUMERIC(14,2)</td>
+<td style="text-align: left;">FLOAT</td>
 <td style="text-align: left;">Não</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">-</td>
@@ -2011,20 +2160,20 @@ O modelo é composto por quatro tabelas principais: chart_of_account, companies,
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">companies.id</td>
-<td style="text-align: left;">journal_entries.company_id</td>
+<td style="text-align: left;">company.id</td>
+<td style="text-align: left;">journal_entry.company_id</td>
 <td style="text-align: left;">1:N</td>
 <td style="text-align: left;">Uma empresa possui vários lançamentos contábeis.</td>
 </tr>
 <tr>
-<td style="text-align: left;">journal_entries.id</td>
-<td style="text-align: left;">journal_entry_lines.journal_entry_id</td>
+<td style="text-align: left;">journal_entry.id</td>
+<td style="text-align: left;">journal_entry_line.journal_entry_id</td>
 <td style="text-align: left;">1:N</td>
 <td style="text-align: left;">Um lançamento possui várias linhas de partidas.</td>
 </tr>
 <tr>
 <td style="text-align: left;">chart_of_account.id</td>
-<td style="text-align: left;">journal_entry_lines.account_id</td>
+<td style="text-align: left;">journal_entry_line.account_code</td>
 <td style="text-align: left;">1:N</td>
 <td style="text-align: left;">Uma conta pode estar em várias partidas.</td>
 </tr>
@@ -2033,6 +2182,30 @@ O modelo é composto por quatro tabelas principais: chart_of_account, companies,
 <td style="text-align: left;">chart_of_account.parent_classification</td>
 <td style="text-align: left;">1:N</td>
 <td style="text-align: left;">Autorrelacionamento hierárquico do plano de contas.</td>
+</tr>
+<tr>
+<td style="text-align: left;">account_types.id</td>
+<td style="text-align: left;">chart_of_account.account_type_id</td>
+<td style="text-align: left;">1:N</td>
+<td style="text-align: left;">Um tipo de conta pode ser associado a várias contas contábeis.</td>
+</tr>
+<tr>
+<td style="text-align: left;">actors.id</td>
+<td style="text-align: left;">journal_entry.actor_id</td>
+<td style="text-align: left;">1:N</td>
+<td style="text-align: left;">Um ator pode ser responsável por vários lançamentos.</td>
+</tr>
+<tr>
+<td style="text-align: left;">apuracoes.id</td>
+<td style="text-align: left;">journal_entry.apuration_id</td>
+<td style="text-align: left;">1:N</td>
+<td style="text-align: left;">Uma apuração pode estar associada a vários lançamentos.</td>
+</tr>
+<tr>
+<td style="text-align: left;">chart_of_account.id</td>
+<td style="text-align: left;">apuracoes.conta_destino_id</td>
+<td style="text-align: left;">1:N</td>
+<td style="text-align: left;">Uma conta pode ser destino de várias apurações.</td>
 </tr>
 </tbody>
 </table>
@@ -2058,7 +2231,7 @@ O modelo é composto por quatro tabelas principais: chart_of_account, companies,
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="6 de maio de 2026 02:27:40 UTC">6 de maio de 2026 02:27:40</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="7 de maio de 2026 01:34:03 UTC">7 de maio de 2026 01:34:03</span>
   </span>
 
     
