@@ -16,6 +16,7 @@ When working with documentation:
 - Maintain consistent structure across documents
 - Include relevant diagrams and examples
 - Keep navigation links accurate in index.md
+- When adding a new documentation file, always add a corresponding entry to the `nav` section in `mkdocs.yml`
 - Remove empty or redundant documents
 - Use standard Markdown headers (# ## ###) without bold formatting or custom anchors ({#anchor})
 - Main document title should be #, sections ##, subsections ###, etc.
