@@ -7,7 +7,7 @@
 | 1.0 | 25/08/2025 | Adiciona base dos requisitos funcionais | Fernanda Pessoa |
 | 1.1 | 03/09/2025 | Atualiza requisitos funcionais do RF-01 ao RF-06 | Fernanda Pessoa |
 | 1.2 | 22/09/2025 | Adição do requisito de Limpar dados da Empresa  | Fernanda Pessoa |
-| 1.3 | 21/10/2025 | Adição de referências aos Épicos para cada requisito | Jerfferson Júnior |
+| 1.3 | 21/10/2025 | Adição de referências aos Módulos para cada requisito | Jerfferson Júnior |
 | 2.0 | 22/10/2025 | Documento em geral: atualizada a estrutura da documentação \- agora a documentação das funcionalidades está alinhada com a hierarquia das informações do sistema; Retirada de critérios de aceite relacionados à responsividade, tendo em vista que este faz parte de requisitos não funcionais de usabilidade do sistema. RF-01: reestruturação completa do RF considerando a retirada do plano de contas do menu principal; Referência as abas de funcionalidades adicionada ao CA-3. RF-03: Reformulação focada na adição do plano de contas como mais uma funcionalidade, retirada da contagem de funcionalidades no CA-1 considerando a expansão futura (agora são apenas listadas as funcionalidades existentes). | Jerfferson Júnior |
 | 3.0 | 23/10/2025 | Adição de Requisitos Funcionais referentes ao Balancete | Fernanda Pessoa |
 | 4.0 | 27/10 | Adição de Requisitos não funcionais | Fernanda Pessoa |
@@ -16,7 +16,7 @@
 | 4.3 | 25/11 | Correções de alinhamento, adição de link para Glossário de Termos | Jerfferson Júnior |
 | 4.4 | 08/04 | Adição dos RFs de Apuração do Resultado do Exercício (ARE) | Elise Lissa Hasegawa  |
 | 4.5 |  | Adição dos RFs da Demonstração do Resultado do Exercício (DRE) | Fernanda Pessoa  |
-| 4.6 | 06/05/2026 | Refatoração completa dos RFs de Apuração (RF-012 a RF-021) com estrutura clara baseada em boas práticas;<br/>Adição completa dos RFs de DRE (RF-022 a RF-034) com requisitos granulares seguindo hierarquia de cálculo;<br/>Atualização de épicos e aplicação consistente de boas práticas de formatação Markdown | Fernanda Pessoa |
+| 4.6 | 06/05/2026 | Refatoração completa dos RFs de Apuração (RF-012 a RF-021) com estrutura clara baseada em boas práticas;<br/>Adição completa dos RFs de DRE (RF-022 a RF-034) com requisitos granulares seguindo hierarquia de cálculo;<br/>Atualização de módulos e aplicação consistente de boas práticas de formatação Markdown | Fernanda Pessoa |
 
 **Histórico de Revisões**
 
@@ -31,7 +31,7 @@
 - [1. Introdução](#introdução)
 - [2. Classes de Usuários](#classes-de-usuários)
 - [3. Definição de conceitos](#definição-de-conceitos)
-- [4. Épicos](#épicos)
+- [4. Módulos](#módulos)
 - [5. Modelo dos Requisitos Funcionais](#modelo-dos-requisitos-funcionais)
 - [6. Requisitos de Software](#requisitos-de-software)
     - [6.1. Requisitos Funcionais](#requisitos-funcionais)
@@ -126,16 +126,16 @@ Os principais termos de domínio utilizados na especificação de requisitos inc
 * Razão Social
 
 
-## Épicos {#épicos}
-A seção de Épicos apresenta uma visão macro das grandes funcionalidades do sistema e serve como base de rastreabilidade para os Requisitos Funcionais descritos posteriormente. Cada requisito está vinculado ao épico correspondente, permitindo rastrear a relação entre funcionalidades detalhadas e seus objetivos de alto nível.
+## Módulos {#módulos}
+A seção de Módulos apresenta uma visão macro das grandes funcionalidades do sistema e serve como base de rastreabilidade para os Requisitos Funcionais descritos posteriormente. Cada requisito está vinculado ao módulo correspondente, permitindo rastrear a relação entre funcionalidades detalhadas e seus objetivos de alto nível.
 
-| Épico 1 | Plano de Contas |
+| Módulo 1 | Plano de Contas |
 | :---: | :---: |
-| **Épico 2** | Empresa |
-| **Épico 3** | Livro Razão |
-| **Épico 4** | Balancete de Verificação |
-| **Épico 5** | Apuração do Resultado |
-| **Épico 6** | Demonstração do Resultado do Exercício |
+| **Módulo 2** | Empresa |
+| **Módulo 3** | Livro Razão |
+| **Módulo 4** | Balancete de Verificação |
+| **Módulo 5** | Apuração do Resultado |
+| **Módulo 6** | Demonstração do Resultado do Exercício |
 
 ## Modelo dos Requisitos Funcionais {#modelo-dos-requisitos-funcionais}
 O seguinte exemplo demonstra o modelo adotado para os requisitos funcionais. O uso foi especificado no documento [Fundamento da Estrutura dos Requisitos](https://docs.google.com/document/u/0/d/1eAsVxnGFQnY8Fp2fKZukeNej2aNxZxu0_dLkIjcqvxE/edit).
@@ -144,7 +144,7 @@ O seguinte exemplo demonstra o modelo adotado para os requisitos funcionais. O u
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Nome do Requisito Funcional</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 1</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 1</th>
 </tr>
 </thead>
 <tbody>
@@ -159,7 +159,7 @@ O seguinte exemplo demonstra o modelo adotado para os requisitos funcionais. O u
 Modelo de Especificação - Requisitos Funcionais.
 
 ## Requisitos de Software {#requisitos-de-software}
-Esta seção descreve os requisitos que definem o comportamento e as características do sistema COIN’S (Contabilidade Integrada). Os requisitos foram organizados em duas categorias: Requisitos Funcionais, que descrevem o que o sistema deve fazer, e Requisitos Não-Funcionais, que especificam restrições e qualidades esperadas. Cada requisito funcional está associado a um Épico, de forma a manter a rastreabilidade entre as funcionalidades e os objetivos do projeto.
+Esta seção descreve os requisitos que definem o comportamento e as características do sistema COIN’S (Contabilidade Integrada). Os requisitos foram organizados em duas categorias: Requisitos Funcionais, que descrevem o que o sistema deve fazer, e Requisitos Não-Funcionais, que especificam restrições e qualidades esperadas. Cada requisito funcional está associado a um Módulo, de forma a manter a rastreabilidade entre as funcionalidades e os objetivos do projeto.
 
 ### Requisitos Funcionais {#requisitos-funcionais}
 Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer para atender às necessidades dos usuários. Eles estão organizados por seções que correspondem aos principais módulos do sistema: Menu, Empresas, Plano de Contas, Livro Diário, Livro Razão, Balancete, Apuração do Resultado e Demonstração do Resultado do Exercício. Cada requisito segue o padrão definido no modelo apresentado anteriormente, contendo sua descrição, critérios de aceite e exceções associadas aos critérios especificados.
@@ -173,7 +173,7 @@ Esta subseção apresenta os requisitos relacionados à navegação do sistema. 
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Menu Principal</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 1</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 1</th>
 </tr>
 </thead>
 <tbody>
@@ -202,7 +202,7 @@ Esta subseção detalha os requisitos referentes à visualização de informaç�
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;"><a href="#exibir-empresa-estática">Exibir Empresa Estática</a></th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 2</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 2</th>
 </tr>
 </thead>
 <tbody>
@@ -224,7 +224,7 @@ Esta subseção detalha os requisitos referentes à visualização de informaç�
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;"><a href="#exibir-abas-de-funcionalidades-da-empresa">Exibir Abas de Funcionalidades da Empresa</a></th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 2</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 2</th>
 </tr>
 </thead>
 <tbody>
@@ -248,7 +248,7 @@ Esta subseção especifica os requisitos relacionados à exibição do Plano de 
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Plano de Contas Padrão</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 1</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 1</th>
 </tr>
 </thead>
 <tbody>
@@ -279,7 +279,7 @@ Esta subseção descreve as funcionalidades vinculadas ao Livro Diário, que reg
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Gerenciar Lançamento Contábil</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 2</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 2</th>
 </tr>
 </thead>
 <tbody>
@@ -313,7 +313,7 @@ Esta subseção descreve as funcionalidades vinculadas ao Livro Diário, que reg
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Listar Lançamentos Contábeis no Livro Diário</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 2</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 2</th>
 </tr>
 </thead>
 <tbody>
@@ -338,7 +338,7 @@ Esta subseção descreve as funcionalidades vinculadas ao Livro Diário, que reg
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Deletar dados da Empresa</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 2</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 2</th>
 </tr>
 </thead>
 <tbody>
@@ -364,7 +364,7 @@ Esta subseção define os requisitos referentes ao Livro Razão, responsável po
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Livro Razão</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 3</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 3</th>
 </tr>
 </thead>
 <tbody>
@@ -397,7 +397,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Aplicar Filtros do Balancete</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 4</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 4</th>
 </tr>
 </thead>
 <tbody>
@@ -421,7 +421,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Balancete de Verificação</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 4</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 4</th>
 </tr>
 </thead>
 <tbody>
@@ -445,7 +445,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Resumo do Balancete</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 4</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 4</th>
 </tr>
 </thead>
 <tbody>
@@ -472,7 +472,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Filtrar Data da Apuração</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 5</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 5</th>
 </tr>
 </thead>
 <tbody>
@@ -494,7 +494,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Resumo do Resultado</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 5</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 5</th>
 </tr>
 </thead>
 <tbody>
@@ -516,7 +516,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Contas de Resultado</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 5</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 5</th>
 </tr>
 </thead>
 <tbody>
@@ -536,7 +536,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Lançamentos de Encerramento</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 5</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 5</th>
 </tr>
 </thead>
 <tbody>
@@ -557,7 +557,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Confronto da Apuração</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 5</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 5</th>
 </tr>
 </thead>
 <tbody>
@@ -578,7 +578,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Transferência do Resultado</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 5</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 5</th>
 </tr>
 </thead>
 <tbody>
@@ -598,7 +598,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Resultado Final</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 5</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 5</th>
 </tr>
 </thead>
 <tbody>
@@ -616,7 +616,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Realizar Apuração</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 5</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 5</th>
 </tr>
 </thead>
 <tbody>
@@ -637,7 +637,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Histórico de Apurações</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 5</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 5</th>
 </tr>
 </thead>
 <tbody>
@@ -657,7 +657,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Desfazer Última Apuração</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 5</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 5</th>
 </tr>
 </thead>
 <tbody>
@@ -683,7 +683,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Filtrar Período da DRE</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 6</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -705,7 +705,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Receita Bruta</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 6</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -725,7 +725,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Deduções da Receita</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 6</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -746,7 +746,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir Receita Líquida</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 6</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -766,7 +766,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir CMV / CPV</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 6</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -786,7 +786,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir Lucro Bruto</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 6</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -806,7 +806,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Despesas Operacionais</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 6</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -826,7 +826,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Outras Receitas/Despesas Operacionais</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 6</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -848,7 +848,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir LAJIR</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 6</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -868,7 +868,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Resultado Financeiro</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 6</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -890,7 +890,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir LAIR</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 6</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -910,7 +910,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Resultado Não Operacional</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 6</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -932,7 +932,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular Resultado Antes dos Impostos</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 6</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -952,7 +952,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Impostos sobre o Lucro</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 6</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -972,7 +972,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir Lucro Líquido</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 6</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -993,7 +993,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Composição das Contas da DRE</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 6</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>

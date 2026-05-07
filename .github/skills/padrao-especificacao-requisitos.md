@@ -87,7 +87,9 @@ O projeto usa MkDocs Material com `md_in_html` habilitado, portanto **use HTML p
 #### Template HTML (padrão visual do Drive)
 
 As cores oficiais são:
-- **`#2E74B5`** — azul escuro para a linha do cabeçalho (RF-XX / Épico)
+> **⚠️ Terminologia:** use sempre **Módulo** (ex: "Módulo 2"). O termo "Épico" foi descontinuado.
+
+- **`#2E74B5`** — azul escuro para a linha do cabeçalho (RF-XX / Módulo)
 - **`#BDD7EE`** — azul claro para as linhas "Critérios de Aceite:" e "Exceções dos Critérios de Aceite:"
 
 ```html
@@ -95,7 +97,7 @@ As cores oficiais são:
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">RF-XX Nome do Requisito Funcional</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico N</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo N</th>
 </tr>
 </thead>
 <tbody>
@@ -126,7 +128,7 @@ As cores oficiais são:
 Use apenas quando não for possível usar HTML:
 
 ```
-| Nome do Requisito Funcional | Épico X |
+| Nome do Requisito Funcional | Módulo X |
 |-----|:---:|
 | [Descrição breve e objetiva do requisito] |  |
 | **Critérios de Aceite:** |  |
@@ -152,7 +154,7 @@ Use apenas quando não for possível usar HTML:
 
 ##### [Nome do Requisito Funcional]
 
-**Épico:** [Número e nome do Épico]
+**Módulo:** [Número e nome do Módulo]
 
 [Descrição do requisito]
 
@@ -178,7 +180,7 @@ critérios definidos pelo usuário.
 
 ##### Gerenciar Lançamento Contábil
 
-**Épico:** Épico 2
+**Módulo:** Módulo 2
 
 O sistema deve permitir que o usuário realize lançamentos contábeis 
 para uma empresa previamente cadastrada, informando data do lançamento, 
@@ -330,7 +332,7 @@ Antes de finalizar um requisito, verifique:
 - [ ] Sem descrição de UI/Design
 - [ ] Sem ambiguidade ou termos genéricos
 - [ ] Alinhado com o Plano de Contas e conceitos do COINS
-- [ ] Linkado ao Épico correto
+- [ ] Linkado ao Módulo correto
 
 ---
 
@@ -393,7 +395,7 @@ Antes de finalizar um requisito, verifique:
 
 - [Fundamento da Estrutura dos Requisitos](src-link)
 - [Glossário de Termos COINS](src-link)
-- Épicos do Sistema (seção 4 da ERS)
+- Módulos do Sistema (seção 4 da ERS)
 - Plano de Contas Padrão (documento oficial)
 
 ---
@@ -437,7 +439,7 @@ O `{#anchor}` é o ID que o MkDocs usa para o link. Use o mesmo anchor que está
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Gerenciar Lançamento Contábil</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Épico 2</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 2</th>
 </tr>
 </thead>
 ...
