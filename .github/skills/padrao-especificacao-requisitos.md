@@ -282,6 +282,32 @@ O sistema deve permitir que o usuário preencha um formulário com os campos:
 - Descrição de como a UI será "exposto" ou "apresentado"
 - Termos visuais (seção, tabela, campo visível, destacado)
 - Fluxo narrativo (use pontos diretos)
+- **Texto literal de mensagens de erro ou sucesso** — apenas indicar que o sistema deve exibir uma mensagem
+- **Detalhes de implementação técnica** (camadas de arquitetura, processamento em memória, "camada de serviço/UI")
+
+**EXEMPLO CORRETO (mensagem):**
+```
+■ Caso não haja contas com saldo no grupo, o sistema deve exibir mensagem informando a ausência de valores
+■ O sistema deve exibir mensagem de confirmação após o sucesso da operação
+```
+
+**EXEMPLO ERRADO (mensagem):**
+```
+■ Caso não haja contas com saldo, exibir: "Não há valores a serem apurados em [nome do grupo]."
+■ O sistema deve exibir mensagem de confirmação após sucesso: "Apuração realizada com sucesso."
+```
+
+**EXEMPLO CORRETO (detalhe técnico):**
+```
+■ O sistema deve permitir que o usuário confira os lançamentos antes de confirmá-los
+```
+
+**EXEMPLO ERRADO (detalhe técnico):**
+```
+■ Os lançamentos devem ser processados apenas em memória (camada de serviço/UI) para fins de conferência
+```
+
+> **Nota:** Especificar que o sistema carrega dados **automaticamente, sem necessidade de ação do usuário**, é válido e deve ser mantido. O que se evita é descrever *como* isso ocorre internamente (ex: "via cache", "em memória").
 
 **EXEMPLO CORRETO:**
 ```
@@ -319,6 +345,8 @@ Antes de finalizar um requisito, verifique:
 - [ ] Define **limites numéricos** se aplicável (mínimo/máximo, quantidade de registros)
 - [ ] Inclui **regras de validação** e **comportamentos esperados**
 - [ ] Referencia outros requisitos quando há dependência (ex: `[RF-02]`)
+- [ ] **Não especifica o texto literal de mensagens** — apenas indica que o sistema deve exibir uma mensagem (de erro, aviso ou confirmação)
+- [ ] **Não menciona detalhes de implementação técnica** (processamento em memória, camadas de arquitetura, etc.)
 
 ### Exceções
 - [ ] Cada exceção começa com **`EX- N.`** (espaço entre `EX-` e o número) — nunca omitir ao copiar do Drive
