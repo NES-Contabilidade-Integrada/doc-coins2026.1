@@ -316,3 +316,12 @@ Ação:
 - não permitir desfazer fora de ordem  
 
 ---
+
+## 23. Restrição de edição e exclusão de lançamentos apurados
+
+Um lançamento **não pode ser editado nem excluído** se qualquer uma de suas contas de resultado já tiver sido vinculada a uma apuração realizada.
+
+- A restrição aplica-se individualmente a cada lançamento, com base no vínculo com a apuração
+- Após desfazer a apuração, o vínculo é removido e os lançamentos voltam a ser editáveis e excluíveis normalmente
+
+---

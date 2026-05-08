@@ -302,6 +302,8 @@ Esta subseção descreve as funcionalidades vinculadas ao Livro Diário, que reg
 <tr><td colspan="2"><strong>EX- 7.</strong> [CA-7] Caso o usuário informe uma conta inexistente ou sintética, o sistema deve bloquear o lançamento e exibir mensagem de erro.</td></tr>
 <tr><td colspan="2"><strong>EX- 9.</strong> [CA-9] Caso o valor informado seja inferior ao mínimo permitido ou superior ao máximo aceito, o sistema deve lançar uma mensagem de exceção.</td></tr>
 <tr><td colspan="2"><strong>EX- 10.</strong> [CA-10] Caso o histórico (descrição) ultrapasse o número máximo de caracteres permitido, o sistema deve lançar uma mensagem de exceção.</td></tr>
+<tr><td colspan="2"><strong>EX- 11.</strong> [CA-11] Não é permitido editar um lançamento que contenha contas de resultado vinculadas a uma apuração já realizada. O sistema deve bloquear a operação e exibir mensagem informando que a edição requer desfazer a apuração correspondente.</td></tr>
+<tr><td colspan="2"><strong>EX- 12.</strong> [CA-12] Não é permitido excluir um lançamento que contenha contas de resultado vinculadas a uma apuração já realizada. O sistema deve bloquear a operação e exibir mensagem informando que a exclusão requer desfazer a apuração correspondente.</td></tr>
 <tr><td colspan="2"><strong>EX- 14.</strong> [CA-14] Caso a soma total de crédito e débito não sejam iguais, o lançamento contábil deve ser bloqueado e uma mensagem de erro deve ser exibida.</td></tr>
 </tbody>
 </table>
@@ -668,6 +670,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <tr><td colspan="2"><strong>CA-1.</strong> A funcionalidade "Desfazer" deve estar disponível unicamente na apuração <strong>mais recente</strong> do histórico.</td></tr>
 <tr><td colspan="2"><strong>CA-2.</strong> Ao selecionar "Desfazer": solicitar confirmação ao usuário antes de prosseguir; remover o vínculo dos lançamentos à apuração; restaurar os saldos originais das contas; remover o registro do histórico; exibir mensagem de sucesso ao usuário.</td></tr>
 <tr><td colspan="2"><strong>CA-3.</strong> <strong>Restrição:</strong> não é permitido desfazer apurações fora de ordem (ex.: desfazer apuração antiga deixando a recente intacta).</td></tr>
+<tr><td colspan="2"><strong>CA-4.</strong> Após desfazer a apuração, os lançamentos que estavam vinculados a ela voltam a ser editáveis e excluíveis normalmente.</td></tr>
 <tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
 <tr><td colspan="2"></td></tr>
 </tbody>
