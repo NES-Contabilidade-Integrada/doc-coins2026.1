@@ -215,13 +215,65 @@ Indicador:
 
 ## 18. Transferência do resultado
 
-### Lucro
+### Lucro (sem compensação)
 - Débito → Apuração  
 - Crédito → Lucros Acumulados  
 
-### Prejuízo
+### Prejuízo (sem compensação)
 - Crédito → Apuração  
 - Débito → Prejuízos Acumulados  
+
+---
+
+## 18.1 Resultado Nulo
+
+Se o resultado do período for **R$ 0,00**:
+
+- classificar como **Resultado Nulo**
+- **não gerar** nenhum lançamento de destinação (nem para Lucros nem para Prejuízos Acumulados)
+- registrar no histórico com tipo **Resultado Nulo** e sem conta destino
+
+---
+
+## 18.2 Compensação automática antes da destinação
+
+A compensação ocorre **no momento de efetivar a apuração**, antes de enviar o resultado para a conta de destino.  
+O resultado do período exibido na tela e registrado no histórico **não é alterado** — reflete sempre o valor calculado do período.
+
+### Se o resultado do período for **Lucro**:
+
+1. Verificar se existe saldo na conta **Prejuízos Acumulados**
+2. Se existir:
+   - Utilizar o lucro para abater o saldo de prejuízos acumulados
+   - Se **lucro > saldo de Prejuízos Acumulados**:
+     - Zerar a conta de Prejuízos Acumulados
+     - Enviar o saldo restante (lucro − prejuízo acumulado) para **Lucros Acumulados**
+   - Se **lucro ≤ saldo de Prejuízos Acumulados**:
+     - Apenas reduzir o saldo de Prejuízos Acumulados pelo valor do lucro
+     - Não gerar lançamento para Lucros Acumulados
+3. Se não existir saldo em Prejuízos Acumulados:
+   - Enviar o lucro integralmente para **Lucros Acumulados** (regra padrão da seção 18)
+
+### Se o resultado do período for **Prejuízo**:
+
+1. Verificar se existe saldo na conta **Lucros Acumulados**
+2. Se existir:
+   - Utilizar o prejuízo para abater o saldo de lucros acumulados
+   - Se **prejuízo > saldo de Lucros Acumulados**:
+     - Zerar a conta de Lucros Acumulados
+     - Enviar o saldo restante (prejuízo − lucro acumulado) para **Prejuízos Acumulados**
+   - Se **prejuízo ≤ saldo de Lucros Acumulados**:
+     - Apenas reduzir o saldo de Lucros Acumulados pelo valor do prejuízo
+     - Não gerar lançamento para Prejuízos Acumulados
+3. Se não existir saldo em Lucros Acumulados:
+   - Enviar o prejuízo integralmente para **Prejuízos Acumulados** (regra padrão da seção 18)
+
+### Exemplo
+
+| Apuração | Resultado do Período | Compensação aplicada | Lançamentos efetivados |
+|----------|---------------------|---------------------|------------------------|
+| 1ª | R$ 1.000 Prejuízo | Nenhuma (Lucros Acumulados = 0) | Débito R$ 1.000 → Prejuízos Acumulados |
+| 2ª | R$ 5.000 Lucro | Abate R$ 1.000 de Prejuízos Acumulados | Crédito R$ 1.000 → zera Prejuízos Acumulados; Crédito R$ 4.000 → Lucros Acumulados |
 
 ---
 

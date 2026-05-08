@@ -480,7 +480,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <tr><td colspan="2"><strong>CA-1.</strong> O sistema deve disponibilizar um campo obrigatório para inserção da <strong>Data da Apuração</strong>.</td></tr>
 <tr><td colspan="2"><strong>CA-2.</strong> Ao abrir a tela, a data deve ser preenchida com o <strong>último dia do ano atual</strong> no formato <code>DD/MM/YYYY</code>.</td></tr>
 <tr><td colspan="2"><strong>CA-3.</strong> A apuração deve considerar todos os lançamentos com data <strong>≤ Data da Apuração</strong> que <strong>ainda não tenham sido apurados anteriormente</strong>.</td></tr>
-<tr><td colspan="2"><strong>CA-4.</strong> Caso não existam lançamentos elegíveis, o sistema deve exibir a mensagem informativa <strong>"Não há valores a serem apurados."</strong> e não permitir realizar a apuração.</td></tr>
+<tr><td colspan="2"><strong>CA-4.</strong> Caso não existam lançamentos elegíveis, o sistema deve exibir mensagem informativa e não permitir realizar a apuração.</td></tr>
 <tr><td colspan="2"><strong>CA-5.</strong> Se um lançamento for criado com data anterior à última apuração, ele <strong>DEVE entrar na próxima apuração</strong> desde que ainda não tenha sido apurado.</td></tr>
 <tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
 <tr><td colspan="2"></td></tr>
@@ -523,7 +523,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
 <tr><td colspan="2"><strong>CA-1.</strong> O sistema deve listar todas as contas analíticas com <strong>saldo ≠ 0</strong> pertencentes aos grupos: <strong>CONTAS DE RESULTADO − RECEITAS</strong> e <strong>CONTAS DE RESULTADO − CUSTOS E DESPESAS</strong>.</td></tr>
 <tr><td colspan="2"><strong>CA-2.</strong> A tabela de exibição deve conter as colunas: <strong>Código</strong>, <strong>Descrição da Conta</strong>, <strong>Tipo</strong>, <strong>Saldo Atual</strong> (formatado em R$) e <strong>D/C</strong>.</td></tr>
-<tr><td colspan="2"><strong>CA-3.</strong> Se não houver contas com saldo em algum grupo, exibir a mensagem: <strong>"Não há valores a serem apurados em [nome do grupo]."</strong></td></tr>
+<tr><td colspan="2"><strong>CA-3.</strong> Se não houver contas com saldo em algum grupo, o sistema deve exibir mensagem informando a ausência de valores a apurar naquele grupo.</td></tr>
 <tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
 <tr><td colspan="2"></td></tr>
 </tbody>
@@ -541,10 +541,10 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <tbody>
 <tr><td colspan="2">O sistema deve calcular e apresentar, <strong>exclusivamente em caráter de prévia</strong>, os lançamentos contábeis necessários para zerar os saldos das contas de resultado transferindo-os para a conta transitória <strong>Apuração do Resultado do Exercício (ARE)</strong>. Nesta etapa, o sistema <strong>não deve realizar nenhum lançamento real</strong> nem qualquer alteração nas tabelas do banco de dados.</td></tr>
 <tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
-<tr><td colspan="2"><strong>CA-1.</strong> <strong>Encerramento das Receitas:</strong> se saldo credor (natureza normal): simular <strong>Débito → Receita</strong> e <strong>Crédito → ARE</strong>; se saldo devedor (natureza invertida): simular <strong>Crédito → Receita</strong> e <strong>Débito → ARE</strong>; se não houver receitas: exibir <strong>"Não há valores a serem apurados nas contas de Receita"</strong>.</td></tr>
-<tr><td colspan="2"><strong>CA-2.</strong> <strong>Encerramento de Custos e Despesas:</strong> se saldo devedor (natureza normal): simular <strong>Crédito → Custos/Despesas</strong> e <strong>Débito → ARE</strong>; se saldo credor (natureza invertida): simular <strong>Débito → Custos/Despesas</strong> e <strong>Crédito → ARE</strong>; se não houver custos/despesas: exibir <strong>"Não há valores a serem apurados nas contas de Custos e Despesas"</strong>.</td></tr>
+<tr><td colspan="2"><strong>CA-1.</strong> <strong>Encerramento das Receitas:</strong> se saldo credor (natureza normal): simular <strong>Débito → Receita</strong> e <strong>Crédito → ARE</strong>; se saldo devedor (natureza invertida): simular <strong>Crédito → Receita</strong> e <strong>Débito → ARE</strong>; se não houver receitas: exibir mensagem informando a ausência de valores a apurar nas contas de Receita.</td></tr>
+<tr><td colspan="2"><strong>CA-2.</strong> <strong>Encerramento de Custos e Despesas:</strong> se saldo devedor (natureza normal): simular <strong>Crédito → Custos/Despesas</strong> e <strong>Débito → ARE</strong>; se saldo credor (natureza invertida): simular <strong>Débito → Custos/Despesas</strong> e <strong>Crédito → ARE</strong>; se não houver custos/despesas: exibir mensagem informando a ausência de valores a apurar nas contas de Custos e Despesas.</td></tr>
 <tr><td colspan="2"><strong>CA-3.</strong> A prévia deve listar as linhas de conta com códigos e respectivos valores de débito e crédito simulados para cada grupo.</td></tr>
-<tr><td colspan="2"><strong>CA-4.</strong> Os lançamentos devem ser processados apenas <strong>em memória</strong> (camada de serviço/UI) para fins de conferência.</td></tr>
+<tr><td colspan="2"><strong>CA-4.</strong> Nenhum dado deve ser persistido durante esta etapa; os lançamentos calculados são exibidos exclusivamente para conferência do usuário antes da confirmação.</td></tr>
 <tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
 <tr><td colspan="2"></td></tr>
 </tbody>
@@ -603,7 +603,8 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <tbody>
 <tr><td colspan="2">O sistema deve exibir uma seção de <strong>Resultado Final</strong>, consolidando as informações conclusivas da apuração para que o usuário identifique rapidamente o desfecho do exercício contábil.</td></tr>
 <tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
-<tr><td colspan="2"><strong>CA-1.</strong> A seção deve exibir os campos: <strong>Tipo de Resultado</strong> (Lucro ou Prejuízo do Período), <strong>Valor</strong> (formatado em R$ com duas casas decimais) e <strong>Conta Destino</strong> (Lucros Acumulados ou Prejuízos Acumulados).</td></tr>
+<tr><td colspan="2"><strong>CA-1.</strong> A seção deve exibir os campos: <strong>Tipo de Resultado</strong> (Lucro, Prejuízo ou Resultado Nulo), <strong>Valor</strong> (formatado em R$ com duas casas decimais) e <strong>Conta Destino</strong> (Lucros Acumulados, Prejuízos Acumulados ou nenhuma, conforme o tipo de resultado).</td></tr>
+<tr><td colspan="2"><strong>CA-2.</strong> Se o resultado do período for R$ 0,00, o Tipo de Resultado deve ser exibido como <strong>Resultado Nulo</strong> e o campo Conta Destino não deve indicar nenhuma conta.</td></tr>
 <tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
 <tr><td colspan="2"></td></tr>
 </tbody>
@@ -623,8 +624,10 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
 <tr><td colspan="2"><strong>CA-1.</strong> O sistema deve disponibilizar o botão <strong>"Realizar Apuração"</strong>.</td></tr>
 <tr><td colspan="2"><strong>CA-2.</strong> A operação só deve ocorrer após confirmação explícita do usuário.</td></tr>
-<tr><td colspan="2"><strong>CA-3.</strong> Ao executar: vincular todos os lançamentos à apuração; zerar os saldos das contas de receita, custos e despesas; transferir resultado para Lucros/Prejuízos Acumulados; registrar a data e tipo na tabela de histórico.</td></tr>
-<tr><td colspan="2"><strong>CA-4.</strong> O sistema deve exibir mensagem de confirmação após sucesso: <strong>"Apuração realizada com sucesso."</strong></td></tr>
+<tr><td colspan="2"><strong>CA-3.</strong> Ao executar: vincular todos os lançamentos à apuração; zerar os saldos das contas de receita, custos e despesas; aplicar compensação automática e realizar a destinação final conforme CA-5 e CA-6; registrar a data, tipo de resultado e valor do período na tabela de histórico.</td></tr>
+<tr><td colspan="2"><strong>CA-4.</strong> O sistema deve exibir mensagem de confirmação ao usuário após a realização da apuração com sucesso.</td></tr>
+<tr><td colspan="2"><strong>CA-5.</strong> Se o resultado do período for R$ 0,00 (Resultado Nulo), nenhum lançamento de destinação deve ser gerado para Lucros ou Prejuízos Acumulados; o registro no histórico deve indicar Resultado Nulo.</td></tr>
+<tr><td colspan="2"><strong>CA-6.</strong> Antes de enviar o resultado à conta de destino, o sistema deve aplicar compensação automática: se o resultado for lucro e houver saldo em Prejuízos Acumulados, utilizar o lucro para abater esse saldo; se o lucro for maior, zerar Prejuízos Acumulados e enviar o restante para Lucros Acumulados; se o lucro for menor ou igual, apenas reduzir Prejuízos Acumulados sem gerar lançamento para Lucros Acumulados. A lógica inversa se aplica quando o resultado for prejuízo em relação a Lucros Acumulados. O resultado exibido na tela e registrado no histórico reflete sempre o valor calculado do período, sem alteração pela compensação.</td></tr>
 <tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
 <tr><td colspan="2"></td></tr>
 </tbody>
@@ -642,7 +645,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <tbody>
 <tr><td colspan="2">O sistema deve manter um <strong>histórico completo</strong> de todas as apurações realizadas, permitindo ao usuário consultar informações sobre operações anteriores.</td></tr>
 <tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
-<tr><td colspan="2"><strong>CA-1.</strong> A seção de histórico deve exibir as colunas: <strong>Data da Apuração</strong>, <strong>Tipo de Resultado</strong> (Lucro/Prejuízo), <strong>Valor</strong> (formatado em R$) e <strong>Conta Destino</strong> (Lucros/Prejuízos Acumulados).</td></tr>
+<tr><td colspan="2"><strong>CA-1.</strong> A seção de histórico deve exibir as colunas: <strong>Data da Apuração</strong>, <strong>Tipo de Resultado</strong> (Lucro, Prejuízo ou Resultado Nulo), <strong>Valor</strong> (formatado em R$) e <strong>Conta Destino</strong> (Lucros Acumulados, Prejuízos Acumulados ou nenhuma quando Resultado Nulo). O valor e o tipo registrados refletem o resultado do período calculado, independentemente da compensação aplicada na destinação.</td></tr>
 <tr><td colspan="2"><strong>CA-2.</strong> Cada registro deve ter associada uma ação <strong>"Desfazer"</strong> para reversão (ver RF-021).</td></tr>
 <tr><td colspan="2"><strong>CA-3.</strong> Os registros devem ser ordenados por data (mais recente primeiro).</td></tr>
 <tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
@@ -663,7 +666,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 <tr><td colspan="2">O sistema deve permitir que o usuário <strong>reverta apenas a apuração mais recente</strong>, restaurando o estado anterior das contas e removendo todos os registros de encerramento gerados.</td></tr>
 <tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
 <tr><td colspan="2"><strong>CA-1.</strong> A funcionalidade "Desfazer" deve estar disponível unicamente na apuração <strong>mais recente</strong> do histórico.</td></tr>
-<tr><td colspan="2"><strong>CA-2.</strong> Ao selecionar "Desfazer": exibir mensagem de confirmação <strong>"Tem certeza que deseja desfazer a apuração de [DATA]?"</strong>; remover o vínculo dos lançamentos à apuração; restaurar os saldos originais das contas; remover o registro do histórico; exibir mensagem de sucesso <strong>"Apuração desfeita com sucesso."</strong></td></tr>
+<tr><td colspan="2"><strong>CA-2.</strong> Ao selecionar "Desfazer": solicitar confirmação ao usuário antes de prosseguir; remover o vínculo dos lançamentos à apuração; restaurar os saldos originais das contas; remover o registro do histórico; exibir mensagem de sucesso ao usuário.</td></tr>
 <tr><td colspan="2"><strong>CA-3.</strong> <strong>Restrição:</strong> não é permitido desfazer apurações fora de ordem (ex.: desfazer apuração antiga deixando a recente intacta).</td></tr>
 <tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
 <tr><td colspan="2"></td></tr>
