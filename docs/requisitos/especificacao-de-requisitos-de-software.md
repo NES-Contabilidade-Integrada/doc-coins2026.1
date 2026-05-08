@@ -139,7 +139,7 @@ A seção de Módulos apresenta uma visão macro das grandes funcionalidades do 
 ## Modelo dos Requisitos Funcionais {#modelo-dos-requisitos-funcionais}
 O seguinte exemplo demonstra o modelo adotado para os requisitos funcionais. O uso foi especificado no documento [Fundamento da Estrutura dos Requisitos](https://docs.google.com/document/u/0/d/1eAsVxnGFQnY8Fp2fKZukeNej2aNxZxu0_dLkIjcqvxE/edit).
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Nome do Requisito Funcional</th>
@@ -168,7 +168,7 @@ Esta subseção apresenta os requisitos relacionados à navegação do sistema. 
 
 ##### RF-01 Exibir Menu Principal {#exibir-menu-principal}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Menu Principal</th>
@@ -197,10 +197,10 @@ Esta subseção detalha os requisitos referentes à visualização de informaç�
 
 ##### RF-02 Exibir Empresa Estática {#exibir-empresa-estática}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
-  <th style="background-color:#2E74B5; color:white;"><a href="#exibir-empresa-estática">Exibir Empresa Estática</a></th>
+  <th style="background-color:#2E74B5; color:white;">Exibir Empresa Estática</th>
   <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 2</th>
 </tr>
 </thead>
@@ -219,10 +219,10 @@ Esta subseção detalha os requisitos referentes à visualização de informaç�
 
 ##### RF-03 Exibir Abas de Funcionalidades da Empresa {#exibir-abas-de-funcionalidades-da-empresa}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
-  <th style="background-color:#2E74B5; color:white;"><a href="#exibir-abas-de-funcionalidades-da-empresa">Exibir Abas de Funcionalidades da Empresa</a></th>
+  <th style="background-color:#2E74B5; color:white;">Exibir Abas de Funcionalidades da Empresa</th>
   <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 2</th>
 </tr>
 </thead>
@@ -243,7 +243,7 @@ Esta subseção especifica os requisitos relacionados à exibição do Plano de 
 
 ##### RF-04 Exibir Plano de Contas Padrão {#exibir-plano-de-contas-padrão}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Plano de Contas Padrão</th>
@@ -274,7 +274,7 @@ Esta subseção descreve as funcionalidades vinculadas ao Livro Diário, que reg
 
 ##### RF-05 Gerenciar Lançamento Contábil {#gerenciar-lançamento-contábil}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Gerenciar Lançamento Contábil</th>
@@ -310,7 +310,7 @@ Esta subseção descreve as funcionalidades vinculadas ao Livro Diário, que reg
 
 ##### RF-06 Listar Lançamentos Contábeis no Livro Diário {#listar-lançamentos-contábeis-no-livro-diário}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Listar Lançamentos Contábeis no Livro Diário</th>
@@ -335,7 +335,7 @@ Esta subseção descreve as funcionalidades vinculadas ao Livro Diário, que reg
 
 ##### RF-07 Deletar dados da Empresa {#deletar-dados-da-empresa}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Deletar dados da Empresa</th>
@@ -361,7 +361,7 @@ Esta subseção define os requisitos referentes ao Livro Razão, responsável po
 
 ##### RF-08 Exibir Livro Razão {#exibir-livro-razão}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Livro Razão</th>
@@ -394,7 +394,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 
 ##### RF-09 Aplicar Filtros do Balancete {#aplicar-filtros-do-balancete}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Aplicar Filtros do Balancete</th>
@@ -418,7 +418,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 
 ##### RF-010 Exibir Balancete de Verificação {#exibir-balancete-de-verificação}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Balancete de Verificação</th>
@@ -442,7 +442,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 
 ##### RF-011 Exibir Resumo do Balancete {#exibir-resumo-do-balancete}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Resumo do Balancete</th>
@@ -469,7 +469,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 
 ##### RF-012 Filtrar Data da Apuração {#filtrar-data-da-apuração}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Filtrar Data da Apuração</th>
@@ -491,7 +491,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 
 ##### RF-013 Exibir Resumo do Resultado {#exibir-resumo-do-resultado}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Resumo do Resultado</th>
@@ -513,7 +513,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 
 ##### RF-014 Exibir Contas de Resultado {#exibir-contas-de-resultado}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Contas de Resultado</th>
@@ -533,7 +533,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 
 ##### RF-015 Exibir Lançamentos de Encerramento {#exibir-lançamentos-de-encerramento}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Lançamentos de Encerramento</th>
@@ -554,7 +554,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 
 ##### RF-016 Exibir Confronto da Apuração {#exibir-confronto-da-apuração}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Confronto da Apuração</th>
@@ -575,7 +575,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 
 ##### RF-017 Exibir Transferência do Resultado {#exibir-transferência-do-resultado}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Transferência do Resultado</th>
@@ -595,7 +595,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 
 ##### RF-018 Exibir Resultado Final {#exibir-resultado-final}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Resultado Final</th>
@@ -614,7 +614,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 
 ##### RF-019 Realizar Apuração {#realizar-apuração}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Realizar Apuração</th>
@@ -637,7 +637,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 
 ##### RF-020 Exibir Histórico de Apurações {#exibir-histórico-de-apurações}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Histórico de Apurações</th>
@@ -657,7 +657,7 @@ O sistema deve permitir a definição da data de apuração, a visualização do
 
 ##### RF-021 Desfazer Última Apuração {#desfazer-última-apuração}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Desfazer Última Apuração</th>
@@ -684,7 +684,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 
 ##### RF-022 Filtrar Período da DRE {#filtrar-período-da-dre}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Filtrar Período da DRE</th>
@@ -706,7 +706,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 
 ##### RF-023 Exibir Receita Bruta {#exibir-receita-bruta}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Receita Bruta</th>
@@ -726,7 +726,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 
 ##### RF-024 Exibir Deduções da Receita {#exibir-deduções-da-receita}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Deduções da Receita</th>
@@ -747,7 +747,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 
 ##### RF-025 Calcular e Exibir Receita Líquida {#calcular-e-exibir-receita-líquida}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir Receita Líquida</th>
@@ -767,7 +767,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 
 ##### RF-026 Exibir CMV / CPV {#exibir-cmv--cpv}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir CMV / CPV</th>
@@ -787,7 +787,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 
 ##### RF-027 Calcular e Exibir Lucro Bruto {#calcular-e-exibir-lucro-bruto}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir Lucro Bruto</th>
@@ -807,7 +807,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 
 ##### RF-028 Exibir Despesas Operacionais {#exibir-despesas-operacionais}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Despesas Operacionais</th>
@@ -827,7 +827,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 
 ##### RF-029 Exibir Outras Receitas/Despesas Operacionais {#exibir-outras-receitas-despesas-operacionais}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Outras Receitas/Despesas Operacionais</th>
@@ -849,7 +849,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 
 ##### RF-030 Calcular e Exibir LAJIR {#calcular-e-exibir-lajir}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir LAJIR</th>
@@ -869,7 +869,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 
 ##### RF-031 Exibir Resultado Financeiro {#exibir-resultado-financeiro}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Resultado Financeiro</th>
@@ -891,7 +891,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 
 ##### RF-032 Calcular e Exibir LAIR {#calcular-e-exibir-lair}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir LAIR</th>
@@ -911,7 +911,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 
 ##### RF-033 Exibir Resultado Não Operacional {#exibir-resultado-não-operacional}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Resultado Não Operacional</th>
@@ -933,7 +933,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 
 ##### RF-034 Calcular Resultado Antes dos Impostos {#calcular-resultado-antes-dos-impostos}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular Resultado Antes dos Impostos</th>
@@ -953,7 +953,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 
 ##### RF-035 Exibir Impostos sobre o Lucro {#exibir-impostos-sobre-o-lucro}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Impostos sobre o Lucro</th>
@@ -973,7 +973,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 
 ##### RF-036 Calcular e Exibir Lucro Líquido {#calcular-e-exibir-lucro-líquido}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir Lucro Líquido</th>
@@ -994,7 +994,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 
 ##### RF-037 Exibir Composição das Contas da DRE {#exibir-composição-das-contas-da-dre}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Composição das Contas da DRE</th>

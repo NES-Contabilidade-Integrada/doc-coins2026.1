@@ -93,7 +93,7 @@ As cores oficiais são:
 - **`#BDD7EE`** — azul claro para as linhas "Critérios de Aceite:" e "Exceções dos Critérios de Aceite:"
 
 ```html
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">RF-XX Nome do Requisito Funcional</th>
@@ -453,7 +453,7 @@ Antes de toda tabela de requisito funcional, adicione:
 ```markdown
 #### RF-XX Nome do Requisito Funcional {#anchor-do-sumario}
 
-<table>
+<table style="width:100%">
 ...
 ```
 
@@ -463,7 +463,7 @@ O `{#anchor}` é o ID que o MkDocs usa para o link. Use o mesmo anchor que está
 ```markdown
 #### RF-05 Gerenciar Lançamento Contábil {#gerenciar-lancamento-contabil}
 
-<table>
+<table style="width:100%">
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Gerenciar Lançamento Contábil</th>
