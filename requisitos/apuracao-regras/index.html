@@ -942,10 +942,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lucro" class="md-nav__link">
+  <a href="#lucro-sem-compensacao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lucro
+        Lucro (sem compensação)
       
     </span>
   </a>
@@ -953,10 +953,71 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#prejuizo" class="md-nav__link">
+  <a href="#prejuizo-sem-compensacao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prejuízo
+        Prejuízo (sem compensação)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#181-resultado-nulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.1 Resultado Nulo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#182-compensacao-automatica-antes-da-destinacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.2 Compensação automática antes da destinação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18.2 Compensação automática antes da destinação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#se-o-resultado-do-periodo-for-lucro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Se o resultado do período for Lucro:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#se-o-resultado-do-periodo-for-prejuizo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Se o resultado do período for Prejuízo:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo
       
     </span>
   </a>
@@ -2311,10 +2372,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lucro" class="md-nav__link">
+  <a href="#lucro-sem-compensacao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lucro
+        Lucro (sem compensação)
       
     </span>
   </a>
@@ -2322,10 +2383,71 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#prejuizo" class="md-nav__link">
+  <a href="#prejuizo-sem-compensacao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prejuízo
+        Prejuízo (sem compensação)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#181-resultado-nulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.1 Resultado Nulo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#182-compensacao-automatica-antes-da-destinacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18.2 Compensação automática antes da destinação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18.2 Compensação automática antes da destinação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#se-o-resultado-do-periodo-for-lucro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Se o resultado do período for Lucro:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#se-o-resultado-do-periodo-for-prejuizo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Se o resultado do período for Prejuízo:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo
       
     </span>
   </a>
@@ -2551,16 +2673,89 @@ e sim em <strong>quais lançamentos ainda não foram apurados</strong></p>
 - D → Prejuízo  </p>
 <hr />
 <h2 id="18-transferencia-do-resultado">18. Transferência do resultado</h2>
-<h3 id="lucro">Lucro</h3>
+<h3 id="lucro-sem-compensacao">Lucro (sem compensação)</h3>
 <ul>
 <li>Débito → Apuração  </li>
 <li>Crédito → Lucros Acumulados  </li>
 </ul>
-<h3 id="prejuizo">Prejuízo</h3>
+<h3 id="prejuizo-sem-compensacao">Prejuízo (sem compensação)</h3>
 <ul>
 <li>Crédito → Apuração  </li>
 <li>Débito → Prejuízos Acumulados  </li>
 </ul>
+<hr />
+<h2 id="181-resultado-nulo">18.1 Resultado Nulo</h2>
+<p>Se o resultado do período for <strong>R$ 0,00</strong>:</p>
+<ul>
+<li>classificar como <strong>Resultado Nulo</strong></li>
+<li><strong>não gerar</strong> nenhum lançamento de destinação (nem para Lucros nem para Prejuízos Acumulados)</li>
+<li>registrar no histórico com tipo <strong>Resultado Nulo</strong> e sem conta destino</li>
+</ul>
+<hr />
+<h2 id="182-compensacao-automatica-antes-da-destinacao">18.2 Compensação automática antes da destinação</h2>
+<p>A compensação ocorre <strong>no momento de efetivar a apuração</strong>, antes de enviar o resultado para a conta de destino.<br />
+O resultado do período exibido na tela e registrado no histórico <strong>não é alterado</strong> — reflete sempre o valor calculado do período.</p>
+<h3 id="se-o-resultado-do-periodo-for-lucro">Se o resultado do período for <strong>Lucro</strong>:</h3>
+<ol>
+<li>Verificar se existe saldo na conta <strong>Prejuízos Acumulados</strong></li>
+<li>Se existir:</li>
+<li>Utilizar o lucro para abater o saldo de prejuízos acumulados</li>
+<li>Se <strong>lucro &gt; saldo de Prejuízos Acumulados</strong>:<ul>
+<li>Zerar a conta de Prejuízos Acumulados</li>
+<li>Enviar o saldo restante (lucro − prejuízo acumulado) para <strong>Lucros Acumulados</strong></li>
+</ul>
+</li>
+<li>Se <strong>lucro ≤ saldo de Prejuízos Acumulados</strong>:<ul>
+<li>Apenas reduzir o saldo de Prejuízos Acumulados pelo valor do lucro</li>
+<li>Não gerar lançamento para Lucros Acumulados</li>
+</ul>
+</li>
+<li>Se não existir saldo em Prejuízos Acumulados:</li>
+<li>Enviar o lucro integralmente para <strong>Lucros Acumulados</strong> (regra padrão da seção 18)</li>
+</ol>
+<h3 id="se-o-resultado-do-periodo-for-prejuizo">Se o resultado do período for <strong>Prejuízo</strong>:</h3>
+<ol>
+<li>Verificar se existe saldo na conta <strong>Lucros Acumulados</strong></li>
+<li>Se existir:</li>
+<li>Utilizar o prejuízo para abater o saldo de lucros acumulados</li>
+<li>Se <strong>prejuízo &gt; saldo de Lucros Acumulados</strong>:<ul>
+<li>Zerar a conta de Lucros Acumulados</li>
+<li>Enviar o saldo restante (prejuízo − lucro acumulado) para <strong>Prejuízos Acumulados</strong></li>
+</ul>
+</li>
+<li>Se <strong>prejuízo ≤ saldo de Lucros Acumulados</strong>:<ul>
+<li>Apenas reduzir o saldo de Lucros Acumulados pelo valor do prejuízo</li>
+<li>Não gerar lançamento para Prejuízos Acumulados</li>
+</ul>
+</li>
+<li>Se não existir saldo em Lucros Acumulados:</li>
+<li>Enviar o prejuízo integralmente para <strong>Prejuízos Acumulados</strong> (regra padrão da seção 18)</li>
+</ol>
+<h3 id="exemplo">Exemplo</h3>
+<table>
+<thead>
+<tr>
+<th>Apuração</th>
+<th>Resultado do Período</th>
+<th>Compensação aplicada</th>
+<th>Lançamentos efetivados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1ª</td>
+<td>R$ 1.000 Prejuízo</td>
+<td>Nenhuma (Lucros Acumulados = 0)</td>
+<td>Débito R$ 1.000 → Prejuízos Acumulados</td>
+</tr>
+<tr>
+<td>2ª</td>
+<td>R$ 5.000 Lucro</td>
+<td>Abate R$ 1.000 de Prejuízos Acumulados</td>
+<td>Crédito R$ 1.000 → zera Prejuízos Acumulados; Crédito R$ 4.000 → Lucros Acumulados</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="19-resultado-final">19. Resultado final</h2>
 <p>Exibir:
@@ -2612,7 +2807,7 @@ e sim em <strong>quais lançamentos ainda não foram apurados</strong></p>
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="7 de abril de 2026 01:09:36 UTC">7 de abril de 2026 01:09:36</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="8 de maio de 2026 00:35:47 UTC">8 de maio de 2026 00:35:47</span>
   </span>
 
     
