@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../fundamento-estrutura-requisitos/">
+        <link rel="prev" href="../DRE-regras/">
       
       
-        <link rel="next" href="../../banco-de-dados/documentacao-modelo-dados/">
+        <link rel="next" href="../especificacao-de-requisitos-de-software/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Glossário de Termos - DOCS COINS 2026.1</title>
+        <title>Balanço Patrimonial - DOCS COINS 2026.1</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#glossario-de-termos" class="md-skip">
+        <a href="#regra-da-funcionalidade-balanco-patrimonial" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Glossário de Termos
+              Balanço Patrimonial
             
           </span>
         </div>
@@ -618,10 +618,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../balanco-patrimonial-regras/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balanço Patrimonial
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -637,6 +664,252 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivo-da-funcionalidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivo da funcionalidade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-filtros-da-tela" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Filtros da tela
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-base-de-calculo-do-balanco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Base de cálculo do balanço
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-resumo-do-balanco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Resumo do Balanço
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-natureza-contabil-dos-grupos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Natureza contábil dos grupos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-regra-de-sinalizacao-dos-valores-sem-dc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Regra de sinalização dos valores sem D/C
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Regra de sinalização dos valores sem D/C">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regra-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regra geral
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-locais-onde-a-regra-de-sinalizacao-deve-ser-aplicada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Locais onde a regra de sinalização deve ser aplicada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-exibicao-das-contas-na-tela" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Exibição das contas na tela
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-campos-exibidos-nas-tabelas-da-tela" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Campos exibidos nas tabelas da tela
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-totalizacao-dos-grupos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Totalização dos grupos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-expansao-e-recolhimento-dos-grupos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Expansão e recolhimento dos grupos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-conferencia-do-balanco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Conferência do Balanço
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-regra-do-status-do-balanco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Regra do status do balanço
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-exportacao-do-balanco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Exportação do Balanço
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-estrutura-do-relatorio-exportado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Estrutura do relatório exportado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-totais-exibidos-no-relatorio-exportado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Totais exibidos no relatório exportado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-regra-principal-da-funcionalidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Regra principal da funcionalidade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-resumo-da-regra-de-sinalizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Resumo da regra de sinalização
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-explicacao-resumida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Explicação resumida
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -702,37 +975,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Glossário de Termos
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../glossario-de-termos/" class="md-nav__link">
         
   
   
@@ -748,367 +994,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#objetivos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Objetivos
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apuração-do-resultado-do-exercício" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Apuração do Resultado do Exercício
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ativo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ativo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#balancete" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Balancete
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#balancete-de-verificação" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Balancete de Verificação
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#balanço-patrimonial" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Balanço Patrimonial
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conta-analítica" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conta Analítica
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conta-contábil" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conta Contábil
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conta-sintética" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Conta Sintética
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#csll-(contribuição-social-sobre-o-lucro-líquido)" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CSLL (Contribuição Social sobre o Lucro Líquido)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#custo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Custo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#demonstração-de-resultado-(ou-dre-simplificada)" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Demonstração de Resultado (ou DRE simplificada)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#demonstração-do-resultado-do-exercício-(dre)" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Demonstração do Resultado do Exercício (DRE)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#despesa" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Despesa
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fato-contábil" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fato Contábil
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#irpj-(imposto-de-renda-da-pessoa-jurídica)" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        IRPJ (Imposto de Renda da Pessoa Jurídica)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lançamento-contábil" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lançamento Contábil
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lançamento-nos-razonetes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lançamento nos Razonetes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#livro-diário" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Livro Diário
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lucro-bruto" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lucro Bruto
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lucro-líquido-antes-do-irpj-e-da-csll" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lucro Líquido antes do IRPJ e da CSLL
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#passivo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passivo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patrimônio-líquido" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patrimônio Líquido
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#plano-de-contas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Plano de Contas
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#razão-(ou-livro-razão)" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Razão (ou Livro Razão)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#razão-social" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Razão Social
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#razonete" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Razonete
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#receita" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Receita
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#receita-bruta" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Receita Bruta
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#receita-operacional-líquida" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Receita Operacional Líquida
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1975,10 +1860,93 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#1-objetivo-da-funcionalidade" class="md-nav__link">
     <span class="md-ellipsis">
       
+        1. Objetivo da funcionalidade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-filtros-da-tela" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Filtros da tela
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-base-de-calculo-do-balanco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Base de cálculo do balanço
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-resumo-do-balanco" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Resumo do Balanço
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-natureza-contabil-dos-grupos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Natureza contábil dos grupos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-regra-de-sinalizacao-dos-valores-sem-dc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Regra de sinalização dos valores sem D/C
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Regra de sinalização dos valores sem D/C">
+      <ul class="md-nav__list">
         
+          <li class="md-nav__item">
+  <a href="#regra-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regra geral
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-locais-onde-a-regra-de-sinalizacao-deve-ser-aplicada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Locais onde a regra de sinalização deve ser aplicada
       
     </span>
   </a>
@@ -1986,10 +1954,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#objetivos" class="md-nav__link">
+  <a href="#8-exibicao-das-contas-na-tela" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Objetivos
+        8. Exibição das contas na tela
       
     </span>
   </a>
@@ -1997,10 +1965,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#apuração-do-resultado-do-exercício" class="md-nav__link">
+  <a href="#9-campos-exibidos-nas-tabelas-da-tela" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Apuração do Resultado do Exercício
+        9. Campos exibidos nas tabelas da tela
       
     </span>
   </a>
@@ -2008,10 +1976,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ativo" class="md-nav__link">
+  <a href="#10-totalizacao-dos-grupos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ativo
+        10. Totalização dos grupos
       
     </span>
   </a>
@@ -2019,10 +1987,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#balancete" class="md-nav__link">
+  <a href="#11-expansao-e-recolhimento-dos-grupos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Balancete
+        11. Expansão e recolhimento dos grupos
       
     </span>
   </a>
@@ -2030,10 +1998,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#balancete-de-verificação" class="md-nav__link">
+  <a href="#12-conferencia-do-balanco" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Balancete de Verificação
+        12. Conferência do Balanço
       
     </span>
   </a>
@@ -2041,10 +2009,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#balanço-patrimonial" class="md-nav__link">
+  <a href="#13-regra-do-status-do-balanco" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Balanço Patrimonial
+        13. Regra do status do balanço
       
     </span>
   </a>
@@ -2052,10 +2020,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conta-analítica" class="md-nav__link">
+  <a href="#14-exportacao-do-balanco" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Conta Analítica
+        14. Exportação do Balanço
       
     </span>
   </a>
@@ -2063,10 +2031,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conta-contábil" class="md-nav__link">
+  <a href="#15-estrutura-do-relatorio-exportado" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Conta Contábil
+        15. Estrutura do relatório exportado
       
     </span>
   </a>
@@ -2074,10 +2042,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conta-sintética" class="md-nav__link">
+  <a href="#16-totais-exibidos-no-relatorio-exportado" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Conta Sintética
+        16. Totais exibidos no relatório exportado
       
     </span>
   </a>
@@ -2085,10 +2053,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#csll-(contribuição-social-sobre-o-lucro-líquido)" class="md-nav__link">
+  <a href="#17-regra-principal-da-funcionalidade" class="md-nav__link">
     <span class="md-ellipsis">
       
-        CSLL (Contribuição Social sobre o Lucro Líquido)
+        17. Regra principal da funcionalidade
       
     </span>
   </a>
@@ -2096,10 +2064,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#custo" class="md-nav__link">
+  <a href="#18-resumo-da-regra-de-sinalizacao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Custo
+        18. Resumo da regra de sinalização
       
     </span>
   </a>
@@ -2107,208 +2075,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#demonstração-de-resultado-(ou-dre-simplificada)" class="md-nav__link">
+  <a href="#19-explicacao-resumida" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Demonstração de Resultado (ou DRE simplificada)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#demonstração-do-resultado-do-exercício-(dre)" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Demonstração do Resultado do Exercício (DRE)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#despesa" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Despesa
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fato-contábil" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fato Contábil
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#irpj-(imposto-de-renda-da-pessoa-jurídica)" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        IRPJ (Imposto de Renda da Pessoa Jurídica)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lançamento-contábil" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lançamento Contábil
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lançamento-nos-razonetes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lançamento nos Razonetes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#livro-diário" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Livro Diário
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lucro-bruto" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lucro Bruto
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lucro-líquido-antes-do-irpj-e-da-csll" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lucro Líquido antes do IRPJ e da CSLL
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#passivo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passivo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patrimônio-líquido" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patrimônio Líquido
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#plano-de-contas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Plano de Contas
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#razão-(ou-livro-razão)" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Razão (ou Livro Razão)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#razão-social" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Razão Social
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#razonete" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Razonete
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#receita" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Receita
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#receita-bruta" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Receita Bruta
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#receita-operacional-líquida" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Receita Operacional Líquida
+        19. Explicação resumida
       
     </span>
   </a>
@@ -2332,188 +2102,753 @@
 
 
 
-<h1 id="glossario-de-termos">Glossário de Termos</h1>
-<p><strong>Histórico de Versões</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Versão</th>
-<th style="text-align: center;">Data</th>
-<th style="text-align: center;">Descrição</th>
-<th style="text-align: center;">Autor</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">1.0</td>
-<td style="text-align: center;">25/08</td>
-<td style="text-align: center;">Versão inicial do Glossário de Termos</td>
-<td style="text-align: center;">Gustavo Fujinohara</td>
-</tr>
-<tr>
-<td style="text-align: center;">2.0</td>
-<td style="text-align: center;">23/10</td>
-<td style="text-align: center;">Adiciona informações de contas credoras e deveroras</td>
-<td style="text-align: center;">Fernanda Pessoa</td>
-</tr>
-<tr>
-<td style="text-align: center;">3.0</td>
-<td style="text-align: center;">16/11</td>
-<td style="text-align: center;">Migração dos conceitos do documento de Requisitos para o Glossário de termos</td>
-<td style="text-align: center;">Fernanda Pessoa</td>
-</tr>
-<tr>
-<td style="text-align: center;">3.1</td>
-<td style="text-align: center;">27/11</td>
-<td style="text-align: center;">Adição de Sumário e Ordenação por ordem alfabética.</td>
-<td style="text-align: center;">Jerfferson Júnior</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Histórico de Revisões</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Versão</th>
-<th style="text-align: center;">Data</th>
-<th style="text-align: center;">Revisor</th>
-<th>Observação</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">3.1</td>
-<td style="text-align: center;">27/11/2025</td>
-<td style="text-align: center;">Jerfferson Júnior</td>
-<td>Aprovada</td>
-</tr>
-<tr>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Sumário</strong></p>
-<p><strong><a href="#apuração-do-resultado-do-exercício">1. Apuração do Resultado do Exercício   3</a></strong></p>
-<p><a href="#ativo"><strong>2. Ativo    3</strong></a></p>
-<p><a href="#balancete"><strong>3. Balancete    3</strong></a></p>
-<p><a href="#balancete-de-verificação"><strong>4. Balancete de Verificação 3</strong></a></p>
-<p><a href="#balanço-patrimonial"><strong>5. Balanço Patrimonial  4</strong></a></p>
-<p><a href="#conta-analítica"><strong>6. Conta Analítica  4</strong></a></p>
-<p><a href="#conta-contábil"><strong>7. Conta Contábil   4</strong></a></p>
-<p><a href="#conta-sintética"><strong>8. Conta Sintética  4</strong></a></p>
-<p><a href="#csll-(contribuição-social-sobre-o-lucro-líquido)"><strong>9. CSLL (Contribuição Social sobre o Lucro Líquido) 4</strong></a></p>
-<p><a href="#custo"><strong>10. Custo   4</strong></a></p>
-<p><a href="#demonstração-de-resultado-(ou-dre-simplificada)"><strong>11. Demonstração de Resultado (ou DRE simplificada) 5</strong></a></p>
-<p><a href="#demonstração-do-resultado-do-exercício-(dre)"><strong>12. Demonstração do Resultado do Exercício (DRE)    5</strong></a></p>
-<p><a href="#despesa"><strong>13. Despesa 5</strong></a></p>
-<p><a href="#fato-contábil"><strong>14. Fato Contábil   5</strong></a></p>
-<p><a href="#irpj-(imposto-de-renda-da-pessoa-jurídica)"><strong>15. IRPJ (Imposto de Renda da Pessoa Jurídica)  5</strong></a></p>
-<p><a href="#lançamento-contábil"><strong>16. Lançamento Contábil 6</strong></a></p>
-<p><a href="#lançamento-nos-razonetes"><strong>17. Lançamento nos Razonetes    6</strong></a></p>
-<p><a href="#livro-diário"><strong>18. Livro Diário    6</strong></a></p>
-<p><a href="#lucro-bruto"><strong>19. Lucro Bruto 6</strong></a></p>
-<p><a href="#lucro-líquido-antes-do-irpj-e-da-csll"><strong>20. Lucro Líquido antes do IRPJ e da CSLL   6</strong></a></p>
-<p><a href="#passivo"><strong>21. Passivo 6</strong></a></p>
-<p><a href="#patrimônio-líquido"><strong>22. Patrimônio Líquido  7</strong></a></p>
-<p><a href="#plano-de-contas"><strong>23. Plano de Contas 7</strong></a></p>
-<p><a href="#razão-(ou-livro-razão)"><strong>24. Razão (ou Livro Razão)  7</strong></a></p>
-<p><a href="#razão-social"><strong>25. Razão Social    7</strong></a></p>
-<p><a href="#razonete"><strong>26. Razonete    7</strong></a></p>
-<p><a href="#receita"><strong>27. Receita 7</strong></a></p>
-<p><a href="#receita-bruta"><strong>28. Receita Bruta   8</strong></a></p>
-<p><a href="#receita-operacional-líquida"><strong>29. Receita Operacional Líquida 8</strong></a></p>
-<h2 id="_1"></h2>
-<h2 id="objetivos"><strong>Objetivos</strong></h2>
-<p>Este documento registra o glossário de termos do Sistema COIN’S (Contabilidade Integrada). Por meio dele, são especificados os termos contábeis de forma a explicar de forma clara e simples o significado de termos técnicos e jargões utilizados na área da contabilidade. Por meio deste, é possível facilitar a compreensão e a comunicação, tanto para profissionais da área quanto para pessoas alheias ao domínio contábil, como desenvolvedores. Dessa forma, atua como uma ferramenta de desmistificação e educação que transforma o que é complexo e técnico em algo compreensível para um público mais amplo, contribuindo para uma melhor gestão financeira e maior transparência.</p>
-<h2 id="apuração-do-resultado-do-exercício">Apuração do Resultado do Exercício</h2>
-<p>Processo de cálculo do lucro ou prejuízo obtido por uma empresa em determinado período contábil.</p>
-<h2 id="ativo">Ativo</h2>
-<p>Conjunto de bens e direitos da entidade, com capacidade de gerar benefícios econômicos futuros. Exemplo: caixa, estoque, veículos, contas a receber.</p>
-<p>Exemplo: caixa, estoque, veículos, contas a receber.</p>
-<p>Natureza: Devedora.</p>
-<h2 id="balancete">Balancete</h2>
-<p>Relatório contábil que reúne os saldos de todas as contas em determinada data, permitindo a verificação do equilíbrio entre débitos e créditos. </p>
-<h2 id="balancete-de-verificação">Balancete de Verificação</h2>
-<p>Tipo específico de balancete que apresenta os saldos de todas as contas em determinado período, permitindo a conferência da igualdade entre débitos e créditos.</p>
-<p>No COIN’S, o balancete é gerado para uma empresa específica e é utilizado como instrumento de controle e verificação da consistência dos lançamentos.</p>
-<h2 id="balanço-patrimonial">Balanço Patrimonial</h2>
-<p>Relatório contábil que apresenta, em determinada data, a posição patrimonial e financeira da empresa, estruturado em Ativo, Passivo e Patrimônio Líquido.</p>
-<p>Evidencia, em um “retrato” de determinado momento, quais são os bens, direitos, obrigações e o patrimônio líquido da entidade.</p>
-<h2 id="conta-analítica">Conta Analítica</h2>
-<p>Conta que não possui subdivisões e que pode ser utilizada diretamente em lançamentos contábeis.</p>
-<p>No sistema COIN’S, apenas contas analíticas são válidas para movimentações financeiras.</p>
-<h2 id="conta-contábil">Conta Contábil</h2>
-<p>Elemento individual do Plano de Contas, que representa uma categoria de movimentação, como Caixa, Banco, Fornecedores, Clientes, etc.</p>
-<p>Cada conta pertence a um Plano de Contas vinculado a uma empresa.</p>
-<h2 id="conta-sintética">Conta Sintética</h2>
-<p>Conta utilizada para agrupar outras contas dentro do Plano de Contas, funcionando como uma categoria geral (conta “mãe”).</p>
-<p>Não pode ser utilizada diretamente em lançamentos contábeis.</p>
-<h2 id="csll-(contribuição-social-sobre-o-lucro-líquido)">CSLL (Contribuição Social sobre o Lucro Líquido)</h2>
-<p>Tributo federal que incide sobre o lucro líquido ajustado da empresa, destinado ao financiamento da seguridade social.</p>
-<h2 id="custo">Custo</h2>
-<p>Despesas diretamente relacionadas à produção ou aquisição de bens e serviços vendidos.</p>
-<p>Natureza: Devedora.</p>
-<h2 id="demonstração-de-resultado-(ou-dre-simplificada)">Demonstração de Resultado (ou DRE simplificada)</h2>
-<p>Documento contábil que apresenta, de forma resumida, o desempenho da empresa em um período, evidenciando receitas, custos, despesas e o resultado (lucro ou prejuízo).</p>
-<h2 id="demonstração-do-resultado-do-exercício-(dre)">Demonstração do Resultado do Exercício (DRE)</h2>
-<p>Relatório contábil oficial que evidencia receitas, custos e despesas de uma empresa em um determinado período, confrontando esses valores até chegar ao resultado líquido (lucro ou prejuízo) do exercício.</p>
-<h2 id="despesa">Despesa</h2>
-<p>Gastos necessários à manutenção das atividades operacionais da empresa, como energia, salários e aluguel.</p>
-<p>Natureza: Devedora.</p>
-<h2 id="fato-contábil">Fato Contábil</h2>
-<p>Todo acontecimento que provoca alterações no patrimônio da entidade, podendo ser:</p>
+<h1 id="regra-da-funcionalidade-balanco-patrimonial">Regra da Funcionalidade: Balanço Patrimonial</h1>
+<h2 id="1-objetivo-da-funcionalidade">1. Objetivo da funcionalidade</h2>
+<p>A funcionalidade de <strong>Balanço Patrimonial</strong> tem como objetivo apresentar a posição patrimonial da empresa em um determinado período, considerando os lançamentos realizados nas contas de <strong>Ativo</strong>, <strong>Passivo</strong> e <strong>Patrimônio Líquido</strong>.</p>
+<p>O Balanço Patrimonial demonstra, de forma estruturada, <strong>o que a empresa possui</strong> e <strong>de onde vieram os recursos utilizados para formar esse patrimônio</strong>.</p>
+<p>De forma simplificada:</p>
 <ul>
-<li>Permutativo (troca de elementos patrimoniais, sem alterar o patrimônio líquido),  </li>
-<li>Modificativo (gera resultado, alterando o patrimônio líquido) ou  </li>
-<li>Misto (combina características dos dois anteriores).</li>
+<li><strong>Ativo:</strong> representa tudo aquilo que a empresa possui ou tem direito a receber.</li>
+<li><strong>Passivo:</strong> representa as obrigações da empresa com terceiros.</li>
+<li><strong>Patrimônio Líquido:</strong> representa os recursos próprios da empresa.</li>
 </ul>
-<h2 id="irpj-(imposto-de-renda-da-pessoa-jurídica)">IRPJ (Imposto de Renda da Pessoa Jurídica)</h2>
-<p>Tributo federal que incide sobre o lucro das empresas, variando conforme o regime de tributação adotado.</p>
-<h2 id="lançamento-contábil">Lançamento Contábil</h2>
-<p>Registro de um fato contábil em livros ou sistemas, obedecendo ao método das partidas dobradas (um débito e um crédito de mesmo valor).</p>
-<p>No contexto do sistema COIN’S, é o registro de movimentação financeira em débito e crédito, sempre associado a contas do Plano de Contas e vinculado a uma empresa específica.</p>
-<h2 id="lançamento-nos-razonetes">Lançamento nos Razonetes</h2>
-<p>Representação visual, em forma de razonete (em “T”), dos lançamentos contábeis realizados, facilitando o estudo e a conferência dos débitos e créditos.</p>
-<h2 id="livro-diário">Livro Diário</h2>
-<p>Livro (ou relatório) contábil no qual são registrados, de forma cronológica e completa, todos os lançamentos contábeis da empresa, seguindo o método das partidas dobradas.</p>
-<h2 id="lucro-bruto">Lucro Bruto</h2>
-<p>Resultado obtido após deduzir do total de receitas os custos diretos das mercadorias ou serviços vendidos.</p>
-<h2 id="lucro-líquido-antes-do-irpj-e-da-csll">Lucro Líquido antes do IRPJ e da CSLL</h2>
-<p>Lucro obtido após considerar receitas, custos e despesas, mas antes da dedução do Imposto de Renda de Pessoas Jurídicas (IRPJ) e da Contribuição Social sobre o Lucro Líquido (CSLL).</p>
-<h2 id="passivo">Passivo</h2>
-<p>Obrigações da entidade perante terceiros, como dívidas e compromissos.</p>
-<p>Exemplo: fornecedores, empréstimos, salários a pagar.</p>
-<p>Natureza: Credora.</p>
-<h2 id="patrimônio-líquido">Patrimônio Líquido</h2>
-<p>Representa os recursos próprios da empresa, resultantes da diferença entre Ativo e Passivo. Inclui capital social, reservas e lucros ou prejuízos acumulados.</p>
-<p>Exemplo: caixa, estoque, veículos, contas a receber.</p>
-<p>Natureza: Credora.</p>
-<h2 id="plano-de-contas">Plano de Contas</h2>
-<p>Conjunto organizado e padronizado de contas contábeis utilizado para classificar e registrar os fatos contábeis de uma empresa.</p>
-<p>É a base para os lançamentos e relatórios, funcionando como uma estrutura hierárquica que organiza grupos, subgrupos, contas sintéticas e contas analíticas.</p>
-<h2 id="razão-(ou-livro-razão)">Razão (ou Livro Razão)</h2>
-<p>Livro contábil que reúne, de forma organizada por conta, todos os lançamentos feitos no Livro Diário. Permite acompanhar a movimentação e o saldo de cada conta contábil, sendo derivado do Livro Diário e associado a uma empresa específica.</p>
-<h2 id="razão-social">Razão Social</h2>
-<p>Nome legal e oficial de uma empresa, usado em documentos formais como contratos e notas fiscais.</p>
-<p>É a identidade jurídica do negócio, única e registrada na Junta Comercial.</p>
-<h2 id="razonete">Razonete</h2>
-<p>Representação gráfica simplificada em forma de “T” utilizada para registrar movimentações em contas específicas, facilitando o entendimento de débitos e créditos.</p>
-<h2 id="receita">Receita</h2>
-<p>Valores obtidos pela venda de bens ou serviços, ou outras entradas que aumentam o patrimônio líquido da entidade.</p>
-<p>Natureza: Credora.</p>
-<h2 id="receita-bruta">Receita Bruta</h2>
-<p>Total de vendas de bens e serviços, sem qualquer dedução.</p>
-<h2 id="receita-operacional-líquida">Receita Operacional Líquida</h2>
-<p>Receita bruta menos deduções como devoluções, impostos sobre vendas e descontos concedidos.</p>
+<p>A lógica contábil esperada é:</p>
+<div class="highlight"><pre><span></span><code>Ativo = Passivo + Patrimônio Líquido
+</code></pre></div>
+<p>Quando essa igualdade é atendida, o balanço é considerado <strong>fechado</strong>.</p>
+<p>Caso exista diferença entre os valores, o balanço fica com status <strong>aberto</strong>, indicando que pode haver algum lançamento incorreto, incompleto ou inconsistência nos saldos.</p>
+<hr />
+<h2 id="2-filtros-da-tela">2. Filtros da tela</h2>
+<p>A tela deve possuir os seguintes filtros:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Obrigatório</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Período Inicial</td>
+<td>Sim</td>
+<td>Data inicial considerada para apuração do balanço.</td>
+</tr>
+<tr>
+<td>Período Final</td>
+<td>Sim</td>
+<td>Data final considerada para apuração do balanço.</td>
+</tr>
+</tbody>
+</table>
+<p>Os filtros de período são obrigatórios, pois o balanço deve considerar apenas os lançamentos realizados dentro do intervalo informado.</p>
+<p>Por padrão, os campos devem vir preenchidos com o <strong>primeiro e o último dia do ano atual</strong>.</p>
+<p>Exemplo:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor padrão</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Período Inicial</td>
+<td>01/01/2025</td>
+</tr>
+<tr>
+<td>Período Final</td>
+<td>31/12/2025</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-base-de-calculo-do-balanco">3. Base de cálculo do balanço</h2>
+<p>O Balanço Patrimonial deve considerar todos os lançamentos realizados no período informado que estejam vinculados às contas dos seguintes grupos:</p>
+<ul>
+<li><strong>Ativo</strong></li>
+<li><strong>Passivo</strong></li>
+<li><strong>Patrimônio Líquido</strong></li>
+</ul>
+<p>A funcionalidade deve calcular o saldo das contas com base nos lançamentos contábeis existentes no período filtrado.</p>
+<p>Depois disso, os saldos devem ser organizados conforme a estrutura do plano de contas.</p>
+<hr />
+<h2 id="4-resumo-do-balanco">4. Resumo do Balanço</h2>
+<p>Após a aplicação do filtro, a tela deve apresentar um resumo com os principais valores apurados.</p>
+<p>Os campos exibidos no resumo são:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total do Ativo</td>
+<td>Soma total dos saldos das contas pertencentes ao Ativo.</td>
+</tr>
+<tr>
+<td>Total do Passivo</td>
+<td>Soma total dos saldos das contas pertencentes ao Passivo.</td>
+</tr>
+<tr>
+<td>Patrimônio Líquido</td>
+<td>Soma total dos saldos das contas pertencentes ao Patrimônio Líquido.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Indica se o balanço está aberto ou fechado.</td>
+</tr>
+</tbody>
+</table>
+<p>O status pode ser:</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fechado</td>
+<td>Quando o Total do Ativo é igual à soma do Passivo com o Patrimônio Líquido.</td>
+</tr>
+<tr>
+<td>Aberto</td>
+<td>Quando existe diferença entre o Total do Ativo e a soma do Passivo com o Patrimônio Líquido.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-natureza-contabil-dos-grupos">5. Natureza contábil dos grupos</h2>
+<p>Cada grupo possui uma natureza contábil esperada.</p>
+<table>
+<thead>
+<tr>
+<th>Grupo</th>
+<th>Natureza esperada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ativo</td>
+<td>Devedora</td>
+</tr>
+<tr>
+<td>Passivo</td>
+<td>Credora</td>
+</tr>
+<tr>
+<td>Patrimônio Líquido</td>
+<td>Credora</td>
+</tr>
+</tbody>
+</table>
+<p>Isso significa que:</p>
+<ul>
+<li>O <strong>Ativo</strong> normalmente deve apresentar saldo devedor.</li>
+<li>O <strong>Passivo</strong> normalmente deve apresentar saldo credor.</li>
+<li>O <strong>Patrimônio Líquido</strong> normalmente deve apresentar saldo credor.</li>
+</ul>
+<hr />
+<h2 id="6-regra-de-sinalizacao-dos-valores-sem-dc">6. Regra de sinalização dos valores sem D/C</h2>
+<p>Em alguns pontos da tela, os valores são exibidos de forma consolidada, sem a coluna <strong>D/C</strong>.</p>
+<p>Nesses casos, o sistema deve utilizar um sinal negativo quando o saldo estiver contrário à natureza contábil esperada do grupo.</p>
+<p>Essa sinalização não significa, necessariamente, que o valor é negativo no sentido financeiro.</p>
+<p>O sinal negativo indica que o saldo está <strong>contra a natureza contábil esperada</strong>.</p>
+<h3 id="regra-geral">Regra geral</h3>
+<table>
+<thead>
+<tr>
+<th>Grupo</th>
+<th>Condição</th>
+<th>Exibição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ativo</td>
+<td>Saldo devedor</td>
+<td>Valor sem sinal</td>
+</tr>
+<tr>
+<td>Ativo</td>
+<td>Saldo credor</td>
+<td>Valor com sinal negativo</td>
+</tr>
+<tr>
+<td>Passivo</td>
+<td>Saldo credor</td>
+<td>Valor sem sinal</td>
+</tr>
+<tr>
+<td>Passivo</td>
+<td>Saldo devedor</td>
+<td>Valor com sinal negativo</td>
+</tr>
+<tr>
+<td>Patrimônio Líquido</td>
+<td>Saldo credor</td>
+<td>Valor sem sinal</td>
+</tr>
+<tr>
+<td>Patrimônio Líquido</td>
+<td>Saldo devedor</td>
+<td>Valor com sinal negativo</td>
+</tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code>Ativo com saldo devedor:
+R$ 500.000,00
+
+Ativo com saldo credor:
+-R$ 500.000,00
+
+Passivo com saldo credor:
+R$ 300.000,00
+
+Passivo com saldo devedor:
+-R$ 300.000,00
+
+Patrimônio Líquido com saldo credor:
+R$ 200.000,00
+
+Patrimônio Líquido com saldo devedor:
+-R$ 200.000,00
+</code></pre></div>
+<hr />
+<h2 id="7-locais-onde-a-regra-de-sinalizacao-deve-ser-aplicada">7. Locais onde a regra de sinalização deve ser aplicada</h2>
+<p>A regra de sinalização deve ser aplicada em todos os locais da tela onde o valor for exibido sem a coluna <strong>D/C</strong>.</p>
+<p>Isso inclui:</p>
+<ul>
+<li>Resumo do Balanço;</li>
+<li>Total exibido no cabeçalho dos grupos;</li>
+<li>Total do Ativo;</li>
+<li>Total do Passivo;</li>
+<li>Total do Patrimônio Líquido;</li>
+<li>Conferência do Balanço;</li>
+<li>Valores consolidados exibidos no relatório exportado, quando não houver D/C.</li>
+</ul>
+<p>Exemplos de totais que devem seguir essa regra:</p>
+<table>
+<thead>
+<tr>
+<th>Total / Grupo</th>
+<th>Natureza esperada</th>
+<th>Quando exibir com sinal negativo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ativo</td>
+<td>Devedora</td>
+<td>Quando o saldo for credor</td>
+</tr>
+<tr>
+<td>Ativo Circulante</td>
+<td>Devedora</td>
+<td>Quando o saldo for credor</td>
+</tr>
+<tr>
+<td>Ativo Não Circulante</td>
+<td>Devedora</td>
+<td>Quando o saldo for credor</td>
+</tr>
+<tr>
+<td>Passivo</td>
+<td>Credora</td>
+<td>Quando o saldo for devedor</td>
+</tr>
+<tr>
+<td>Passivo Circulante</td>
+<td>Credora</td>
+<td>Quando o saldo for devedor</td>
+</tr>
+<tr>
+<td>Passivo Não Circulante</td>
+<td>Credora</td>
+<td>Quando o saldo for devedor</td>
+</tr>
+<tr>
+<td>Patrimônio Líquido</td>
+<td>Credora</td>
+<td>Quando o saldo for devedor</td>
+</tr>
+<tr>
+<td>Contas do Patrimônio Líquido</td>
+<td>Credora</td>
+<td>Quando o saldo for devedor</td>
+</tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code>Ativo Circulante com saldo devedor:
+R$ 300.000,00
+
+Ativo Circulante com saldo credor:
+-R$ 300.000,00
+
+Passivo Circulante com saldo credor:
+R$ 200.000,00
+
+Passivo Circulante com saldo devedor:
+-R$ 200.000,00
+</code></pre></div>
+<p>Portanto, sempre que o valor exibido for um total ou valor consolidado e não houver exibição da coluna <strong>D/C</strong>, o sistema deve utilizar o sinal negativo para indicar que o saldo está contra a natureza esperada.</p>
+<p>Nas contas analíticas, como a coluna <strong>D/C</strong> é exibida individualmente, o usuário consegue identificar diretamente se o saldo é devedor ou credor pela própria coluna.</p>
+<hr />
+<h2 id="8-exibicao-das-contas-na-tela">8. Exibição das contas na tela</h2>
+<p>A tela deve exibir os valores separados pelos grandes grupos contábeis:</p>
+<ul>
+<li><strong>Ativo</strong></li>
+<li><strong>Passivo</strong></li>
+<li><strong>Patrimônio Líquido</strong></li>
+</ul>
+<p>Dentro de cada grupo principal, devem ser exibidos os agrupamentos de <strong>segundo nível</strong> do plano de contas.</p>
+<p>Exemplo de estrutura:</p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Classificação</th>
+<th>Conta</th>
+<th>Nível</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>Ativo</td>
+<td>1º nível</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1.1</td>
+<td>Ativo Circulante</td>
+<td>2º nível</td>
+</tr>
+<tr>
+<td>42</td>
+<td>1.2</td>
+<td>Ativo Não Circulante</td>
+<td>2º nível</td>
+</tr>
+</tbody>
+</table>
+<p>Na tela, os grupos exibidos dentro de cada primeiro nível devem corresponder ao <strong>segundo nível do plano de contas</strong>.</p>
+<p>Exemplo dentro do <strong>Ativo</strong>:</p>
+<ul>
+<li><strong>Ativo Circulante</strong></li>
+<li><strong>Ativo Não Circulante</strong></li>
+</ul>
+<p>Exemplo dentro do <strong>Passivo</strong>:</p>
+<ul>
+<li><strong>Passivo Circulante</strong></li>
+<li><strong>Passivo Não Circulante</strong></li>
+</ul>
+<p>Exemplo dentro do <strong>Patrimônio Líquido</strong>:</p>
+<ul>
+<li><strong>Contas do Patrimônio Líquido</strong></li>
+</ul>
+<p>Cada grupo deve apresentar suas contas analíticas e seus respectivos saldos.</p>
+<hr />
+<h2 id="9-campos-exibidos-nas-tabelas-da-tela">9. Campos exibidos nas tabelas da tela</h2>
+<p>Cada tabela de contas deve exibir os seguintes campos:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Código</td>
+<td>Código da conta conforme o plano de contas.</td>
+</tr>
+<tr>
+<td>Conta</td>
+<td>Nome da conta contábil.</td>
+</tr>
+<tr>
+<td>Saldo Atual</td>
+<td>Saldo da conta dentro do período selecionado.</td>
+</tr>
+<tr>
+<td>D/C</td>
+<td>Natureza do saldo da conta, sendo <strong>D</strong> para Débito e <strong>C</strong> para Crédito.</td>
+</tr>
+</tbody>
+</table>
+<p>Exemplo:</p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Conta</th>
+<th style="text-align: right;">Saldo Atual</th>
+<th style="text-align: center;">D/C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>Caixa Geral</td>
+<td style="text-align: right;">R$ 150.000,00</td>
+<td style="text-align: center;">D</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Fundo Fixo de Caixa</td>
+<td style="text-align: right;">R$ 150.000,00</td>
+<td style="text-align: center;">D</td>
+</tr>
+</tbody>
+</table>
+<p>A coluna <strong>D/C</strong> deve ser exibida nas linhas das contas analíticas.</p>
+<p>Nos totais e agrupamentos, como a coluna <strong>D/C</strong> não é exibida, deve ser aplicada a regra de sinalização conforme a natureza esperada do grupo.</p>
+<hr />
+<h2 id="10-totalizacao-dos-grupos">10. Totalização dos grupos</h2>
+<p>Cada grupo de segundo nível deve exibir o seu total.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code>Ativo Circulante — R$ 300.000,00
+</code></pre></div>
+<p>Esse valor representa a soma dos saldos das contas analíticas pertencentes ao grupo.</p>
+<p>Também devem ser exibidos os totais dos grupos principais:</p>
+<ul>
+<li><strong>Total do Ativo</strong></li>
+<li><strong>Total do Passivo</strong></li>
+<li><strong>Total do Patrimônio Líquido</strong></li>
+</ul>
+<p>Esses totais representam a soma dos saldos de todas as contas pertencentes a cada grupo principal.</p>
+<p>Como esses totais não exibem a coluna <strong>D/C</strong>, eles devem seguir a regra de sinalização:</p>
+<div class="highlight"><pre><span></span><code>Ativo:
+    Natureza esperada = Devedora
+    Se o saldo final for credor, exibir com sinal negativo.
+
+Passivo:
+    Natureza esperada = Credora
+    Se o saldo final for devedor, exibir com sinal negativo.
+
+Patrimônio Líquido:
+    Natureza esperada = Credora
+    Se o saldo final for devedor, exibir com sinal negativo.
+</code></pre></div>
+<hr />
+<h2 id="11-expansao-e-recolhimento-dos-grupos">11. Expansão e recolhimento dos grupos</h2>
+<p>A tela pode permitir a expansão e o recolhimento dos grupos exibidos.</p>
+<p>Quando o grupo estiver expandido, devem ser exibidas as contas analíticas pertencentes a ele.</p>
+<p>Quando o grupo estiver recolhido, deve permanecer visível apenas o nome do grupo e seu respectivo total.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code>Ativo Circulante — R$ 300.000,00
+</code></pre></div>
+<p>Ao expandir o grupo, devem aparecer as contas:</p>
+<div class="highlight"><pre><span></span><code>Código | Conta               | Saldo Atual     | D/C
+5      | Caixa Geral          | R$ 150.000,00   | D
+6      | Fundo Fixo de Caixa  | R$ 150.000,00   | D
+</code></pre></div>
+<p>O total do grupo deve continuar respeitando a regra de sinalização quando estiver sem a coluna <strong>D/C</strong>.</p>
+<hr />
+<h2 id="12-conferencia-do-balanco">12. Conferência do Balanço</h2>
+<p>Após a exibição dos grupos e contas, a tela deve apresentar a seção de <strong>Conferência do Balanço</strong>.</p>
+<p>Essa seção tem como objetivo validar se o balanço está fechado ou aberto.</p>
+<p>Devem ser exibidos os seguintes campos:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ativo Total</td>
+<td>Valor total apurado para as contas do Ativo.</td>
+</tr>
+<tr>
+<td>Passivo + PL</td>
+<td>Soma do Total do Passivo com o Total do Patrimônio Líquido.</td>
+</tr>
+<tr>
+<td>Diferença</td>
+<td>Diferença entre o Ativo Total e o Passivo + PL.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Indica se o balanço está fechado ou aberto.</td>
+</tr>
+</tbody>
+</table>
+<p>A regra de cálculo é:</p>
+<div class="highlight"><pre><span></span><code>Diferença = Ativo Total - (Passivo + Patrimônio Líquido)
+</code></pre></div>
+<p>Quando a diferença for igual a <strong>R$ 0,00</strong>, o status será:</p>
+<div class="highlight"><pre><span></span><code>Fechado
+</code></pre></div>
+<p>Esse é o cenário esperado.</p>
+<p>Quando a diferença for diferente de <strong>R$ 0,00</strong>, o status será:</p>
+<div class="highlight"><pre><span></span><code>Aberto
+</code></pre></div>
+<p>Esse é um cenário não esperado e indica que pode existir alguma inconsistência nos lançamentos ou saldos das contas.</p>
+<hr />
+<h2 id="13-regra-do-status-do-balanco">13. Regra do status do balanço</h2>
+<p>A validação final do balanço deve seguir a seguinte regra:</p>
+<div class="highlight"><pre><span></span><code>Se Ativo Total = Passivo + Patrimônio Líquido:
+    Status = Fechado
+
+Senão:
+    Status = Aberto
+</code></pre></div>
+<p>Ou, considerando a diferença:</p>
+<div class="highlight"><pre><span></span><code>Se Diferença = R$ 0,00:
+    Status = Fechado
+
+Senão:
+    Status = Aberto
+</code></pre></div>
+<hr />
+<h2 id="14-exportacao-do-balanco">14. Exportação do Balanço</h2>
+<p>A tela deve possuir a opção <strong>Exportar Balanço</strong>, responsável por gerar o relatório do Balanço Patrimonial em formato de documento.</p>
+<p>No relatório exportado, a visualização é diferente da tela.</p>
+<p>Enquanto a tela apresenta os grupos principalmente até o <strong>segundo nível</strong>, o relatório exportado deve apresentar uma estrutura mais detalhada, incluindo também os grupos de <strong>terceiro nível</strong>.</p>
+<p>O relatório deve conter:</p>
+<table>
+<thead>
+<tr>
+<th>Informação</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cabeçalho institucional</td>
+<td>Informações da instituição, sistema e identificação visual.</td>
+</tr>
+<tr>
+<td>Nome do sistema</td>
+<td>Exemplo: <code>COIN'S - Contabilidade Integrada</code>.</td>
+</tr>
+<tr>
+<td>Título do relatório</td>
+<td>Exemplo: <code>Balanço Patrimonial</code>.</td>
+</tr>
+<tr>
+<td>Empresa</td>
+<td>Nome da empresa selecionada.</td>
+</tr>
+<tr>
+<td>CNPJ</td>
+<td>CNPJ da empresa.</td>
+</tr>
+<tr>
+<td>Período</td>
+<td>Intervalo utilizado para geração do balanço.</td>
+</tr>
+<tr>
+<td>Data e hora de geração</td>
+<td>Data e hora em que o documento foi gerado.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="15-estrutura-do-relatorio-exportado">15. Estrutura do relatório exportado</h2>
+<p>No relatório exportado, a estrutura deve exibir os grupos até o <strong>terceiro nível</strong> do plano de contas.</p>
+<p>Exemplo:</p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Classificação</th>
+<th>Conta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>Ativo</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1.1</td>
+<td>Ativo Circulante</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1.1.1</td>
+<td>Disponível</td>
+</tr>
+<tr>
+<td>13</td>
+<td>1.1.2</td>
+<td>Clientes</td>
+</tr>
+<tr>
+<td>17</td>
+<td>1.1.3</td>
+<td>Outros Créditos</td>
+</tr>
+<tr>
+<td>25</td>
+<td>1.1.4</td>
+<td>Aplicações Financeiras</td>
+</tr>
+<tr>
+<td>31</td>
+<td>1.1.5</td>
+<td>Estoque</td>
+</tr>
+<tr>
+<td>38</td>
+<td>1.1.6</td>
+<td>Despesas Pagas Antecipadamente</td>
+</tr>
+</tbody>
+</table>
+<p>Dentro dos grupos de terceiro nível, devem ser exibidas as contas analíticas e seus respectivos saldos.</p>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code>Ativo
+  Ativo Circulante
+    Disponível
+      Caixa Geral                  R$ 150.000,00
+      Fundo Fixo de Caixa          R$ 150.000,00
+
+    Total do Ativo Circulante      R$ 300.000,00
+</code></pre></div>
+<p>O mesmo comportamento deve ser aplicado para:</p>
+<ul>
+<li><strong>Ativo</strong></li>
+<li><strong>Passivo</strong></li>
+<li><strong>Patrimônio Líquido</strong></li>
+</ul>
+<hr />
+<h2 id="16-totais-exibidos-no-relatorio-exportado">16. Totais exibidos no relatório exportado</h2>
+<p>O relatório exportado deve apresentar os totais de cada grupo.</p>
+<p>Exemplos:</p>
+<table>
+<thead>
+<tr>
+<th>Total</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total do AC</td>
+<td>Total do Ativo Circulante</td>
+</tr>
+<tr>
+<td>Total do ANC</td>
+<td>Total do Ativo Não Circulante</td>
+</tr>
+<tr>
+<td>Total do PC</td>
+<td>Total do Passivo Circulante</td>
+</tr>
+<tr>
+<td>Total do PNC</td>
+<td>Total do Passivo Não Circulante</td>
+</tr>
+<tr>
+<td>Total do PL</td>
+<td>Total do Patrimônio Líquido</td>
+</tr>
+<tr>
+<td>Total do Ativo</td>
+<td>Soma total das contas do Ativo</td>
+</tr>
+<tr>
+<td>Total do Passivo + PL</td>
+<td>Soma total do Passivo com o Patrimônio Líquido</td>
+</tr>
+</tbody>
+</table>
+<p>Quando esses totais forem exibidos sem a indicação <strong>D/C</strong>, também devem seguir a regra de sinalização conforme a natureza esperada do grupo.</p>
+<hr />
+<h2 id="17-regra-principal-da-funcionalidade">17. Regra principal da funcionalidade</h2>
+<p>A funcionalidade deve executar o seguinte fluxo:</p>
+<div class="highlight"><pre><span></span><code>1. Receber o período inicial e final informado pelo usuário.
+
+2. Validar se os dois campos foram preenchidos.
+
+3. Buscar os lançamentos contábeis realizados dentro do período informado.
+
+4. Considerar apenas os lançamentos vinculados às contas de:
+   - Ativo
+   - Passivo
+   - Patrimônio Líquido
+
+5. Calcular o saldo atual das contas analíticas.
+
+6. Identificar a natureza do saldo de cada conta:
+   - D para Débito
+   - C para Crédito
+
+7. Agrupar as contas conforme o plano de contas.
+
+8. Na tela, exibir os grupos até o segundo nível.
+
+9. No relatório exportado, exibir os grupos até o terceiro nível.
+
+10. Calcular:
+    - Total do Ativo
+    - Total do Passivo
+    - Total do Patrimônio Líquido
+    - Passivo + Patrimônio Líquido
+    - Diferença
+    - Status do Balanço
+
+11. Aplicar a regra de sinalização em todos os valores consolidados sem D/C.
+
+12. Definir o status:
+    - Fechado, se a diferença for R$ 0,00
+    - Aberto, se a diferença for diferente de R$ 0,00
+</code></pre></div>
+<hr />
+<h2 id="18-resumo-da-regra-de-sinalizacao">18. Resumo da regra de sinalização</h2>
+<div class="highlight"><pre><span></span><code>Ativo:
+    Natureza esperada = Devedora
+    Se o saldo for devedor:
+        Exibir valor sem sinal
+    Se o saldo for credor:
+        Exibir valor com sinal negativo
+
+Passivo:
+    Natureza esperada = Credora
+    Se o saldo for credor:
+        Exibir valor sem sinal
+    Se o saldo for devedor:
+        Exibir valor com sinal negativo
+
+Patrimônio Líquido:
+    Natureza esperada = Credora
+    Se o saldo for credor:
+        Exibir valor sem sinal
+    Se o saldo for devedor:
+        Exibir valor com sinal negativo
+</code></pre></div>
+<p>Essa regra deve ser aplicada sempre que o valor for apresentado sem a coluna <strong>D/C</strong>.</p>
+<hr />
+<h2 id="19-explicacao-resumida">19. Explicação resumida</h2>
+<p>A tela de <strong>Balanço Patrimonial</strong> permite consultar a situação patrimonial da empresa em um determinado período. Para isso, o usuário informa uma data inicial e uma data final, que são campos obrigatórios.</p>
+<p>Com base nesse período, o sistema considera todos os lançamentos realizados nas contas de <strong>Ativo</strong>, <strong>Passivo</strong> e <strong>Patrimônio Líquido</strong>.</p>
+<p>A tela apresenta um resumo com o <strong>Total do Ativo</strong>, <strong>Total do Passivo</strong>, <strong>Patrimônio Líquido</strong> e o <strong>status do balanço</strong>.</p>
+<p>Como os campos do resumo e os totais dos grupos não exibem a coluna <strong>D/C</strong>, o sistema utiliza um sinal negativo quando o saldo está contrário à natureza contábil esperada do grupo.</p>
+<p>Assim:</p>
+<ul>
+<li>O <strong>Ativo</strong>, que possui natureza devedora, será exibido com sinal negativo caso apresente saldo credor.</li>
+<li>O <strong>Passivo</strong>, que possui natureza credora, será exibido com sinal negativo caso apresente saldo devedor.</li>
+<li>O <strong>Patrimônio Líquido</strong>, que possui natureza credora, será exibido com sinal negativo caso apresente saldo devedor.</li>
+</ul>
+<p>Logo abaixo, as contas são exibidas separadamente por grupos, mostrando o <strong>código da conta</strong>, o <strong>nome da conta</strong>, o <strong>saldo atual</strong> e a <strong>natureza do saldo</strong>, indicada por <strong>D</strong> para débito ou <strong>C</strong> para crédito.</p>
+<p>Ao final, a tela realiza a conferência do balanço, comparando o <strong>Total do Ativo</strong> com a soma do <strong>Passivo</strong> e <strong>Patrimônio Líquido</strong>.</p>
+<p>Caso a diferença seja igual a <strong>R$ 0,00</strong>, o balanço é considerado <strong>fechado</strong>.</p>
+<p>Caso exista diferença, o balanço fica <strong>aberto</strong>, indicando que pode haver alguma inconsistência nos lançamentos.</p>
+<p>Na exportação, o relatório apresenta as informações em um formato mais contábil e detalhado, incluindo os grupos até o <strong>terceiro nível</strong> do plano de contas, as contas analíticas, seus saldos e os totais de cada grupo.</p>
 
 
 
@@ -2536,7 +2871,7 @@
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="6 de maio de 2026 02:27:40 UTC">6 de maio de 2026 02:27:40</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="18 de maio de 2026 01:27:22 UTC">18 de maio de 2026 01:27:22</span>
   </span>
 
     
@@ -2546,7 +2881,7 @@
     <span class="md-icon" title="Criado em">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="6 de maio de 2026 01:53:17 UTC">6 de maio de 2026 01:53:17</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="18 de maio de 2026 01:27:22 UTC">18 de maio de 2026 01:27:22</span>
   </span>
 
     
