@@ -503,3 +503,19 @@ O sumário deve ser uma lista Markdown aninhada (não links planos linha-por-lin
 - Criando templates para novos módulos
 - Orientando equipe sobre boas práticas de especificação
 - **Preferir formato hierárquico com contexto de seção** para novos requisitos em Markdown
+
+---
+
+## Registro de Novos Documentos no MkDocs
+
+Ao criar um novo arquivo em `docs/requisitos/`, é obrigatório registrá-lo no `nav:` do `mkdocs.yml`, sob a seção `Requisitos:`, seguindo a ordem dos demais arquivos.
+
+**Exemplo:**
+```yaml
+- Requisitos:
+    - Apuração de Regras: requisitos/apuracao-regras.md
+    - DRE e Regras: requisitos/DRE-regras.md
+    - Balanço Patrimonial: requisitos/balanco-patrimonial-regras.md  # novo arquivo
+```
+
+Sem esse registro, o documento não aparece na navegação do site gerado pelo MkDocs.
