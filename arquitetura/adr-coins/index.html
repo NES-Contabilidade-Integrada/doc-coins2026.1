@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../fluxo/">
+        <link rel="prev" href="../visao-de-implementacao/">
       
       
-        <link rel="next" href="../infraestrutura/">
+        <link rel="next" href="../../requisitos/apuracao-regras/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>DoD - DOCS COINS 2026.1</title>
+        <title>ADR COINS - DOCS COINS 2026.1</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#definicao-de-pronto-dod" class="md-skip">
+        <a href="#adr-coins" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DoD
+              ADR COINS
             
           </span>
         </div>
@@ -188,11 +188,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../arquitetura/especificacao-arquitetural/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../especificacao-arquitetural/" class="md-tabs__link">
           
   
   
@@ -288,13 +290,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../visao-geral/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../devops/visao-geral/" class="md-tabs__link">
           
   
   
@@ -390,26 +390,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -427,7 +432,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -445,7 +450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arquitetura/especificacao-arquitetural/" class="md-nav__link">
+      <a href="../especificacao-arquitetural/" class="md-nav__link">
         
   
   
@@ -473,7 +478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../arquitetura/visao-de-implementacao/" class="md-nav__link">
+      <a href="../visao-de-implementacao/" class="md-nav__link">
         
   
   
@@ -498,10 +503,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../arquitetura/adr-coins/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ADR COINS
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -517,6 +549,81 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adr-001-plataforma-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-001 Plataforma do Sistema
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-002-tecnologia-para-desenvolvimento-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-002 Tecnologia para desenvolvimento do sistema
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-003-linguagem-para-o-desenvolvimento-back-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-003 Linguagem para o desenvolvimento back-end
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-004-framework-para-o-desenvolvimento-front-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-004 Framework para o desenvolvimento front-end
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1105,31 +1212,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -1147,7 +1249,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1165,7 +1267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visao-geral/" class="md-nav__link">
+      <a href="../../devops/visao-geral/" class="md-nav__link">
         
   
   
@@ -1193,7 +1295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diretrizes-gerencia-configuracao/" class="md-nav__link">
+      <a href="../../devops/diretrizes-gerencia-configuracao/" class="md-nav__link">
         
   
   
@@ -1221,7 +1323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../modelo-ramificacao/" class="md-nav__link">
+      <a href="../../devops/modelo-ramificacao/" class="md-nav__link">
         
   
   
@@ -1249,7 +1351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../versionamento/" class="md-nav__link">
+      <a href="../../devops/versionamento/" class="md-nav__link">
         
   
   
@@ -1277,7 +1379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../padrao-commits/" class="md-nav__link">
+      <a href="../../devops/padrao-commits/" class="md-nav__link">
         
   
   
@@ -1305,7 +1407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fluxo/" class="md-nav__link">
+      <a href="../../devops/fluxo/" class="md-nav__link">
         
   
   
@@ -1330,37 +1432,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    DoD
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../devops/dod/" class="md-nav__link">
         
   
   
@@ -1376,70 +1451,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#codigo-codigo-commitado-e-seguindo-o-padrao-semantico-definido-no-repositorio-oficial" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Código - Código commitado e seguindo o padrão semântico definido, no repositório oficial.
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integracao-e-build-pull-request-aberto-com-descricao-clara-e-referencia-ao-ticket" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Integração e Build - Pull Request aberto com descrição clara e referência ao ticket.
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testes-testes-unitarios-relacionados-a-funcao-estao-implementados-e-funcionando" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Testes - Testes unitários relacionados à função estão implementados e funcionando.
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#revisao-e-aprovacao-revisao-por-pelo-menos-1-revisor-tecnico-aprovado" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Revisão e Aprovação - Revisão por pelo menos 1 revisor técnico aprovado.
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1452,7 +1463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infraestrutura/" class="md-nav__link">
+      <a href="../../devops/infraestrutura/" class="md-nav__link">
         
   
   
@@ -1480,7 +1491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pull-request-template/" class="md-nav__link">
+      <a href="../../devops/pull-request-template/" class="md-nav__link">
         
   
   
@@ -1508,7 +1519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../instrucoes-do-copilot/" class="md-nav__link">
+      <a href="../../devops/instrucoes-do-copilot/" class="md-nav__link">
         
   
   
@@ -1706,10 +1717,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#codigo-codigo-commitado-e-seguindo-o-padrao-semantico-definido-no-repositorio-oficial" class="md-nav__link">
+  <a href="#adr-001-plataforma-do-sistema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Código - Código commitado e seguindo o padrão semântico definido, no repositório oficial.
+        ADR-001 Plataforma do Sistema
       
     </span>
   </a>
@@ -1717,10 +1728,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#integracao-e-build-pull-request-aberto-com-descricao-clara-e-referencia-ao-ticket" class="md-nav__link">
+  <a href="#adr-002-tecnologia-para-desenvolvimento-do-sistema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Integração e Build - Pull Request aberto com descrição clara e referência ao ticket.
+        ADR-002 Tecnologia para desenvolvimento do sistema
       
     </span>
   </a>
@@ -1728,10 +1739,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#testes-testes-unitarios-relacionados-a-funcao-estao-implementados-e-funcionando" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Testes - Testes unitários relacionados à função estão implementados e funcionando.
+        
       
     </span>
   </a>
@@ -1739,10 +1750,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#revisao-e-aprovacao-revisao-por-pelo-menos-1-revisor-tecnico-aprovado" class="md-nav__link">
+  <a href="#adr-003-linguagem-para-o-desenvolvimento-back-end" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Revisão e Aprovação - Revisão por pelo menos 1 revisor técnico aprovado.
+        ADR-003 Linguagem para o desenvolvimento back-end
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-004-framework-para-o-desenvolvimento-front-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-004 Framework para o desenvolvimento front-end
       
     </span>
   </a>
@@ -1766,24 +1788,328 @@
 
 
 
-<h1 id="definicao-de-pronto-dod">Definição de Pronto (DoD)</h1>
-<p>A <strong>Definição de Pronto (DoD)</strong> é um conjunto de critérios de qualidade e padrões obrigatórios que toda funcionalidade ou alteração deve satisfazer para ser considerada completa e aceitável. Este checklist assegura a estabilidade, a rastreabilidade e o cumprimento das diretrizes de código e desenvolvimento estabelecidas neste documento, antes que o item de trabalho possa ser integrado ou entregue.</p>
-<h4 id="codigo-codigo-commitado-e-seguindo-o-padrao-semantico-definido-no-repositorio-oficial">Código - Código commitado e seguindo o padrão semântico definido, no repositório oficial.</h4>
+<h1 id="adr-coins">ADR-COINS</h1>
+<p><strong>Registro de Decisões Arquiteturais</strong></p>
+<p><strong>Histórico de versões</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Versão</th>
+<th style="text-align: left;">Data</th>
+<th style="text-align: left;">Descrição</th>
+<th style="text-align: left;">Autor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;">19/08/2025</td>
+<td style="text-align: left;">Adicionando estrutura inicial da ADR sobre a plataforma que será utilizada no sistema</td>
+<td style="text-align: left;">Pedro Nicoletti Sotoma</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.1.0</td>
+<td style="text-align: left;">19/08/2025</td>
+<td style="text-align: left;">Adicionando ADR para escolha de tecnologia principal do sistema</td>
+<td style="text-align: left;">Pedro Nicoletti Sotoma</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.1.1</td>
+<td style="text-align: left;">20/08/2025</td>
+<td style="text-align: left;">Centralizando documentos de ADRs em um único documento, ao invés de 1 para cada</td>
+<td style="text-align: left;">Pedro Nicoletti Sotoma</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.2.0</td>
+<td style="text-align: left;">20/08/2025</td>
+<td style="text-align: left;">Adicionando ADR para escolha de linguagem de desenvolvimento para o backend</td>
+<td style="text-align: left;">Pedro Nicoletti Sotoma</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.3.0</td>
+<td style="text-align: left;">20/08/2025</td>
+<td style="text-align: left;">Adicionando ADR para escolha de framework de desenvolvimento frontend</td>
+<td style="text-align: left;">Pedro Nicoletti Sotoma</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.4.0</td>
+<td style="text-align: left;">20/08/2025</td>
+<td style="text-align: left;">Adicionando ADR para escolha de banco de dados do sistema</td>
+<td style="text-align: left;">Pedro Nicoletti Sotoma</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.4.1</td>
+<td style="text-align: left;">21/08/2025</td>
+<td style="text-align: left;">Adicionando histórico de revisões das ADRs</td>
+<td style="text-align: left;">Pedro Nicoletti Sotoma</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.5.0</td>
+<td style="text-align: left;">27/08/2025</td>
+<td style="text-align: left;">Adicionando ADR para ferramenta de build</td>
+<td style="text-align: left;">Gustavo Fujinohara</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.5.1</td>
+<td style="text-align: left;">11/11/2025</td>
+<td style="text-align: left;">Ajustando sumário do documento</td>
+<td style="text-align: left;">Pedro Nicoletti Sotoma</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.6.0</td>
+<td style="text-align: left;">28/11/2025</td>
+<td style="text-align: left;">Adicionando ADR para uso do Copilot</td>
+<td style="text-align: left;">Wagner Rodrigues</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Histórico de revisões</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Versão</th>
+<th style="text-align: left;">Data</th>
+<th style="text-align: left;">Revisor</th>
+<th style="text-align: left;">Observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.0.0</td>
+<td style="text-align: left;">20/08/2025</td>
+<td style="text-align: left;">Wagner</td>
+<td style="text-align: left;">Aprovada</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.1.0</td>
+<td style="text-align: left;">20/08/2025</td>
+<td style="text-align: left;">Wagner</td>
+<td style="text-align: left;">Aprovada</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.2.0</td>
+<td style="text-align: left;">28/08/2025</td>
+<td style="text-align: left;">Gustavo Fujinohara</td>
+<td style="text-align: left;">Aprovada</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.3.0</td>
+<td style="text-align: left;">28/08/2025</td>
+<td style="text-align: left;">Gustavo Fujinohara</td>
+<td style="text-align: left;">Aprovada</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.4.0</td>
+<td style="text-align: left;">28/08/2025</td>
+<td style="text-align: left;">Wagner</td>
+<td style="text-align: left;">Aprovada</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.4.1</td>
+<td style="text-align: left;">28/08/2025</td>
+<td style="text-align: left;">Gustavo Fujinohara</td>
+<td style="text-align: left;">Aprovada</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.5.0</td>
+<td style="text-align: left;">28/08/2025</td>
+<td style="text-align: left;">Wagner</td>
+<td style="text-align: left;">Aprovada</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.5.1</td>
+<td style="text-align: left;">28/11/2025</td>
+<td style="text-align: left;">Wagner</td>
+<td style="text-align: left;">Aprovada</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.6.0</td>
+<td style="text-align: left;">28/11/2025</td>
+<td style="text-align: left;">Pedro Nicoletti Sotoma</td>
+<td style="text-align: left;">Aprovada</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sumário</strong></p>
+<p><strong><a href="#adr-001-plataforma-do-sistema">ADR-001 Plataforma do Sistema    3</a></strong></p>
+<p><a href="#adr-002-tecnologia-para-desenvolvimento-do-sistema"><strong>ADR-002 Tecnologia para desenvolvimento do sistema   5</strong></a></p>
+<p><a href="#adr-003-linguagem-para-o-desenvolvimento-back-end"><strong>ADR-003 Linguagem para o desenvolvimento back-end    7</strong></a></p>
+<p><a href="#adr-004-framework-para-o-desenvolvimento-front-end"><strong>ADR-004 Framework para o desenvolvimento front-end   9</strong></a></p>
+<p><a href="#adr-005-banco-de-dados-para-armazenamento-local"><strong>ADR-005 Banco de Dados para Armazenamento Local  11</strong></a></p>
+<p><a href="#adr-006-ferramenta-de-build-e-distribuição-do-aplicativo"><strong>ADR-006 Ferramenta de build e distribuição do aplicativo 13</strong></a></p>
+<p><a href="#adr-007-uso-do-github-copilot-nas-revisões-de-código-do-sistema-coins"><strong>ADR-007 Uso do GitHub Copilot nas Revisões de Código do Sistema COINS    15</strong></a></p>
+<h2 id="adr-001-plataforma-do-sistema"><strong>ADR-001 Plataforma do Sistema</strong></h2>
+<p><strong>Descrição:</strong> A equipe da disciplina de PDS2 (Práticas de Desenvolvimento de Software 2) está desenvolvendo um novo sistema para alunos cursando os semestres iniciais do curso de Ciências Contábeis.</p>
+<p><strong>Contexto:</strong></p>
 <ul>
-<li>O nome da branch está seguindo a semântica estabelecida.</li>
-<li>Lint/format executado pelo autor antes do push.</li>
+<li>O sistema precisa ser executado nos laboratórios de ensino da ESAN, garantindo fácil instalação, manutenção simples e compatibilidade com o ambiente de hardware disponível. Além disso, os alunos deverão ter acesso a uma solução funcional sem a necessidade de infraestrutura complexa de rede ou servidores externos.</li>
 </ul>
-<h4 id="integracao-e-build-pull-request-aberto-com-descricao-clara-e-referencia-ao-ticket">Integração e Build - Pull Request aberto com descrição clara e referência ao ticket.</h4>
+<p><strong>Decisão:</strong></p>
 <ul>
-<li>Build do CI passa (compilação / lint).</li>
+<li>Optamos por desenvolver um sistema desktop.</li>
 </ul>
-<h4 id="testes-testes-unitarios-relacionados-a-funcao-estao-implementados-e-funcionando">Testes - Testes unitários relacionados à função estão implementados e funcionando.</h4>
+<p><strong>Justificativa:</strong></p>
 <ul>
-<li>Cobertura mínima definida atendida (ex.: cobertura global ≥ 80% ou testes críticos cobertos).</li>
+<li><strong>Simplicidade:</strong> O desenvolvimento de um sistema desktop é mais simples por adotar uma arquitetura monolítica que centraliza toda a lógica necessária para o funcionamento.  </li>
+<li><strong>Implantação:</strong> A distribuição do sistema nos laboratórios é facilitada, já que basta disponibilizar um executável instalado em cada máquina, sem necessidade de servidores adicionais.  </li>
+<li><strong>Independência de Rede:</strong> O sistema pode funcionar mesmo sem conexão à internet, reduzindo riscos de indisponibilidade por falhas de rede.  </li>
+<li><strong>Aderência ao Contexto:</strong> Considerando que o uso é restrito aos laboratórios, a solução desktop atende de forma adequada ao escopo e aos recursos disponíveis.</li>
 </ul>
-<h4 id="revisao-e-aprovacao-revisao-por-pelo-menos-1-revisor-tecnico-aprovado">Revisão e Aprovação - Revisão por pelo menos 1 revisor técnico aprovado.</h4>
+<p><strong>Consequências:</strong></p>
 <ul>
-<li>Comentário no PR do revisor. Através de um simples comentário de aprovado ou até um feedback técnico.</li>
+<li><strong>Positivas</strong>  </li>
+<li>Facilita o desenvolvimento inicial do sistema.  </li>
+<li>Implantação simples e rápida.  </li>
+<li>Não depende de infraestrutura de rede.  </li>
+<li><strong>Negativos</strong>  </li>
+<li>O executável pode demandar mais recursos do hardware da máquina, dependendo da complexidade futura.  </li>
+<li>Arquitetura monolítica pode dificultar escalabilidade e manutenção em longo prazo.  </li>
+<li>Atualizações exigem reinstalação em todas as máquinas.</li>
+</ul>
+<p><strong>Alternativas Consideradas:</strong></p>
+<ul>
+<li><strong>Sistema mobile:</strong>   </li>
+<li><strong>Prós:</strong> Portabilidade e possibilidade de acesso fora do laboratório.  </li>
+<li><strong>Contras:</strong> Desenvolvimento mais complexo, necessidade de publicação em lojas de aplicativos e limitação de uso em laboratórios (nem todos os alunos têm dispositivos compatíveis).  </li>
+<li>
+<p><strong>Motivo da Rejeição:</strong> O uso pretendido é em laboratórios de ensino, e exigir dispositivos móveis criaria barreiras de acesso e complexidade desnecessária.</p>
+</li>
+<li>
+<p><strong>Sistema Web:</strong>   </p>
+</li>
+<li><strong>Prós:</strong> Facilidade de atualização (aplicação centralizada em servidor), acessível em diferentes dispositivos, escalável e multiplataforma.  </li>
+<li><strong>Contras:</strong> Necessidade de infraestrutura de rede estável e servidor dedicado, aumento da complexidade de implantação e custos de manutenção.  </li>
+<li><strong>Motivo da Rejeição:</strong> Nos laboratórios da ESAN não há garantia de infraestrutura robusta de rede e servidor, o que poderia comprometer a disponibilidade do sistema.</li>
+</ul>
+<h2 id="adr-002-tecnologia-para-desenvolvimento-do-sistema"><strong>ADR-002 Tecnologia para desenvolvimento do sistema</strong></h2>
+<p><strong>Descrição:</strong> A equipe da disciplina de PDS2 (Práticas de Desenvolvimento de Software 2) se reuniu para decidir qual tecnologia seria mais adequada para implementação do sistema.</p>
+<p><strong>Contexto:</strong></p>
+<ul>
+<li>O Sistema COINS necessita de uma tecnologia para implementação de um sistema desktop robusto que possa ser utilizado nos laboratórios da ESAN.</li>
+</ul>
+<p><strong>Decisão:</strong></p>
+<ul>
+<li>Optamos por utilizar o Electron.</li>
+</ul>
+<p><strong>Justificativa:</strong></p>
+<ul>
+<li>
+<p><strong>Simplicidade e conhecimento da equipe:</strong> O Electron tem como base JavaScript, tecnologia já conhecida pela maioria da equipe e com amplo apoio da comunidade.</p>
+</li>
+<li>
+<p><strong>Distribuição:</strong> O Electron pode ser compilado em qualquer sistema operacional desktop (Windows, Linux, MacOS) e gera um executável adequado para cada contexto.</p>
+</li>
+<li>
+<p><strong>Ecossistema:</strong> Permite integração com bibliotecas web modernas (React, Vue, Angular, etc.) e acesso a APIs do sistema operacional.</p>
+</li>
+<li>
+<p><strong>Manutenção e evolução:</strong> A grande comunidade garante atualizações frequentes, tutoriais e suporte para novas demandas.</p>
+</li>
+</ul>
+<p><strong>Consequências:</strong></p>
+<ul>
+<li><strong>Positivas</strong>  </li>
+<li>
+<p>Desenvolvimento multiplataforma com uma única base de código.</p>
+</li>
+<li>
+<p>Rapidez no desenvolvimento inicial, aproveitando conhecimentos já adquiridos da equipe em tecnologias web.</p>
+</li>
+<li>
+<p>Grande ecossistema de pacotes e bibliotecas disponíveis.</p>
+</li>
+<li>
+<p>Facilita o design de interfaces ricas e responsivas.</p>
+</li>
+<li>
+<p><strong>Negativos</strong>  </p>
+</li>
+<li>
+<p>Alto consumo de memória e recursos comparado a aplicações nativas.</p>
+</li>
+<li>
+<p>Maior tamanho final do executável.</p>
+</li>
+<li>
+<p>Dependência do Node.js e Chromium embutidos.</p>
+</li>
+<li>
+<p>Possíveis problemas de desempenho em máquinas com recursos limitados.</p>
+</li>
+</ul>
+<p><strong>Alternativas Consideradas:</strong></p>
+<ul>
+<li><strong>JavaFx</strong>  </li>
+<li><strong>Prós:</strong> Conhecimento da equipe  </li>
+<li><strong>Contras:</strong> Layout pouco amigável para o cliente, tecnologia demasiadamente rígida e robusta.  </li>
+<li>
+<p><strong>Motivo da Rejeição:</strong> Experiência do usuário confusa para os alunos do primeiro semestre de Ciências Contábeis.</p>
+</li>
+<li>
+<p><strong>Tauri</strong>  </p>
+</li>
+<li><strong>Prós:</strong> Executável otimizado, compatibilidade com todos sistemas operacionais.  </li>
+<li><strong>Contras:</strong> Equipe sem nenhum background com Rust.    </li>
+<li><strong>Motivo da Rejeição:</strong> Curva de aprendizagem muito elevada.</li>
+</ul>
+<p><strong>Referências:</strong></p>
+<ul>
+<li><a href="https://www.electronjs.org/docs/latest">https://www.electronjs.org/docs/latest</a>   </li>
+<li><a href="https://openjfx.io/javadoc/24/javafx.graphics/javafx/scene/doc-files/cssref.html">https://openjfx.io/javadoc/24/javafx.graphics/javafx/scene/doc-files/cssref.html</a>   </li>
+<li><a href="https://v1.tauri.app">https://v1.tauri.app</a> </li>
+</ul>
+<h2 id="_1"></h2>
+<h2 id="adr-003-linguagem-para-o-desenvolvimento-back-end"><strong>ADR-003 Linguagem para o desenvolvimento back-end</strong></h2>
+<p><strong>Descrição:</strong> A equipe da disciplina de PDS2 (Práticas de Desenvolvimento de Software 2) se reuniu para decidir qual seria a linguagem utilizada para desenvolver o backend do sistema</p>
+<p><strong>Contexto:</strong></p>
+<ul>
+<li>O Sistema COINS necessita de uma linguagem robusta e compatível com Electron para o desenvolvimento do backend. O Electron tem como base um ambiente Node.js, necessitando de uma linguagem que ofereça segurança, robustez para manipulação de dados financeiros e integração nativa com o ecossistema do próprio Electron. A escolha impactará diretamente a manutenibilidade, a confiabilidade dos dados e a produtividade do desenvolvimento.</li>
+</ul>
+<p><strong>Decisão:</strong></p>
+<ul>
+<li>Optamos por utilizar TypeScript.</li>
+</ul>
+<p><strong>Justificativa:</strong></p>
+<ul>
+<li>
+<p><strong>Integração com o Ecossistema Node.js/Electron:</strong> O Electron é construído sobre Node.js. TypeScript é um superconjunto (superset) do JavaScript e transpila para JavaScript puro, garantindo 100% de compatibilidade com o runtime do Node.js e com todas as APIs do Electron. Isso permite acesso direto e irrestrito a um vasto ecossistema de pacotes via NPM, manipulação de arquivos e outras funcionalidades essenciais para o backend.</p>
+</li>
+<li>
+<p><strong>Robustez e Segurança de Tipos:</strong> O contexto de uma aplicação de contabilidade exige alta precisão e confiabilidade na manipulação de dados (valores monetários, transações, datas). O sistema de tipos estáticos do TypeScript mitiga uma classe inteira de erros em tempo de execução, como TypeError e undefined is not a function, que são comuns em JavaScript. Isso garante que as estruturas de dados sejam consistentes e que as operações financeiras sejam mais seguras e previsíveis, reduzindo a necessidade de validações manuais excessiva no código.</p>
+</li>
+</ul>
+<p><strong>Consequências:</strong></p>
+<ul>
+<li>
+<p><strong>Positivas</strong></p>
+</li>
+<li>
+<p><strong>Integração Simplificada:</strong> O uso da mesma "família" de linguagens (TypeScript/JavaScript) simplifica a troca de dados e a configuração do ambiente de desenvolvimento.</p>
+</li>
+<li>
+<p><strong>Redução de Bugs em Produção:</strong> A verificação de tipos em tempo de compilação captura erros antes mesmo da execução do software, aumentando a qualidade e a confiabilidade do sistema.</p>
+</li>
+<li>
+<p><strong>Negativos</strong>  </p>
+</li>
+<li><strong>Complexidade no Build:</strong> É necessária uma etapa de transpilação (de TypeScript para JavaScript) no processo de build da aplicação. Isso adiciona uma leve complexidade ao setup inicial do projeto, que pode ser facilmente gerenciada com ferramentas como <strong>tsc</strong> (TypeScript Compiler) ou <strong>esbuild</strong>.</li>
+</ul>
+<p><strong>Alternativas Consideradas:</strong></p>
+<ul>
+<li><strong>Javascript</strong>  </li>
+<li><strong>Prós:</strong> Linguagem mais prática e facilitada.  </li>
+<li><strong>Contras:</strong> Sem tipagem, abrindo brechas para problemas com o contexto de contas e casting.  </li>
+<li><strong>Motivo da Rejeição:</strong> Necessidade de maior robustez no contexto de contabilidade.  </li>
+<li><strong>Java Spring Boot</strong>   </li>
+<li><strong>Prós:</strong> Robusto, fortemente tipado e confiável.  </li>
+<li><strong>Contras:</strong> Alta complexidade e over engineering para o contexto.    </li>
+<li><strong>Motivo da Rejeição:</strong> Curva de aprendizagem muito elevada, desenvolvimento muito lento e massante para o contexto.</li>
+</ul>
+<h2 id="adr-004-framework-para-o-desenvolvimento-front-end"><strong>ADR-004 Framework para o desenvolvimento front-end</strong></h2>
+<p><strong>Descrição:</strong> A equipe da disciplina de PDS2 (Práticas de Desenvolvimento de Software 2) se reuniu para decidir qual seria o framework JavaScript utilizado para desenvolver a interface de usuário (frontend) do sistema.</p>
+<p><strong>Contexto:</strong></p>
+<ul>
+<li>O Sistema COINS necessita de um framework capaz de criar interfaces reativas, suportar componentes modulares e funcionar bem dentro do ecossistema Electron.</li>
 </ul>
 
 
@@ -1807,7 +2133,7 @@
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="6 de maio de 2026 02:14:39 UTC">6 de maio de 2026 02:14:39</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="21 de maio de 2026 16:39:56 UTC">21 de maio de 2026 16:39:56</span>
   </span>
 
     
@@ -1817,7 +2143,7 @@
     <span class="md-icon" title="Criado em">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="14 de março de 2026 22:41:53 UTC">14 de março de 2026 22:41:53</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="21 de maio de 2026 16:39:56 UTC">21 de maio de 2026 16:39:56</span>
   </span>
 
     
