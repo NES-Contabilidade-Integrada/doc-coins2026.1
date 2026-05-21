@@ -41,6 +41,7 @@ nav:
   - Arquitetura:
       - Especificação Arquitetural: arquitetura/especificacao-arquitetural.md
       - Visão de Implementação: arquitetura/visao-de-implementacao.md
+      - ADR COINS: arquitetura/adr-coins.md
   - Requisitos:
       - Apuração de Regras: requisitos/apuracao-regras.md
       - DRE e Regras: requisitos/DRE-regras.md
