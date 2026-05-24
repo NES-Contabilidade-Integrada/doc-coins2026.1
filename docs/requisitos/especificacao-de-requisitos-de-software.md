@@ -82,7 +82,12 @@
             - [RF-036 Calcular e Exibir Lucro Líquido](#calcular-e-exibir-lucro-líquido)
             - [RF-037 Exibir Composição das Contas da DRE](#exibir-composição-das-contas-da-dre)
         - [6.1.8. Balanço Patrimonial](#balanço-patrimonial)
-            - [RF-038 Exibir Balanço Patrimonial](#exibir-balanco-patrimonial)
+            - [RF-038 Filtrar Período do Balanço Patrimonial](#filtrar-período-do-balanço-patrimonial)
+            - [RF-039 Exibir Resumo do Balanço Patrimonial](#exibir-resumo-do-balanco-patrimonial)
+            - [RF-040 Exibir Grupos e Totais do Balanço Patrimonial](#exibir-grupos-e-totais-do-balanco-patrimonial)
+            - [RF-041 Aplicar Regra de Sinalização de Valores Consolidados](#aplicar-regra-de-sinalização-de-valores-consolidados)
+            - [RF-042 Exibir Conferência do Balanço](#exibir-conferência-do-balanco)
+            - [RF-043 Exportar Relatório do Balanço Patrimonial](#exportar-relatorio-do-balanco-patrimonial)
     - [6.2. Requisitos Não-Funcionais](#requisitos-não-funcionais)
         - [Compatibilidade](#compatibilidade)
         - [Portabilidade](#portabilidade)
@@ -1019,23 +1024,123 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 
 Esta subseção descreve os requisitos relacionados à apresentação do Balanço Patrimonial, cuja função é consolidar os saldos dos grupos Ativo, Passivo e Patrimônio Líquido em um determinado período e permitir a conferência do fechamento contábil.
 
-##### RF-038 Exibir Balanço Patrimonial {#exibir-balanco-patrimonial}
+##### RF-038 Filtrar Período do Balanço Patrimonial {#filtrar-período-do-balanco-patrimonial}
 
 <table style="width:100%">
 <thead>
 <tr>
-  <th style="background-color:#2E74B5; color:white;">Exibir Balanço Patrimonial</th>
+  <th style="background-color:#2E74B5; color:white;">Filtrar Período do Balanço Patrimonial</th>
   <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
 </tr>
 </thead>
 <tbody>
-<tr><td colspan="2">O sistema deve exibir o Balanço Patrimonial com os blocos de Ativo, Passivo e Patrimônio Líquido, apresentando os totais consolidados e o status do balanço.</td></tr>
+<tr><td colspan="2">O sistema deve permitir que o usuário especifique o período inicial e final para apuração do Balanço Patrimonial.</td></tr>
 <tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
-<tr><td colspan="2"><strong>CA-1.</strong> O Balanço deve apresentar os totais: Total do Ativo, Total do Passivo e Patrimônio Líquido.</td></tr>
-<tr><td colspan="2"><strong>CA-2.</strong> O status do balanço deve ser calculado pela fórmula: <code>Ativo = Passivo + Patrimônio Líquido</code>.</td></tr>
-<tr><td colspan="2"><strong>CA-3.</strong> Quando a igualdade for atendida, exibir o status <strong>Fechado</strong>; caso contrário, exibir <strong>Aberto</strong>.</td></tr>
-<tr><td colspan="2"><strong>CA-4.</strong> Exibir os valores no formato R$ com duas casas decimais.</td></tr>
-<tr><td colspan="2"><strong>CA-5.</strong> O balanço deve indicar a natureza esperada de cada grupo: Devedora para Ativo; Credora para Passivo e Patrimônio Líquido.</td></tr>
+<tr><td colspan="2"><strong>CA-1.</strong> Os campos <strong>Período Inicial</strong> e <strong>Período Final</strong> devem ser obrigatórios e aceitar o formato <code>DD/MM/YYYY</code>.</td></tr>
+<tr><td colspan="2"><strong>CA-2.</strong> Os valores padrão ao acessar a tela devem ser o primeiro e o último dia do ano atual.</td></tr>
+<tr><td colspan="2"><strong>CA-3.</strong> O balanço deve considerar apenas lançamentos realizados dentro do período selecionado.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"></td></tr>
+</tbody>
+</table>
+
+##### RF-039 Exibir Resumo do Balanço Patrimonial {#exibir-resumo-do-balanco-patrimonial}
+
+<table style="width:100%">
+<thead>
+<tr>
+  <th style="background-color:#2E74B5; color:white;">Exibir Resumo do Balanço Patrimonial</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="2">O sistema deve apresentar um resumo com os principais valores do balanço: Total do Ativo, Total do Passivo, Patrimônio Líquido e Status.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"><strong>CA-1.</strong> Exibir os valores no formato <strong>R$</strong> com duas casas decimais.</td></tr>
+<tr><td colspan="2"><strong>CA-2.</strong> O status deve ser <strong>Fechado</strong> quando Total do Ativo = Passivo + Patrimônio Líquido, e <strong>Aberto</strong> caso contrário.</td></tr>
+<tr><td colspan="2"><strong>CA-3.</strong> Deve ficar claro ao usuário se o balanço está fechado ou aberto.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"></td></tr>
+</tbody>
+</table>
+
+##### RF-040 Exibir Grupos e Totais do Balanço Patrimonial {#exibir-grupos-e-totais-do-balanco-patrimonial}
+
+<table style="width:100%">
+<thead>
+<tr>
+  <th style="background-color:#2E74B5; color:white;">Exibir Grupos e Totais do Balanço Patrimonial</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="2">O sistema deve exibir os grupos do balanço organizados por Ativo, Passivo e Patrimônio Líquido, incluindo os totais de cada grupo e as contas analíticas com a coluna D/C.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"><strong>CA-1.</strong> Os grupos principais devem ser Ativo, Passivo e Patrimônio Líquido.</td></tr>
+<tr><td colspan="2"><strong>CA-2.</strong> As contas analíticas devem exibir os campos: <strong>Código</strong>, <strong>Conta</strong>, <strong>Saldo Atual</strong> e <strong>D/C</strong>.</td></tr>
+<tr><td colspan="2"><strong>CA-3.</strong> Os totais de cada grupo devem ser exibidos no formato <strong>R$</strong> com duas casas decimais.</td></tr>
+<tr><td colspan="2"><strong>CA-4.</strong> A interface deve permitir expandir e recolher grupos, mostrando apenas o nome e total quando recolhidos.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"></td></tr>
+</tbody>
+</table>
+
+##### RF-041 Aplicar Regra de Sinalização de Valores Consolidados {#aplicar-regra-de-sinalização-de-valores-consolidados}
+
+<table style="width:100%">
+<thead>
+<tr>
+  <th style="background-color:#2E74B5; color:white;">Aplicar Regra de Sinalização de Valores Consolidados</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="2">O sistema deve aplicar sinal negativo em valores consolidados exibidos sem a coluna D/C quando o saldo estiver contrário à natureza contábil esperada do grupo.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"><strong>CA-1.</strong> Ativo: exibir sem sinal quando o saldo for devedor e com sinal negativo quando o saldo for credor.</td></tr>
+<tr><td colspan="2"><strong>CA-2.</strong> Passivo: exibir sem sinal quando o saldo for credor e com sinal negativo quando o saldo for devedor.</td></tr>
+<tr><td colspan="2"><strong>CA-3.</strong> Patrimônio Líquido: exibir sem sinal quando o saldo for credor e com sinal negativo quando o saldo for devedor.</td></tr>
+<tr><td colspan="2"><strong>CA-4.</strong> Essa regra deve ser aplicada a totais consolidados, totais de segundo nível e totais dos relatórios exportados quando não houver coluna D/C.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"></td></tr>
+</tbody>
+</table>
+
+##### RF-042 Exibir Conferência do Balanço {#exibir-conferência-do-balanco}
+
+<table style="width:100%">
+<thead>
+<tr>
+  <th style="background-color:#2E74B5; color:white;">Exibir Conferência do Balanço</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="2">O sistema deve exibir a seção de conferência com Ativo Total, Passivo + PL, Diferença e Status do balanço.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"><strong>CA-1.</strong> Exibir Ativo Total, Passivo + PL e Diferença no formato <strong>R$</strong> com duas casas decimais.</td></tr>
+<tr><td colspan="2"><strong>CA-2.</strong> Calcular a diferença como <code>Ativo Total - (Passivo + Patrimônio Líquido)</code>.</td></tr>
+<tr><td colspan="2"><strong>CA-3.</strong> Exibir <strong>Fechado</strong> quando a diferença for R$ 0,00 e <strong>Aberto</strong> quando for diferente de R$ 0,00.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"></td></tr>
+</tbody>
+</table>
+
+##### RF-043 Exportar Relatório do Balanço Patrimonial {#exportar-relatorio-do-balanco-patrimonial}
+
+<table style="width:100%">
+<thead>
+<tr>
+  <th style="background-color:#2E74B5; color:white;">Exportar Relatório do Balanço Patrimonial</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="2">O sistema deve permitir exportar o relatório do Balanço Patrimonial em formato de documento com informações do cabeçalho, período, empresa e totais.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"><strong>CA-1.</strong> O relatório deve apresentar cabeçalho institucional, nome do sistema, título do relatório, empresa, CNPJ, período e data/hora de geração.</td></tr>
+<tr><td colspan="2"><strong>CA-2.</strong> O relatório exportado deve exibir a estrutura do balanço até o terceiro nível do plano de contas.</td></tr>
+<tr><td colspan="2"><strong>CA-3.</strong> Os totais do relatório exportado devem seguir a mesma regra de sinalização dos valores consolidados sem D/C.</td></tr>
 <tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
 <tr><td colspan="2"></td></tr>
 </tbody>
