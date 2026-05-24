@@ -1,8 +1,13 @@
 # COIN'S — Contabilidade Integrada
 
-Bem-vindo ao COIN'S! Este sistema foi idealizado pelo Núcleo de Práticas de Engenharia de Software e teve início no segundo semestre de 2025.
+Bem-vindo ao COIN'S! Este projeto foi idealizado pelo **Núcleo de Práticas de Engenharia de Software**, com início no segundo semestre de 2025.
 
-O COIN'S é um aplicativo desktop pensado para estudantes dos primeiros períodos de Ciências Contábeis, oferecendo um ambiente seguro e intuitivo para praticar lançamentos, compreender relatórios e consolidar os fundamentos contábeis.
+O COIN'S é um **aplicativo desktop** voltado aos estudantes dos primeiros períodos de Ciências Contábeis. Ele oferece um ambiente prático e guiado para:
+
+- realizar lançamentos contábeis;
+- acompanhar a formação de relatórios financeiros;
+- validar regras de apuração patrimonial e de resultado;
+- consolidar conceitos por meio de exercícios reais.
 
 Assista ao vídeo de apresentação para conhecer o sistema em ação:
 
@@ -12,78 +17,39 @@ Assista ao vídeo de apresentação para conhecer o sistema em ação:
 
 ---
 
-## Navegação Rápida
+## Artefatos por área
 
-- [Início](index.md)
-- [Arquitetura](arquitetura/especificacao-arquitetural.md)
-- [Requisitos](requisitos/apuracao-regras.md)
-- [Banco de Dados](banco-de-dados/documentacao-modelo-dados.md)
-- [Qualidade e Testes](qualidade-testes/plano-de-testes.md)
-- [Gerência de Projeto](gerencia-projeto/plano-do-projeto.md)
-- [DevOps](devops/visao-geral.md)
-- [Decisões](decisoes/decisoes.md)
+A documentação reúne os principais entregáveis do projeto, organizados por área de responsabilidade:
+
+- **Arquitetura**: visão de alto nível, especificação arquitetural, diagramas e decisões estruturais.
+- **Requisitos**: requisitos de produto e software, regras de negócio para apuração de DRE e Balanço Patrimonial.
+- **Banco de Dados**: modelo de dados, dicionário e documentação do modelo lógico.
+- **Interface e Experiência**: protótipos, visão de implementação e critérios de usabilidade.
+- **Qualidade e Testes**: plano de testes, critérios de aceitação e estratégias de validação.
+- **Gerência de Projeto**: planejamento, políticas de configuração, modelo de ramificação e relatórios de progresso.
+- **DevOps**: infraestrutura proposta, fluxo de trabalho e práticas de integração contínua.
+- **Decisões**: registro de decisões técnicas e de projeto que sustentam a solução.
 
 ---
 
-## Objetivo
+## Pontos de atenção
 
-O COINS é um sistema educacional que permite a execução de atividades contábeis em um ambiente controlado. O foco está em:
+Esta documentação destaca as principais contribuições do COIN'S para o ensino de contabilidade:
 
-* apoiar o aprendizado prático de registros contábeis;
-* permitir a análise de resultados financeiros por meio de relatórios;
-* oferecer uma base para avaliações acadêmicas e revisão de processos.
+- **Foco pedagógico**: o sistema suporta alunos em fases iniciais com recursos de prática e aprendizado progressivo.
+- **Atenção à qualidade**: o projeto documenta critérios de teste e validação para assegurar confiabilidade.
+- **Coerência entre artefatos**: arquitetura, requisitos e dados estão alinhados para suportar o uso real do sistema.
+- **Rastreabilidade**: decisões e regras de negócio são registradas para facilitar análise técnica.
 
 ---
 
 ## Escopo desta documentação
 
-Este repositório reúne os principais artefatos do projeto, incluindo:
+Este repositório reúne os artefatos essenciais do projeto, incluindo:
 
 * arquitetura e decisões de projeto;
-* requisitos de produto e requisitos de software;
+* requisitos de produto, regras de negócio e documentação de apuração contábil;
 * modelagem de dados e dicionário de dados;
-* interface e experiência do usuário;
-* estratégia de qualidade e testes;
+* interface, experiência do usuário e visão de implementação;
+* estratégia de qualidade, testes e validação;
 * governança de projeto e práticas de DevOps.
-
----
-
-## Navegação
-
-Use o menu lateral para acessar cada área do projeto:
-
-* **Arquitetura**: visão geral, diagramas e decisões arquiteturais.
-* **Requisitos**: visão do produto, requisitos funcionais e não funcionais, e documentação de regras.
-* **Banco de Dados**: modelo conceitual, modelo lógico, documentação do modelo e dicionário de dados.
-* **IHC**: personas, jornada do usuário e protótipos.
-* **Qualidade e Testes**: estratégia, plano, casos de teste e cobertura.
-* **Gerência de Projeto**: planejamento, cronograma, riscos e templates de documentos.
-* **DevOps**: infraestrutura, fluxo de trabalho, versionamento e integração contínua.
-* **Decisões**: registros de decisão e templates de requisitos.
-
----
-
-## Como usar esta documentação
-
-No diretório raiz do projeto, execute:
-
-```bash
-python -m mkdocs serve
-```
-
-Em seguida, acesse:
-
-```
-http://127.0.0.1:8000
-```
-
----
-
-## Público-alvo
-
-Esta documentação é destinada a:
-
-* estudantes de Ciências Contábeis;
-* professores e tutores do curso;
-* desenvolvedores e analistas que mantêm o sistema;
-* avaliadores de qualidade e gestores acadêmicos.
