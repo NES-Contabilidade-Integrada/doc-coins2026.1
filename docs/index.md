@@ -1,12 +1,14 @@
-# COINS — Contabilidade Integrada Simplificada
+# COIN'S — Contabilidade Integrada
 
-Bem-vindo ao COINS! Este sistema foi idealizado pelo Núcleo de Práticas de Engenharia de Software e teve início no segundo semestre de 2025.
+Bem-vindo ao COIN'S! Este sistema foi idealizado pelo Núcleo de Práticas de Engenharia de Software e teve início no segundo semestre de 2025.
 
-O COINS é um aplicativo desktop pensado para estudantes dos primeiros períodos de Ciências Contábeis, oferecendo um ambiente seguro e intuitivo para praticar lançamentos, compreender relatórios e consolidar os fundamentos contábeis.
+O COIN'S é um aplicativo desktop pensado para estudantes dos primeiros períodos de Ciências Contábeis, oferecendo um ambiente seguro e intuitivo para praticar lançamentos, compreender relatórios e consolidar os fundamentos contábeis.
 
 Assista ao vídeo de apresentação para conhecer o sistema em ação:
 
+<div style="text-align:center;">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FLl8JhWhBFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ---
 
