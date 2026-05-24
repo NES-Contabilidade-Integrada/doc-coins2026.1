@@ -53,14 +53,13 @@
             - [RF-09 Aplicar Filtros do Balancete](#aplicar-filtros-do-balancete)
             - [RF-010 Exibir Balancete de Verificação](#exibir-balancete-de-verificação)
             - [RF-011 Exibir Resumo do Balancete](#exibir-resumo-do-balancete)
-        - [6.1.6. Balanço Patrimonial](#balanço-patrimonial)
-        - [6.1.7. Apuração do Resultado](#apuração-do-resultado)
+        - [6.1.6. Apuração do Resultado](#apuração-do-resultado)
             - [RF-012 Filtrar Data da Apuração](#filtrar-data-da-apuração)
             - [RF-013 Exibir Resumo do Resultado](#exibir-resumo-do-resultado)
             - [RF-014 Exibir Contas de Resultado](#exibir-contas-de-resultado)
             - [RF-015 Exibir Lançamentos de Encerramento](#exibir-lançamentos-de-encerramento)
             - [RF-016 Exibir Confronto da Apuração](#exibir-confronto-da-apuração)
-            - [RF-017 Exibir Transferência do Resultado](#exibir-transferência-do-resultado)
+            - [RF-017 Exibir Transferência do Resultado](#exibir-transferência-da-apuração)
             - [RF-018 Exibir Resultado Final](#exibir-resultado-final)
             - [RF-019 Realizar Apuração](#realizar-apuração)
             - [RF-020 Exibir Histórico de Apurações](#exibir-histórico-de-apurações)
@@ -82,6 +81,8 @@
             - [RF-035 Exibir Impostos sobre o Lucro](#exibir-impostos-sobre-o-lucro)
             - [RF-036 Calcular e Exibir Lucro Líquido](#calcular-e-exibir-lucro-líquido)
             - [RF-037 Exibir Composição das Contas da DRE](#exibir-composição-das-contas-da-dre)
+        - [6.1.8. Balanço Patrimonial](#balanço-patrimonial)
+            - [RF-038 Exibir Balanço Patrimonial](#exibir-balanco-patrimonial)
     - [6.2. Requisitos Não-Funcionais](#requisitos-não-funcionais)
         - [Compatibilidade](#compatibilidade)
         - [Portabilidade](#portabilidade)
@@ -135,8 +136,8 @@ A seção de Módulos apresenta uma visão macro das grandes funcionalidades do 
 | **Módulo 3** | Livro Razão |
 | **Módulo 4** | Balancete de Verificação |
 | **Módulo 5** | Apuração do Resultado |
-| **Módulo 6** | Balanço Patrimonial |
-| **Módulo 7** | Demonstração do Resultado do Exercício |
+| **Módulo 6** | Demonstração do Resultado do Exercício |
+| **Módulo 7** | Balanço Patrimonial |
 
 ## Modelo dos Requisitos Funcionais {#modelo-dos-requisitos-funcionais}
 O seguinte exemplo demonstra o modelo adotado para os requisitos funcionais. O uso foi especificado no documento [Fundamento da Estrutura dos Requisitos](https://docs.google.com/document/u/0/d/1eAsVxnGFQnY8Fp2fKZukeNej2aNxZxu0_dLkIjcqvxE/edit).
@@ -163,7 +164,7 @@ Modelo de Especificação - Requisitos Funcionais.
 Esta seção descreve os requisitos que definem o comportamento e as características do sistema COIN’S (Contabilidade Integrada). Os requisitos foram organizados em duas categorias: Requisitos Funcionais, que descrevem o que o sistema deve fazer, e Requisitos Não-Funcionais, que especificam restrições e qualidades esperadas. Cada requisito funcional está associado a um Módulo, de forma a manter a rastreabilidade entre as funcionalidades e os objetivos do projeto.
 
 ### Requisitos Funcionais {#requisitos-funcionais}
-Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer para atender às necessidades dos usuários. Eles estão organizados por seções que correspondem aos principais módulos do sistema: Menu, Empresas, Plano de Contas, Livro Diário, Livro Razão, Balancete, Balanço Patrimonial, Apuração do Resultado e Demonstração do Resultado do Exercício. Cada requisito segue o padrão definido no modelo apresentado anteriormente, contendo sua descrição, critérios de aceite e exceções associadas aos critérios especificados.
+Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer para atender às necessidades dos usuários. Eles estão organizados por seções que correspondem aos principais módulos do sistema: Menu, Empresas, Plano de Contas, Livro Diário, Livro Razão, Balancete, Apuração do Resultado, Demonstração do Resultado do Exercício e Balanço Patrimonial. Cada requisito segue o padrão definido no modelo apresentado anteriormente, contendo sua descrição, critérios de aceite e exceções associadas aos critérios especificados.
 
 #### Menu {#menu}
 Esta subseção apresenta os requisitos relacionados à navegação do sistema. O menu é o ponto central de acesso às funcionalidades, permitindo ao usuário visualizar as opções disponíveis e alternar entre diferentes seções de forma intuitiva e consistente. 
@@ -463,32 +464,6 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 </tbody>
 </table>
 
-#### Balanço Patrimonial {#balanço-patrimonial}
-
-Esta subseção descreve os requisitos relacionados à apresentação do Balanço Patrimonial, cuja função é consolidar os saldos dos grupos Ativo, Passivo e Patrimônio Líquido em um determinado período e permitir a conferência do fechamento contábil.
-
-##### RF-038 Exibir Balanço Patrimonial {#exibir-balanco-patrimonial}
-
-<table style="width:100%">
-<thead>
-<tr>
-  <th style="background-color:#2E74B5; color:white;">Exibir Balanço Patrimonial</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
-</tr>
-</thead>
-<tbody>
-<tr><td colspan="2">O sistema deve exibir o Balanço Patrimonial com os blocos de Ativo, Passivo e Patrimônio Líquido, apresentando os totais consolidados e o status do balanço.</td></tr>
-<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
-<tr><td colspan="2"><strong>CA-1.</strong> O Balanço deve apresentar os totais: Total do Ativo, Total do Passivo e Patrimônio Líquido.</td></tr>
-<tr><td colspan="2"><strong>CA-2.</strong> O status do balanço deve ser calculado pela fórmula: <code>Ativo = Passivo + Patrimônio Líquido</code>.</td></tr>
-<tr><td colspan="2"><strong>CA-3.</strong> Quando a igualdade for atendida, exibir o status <strong>Fechado</strong>; caso contrário, exibir <strong>Aberto</strong>.</td></tr>
-<tr><td colspan="2"><strong>CA-4.</strong> Exibir os valores no formato R$ com duas casas decimais.</td></tr>
-<tr><td colspan="2"><strong>CA-5.</strong> O balanço deve indicar a natureza esperada de cada grupo: Devedora para Ativo; Credora para Passivo e Patrimônio Líquido.</td></tr>
-<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
-<tr><td colspan="2"></td></tr>
-</tbody>
-</table>
-
 #### Apuração do Resultado
 
 Esta subseção descreve as funcionalidades relacionadas à **Apuração do Resultado do Exercício (ARE)**, que tem como objetivo apresentar uma prévia completa do que será efetivamente executado no momento da apuração do resultado do período, antes da confirmação da ação.
@@ -716,7 +691,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Filtrar Período da DRE</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -738,7 +713,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Receita Bruta</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -758,7 +733,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Deduções da Receita</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -779,7 +754,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir Receita Líquida</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -799,7 +774,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir CMV / CPV</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -819,7 +794,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir Lucro Bruto</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -839,7 +814,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Despesas Operacionais</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -859,7 +834,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Outras Receitas/Despesas Operacionais</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -881,7 +856,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir LAJIR</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -901,7 +876,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Resultado Financeiro</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -923,7 +898,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir LAIR</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -943,7 +918,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Resultado Não Operacional</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -965,7 +940,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular Resultado Antes dos Impostos</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -985,7 +960,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Impostos sobre o Lucro</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -1005,7 +980,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir Lucro Líquido</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -1026,7 +1001,7 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Composição das Contas da DRE</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -1035,6 +1010,32 @@ A DRE é um instrumento essencial de análise contábil que confronta receitas c
 <tr><td colspan="2"><strong>CA-1.</strong> Fornecer seções de composição para cada bloco da DRE: <strong>Receita Bruta</strong> (RECEITA BRUTA DE VENDAS E SERVIÇOS), <strong>Deduções</strong> (DEDUÇÕES DA RECEITA BRUTA), <strong>CMV/CPV</strong> (CUSTOS), <strong>Despesas Operacionais</strong> (excluindo DESPESAS FINANCEIRAS), <strong>Resultado Financeiro</strong> (RECEITAS e DESPESAS FINANCEIRAS), <strong>Resultado Não Operacional</strong> (RECEITAS e DESPESAS NÃO OPERACIONAIS) e <strong>Impostos</strong> (IMPOSTOS SOBRE O LUCRO).</td></tr>
 <tr><td colspan="2"><strong>CA-2.</strong> Cada bloco deve exibir tabela com colunas: <strong>Código da Conta</strong>, <strong>Descrição</strong> e <strong>Valor</strong> (formatado em R$).</td></tr>
 <tr><td colspan="2"><strong>CA-3.</strong> O valor no cabeçalho de cada bloco deve corresponder exatamente ao valor calculado na DRE.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"></td></tr>
+</tbody>
+</table>
+
+#### Balanço Patrimonial {#balanço-patrimonial}
+
+Esta subseção descreve os requisitos relacionados à apresentação do Balanço Patrimonial, cuja função é consolidar os saldos dos grupos Ativo, Passivo e Patrimônio Líquido em um determinado período e permitir a conferência do fechamento contábil.
+
+##### RF-038 Exibir Balanço Patrimonial {#exibir-balanco-patrimonial}
+
+<table style="width:100%">
+<thead>
+<tr>
+  <th style="background-color:#2E74B5; color:white;">Exibir Balanço Patrimonial</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="2">O sistema deve exibir o Balanço Patrimonial com os blocos de Ativo, Passivo e Patrimônio Líquido, apresentando os totais consolidados e o status do balanço.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"><strong>CA-1.</strong> O Balanço deve apresentar os totais: Total do Ativo, Total do Passivo e Patrimônio Líquido.</td></tr>
+<tr><td colspan="2"><strong>CA-2.</strong> O status do balanço deve ser calculado pela fórmula: <code>Ativo = Passivo + Patrimônio Líquido</code>.</td></tr>
+<tr><td colspan="2"><strong>CA-3.</strong> Quando a igualdade for atendida, exibir o status <strong>Fechado</strong>; caso contrário, exibir <strong>Aberto</strong>.</td></tr>
+<tr><td colspan="2"><strong>CA-4.</strong> Exibir os valores no formato R$ com duas casas decimais.</td></tr>
+<tr><td colspan="2"><strong>CA-5.</strong> O balanço deve indicar a natureza esperada de cada grupo: Devedora para Ativo; Credora para Passivo e Patrimônio Líquido.</td></tr>
 <tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
 <tr><td colspan="2"></td></tr>
 </tbody>
