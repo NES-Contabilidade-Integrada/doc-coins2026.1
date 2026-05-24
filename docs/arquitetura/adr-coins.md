@@ -1,4 +1,4 @@
-# ADR-COINS
+# Registro de Decisões Arquiteturais
 
 **Registro de Decisões Arquiteturais**
 

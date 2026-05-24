@@ -48,6 +48,7 @@ Use a hierarquia de títulos de forma **semântica e consistente**:
 - Use H2 para seções principais
 - Use H3 para subseções
 - Use H4+ para detalhes e especificações
+- Evite repetir o nome do projeto **COINS** no título principal ou no nome de documentos quando o repositório já identifica o projeto
 
 ---
 
