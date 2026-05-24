@@ -871,17 +871,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#balanço-patrimonial" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Balanço Patrimonial
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#apuracao-do-resultado" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -897,6 +886,17 @@
     <span class="md-ellipsis">
       
         Demonstração do Resultado do Exercício
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balanço-patrimonial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Balanço Patrimonial
       
     </span>
   </a>
@@ -2056,17 +2056,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#balanço-patrimonial" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Balanço Patrimonial
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#apuracao-do-resultado" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2082,6 +2071,17 @@
     <span class="md-ellipsis">
       
         Demonstração do Resultado do Exercício
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balanço-patrimonial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Balanço Patrimonial
       
     </span>
   </a>
@@ -2362,14 +2362,13 @@
 <li><a href="#exibir-resumo-do-balancete">RF-011 Exibir Resumo do Balancete</a></li>
 </ul>
 </li>
-<li><a href="#balanço-patrimonial">6.1.6. Balanço Patrimonial</a></li>
-<li><a href="#apuração-do-resultado">6.1.7. Apuração do Resultado</a><ul>
+<li><a href="#apuração-do-resultado">6.1.6. Apuração do Resultado</a><ul>
 <li><a href="#filtrar-data-da-apuração">RF-012 Filtrar Data da Apuração</a></li>
 <li><a href="#exibir-resumo-do-resultado">RF-013 Exibir Resumo do Resultado</a></li>
 <li><a href="#exibir-contas-de-resultado">RF-014 Exibir Contas de Resultado</a></li>
 <li><a href="#exibir-lançamentos-de-encerramento">RF-015 Exibir Lançamentos de Encerramento</a></li>
 <li><a href="#exibir-confronto-da-apuração">RF-016 Exibir Confronto da Apuração</a></li>
-<li><a href="#exibir-transferência-do-resultado">RF-017 Exibir Transferência do Resultado</a></li>
+<li><a href="#exibir-transferência-da-apuração">RF-017 Exibir Transferência do Resultado</a></li>
 <li><a href="#exibir-resultado-final">RF-018 Exibir Resultado Final</a></li>
 <li><a href="#realizar-apuração">RF-019 Realizar Apuração</a></li>
 <li><a href="#exibir-histórico-de-apurações">RF-020 Exibir Histórico de Apurações</a></li>
@@ -2393,6 +2392,10 @@
 <li><a href="#exibir-impostos-sobre-o-lucro">RF-035 Exibir Impostos sobre o Lucro</a></li>
 <li><a href="#calcular-e-exibir-lucro-líquido">RF-036 Calcular e Exibir Lucro Líquido</a></li>
 <li><a href="#exibir-composição-das-contas-da-dre">RF-037 Exibir Composição das Contas da DRE</a></li>
+</ul>
+</li>
+<li><a href="#balanço-patrimonial">6.1.8. Balanço Patrimonial</a><ul>
+<li><a href="#exibir-balanco-patrimonial">RF-038 Exibir Balanço Patrimonial</a></li>
 </ul>
 </li>
 </ul>
@@ -2486,11 +2489,11 @@ Os principais termos de domínio utilizados na especificação de requisitos inc
 </tr>
 <tr>
 <td style="text-align: center;"><strong>Módulo 6</strong></td>
-<td style="text-align: center;">Balanço Patrimonial</td>
+<td style="text-align: center;">Demonstração do Resultado do Exercício</td>
 </tr>
 <tr>
 <td style="text-align: center;"><strong>Módulo 7</strong></td>
-<td style="text-align: center;">Demonstração do Resultado do Exercício</td>
+<td style="text-align: center;">Balanço Patrimonial</td>
 </tr>
 </tbody>
 </table>
@@ -2516,7 +2519,7 @@ Os principais termos de domínio utilizados na especificação de requisitos inc
 <h2 id="requisitos-de-software">Requisitos de Software</h2>
 <p>Esta seção descreve os requisitos que definem o comportamento e as características do sistema COIN’S (Contabilidade Integrada). Os requisitos foram organizados em duas categorias: Requisitos Funcionais, que descrevem o que o sistema deve fazer, e Requisitos Não-Funcionais, que especificam restrições e qualidades esperadas. Cada requisito funcional está associado a um Módulo, de forma a manter a rastreabilidade entre as funcionalidades e os objetivos do projeto.</p>
 <h3 id="requisitos-funcionais">Requisitos Funcionais</h3>
-<p>Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer para atender às necessidades dos usuários. Eles estão organizados por seções que correspondem aos principais módulos do sistema: Menu, Empresas, Plano de Contas, Livro Diário, Livro Razão, Balancete, Balanço Patrimonial, Apuração do Resultado e Demonstração do Resultado do Exercício. Cada requisito segue o padrão definido no modelo apresentado anteriormente, contendo sua descrição, critérios de aceite e exceções associadas aos critérios especificados.</p>
+<p>Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer para atender às necessidades dos usuários. Eles estão organizados por seções que correspondem aos principais módulos do sistema: Menu, Empresas, Plano de Contas, Livro Diário, Livro Razão, Balancete, Apuração do Resultado, Demonstração do Resultado do Exercício e Balanço Patrimonial. Cada requisito segue o padrão definido no modelo apresentado anteriormente, contendo sua descrição, critérios de aceite e exceções associadas aos critérios especificados.</p>
 <h4 id="menu">Menu</h4>
 <p>Esta subseção apresenta os requisitos relacionados à navegação do sistema. O menu é o ponto central de acesso às funcionalidades, permitindo ao usuário visualizar as opções disponíveis e alternar entre diferentes seções de forma intuitiva e consistente. </p>
 <h5 id="exibir-menu-principal">RF-01 Exibir Menu Principal</h5>
@@ -2794,29 +2797,6 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 </tbody>
 </table>
 
-<h4 id="balanço-patrimonial">Balanço Patrimonial</h4>
-<p>Esta subseção descreve os requisitos relacionados à apresentação do Balanço Patrimonial, cuja função é consolidar os saldos dos grupos Ativo, Passivo e Patrimônio Líquido em um determinado período e permitir a conferência do fechamento contábil.</p>
-<h5 id="exibir-balanco-patrimonial">RF-038 Exibir Balanço Patrimonial</h5>
-<table style="width:100%">
-<thead>
-<tr>
-  <th style="background-color:#2E74B5; color:white;">Exibir Balanço Patrimonial</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
-</tr>
-</thead>
-<tbody>
-<tr><td colspan="2">O sistema deve exibir o Balanço Patrimonial com os blocos de Ativo, Passivo e Patrimônio Líquido, apresentando os totais consolidados e o status do balanço.</td></tr>
-<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
-<tr><td colspan="2"><strong>CA-1.</strong> O Balanço deve apresentar os totais: Total do Ativo, Total do Passivo e Patrimônio Líquido.</td></tr>
-<tr><td colspan="2"><strong>CA-2.</strong> O status do balanço deve ser calculado pela fórmula: <code>Ativo = Passivo + Patrimônio Líquido</code>.</td></tr>
-<tr><td colspan="2"><strong>CA-3.</strong> Quando a igualdade for atendida, exibir o status <strong>Fechado</strong>; caso contrário, exibir <strong>Aberto</strong>.</td></tr>
-<tr><td colspan="2"><strong>CA-4.</strong> Exibir os valores no formato R$ com duas casas decimais.</td></tr>
-<tr><td colspan="2"><strong>CA-5.</strong> O balanço deve indicar a natureza esperada de cada grupo: Devedora para Ativo; Credora para Passivo e Patrimônio Líquido.</td></tr>
-<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
-<tr><td colspan="2"></td></tr>
-</tbody>
-</table>
-
 <h4 id="apuracao-do-resultado">Apuração do Resultado</h4>
 <p>Esta subseção descreve as funcionalidades relacionadas à <strong>Apuração do Resultado do Exercício (ARE)</strong>, que tem como objetivo apresentar uma prévia completa do que será efetivamente executado no momento da apuração do resultado do período, antes da confirmação da ação.</p>
 <p>O sistema deve permitir a definição da data de apuração, a visualização do resumo do resultado, os saldos das contas analíticas, os lançamentos de encerramento e o resultado final, indicando lucro ou prejuízo no período.</p>
@@ -3027,7 +3007,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Filtrar Período da DRE</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -3048,7 +3028,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Receita Bruta</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -3067,7 +3047,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Deduções da Receita</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -3087,7 +3067,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir Receita Líquida</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -3106,7 +3086,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir CMV / CPV</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -3125,7 +3105,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir Lucro Bruto</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -3144,7 +3124,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Despesas Operacionais</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -3163,7 +3143,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Outras Receitas/Despesas Operacionais</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -3184,7 +3164,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir LAJIR</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -3203,7 +3183,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Resultado Financeiro</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -3224,7 +3204,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir LAIR</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -3243,7 +3223,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Resultado Não Operacional</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -3264,7 +3244,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular Resultado Antes dos Impostos</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -3283,7 +3263,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Impostos sobre o Lucro</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -3302,7 +3282,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Calcular e Exibir Lucro Líquido</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -3322,7 +3302,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <thead>
 <tr>
   <th style="background-color:#2E74B5; color:white;">Exibir Composição das Contas da DRE</th>
-  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 6</th>
 </tr>
 </thead>
 <tbody>
@@ -3331,6 +3311,29 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
 <tr><td colspan="2"><strong>CA-1.</strong> Fornecer seções de composição para cada bloco da DRE: <strong>Receita Bruta</strong> (RECEITA BRUTA DE VENDAS E SERVIÇOS), <strong>Deduções</strong> (DEDUÇÕES DA RECEITA BRUTA), <strong>CMV/CPV</strong> (CUSTOS), <strong>Despesas Operacionais</strong> (excluindo DESPESAS FINANCEIRAS), <strong>Resultado Financeiro</strong> (RECEITAS e DESPESAS FINANCEIRAS), <strong>Resultado Não Operacional</strong> (RECEITAS e DESPESAS NÃO OPERACIONAIS) e <strong>Impostos</strong> (IMPOSTOS SOBRE O LUCRO).</td></tr>
 <tr><td colspan="2"><strong>CA-2.</strong> Cada bloco deve exibir tabela com colunas: <strong>Código da Conta</strong>, <strong>Descrição</strong> e <strong>Valor</strong> (formatado em R$).</td></tr>
 <tr><td colspan="2"><strong>CA-3.</strong> O valor no cabeçalho de cada bloco deve corresponder exatamente ao valor calculado na DRE.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"></td></tr>
+</tbody>
+</table>
+
+<h4 id="balanço-patrimonial">Balanço Patrimonial</h4>
+<p>Esta subseção descreve os requisitos relacionados à apresentação do Balanço Patrimonial, cuja função é consolidar os saldos dos grupos Ativo, Passivo e Patrimônio Líquido em um determinado período e permitir a conferência do fechamento contábil.</p>
+<h5 id="exibir-balanco-patrimonial">RF-038 Exibir Balanço Patrimonial</h5>
+<table style="width:100%">
+<thead>
+<tr>
+  <th style="background-color:#2E74B5; color:white;">Exibir Balanço Patrimonial</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 7</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="2">O sistema deve exibir o Balanço Patrimonial com os blocos de Ativo, Passivo e Patrimônio Líquido, apresentando os totais consolidados e o status do balanço.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"><strong>CA-1.</strong> O Balanço deve apresentar os totais: Total do Ativo, Total do Passivo e Patrimônio Líquido.</td></tr>
+<tr><td colspan="2"><strong>CA-2.</strong> O status do balanço deve ser calculado pela fórmula: <code>Ativo = Passivo + Patrimônio Líquido</code>.</td></tr>
+<tr><td colspan="2"><strong>CA-3.</strong> Quando a igualdade for atendida, exibir o status <strong>Fechado</strong>; caso contrário, exibir <strong>Aberto</strong>.</td></tr>
+<tr><td colspan="2"><strong>CA-4.</strong> Exibir os valores no formato R$ com duas casas decimais.</td></tr>
+<tr><td colspan="2"><strong>CA-5.</strong> O balanço deve indicar a natureza esperada de cada grupo: Devedora para Ativo; Credora para Passivo e Patrimônio Líquido.</td></tr>
 <tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
 <tr><td colspan="2"></td></tr>
 </tbody>
@@ -3371,7 +3374,7 @@ O sistema deve permitir a aplicação de filtros de consulta, a visualização d
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="24 de maio de 2026 19:48:54 UTC">24 de maio de 2026 19:48:54</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="24 de maio de 2026 19:55:06 UTC">24 de maio de 2026 19:55:06</span>
   </span>
 
     
