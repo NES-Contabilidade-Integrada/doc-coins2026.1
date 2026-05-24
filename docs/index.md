@@ -1,6 +1,12 @@
 # COINS — Contabilidade Integrada Simplificada
 
-Documentação técnica do projeto COINS 2026.1, desenvolvido para apoiar o ensino de contabilidade na UFMS.
+Bem-vindo ao COINS! Este sistema foi idealizado pelo Núcleo de Práticas de Engenharia de Software e teve início no segundo semestre de 2025.
+
+O COINS é um aplicativo desktop pensado para estudantes dos primeiros períodos de Ciências Contábeis, oferecendo um ambiente seguro e intuitivo para praticar lançamentos, compreender relatórios e consolidar os fundamentos contábeis.
+
+Assista ao vídeo de apresentação para conhecer o sistema em ação:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FLl8JhWhBFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ---
 
