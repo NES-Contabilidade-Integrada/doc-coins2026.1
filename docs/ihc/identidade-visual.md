@@ -51,6 +51,9 @@ Como diferencial, adaptamos alguns dos elementos para variantes da cor primária
 
 **Referência:** [Manual de Identidade Visual UFMS](https://www.ufms.br/wp-content/uploads/2021/08/Manual-de-Identidade-Visual-UFMS.pdf) — Página 16
 
+![Figura 1 - Paleta de cores](assets/paleta-de-cores.png)
+*Figura 1 - Paleta de cores*
+
 ---
 
 ## Elementos do AVA UFMS
@@ -61,6 +64,12 @@ Vários componentes foram utilizados com base no sistema do AVA UFMS, como:
 - Cores na borda de cada componente
 
 Abaixo há um comparativo entre o sistema COIN'S e o AVA UFMS, destacando o fundo que reforça a ideia de relevo e a área superior das seções (borda de cada componente). Estes são alguns dos exemplos de elementos gráficos cujo design foi inspirado nos sistemas da UFMS.
+
+![Figura 2 - Comparativo AVA UFMS e COIN'S (1)](assets/comparativo-ava-1.png)
+*Figura 2 - Comparativo AVA UFMS e COIN'S*
+
+![Figura 3 - Comparativo AVA UFMS e COIN'S (2)](assets/comparativo-ava-2.png)
+*Figura 3 - Comparativo AVA UFMS e COIN'S*
 
 Além disso, em conjunto esses elementos reforçam uma estrutura separativa, funcionando como um quebra-cabeça de componentes, sendo mais uma ideia que o sistema COIN'S busca refletir, embasada nos sistemas da UFMS.
 
