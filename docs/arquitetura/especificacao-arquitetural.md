@@ -55,8 +55,11 @@ Este documento auxilia os envolvidos no projeto a compreender os aspectos arquit
 ### Restrições do sistema 
 As principais restrições e decisões arquiteturais do **Sistema COIN’S** são as seguintes:
 
-### Framework e Plataforma * **Electron \+ Electron Forge**: A escolha do *Electron* foi feita para permitir o desenvolvimento de uma aplicação **desktop multiplataforma**, mantendo o mesmo código base em Windows, Linux e macOS.  
-   O *Electron Forge* foi adotado para facilitar o empacotamento, distribuição e atualização do aplicativo, garantindo consistência no ciclo de build e distribuição offline.
+### Framework e Plataforma
+
+**Electron + Electron Forge:** A escolha do *Electron* foi feita para permitir o desenvolvimento de uma aplicação **desktop multiplataforma**, mantendo o mesmo código base em Windows, Linux e macOS.
+
+O *Electron Forge* foi adotado para facilitar o empacotamento, distribuição e atualização do aplicativo, garantindo consistência no ciclo de build e distribuição offline.
 
 ### Frontend: Vue 3 com TypeScript
 Escolhido por sua **produtividade**, **reatividade nativa** e **integração simples com Electron**. O uso de TypeScript aumenta a confiabilidade do código e facilita a manutenção e refatoração futura.
