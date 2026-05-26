@@ -2,12 +2,17 @@ site_name: DOCS COINS 2026.1
 theme:
   name: material
   language: pt-BR
+  palette:
+    primary: custom
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.top
     - content.code.copy
     - content.code.annotate
+
+extra_css:
+  - stylesheets/extra.css
 
 plugins:
   - search
