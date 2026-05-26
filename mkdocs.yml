@@ -57,9 +57,11 @@ nav:
       - Dicionário de Dados: banco-de-dados/dicionario-dados.md
   - Qualidade e Testes:
       - Plano de Testes: qualidade-testes/plano-de-testes.md
+  - IA:
+      - Política de Uso de IA: gerencia-projeto/politica-uso-ia.md
+      - Instruções do Copilot: devops/instrucoes-do-copilot.md
   - Gerência de Projeto:
       - Plano de Projeto: gerencia-projeto/plano-do-projeto.md
-      - Política de Uso de IA: gerencia-projeto/politica-uso-ia.md
       - Template de Documento: gerencia-projeto/template-de-documento.md
   - DevOps:
       - Visão Geral: devops/visao-geral.md
@@ -71,7 +73,6 @@ nav:
       - DoD: devops/dod.md
       - CI/CD: devops/infraestrutura.md
       - Pull Request Template: devops/pull-request-template.md
-      - Instruções do Copilot: devops/instrucoes-do-copilot.md
   - Decisões:
       - Diário de Decisões: decisoes/decisoes.md
       - Decisões Importadas: decisoes/diario-de-decisoes-importado.md
