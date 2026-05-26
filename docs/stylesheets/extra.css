@@ -4,3 +4,13 @@
   --md-primary-fg-color--dark: #006b91;
   --md-accent-fg-color: #0088B7;
 }
+
+/* Headings uniformes em todas as páginas */
+.md-content h1,
+.md-content h2,
+.md-content h3,
+.md-content h4,
+.md-content h5,
+.md-content h6 {
+  color: #003649;
+}

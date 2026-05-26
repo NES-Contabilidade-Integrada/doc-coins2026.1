@@ -1,7 +1,9 @@
-site_name: DOCS COINS 2026.1
+site_name: Documentação do COIN'S
 theme:
   name: material
   language: pt-BR
+  logo: assets/logo.png
+  favicon: assets/logo.png
   palette:
     primary: custom
   features:
