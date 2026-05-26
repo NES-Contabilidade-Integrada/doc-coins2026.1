@@ -17,6 +17,12 @@ Assista ao vídeo de apresentação para conhecer o sistema em ação:
 
 ---
 
+## Download
+
+As versões executáveis do COIN'S estão disponíveis na página de [Releases do repositório](https://github.com/NES-Contabilidade-Integrada/coins2026.1/releases) para quem possui acesso ao repositório.
+
+---
+
 ## Artefatos por área
 
 A documentação reúne os principais entregáveis do projeto, organizados por área de responsabilidade:
