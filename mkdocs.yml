@@ -40,6 +40,7 @@ nav:
   - Início: index.md
   - Arquitetura:
       - Especificação Arquitetural: arquitetura/especificacao-arquitetural.md
+      - Diagramas C4: arquitetura/diagramas-c4.md
       - Visão de Implementação: arquitetura/visao-de-implementacao.md
       - Registro de Decisões Arquiteturais: arquitetura/adr-coins.md
   - Requisitos:

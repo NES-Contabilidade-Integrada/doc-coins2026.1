@@ -81,6 +81,8 @@ O sistema é formado por uma arquitetura monolítica modularizada em camadas. Es
 
 Para uma definição mais técnica da responsabilidade de cada camada, visualizar o documento de Visão de Implementação: [https://docs.google.com/document/d/1O2Qf1cnLYiqCjFxQCzfQZ4MwuyMp6zRecco6XBTN5NA/edit?tab=t.0](https://docs.google.com/document/d/1O2Qf1cnLYiqCjFxQCzfQZ4MwuyMp6zRecco6XBTN5NA/edit?tab=t.0) 
 
+> **Arquivo editável disponível no repositório:** O arquivo `Diagrama_C4_COINS.drawio` está na raiz do repositório e pode ser aberto e editado diretamente no [draw.io](https://app.diagrams.net/) para atualizar qualquer diagrama C4.
+
 ## Representação arquitetural 
 O modelo C4 considera as estruturas estáticas de um sistema de software em termos de containers (aplicativos, armazenamentos de dados, microservices, etc.), componentes e código. Também considera as pessoas que usam os sistemas de software que construímos.
 
