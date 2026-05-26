@@ -51,8 +51,6 @@
 
 [14\. Análise de Viabilidade e Comprometimento	12](#análise-de-viabilidade-e-comprometimento)
 
-## 
-
 ## Introdução {#introdução}
 Este documento apresenta o Plano de Projeto para o desenvolvimento do Sistema COIN'S (Contabilidade Integrada). O sistema tem como objetivo oferecer uma plataforma prática e didática para que os alunos dos primeiros semestres do curso de Ciências Contábeis da UFMS tenham um contato inicial com as práticas contábeis.  
 Atualmente, os softwares contábeis avançados são utilizados apenas nos últimos semestres do curso. O COIN'S busca preencher essa lacuna, proporcionando aos alunos uma experiência introdutória que facilita a compreensão dos conceitos básicos e serve como motivação para o aprendizado contínuo.
@@ -68,7 +66,9 @@ Os proponentes são os responsáveis por solicitar, validar e acompanhar o desen
 ## Escopo do Projeto {#escopo-do-projeto}
 O escopo do Sistema COIN'S define as funcionalidades que serão desenvolvidas ao longo do projeto, seguindo um plano incremental baseado na priorização definida durante a entrevista com o proponente. O desenvolvimento será dividido em etapas, dando continuidade à implementação do sistema que iniciou em 2025\.
 
-### 2.1 Funcionalidades do MVP (Versão Inicial \- 2025.2) As funcionalidades essenciais que compõem o MVP são:
+### 2.1 Funcionalidades do MVP (Versão Inicial - 2025.2)
+
+As funcionalidades essenciais que compõem o MVP são:
 
 * **Exibição do Plano de Contas Padrão:** Disponibilizar um plano de contas pré-definido para consulta pelos usuários.  
 * **Gerenciamento de Lançamentos Contábeis:** Permitir o cadastro, edição, exclusão e consulta dos lançamentos contábeis seguindo o Plano de Contas Padrão.  
@@ -81,7 +81,9 @@ O escopo do Sistema COIN'S define as funcionalidades que serão desenvolvidas ao
 | Épico 2 \- Empresa | Visualização de Lançamentos no Livro Diário | [https://github.com/NES-Contabilidade-Integrada/coins/issues/12](https://github.com/NES-Contabilidade-Integrada/coins/issues/12)  | Implementado Anteriormente |
 
 
-### 2.2 Funcionalidades de expansão (2026.1) As funcionalidades complementares agregam valor ao sistema e serão desenvolvidas após a entrega do MVP:
+### 2.2 Funcionalidades de Expansão (2026.1)
+
+As funcionalidades complementares agregam valor ao sistema e serão desenvolvidas após a entrega do MVP:
 
 * **Transferência Automática para o Livro Razão:** Realizar a movimentação dos lançamentos do Livro Diário para o Livro Razão.  
 * **Geração do Balancete de Verificação:** Permitir a conferência dos saldos contábeis por meio da exibição do balancete detalhado em tela.  
@@ -100,9 +102,9 @@ O escopo do Sistema COIN'S define as funcionalidades que serão desenvolvidas ao
 | Não existente | Geração do Balanço Patrimonial | Não existente | A ser implementado |
 | Não existente | Exportação de Relatórios Contábeis | Não existente | Próximas versões |
 
-### 
+### 2.3 Incrementos Planejados
 
-### 2.3 Incrementos Planejados Os incrementos planejados consistem em funcionalidades adicionais previstas para versões futuras, visando ampliar a flexibilidade e a interatividade do sistema:
+Os incrementos planejados consistem em funcionalidades adicionais previstas para versões futuras, visando ampliar a flexibilidade e a interatividade do sistema:
 
 * **Gerenciamento Personalizado de Contas:** Permitir a inclusão, edição e exclusão de novas contas no plano contábil de acordo com a necessidade do usuário, sem alterar as contas estáticas do plano.  
 * **Importação e Exportação de Dados Empresariais:** Facilitar a integração de dados com outros sistemas por meio da importação e exportação de informações das empresas.  
@@ -206,7 +208,7 @@ O escopo do Sistema COIN'S define as funcionalidades que serão desenvolvidas ao
 | Banco de Dados | SQLite  | Banco local simples, leve e adequado ao propósito educacional do sistema |
 | Sprint Retrospective | Miro | Utilizado para conduzir retrospectivas visuais e colaborativas, facilitando discussões da equipe. |
 
-    **9.1 Preparação do ambiente de desenvolvimento**
+### 9.1 Preparação do Ambiente de Desenvolvimento
 
     O COIN’S é um aplicativo desktop, executado localmente. Para executar o sistema, basta seguir o passo a passo descrito no arquivo README.md do repositório oficial: 
 
