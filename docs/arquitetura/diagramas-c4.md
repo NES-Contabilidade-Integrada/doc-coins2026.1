@@ -1,4 +1,4 @@
-# Diagramas C4 — Sistema COIN'S
+# Diagramas C4
 
 Visualizações arquiteturais do sistema no modelo C4, contendo os níveis de Contexto, Container e Componentes.
 
