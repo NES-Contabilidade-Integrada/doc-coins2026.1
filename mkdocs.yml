@@ -50,7 +50,7 @@ nav:
       - Fundamento e Estrutura de Requisitos: requisitos/fundamento-estrutura-requisitos.md
       - Glossário de Termos: requisitos/glossario-de-termos.md
   - IHC:
-      - Identidade Visual: ihc/identidade-visual/Especificação de Identidade Visual do Software - UFMS (1).md
+      - Identidade Visual: ihc/identidade-visual.md
   - Banco de Dados:
       - Documentação do Modelo de Dados: banco-de-dados/documentacao-modelo-dados.md
       - Dicionário de Dados: banco-de-dados/dicionario-dados.md
