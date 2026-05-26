@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"c:\\\\NES\\\\doc-coins2026.1\" status)",
+      "Bash(git -C \"c:\\\\NES\\\\doc-coins2026.1\" commit -m \"docs: adicionar política de uso de IA em gerência de projeto\")"
+    ]
+  }
+}

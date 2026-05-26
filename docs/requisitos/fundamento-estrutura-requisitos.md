@@ -35,7 +35,7 @@
 ## 
 
 ## Introdução {#introdução}
-O Sistema COIN’S (Contabilidade Integrada Simplificada) foi desenvolvido com o objetivo de proporcionar uma plataforma didática e prática para o ensino e simulação de processos contábeis.  
+O Sistema COIN'S (Contabilidade Integrada Simplificada) foi desenvolvido com o objetivo de proporcionar uma plataforma didática e prática para o ensino e simulação de processos contábeis.  
 Durante a elaboração da sua Especificação de Requisitos de Software, foi adotada uma estrutura textual organizada por épicos e requisitos funcionais, em vez dos modelos tradicionais baseados em histórias de usuário ou casos de uso.  
 Essa decisão buscou garantir clareza, flexibilidade e rastreabilidade, considerando o domínio contábil altamente regrado e técnico, e a necessidade de que o documento fosse compreensível tanto por profissionais técnicos (desenvolvedores e testadores) quanto por profissionais de negócio (professores e contadores).
 
@@ -53,7 +53,7 @@ A escrita textual dos requisitos, apoiada em tabelas padronizadas, torna possív
 Dessa forma, o documento se torna autoexplicativo e auditável, sem depender de interpretação subjetiva.
 
 ### 2.2 Flexibilidade e profundidade técnica O domínio contábil é um dos mais rigorosos em termos de regras e validações cruzadas.  
-Ao contrário de sistemas administrativos genéricos, o COIN’S exige uma abordagem que permita inserir todas as regras diretamente no corpo dos requisitos, sem fragmentá-las entre diversos artefatos (casos de uso, fluxogramas ou narrativas).  
+Ao contrário de sistemas administrativos genéricos, o COIN'S exige uma abordagem que permita inserir todas as regras diretamente no corpo dos requisitos, sem fragmentá-las entre diversos artefatos (casos de uso, fluxogramas ou narrativas).  
 O formato textual adotado permite:
 
 * Inserir regras de cálculo e validação junto ao requisito que as origina;  
@@ -72,7 +72,7 @@ Além disso, essa estrutura reflete diretamente o modelo de versionamento e dese
 
 Esse modelo permite rastreabilidade direta entre a documentação de requisitos, as branchs de desenvolvimento e as entregas de código, fortalecendo o controle de evolução do sistema e a integridade das versões.
 
-Os épicos definidos para o projeto COIN’S são:
+Os épicos definidos para o projeto COIN'S são:
 
 * Épico-01 – Plano de Contas
 
@@ -110,7 +110,7 @@ Para padronizar a escrita dos requisitos e garantir consistência em todo o docu
 Modelo \- Requisitos Funcionais.
 
 ## Comparativo com Outras Estruturas {#comparativo-com-outras-estruturas}
-A escolha pela estrutura de requisitos adotada no COIN’S foi feita com base em uma análise de trade-off entre os modelos tradicionais (Histórias de Usuário e Casos de Uso) e a necessidade de profundidade técnica e rastreabilidade exigida por um sistema de domínio contábil.  
+A escolha pela estrutura de requisitos adotada no COIN'S foi feita com base em uma análise de trade-off entre os modelos tradicionais (Histórias de Usuário e Casos de Uso) e a necessidade de profundidade técnica e rastreabilidade exigida por um sistema de domínio contábil.  
 A tabela a seguir sintetiza os ganhos e perdas de cada abordagem, considerando clareza, flexibilidade, rastreabilidade e adequação ao contexto do projeto.
 
 | Critério | Histórias de Usuário | Casos de Uso | Estrutura do COIN’S (adotada) |
@@ -125,7 +125,7 @@ A tabela a seguir sintetiza os ganhos e perdas de cada abordagem, considerando c
 ## Conclusão {#conclusão}
    
 
-A estrutura dos Requisitos Funcionais do Sistema COIN’S foi planejada para atender a um domínio técnico e rigoroso, preservando clareza, rastreabilidade e alinhamento entre documentação e código.  
+A estrutura dos Requisitos Funcionais do Sistema COIN'S foi planejada para atender a um domínio técnico e rigoroso, preservando clareza, rastreabilidade e alinhamento entre documentação e código.  
 O uso de épicos numerados e ramificações Git nomeadas de forma padronizada assegura que a rastreabilidade entre requisitos → branch → entrega seja mantida durante todo o ciclo de desenvolvimento.  
 Os critérios de aceite e suas exceções funcionam como ponte entre documentação, desenvolvimento e QA, permitindo que validações do sistema e testes automatizados derivem diretamente da especificação funcional.  
 Essa abordagem consolidou o COIN’S como um projeto com maturidade técnica e documental, capaz de comunicar regras complexas de forma objetiva, transparente e verificável — tanto para o time de tecnologia quanto para o domínio contábil.

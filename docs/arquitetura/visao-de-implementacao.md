@@ -26,7 +26,7 @@
 [3\. Conclusão	3](#conclusão)
 
 ## Introdução
-Esse documento tem por objetivo especificar a estrutura organizacional do código-fonte do software COIN’S, desenvolvido na disciplina de Núcleo de Práticas de Engenharia de Software 2025/2.
+Esse documento tem por objetivo especificar a estrutura organizacional do código-fonte do software COIN'S, desenvolvido na disciplina de Núcleo de Práticas de Engenharia de Software 2025/2.
 
 Ele serve como um guia para a equipe de desenvolvimento, detalhando a responsabilidade de cada camada e diretório principal. O objetivo é facilitar a manutenção e a implementação de novas funcionalidades, garantindo que a estrutura do código seja preservada.
 

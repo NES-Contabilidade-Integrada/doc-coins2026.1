@@ -1,6 +1,6 @@
 # Modelo de Ramificação
 
-O modelo de ramificação utilizado no projeto COINS é o **GitFlow**. Este modelo organiza o desenvolvimento em torno de duas branches principais com ciclos de vida infinitos e várias branches de suporte para facilitar o desenvolvimento paralelo e a entrega contínua.
+O modelo de ramificação utilizado no projeto COIN'S é o **GitFlow**. Este modelo organiza o desenvolvimento em torno de duas branches principais com ciclos de vida infinitos e várias branches de suporte para facilitar o desenvolvimento paralelo e a entrega contínua.
 
 ```mermaid
 gitGraph

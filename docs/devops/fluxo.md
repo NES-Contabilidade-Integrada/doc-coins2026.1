@@ -1,6 +1,6 @@
 # Fluxo de Trabalho
 
-O processo de desenvolvimento no COINS é projetado para garantir a qualidade do código e a estabilidade das entregas através de um ciclo bem definido de ramificação e revisão.
+O processo de desenvolvimento no COIN'S é projetado para garantir a qualidade do código e a estabilidade das entregas através de um ciclo bem definido de ramificação e revisão.
 
 === "Ciclo de Desenvolvimento"
 

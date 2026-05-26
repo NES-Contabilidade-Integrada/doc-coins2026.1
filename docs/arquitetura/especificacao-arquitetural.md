@@ -43,7 +43,7 @@
 [3.5. Diagramas suplementares – Diagrama de Implantação	6](#diagramas-suplementares-–-diagrama-de-implantação)
 
 ## Introdução 
-Este documento tem como objetivo descrever a arquitetura do Sistema COIN’S, seguindo o modelo de visualização arquitetural de software C4[^1]. 
+Este documento tem como objetivo descrever a arquitetura do Sistema COIN'S, seguindo o modelo de visualização arquitetural de software C4[^1]. 
 
 O C4 é o padrão ideal para representar a arquitetura porque equilibra clareza, consistência e praticidade. Ele comunica o que importa em cada nível de detalhe, é simples de manter, se integra às ferramentas modernas de desenvolvimento e fortalece a governança técnica da organização.
 
@@ -53,7 +53,7 @@ Mesmo em um contexto de software desktop monolítico e offline, com escopo inici
 Este documento auxilia os envolvidos no projeto a compreender os aspectos arquiteturais do sistema que são  necessários para desenvolver uma solução que atenda as necessidades do proponente. Além de auxiliar equipes futuras no entendimento do projeto.
 
 ### Restrições do sistema 
-As principais restrições e decisões arquiteturais do **Sistema COIN’S** são as seguintes:
+As principais restrições e decisões arquiteturais do **Sistema COIN'S** são as seguintes:
 
 ### Framework e Plataforma
 
@@ -85,7 +85,7 @@ Para uma definição mais técnica da responsabilidade de cada camada, visualiza
 O modelo C4 considera as estruturas estáticas de um sistema de software em termos de containers (aplicativos, armazenamentos de dados, microservices, etc.), componentes e código. Também considera as pessoas que usam os sistemas de software que construímos.
 
 ### Nível 1 – Diagrama de Contexto 
-O diagrama de contexto do sistema mostra o **Sistema COIN’S** e como ele se encaixa no mundo em termos das pessoas que o utilizam e dos outros sistemas de software com os quais ele interage.
+O diagrama de contexto do sistema mostra o **Sistema COIN'S** e como ele se encaixa no mundo em termos das pessoas que o utilizam e dos outros sistemas de software com os quais ele interage.
 
 **Link do diagrama (alta resolução / online):**  
  [https://app.diagrams.net/\#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc\#%7B"pageId"%3A"zNMGI6wU0Mi8Qe2H5Q59"%7D](https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"zNMGI6wU0Mi8Qe2H5Q59"%7D) 
@@ -124,7 +124,7 @@ Entre os principais componentes:
 ### Nível 4 – Código 
 Neste nível, podem ser representados diagramas de classes ou entidades para os componentes mais importantes.
 
-No caso do Sistema COIN’S, recomenda-se a elaboração de um Diagrama de Entidade-Relacionamento (DER) com base no schema do banco SQLite3, destacando tabelas, colunas e relacionamentos. 
+No caso do Sistema COIN'S, recomenda-se a elaboração de um Diagrama de Entidade-Relacionamento (DER) com base no schema do banco SQLite3, destacando tabelas, colunas e relacionamentos. 
 
 **Link para documentação do DER:** [https://docs.google.com/document/d/1NIrxoi\_JZqYGeUrJK2uUcePTO2prriPYV1HKR5y8Hxo/edit?tab=t.0](https://docs.google.com/document/d/1NIrxoi_JZqYGeUrJK2uUcePTO2prriPYV1HKR5y8Hxo/edit?tab=t.0)  
 

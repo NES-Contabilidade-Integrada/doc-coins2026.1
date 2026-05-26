@@ -96,7 +96,7 @@
 
 **Contexto:**
 
-- O Sistema COINS necessita de uma tecnologia para implementação de um sistema desktop robusto que possa ser utilizado nos laboratórios da ESAN.
+- O Sistema COIN'S necessita de uma tecnologia para implementação de um sistema desktop robusto que possa ser utilizado nos laboratórios da ESAN.
 
 **Decisão:**
 
@@ -160,7 +160,7 @@
 
 **Contexto:**
 
-- O Sistema COINS necessita de uma linguagem robusta e compatível com Electron para o desenvolvimento do backend. O Electron tem como base um ambiente Node.js, necessitando de uma linguagem que ofereça segurança, robustez para manipulação de dados financeiros e integração nativa com o ecossistema do próprio Electron. A escolha impactará diretamente a manutenibilidade, a confiabilidade dos dados e a produtividade do desenvolvimento.
+- O Sistema COIN'S necessita de uma linguagem robusta e compatível com Electron para o desenvolvimento do backend. O Electron tem como base um ambiente Node.js, necessitando de uma linguagem que ofereça segurança, robustez para manipulação de dados financeiros e integração nativa com o ecossistema do próprio Electron. A escolha impactará diretamente a manutenibilidade, a confiabilidade dos dados e a produtividade do desenvolvimento.
 
 **Decisão:**
 
@@ -201,4 +201,4 @@
 
 **Contexto:**
 
-- O Sistema COINS necessita de um framework capaz de criar interfaces reativas, suportar componentes modulares e funcionar bem dentro do ecossistema Electron.
+- O Sistema COIN'S necessita de um framework capaz de criar interfaces reativas, suportar componentes modulares e funcionar bem dentro do ecossistema Electron.

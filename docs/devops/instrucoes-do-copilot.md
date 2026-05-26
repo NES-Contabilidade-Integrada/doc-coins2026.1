@@ -56,7 +56,7 @@ Copilot should block approval if any critical issue remains unresolved. Suggesti
 
 ## Agente Personalizado para Documentação e Commits
 
-Foi criado um agente personalizado chamado `docs-agent` para auxiliar na manutenção de boas práticas de documentação e no uso de commits semânticos no projeto COINS.
+Foi criado um agente personalizado chamado `docs-agent` para auxiliar na manutenção de boas práticas de documentação e no uso de commits semânticos no projeto COIN'S.
 
 ### Como Usar o Agente
 

@@ -4,7 +4,7 @@ toc_depth: 2
 
 # Diário de Decisões (RDs)
 
-Este documento centraliza todos os registros de decisões de processo do projeto COINS.
+Este documento centraliza todos os registros de decisões de processo do projeto COIN'S.
 
 ## Sumário
 
@@ -45,7 +45,7 @@ Foi decidido continuar com o modelo já utilizado no projeto anteriormente, pois
 ## RD 002 — Reavaliação da Terminologia de Agrupamento de Funcionalidades
 
 - **Data:** 2026-03-10
-- **Decisores:** Equipe COINS 2026.1
+- **Decisores:** Equipe COIN'S 2026.1
 
 #### Contexto
 

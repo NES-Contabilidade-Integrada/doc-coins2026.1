@@ -1,4 +1,4 @@
-# Documentação do Modelo de Dados – Sistema COIN’S
+# Documentação do Modelo de Dados – Sistema COIN'S
 
 **Histórico de Versões**
 
@@ -28,7 +28,7 @@
 [**4\. Regras de Negócio no Modelo	2**](#regras-de-negócio-no-modelo)
 
 ## Introdução {#introdução}
-O banco de dados do Sistema COIN’S foi desenvolvido para dar suporte ao gerenciamento de informações contábeis de empresas.  
+O banco de dados do Sistema COIN'S foi desenvolvido para dar suporte ao gerenciamento de informações contábeis de empresas.  
 Sua estrutura é composta por sete tabelas de negócio:
 
 - **account\_types:** cadastro dos tipos de conta contábil (ex: Ativo, Passivo).

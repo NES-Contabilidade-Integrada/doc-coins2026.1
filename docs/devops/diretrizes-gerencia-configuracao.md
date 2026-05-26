@@ -41,7 +41,7 @@
 [10\. Revisão do copilot	10](#10.-revisão-do-copilot)
 
 ## Introdução {#introdução}
-Este documento estabelece as **Diretrizes de Gerência de Configuração** para o sistema **COINS**. Ele define o conjunto de normas, padrões e procedimentos essenciais para o gerenciamento eficaz de mudanças, controle de versão e manutenção da qualidade do código-fonte. O objetivo é garantir a integridade, a estabilidade e a rastreabilidade do desenvolvimento ao longo do ciclo de vida do sistema. 
+Este documento estabelece as **Diretrizes de Gerência de Configuração** para o sistema **COIN'S**. Ele define o conjunto de normas, padrões e procedimentos essenciais para o gerenciamento eficaz de mudanças, controle de versão e manutenção da qualidade do código-fonte. O objetivo é garantir a integridade, a estabilidade e a rastreabilidade do desenvolvimento ao longo do ciclo de vida do sistema. 
 
 ## Modelo de Ramificação {#modelo-de-ramificação}
 O modelo de ramificação utilizado é o GitFlow, conforme ilustrado na figura abaixo e descrito a seguir.  
@@ -152,7 +152,7 @@ Definições de Incremento:
 
 * Revisão por pelo menos 1 revisor técnico aprovado.
 
-## 9\. Automação de Build e Geração do Executável O sistema COINS utiliza o framework Electron (com Squirrel.Windows) para empacotamento desktop. A geração do instalador (.exe) é totalmente automatizada via GitHub Actions, garantindo que a versão em produção seja sempre fiel ao código da branch main.
+## 9\. Automação de Build e Geração do Executável O sistema COIN'S utiliza o framework Electron (com Squirrel.Windows) para empacotamento desktop. A geração do instalador (.exe) é totalmente automatizada via GitHub Actions, garantindo que a versão em produção seja sempre fiel ao código da branch main.
 
 **Fluxo de Integração e Entrega Contínua (CI/CD)**
 
@@ -175,7 +175,7 @@ O executável aparece na aba Releases do Github da seguinte forma
 * **Por Tag de Versão (v\*):** Ao realizar um git push origin v1.2.3, o workflow build-windows.yml é acionado. Ele atualiza o package.json e gera o executável oficial daquela versão semântica.
 
   ## 10\. Revisão do copilot {#10.-revisão-do-copilot}
-O GitHub Copilot foi integrado ao processo de desenvolvimento do sistema COINS com o objetivo de aprimorar a qualidade do código e aumentar a eficiência das revisões técnicas. A ferramenta atua como um mecanismo complementar de análise automatizada, auxiliando na identificação de problemas e na manutenção dos padrões estabelecidos neste documento.
+O GitHub Copilot foi integrado ao processo de desenvolvimento do sistema COIN'S com o objetivo de aprimorar a qualidade do código e aumentar a eficiência das revisões técnicas. A ferramenta atua como um mecanismo complementar de análise automatizada, auxiliando na identificação de problemas e na manutenção dos padrões estabelecidos neste documento.
 
 1. **Instruções do copilot**  
    1. [Instruções](https://docs.google.com/document/d/1Wp_bDh5UTZ9743nyTy1MNr-uIZD0SD_iqtQQkKMoLZ8/edit?usp=sharing)   

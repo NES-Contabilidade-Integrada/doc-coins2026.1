@@ -101,14 +101,14 @@
 ## Introdução {#introdução}
    
 
-Este documento apresenta a Especificação de Requisitos de Software (ERS) do Sistema COIN’S – Contabilidade Integrada. O sistema tem como objetivo oferecer uma plataforma prática, didática e acessível para que os alunos dos primeiros semestres do curso de Ciências Contábeis da UFMS tenham um contato inicial com as atividades fundamentais do processo contábil.  
-Enquanto softwares contábeis profissionais — amplamente utilizados no mercado e introduzidos apenas nos semestres avançados do curso — exigem conhecimento prévio e maior maturidade técnica, o COIN’S preenche uma lacuna essencial ao permitir que os estudantes vivenciem práticas contábeis semelhantes às do mundo real, mas em um ambiente simplificado e focado na aprendizagem.  
-No COIN’S, os alunos realizam lançamentos contábeis alinhados ao Plano de Contas, registram movimentações no Livro Diário, consultam informações no Livro Razão e geram relatórios estruturados, como o Balancete de Verificação, Balancete Consolidado e Demonstração do Resultado do Exercício (DRE). Dessa forma, compreendem como os dados são registrados, organizados e transformados em informações relevantes para análise contábil, desenvolvendo desde cedo uma visão prática e aplicada da disciplina.
+Este documento apresenta a Especificação de Requisitos de Software (ERS) do Sistema COIN'S – Contabilidade Integrada. O sistema tem como objetivo oferecer uma plataforma prática, didática e acessível para que os alunos dos primeiros semestres do curso de Ciências Contábeis da UFMS tenham um contato inicial com as atividades fundamentais do processo contábil.  
+Enquanto softwares contábeis profissionais — amplamente utilizados no mercado e introduzidos apenas nos semestres avançados do curso — exigem conhecimento prévio e maior maturidade técnica, o COIN'S preenche uma lacuna essencial ao permitir que os estudantes vivenciem práticas contábeis semelhantes às do mundo real, mas em um ambiente simplificado e focado na aprendizagem.  
+No COIN'S, os alunos realizam lançamentos contábeis alinhados ao Plano de Contas, registram movimentações no Livro Diário, consultam informações no Livro Razão e geram relatórios estruturados, como o Balancete de Verificação, Balancete Consolidado e Demonstração do Resultado do Exercício (DRE). Dessa forma, compreendem como os dados são registrados, organizados e transformados em informações relevantes para análise contábil, desenvolvendo desde cedo uma visão prática e aplicada da disciplina.
 
 ## Classes de Usuários {#classes-de-usuários}
    
 
-	No Sistema COINS, foram identificadas duas classes de usuários relevantes: **Aluno** e **Professor**. Ambas utilizam o sistema com o mesmo conjunto de funcionalidades, sem distinção de permissões ou papéis nesta versão. A Tabela 1 apresenta suas responsabilidades, restrições de acesso e características típicas.
+ 	No Sistema COIN'S, foram identificadas duas classes de usuários relevantes: **Aluno** e **Professor**. Ambas utilizam o sistema com o mesmo conjunto de funcionalidades, sem distinção de permissões ou papéis nesta versão. A Tabela 1 apresenta suas responsabilidades, restrições de acesso e características típicas.
 
 | Classe | Responsabilidades principais | Restrições de acesso | Características típicas |
 | :---- | :---- | :---- | :---- |
@@ -116,7 +116,7 @@ No COIN’S, os alunos realizam lançamentos contábeis alinhados ao Plano de Co
 | Professor | Registrar lançamentos, consultar livros (Diário/Razão), gerar/exibir relatórios (Balancete, DRE, Balanço) | Não há distinções | Usa o sistema para fins didáticos/demonstração |
 
 ## Definição de conceitos {#definição-de-conceitos}
-Os conceitos utilizados neste documento estão consolidados no Glossário de Termos do Sistema COIN’S (Contabilidade Integrada): [Glossario de Termos](https://docs.google.com/document/d/1fWNvAuHWdnDFCu3-luM2oZ-49I2bVVsvHIz6awT9p3g/edit?usp=sharing)  
+Os conceitos utilizados neste documento estão consolidados no Glossário de Termos do Sistema COIN'S (Contabilidade Integrada): [Glossario de Termos](https://docs.google.com/document/d/1fWNvAuHWdnDFCu3-luM2oZ-49I2bVVsvHIz6awT9p3g/edit?usp=sharing)  
 Para evitar redundâncias e facilitar a manutenção da documentação, este documento apenas referencia o glossário como fonte única de definições.  
 Os principais termos de domínio utilizados na especificação de requisitos incluem (consultar definições no Glossário de Termos):
 
@@ -168,7 +168,7 @@ O seguinte exemplo demonstra o modelo adotado para os requisitos funcionais. O u
 Modelo de Especificação - Requisitos Funcionais.
 
 ## Requisitos de Software {#requisitos-de-software}
-Esta seção descreve os requisitos que definem o comportamento e as características do sistema COIN’S (Contabilidade Integrada). Os requisitos foram organizados em duas categorias: Requisitos Funcionais, que descrevem o que o sistema deve fazer, e Requisitos Não-Funcionais, que especificam restrições e qualidades esperadas. Cada requisito funcional está associado a um Módulo, de forma a manter a rastreabilidade entre as funcionalidades e os objetivos do projeto.
+Esta seção descreve os requisitos que definem o comportamento e as características do sistema COIN'S (Contabilidade Integrada). Os requisitos foram organizados em duas categorias: Requisitos Funcionais, que descrevem o que o sistema deve fazer, e Requisitos Não-Funcionais, que especificam restrições e qualidades esperadas. Cada requisito funcional está associado a um Módulo, de forma a manter a rastreabilidade entre as funcionalidades e os objetivos do projeto.
 
 ### Requisitos Funcionais {#requisitos-funcionais}
 Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer para atender às necessidades dos usuários. Eles estão organizados por seções que correspondem aos principais módulos do sistema: Menu, Empresas, Plano de Contas, Livro Diário, Livro Razão, Balancete, Apuração do Resultado, Demonstração do Resultado do Exercício e Balanço Patrimonial. Cada requisito segue o padrão definido no modelo apresentado anteriormente, contendo sua descrição, critérios de aceite e exceções associadas aos critérios especificados.

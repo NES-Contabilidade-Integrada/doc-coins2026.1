@@ -54,11 +54,11 @@
 ## 
 
 ## Introdução {#introdução}
-Este documento apresenta o Plano de Projeto para o desenvolvimento do Sistema COIN’S (Contabilidade Integrada). O sistema tem como objetivo oferecer uma plataforma prática e didática para que os alunos dos primeiros semestres do curso de Ciências Contábeis da UFMS tenham um contato inicial com as práticas contábeis.  
-Atualmente, os softwares contábeis avançados são utilizados apenas nos últimos semestres do curso. O COIN’S busca preencher essa lacuna, proporcionando aos alunos uma experiência introdutória que facilita a compreensão dos conceitos básicos e serve como motivação para o aprendizado contínuo.
+Este documento apresenta o Plano de Projeto para o desenvolvimento do Sistema COIN'S (Contabilidade Integrada). O sistema tem como objetivo oferecer uma plataforma prática e didática para que os alunos dos primeiros semestres do curso de Ciências Contábeis da UFMS tenham um contato inicial com as práticas contábeis.  
+Atualmente, os softwares contábeis avançados são utilizados apenas nos últimos semestres do curso. O COIN'S busca preencher essa lacuna, proporcionando aos alunos uma experiência introdutória que facilita a compreensão dos conceitos básicos e serve como motivação para o aprendizado contínuo.
 
 ## Proponentes {#proponentes}
-Os proponentes são os responsáveis por solicitar, validar e acompanhar o desenvolvimento do Sistema COIN’S ao longo do semestre, atuando como representantes do curso de Ciências Contábeis e garantindo alinhamento acadêmico-pedagógico do projeto.
+Os proponentes são os responsáveis por solicitar, validar e acompanhar o desenvolvimento do Sistema COIN'S ao longo do semestre, atuando como representantes do curso de Ciências Contábeis e garantindo alinhamento acadêmico-pedagógico do projeto.
 
 | Nome | Telefone | E-mail |
 | :---- | :---- | :---- |
@@ -66,7 +66,7 @@ Os proponentes são os responsáveis por solicitar, validar e acompanhar o desen
 | Aluno Jean Pleutim | \+55 67 9208-3908 | jean\_pleutim@ufms.br |
 
 ## Escopo do Projeto {#escopo-do-projeto}
-O escopo do Sistema COIN’S define as funcionalidades que serão desenvolvidas ao longo do projeto, seguindo um plano incremental baseado na priorização definida durante a entrevista com o proponente. O desenvolvimento será dividido em etapas, dando continuidade à implementação do sistema que iniciou em 2025\.
+O escopo do Sistema COIN'S define as funcionalidades que serão desenvolvidas ao longo do projeto, seguindo um plano incremental baseado na priorização definida durante a entrevista com o proponente. O desenvolvimento será dividido em etapas, dando continuidade à implementação do sistema que iniciou em 2025\.
 
 ### 2.1 Funcionalidades do MVP (Versão Inicial \- 2025.2) As funcionalidades essenciais que compõem o MVP são:
 
