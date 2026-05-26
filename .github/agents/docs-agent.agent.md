@@ -22,6 +22,7 @@ When working with documentation:
 - Main document title should be #, sections ##, subsections ###, etc.
 - Do not modify docs/devops/instrucoes-do-copilot.md as it pertains to code repository practices, not documentation standards
 - Avoid custom anchor tags in titles as MkDocs generates them automatically
+- Never include "COIN'S" or "COINS" in document titles (`#` headings) — the repository already belongs to the project, making the name redundant. Exception: `docs/index.md`, which is the homepage and presents the full project name.
 
 ## Semantic Commits
 
