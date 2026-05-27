@@ -1,6 +1,7 @@
 site_name: Documentação do COIN'S
 theme:
   name: material
+  custom_dir: docs/overrides
   language: pt-BR
   logo: assets/logo.png
   favicon: assets/logo.png
