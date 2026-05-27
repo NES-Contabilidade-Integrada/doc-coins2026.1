@@ -94,6 +94,8 @@ A documentação reúne os principais entregáveis do projeto, organizados por �
 
 ## Ambientes Compartilhados
 
+<div class="centered-table" markdown>
+
 | Ferramenta | Link |
 |------------|------|
 | 🎨 Figma | [Protótipo COIN'S](https://www.figma.com/design/Z3hfLoenhr73I3u5BRU5lP/COIN-S---Contabilidade-Integrada?node-id=40000778-20259&t=jaqeTyfCvmRHlX9C-1) |
@@ -102,9 +104,13 @@ A documentação reúne os principais entregáveis do projeto, organizados por �
 | 🗺️ Miro | — |
 | 📓 NotebookLM | — |
 
+</div>
+
 ---
 
 ## Equipe
+
+<div class="centered-table" markdown>
 
 === "2026/1"
 
@@ -137,3 +143,5 @@ A documentação reúne os principais entregáveis do projeto, organizados por �
     **Orientação:** Professora Maria Istela Cagnin Machado  
     **Proposto por:** Robert Armando Espejo e Jean Pleutim  
     **Técnico:** Lucas Borth
+
+</div>
