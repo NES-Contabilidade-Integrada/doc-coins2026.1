@@ -40,39 +40,7 @@ O sistema foi criado para preencher uma lacuna no curso de Ciências Contábeis:
 
 ## Fluxo geral do sistema
 
-```mermaid
-%%{init: {
-  "theme": "base",
-  "flowchart": { "curve": "basis", "nodeSpacing": 40, "rankSpacing": 55 },
-  "themeVariables": {
-    "fontSize": "16px",
-    "primaryColor": "#F8FAFC",
-    "primaryBorderColor": "#94A3B8",
-    "primaryTextColor": "#0F172A",
-    "lineColor": "#6B7280"
-  }
-}}%%
-
-flowchart LR
-    classDef etapa    fill:#F8FAFC,stroke:#94A3B8,stroke-width:1.5px,color:#0F172A;
-    classDef resultado fill:#EEF2FF,stroke:#818CF8,stroke-width:1.5px,color:#312E81;
-
-    A["Plano de Contas"] --> B["Livro Diário"]
-    B --> C["Livro Razão"]
-    C --> D["Balancete"]
-    D --> E["Apuração do Resultado"]
-
-    E -. "validar lançamentos" .-> B
-    E -. "verificar saldo das contas" .-> C
-
-    E --> F["DRE"]
-    E --> G["Balanço Patrimonial"]
-    F --> H["📄 Relatório"]
-    G --> H
-
-    class A,B,C,D,E etapa
-    class F,G,H resultado
-```
+![Fluxo geral do sistema](assets/fluxo-geral.png)
 
 ---
 
