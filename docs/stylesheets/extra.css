@@ -75,3 +75,24 @@
   height: 48px;
   width: auto;
 }
+
+/* Logo NES FACOM inline com o copyright no rodapé */
+.md-copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.md-copyright::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-image: url('../assets/logo-nes-facom.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+  flex-shrink: 0;
+}
