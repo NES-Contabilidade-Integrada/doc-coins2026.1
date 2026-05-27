@@ -14,22 +14,27 @@ O sistema foi criado para preencher uma lacuna no curso de Ciências Contábeis:
 
 ---
 
-O sistema abrange conteúdos de diversas disciplinas do curso de **Ciências Contábeis da UFMS**:
+O sistema abrange conteúdos de diversas disciplinas do curso de **Ciências Contábeis da ESAN/UFMS**:
 
 <div class="grid cards" markdown>
 
-- Introdução à Contabilidade
-- Contabilidade 2
-- Contabilidade 3
+- Contabilidade I
+- Contabilidade II
+- Contabilidade III
 - Contabilidade de Custos
 - Análise de Custos
-- Contabilidade do Terceiro Setor
-- Contabilidade Societária
-- Contabilidade Societária 2
+- Contabilidade Societária I
+- Contabilidade Societária II
+- Contabilidade Aplicada ao Setor Público
 - Contabilidade Tributária
-- Contabilidade Tributária 2
-- Laboratório Contábil 1
-- Laboratório Contábil 2
+- Contabilidade do Terceiro Setor e Sustentabilidade
+- Contabilidade Tributária Empresarial
+- Contabilidade Aplicada ao Agronegócio
+- Contabilidade Avançada
+- Auditoria Contábil
+- Análise de Demonstrações Contábeis
+- Laboratório de Prática Contábil I
+- Laboratório de Prática Contábil II
 
 </div>
 
