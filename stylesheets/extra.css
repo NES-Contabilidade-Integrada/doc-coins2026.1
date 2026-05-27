@@ -5,9 +5,12 @@
   --md-accent-fg-color: #0088B7;
 }
 
-/* Ocultar "Made with Material for MkDocs" */
-.md-copyright__highlight {
+/* Ocultar link "Made with Material for MkDocs" */
+.md-copyright__highlight a {
   display: none;
+}
+.md-copyright__highlight::before {
+  content: none;
 }
 
 /* Headings uniformes em todas as páginas */
@@ -24,6 +27,12 @@
 .md-typeset h5,
 .md-typeset h6 {
   color: #003649 !important;
+}
+
+/* Cards de disciplinas menores */
+.md-typeset .grid.cards > ul > li {
+  padding: 0.6rem 0.8rem;
+  font-size: 0.8rem;
 }
 
 /* Logo maior no header */
