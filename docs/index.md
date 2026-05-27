@@ -58,15 +58,37 @@ O sistema abrange conteúdos de diversas disciplinas do curso de **Ciências Con
 
 ## Stack
 
-<p>
-  <img src="https://img.shields.io/badge/Electron-2B2E3A?style=for-the-badge&logo=electron&logoColor=9FEAF9" alt="Electron"/>
-  <img src="https://img.shields.io/badge/Vue_3-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" alt="Vue 3"/>
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
-  <img src="https://img.shields.io/badge/Vuetify-1867C0?style=for-the-badge&logo=vuetify&logoColor=white" alt="Vuetify"/>
-  <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white" alt="Express.js"/>
-  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite"/>
-  <img src="https://img.shields.io/badge/Knex.js-E16426?style=for-the-badge&logo=knexdotjs&logoColor=white" alt="Knex.js"/>
-</p>
+<div class="grid cards" markdown>
+
+-   <img src="https://img.shields.io/badge/Electron-2B2E3A?style=for-the-badge&logo=electron&logoColor=9FEAF9" alt="Electron"/>
+
+    Framework para criação de aplicativos desktop multiplataforma com tecnologias web.
+
+-   <img src="https://img.shields.io/badge/Vue_3-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" alt="Vue 3"/>
+
+    Framework JavaScript progressivo para construção da interface do usuário.
+
+-   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+
+    Superset do JavaScript com tipagem estática, garantindo maior segurança e manutenibilidade do código.
+
+-   <img src="https://img.shields.io/badge/Vuetify-1867C0?style=for-the-badge&logo=vuetify&logoColor=white" alt="Vuetify"/>
+
+    Biblioteca de componentes de interface baseada no Material Design para Vue 3.
+
+-   <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white" alt="Express.js"/>
+
+    Framework minimalista para Node.js, utilizado na camada de API interna da aplicação.
+
+-   <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite"/>
+
+    Banco de dados relacional embarcado, sem necessidade de servidor externo.
+
+-   <img src="https://img.shields.io/badge/Knex.js-E16426?style=for-the-badge&logo=knexdotjs&logoColor=white" alt="Knex.js"/>
+
+    Query builder SQL para Node.js, facilitando migrações e consultas ao banco de dados.
+
+</div>
 
 ---
 
