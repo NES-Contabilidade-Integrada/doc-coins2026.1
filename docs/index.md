@@ -92,6 +92,18 @@ A documentação reúne os principais entregáveis do projeto, organizados por �
 
 ---
 
+## Ambientes Compartilhados
+
+| Ferramenta | Link |
+|------------|------|
+| 🎨 Figma | [Protótipo COIN'S](https://www.figma.com/design/Z3hfLoenhr73I3u5BRU5lP/COIN-S---Contabilidade-Integrada?node-id=40000778-20259&t=jaqeTyfCvmRHlX9C-1) |
+| 📁 Google Drive | [Pasta do Projeto](https://drive.google.com/drive/folders/1dSzfMOYWT6Y_vLQtLixwUQxB1kRvvvQ1) |
+| 📋 GitHub Projects | [Board do Projeto](https://github.com/orgs/NES-Contabilidade-Integrada/projects/9/views/1) |
+| 🗺️ Miro | — |
+| 📓 NotebookLM | — |
+
+---
+
 ## Equipe
 
 === "2026/1"
