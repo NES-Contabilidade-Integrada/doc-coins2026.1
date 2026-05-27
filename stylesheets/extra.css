@@ -5,6 +5,12 @@
   --md-accent-fg-color: #0088B7;
 }
 
+/* Centralizar rodapé */
+.md-footer-meta__inner {
+  justify-content: center;
+  text-align: center;
+}
+
 /* Ocultar link "Made with Material for MkDocs" */
 .md-copyright__highlight a {
   display: none;
