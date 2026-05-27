@@ -4,6 +4,16 @@ COIN'S é um aplicativo desktop educacional desenvolvido na UFMS pelo **Núcleo 
 
 O sistema foi criado para preencher uma lacuna no curso de Ciências Contábeis: os softwares contábeis profissionais só são introduzidos nos semestres avançados, deixando os alunos dos primeiros períodos sem contato prático com os processos fundamentais da profissão. O COIN'S simula um ambiente contábil real — do registro de lançamentos à geração de demonstrativos financeiros — em uma interface acessível e voltada ao aprendizado.
 
+---
+
+## Vídeo de apresentação
+
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FLl8JhWhBFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+---
+
 O sistema abrange conteúdos de diversas disciplinas do curso de **Ciências Contábeis da UFMS**:
 
 <div class="grid cards" markdown>
@@ -21,14 +31,6 @@ O sistema abrange conteúdos de diversas disciplinas do curso de **Ciências Con
 - Laboratório Contábil 1
 - Laboratório Contábil 2
 
-</div>
-
----
-
-## Vídeo de apresentação
-
-<div style="text-align:center;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FLl8JhWhBFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 ---
