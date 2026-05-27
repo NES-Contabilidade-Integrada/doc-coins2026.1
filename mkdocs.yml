@@ -6,14 +6,17 @@ theme:
   favicon: assets/logo.png
   palette:
     primary: custom
-  custom_dir: overrides
+  icon:
+    repo: material/download
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.top
     - content.code.copy
     - content.code.annotate
-    - announce.dismiss
+
+repo_url: https://github.com/NES-Contabilidade-Integrada/coins2026.1/releases/latest
+repo_name: Download
 
 copyright: Núcleo de Práticas de Engenharia de Software | UFMS
 
