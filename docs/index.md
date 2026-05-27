@@ -46,8 +46,11 @@ flowchart LR
     B --> C[Livro Razão]
     C --> D[Balancete]
     D --> E[Apuração do Resultado]
+    E -.->|valida lançamentos| B
+    E -.->|valida lançamentos| C
     E --> F[DRE]
     E --> G[Balanço Patrimonial]
+    F & G -->|exportar relatório| H[📄 Relatório]
 ```
 
 ---
