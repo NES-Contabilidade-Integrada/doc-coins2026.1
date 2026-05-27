@@ -76,6 +76,22 @@ flowchart LR
 
 ---
 
+## Artefatos por área
+
+A documentação reúne os principais entregáveis do projeto, organizados por área de responsabilidade:
+
+- **[Arquitetura](arquitetura/especificacao-arquitetural.md)**: visão de alto nível, especificação arquitetural, diagramas e decisões estruturais.
+- **[Requisitos](requisitos/especificacao-de-requisitos-de-software.md)**: requisitos de produto e software, regras de negócio para apuração de DRE e Balanço Patrimonial.
+- **[Banco de Dados](banco-de-dados/documentacao-modelo-dados.md)**: modelo de dados, dicionário e documentação do modelo lógico.
+- **[IHC](ihc/identidade-visual.md)**: identidade visual, diretrizes de design e padrões de interface.
+- **[Interface e Experiência](gerencia-projeto/plano-do-projeto.md#projeto-de-interface-e-interação)**: protótipos, visão de implementação e critérios de usabilidade.
+- **[Qualidade e Testes](qualidade-testes/plano-de-testes.md)**: plano de testes, critérios de aceitação e estratégias de validação.
+- **[Gerência de Projeto](gerencia-projeto/plano-do-projeto.md)**: planejamento, políticas de configuração, modelo de ramificação e relatórios de progresso.
+- **[DevOps](devops/visao-geral.md)**: infraestrutura proposta, fluxo de trabalho e práticas de integração contínua.
+- **[Decisões](decisoes/decisoes.md)**: registro de decisões técnicas e de projeto que sustentam a solução.
+
+---
+
 ## Diferenciais
 
 <div class="grid cards" markdown>
@@ -139,22 +155,6 @@ flowchart LR
 ## Download
 
 As versões executáveis estão disponíveis na página de [Releases do repositório](https://github.com/NES-Contabilidade-Integrada/coins2026.1/releases) para quem possui acesso ao repositório.
-
----
-
-## Artefatos por área
-
-A documentação reúne os principais entregáveis do projeto, organizados por área de responsabilidade:
-
-- **[Arquitetura](arquitetura/especificacao-arquitetural.md)**: visão de alto nível, especificação arquitetural, diagramas e decisões estruturais.
-- **[Requisitos](requisitos/especificacao-de-requisitos-de-software.md)**: requisitos de produto e software, regras de negócio para apuração de DRE e Balanço Patrimonial.
-- **[Banco de Dados](banco-de-dados/documentacao-modelo-dados.md)**: modelo de dados, dicionário e documentação do modelo lógico.
-- **[IHC](ihc/identidade-visual.md)**: identidade visual, diretrizes de design e padrões de interface.
-- **[Interface e Experiência](gerencia-projeto/plano-do-projeto.md#projeto-de-interface-e-interação)**: protótipos, visão de implementação e critérios de usabilidade.
-- **[Qualidade e Testes](qualidade-testes/plano-de-testes.md)**: plano de testes, critérios de aceitação e estratégias de validação.
-- **[Gerência de Projeto](gerencia-projeto/plano-do-projeto.md)**: planejamento, políticas de configuração, modelo de ramificação e relatórios de progresso.
-- **[DevOps](devops/visao-geral.md)**: infraestrutura proposta, fluxo de trabalho e práticas de integração contínua.
-- **[Decisões](decisoes/decisoes.md)**: registro de decisões técnicas e de projeto que sustentam a solução.
 
 ---
 
