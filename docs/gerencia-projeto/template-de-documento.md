@@ -1,42 +1,41 @@
-# Título (tamanho 18\)
+# Título do Documento
 
-**Histórico de Versões (tamanho 14\)**
+## Histórico de Versões
 
 | Versão | Data | Descrição | Autor |
-| :---: | :---: | :---: | :---: |
-| 1.0 | 19/08 | Descrição 1 | Fulano de Tal |
-| 1.1 | 19/08 | Descrição 2 | Fulano de Tal |
-| 1.1.1 | 20/08 | Descrição 3 | Fulano de Tal |
+| :---: | :---: | :--- | :--- |
+| 1.0 | 00/00/0000 | Criação do documento | Nome do Autor |
+| 1.1 | 00/00/0000 | Descrição da alteração | Nome do Autor |
 
-**Histórico de Revisões (tamanho 14\)**
+## Histórico de Revisões
 
 | Versão | Data | Revisor | Observação |
-| :---: | :---: | :---: | ----- |
-| 1.0 | 19/08 | Fulano de Tal | Aprovada |
-| 1.1 | 19/08 | Fulano de Tal | Reprovada |
-| 1.1.1 | 20/08 | Fulano de Tal | Resolver pendências |
+| :---: | :---: | :--- | :--- |
+| 1.0 | 00/00/0000 | Nome do Revisor | Aprovada |
+| 1.1 | 00/00/0000 | Nome do Revisor | Reprovada — descrever pendências |
 
-**Sumário**
+---
 
-[1\. Introdução (tamanho 13\)	1](#introdução-\(tamanho-13\))
+## Introdução
 
-[2\. Tópico 2	1](#tópico-2)
+Descreva brevemente o propósito do documento, seu escopo e o que o leitor encontrará nas seções seguintes.
 
-[2.1 Subtopico 1	2](#2.1-subtopico-1)
+---
 
-[2.2 Subtopico 2	2](#2.2-subtopico-2)
+## Tópico 2
 
-[3\. Tópico 3	2](#tópico-3)
+Conteúdo do tópico.
 
-## Introdução (tamanho 13\) {#introdução-(tamanho-13)}
-O tamanho da fonte do texto é 12\. A fonte Roboto. O texto deve ser justificado. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.   
-It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+### 2.1 Subtópico 1
 
-## Tópico 2 {#tópico-2}
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+Conteúdo do subtópico.
 
-### 2.1 Subtopico 1 It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+### 2.2 Subtópico 2
 
-### 2.2 Subtopico 2 3. # Tópico 3 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.   
-It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum  
+Conteúdo do subtópico.
+
+---
+
+## Tópico 3
+
+Conteúdo do tópico.
