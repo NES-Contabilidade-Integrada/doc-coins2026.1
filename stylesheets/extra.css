@@ -70,6 +70,11 @@
   align-items: center;
 }
 
+/* Centralizar abas de navegação no header */
+.md-tabs__list {
+  justify-content: center;
+}
+
 /* Logo maior no header */
 .md-header__button.md-logo img {
   height: 48px;
