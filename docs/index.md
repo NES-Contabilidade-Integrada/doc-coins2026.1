@@ -59,28 +59,20 @@ flowchart LR
 
 === "2026/1"
 
-    **Apuração do Resultado do Exercício**
-    :   Encerramento das contas de receitas e despesas com prévia completa antes da execução. Inclui resumo do resultado, contas envolvidas, lançamentos de encerramento, transferência automática para Lucros ou Prejuízos Acumulados com compensação entre períodos, histórico de apurações realizadas e possibilidade de desfazer a última apuração.
-
-    **Demonstração do Resultado do Exercício (DRE)**
-    :   Relatório estruturado com Receita Bruta, Deduções, Receita Líquida, CMV/CPV, Lucro Bruto, Despesas Operacionais, LAJIR, Resultado Financeiro, LAIR, Resultado Não Operacional e Lucro Líquido. Permite filtrar por período e expandir a composição de cada conta.
-
-    **Balanço Patrimonial**
-    :   Demonstrativo da posição financeira com Ativo, Passivo e Patrimônio Líquido agrupados hierarquicamente. Permite expandir e recolher grupos, exibe resumo e conferência de equilíbrio, e possibilita a **exportação do relatório**.
+    | Funcionalidade | Descrição |
+    |---|---|
+    | **Apuração do Resultado do Exercício** | Encerramento das contas de receitas e despesas com prévia completa antes da execução. Inclui resumo do resultado, contas envolvidas, lançamentos de encerramento, transferência automática para Lucros ou Prejuízos Acumulados com compensação entre períodos, histórico de apurações realizadas e possibilidade de desfazer a última apuração. |
+    | **Demonstração do Resultado do Exercício (DRE)** | Relatório estruturado com Receita Bruta, Deduções, Receita Líquida, CMV/CPV, Lucro Bruto, Despesas Operacionais, LAJIR, Resultado Financeiro, LAIR, Resultado Não Operacional e Lucro Líquido. Permite filtrar por período e expandir a composição de cada conta. |
+    | **Balanço Patrimonial** | Demonstrativo da posição financeira com Ativo, Passivo e Patrimônio Líquido agrupados hierarquicamente. Permite expandir e recolher grupos, exibe resumo e conferência de equilíbrio, e possibilita a **exportação do relatório**. |
 
 === "2025/2"
 
-    **Plano de Contas**
-    :   Consulta ao plano de contas padrão com estrutura hierárquica de contas sintéticas e analíticas.
-
-    **Livro Diário**
-    :   Gerenciamento completo de lançamentos contábeis — criação, edição, exclusão e listagem cronológica. Inclui também a opção de limpar todos os dados da empresa.
-
-    **Livro Razão**
-    :   Agrupamento dos lançamentos por conta, permitindo acompanhar a movimentação individual de cada conta ao longo do período.
-
-    **Balancete de Verificação**
-    :   Confronto dos saldos devedores e credores de todas as contas com filtros por período, exibição do balancete completo e resumo consolidado dos totais.
+    | Funcionalidade | Descrição |
+    |---|---|
+    | **Plano de Contas** | Consulta ao plano de contas padrão com estrutura hierárquica de contas sintéticas e analíticas. |
+    | **Livro Diário** | Gerenciamento completo de lançamentos contábeis — criação, edição, exclusão e listagem cronológica. Inclui também a opção de limpar todos os dados da empresa. |
+    | **Livro Razão** | Agrupamento dos lançamentos por conta, permitindo acompanhar a movimentação individual de cada conta ao longo do período. |
+    | **Balancete de Verificação** | Confronto dos saldos devedores e credores de todas as contas com filtros por período, exibição do balancete completo e resumo consolidado dos totais. |
 
 ---
 
