@@ -24,7 +24,7 @@ O sistema foi criado para preencher uma lacuna no curso de Ciências Contábeis:
 
 - :material-domain: **Instituição**
 
-    Desenvolvido no Núcleo de Práticas de Engenharia de Software da UFMS.
+    Desenvolvido pelo Núcleo de Práticas de Engenharia de Software (FACOM/UFMS) em parceria com a ESAN/UFMS.
 
 </div>
 
