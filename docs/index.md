@@ -62,7 +62,7 @@ flowchart LR
     | Funcionalidade | Descrição |
     |---|---|
     | **Apuração do Resultado do Exercício** | Encerramento das contas de receitas e despesas com prévia completa antes da execução. Inclui resumo do resultado, contas envolvidas, lançamentos de encerramento, transferência automática para Lucros ou Prejuízos Acumulados com compensação entre períodos, histórico de apurações realizadas e possibilidade de desfazer a última apuração. |
-    | **Demonstração do Resultado do Exercício (DRE)** | Relatório estruturado com Receita Bruta, Deduções, Receita Líquida, CMV/CPV, Lucro Bruto, Despesas Operacionais, LAJIR, Resultado Financeiro, LAIR, Resultado Não Operacional e Lucro Líquido. Permite filtrar por período e expandir a composição de cada conta. |
+    | **Demonstração do Resultado do Exercício (DRE)** | Relatório estruturado com Receita Bruta, Deduções, Receita Líquida, CMV/CPV, Lucro Bruto, Despesas Operacionais, LAJIR, Resultado Financeiro, LAIR, Resultado Não Operacional e Lucro Líquido. Permite filtrar por período, expandir a composição de cada conta e possibilita a **exportação do relatório**. |
     | **Balanço Patrimonial** | Demonstrativo da posição financeira com Ativo, Passivo e Patrimônio Líquido agrupados hierarquicamente. Permite expandir e recolher grupos, exibe resumo e conferência de equilíbrio, e possibilita a **exportação do relatório**. |
 
 === "2025/2"
