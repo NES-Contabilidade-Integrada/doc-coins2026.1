@@ -144,6 +144,6 @@ A documentação reúne os principais entregáveis do projeto, organizados por �
     **Proposto por:** Robert Armando Espejo e Jean Pleutim  
     **Técnico:** Lucas Borth
 
-    [:material-download: Certificado de Registro do Software](../assets/certificado-registro-software-2025-2.pdf)
+    [:material-download: Certificado de Registro do Software](assets/certificado-registro-software-2025-2.pdf)
 
 </div>
