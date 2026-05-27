@@ -105,34 +105,6 @@ flowchart LR
 
 ---
 
-## Disciplinas abrangidas
-
-O sistema abrange conteúdos de diversas disciplinas do curso de **Ciências Contábeis da ESAN/UFMS**:
-
-<div class="grid cards" markdown>
-
-- Contabilidade I
-- Contabilidade II
-- Contabilidade III
-- Contabilidade de Custos
-- Análise de Custos
-- Contabilidade Societária I
-- Contabilidade Societária II
-- Contabilidade Aplicada ao Setor Público
-- Contabilidade Tributária
-- Contabilidade do Terceiro Setor e Sustentabilidade
-- Contabilidade Tributária Empresarial
-- Contabilidade Aplicada ao Agronegócio
-- Contabilidade Avançada
-- Auditoria Contábil
-- Análise de Demonstrações Contábeis
-- Laboratório de Prática Contábil I
-- Laboratório de Prática Contábil II
-
-</div>
-
----
-
 ## Stack
 
 <div class="grid cards" markdown>
@@ -202,6 +174,34 @@ A documentação reúne os principais entregáveis do projeto, organizados por �
 | 📋 GitHub Projects | [Board do Projeto](https://github.com/orgs/NES-Contabilidade-Integrada/projects/9/views/1) |
 | 🗺️ Miro | — |
 | 📓 NotebookLM | — |
+
+</div>
+
+---
+
+## Disciplinas abrangidas
+
+O sistema abrange conteúdos de diversas disciplinas do curso de **Ciências Contábeis da ESAN/UFMS**:
+
+<div class="grid cards" markdown>
+
+- Contabilidade I
+- Contabilidade II
+- Contabilidade III
+- Contabilidade de Custos
+- Análise de Custos
+- Contabilidade Societária I
+- Contabilidade Societária II
+- Contabilidade Aplicada ao Setor Público
+- Contabilidade Tributária
+- Contabilidade do Terceiro Setor e Sustentabilidade
+- Contabilidade Tributária Empresarial
+- Contabilidade Aplicada ao Agronegócio
+- Contabilidade Avançada
+- Auditoria Contábil
+- Análise de Demonstrações Contábeis
+- Laboratório de Prática Contábil I
+- Laboratório de Prática Contábil II
 
 </div>
 
