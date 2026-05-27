@@ -4,6 +4,33 @@ COIN'S é um aplicativo desktop educacional desenvolvido na UFMS pelo **Núcleo 
 
 O sistema foi criado para preencher uma lacuna no curso de Ciências Contábeis: os softwares contábeis profissionais só são introduzidos nos semestres avançados, deixando os alunos dos primeiros períodos sem contato prático com os processos fundamentais da profissão. O COIN'S simula um ambiente contábil real — do registro de lançamentos à geração de demonstrativos financeiros — em uma interface acessível e voltada ao aprendizado.
 
+O sistema abrange conteúdos de diversas disciplinas do curso de **Ciências Contábeis da UFMS**:
+
+<div class="grid cards" markdown>
+
+- Introdução à Contabilidade
+- Contabilidade 2
+- Contabilidade 3
+- Contabilidade de Custos
+- Análise de Custos
+- Contabilidade do Terceiro Setor
+- Contabilidade Societária
+- Contabilidade Societária 2
+- Contabilidade Tributária
+- Contabilidade Tributária 2
+- Laboratório Contábil 1
+- Laboratório Contábil 2
+
+</div>
+
+---
+
+## Vídeo de apresentação
+
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FLl8JhWhBFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
 ---
 
 ## Funcionalidades
@@ -15,7 +42,7 @@ O sistema foi criado para preencher uma lacuna no curso de Ciências Contábeis:
 | **Livro Razão** | Agrupamento dos lançamentos por conta, permitindo acompanhar a movimentação individual de cada conta ao longo do período. |
 | **Balancete de Verificação** | Confronto dos saldos devedores e credores de todas as contas, verificando o equilíbrio contábil dos lançamentos. |
 | **Apuração do Resultado do Exercício** | Encerramento das contas de receitas e despesas, apurando o lucro ou prejuízo do período. |
-| **DRE** | Demonstração do Resultado do Exercício, apresentando de forma estruturada receitas, deduções, despesas e o resultado líquido. |
+| **Demonstração do Resultado do Exercício** | Apresentação estruturada de receitas, deduções, despesas e o resultado líquido do período. |
 | **Balanço Patrimonial** | Demonstrativo da posição financeira da empresa, evidenciando ativo, passivo e patrimônio líquido ao final do exercício. |
 
 ---
@@ -31,14 +58,6 @@ O sistema foi criado para preencher uma lacuna no curso de Ciências Contábeis:
   <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite"/>
   <img src="https://img.shields.io/badge/Knex.js-E16426?style=for-the-badge&logo=knexdotjs&logoColor=white" alt="Knex.js"/>
 </p>
-
----
-
-## Vídeo de apresentação
-
-<div style="text-align:center;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FLl8JhWhBFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
 
 ---
 

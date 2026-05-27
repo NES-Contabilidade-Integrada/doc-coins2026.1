@@ -13,6 +13,8 @@ theme:
     - content.code.copy
     - content.code.annotate
 
+copyright: Núcleo de Práticas de Engenharia de Software | UFMS
+
 extra_css:
   - stylesheets/extra.css
 
