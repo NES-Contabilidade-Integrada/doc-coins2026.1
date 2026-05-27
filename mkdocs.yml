@@ -6,12 +6,14 @@ theme:
   favicon: assets/logo.png
   palette:
     primary: custom
+  custom_dir: overrides
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.top
     - content.code.copy
     - content.code.annotate
+    - announce.dismiss
 
 copyright: Núcleo de Práticas de Engenharia de Software | UFMS
 
