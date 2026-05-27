@@ -116,5 +116,4 @@ A documentação reúne os principais entregáveis do projeto, organizados por �
     | Wagner Rodrigues Silva | engsoftwagner242@gmail.com |
 
     **Orientação:** Professora Maria Istela Cagnin Machado  
-    **Proposto por:** Robert Armando Espejo  
     **Técnico:** Lucas Borth
