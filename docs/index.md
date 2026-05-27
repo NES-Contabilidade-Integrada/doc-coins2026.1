@@ -6,11 +6,49 @@ O sistema foi criado para preencher uma lacuna no curso de Ciências Contábeis:
 
 ---
 
+## Visão geral
+
+<div class="grid cards" markdown>
+
+- :material-school: **Finalidade**
+
+    Apoiar o ensino prático de contabilidade para alunos dos primeiros semestres.
+
+- :material-desktop-classic: **Formato**
+
+    Aplicativo desktop educacional desenvolvido com tecnologias web.
+
+- :material-book-open-page-variant: **Uso didático**
+
+    Permite praticar lançamentos, consultas e geração de demonstrativos contábeis.
+
+- :material-domain: **Instituição**
+
+    Desenvolvido no Núcleo de Práticas de Engenharia de Software da UFMS.
+
+</div>
+
+---
+
 ## Vídeo de apresentação
 
 <div style="text-align:center;">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FLl8JhWhBFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
+
+---
+
+## Fluxo geral do sistema
+
+```mermaid
+flowchart LR
+    A[Plano de Contas] --> B[Livro Diário]
+    B --> C[Livro Razão]
+    C --> D[Balancete]
+    D --> E[Apuração do Resultado]
+    E --> F[DRE]
+    E --> G[Balanço Patrimonial]
+```
 
 ---
 
@@ -40,6 +78,30 @@ O sistema foi criado para preencher uma lacuna no curso de Ciências Contábeis:
 
     **Balancete de Verificação**
     :   Confronto dos saldos devedores e credores de todas as contas com filtros por período, exibição do balancete completo e resumo consolidado dos totais.
+
+---
+
+## Diferenciais
+
+<div class="grid cards" markdown>
+
+- :material-lightbulb-on: **Aprendizado progressivo**
+
+    O sistema apresenta os processos contábeis de forma organizada, acompanhando a evolução do estudante.
+
+- :material-shield-check: **Ambiente seguro para prática**
+
+    Permite simular rotinas contábeis sem o risco de afetar dados reais de empresas.
+
+- :material-chart-box: **Demonstrativos integrados**
+
+    Os lançamentos realizados alimentam relatórios como Balancete, DRE e Balanço Patrimonial.
+
+- :material-account-group: **Foco acadêmico**
+
+    A interface e os fluxos foram pensados para apoiar disciplinas do curso de Ciências Contábeis.
+
+</div>
 
 ---
 
