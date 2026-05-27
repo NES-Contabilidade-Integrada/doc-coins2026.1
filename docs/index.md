@@ -82,3 +82,39 @@ A documentação reúne os principais entregáveis do projeto, organizados por �
 - **[Gerência de Projeto](gerencia-projeto/plano-do-projeto.md)**: planejamento, políticas de configuração, modelo de ramificação e relatórios de progresso.
 - **[DevOps](devops/visao-geral.md)**: infraestrutura proposta, fluxo de trabalho e práticas de integração contínua.
 - **[Decisões](decisoes/decisoes.md)**: registro de decisões técnicas e de projeto que sustentam a solução.
+
+---
+
+## Equipe
+
+=== "2026/1"
+
+    Este sistema foi desenvolvido pela seguinte equipe:
+
+    | Nome | E-mail |
+    |------|--------|
+    | Amanda Gois de Balcaçar | amandagois@gmail.com |
+    | Elise Lissa Hasegawa | eliselissa05@gmail.com |
+    | Fernanda de Paula Pessoa | fernaandapessoa@outlook.com |
+    | Lohan Toledo Tosta | lohan.ltt@gmail.com |
+    | Vinicius Carneiro de Aguiar | viniciuscarneiro60@gmail.com |
+
+    **Orientação:** Professora Vanessa Borges  
+    **Proposto por:** Robert Armando Espejo e Jean Pleutim  
+    **Técnico:** Loester Kiyoshi Teruya
+
+=== "2025/2"
+
+    Este sistema foi desenvolvido pela seguinte equipe:
+
+    | Nome | E-mail |
+    |------|--------|
+    | Fernanda de Paula Pessoa | fernaandapessoa@outlook.com |
+    | Gustavo Pinheiro Fujinohara | gustavoh.fujinoharah@gmail.com |
+    | Jerfferson Jorge Felizardo Júnior | jerffersonjorgefj@gmail.com |
+    | Pedro Nicoletti Sotoma | pedrosotoma@gmail.com |
+    | Wagner Rodrigues Silva | engsoftwagner242@gmail.com |
+
+    **Orientação:** Professora Maria Istela Cagnin Machado  
+    **Proposto por:** Robert Armando Espejo  
+    **Técnico:** Lucas Borth
