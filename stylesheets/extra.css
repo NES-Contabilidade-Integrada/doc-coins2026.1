@@ -16,6 +16,18 @@
 .md-content h3,
 .md-content h4,
 .md-content h5,
-.md-content h6 {
-  color: #003649;
+.md-content h6,
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  color: #003649 !important;
+}
+
+/* Logo maior no header */
+.md-header__button.md-logo img {
+  height: 48px;
+  width: auto;
 }
