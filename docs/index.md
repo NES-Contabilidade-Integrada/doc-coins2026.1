@@ -6,6 +6,14 @@ O sistema foi criado para preencher uma lacuna no curso de Ciências Contábeis:
 
 ---
 
+## Vídeo de apresentação
+
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FLl8JhWhBFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+---
+
 ## Visão geral
 
 <div class="grid cards" markdown>
@@ -26,14 +34,6 @@ O sistema foi criado para preencher uma lacuna no curso de Ciências Contábeis:
 
     Desenvolvido pelo Núcleo de Práticas de Engenharia de Software (FACOM/UFMS) em parceria com a ESAN/UFMS.
 
-</div>
-
----
-
-## Vídeo de apresentação
-
-<div style="text-align:center;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FLl8JhWhBFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 ---
@@ -143,7 +143,7 @@ A documentação reúne os principais entregáveis do projeto, organizados por �
 
 ## Download
 
-As versões executáveis estão disponíveis na página de [Releases do repositório](https://github.com/NES-Contabilidade-Integrada/coins2026.1/releases) para quem possui acesso ao repositório.
+As versões executáveis estão disponíveis na página de [Releases do repositório](https://github.com/NES-Contabilidade-Integrada/coins2026.1/releases/latest) para quem possui acesso ao repositório.
 
 ---
 
