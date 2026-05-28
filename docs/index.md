@@ -202,6 +202,7 @@ O sistema abrange conteúdos de diversas disciplinas do curso de **Ciências Con
     | Nome | E-mail |
     |------|--------|
     | Amanda Gois de Balcaçar | amandagois@gmail.com |
+    | Eduardo Henrique Alves | eduardohhalves@gmail.com |
     | Elise Lissa Hasegawa | eliselissa05@gmail.com |
     | Fernanda de Paula Pessoa | fernaandapessoa@outlook.com |
     | Lohan Toledo Tosta | lohan.ltt@gmail.com |
