@@ -71,7 +71,7 @@ A documentação reúne os principais entregáveis do projeto, organizados por �
 
 - **[Arquitetura](arquitetura/especificacao-arquitetural.md)**: visão de alto nível, especificação arquitetural, diagramas e decisões estruturais.
 - **[Requisitos](requisitos/especificacao-de-requisitos-de-software.md)**: requisitos de produto e software, regras de negócio para apuração de DRE e Balanço Patrimonial.
-- **[Banco de Dados](banco-de-dados/visao-geral.md)**: modelo de dados, dicionário e documentação do modelo lógico.
+- **[Banco de Dados](banco-de-dados/index.md)**: modelo de dados, dicionário e documentação do modelo lógico.
 - **[IHC](ihc/visao-geral.md)**: identidade visual, protótipos, Figma e testes de usabilidade.
 - **[Interface e Experiência](gerencia-projeto/plano-do-projeto.md#projeto-de-interface-e-interação)**: protótipos, visão de implementação e critérios de usabilidade.
 - **[Qualidade e Testes](qualidade-testes/plano-de-testes.md)**: plano de testes, critérios de aceitação e estratégias de validação.
