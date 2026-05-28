@@ -60,12 +60,12 @@ nav:
       - Visão de Implementação: arquitetura/visao-de-implementacao.md
       - Registro de Decisões Arquiteturais: arquitetura/adr-coins.md
   - Requisitos:
+      - Especificação de Requisitos de Software: requisitos/especificacao-de-requisitos-de-software.md
+      - Glossário de Termos: requisitos/glossario-de-termos.md
+      - Fundamento e Estrutura de Requisitos: requisitos/fundamento-estrutura-requisitos.md
       - Apuração de Regras: requisitos/apuracao-regras.md
       - DRE e Regras: requisitos/DRE-regras.md
       - Balanço Patrimonial: requisitos/balanco-patrimonial-regras.md
-      - Especificação de Requisitos de Software: requisitos/especificacao-de-requisitos-de-software.md
-      - Fundamento e Estrutura de Requisitos: requisitos/fundamento-estrutura-requisitos.md
-      - Glossário de Termos: requisitos/glossario-de-termos.md
   - IHC:
       - Visão Geral: ihc/visao-geral.md
       - Identidade Visual: ihc/identidade-visual.md
