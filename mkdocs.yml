@@ -73,7 +73,6 @@ nav:
       - Roteiro de Teste de Usabilidade: ihc/roteiro-teste-usabilidade.md
       - Relatório de Teste de Usabilidade: ihc/relatorio-teste-usabilidade.md
   - Banco de Dados:
-      - banco-de-dados/index.md
       - Documentação do Modelo de Dados: banco-de-dados/documentacao-modelo-dados.md
       - Dicionário de Dados: banco-de-dados/dicionario-dados.md
   - Qualidade e Testes:
