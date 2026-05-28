@@ -15,8 +15,9 @@
 | 4.2 | 17/11 | Migração dos Conceitos para Glossário de Termos | Fernanda Pessoa |
 | 4.3 | 25/11 | Correções de alinhamento, adição de link para Glossário de Termos | Jerfferson Júnior |
 | 4.4 | 08/04 | Adição dos RFs de Apuração do Resultado do Exercício (ARE) | Elise Lissa Hasegawa  |
-| 4.5 |  | Adição dos RFs da Demonstração do Resultado do Exercício (DRE) | Fernanda Pessoa  |
+| 4.5 | 05/05/2026 | Adição dos RFs da Demonstração do Resultado do Exercício (DRE) | Fernanda Pessoa  |
 | 4.6 | 06/05/2026 | Refatoração completa dos RFs de Apuração (RF-012 a RF-021) com estrutura clara baseada em boas práticas;<br/>Adição completa dos RFs de DRE (RF-022 a RF-034) com requisitos granulares seguindo hierarquia de cálculo;<br/>Atualização de módulos e aplicação consistente de boas práticas de formatação Markdown | Fernanda Pessoa |
+| 4.7 | 24/05/2026 | Adição dos RFs do Balanço Patrimonial | Fernanda Pessoa |
 
 **Histórico de Revisões**
 
