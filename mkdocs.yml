@@ -68,6 +68,7 @@ nav:
   - IHC:
       - Visão Geral: ihc/visao-geral.md
       - Identidade Visual: ihc/identidade-visual.md
+      - Termo de Consentimento: ihc/termo-consentimento-usabilidade.md
       - Roteiro de Teste de Usabilidade: ihc/roteiro-teste-usabilidade.md
       - Relatório de Teste de Usabilidade: ihc/relatorio-teste-usabilidade.md
   - Banco de Dados:

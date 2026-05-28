@@ -59,5 +59,6 @@ A identidade visual do sistema está documentada separadamente e define a paleta
 
 A cada semestre é conduzido um ciclo de testes de usabilidade com usuários representativos do público-alvo. Os testes seguem um roteiro estruturado e os resultados são consolidados em um relatório com achados, métricas e recomendações de melhoria.
 
+- **[Termo de Consentimento](termo-consentimento-usabilidade.md)**
 - **[Roteiro de Teste de Usabilidade](roteiro-teste-usabilidade.md)**
 - **[Relatório de Teste de Usabilidade](relatorio-teste-usabilidade.md)**
