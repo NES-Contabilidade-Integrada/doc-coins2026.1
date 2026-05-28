@@ -38,12 +38,6 @@ O sistema foi criado para preencher uma lacuna no curso de Ciências Contábeis:
 
 ---
 
-## Fluxo geral do sistema
-
-![Fluxo geral do sistema](assets/fluxo-geral.png)
-
----
-
 ## Funcionalidades
 
 === "2026/1"
@@ -65,6 +59,12 @@ O sistema foi criado para preencher uma lacuna no curso de Ciências Contábeis:
 
 ---
 
+## Fluxo geral do sistema
+
+![Fluxo geral do sistema](assets/fluxo-geral.png)
+
+---
+
 ## Artefatos por área
 
 A documentação reúne os principais entregáveis do projeto, organizados por área de responsabilidade:
@@ -72,7 +72,7 @@ A documentação reúne os principais entregáveis do projeto, organizados por �
 - **[Arquitetura](arquitetura/especificacao-arquitetural.md)**: visão de alto nível, especificação arquitetural, diagramas e decisões estruturais.
 - **[Requisitos](requisitos/especificacao-de-requisitos-de-software.md)**: requisitos de produto e software, regras de negócio para apuração de DRE e Balanço Patrimonial.
 - **[Banco de Dados](banco-de-dados/documentacao-modelo-dados.md)**: modelo de dados, dicionário e documentação do modelo lógico.
-- **[IHC](ihc/identidade-visual.md)**: identidade visual, diretrizes de design e padrões de interface.
+- **[IHC](ihc/visao-geral.md)**: identidade visual, protótipos, Figma e testes de usabilidade.
 - **[Interface e Experiência](gerencia-projeto/plano-do-projeto.md#projeto-de-interface-e-interação)**: protótipos, visão de implementação e critérios de usabilidade.
 - **[Qualidade e Testes](qualidade-testes/plano-de-testes.md)**: plano de testes, critérios de aceitação e estratégias de validação.
 - **[Gerência de Projeto](gerencia-projeto/plano-do-projeto.md)**: planejamento, políticas de configuração, modelo de ramificação e relatórios de progresso.
