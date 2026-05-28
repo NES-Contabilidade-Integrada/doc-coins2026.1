@@ -1,4 +1,4 @@
-# Visão Geral — Banco de Dados
+# Visão Geral
 
 ## Histórico de Versões
 
