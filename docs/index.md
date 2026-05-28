@@ -145,6 +145,9 @@ A documentação reúne os principais entregáveis do projeto, organizados por �
 
 As versões executáveis estão disponíveis na página de [Releases do repositório](https://github.com/NES-Contabilidade-Integrada/coins2026.1/releases/latest) para quem possui acesso ao repositório.
 
+!!! info "Sistema operacional"
+    O executável é voltado para **Windows 10 e 11**, conforme definido nos [requisitos não funcionais](requisitos/especificacao-de-requisitos-de-software.md).
+
 ---
 
 ## Ambientes Compartilhados
