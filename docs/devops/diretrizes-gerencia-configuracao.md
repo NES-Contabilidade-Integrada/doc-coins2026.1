@@ -1,4 +1,6 @@
-# Diretrizes de Gerência de Configuração **Histórico de Versões**
+# Diretrizes de Gerência de Configuração
+
+**Histórico de Versões**
 
 | Versão | Data | Descrição | Autor |
 | :---: | ----- | ----- | ----- |
@@ -67,7 +69,8 @@ O modelo de ramificação utilizado é o GitFlow, conforme ilustrado na figura a
    1. **Propósito:** Subtask não é padrão no Gitflow. Pode ser uma variação usada para dividir uma feature muito grande em partes menores, ou para *branches* de tarefas internas/menores que não justificam uma feature completa.  
    2. **Processo:** Geralmente uma subtask é criada a partir da feature principal ou de develop. Ela é mergeada de volta na sua *branch* de origem (feature ou develop) após a sua conclusão.
 
-   ## 3\. Fluxo Básico {#3.-fluxo-básico}
+## 3\. Fluxo Básico {#3.-fluxo-básico}
+
 O fluxo de desenvolvimento segue a criação de novas branches a partir da branch **develop**, garantindo um isolamento das mudanças e fluxo contínuo de desenvolvimento. Para iniciar um desenvolvimento, deve-se criar uma nova branch utilizando a convenção:
 
 ```
@@ -85,7 +88,9 @@ Após a implementação da tarefa, o desenvolvedor deve abrir uma **Pull Request
 
 Com os testes validados, a PR aprovada e ao final da sprint, é criada uma **branch de release**, responsável por consolidar as funcionalidades concluídas. Após os testes finais, a release é integrada (merge) na **main**, onde o código é empacotado para disponibilização ao proponente.
 
-## 4\.  Padrão de Commit Semântico A adoção do Padrão de Commit Semântico não é apenas uma convenção, mas um requisito técnico que traz benefícios cruciais para a gestão de projetos e o ciclo de vida do software:
+## 4\. Padrão de Commit Semântico
+
+A adoção do Padrão de Commit Semântico não é apenas uma convenção, mas um requisito técnico que traz benefícios cruciais para a gestão de projetos e o ciclo de vida do software:
 
 Vantagens:
 
@@ -110,13 +115,16 @@ Tipos permitidos:
 * **chore** → mudanças que não afetam o código de produção (ex.: .gitignore)  
 * **build** → mudanças em build ou dependências
 
-## 5\. Convenções de Código * **Variáveis, funções e métodos** → camelCase  
+## 5\. Convenções de Código
+
+* **Variáveis, funções e métodos** → camelCase  
 * **Constantes** → SCREAMING\_SNAKE\_CASE  
 * **Classes** → PascalCase  
 * Nomes claros e em **inglês**  
 * Comentários em português, **apenas quando necessário** para explicar lógica complexa.
 
-  ## 6\. Estratégia de Versionamento {#6.-estratégia-de-versionamento}
+## 6\. Estratégia de Versionamento {#6.-estratégia-de-versionamento}
+
 O projeto adota o Versionamento Semântico (SemVer) para padronizar a evolução do software e comunicar claramente o impacto de cada alteração. A versão é representada pelo formato MAJOR.MINOR.PATCH.
 
 Definições de Incremento:
@@ -125,10 +133,14 @@ Definições de Incremento:
 2. **MINOR:** Deve ser incrementado quando uma nova funcionalidade é adicionada ao software, mas mantendo a compatibilidade com as versões anteriores.  
 3. **PATCH:** Deve ser incrementado quando são realizadas apenas correções de bugs ou ajustes menores que não alteram a funcionalidade existente.
 
-## 7\. Solicitação de mudança (Pull Request) A cada solicitação de mudança do sistema, modificações, implementações ou alterações no código, deverá ser aberta uma Pull Request(PR), em que deve constar  tudo o que está sendo solicitado de forma descritiva, seguindo o seguinte template de PR.  
+## 7\. Solicitação de mudança (Pull Request)
+
+A cada solicitação de mudança do sistema, modificações, implementações ou alterações no código, deverá ser aberta uma Pull Request (PR), em que deve constar tudo o que está sendo solicitado de forma descritiva, seguindo o seguinte template de PR.  
 [Pull Request](https://docs.google.com/document/d/1ymcrbteUBmAbUydj0FyhLMDI67dwt384rYgiICHWx7M/edit?usp=sharing)
 
-## 8\. Definição de Pronto (DoD). A **Definição de Pronto (DoD)** é um conjunto de critérios de qualidade e padrões obrigatórios que toda funcionalidade ou alteração deve satisfazer para ser considerada completa e aceitável. Este checklist assegura a estabilidade, a rastreabilidade e o cumprimento das diretrizes de código e desenvolvimento estabelecidas neste documento, antes que o item de trabalho possa ser integrado ou entregue.
+## 8\. Definição de Pronto (DoD)
+
+A **Definição de Pronto (DoD)** é um conjunto de critérios de qualidade e padrões obrigatórios que toda funcionalidade ou alteração deve satisfazer para ser considerada completa e aceitável. Este checklist assegura a estabilidade, a rastreabilidade e o cumprimento das diretrizes de código e desenvolvimento estabelecidas neste documento, antes que o item de trabalho possa ser integrado ou entregue.
 
 **Código**
 
@@ -152,7 +164,9 @@ Definições de Incremento:
 
 * Revisão por pelo menos 1 revisor técnico aprovado.
 
-## 9\. Automação de Build e Geração do Executável O sistema COIN'S utiliza o framework Electron (com Squirrel.Windows) para empacotamento desktop. A geração do instalador (.exe) é totalmente automatizada via GitHub Actions, garantindo que a versão em produção seja sempre fiel ao código da branch main.
+## 9\. Automação de Build e Geração do Executável
+
+O sistema COIN'S utiliza o framework Electron (com Squirrel.Windows) para empacotamento desktop. A geração do instalador (.exe) é totalmente automatizada via GitHub Actions, garantindo que a versão em produção seja sempre fiel ao código da branch main.
 
 **Fluxo de Integração e Entrega Contínua (CI/CD)**
 
@@ -174,7 +188,8 @@ O executável aparece na aba Releases do Github da seguinte forma
 * **Por Push na main:** Gera uma release automática com o SHA do commit para fins de rastreabilidade.  
 * **Por Tag de Versão (v\*):** Ao realizar um git push origin v1.2.3, o workflow build-windows.yml é acionado. Ele atualiza o package.json e gera o executável oficial daquela versão semântica.
 
-  ## 10\. Revisão do copilot {#10.-revisão-do-copilot}
+## 10\. Revisão do copilot {#10.-revisão-do-copilot}
+
 O GitHub Copilot foi integrado ao processo de desenvolvimento do sistema COIN'S com o objetivo de aprimorar a qualidade do código e aumentar a eficiência das revisões técnicas. A ferramenta atua como um mecanismo complementar de análise automatizada, auxiliando na identificação de problemas e na manutenção dos padrões estabelecidos neste documento.
 
 1. **Instruções do copilot**  
