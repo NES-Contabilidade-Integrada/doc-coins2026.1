@@ -5,6 +5,7 @@
 | Versão | Data | Descrição | Autor |
 | :---: | :---: | :---: | :---: |
 | 1.0 | 28/05/2026 | Versão inicial do documento | Fernanda Pessoa |
+| 1.1 | 01/06/2026 | Adiciona link dos materiais de teste de usabilidade de 2025/2 | Fernanda Pessoa |
 
 ## Histórico de Revisões
 
@@ -62,3 +63,9 @@ A cada semestre é conduzido um ciclo de testes de usabilidade com usuários rep
 - **[Termo de Consentimento](termo-consentimento-usabilidade.md)**
 - **[Roteiro de Teste de Usabilidade](roteiro-teste-usabilidade.md)**
 - **[Relatório de Teste de Usabilidade](relatorio-teste-usabilidade.md)**
+
+### Materiais de 2025/2
+
+Registros fotográficos (PNG), processo e relatório do ciclo de testes de usabilidade realizado em 2025/2 estão disponíveis no Google Drive:
+
+**[Materiais de Teste de Usabilidade — 2025/2](https://drive.google.com/drive/folders/1m9vypVANcmmneq5cCtJaQjJbffQ921Tv?usp=drive_link)**
