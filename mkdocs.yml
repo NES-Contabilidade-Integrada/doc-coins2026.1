@@ -84,6 +84,7 @@ nav:
       - Instruções do Copilot: devops/instrucoes-do-copilot.md
   - Gerência de Projeto:
       - Plano de Projeto: gerencia-projeto/plano-do-projeto.md
+      - Encerramento do Projeto: gerencia-projeto/encerramento-do-projeto.md
       - Template de Documento: gerencia-projeto/template-de-documento.md
   - DevOps:
       - Visão Geral: devops/visao-geral.md
