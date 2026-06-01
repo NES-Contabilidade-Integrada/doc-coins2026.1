@@ -23,11 +23,13 @@
 
 [3\. Escopo do Projeto	3](#escopo-do-projeto)
 
-[2.1 Funcionalidades do MVP (Versão Inicial)	3](#2.1-funcionalidades-do-mvp-\(versão-inicial---2025.2\))
+[2.1 Funcionalidades do MVP	3](#2.1-funcionalidades-do-mvp)
 
-[2.2 Funcionalidades Complementares (Pós-MVP)	4](#2.2-funcionalidades-de-expansão-\(2026.1\))
+[2.2 Funcionalidades Complementares ao MVP	4](#2.2-funcionalidades-complementares-ao-mvp)
 
-[2.3 Incrementos Planejados	5](#2.3-incrementos-planejados)
+[2.3 Funcionalidades de Consolidação	4](#2.3-funcionalidades-de-consolidação)
+
+[2.4 Incrementos para Próximas Versões	5](#2.4-incrementos-para-próximas-versões)
 
 [4\. Equipe e Infraestrutura	6](#equipe-e-infraestrutura)
 
@@ -66,9 +68,9 @@ Os proponentes são os responsáveis por solicitar, validar e acompanhar o desen
 ## Escopo do Projeto {#escopo-do-projeto}
 O escopo do Sistema COIN'S define as funcionalidades que serão desenvolvidas ao longo do projeto, seguindo um plano incremental baseado na priorização definida durante a entrevista com o proponente. O desenvolvimento será dividido em etapas, dando continuidade à implementação do sistema que iniciou em 2025\.
 
-### 2.1 Funcionalidades do MVP (Versão Inicial - 2025.2)
+### 2.1 Funcionalidades do MVP
 
-As funcionalidades essenciais que compõem o MVP são:
+As funcionalidades essenciais que compõem o MVP, entregues em 2025/2, são:
 
 * **Exibição do Plano de Contas Padrão:** Disponibilizar um plano de contas pré-definido para consulta pelos usuários.  
 * **Gerenciamento de Lançamentos Contábeis:** Permitir o cadastro, edição, exclusão e consulta dos lançamentos contábeis seguindo o Plano de Contas Padrão.  
@@ -81,28 +83,35 @@ As funcionalidades essenciais que compõem o MVP são:
 | Épico 2 \- Empresa | Visualização de Lançamentos no Livro Diário | [https://github.com/NES-Contabilidade-Integrada/coins/issues/12](https://github.com/NES-Contabilidade-Integrada/coins/issues/12)  | Implementado Anteriormente |
 
 
-### 2.2 Funcionalidades de Expansão (2026.1)
+### 2.2 Funcionalidades Complementares ao MVP
 
-As funcionalidades complementares agregam valor ao sistema e serão desenvolvidas após a entrega do MVP:
+Funcionalidades implementadas em 2025/2 que não integravam o escopo do MVP, mas foram entregues naquele semestre, ampliando a base do sistema:
 
-* **Transferência Automática para o Livro Razão:** Realizar a movimentação dos lançamentos do Livro Diário para o Livro Razão.  
-* **Geração do Balancete de Verificação:** Permitir a conferência dos saldos contábeis por meio da exibição do balancete detalhado em tela.  
-* **Apuração do Resultado do Exercício:** Calcular automaticamente o resultado do exercício com base nos dados registrados e apresentar o resultado final na interface do sistema.  
-* **Geração da Demonstração do Resultado do Exercício (DRE)**: Criar automaticamente o demonstrativo de resultados com base nos lançamentos contábeis e exibi-lo de forma estruturada em tela.  
-* **Geração do Balanço Patrimonial**: Elaborar o balanço patrimonial de forma automatizada a partir dos dados registrados e apresentá-lo visualmente na interface.  
-* **Exportação de Relatórios Contábeis**: Permitir a exportação dos demonstrativos e relatórios para formatos compatíveis (ex.: PDF, XLSX).
-
+* **Transferência Automática para o Livro Razão:** Realizar a movimentação dos lançamentos do Livro Diário para o Livro Razão.
+* **Geração do Balancete de Verificação:** Permitir a conferência dos saldos contábeis por meio da exibição do balancete detalhado em tela.
 
 | Épico | Funcionalidade | Link de Acesso | Status |
 | :---- | :---- | :---- | :---- |
-| Épico 3 \- Livro Razão | Transferência para o Livro Razão | [https://github.com/NES-Contabilidade-Integrada/coins/issues/87](https://github.com/NES-Contabilidade-Integrada/coins/issues/87)  | Implementado Anteriormente |
-| Épico 4 \- Balancete de Verificação | Geração do Balancete de Verificação | [https://github.com/NES-Contabilidade-Integrada/coins/issues/38](https://github.com/NES-Contabilidade-Integrada/coins/issues/38)  | Implementado Anteriormente |
+| Épico 3 \- Livro Razão | Transferência para o Livro Razão | [https://github.com/NES-Contabilidade-Integrada/coins/issues/87](https://github.com/NES-Contabilidade-Integrada/coins/issues/87) | Implementado Anteriormente |
+| Épico 4 \- Balancete de Verificação | Geração do Balancete de Verificação | [https://github.com/NES-Contabilidade-Integrada/coins/issues/38](https://github.com/NES-Contabilidade-Integrada/coins/issues/38) | Implementado Anteriormente |
+
+### 2.3 Funcionalidades de Consolidação
+
+Funcionalidades planejadas para 2026.1 que encerram o ciclo contábil do sistema, tornando-o completo e autônomo:
+
+* **Apuração do Resultado do Exercício:** Calcular automaticamente o resultado do exercício com base nos dados registrados e apresentar o resultado final na interface do sistema.
+* **Geração da Demonstração do Resultado do Exercício (DRE)**: Criar automaticamente o demonstrativo de resultados com base nos lançamentos contábeis e exibi-lo de forma estruturada em tela.
+* **Geração do Balanço Patrimonial**: Elaborar o balanço patrimonial de forma automatizada a partir dos dados registrados e apresentá-lo visualmente na interface.
+* **Exportação de Relatórios Contábeis**: Permitir a exportação dos demonstrativos e relatórios para formatos compatíveis (ex.: PDF, XLSX).
+
+| Épico | Funcionalidade | Link de Acesso | Status |
+| :---- | :---- | :---- | :---- |
 | Não existente | Apuração do Resultado do Exercício | Não existente | Implementado na Sprint 1 |
 | Não existente | Geração da Demonstração do Resultado do Exercício (DRE) | Não existente | A ser implementado |
 | Não existente | Geração do Balanço Patrimonial | Não existente | A ser implementado |
 | Não existente | Exportação de Relatórios Contábeis | Não existente | Próximas versões |
 
-### 2.3 Incrementos Planejados
+### 2.4 Incrementos para Próximas Versões
 
 Os incrementos planejados consistem em funcionalidades adicionais previstas para versões futuras, visando ampliar a flexibilidade e a interatividade do sistema:
 
