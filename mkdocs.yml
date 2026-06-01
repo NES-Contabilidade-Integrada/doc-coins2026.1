@@ -54,6 +54,8 @@ markdown_extensions:
 
 nav:
   - Início: index.md
+  - Uso do Sistema:
+      - Exemplos de Lançamentos: uso-do-sistema/exemplos-lancamentos.md
   - Arquitetura:
       - Especificação Arquitetural: arquitetura/especificacao-arquitetural.md
       - Diagramas C4: arquitetura/diagramas-c4.md
