@@ -15,6 +15,8 @@
 
 O formulário completo está disponível em: [Google Forms — Termo de Consentimento e Mapeamento de Perfil](https://forms.gle/D4mueNHdCZxR487c7)
 
+![Formulário de Termo de Consentimento](assets/termo-consentimento.png)
+
 ---
 
 ## Apresentação
