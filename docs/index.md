@@ -14,30 +14,6 @@ O sistema foi criado para preencher uma lacuna no curso de Ciências Contábeis:
 
 ---
 
-## Visão geral
-
-<div class="grid cards" markdown>
-
-- :material-school: **Finalidade**
-
-    Apoiar o ensino prático de contabilidade para alunos dos primeiros semestres.
-
-- :material-desktop-classic: **Formato**
-
-    Aplicativo desktop educacional desenvolvido com tecnologias web.
-
-- :material-book-open-page-variant: **Uso didático**
-
-    Permite praticar lançamentos, consultas e geração de demonstrativos contábeis.
-
-- :material-domain: **Instituição**
-
-    Desenvolvido pelo Núcleo de Práticas de Engenharia de Software (FACOM/UFMS) em parceria com a ESAN/UFMS.
-
-</div>
-
----
-
 ## Funcionalidades
 
 === "2026/1"
@@ -78,30 +54,6 @@ A documentação reúne os principais entregáveis do projeto, organizados por �
 - **[Gerência de Projeto](gerencia-projeto/plano-do-projeto.md)**: planejamento, políticas de configuração, modelo de ramificação e relatórios de progresso.
 - **[DevOps](devops/visao-geral.md)**: infraestrutura proposta, fluxo de trabalho e práticas de integração contínua.
 - **[Decisões](decisoes/decisoes.md)**: registro de decisões técnicas e de projeto que sustentam a solução.
-
----
-
-## Diferenciais
-
-<div class="grid cards" markdown>
-
-- :material-lightbulb-on: **Aprendizado progressivo**
-
-    O sistema apresenta os processos contábeis de forma organizada, acompanhando a evolução do estudante.
-
-- :material-shield-check: **Ambiente seguro para prática**
-
-    Permite simular rotinas contábeis sem o risco de afetar dados reais de empresas.
-
-- :material-chart-box: **Demonstrativos integrados**
-
-    Os lançamentos realizados alimentam relatórios como Balancete, DRE e Balanço Patrimonial.
-
-- :material-account-group: **Foco acadêmico**
-
-    A interface e os fluxos foram pensados para apoiar disciplinas do curso de Ciências Contábeis.
-
-</div>
 
 ---
 
