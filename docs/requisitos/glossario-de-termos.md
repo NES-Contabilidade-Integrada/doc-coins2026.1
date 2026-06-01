@@ -77,9 +77,7 @@
 
 [**29\. Receita Operacional Líquida	8**](#receita-operacional-líquida)
 
-## 
-
-## **Objetivos**
+## Objetivos
 
 Este documento registra o glossário de termos do Sistema COIN'S (Contabilidade Integrada). Por meio dele, são especificados os termos contábeis de forma a explicar de forma clara e simples o significado de termos técnicos e jargões utilizados na área da contabilidade. Por meio deste, é possível facilitar a compreensão e a comunicação, tanto para profissionais da área quanto para pessoas alheias ao domínio contábil, como desenvolvedores. Dessa forma, atua como uma ferramenta de desmistificação e educação que transforma o que é complexo e técnico em algo compreensível para um público mais amplo, contribuindo para uma melhor gestão financeira e maior transparência.
 
@@ -88,8 +86,6 @@ Processo de cálculo do lucro ou prejuízo obtido por uma empresa em determinado
 
 ## Ativo {#ativo}
 Conjunto de bens e direitos da entidade, com capacidade de gerar benefícios econômicos futuros. Exemplo: caixa, estoque, veículos, contas a receber.
-
-Exemplo: caixa, estoque, veículos, contas a receber.
 
 Natureza: Devedora.
 
@@ -176,8 +172,6 @@ Natureza: Credora.
 
 ## Patrimônio Líquido {#patrimônio-líquido}
 Representa os recursos próprios da empresa, resultantes da diferença entre Ativo e Passivo. Inclui capital social, reservas e lucros ou prejuízos acumulados.
-
-Exemplo: caixa, estoque, veículos, contas a receber.
 
 Natureza: Credora.
 

@@ -6,7 +6,7 @@
 | :---: | :---: | :---: | :---: |
 | 1.0 | 23/03/2026 |  | Elise Lissa Hasegawa |
 | 1.1 | 22/04/2026 |  | Elise Lissa Hasegawa |
-| 3.0 |  |  |  |
+| 3.0 | 01/06/2026 | Atualização do cronograma e da tabela de Funcionalidades de Consolidação para registrar entrega da Exportação de Relatórios Contábeis nas Sprints 2 e 3 | Fernanda Pessoa |
 | 3.1 |  |  |  |
 
 **Histórico de Revisão**
@@ -109,7 +109,8 @@ Funcionalidades implementadas em 2026.1 que encerram o ciclo contábil do sistem
 | Módulo 5 \- Apuração | Apuração do Resultado do Exercício | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/33](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/33) | Implementado - Sprint 1 |
 | Módulo 6 \- Balanço Patrimonial | Geração do Balanço Patrimonial | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197) | Implementado - Sprint 2 |
 | Módulo 7 \- DRE | Geração da Demonstração do Resultado do Exercício (DRE) | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/99](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/99) | Implementado - Sprint 3 |
-| — | Exportação de Relatórios Contábeis | — | Próximas versões |
+| Módulo 6 \- Balanço Patrimonial | Exportação de Relatórios Contábeis (Balanço Patrimonial) | — | Implementado - Sprint 2 |
+| Módulo 7 \- DRE | Exportação de Relatórios Contábeis (DRE) | — | Implementado - Sprint 3 |
 
 ### 2.4 Incrementos para Próximas Versões
 
@@ -148,8 +149,8 @@ Os incrementos planejados consistem em funcionalidades adicionais previstas para
 | :---- | :---- | :---- | :---- |
 | Sprint 0 | 02 a 26/03 | Levantamento de requisitos e resolução de bugs. |   |
 | Sprint 1 | 30/03 a 16/04 | Apuração do Resultado do Exercício |  |
-| Sprint 2 | 22/04 a 11/05 | Geração do Balanço Patrimonial |  |
-| Sprint 3 | 12/05 a 01/06 | Geração da Demonstração do Resultado do Exercício (DRE) |  |
+| Sprint 2 | 22/04 a 11/05 | Geração do Balanço Patrimonial, Exportação de Relatórios Contábeis (Balanço Patrimonial) |  |
+| Sprint 3 | 12/05 a 01/06 | Geração da Demonstração do Resultado do Exercício (DRE), Exportação de Relatórios Contábeis (DRE) |  |
 
  
 
