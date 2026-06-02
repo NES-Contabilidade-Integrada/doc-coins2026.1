@@ -996,6 +996,12 @@
 <td style="text-align: left;">Criação do documento</td>
 <td style="text-align: left;">Fernanda Pessoa</td>
 </tr>
+<tr>
+<td style="text-align: center;">1.1</td>
+<td style="text-align: center;">01/06/2026</td>
+<td style="text-align: left;">Atualiza diagrama com fluxo detalhado e tratamento de balanço não fechado</td>
+<td style="text-align: left;">Fernanda Pessoa</td>
+</tr>
 </tbody>
 </table>
 <h2 id="historico-de-revisoes">Histórico de Revisões</h2>
@@ -1024,57 +1030,72 @@
 <h2 id="mapa-de-jornada">Mapa de Jornada</h2>
 <p>O diagrama abaixo representa o fluxo principal de uso do sistema, desde o registro de lançamentos até a exportação dos relatórios:</p>
 <div class="mermaid">flowchart TD
-    A([Início]) --&gt; B[Usuário acessa o sistema]
+    A([Início]) --&gt; B["Usuário acessa o COIN'S"]
 
-    B --&gt; C[Visualizar Plano de Contas]
-    C --&gt; D[Consultar contas disponíveis]
+    B --&gt; C[Visualiza o Plano de Contas]
+    C --&gt; D[Consulta as contas disponíveis para lançamento]
 
-    D --&gt; E[Adicionar lançamento contábil]
-    E --&gt; F{Débito e crédito estão equilibrados?}
+    D --&gt; E[Cria um lançamento contábil]
+    E --&gt; F[Informa data, histórico, conta de débito, conta de crédito e valor]
 
-    F -- Não --&gt; G[Exibir aviso de divergência]
-    G --&gt; E
+    F --&gt; G{Débito e crédito estão equilibrados?}
 
-    F -- Sim --&gt; H[Salvar lançamento]
-    H --&gt; I[Registrar no Livro Diário]
+    G -- Não --&gt; H[Sistema exibe aviso de divergência]
+    H --&gt; F
 
-    I --&gt; J[Visualizar Livro Razão]
-    J --&gt; K[Conferir movimentação por conta]
+    G -- Sim --&gt; I[Sistema salva o lançamento]
+    I --&gt; J[Lançamento aparece no Livro Diário]
 
-    K --&gt; L[Visualizar Balancete de Verificação]
-    L --&gt; M[Conferir saldos devedores e credores]
+    J --&gt; K[Usuário consulta o Livro Razão]
+    K --&gt; L[Sistema apresenta a movimentação por conta]
 
-    M --&gt; N[Acessar Apuração do Resultado]
-    N --&gt; O[Visualizar resumo da apuração]
-    O --&gt; P[Conferir contas de resultado]
-    P --&gt; Q[Conferir lançamentos automáticos previstos]
+    L --&gt; M[Usuário consulta o Balancete de Verificação]
+    M --&gt; N[Sistema apresenta débitos, créditos e saldos das contas]
 
-    Q --&gt; R{Usuário confirma a apuração?}
+    N --&gt; O[Usuário acessa a Apuração do Resultado]
 
-    R -- Não --&gt; S[Manter lançamentos sem apurar]
-    S --&gt; N
+    O --&gt; P[Sistema exibe o resumo da apuração]
+    P --&gt; Q[Sistema lista as contas de resultado consideradas]
+    Q --&gt; R[Sistema mostra os lançamentos automáticos que serão realizados]
 
-    R -- Sim --&gt; T[Realizar apuração]
-    T --&gt; U[Gerar lançamentos automáticos em segundo plano]
-    U --&gt; V[Registrar lançamentos de apuração no Livro Diário]
+    R --&gt; S{Usuário confirma a apuração?}
 
-    V --&gt; W[Consultar Histórico de Apurações]
-    W --&gt; X{Deseja desfazer apuração?}
+    S -- Não --&gt; T[Apuração não é realizada]
+    T --&gt; O
 
-    X -- Sim --&gt; Y[Desfazer apuração]
-    Y --&gt; N
+    S -- Sim --&gt; U[Sistema realiza a apuração]
+    U --&gt; V[Sistema gera automaticamente os lançamentos de encerramento]
+    V --&gt; W[Lançamentos da apuração aparecem no Livro Diário]
 
-    X -- Não --&gt; Z[Validar contas de resultado zeradas]
-    Z --&gt; AA[Conferir Livro Razão ou Balancete]
+    W --&gt; X[Usuário consulta o Histórico de Apurações]
+    X --&gt; Y{Deseja desfazer a apuração?}
 
-    AA --&gt; AB[Acessar DRE]
-    AB --&gt; AC[Visualizar resultado e composição das contas]
+    Y -- Sim --&gt; Z[Usuário verifica os lançamentos da apuração no Livro Diário]
+    Z --&gt; ZA[Sistema desfaz a apuração]
+    ZA --&gt; ZB[Lançamentos de apuração deixam de refletir nos relatórios]
+    ZB --&gt; O
 
-    AC --&gt; AD[Acessar Balanço Patrimonial]
-    AD --&gt; AE[Conferir Ativo = Passivo + Patrimônio Líquido]
+    Y -- Não --&gt; AA[Usuário valida as contas de resultado]
+    AA --&gt; AB[Livro Razão ou Balancete mostram contas de resultado zeradas]
 
-    AE --&gt; AF[Exportar relatórios em PDF/CSV]
-    AF --&gt; AG([Fim])
+    AB --&gt; AC[Usuário acessa a DRE]
+    AC --&gt; AD[Sistema apresenta o resultado do período e a composição das contas]
+
+    AD --&gt; AE[Usuário acessa o Balanço Patrimonial]
+    AE --&gt; AF[Sistema apresenta Ativo, Passivo e Patrimônio Líquido]
+
+    AF --&gt; AG{Ativo = Passivo + Patrimônio Líquido?}
+
+    AG -- Não --&gt; AH[Sistema indica que o balanço não está fechado]
+    AH --&gt; AI[Usuário identifica lançamento inconsistente]
+    AI --&gt; AJ[Usuário corrige o lançamento no Livro Diário]
+    AJ --&gt; AK[Usuário refaz a conferência no Livro Razão ou Balancete]
+    AK --&gt; O
+
+    AG -- Sim --&gt; AL[Sistema indica balanço fechado]
+
+    AL --&gt; AM[Usuário exporta relatórios em PDF ou CSV]
+    AM --&gt; AN([Fim])
 </div>
 <hr/>
 <h2 id="etapas-da-jornada">Etapas da Jornada</h2>
@@ -1112,11 +1133,11 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Balanço Patrimonial</strong></td>
-<td style="text-align: left;">Verificação do equilíbrio entre Ativo, Passivo e Patrimônio Líquido.</td>
+<td style="text-align: left;">Verificação do equilíbrio entre Ativo, Passivo e Patrimônio Líquido. Se o balanço não fechar, o usuário retorna ao Livro Diário para corrigir o lançamento inconsistente.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Exportação</strong></td>
-<td style="text-align: left;">Geração dos relatórios finais em PDF ou CSV.</td>
+<td style="text-align: left;">Geração dos relatórios finais em PDF ou CSV, disponível após o balanço estar fechado.</td>
 </tr>
 </tbody>
 </table>
@@ -1125,7 +1146,7 @@
 <span class="md-icon" title="Última atualização">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2 de junho de 2026 01:02:07 UTC">2 de junho de 2026 01:02:07</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2 de junho de 2026 01:10:26 UTC">2 de junho de 2026 01:10:26</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Criado em">
