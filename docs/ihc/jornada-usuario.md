@@ -5,6 +5,7 @@
 | Versão | Data | Descrição | Autor |
 | :---: | :---: | :--- | :--- |
 | 1.0 | 01/06/2026 | Criação do documento | Fernanda Pessoa |
+| 1.1 | 01/06/2026 | Atualiza diagrama com fluxo detalhado e tratamento de balanço não fechado | Fernanda Pessoa |
 
 ## Histórico de Revisões
 
@@ -25,57 +26,72 @@ O diagrama abaixo representa o fluxo principal de uso do sistema, desde o regist
 
 ```mermaid
 flowchart TD
-    A([Início]) --> B[Usuário acessa o sistema]
+    A([Início]) --> B["Usuário acessa o COIN'S"]
 
-    B --> C[Visualizar Plano de Contas]
-    C --> D[Consultar contas disponíveis]
+    B --> C[Visualiza o Plano de Contas]
+    C --> D[Consulta as contas disponíveis para lançamento]
 
-    D --> E[Adicionar lançamento contábil]
-    E --> F{Débito e crédito estão equilibrados?}
+    D --> E[Cria um lançamento contábil]
+    E --> F[Informa data, histórico, conta de débito, conta de crédito e valor]
 
-    F -- Não --> G[Exibir aviso de divergência]
-    G --> E
+    F --> G{Débito e crédito estão equilibrados?}
 
-    F -- Sim --> H[Salvar lançamento]
-    H --> I[Registrar no Livro Diário]
+    G -- Não --> H[Sistema exibe aviso de divergência]
+    H --> F
 
-    I --> J[Visualizar Livro Razão]
-    J --> K[Conferir movimentação por conta]
+    G -- Sim --> I[Sistema salva o lançamento]
+    I --> J[Lançamento aparece no Livro Diário]
 
-    K --> L[Visualizar Balancete de Verificação]
-    L --> M[Conferir saldos devedores e credores]
+    J --> K[Usuário consulta o Livro Razão]
+    K --> L[Sistema apresenta a movimentação por conta]
 
-    M --> N[Acessar Apuração do Resultado]
-    N --> O[Visualizar resumo da apuração]
-    O --> P[Conferir contas de resultado]
-    P --> Q[Conferir lançamentos automáticos previstos]
+    L --> M[Usuário consulta o Balancete de Verificação]
+    M --> N[Sistema apresenta débitos, créditos e saldos das contas]
 
-    Q --> R{Usuário confirma a apuração?}
+    N --> O[Usuário acessa a Apuração do Resultado]
 
-    R -- Não --> S[Manter lançamentos sem apurar]
-    S --> N
+    O --> P[Sistema exibe o resumo da apuração]
+    P --> Q[Sistema lista as contas de resultado consideradas]
+    Q --> R[Sistema mostra os lançamentos automáticos que serão realizados]
 
-    R -- Sim --> T[Realizar apuração]
-    T --> U[Gerar lançamentos automáticos em segundo plano]
-    U --> V[Registrar lançamentos de apuração no Livro Diário]
+    R --> S{Usuário confirma a apuração?}
 
-    V --> W[Consultar Histórico de Apurações]
-    W --> X{Deseja desfazer apuração?}
+    S -- Não --> T[Apuração não é realizada]
+    T --> O
 
-    X -- Sim --> Y[Desfazer apuração]
-    Y --> N
+    S -- Sim --> U[Sistema realiza a apuração]
+    U --> V[Sistema gera automaticamente os lançamentos de encerramento]
+    V --> W[Lançamentos da apuração aparecem no Livro Diário]
 
-    X -- Não --> Z[Validar contas de resultado zeradas]
-    Z --> AA[Conferir Livro Razão ou Balancete]
+    W --> X[Usuário consulta o Histórico de Apurações]
+    X --> Y{Deseja desfazer a apuração?}
 
-    AA --> AB[Acessar DRE]
-    AB --> AC[Visualizar resultado e composição das contas]
+    Y -- Sim --> Z[Usuário verifica os lançamentos da apuração no Livro Diário]
+    Z --> ZA[Sistema desfaz a apuração]
+    ZA --> ZB[Lançamentos de apuração deixam de refletir nos relatórios]
+    ZB --> O
 
-    AC --> AD[Acessar Balanço Patrimonial]
-    AD --> AE[Conferir Ativo = Passivo + Patrimônio Líquido]
+    Y -- Não --> AA[Usuário valida as contas de resultado]
+    AA --> AB[Livro Razão ou Balancete mostram contas de resultado zeradas]
 
-    AE --> AF[Exportar relatórios em PDF/CSV]
-    AF --> AG([Fim])
+    AB --> AC[Usuário acessa a DRE]
+    AC --> AD[Sistema apresenta o resultado do período e a composição das contas]
+
+    AD --> AE[Usuário acessa o Balanço Patrimonial]
+    AE --> AF[Sistema apresenta Ativo, Passivo e Patrimônio Líquido]
+
+    AF --> AG{Ativo = Passivo + Patrimônio Líquido?}
+
+    AG -- Não --> AH[Sistema indica que o balanço não está fechado]
+    AH --> AI[Usuário identifica lançamento inconsistente]
+    AI --> AJ[Usuário corrige o lançamento no Livro Diário]
+    AJ --> AK[Usuário refaz a conferência no Livro Razão ou Balancete]
+    AK --> O
+
+    AG -- Sim --> AL[Sistema indica balanço fechado]
+
+    AL --> AM[Usuário exporta relatórios em PDF ou CSV]
+    AM --> AN([Fim])
 ```
 
 ---
@@ -90,5 +106,5 @@ flowchart TD
 | **Balancete de Verificação** | Confronto dos saldos devedores e credores de todas as contas como checagem intermediária. |
 | **Apuração do Resultado** | Encerramento das contas de resultado com prévia completa, execução e possibilidade de desfazer. |
 | **DRE** | Visualização estruturada do resultado do exercício após a apuração. |
-| **Balanço Patrimonial** | Verificação do equilíbrio entre Ativo, Passivo e Patrimônio Líquido. |
-| **Exportação** | Geração dos relatórios finais em PDF ou CSV. |
+| **Balanço Patrimonial** | Verificação do equilíbrio entre Ativo, Passivo e Patrimônio Líquido. Se o balanço não fechar, o usuário retorna ao Livro Diário para corrigir o lançamento inconsistente. |
+| **Exportação** | Geração dos relatórios finais em PDF ou CSV, disponível após o balanço estar fechado. |
