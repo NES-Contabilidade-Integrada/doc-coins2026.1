@@ -1854,6 +1854,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#documentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentos
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2302,6 +2313,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#documentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentos
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2340,6 +2362,12 @@
 <td style="text-align: left;">Criação do documento</td>
 <td style="text-align: left;">Amanda Caroline de Gois Balcaçar</td>
 </tr>
+<tr>
+<td style="text-align: center;">1.1</td>
+<td style="text-align: center;">02/06/2026</td>
+<td style="text-align: left;">Adiciona visão geral dos documentos de DevOps</td>
+<td style="text-align: left;">Fernanda Pessoa</td>
+</tr>
 </tbody>
 </table>
 <h2 id="historico-de-revisoes">Histórico de Revisões</h2>
@@ -2363,7 +2391,55 @@
 </table>
 <hr />
 <h2 id="introducao">Introdução</h2>
-<p>Este documento estabelece as <strong>Diretrizes de Gerência de Configuração</strong> para o sistema <strong>COIN'S</strong>. Ele define o conjunto de normas, padrões e procedimentos essenciais para o gerenciamento eficaz de mudanças, controle de versão e manutenção da qualidade do código-fonte. O objetivo é garantir a integridade, a estabilidade e a rastreabilidade do desenvolvimento ao longo do ciclo de vida do sistema.</p>
+<p>Esta seção reúne as práticas, padrões e ferramentas que orientam o ciclo de desenvolvimento do projeto COIN'S. Os documentos aqui descritos cobrem desde a organização do repositório e o fluxo de trabalho da equipe até a automação de build e entrega do executável final. O objetivo é garantir rastreabilidade, qualidade e consistência ao longo de todo o processo de desenvolvimento.</p>
+<hr />
+<h2 id="documentos">Documentos</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Documento</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="../diretrizes-gerencia-configuracao/">Diretrizes de Gerência de Configuração</a></td>
+<td style="text-align: left;">Documento completo com todas as normas e padrões de configuração do projeto: ramificação, commits, convenções de código, versionamento, DoD, CI/CD e revisão do Copilot.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../modelo-ramificacao/">Modelo de Ramificação</a></td>
+<td style="text-align: left;">Descreve o GitFlow adotado no projeto, detalhando o propósito e o fluxo de cada tipo de branch (main, develop, feature, release, hotfix, subtask).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../versionamento/">Versionamento</a></td>
+<td style="text-align: left;">Define o padrão de Versionamento Semântico (SemVer) utilizado, com as regras de incremento de MAJOR, MINOR e PATCH e o ciclo de vida das tags no Git.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../padrao-commits/">Padrão de Commits</a></td>
+<td style="text-align: left;">Especifica o padrão de commit semântico obrigatório e as convenções de nomenclatura de código (camelCase, PascalCase, SCREAMING_SNAKE_CASE).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../fluxo/">Fluxo de Trabalho</a></td>
+<td style="text-align: left;">Descreve o ciclo de desenvolvimento da equipe, desde a criação de branches até a abertura de Pull Requests e o ciclo de release.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../dod/">Definição de Pronto (DoD)</a></td>
+<td style="text-align: left;">Lista os critérios obrigatórios que uma tarefa deve atender para ser considerada concluída: código, integração, testes e revisão.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../infraestrutura/">CI/CD</a></td>
+<td style="text-align: left;">Documenta o pipeline de integração contínua e a integração do GitHub Copilot como ferramenta de revisão automatizada de Pull Requests.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../pull-request-template/">Pull Request Template</a></td>
+<td style="text-align: left;">Template padrão a ser preenchido em todas as submissões de código via Pull Request.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="../geracao-executavel/">Geração do Executável</a></td>
+<td style="text-align: left;">Explica como gerar o executável do projeto (manualmente e via CI/CD) e detalha os problemas conhecidos de configuração do ambiente Electron.</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -2386,7 +2462,7 @@
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2 de junho de 2026 23:28:05 UTC">2 de junho de 2026 23:28:05</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2 de junho de 2026 23:31:49 UTC">2 de junho de 2026 23:31:49</span>
   </span>
 
     
