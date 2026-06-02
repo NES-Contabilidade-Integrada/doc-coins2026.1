@@ -35,6 +35,8 @@
 | Protótipos de Interface (baixa e alta fidelidade) | Design — Figma |
 | Esteira de CI com testes automatizados e geração de executável instalável (ícone único, sem necessidade de extração de zip) | DevOps — GitHub Actions |
 | Documentação Arquitetural | Documentação — MkDocs |
+| Manual de Uso do Sistema | Documentação — MkDocs |
+| Teste de Usabilidade (planejamento, execução e relatório) | IHC — MkDocs |
 | BPMN dos principais processos | Modelagem |
 | Repositório GitHub (frontend/backend) | Código-fonte |
 
