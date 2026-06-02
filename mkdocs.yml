@@ -95,6 +95,7 @@ nav:
       - DoD: devops/dod.md
       - CI/CD: devops/infraestrutura.md
       - Pull Request Template: devops/pull-request-template.md
+      - Geração do Executável: devops/geracao-executavel.md
   - Decisões:
       - Diário de Decisões: decisoes/decisoes.md
       - Decisões Importadas: decisoes/diario-de-decisoes-importado.md

@@ -1,6 +1,25 @@
 # Modelo de Ramificação
 
+## Histórico de Versões
+
+| Versão | Data | Descrição | Autor |
+| :---: | :---: | :--- | :--- |
+| 1.0 | 02/06/2026 | Criação do documento | Amanda Caroline de Gois Balcaçar |
+
+## Histórico de Revisões
+
+| Versão | Data | Revisor | Observação |
+| :---: | :---: | :--- | :--- |
+
+---
+
+## Introdução
+
 O modelo de ramificação utilizado no projeto COIN'S é o **GitFlow**. Este modelo organiza o desenvolvimento em torno de duas branches principais com ciclos de vida infinitos e várias branches de suporte para facilitar o desenvolvimento paralelo e a entrega contínua.
+
+---
+
+## Diagrama
 
 ```mermaid
 gitGraph
@@ -59,6 +78,8 @@ gitGraph
     merge "release-1.1.0" tag: "v1.1.0"
 ```
 
+---
+
 ## Branches Principais
 
 ### 1. main
@@ -70,6 +91,8 @@ gitGraph
 
 - **Propósito**: Integração de todas as funcionalidades prontas para o próximo ciclo de entrega. É a branch principal de trabalho da equipe.
 - **Processo**: Recebe _merges_ contínuos das branches de `feature` concluídas. É onde os testes integrados são realizados.
+
+---
 
 ## Branches de Suporte
 

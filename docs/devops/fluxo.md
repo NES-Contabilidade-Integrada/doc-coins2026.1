@@ -1,6 +1,25 @@
 # Fluxo de Trabalho
 
+## Histórico de Versões
+
+| Versão | Data | Descrição | Autor |
+| :---: | :---: | :--- | :--- |
+| 1.0 | 02/06/2026 | Criação do documento | Amanda Caroline de Gois Balcaçar |
+
+## Histórico de Revisões
+
+| Versão | Data | Revisor | Observação |
+| :---: | :---: | :--- | :--- |
+
+---
+
+## Introdução
+
 O processo de desenvolvimento no COIN'S é projetado para garantir a qualidade do código e a estabilidade das entregas através de um ciclo bem definido de ramificação e revisão.
+
+---
+
+## Fluxo
 
 === "Ciclo de Desenvolvimento"
 

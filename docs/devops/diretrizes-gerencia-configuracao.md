@@ -1,46 +1,23 @@
 # Diretrizes de Gerência de Configuração
 
-**Histórico de Versões**
+## Histórico de Versões
 
 | Versão | Data | Descrição | Autor |
-| :---: | ----- | ----- | ----- |
+| :---: | :---: | :--- | :--- |
 | 1.0 | 12/08 | Definição inicial | Wagner Rodrigues |
-| 1.1 | 17/10 |  | Wagner Rodrigues da silva |
-|  1.2  |  | Revisão do Copilot | Wagner Rodrigues da Silva |
+| 1.1 | 17/10 |  | Wagner Rodrigues da Silva |
+| 1.2 |  | Revisão do Copilot | Wagner Rodrigues da Silva |
 | 1.2.1 | 10/03 | Atualização do Modelo e adição de Versionamento | Amanda Caroline de Gois |
 | 1.2.1 | 15/04 | Atualiza build automatico e modelo branch | Amanda Caroline de Gois Balcaçar |
 
-**Histórico de Revisões**
+## Histórico de Revisões
 
 | Versão | Data | Revisor | Observação |
-| :---: | :---: | :---: | ----- |
+| :---: | :---: | :--- | :--- |
 | 1.0 | 27/08 | Pedro Nicoletti | Aprovada |
-|  |  | Maria Istela  | Aprovada |
-|  |  |  |  |
+|  |  | Maria Istela | Aprovada |
 
-**Sumário**
-
-[**Diretrizes de Gerência de Configuração	1**](#diretrizes-de-gerência-de-configuração)
-
-[1\. Introdução	4](#introdução)
-
-[2\. Modelo de Ramificação	4](#modelo-de-ramificação)
-
-[3\. Fluxo Básico	6](#3.-fluxo-básico)
-
-[4\.  Padrão de Commit Semântico	6](#4.-padrão-de-commit-semântico)
-
-[5\. Convenções de Código	7](#5.-convenções-de-código)
-
-[6\. Estratégia de Versionamento	8](#6.-estratégia-de-versionamento)
-
-[7\. Solicitação de mudança (Pull Request)	8](#7.-solicitação-de-mudança-\(pull-request\))
-
-[**8\. Definição de Pronto (DoD).	8**](#8.-definição-de-pronto-\(dod\).)
-
-[9\. Automação de Build e Geração do Executável	9](#9.-automação-de-build-e-geração-do-executável)
-
-[10\. Revisão do copilot	10](#10.-revisão-do-copilot)
+---
 
 ## Introdução {#introdução}
 Este documento estabelece as **Diretrizes de Gerência de Configuração** para o sistema **COIN'S**. Ele define o conjunto de normas, padrões e procedimentos essenciais para o gerenciamento eficaz de mudanças, controle de versão e manutenção da qualidade do código-fonte. O objetivo é garantir a integridade, a estabilidade e a rastreabilidade do desenvolvimento ao longo do ciclo de vida do sistema. 

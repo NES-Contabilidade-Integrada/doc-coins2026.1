@@ -1,4 +1,25 @@
+# Pull Request Template
 
+## Histórico de Versões
+
+| Versão | Data | Descrição | Autor |
+| :---: | :---: | :--- | :--- |
+| 1.0 | 02/06/2026 | Criação do documento | Amanda Caroline de Gois Balcaçar |
+
+## Histórico de Revisões
+
+| Versão | Data | Revisor | Observação |
+| :---: | :---: | :--- | :--- |
+
+---
+
+## Introdução
+
+Este é o template padrão que deve ser seguido em todas as submissões de código via Pull Request.
+
+---
+
+## Template
 
 ```
 ## 📌 Descrição
@@ -68,6 +89,4 @@ Liste dependências externas ou pacotes adicionados/alterados.
 
 ## 🗒️ Notas Extras
 Comentários adicionais para os revisores ou para o time DevOps.
-
 ```
-

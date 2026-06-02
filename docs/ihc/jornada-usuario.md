@@ -26,6 +26,9 @@ O diagrama abaixo representa o fluxo principal de uso do sistema, desde o regist
 
 ![Mapa de Jornada do Usuário](jornada-usuario.svg)
 
+!!! info "Arquivo editável"
+    O diagrama original está disponível em formato editável em [`docs/ihc/jornada-usuario.drawio`](jornada-usuario.drawio), podendo ser aberto e modificado no [draw.io](https://app.diagrams.net/).
+
 ---
 
 ## Etapas da Jornada

@@ -1,5 +1,20 @@
 # Padrão de Commits e Código
 
+## Histórico de Versões
+
+| Versão | Data | Descrição | Autor |
+| :---: | :---: | :--- | :--- |
+| 1.0 | 02/06/2026 | Criação do documento | Amanda Caroline de Gois Balcaçar |
+
+## Histórico de Revisões
+
+| Versão | Data | Revisor | Observação |
+| :---: | :---: | :--- | :--- |
+
+---
+
+## Introdução
+
 A adoção do Padrão de Commit Semântico não é apenas uma convenção, mas um requisito técnico que traz benefícios cruciais para a gestão de projetos e o ciclo de vida do software:
 
 Vantagens:
@@ -14,7 +29,7 @@ Estrutura:
 <tipo>: <mensagem curta em português>
 ```
 
-### Tipos permitidos:
+### Tipos permitidos
 
 - **feat** → nova funcionalidade
 - **fix** → correção de bug
@@ -25,7 +40,9 @@ Estrutura:
 - **chore** → mudanças que não afetam o código de produção (ex.: .gitignore)
 - **build** → mudanças em build ou dependências
 
-## **Convenções de Código**
+---
+
+## Convenções de Código
 
 - **Variáveis, funções e métodos** → camelCase
 - **Constantes** → SCREAMING_SNAKE_CASE

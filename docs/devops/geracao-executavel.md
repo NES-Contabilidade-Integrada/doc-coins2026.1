@@ -3,26 +3,23 @@
 ## Histórico de Versões
 
 | Versão | Data | Descrição | Autor |
-| :---: | :---: | :---: | :---: |
+| :---: | :---: | :--- | :--- |
 | 1.0 | 16/10/2025 | Adicionando versão inicial do documento | Pedro Nicoletti Sotoma |
 | 2.0 | 02/06/2026 | Atualizando documento para nova versão do COIN'S | Vinicius Carneiro |
 
 ## Histórico de Revisões
 
 | Versão | Data | Revisor | Observação |
-| :---: | :---: | :---: | :---: |
+| :---: | :---: | :--- | :--- |
 | 1.0 | 25/11/2025 | Fernanda Pessoa | Aprovada |
 
-## Sumário
-
-- [Introdução](#introdução)
-- [Geração do Executável](#geração-do-executável)
-- [Problemas conhecidos e complexidades envolvidas](#problemas-conhecidos-e-complexidades-envolvidas)
-- [Conclusão](#conclusão)
+---
 
 ## Introdução
 
 Este guia explica como gerar o executável do nosso projeto e detalha os principais desafios de configuração que encontramos, servindo como um manual de consulta para futuras manutenções.
+
+---
 
 ## Geração do Executável
 
@@ -42,7 +39,9 @@ A geração do executável acontece de duas maneiras:
 
 Dessa forma, não é necessário gerar o executável manualmente para cada alteração aceita na release. O comando manual deve ser utilizado apenas em casos de teste local, validação antes do PR ou situações em que seja necessário reproduzir o processo de empacotamento fora do pipeline.
 
-## Problemas conhecidos e complexidades envolvidas
+---
+
+## Problemas Conhecidos e Complexidades Envolvidas
 
 A integração entre TypeScript, Vue3 + Vite, Express e Knex com better-sqlite3 em um ambiente Electron introduz desafios específicos. A seguir, detalhamos os pontos de atenção nos principais arquivos de configuração.
 
@@ -56,7 +55,7 @@ Para que o Vite funcione corretamente no ambiente do Electron, precisamos alinha
   - **Dependências externas (external)**: a principal tarefa aqui é declarar quais dependências são externas ao Vite. De forma simplificada, todas as dependências do backend (Node.js, Express, Knex, etc.) devem ser listadas aqui. Se uma dependência do backend não for declarada como externa, o executável irá quebrar.
   - **O problema do Knex**: bibliotecas como o Knex possuem requires dinâmicos, ou seja, elas tentam carregar outras dependências que talvez você nem use. Mesmo utilizando apenas o better-sqlite3, o Knex mantém referências a outros drivers de banco de dados. Por isso, precisamos adicionar oracledb, mysql, mysql2, entre outros, na lista de external, mesmo sem usá-los diretamente. Se forem removidos, a aplicação quebrará.
   - **Workaround para referências**: em alguns casos, como com pg-query-stream, apenas declarar como external não resolve. A solução é enganar o Vite, apontando a referência para um arquivo vazio. Isso evita erros de importação que podem impedir a execução.
-  - **Dificuldade envolvendo as seeds**: um  dos pontos de atenção do projeto está relacionado às seeds do banco de dados. Como a aplicação utiliza um banco SQLite local, os dados iniciais, como empresa padrão, plano de contas e estruturas contábeis necessárias para o funcionamento do sistema, precisam ser carregados corretamente no momento de criação ou recriação do banco. A principal dificuldade é garantir que essas seeds permaneçam compatíveis com as migrations e com a versão atual da aplicação. Quando há alteração na estrutura das tabelas ou nos dados esperados pelo sistema, seeds antigas ou incompletas podem causar inconsistências, erros de inicialização ou comportamentos inesperados nas telas que dependem desses dados iniciais.
+  - **Dificuldade envolvendo as seeds**: um dos pontos de atenção do projeto está relacionado às seeds do banco de dados. Como a aplicação utiliza um banco SQLite local, os dados iniciais, como empresa padrão, plano de contas e estruturas contábeis necessárias para o funcionamento do sistema, precisam ser carregados corretamente no momento de criação ou recriação do banco. A principal dificuldade é garantir que essas seeds permaneçam compatíveis com as migrations e com a versão atual da aplicação. Quando há alteração na estrutura das tabelas ou nos dados esperados pelo sistema, seeds antigas ou incompletas podem causar inconsistências, erros de inicialização ou comportamentos inesperados nas telas que dependem desses dados iniciais.
 
 ### 3.2 Configurações do Forge (forge.config.ts)
 
@@ -77,6 +76,8 @@ Atualmente, o banco de dados (data.db) é persistido no computador do usuário, 
   - **Windows**: `C:\Users\<seu-usuario>\AppData\Roaming\my-app\data.db`
   - **Linux**: `/home/<seu-usuario>/.config/my-app/data.db`
 - **Próximos passos**: será alinhado com o proponente se é interessante manter essa abordagem ou apagar e remontar o banco de dados toda vez que a aplicação for iniciada. Caso a segunda opção seja escolhida, esses processos não serão necessários.
+
+---
 
 ## Conclusão
 
