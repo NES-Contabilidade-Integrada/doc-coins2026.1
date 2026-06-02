@@ -3,14 +3,14 @@
 ## Histórico de Versões
 
 | Versão | Data | Descrição | Autor |
-| :---: | :---: | :--- | :--- |
+| :---: | :---: | :---: | :---: |
 | 1.0 | 02/06/2026 | Criação do documento | Amanda Caroline de Gois Balcaçar |
 | 1.1 | 02/06/2026 | Adiciona visão geral dos documentos de DevOps | Fernanda Pessoa |
 
 ## Histórico de Revisões
 
 | Versão | Data | Revisor | Observação |
-| :---: | :---: | :--- | :--- |
+| :---: | :---: | :---: | :---: |
 
 ---
 
