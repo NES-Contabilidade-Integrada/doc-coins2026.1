@@ -33,12 +33,10 @@
 | Artefato | Tipo |
 | -------- | ---- |
 | Protótipos de Interface (baixa e alta fidelidade) | Design — Figma |
-| Scripts de Banco de Dados (migrações) | SQLite |
-| Plano de Testes + Casos de Teste + Matriz de Rastreabilidade | Qualidade |
-| Documentação Arquitetural | Documentação |
+| Esteira de CI com testes automatizados e geração de executável instalável (ícone único, sem necessidade de extração de zip) | DevOps — GitHub Actions |
+| Documentação Arquitetural | Documentação — MkDocs |
 | BPMN dos principais processos | Modelagem |
 | Repositório GitHub (frontend/backend) | Código-fonte |
-| Artefatos complementares no Google Drive | Documentação |
 
 ### 1.1. Preparação do Ambiente de Produção
 
