@@ -93,6 +93,12 @@ Com base nos insumos do semestre anterior, a equipe mapeou:
 
 A partir desse mapeamento, metade da Sprint 0 foi dedicada ao início da correção de bugs e das melhorias priorizadas.
 
+### Protótipo de Alta Fidelidade
+
+Em 2026/1 foi utilizado apenas o protótipo de alta fidelidade, herdado do semestre anterior, como referência para as telas já existentes:
+
+[Protótipo de Alta Fidelidade](https://www.figma.com/design/Z3hfLoenhr73I3u5BRU5lP/COIN-S---Contabilidade-Integrada?node-id=199-2979&t=LffhAJRG1CydnNoW-1)
+
 ### Prototipação com Figma Make
 
 Para as novas telas — cujo conteúdo nem a equipe nem os proponentes tinham clareza inicial —, a equipe utilizou o **Figma Make** com licença de estudante para gerar protótipos rapidamente e validar com o proponente.
