@@ -66,9 +66,6 @@ nav:
       - Modelo de Descoberta: requisitos/modelo-de-descoberta.md
       - Glossário de Termos: requisitos/glossario-de-termos.md
       - Fundamento e Estrutura de Requisitos: requisitos/fundamento-estrutura-requisitos.md
-      - Apuração de Regras: requisitos/apuracao-regras.md
-      - DRE e Regras: requisitos/DRE-regras.md
-      - Balanço Patrimonial: requisitos/balanco-patrimonial-regras.md
   - IHC:
       - Visão Geral: ihc/visao-geral.md
       - Identidade Visual: ihc/identidade-visual.md
