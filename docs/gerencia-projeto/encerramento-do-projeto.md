@@ -16,24 +16,29 @@
 
 ## 1. Configuração do Produto Entregue
 
-A seguir estão listados todos os itens que compõem a configuração final do produto entregue ao término do projeto.
+### Módulos da Aplicação
 
-- Aplicação Desktop COIN'S (Electron)
-    - Módulo de Plano de Contas
-    - Módulo de Lançamentos Contábeis (CRUD)
-    - Livro Diário (visualização de lançamentos)
-    - Módulo de Livro Razão
-    - Balancete de Verificação
-    - Módulo de Apuração do Resultado do Exercício
-    - Demonstração do Resultado do Exercício (DRE) com exportação
-    - Balanço Patrimonial com exportação
-- Protótipos de Interface (Figma)
-- Scripts de Banco SQLite (migrações)
-- Plano de Testes + Casos de Teste + Matriz de Rastreabilidade
-- Documentação Arquitetural
-- Artefatos no Google Drive
-- BPMN dos principais processos
-- Repositório GitHub (frontend/backend)
+| Módulo | Descrição | Semestre |
+| ------ | --------- | :------: |
+| **Plano de Contas** | Consulta ao plano de contas padrão com estrutura hierárquica de contas sintéticas e analíticas. | 2025/2 |
+| **Livro Diário** | Gerenciamento completo de lançamentos contábeis — criação, edição, exclusão e listagem cronológica. Inclui a opção de limpar todos os dados da empresa. | 2025/2 |
+| **Livro Razão** | Agrupamento dos lançamentos por conta, permitindo acompanhar a movimentação individual de cada conta ao longo do período. | 2025/2 |
+| **Balancete de Verificação** | Confronto dos saldos devedores e credores de todas as contas com filtros por período, exibição do balancete completo e resumo consolidado dos totais. | 2025/2 |
+| **Apuração do Resultado do Exercício** | Encerramento das contas de receitas e despesas com prévia completa antes da execução. Inclui histórico de apurações e possibilidade de desfazer a última apuração. | 2026/1 |
+| **Demonstração do Resultado do Exercício (DRE)** | Relatório estruturado com Receita Bruta, Deduções, Receita Líquida, Lucro Bruto, Despesas Operacionais, LAJIR, Resultado Financeiro e Lucro Líquido. Permite filtrar por período e exportar o relatório. | 2026/1 |
+| **Balanço Patrimonial** | Demonstrativo da posição financeira com Ativo, Passivo e Patrimônio Líquido agrupados hierarquicamente. Exibe resumo, conferência de equilíbrio e permite exportar o relatório. | 2026/1 |
+
+### Demais Artefatos
+
+| Artefato | Tipo |
+| -------- | ---- |
+| Protótipos de Interface (baixa e alta fidelidade) | Design — Figma |
+| Scripts de Banco de Dados (migrações) | SQLite |
+| Plano de Testes + Casos de Teste + Matriz de Rastreabilidade | Qualidade |
+| Documentação Arquitetural | Documentação |
+| BPMN dos principais processos | Modelagem |
+| Repositório GitHub (frontend/backend) | Código-fonte |
+| Artefatos complementares no Google Drive | Documentação |
 
 ### 1.1. Preparação do Ambiente de Produção
 
@@ -66,7 +71,7 @@ Link do Plano do Projeto: `<inserir link>`
 Nesta seção é feita uma análise comparativa entre o planejamento original e a execução real do projeto. A avaliação considera três métricas principais: escopo, prazo e custo/esforço.
 
 | Métrica | Resultado |
-| ------- | --------- |
+| ------- | :-------: |
 | Percentual de escopo implementado | `<valor>` |
 | Percentual de entregas planejadas por Sprint | `<valor>` |
 
