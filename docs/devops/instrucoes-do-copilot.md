@@ -1,62 +1,77 @@
-## **Referências e Fundamentação**
+# Instruções do Copilot
 
-## **Decisão da Equipe de Desenvolvimento**
+## Histórico de Versões
+
+| Versão | Data | Descrição | Autor |
+| :---: | :---: | :--- | :--- |
+| 1.0 | 02/06/2026 | Criação do documento | Equipe de Desenvolvimento |
+
+## Histórico de Revisões
+
+| Versão | Data | Revisor | Observação |
+| :---: | :---: | :--- | :--- |
+
+---
+
+## Decisão da Equipe de Desenvolvimento
 
 A definição do uso do GitHub Copilot nas revisões de Pull Requests foi estruturada de forma colaborativa pela equipe de desenvolvimento. Durante as discussões internas, estabeleceram-se os critérios sobre como a ferramenta deve participar do processo de revisão, considerando seu papel como apoio técnico complementar. O objetivo é permitir que o Copilot auxilie na identificação de melhorias, inconsistências e oportunidades de refatoração, atuando como reforço ao processo de análise, sem substituir a avaliação humana. Essa abordagem contribui para padronizar verificações recorrentes, fortalecer a qualidade das entregas e tornar o fluxo de revisão mais eficiente.
 
-### **Documentação Oficial do GitHub Copilot**
+---
 
-Além das discussões da equipe, a elaboração destas diretrizes contou com o apoio da documentação oficial do GitHub Copilot. Esse material forneceu entendimento adicional sobre o funcionamento, limitações e boas práticas no uso da ferramenta durante revisões de código.  
- Link utilizado: [https://docs.github.com/en/copilot](https://docs.github.com/en/copilot)
+## Guia de Revisão de Pull Requests
 
-```py
+### 1. Expectativas Centrais
 
-# Copilot Pull Request Review Guide
+- Revisar diffs de forma holística; sinalizar mudanças de lógica que afetam o fluxo de dados entre o processo principal do Electron, a API Express, a camada de banco de dados e o renderer Vue.
+- Rejeitar PRs que quebrem a compilação TypeScript, linting, testes unitários Jest ou cobertura end-to-end com Playwright. Apontar testes ausentes ou desatualizados quando o comportamento muda.
+- Garantir a higiene do repositório: mudanças em `package.json` devem incluir o arquivo de lock correspondente; migrações devem atualizar os artefatos SQL gerados quando aplicável; atualizações de documentação devem acompanhar as mudanças de funcionalidade.
 
-These guidelines describe how Copilot should evaluate pull requests for this repository. The goal is to protect runtime behavior, data integrity, and UI consistency across the Electron + Vue application.
+### 2. Backend (`main/`)
 
-## 1. Core Expectations
-- Review diffs holistically; flag logic changes that affect data flow between the Electron main process, the Express API, the database layer, and the Vue renderer.
-- Reject PRs that break TypeScript compilation, linting, Jest unit tests, or end-to-end Playwright coverage. Call out missing or outdated tests when behavior changes.
-- Ensure repository hygiene: changes to `package.json` must include the corresponding lock file; migrations must update generated SQL artifacts when applicable; documentation updates should live alongside feature changes.
+- Confirmar que os controllers apenas orquestram requisições e delegam para services/repositories; regras de negócio pertencem aos services, lógica SQL/Knex nos repositories.
+- Validar queries Knex quanto ao uso de parameter binding (sem interpolação de strings), uso adequado de transações em escritas multi-etapa e alinhamento com as definições de schema de entidades em `main/entities/`.
+- Quando migrações (`main/migrations/`) ou seeds (`main/seed/`) mudarem, garantir que repositories/services e testes correspondentes reflitam o novo schema. Verificar se novas migrações possuem passos de down e evitam operações destrutivas sem salvaguardas.
+- Para mudanças nas rotas Express em `main/server.ts` e pastas de controllers, garantir a existência de validações (ex.: campos obrigatórios, verificações de formato UUID) e que as respostas estejam em conformidade com os Swagger docs existentes.
 
-## 2. Backend (`main/`)
-- Confirm controllers only orchestrate requests and delegate to services/repositories; business rules belong in services, SQL/Knex logic in repositories.
-- Validate Knex queries for parameter binding (no string interpolation), proper transaction usage for multi-step writes, and alignment with entity schema definitions in `main/entities/`.
-- When migrations (`main/migrations/`) or seeds (`main/seed/`) change, ensure corresponding repositories/services and tests reflect the new schema. Verify new migrations have down steps and avoid destructive operations without safeguards.
-- For Express routing changes in `main/server.ts` and controller folders, ensure validation guards exist (e.g., required fields, UUID format checks) and responses conform to existing Swagger docs.
+### 3. Electron Main e Preload
 
-## 3. Electron Main & Preload
-- Check that changes in `main/main.ts` and `main/preload.ts` keep IPC channels typed (`contextBridge.exposeInMainWorld` contracts). Disallow direct renderer access to Node APIs beyond the preload whitelist.
-- Ensure `electron-forge`, Vite, and build script updates maintain parity across `.vite/` configs and `forge.config.ts`. Reject PRs that break platform targets defined in `package.json` scripts.
+- Verificar que mudanças em `main/main.ts` e `main/preload.ts` mantenham os canais IPC tipados (contratos `contextBridge.exposeInMainWorld`). Não permitir acesso direto do renderer a APIs Node além da whitelist do preload.
+- Garantir que atualizações em `electron-forge`, Vite e scripts de build mantenham paridade entre as configs `.vite/` e `forge.config.ts`. Rejeitar PRs que quebrem targets de plataforma definidos nos scripts de `package.json`.
 
-## 4. Frontend (`renderer/`)
-- Verify Vue components remain composition-friendly: state in `stores/`, reusable logic in `utils/` or composables, UI-only logic in components.
-- Enforce Vuetify usage patterns and consistent theming; ensure new components import shared tokens (e.g., `renderer/assets/`, `renderer/plugins/vuetify.ts`).
-- For router updates, confirm lazy-loaded routes and guards align with authentication/authorization expectations.
-- Make sure shared types under `renderer/types/` stay in sync with backend DTOs; flag duplicated or diverging types.
+### 4. Frontend (`renderer/`)
 
-## 5. Testing & Quality Gates
-- Require updates to Jest unit tests (`main/tests`, `renderer/tests`) or Playwright specs when behavior changes. Reject PRs that skip tests or weaken assertions.
-- Ensure `main/tests/setup.ts` or other fixtures are adjusted when database schemas evolve.
-- Call out missing Swagger updates (`main/swagger.ts`) when API contracts change.
+- Verificar que componentes Vue permaneçam composition-friendly: estado em `stores/`, lógica reutilizável em `utils/` ou composables, lógica de UI apenas em components.
+- Aplicar padrões de uso do Vuetify e temas consistentes; garantir que novos componentes importem tokens compartilhados (ex.: `renderer/assets/`, `renderer/plugins/vuetify.ts`).
+- Para atualizações do router, confirmar que rotas carregadas por lazy-loading e guards estejam alinhados com as expectativas de autenticação/autorização.
+- Garantir que tipos compartilhados em `renderer/types/` estejam sincronizados com os DTOs do backend; sinalizar tipos duplicados ou divergentes.
 
-## 6. Security, Performance, and Operations
-- Watch for secrets or credentials added to the repo; insist on using environment variables and `.env` loading via existing helpers.
-- Flag blocking operations in request handlers or renderer components that could freeze the UI. Prefer async, batched, or streamed work where possible.
-- Ensure logging and error handling follow existing patterns; no `console.log` in production paths.
-- Verify graceful fallback for platform-specific features (Windows installers, mac/Linux builds) when build scripts or configs change.
+### 5. Testes e Gates de Qualidade
 
-## 7. Documentation & Developer Experience
-- Require README or inline doc updates when workflows, scripts, or environment steps change.
-- Confirm Swagger/OpenAPI docs stay accurate for new endpoints or schema changes.
-- Encourage descriptive commit messages and PR descriptions outlining testing evidence and risk assessment.
+- Exigir atualizações nos testes unitários Jest (`main/tests`, `renderer/tests`) ou specs Playwright quando o comportamento mudar. Rejeitar PRs que pulem testes ou enfraqueçam asserções.
+- Garantir que `main/tests/setup.ts` ou outros fixtures sejam ajustados quando os schemas do banco de dados evoluírem.
+- Sinalizar atualizações ausentes no Swagger (`main/swagger.ts`) quando contratos de API mudarem.
 
-Copilot should block approval if any critical issue remains unresolved. Suggestions are welcome, but green approvals require confidence that runtime behavior, data integrity, and developer tooling remain intact.
+### 6. Segurança, Performance e Operações
+
+- Monitorar secrets ou credenciais adicionados ao repositório; insistir no uso de variáveis de ambiente e carregamento `.env` via helpers existentes.
+- Sinalizar operações bloqueantes em request handlers ou componentes do renderer que possam congelar a UI. Preferir trabalho assíncrono, em lote ou em stream quando possível.
+- Garantir que logging e tratamento de erros sigam os padrões existentes; sem `console.log` em caminhos de produção.
+- Verificar fallback gracioso para funcionalidades específicas de plataforma (instaladores Windows, builds mac/Linux) quando scripts de build ou configs mudarem.
+
+### 7. Documentação e Experiência do Desenvolvedor
+
+- Exigir atualizações no README ou docs inline quando workflows, scripts ou etapas de ambiente mudarem.
+- Confirmar que os docs Swagger/OpenAPI estejam precisos para novos endpoints ou mudanças de schema.
+- Incentivar mensagens de commit descritivas e descrições de PR com evidências de teste e avaliação de risco.
+
+O Copilot deve bloquear a aprovação se algum problema crítico permanecer sem resolução. Sugestões são bem-vindas, mas aprovações verdes exigem confiança de que o comportamento em runtime, a integridade dos dados e as ferramentas do desenvolvedor permanecem intactos.
+
+---
 
 ## Agente Personalizado para Documentação e Commits
 
-Foi criado um agente personalizado chamado `docs-agent` para auxiliar na manutenção de boas práticas de documentação e no uso de commits semânticos no projeto COIN'S.
+Foi criado um agente personalizado chamado `docs-agent` para auxiliar na manutenção de boas práticas de documentação e no uso de commits semânticos no projeto.
 
 ### Como Usar o Agente
 
@@ -66,6 +81,7 @@ Foi criado um agente personalizado chamado `docs-agent` para auxiliar na manuten
 ### Boas Práticas de Documentação
 
 O agente enfatiza:
+
 - Clareza e concisão nos documentos.
 - Formatação Markdown compatível com MkDocs.
 - Estrutura consistente.
@@ -75,9 +91,15 @@ O agente enfatiza:
 ### Commits Semânticos
 
 O agente reforça o uso do formato conventional commit:
+
 - `type(scope): description`
 - Tipos comuns: feat, fix, docs, style, refactor, test, chore
 - Descrições em modo imperativo, curtas (até 72 caracteres).
 
 Para mais detalhes, consulte o arquivo `.github/agents/docs-agent.agent.md`.
 
+---
+
+## Referências e Fundamentação
+
+- [Documentação Oficial do GitHub Copilot](https://docs.github.com/en/copilot)

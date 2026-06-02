@@ -107,10 +107,12 @@ Funcionalidades implementadas em 2026.1 que encerram o ciclo contábil do sistem
 | Módulo | Funcionalidade | Link de Acesso | Status |
 | :---- | :---- | :---- | :---- |
 | Módulo 5 \- Apuração | Apuração do Resultado do Exercício | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/33](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/33) | Implementado - Sprint 1 |
-| Módulo 6 \- Balanço Patrimonial | Geração do Balanço Patrimonial | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197) | Implementado - Sprint 2 |
-| Módulo 7 \- DRE | Geração da Demonstração do Resultado do Exercício (DRE) | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/99](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/99) | Implementado - Sprint 3 |
-| Módulo 6 \- Balanço Patrimonial | Exportação de Relatórios Contábeis (Balanço Patrimonial) | — | Implementado - Sprint 2 |
-| Módulo 7 \- DRE | Exportação de Relatórios Contábeis (DRE) | — | Implementado - Sprint 3 |
+| Módulo 6 \- Demonstração do Resultado do Exercício | Geração da Demonstração do Resultado do Exercício (DRE) | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/99](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/99) | Implementado - Sprint 3 |
+| Módulo 7 \- Balanço Patrimonial | Geração do Balanço Patrimonial | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197) | Implementado - Sprint 2 |
+| Módulo 6 \- Demonstração do Resultado do Exercício | Exportação de Relatórios Contábeis (DRE) | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/99](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/99) | Implementado - Sprint 3 |
+| Módulo 7 \- Balanço Patrimonial | Exportação de Relatórios Contábeis (Balanço Patrimonial) | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197) | Implementado - Sprint 2 |
+
+_Observação: inicialmente, a Exportação de Relatórios Contábeis foi planejada como uma funcionalidade independente. Durante o desenvolvimento, optou-se por acoplar a exportação diretamente ao módulo correspondente, tornando-a parte integrante de cada demonstrativo._
 
 ### 2.4 Melhorias e Correções Estruturais
 
@@ -118,10 +120,10 @@ Além das novas funcionalidades de consolidação, em 2026/1 foram realizadas me
 
 | Melhoria | Descrição | Status |
 | :---- | :---- | :---- |
-| Executável como ícone único | O instalador passou a gerar um único arquivo executável com ícone próprio, eliminando a necessidade de extração de zip. | Implementado — Sprint 0 |
+| Executável como ícone único | O instalador passou a gerar um único arquivo executável com ícone próprio, eliminando a necessidade de extração de zip. | Implementado |
 | Testes automatizados E2E | Implementação de testes end-to-end com Playwright cobrindo as funcionalidades críticas do sistema. | Implementado |
-| Compatibilidade com versões anteriores | Correção de incompatibilidade de banco de dados que impedia o sistema de funcionar com dados gerados por versões anteriores. | Implementado — Sprint 0 |
-| Correções de bugs | Bugs identificados e registrados ao longo de 2025/2 foram corrigidos na Sprint 0 de 2026/1. | Implementado — Sprint 0 |
+| Compatibilidade com versões anteriores | Correção de incompatibilidade de banco de dados que impedia o sistema de funcionar com dados gerados por versões anteriores. | Implementado |
+| Correções de bugs | Bugs identificados e registrados ao longo de 2025/2 foram corrigidos na Sprint 0 de 2026/1. | Implementado |
 
 ### 2.5 Incrementos para Próximas Versões
 
@@ -156,12 +158,12 @@ Os incrementos planejados consistem em funcionalidades adicionais previstas para
 ## Cronograma do Projeto {#cronograma-do-projeto}
    
 
-| Sprint | Período | Funcionalidade | Feature |
-| :---- | :---- | :---- | :---- |
-| Sprint 0 | 02 a 26/03 | Levantamento de requisitos e resolução de bugs. |   |
-| Sprint 1 | 30/03 a 16/04 | Apuração do Resultado do Exercício |  |
-| Sprint 2 | 22/04 a 11/05 | Geração do Balanço Patrimonial, Exportação de Relatórios Contábeis (Balanço Patrimonial) |  |
-| Sprint 3 | 12/05 a 01/06 | Geração da Demonstração do Resultado do Exercício (DRE), Exportação de Relatórios Contábeis (DRE) |  |
+| Sprint | Período | Funcionalidade |
+| :---- | :---- | :---- |
+| Sprint 0 | 02 a 26/03 | Levantamento de requisitos e resolução de bugs. |
+| Sprint 1 | 30/03 a 16/04 | Apuração do Resultado do Exercício |
+| Sprint 2 | 22/04 a 11/05 | Geração do Balanço Patrimonial, Exportação de Relatórios Contábeis (Balanço Patrimonial) |
+| Sprint 3 | 12/05 a 01/06 | Geração da Demonstração do Resultado do Exercício (DRE), Exportação de Relatórios Contábeis (DRE) |
 
  
 
@@ -249,9 +251,9 @@ Sketchs disponíveis em: [https://drive.google.com/drive/folders/16aMUyvXe49CFAo
 
 Protótipos disponíveis em: [https://www.figma.com/design/Z3hfLoenhr73I3u5BRU5lP/COIN-S---Contabilidade-Integrada?node-id=199-2979\&t=s9hH0eGFNNkmnlwo-1](https://www.figma.com/design/Z3hfLoenhr73I3u5BRU5lP/COIN-S---Contabilidade-Integrada?node-id=199-2979&t=s9hH0eGFNNkmnlwo-1)
 
-O processo de prototipação e validação segue o fluxo definido em BPMN, garantindo clareza na validação com os proponentes.
+O fluxo de interação do usuário com o sistema está documentado no Fluxograma da Jornada do Usuário.
 
-Modelo BPMN do fluxo de interação: [https://drive.google.com/drive/folders/1HkFLJtOT9pKymSfiwGUwvJVbgP38gO9e](https://drive.google.com/drive/folders/1HkFLJtOT9pKymSfiwGUwvJVbgP38gO9e)
+Fluxograma da Jornada do Usuário: [Jornada do Usuário](https://nes-contabilidade-integrada.github.io/doc-coins2026.1/ihc/jornada-usuario/)
 
 
 ## Arquitetura de Software {#arquitetura-de-software}
@@ -260,7 +262,7 @@ A arquitetura do Sistema COIN’S está detalhada no artefato específico dedica
 
 Este plano de projeto apenas referencia esse documento como a fonte oficial das definições arquiteturais.
 
-Documentação completa disponível em: [https://docs.google.com/document/d/14JxRcIGH7QDPQTHxo652JSl\_OJUCMZCo/edit?usp=drive\_link\&ouid=108261102528406926829\&rtpof=true\&sd=true](https://docs.google.com/document/d/14JxRcIGH7QDPQTHxo652JSl_OJUCMZCo/edit?usp=drive_link&ouid=108261102528406926829&rtpof=true&sd=true)
+Documentação completa disponível em: [Especificação Arquitetural](https://nes-contabilidade-integrada.github.io/doc-coins2026.1/arquitetura/especificacao-arquitetural/)
 
 
 ## Validação, Verificação & Teste {#validação,-verificação-&-teste}

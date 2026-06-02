@@ -32,12 +32,14 @@
 
 | Artefato | Tipo |
 | -------- | ---- |
-| Protótipos de Interface (baixa e alta fidelidade) | Design — Figma |
-| Esteira de CI com testes automatizados e geração de executável instalável (ícone único, sem necessidade de extração de zip) | DevOps — GitHub Actions |
-| Documentação Arquitetural | Documentação — MkDocs |
+| Protótipos de Interface (alta fidelidade) | Design — Figma |
+| Esteira de CI com testes automatizados | DevOps — GitHub Actions |
+| Esteira de CI gerando o executável instalável (ícone único, sem necessidade de extração de zip) | DevOps — GitHub Actions |
+| Documentação do Projeto | Documentação — MkDocs |
 | Manual de Uso do Sistema | Documentação — MkDocs |
 | Teste de Usabilidade (planejamento, execução e relatório) | IHC — MkDocs |
-| BPMN dos principais processos | Modelagem |
+| Fluxograma da Jornada do Usuário | Modelagem |
+| Vídeo de Apresentação do Sistema | Apresentação |
 | Repositório GitHub (frontend/backend) | Código-fonte |
 
 ### 1.1. Melhorias e Correções Estruturais
@@ -65,10 +67,10 @@ A tabela a seguir apresenta todos os itens planejados no escopo final do projeto
 
 | Item de escopo | Status | Categoria do Escopo |
 | -------------- | :----: | :-----------------: |
-| Apuração do Resultado do Exercício | Implementado | `<categoria>` |
-| Demonstração do Resultado do Exercício (DRE) | Implementado | `<categoria>` |
-| Balanço Patrimonial | Implementado | `<categoria>` |
-| Exportação de Relatórios Contábeis | Implementado | `<categoria>` |
+| Apuração do Resultado do Exercício | Implementado | Funcionalidades de Consolidação |
+| Demonstração do Resultado do Exercício (DRE) | Implementado | Funcionalidades de Consolidação |
+| Balanço Patrimonial | Implementado | Funcionalidades de Consolidação |
+| Exportação de Relatórios Contábeis | Implementado | Funcionalidades de Consolidação |
 
 _Tabela 1 - Status de implementação dos itens do escopo._
 
