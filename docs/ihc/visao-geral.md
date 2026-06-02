@@ -6,6 +6,7 @@
 | :---: | :---: | :---: | :---: |
 | 1.0 | 28/05/2026 | Versão inicial do documento | Fernanda Pessoa |
 | 1.1 | 01/06/2026 | Adiciona link dos materiais de teste de usabilidade de 2025/2 | Fernanda Pessoa |
+| 1.2 | 01/06/2026 | Adiciona seção de Jornada do Usuário | Fernanda Pessoa |
 
 ## Histórico de Revisões
 
@@ -18,7 +19,8 @@
 2. [Figma](#figma)
 3. [Prototipação](#prototipação)
 4. [Identidade Visual](#identidade-visual)
-5. [Testes de Usabilidade](#testes-de-usabilidade)
+5. [Jornada do Usuário](#jornada-do-usuário)
+6. [Testes de Usabilidade](#testes-de-usabilidade)
 
 ---
 
@@ -53,6 +55,14 @@ Desenvolvido no Figma, representa fielmente a interface final do sistema — com
 A identidade visual do sistema está documentada separadamente e define a paleta de cores, o uso de componentes e as diretrizes de alinhamento com a identidade institucional da UFMS.
 
 **Documento:** [Especificação de Identidade Visual](identidade-visual.md)
+
+---
+
+## Jornada do Usuário
+
+O mapa de jornada documenta o fluxo principal de interação do usuário com o sistema — do acesso ao Plano de Contas até a exportação dos demonstrativos contábeis.
+
+**Documento:** [Jornada do Usuário](jornada-usuario.md)
 
 ---
 
