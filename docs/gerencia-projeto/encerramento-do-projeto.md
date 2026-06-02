@@ -40,7 +40,18 @@
 | BPMN dos principais processos | Modelagem |
 | Repositório GitHub (frontend/backend) | Código-fonte |
 
-### 1.1. Preparação do Ambiente de Produção
+### 1.1. Melhorias e Correções Estruturais
+
+Além das novas funcionalidades, em 2026/1 foram realizadas melhorias estruturais e correções de bugs identificados no semestre anterior:
+
+| Melhoria | Descrição |
+| -------- | --------- |
+| Executável como ícone único | O instalador passou a gerar um único arquivo executável com ícone próprio, eliminando a necessidade de extração de zip. |
+| Testes automatizados E2E | Implementação de testes end-to-end com Playwright cobrindo as funcionalidades críticas do sistema. |
+| Compatibilidade com versões anteriores | Correção de incompatibilidade de banco de dados que impedia o sistema de funcionar com dados gerados por versões anteriores. |
+| Correções de bugs | Bugs identificados em 2025/2 foram levantados e corrigidos na Sprint 0 de 2026/1. |
+
+### 1.2. Preparação do Ambiente de Produção
 
 O passo a passo completo para instalação do ambiente, incluindo dependências, variáveis e execução da versão final, encontra-se no link abaixo:
 

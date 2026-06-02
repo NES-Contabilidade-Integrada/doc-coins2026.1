@@ -112,7 +112,18 @@ Funcionalidades implementadas em 2026.1 que encerram o ciclo contábil do sistem
 | Módulo 6 \- Balanço Patrimonial | Exportação de Relatórios Contábeis (Balanço Patrimonial) | — | Implementado - Sprint 2 |
 | Módulo 7 \- DRE | Exportação de Relatórios Contábeis (DRE) | — | Implementado - Sprint 3 |
 
-### 2.4 Incrementos para Próximas Versões
+### 2.4 Melhorias e Correções Estruturais
+
+Além das novas funcionalidades de consolidação, em 2026/1 foram realizadas melhorias estruturais e correções de bugs identificados no semestre anterior:
+
+| Melhoria | Descrição | Status |
+| :---- | :---- | :---- |
+| Executável como ícone único | O instalador passou a gerar um único arquivo executável com ícone próprio, eliminando a necessidade de extração de zip. | Implementado — Sprint 0 |
+| Testes automatizados E2E | Implementação de testes end-to-end com Playwright cobrindo as funcionalidades críticas do sistema. | Implementado |
+| Compatibilidade com versões anteriores | Correção de incompatibilidade de banco de dados que impedia o sistema de funcionar com dados gerados por versões anteriores. | Implementado — Sprint 0 |
+| Correções de bugs | Bugs identificados e registrados ao longo de 2025/2 foram corrigidos na Sprint 0 de 2026/1. | Implementado — Sprint 0 |
+
+### 2.5 Incrementos para Próximas Versões
 
 Os incrementos planejados consistem em funcionalidades adicionais previstas para versões futuras, visando ampliar a flexibilidade e a interatividade do sistema:
 
