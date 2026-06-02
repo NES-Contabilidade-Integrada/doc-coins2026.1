@@ -79,8 +79,8 @@ As funcionalidades essenciais que compõem o MVP, entregues em 2025/2, são:
 | Módulo | Funcionalidade | Link de Acesso | Status |
 | :---- | :---- | :---- | :---- |
 | Módulo 1 \- Plano de Contas | Exibição do Plano de Contas Padrão | [https://github.com/NES-Contabilidade-Integrada/coins/issues/11](https://github.com/NES-Contabilidade-Integrada/coins/issues/11) | Implementado |
-| Módulo 2 \- Empresa | Gerenciamento de Lançamentos Contábeis | [https://github.com/NES-Contabilidade-Integrada/coins/issues/12](https://github.com/NES-Contabilidade-Integrada/coins/issues/12) | Implementado |
-| Módulo 2 \- Empresa | Visualização de Lançamentos no Livro Diário | [https://github.com/NES-Contabilidade-Integrada/coins/issues/12](https://github.com/NES-Contabilidade-Integrada/coins/issues/12) | Implementado |
+| Módulo 2 \- Livro Diário | Gerenciamento de Lançamentos Contábeis | [https://github.com/NES-Contabilidade-Integrada/coins/issues/12](https://github.com/NES-Contabilidade-Integrada/coins/issues/12) | Implementado |
+| Módulo 2 \- Livro Diário | Visualização de Lançamentos no Livro Diário | [https://github.com/NES-Contabilidade-Integrada/coins/issues/12](https://github.com/NES-Contabilidade-Integrada/coins/issues/12) | Implementado |
 
 
 ### 2.2 Funcionalidades Complementares ao MVP

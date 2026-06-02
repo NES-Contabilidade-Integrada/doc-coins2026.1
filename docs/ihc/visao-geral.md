@@ -44,9 +44,13 @@ O projeto mantém um arquivo Figma bem estruturado, com as cores padrão do sist
 
 Elaborado nas fases iniciais do projeto para validar a estrutura e a navegação das telas sem compromisso com estética. Permite iterar rapidamente sobre a disposição dos elementos e os fluxos principais antes de investir no detalhamento visual.
 
+**Link:** [Protótipo de Baixa Fidelidade — Figma](https://www.figma.com/design/Z3hfLoenhr73I3u5BRU5lP/COIN-S---Contabilidade-Integrada?node-id=29-811&t=LffhAJRG1CydnNoW-1)
+
 ### Protótipo de alta fidelidade
 
 Desenvolvido no Figma, representa fielmente a interface final do sistema — com paleta de cores, tipografia, ícones e comportamento dos componentes. O protótipo de alta fidelidade contempla os principais fluxos do sistema, como o registro de lançamentos, a apuração do resultado e a geração de demonstrativos contábeis.
+
+**Link:** [Protótipo de Alta Fidelidade — Figma](https://www.figma.com/design/Z3hfLoenhr73I3u5BRU5lP/COIN-S---Contabilidade-Integrada?node-id=199-2979&t=LffhAJRG1CydnNoW-1)
 
 ---
 
