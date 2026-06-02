@@ -119,13 +119,21 @@ Assim, cada Épico funciona como um container de funcionalidades, assegurando ra
 
 Para padronizar a escrita dos requisitos e garantir consistência em todo o documento, foi utilizado o modelo a seguir:
 
-| Nome do Requisito Funcional | Épico 1 |
-| ----- | :---: |
-| Descrição do Requisito. |  |
-| **Critérios de Aceite:** |  |
-| Critérios de Aceite do Requisito. |  |
-| **Exceções dos Critérios de Aceite:** |  |
-| \[CA-1\] Exceções do Critério de Aceite. |  |
+<table style="width:100%">
+<thead>
+<tr>
+  <th style="background-color:#2E74B5; color:white;">Nome do Requisito Funcional</th>
+  <th style="background-color:#2E74B5; color:white; text-align:center; width:120px;">Módulo 1</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="2">Descrição do Requisito.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"><strong>CA-1.</strong> Critérios de Aceite do Requisito.</td></tr>
+<tr><td colspan="2" style="background-color:#BDD7EE; text-align:center;"><strong>Exceções dos Critérios de Aceite:</strong></td></tr>
+<tr><td colspan="2"><strong>EX-1.</strong> [CA-1] Exceções do Critério de Aceite.</td></tr>
+</tbody>
+</table>
 
 ## Comparativo com Outras Estruturas {#comparativo-com-outras-estruturas}
 
