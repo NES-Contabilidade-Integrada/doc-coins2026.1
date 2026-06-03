@@ -82,8 +82,8 @@ nav:
       - Política de Uso de IA: ia/politica-uso-ia.md
       - Instruções do Copilot: ia/instrucoes-do-copilot.md
   - Gerência de Projeto:
-      - Plano de Projeto: gerencia-projeto/plano-do-projeto.md
       - Análise Preliminar: gerencia-projeto/analise-preliminar.md
+      - Plano de Projeto: gerencia-projeto/plano-do-projeto.md
       - Encerramento do Projeto: gerencia-projeto/encerramento-do-projeto.md
       - Template de Documento: gerencia-projeto/template-de-documento.md
   - DevOps:
