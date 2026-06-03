@@ -79,8 +79,8 @@ nav:
   - Qualidade e Testes:
       - Plano de Testes: qualidade-testes/plano-de-testes.md
   - IA:
-      - Política de Uso de IA: gerencia-projeto/politica-uso-ia.md
-      - Instruções do Copilot: devops/instrucoes-do-copilot.md
+      - Política de Uso de IA: ia/politica-uso-ia.md
+      - Instruções do Copilot: ia/instrucoes-do-copilot.md
   - Gerência de Projeto:
       - Plano de Projeto: gerencia-projeto/plano-do-projeto.md
       - Análise Preliminar: gerencia-projeto/analise-preliminar.md
