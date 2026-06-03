@@ -55,9 +55,13 @@ Além das novas funcionalidades, em 2026/1 foram realizadas melhorias estruturai
 
 ### 1.2. Preparação do Ambiente de Produção
 
-O passo a passo completo para instalação do ambiente, incluindo dependências, variáveis e execução da versão final, encontra-se no link abaixo:
+O COIN'S é distribuído como um **executável instalável** — o usuário final não precisa configurar nenhum ambiente. O instalador está disponível na página de [Releases do repositório](https://github.com/NES-Contabilidade-Integrada/coins2026.1/releases/latest).
 
-Guia de Instalação: `<inserir link>`
+Para quem precisa **gerar o executável**, o processo completo está documentado em: [Geração do Executável](https://nes-contabilidade-integrada.github.io/doc-coins2026.1/devops/geracao-executavel/)
+
+Para **configurar o ambiente de desenvolvimento** — instalação de dependências, execução em modo desenvolvimento e geração do build — o passo a passo está no README do repositório de código:
+
+[https://github.com/NES-Contabilidade-Integrada/coins2026.1](https://github.com/NES-Contabilidade-Integrada/coins2026.1)
 
 ---
 
