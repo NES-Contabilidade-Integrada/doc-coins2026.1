@@ -812,7 +812,18 @@
   <a href="#22-arquitetura-do-frontend" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2 Arquitetura do frontend
+        2.2 Arquitetura do Frontend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-camada-de-testes-e2e" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Camada de Testes E2E
       
     </span>
   </a>
@@ -2361,7 +2372,18 @@
   <a href="#22-arquitetura-do-frontend" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2 Arquitetura do frontend
+        2.2 Arquitetura do Frontend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-camada-de-testes-e2e" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Camada de Testes E2E
       
     </span>
   </a>
@@ -2428,6 +2450,12 @@
 <td style="text-align: center;">Ajustando links do Sumário</td>
 <td style="text-align: center;">Pedro Nicoletti Sotoma</td>
 </tr>
+<tr>
+<td style="text-align: center;">2.0</td>
+<td style="text-align: center;">01/06/2026</td>
+<td style="text-align: center;">Atualização com base no working directory (branch develop): novas camadas do frontend (Stores, Utils/Composables, Types, Constants, Layout, Plugins); novos módulos de domínio backend e frontend (Apuração, DRE, Balanço Patrimonial); decomposição da camada de banco de dados; reorganização dos testes E2E para <code>playwright/</code></td>
+<td style="text-align: center;">Claude (revisão técnica automatizada)</td>
+</tr>
 </tbody>
 </table>
 <p><strong>Histórico de Revisões</strong> </p>
@@ -2447,14 +2475,21 @@
 <td style="text-align: center;">Fernanda Pessoa</td>
 <td>Aprovada</td>
 </tr>
+<tr>
+<td style="text-align: center;">2.0</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td>Pendente de revisão</td>
+</tr>
 </tbody>
 </table>
 <p><strong>Sumário</strong></p>
 <p><a href="#introdução">1. Introdução 1</a></p>
 <p><a href="#arquitetura-geral-do-sistema">2. Arquitetura Geral do Sistema   2</a></p>
 <p><a href="#2.1-arquitetura-do-backend">2.1 Arquitetura do Backend 2</a></p>
-<p><a href="#2.2-arquitetura-do-frontend">2.2 Arquitetura do frontend    3</a></p>
-<p><a href="#conclusão">3. Conclusão  3</a></p>
+<p><a href="#2.2-arquitetura-do-frontend">2.2 Arquitetura do Frontend    3</a></p>
+<p><a href="#2.3-camada-de-testes-e2e">2.3 Camada de Testes E2E   4</a></p>
+<p><a href="#conclusão">3. Conclusão  5</a></p>
 <h2 id="introducao">Introdução</h2>
 <p>Esse documento tem por objetivo especificar a estrutura organizacional do código-fonte do software COIN'S, desenvolvido na disciplina de Núcleo de Práticas de Engenharia de Software 2025/2.</p>
 <p>Ele serve como um guia para a equipe de desenvolvimento, detalhando a responsabilidade de cada camada e diretório principal. O objetivo é facilitar a manutenção e a implementação de novas funcionalidades, garantindo que a estrutura do código seja preservada.</p>
@@ -2464,28 +2499,301 @@
 Essa arquitetura consiste basicamente em agrupar todo o sistema em um único repositório, separando os componentes em camadas de acordo com suas responsabilidades. <br />
 Mais adiante será detalhado como separamos nossas camadas tanto para o frontend quanto para o backend.</p>
 <h3 id="21-arquitetura-do-backend">2.1 Arquitetura do Backend</h3>
-<p>Para o backend(diretório “main”), separamos nosso código em 8 camadas principais:</p>
+<p>Para o backend (diretório <code>main</code>), separamos nosso código em camadas principais:</p>
 <ul>
-<li><strong>Database:</strong> Essa camada fica responsável por configurar o banco de dados local.  </li>
-<li><strong>Migrations:</strong> Alinhada à database, essa camada tem como objetivo gerar as tabelas do banco de dados em conformidade com o modelo de dados do código.  </li>
-<li><strong>Seed:</strong> Ainda sobre o banco de dados, essa camada é responsável por popular o banco com dados que devem ser instanciados assim que o sistema é gerado, ex: Plano de Contas padrão.  </li>
-<li><strong>Entities:</strong> Essa camada é responsável por representar as tabelas do banco de dados no código.  </li>
-<li><strong>Repositories:</strong> Essa camada é responsável por acessar e realizar operações no banco de dados  </li>
-<li><strong>Services:</strong> Essa camada é responsável por gerenciar as regras de negócio da aplicação.  </li>
-<li><strong>Controllers:</strong> Essa camada é responsável por disponibilizar rotas de acesso aos dados do backend para o frontend.  </li>
-<li><strong>Tests:</strong> Essa camada basicamente engloba os testes unitários da aplicação.</li>
+<li><strong>Database:</strong> Essa camada fica responsável por configurar e inicializar o banco de dados local.</li>
 </ul>
-<h3 id="22-arquitetura-do-frontend">2.2 Arquitetura do frontend</h3>
-<p>Para o frontend(diretório “renderer”), separamos nosso código em 4 camadas principais:</p>
+<blockquote>
+<p><strong>Nota (v2.0 — Decomposição da camada Database):</strong> A camada de banco de dados foi decomposta em múltiplos arquivos com responsabilidades dedicadas, deixando de ser um único arquivo de configuração:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Arquivo</th>
+<th style="text-align: left;">Responsabilidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>database/connection.ts</code></td>
+<td style="text-align: left;">Instância do Knex e conexão com o SQLite3</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>database/migrateDatabase.ts</code></td>
+<td style="text-align: left;">Execução das migrations pendentes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>database/seedDatabase.ts</code></td>
+<td style="text-align: left;">Execução das seeds de dados iniciais</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>database/detectDatabaseState.ts</code></td>
+<td style="text-align: left;">Detecção do estado do banco (novo, migrado, corrompido)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>database/runDatabaseRoutine.ts</code></td>
+<td style="text-align: left;">Orquestra toda a inicialização: detect → migrate → seed</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
 <ul>
-<li><strong>Components:</strong> Essa camada fica responsável por armazenar os componentes principais e as páginas do sistema.  </li>
-<li><strong>Pages:</strong> Essa camada fica responsável por renderizar as páginas da aplicação.  </li>
-<li><strong>Router:</strong> Essa camada é responsável por gerenciar as rotas da aplicação.  </li>
-<li><strong>Services:</strong> Essa camada estabelece a comunicação com o backend para retorno dos endpoints.  </li>
-<li><strong>Schemas:</strong> Essa camada é responsável por definir as estruturas de dados que serão utilizadas nos componentes.</li>
+<li><strong>Migrations:</strong> Alinhada à database, essa camada tem como objetivo gerar as tabelas do banco de dados em conformidade com o modelo de dados do código.</li>
 </ul>
+<blockquote>
+<p><strong>Nota (v2.0 — Reorganização das migrations):</strong> As 4 migrations originais (criadas na branch <code>main</code>) foram consolidadas em uma única <strong>migration de baseline</strong> (<code>20260331195800_baseline.ts</code>), seguida de migrations incrementais para cada evolução do schema. A estrutura atual é:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Migration</th>
+<th style="text-align: left;">Responsabilidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>20260331195800_baseline.ts</code></td>
+<td style="text-align: left;">Cria as 4 tabelas originais (<code>chart_of_account</code>, <code>company</code>, <code>journal_entry</code>, <code>journal_entry_line</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>20260408232842_add_apuration.ts</code></td>
+<td style="text-align: left;">Cria <code>account_types</code>, <code>actors</code>, <code>apuration</code>; adiciona <code>account_type_id</code> em <code>chart_of_account</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>20260416003754_actor_and_appuration_into_journal.ts</code></td>
+<td style="text-align: left;">Adiciona <code>actor_id</code> e <code>apuration_id</code> em <code>journal_entry</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>20260507000000_add_dre_groups.ts</code></td>
+<td style="text-align: left;">Cria <code>dre_groups</code> e <code>dre_group_account_roots</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>20260508000000_apuracao_nula_support.ts</code></td>
+<td style="text-align: left;">Torna <code>destination_account_id</code> nullable; amplia <code>type</code> para aceitar valor 3 (Resultado Nulo)</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<ul>
+<li><strong>Seed:</strong> Essa camada é responsável por popular o banco com dados que devem ser instanciados assim que o sistema é gerado.</li>
+</ul>
+<blockquote>
+<p><strong>Nota (v2.0):</strong> Adicionada seed <code>InsertDreRoots.ts</code> para popular os vínculos entre grupos de DRE e as contas raiz do Plano de Contas padrão.</p>
+</blockquote>
+<ul>
+<li>
+<p><strong>Entities:</strong> Essa camada é responsável por representar as tabelas do banco de dados no código.</p>
+</li>
+<li>
+<p><strong>Repositories:</strong> Essa camada é responsável por acessar e realizar operações no banco de dados.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Nota (v2.0):</strong> Adicionado <code>ApurationRepository</code> para o módulo de apuração. Os demais módulos novos (DRE, BalanceSheetStatement) não possuem repository próprio — operam diretamente via queries no Service.</p>
+</blockquote>
+<ul>
+<li><strong>Services:</strong> Essa camada é responsável por gerenciar as regras de negócio da aplicação.</li>
+</ul>
+<blockquote>
+<p><strong>Nota (v2.0 — Novos Services):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Service</th>
+<th style="text-align: left;">Módulo</th>
+<th style="text-align: left;">Responsabilidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ApurationService</code></td>
+<td style="text-align: left;">Apuração</td>
+<td style="text-align: left;">Lógica de apuração contábil (lançamentos de encerramento)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DreService</code></td>
+<td style="text-align: left;">DRE</td>
+<td style="text-align: left;">Cálculo da Demonstração do Resultado do Exercício</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>BalanceSheetStatementService</code></td>
+<td style="text-align: left;">Balanço Patrimonial</td>
+<td style="text-align: left;">Geração do demonstrativo do balanço patrimonial</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>BalanceSheetStatementCsvService</code></td>
+<td style="text-align: left;">Balanço Patrimonial</td>
+<td style="text-align: left;">Exportação do balanço patrimonial em formato CSV</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<ul>
+<li><strong>Controllers:</strong> Essa camada é responsável por disponibilizar rotas de acesso aos dados do backend para o frontend.</li>
+</ul>
+<blockquote>
+<p><strong>Nota (v2.0 — Novos Controllers):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Controller</th>
+<th style="text-align: left;">Módulo</th>
+<th style="text-align: left;">Rotas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ApurationController</code> / <code>ApurationRoutes</code></td>
+<td style="text-align: left;">Apuração</td>
+<td style="text-align: left;">Endpoints de apuração contábil</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DreController</code> / <code>DreRoutes</code></td>
+<td style="text-align: left;">DRE</td>
+<td style="text-align: left;">Endpoints da Demonstração do Resultado</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>BalanceSheetStatementController</code> / <code>BalanceSheetStatementRoutes</code></td>
+<td style="text-align: left;">Balanço Patrimonial</td>
+<td style="text-align: left;">Endpoints do demonstrativo e exportação</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<ul>
+<li>
+<p><strong>Helpers:</strong> Camada de funções utilitárias compartilhadas entre Services e Controllers, sem estado (ex: <code>formatDateToSqlString</code>, <code>JournalEntryHelpers</code>, <code>NormalizeToFilter</code>, <code>getResourcePath</code>).</p>
+</li>
+<li>
+<p><strong>Tests:</strong> Essa camada engloba os testes unitários da aplicação, executados via Vitest.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Nota (v2.0):</strong> Adicionados testes para os novos módulos (<code>Apuration</code>, <code>Dre</code>, <code>BalanceSheetStatement</code>) e para os helpers (<code>JournalEntryHelpers</code>, <code>NormalizeToFilter</code>, <code>formatDateToSqlString</code>).</p>
+</blockquote>
+<h3 id="22-arquitetura-do-frontend">2.2 Arquitetura do Frontend</h3>
+<p>Para o frontend (diretório <code>renderer</code>), separamos nosso código em camadas principais:</p>
+<ul>
+<li><strong>Components:</strong> Essa camada fica responsável por armazenar os componentes reutilizáveis e as seções visuais do sistema, organizados por módulo de negócio e por componentes globais.</li>
+</ul>
+<blockquote>
+<p><strong>Nota (v2.0 — Novos módulos de componentes):</strong> Três novos grupos de componentes foram adicionados, cada um correspondendo a um módulo de domínio:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Módulo</th>
+<th style="text-align: left;">Diretório</th>
+<th style="text-align: left;">Componentes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Apuração</td>
+<td style="text-align: left;"><code>components/Apuracao/</code></td>
+<td style="text-align: left;"><code>ApuracaoAccounts</code>, <code>ApuracaoClosingEntries</code>, <code>ApuracaoFinalResult</code>, <code>ApuracaoHistoryModal</code>, <code>ApuracaoFilter</code>, <code>ApuracaoResume</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Balanço Patrimonial</td>
+<td style="text-align: left;"><code>components/BalancoPatrimonial/</code></td>
+<td style="text-align: left;"><code>BalancoPatrimonialSection</code>, <code>BalancoPatrimonialResumo</code>, <code>BalancoPatrimonialFilter</code>, <code>BalancoPatrimonialConferencia</code>, <code>BalancoPatrimonialExportDialog</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">DRE (Demonstração)</td>
+<td style="text-align: left;"><code>components/Demonstracao/</code></td>
+<td style="text-align: left;"><code>DemonstracaoDRE</code>, <code>DemonstracaoContas</code>, <code>DemonstracaoFinalResult</code>, <code>DemonstracaoFilter</code>, <code>DemonstracaoExportDialog</code>, <code>DemonstracaoResume</code></td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<ul>
+<li><strong>Pages:</strong> Essa camada fica responsável por renderizar as páginas da aplicação.</li>
+</ul>
+<blockquote>
+<p><strong>Nota (v2.0 — Novas páginas):</strong> <code>ApuracaoPage.vue</code>, <code>BalancoPatrimonialPage.vue</code> e <code>DemonstracaoPage.vue</code> foram adicionadas, uma por módulo de domínio novo.</p>
+</blockquote>
+<ul>
+<li>
+<p><strong>Layout:</strong> Essa camada é responsável por definir o layout estrutural da aplicação (<code>MainLayout.vue</code>), integrando os componentes de navegação (AppBar, SideBar) e os sistemas globais de notificação.</p>
+</li>
+<li>
+<p><strong>Router:</strong> Essa camada é responsável por gerenciar as rotas da aplicação.</p>
+</li>
+<li>
+<p><strong>Services:</strong> Essa camada estabelece a comunicação com o backend para retorno dos endpoints.</p>
+</li>
+<li>
+<p><strong>Schemas:</strong> Essa camada é responsável por definir as estruturas de dados que serão utilizadas nos componentes.</p>
+</li>
+<li>
+<p><strong>Stores (<code>stores/</code>):</strong> Camada de gerenciamento de estado global da aplicação, implementada com <strong>Pinia</strong>. Cada store encapsula estado, ações e lógica de inicialização de um agregado de domínio (ex: <code>companyStore.ts</code>).</p>
+</li>
+<li>
+<p><strong>Utils / Composables (<code>utils/</code>):</strong> Camada de lógica reutilizável entre componentes, implementada como <strong>Vue Composables</strong>. Exemplos: <code>useAlert.ts</code>, <code>useBalanceAlert.ts</code>, <code>format.ts</code>.</p>
+</li>
+<li>
+<p><strong>Types (<code>types/</code>):</strong> Camada de definições de tipos TypeScript compartilhadas entre componentes e services do frontend.</p>
+</li>
+<li>
+<p><strong>Constants (<code>constants/</code>):</strong> Camada de constantes globais do frontend.</p>
+</li>
+<li>
+<p><strong>Plugins (<code>plugins/</code>):</strong> Camada de configuração e registro de plugins do Vue (ex: Vuetify).</p>
+</li>
+</ul>
+<h3 id="23-camada-de-testes-e2e">2.3 Camada de Testes E2E</h3>
+<p>Além das camadas de backend e frontend, o projeto conta com uma camada independente de <strong>Testes End-to-End</strong> (diretório <code>playwright/</code>), baseada em <strong>Playwright</strong>. Essa camada é externa ao código de produção e atua sobre a aplicação compilada como um usuário real faria.</p>
+<blockquote>
+<p><strong>Nota (v2.0 — Renomeação):</strong> A pasta de testes E2E foi renomeada de <code>e2e/</code> para <code>playwright/</code>. A estrutura interna foi mantida, com as seguintes mudanças adicionais: a categoria <code>regression/</code> foi renomeada para <code>acceptance/</code>; novos page objects e specs foram adicionados para os módulos de Apuração e DRE.</p>
+</blockquote>
+<p>A camada de testes E2E é organizada em 4 subcamadas:</p>
+<ul>
+<li>
+<p><strong>Pages (<code>playwright/pages/</code>):</strong> Implementa o padrão <strong>Page Object Model (POM)</strong>. Cada arquivo encapsula as interações com um módulo específico da UI.</p>
+</li>
+<li>
+<p><strong>Fixtures (<code>playwright/fixtures/</code>):</strong> Armazena dados de teste em formato JSON.</p>
+</li>
+<li>
+<p><strong>Utils (<code>playwright/utils/</code>):</strong> Contém utilitários compartilhados entre os specs (<code>app.fixture.ts</code>, <code>globalFunctions.ts</code>).</p>
+</li>
+<li>
+<p><strong>Specs (<code>playwright/specs/</code>):</strong> Contém os casos de teste, organizados em cinco categorias:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Categoria</th>
+<th style="text-align: left;">Diretório</th>
+<th style="text-align: left;">O que valida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Functional</strong></td>
+<td style="text-align: left;"><code>specs/functional/</code></td>
+<td style="text-align: left;">Comportamento de UI por módulo (inclui novos: <code>apuracao/</code>, <code>dre/</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Integration</strong></td>
+<td style="text-align: left;"><code>specs/integration/</code></td>
+<td style="text-align: left;">Respostas da API REST do backend (inclui novos: <code>apuracao/</code>, <code>dre/</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>E2E</strong></td>
+<td style="text-align: left;"><code>specs/e2e/</code></td>
+<td style="text-align: left;">Fluxos contábeis completos ponta a ponta (inclui novos: <code>apuracao-workflow</code>, <code>dre-workflow</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Acceptance</strong></td>
+<td style="text-align: left;"><code>specs/acceptance/</code></td>
+<td style="text-align: left;">Regras de negócio e integridade de dados (renomeado de <code>regression/</code>)</td>
+</tr>
+</tbody>
+</table>
 <h2 id="conclusao">Conclusão</h2>
-<p>A arquitetura definida pelo time entrega uma estrutura robusta e organizada para o escopo do projeto, garantindo clareza no desenvolvimento e manutenção do software.  </p>
+<p>A arquitetura definida pelo time entrega uma estrutura robusta e organizada para o escopo do projeto, garantindo clareza no desenvolvimento e manutenção do software.</p>
+<blockquote>
+<p><strong>Conclusão atualizada (v2.0):</strong> A evolução entre a v1.1 e a v2.0 não alterou as decisões arquiteturais fundamentais — o sistema permanece monolítico modular, desktop, offline, com separação entre <code>main</code> (backend) e <code>renderer</code> (frontend). As principais adições foram: (1) três novos módulos de domínio completos — <strong>Apuração</strong>, <strong>DRE</strong> e <strong>Balanço Patrimonial</strong> — com representação em todas as camadas; (2) decomposição da camada <code>database/</code> em arquivos dedicados por responsabilidade; (3) consolidação das migrations em baseline + incrementais; (4) formalização das camadas de frontend que existiam mas não estavam documentadas (Stores, Utils/Composables, Types, Constants, Plugins); (5) reorganização dos testes E2E de <code>e2e/</code> para <code>playwright/</code> com cobertura dos novos módulos.</p>
+</blockquote>
 
 
 
@@ -2508,7 +2816,7 @@ Mais adiante será detalhado como separamos nossas camadas tanto para o frontend
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="26 de maio de 2026 22:58:33 UTC">26 de maio de 2026 22:58:33</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="3 de junho de 2026 01:08:52 UTC">3 de junho de 2026 01:08:52</span>
   </span>
 
     
