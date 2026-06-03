@@ -2133,6 +2133,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configuracao-do-ambiente-de-desenvolvimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração do Ambiente de Desenvolvimento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#geracao-do-executavel" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2140,6 +2151,34 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Geração do Executável">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geracao-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geração Manual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geracao-automatica-via-github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geração Automática via GitHub Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2401,6 +2440,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#configuracao-do-ambiente-de-desenvolvimento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração do Ambiente de Desenvolvimento
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#geracao-do-executavel" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2408,6 +2458,34 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Geração do Executável">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geracao-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geração Manual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geracao-automatica-via-github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geração Automática via GitHub Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2541,17 +2619,36 @@
 <h2 id="introducao">Introdução</h2>
 <p>Este guia explica como gerar o executável do nosso projeto e detalha os principais desafios de configuração que encontramos, servindo como um manual de consulta para futuras manutenções.</p>
 <hr />
+<h2 id="configuracao-do-ambiente-de-desenvolvimento">Configuração do Ambiente de Desenvolvimento</h2>
+<p>Para executar o projeto localmente em modo desenvolvimento, siga os passos abaixo.</p>
+<p><strong>1.</strong> Clone o repositório e entre no diretório da aplicação:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>.<span class="se">\m</span>y-app<span class="se">\</span>
+</code></pre></div>
+<p><strong>2.</strong> Instale as dependências:</p>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install
+</code></pre></div>
+<p><strong>3.</strong> Execute o projeto em modo desenvolvimento:</p>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>start
+</code></pre></div>
+<blockquote>
+<p>Não é necessário configurar variáveis de ambiente para este projeto.</p>
+</blockquote>
+<hr />
 <h2 id="geracao-do-executavel">Geração do Executável</h2>
 <p>A geração do executável acontece de duas maneiras:</p>
-<ol>
-<li>Execução manual do comando:</li>
-</ol>
+<h3 id="geracao-manual">Geração Manual</h3>
+<p><strong>1.</strong> Execute o comando:</p>
 <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>run<span class="w"> </span>make:win
 </code></pre></div>
 <p>Essa facilidade no processo de gerar o executável acontece graças ao Electron Forge, que cuida do empacotamento e da otimização do executável, evitando um aplicativo final desnecessariamente pesado. Ao mesmo tempo, o conjunto de tecnologias e dependências utilizados pode gerar uma complexidade de configuração do projeto para que tudo funcione harmonicamente, que será o assunto do próximo tópico.</p>
-<ol>
-<li>Execução automática via GitHub Actions:</li>
-</ol>
+<p><strong>2.</strong> Após finalizado o processo, abra a pasta gerada, entre no diretório <code>Make</code> e navegue até o diretório <code>x64</code>.</p>
+<p><strong>3.</strong> Execute o arquivo <code>Setup.exe</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Aviso do Windows</p>
+<p>O Windows pode alertar que o arquivo é desconhecido ou "perigoso". Isso ocorre porque o executável não possui assinatura de código comercial — a execução não oferece risco algum.</p>
+</div>
+<p><strong>4.</strong> Aguarde a finalização da instalação. O aplicativo estará pronto para uso.</p>
+<h3 id="geracao-automatica-via-github-actions">Geração Automática via GitHub Actions</h3>
 <p>Sempre que um Pull Request é aprovado e incorporado à branch de release, o pipeline de integração contínua executa o processo de build e empacotamento da aplicação, gerando automaticamente um novo executável.</p>
 <p>Dessa forma, não é necessário gerar o executável manualmente para cada alteração aceita na release. O comando manual deve ser utilizado apenas em casos de teste local, validação antes do PR ou situações em que seja necessário reproduzir o processo de empacotamento fora do pipeline.</p>
 <hr />
@@ -2612,7 +2709,7 @@
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2 de junho de 2026 23:28:05 UTC">2 de junho de 2026 23:28:05</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="3 de junho de 2026 01:34:17 UTC">3 de junho de 2026 01:34:17</span>
   </span>
 
     
