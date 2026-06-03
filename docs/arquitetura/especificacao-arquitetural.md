@@ -5,12 +5,14 @@
 | Versão | Data | Descrição | Autor |
 | :---: | :---: | :---: | :---: |
 | 1.0 | 11/11/2025 | Adicionando Primeira versão do documento  | Pedro Nicoletti Sotoma |
+| 2.0 | 01/06/2026 | Atualização com base no working directory (branch develop): novos módulos de domínio (Apuração, DRE, Balanço Patrimonial), reorganização da pasta de testes E2E para `playwright/`, decomposição da camada de banco de dados, ajuste de CORS | Claude (revisão técnica automatizada) |
 
 **Histórico de Revisões** 
 
 | Versão | Data | Revisor | Observação |
 | :---: | :---: | :---: | ----- |
 | 1.0 | 25/11/2025 | Fernanda Pessoa | Aprovada |
+| 2.0 | — | — | Pendente de revisão |
 
 **Sumário**
 
@@ -42,6 +44,8 @@
 
 [3.5. Diagramas suplementares – Diagrama de Implantação	6](#diagramas-suplementares-–-diagrama-de-implantação)
 
+[4\. Infraestrutura de CI/CD	7](#infraestrutura-de-cicd)
+
 ## Introdução 
 Este documento tem como objetivo descrever a arquitetura do Sistema COIN'S, seguindo o modelo de visualização arquitetural de software C4[^1]. 
 
@@ -50,34 +54,31 @@ O C4 é o padrão ideal para representar a arquitetura porque equilibra clareza,
 Mesmo em um contexto de software desktop monolítico e offline, com escopo inicial pequeno, o uso do modelo C4 faz sentido por promover clareza estrutural desde o início do projeto, facilitando a evolução futura da aplicação — seja para modularização, integração online ou expansão arquitetural. Além disso, o C4 permite documentar decisões arquiteturais de forma leve e acessível, garantindo que o conhecimento do sistema não se perca com o tempo e possa ser facilmente comunicado a novos desenvolvedores ou stakeholders.
 
 ## Escopo 
-Este documento auxilia os envolvidos no projeto a compreender os aspectos arquiteturais do sistema que são  necessários para desenvolver uma solução que atenda as necessidades do proponente. Além de auxiliar equipes futuras no entendimento do projeto.
+Este documento auxilia os envolvidos no projeto a compreender os aspectos arquiteturais do sistema que são necessários para desenvolver uma solução que atenda as necessidades do proponente. Além de auxiliar equipes futuras no entendimento do projeto.
 
 ### Restrições do sistema 
 As principais restrições e decisões arquiteturais do **Sistema COIN'S** são as seguintes:
 
 ### Framework e Plataforma
-
-**Electron + Electron Forge:** A escolha do *Electron* foi feita para permitir o desenvolvimento de uma aplicação **desktop multiplataforma**, mantendo o mesmo código base em Windows, Linux e macOS.
-
+**Electron \+ Electron Forge**: A escolha do *Electron* foi feita para permitir o desenvolvimento de uma aplicação **desktop multiplataforma**, mantendo o mesmo código base em Windows, Linux e macOS.  
 O *Electron Forge* foi adotado para facilitar o empacotamento, distribuição e atualização do aplicativo, garantindo consistência no ciclo de build e distribuição offline.
 
-### Frontend
+### Frontend: Vue 3 com TypeScript
+Escolhido por sua **produtividade**, **reatividade nativa** e **integração simples com Electron**. O uso de TypeScript aumenta a confiabilidade do código e facilita a manutenção e refatoração futura.
 
-**Vue 3 com TypeScript.** Escolhido por sua **produtividade**, **reatividade nativa** e **integração simples com Electron**. O uso de TypeScript aumenta a confiabilidade do código e facilita a manutenção e refatoração futura.
-
-### Backend
-
-**Express.js com TypeScript.** Utilizado como camada de backend local dentro do mesmo processo do Electron, responsável por expor endpoints REST internos e centralizar a lógica de negócio.  
+### Backend: Express.js com TypeScript
+Utilizado como camada de backend local dentro do mesmo processo do Electron, responsável por expor endpoints REST internos e centralizar a lógica de negócio.  
 Essa escolha mantém a **separação lógica entre frontend e backend**, ainda que no mesmo container, o que facilita futura migração para um modelo cliente-servidor se o sistema vier a evoluir para ambiente online.
 
-### Banco de Dados
+> **Nota (v2.0):** O middleware de CORS foi alterado para aceitar qualquer origem (`*`), sem restrição por ambiente. Essa decisão foi motivada pela necessidade de suportar os testes E2E com Playwright, que sobem a aplicação em modo headless e precisam fazer requisições ao servidor Express local independente do contexto de execução.
 
-**SQLite3.** O banco de dados local foi escolhido por ser **leve, embarcado e adequado ao uso offline**. Ele não requer servidor dedicado, reduzindo complexidade e facilitando a instalação.
+### Banco de Dados: SQLite3
+O banco de dados local foi escolhido por ser **leve, embarcado e adequado ao uso offline**. Ele não requer servidor dedicado, reduzindo complexidade e facilitando a instalação.
 
 * **Knex.js**: Biblioteca de query builder que provê **abstração de acesso ao banco**, portabilidade e migrações estruturadas, além de facilitar a manutenção do esquema de dados.
 
 ### Padrão Arquitetural
-O sistema é formado por uma arquitetura monolítica modularizada em camadas. Essa decisão foi tomada considerando o contexto de um software offline desktop, visando a facilidade de integração entre banco/backend/frontend. O diretório "main" fica responsável por encapsular a lógica e as camadas do backend enquanto o diretório "renderer" fica responsável pelo frontend.
+O sistema é formado por uma arquitetura monolítica modularizada em camadas. Essa decisão foi tomada considerando o contexto de um software offline desktop, visando a facilidade de integração entre banco/backend/frontend. O diretório `main` fica responsável por encapsular a lógica e as camadas do backend enquanto o diretório `renderer` fica responsável pelo frontend.
 
 Para uma definição mais técnica da responsabilidade de cada camada, visualizar o documento de Visão de Implementação: [https://docs.google.com/document/d/1O2Qf1cnLYiqCjFxQCzfQZ4MwuyMp6zRecco6XBTN5NA/edit?tab=t.0](https://docs.google.com/document/d/1O2Qf1cnLYiqCjFxQCzfQZ4MwuyMp6zRecco6XBTN5NA/edit?tab=t.0) 
 
@@ -90,7 +91,7 @@ O modelo C4 considera as estruturas estáticas de um sistema de software em term
 O diagrama de contexto do sistema mostra o **Sistema COIN'S** e como ele se encaixa no mundo em termos das pessoas que o utilizam e dos outros sistemas de software com os quais ele interage.
 
 **Link do diagrama (alta resolução / online):**  
- [https://app.diagrams.net/\#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc\#%7B"pageId"%3A"zNMGI6wU0Mi8Qe2H5Q59"%7D](https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"zNMGI6wU0Mi8Qe2H5Q59"%7D) 
+[https://app.diagrams.net/\#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc\#%7B"pageId"%3A"zNMGI6wU0Mi8Qe2H5Q59"%7D](https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"zNMGI6wU0Mi8Qe2H5Q59"%7D) 
 
 O diagrama evidencia:
 
@@ -98,8 +99,7 @@ O diagrama evidencia:
 * A ausência de dependências externas (sistema **offline**).  
 * O escopo restrito ao ambiente local da máquina do usuário.
 
-
-  2. ### Nível 2 – Diagrama de Container {#nível-2-–-diagrama-de-container}
+### Nível 2 – Diagrama de Container
 O diagrama de container detalha a estrutura interna do sistema, evidenciando os **principais containers** que o compõem:
 
 * **Frontend (Vue \+ Electron Renderer)**: responsável pela interface gráfica e interação com o usuário.  
@@ -108,7 +108,7 @@ O diagrama de container detalha a estrutura interna do sistema, evidenciando os 
 * **Camada de Acesso a Dados (Knex)**: abstrai as operações SQL e garante consistência.
 
 **Link do diagrama (alta resolução / online):**  
- [https://app.diagrams.net/\#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc\#%7B"pageId"%3A"7UhaJ9ljh7ebol46HkWr"%7D](https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"7UhaJ9ljh7ebol46HkWr"%7D) 
+[https://app.diagrams.net/\#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc\#%7B"pageId"%3A"7UhaJ9ljh7ebol46HkWr"%7D](https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"7UhaJ9ljh7ebol46HkWr"%7D) 
 
 ### Nível 3 – Diagrama de Componentes 
 O diagrama de componentes amplia o container principal (aplicação desktop) e mostra os **componentes internos** que compõem a aplicação.
@@ -120,8 +120,13 @@ Entre os principais componentes:
 * **Camada de API Interna (Express Controllers)**: expõe endpoints locais.  
 * **Camada de Persistência (Repositories e Models)**: implementa acesso ao banco via Knex.
 
+
+> **Nota (v2.0 — Testes E2E):**
+>
+> A pasta de testes E2E foi renomeada de `e2e/` para `playwright/`, mantendo a mesma estrutura interna. A categoria `regression/` foi renomeada para `acceptance/`. Foram adicionados page objects para os novos módulos (`Apuracao.ts`, `Dre.ts`) e novos spec files de ponta a ponta (`apuracao-workflow.spec.ts`, `dre-workflow.spec.ts`).
+
 **Link do diagrama (alta resolução / online):**  
- [https://app.diagrams.net/\#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc\#%7B"pageId"%3A"2XVK7RYDKxdhMDquu4st"%7D](https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"2XVK7RYDKxdhMDquu4st"%7D) 
+[https://app.diagrams.net/\#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc\#%7B"pageId"%3A"2XVK7RYDKxdhMDquu4st"%7D](https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"2XVK7RYDKxdhMDquu4st"%7D) 
 
 ### Nível 4 – Código 
 Neste nível, podem ser representados diagramas de classes ou entidades para os componentes mais importantes.
@@ -130,14 +135,39 @@ No caso do Sistema COIN'S, recomenda-se a elaboração de um Diagrama de Entidad
 
 **Link para documentação do DER:** [https://docs.google.com/document/d/1NIrxoi\_JZqYGeUrJK2uUcePTO2prriPYV1HKR5y8Hxo/edit?tab=t.0](https://docs.google.com/document/d/1NIrxoi_JZqYGeUrJK2uUcePTO2prriPYV1HKR5y8Hxo/edit?tab=t.0)  
 
+> **Nota (v2.0):** O DER existente foi elaborado com base no modelo planejado da v1.2, que diverge do schema implementado. Ver Documentação do Modelo de Dados v2.0 para o schema atual.
+
 ### Diagramas suplementares – Diagrama de Implantação 
 Por se tratar de um sistema monolítico offline, não é necessário um diagrama de implantação detalhado.  
- O sistema é distribuído como um executável único via Electron Forge, contendo em si:
+O sistema é distribuído como um executável único via Electron Forge, contendo em si:
 
 * A camada de frontend (Vue \+ Electron Renderer);  
 * A camada de backend (Express embarcado);  
 * O banco de dados SQLite3 (armazenado localmente no diretório da aplicação).
 
 Toda a execução ocorre **no ambiente local do usuário**, sem dependência de servidores externos ou infraestrutura de rede.
+
+> **Nota (v2.0):** No ambiente de CI, a aplicação é empacotada como um executável real antes da execução dos testes E2E. O Playwright inicia o binário gerado pelo Electron Forge e interage com ele via automação de interface gráfica. Isso garante que os testes validam o artefato de distribuição final, não apenas o ambiente de desenvolvimento.
+
+## Infraestrutura de CI/CD
+
+> **Seção adicionada na v2.0**
+
+O projeto passou a contar com pipelines de integração e entrega contínua (CI/CD) hospedadas no **GitHub Actions**, divididas em quatro workflows:
+
+| Workflow | Arquivo | Responsabilidade |
+| :--- | :--- | :--- |
+| CI (Unitários) | `ci.yml` | Executa os testes unitários do backend a cada push/PR |
+| CI (E2E) | `ci-e2e.yml` | Compila a aplicação Electron e executa os testes Playwright |
+| Build Windows | `build-windows.yml` | Gera o instalador `.exe` para distribuição |
+| Release | `release.yml` | Publica a release no GitHub com o artefato gerado |
+
+Essa infraestrutura introduz uma camada de controle de qualidade automatizada ao projeto. A pirâmide de testes do sistema é:
+
+1. **Testes Unitários** (`main/tests/`) — validam lógica de negócio isolada, executados via Vitest.
+2. **Testes de Integração E2E** (`playwright/specs/integration/`) — validam respostas da API REST do backend Express.
+3. **Testes Funcionais E2E** (`playwright/specs/functional/`) — validam fluxos de UI por módulo via Playwright.
+4. **Testes E2E ponta-a-ponta** (`playwright/specs/e2e/`) — validam fluxos contábeis completos (ex: criação de lançamento → apuração → DRE).
+5. **Testes de Aceitação** (`playwright/specs/acceptance/`) — validam regras de negócio e integridade de dados (ex: validações do plano de contas, lançamentos).
 
 [^1]: 
