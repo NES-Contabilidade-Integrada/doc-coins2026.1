@@ -75,7 +75,7 @@ A tabela a seguir apresenta todos os itens planejados no escopo final do projeto
 _Tabela 1 - Status de implementação dos itens do escopo._
 
 O MVP do projeto, junto às funcionalidades planejadas, foram definidos no Plano do Projeto.  
-Link do Plano do Projeto: `<inserir link>`
+Link do Plano do Projeto: [https://nes-contabilidade-integrada.github.io/doc-coins2026.1/gerencia-projeto/plano-do-projeto/](https://nes-contabilidade-integrada.github.io/doc-coins2026.1/gerencia-projeto/plano-do-projeto/)
 
 ---
 
