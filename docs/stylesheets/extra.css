@@ -82,19 +82,17 @@
 }
 
 /* Coin spin on hover */
-.logo-coin {
-  display: block;
-  transform-style: preserve-3d;
-  perspective: 200px;
+.md-header__button.md-logo:hover {
+  opacity: 1;
 }
 
-.logo-coin:hover {
+.md-header__button.md-logo:hover .logo-coin {
   animation: coin-spin 1.2s linear infinite;
 }
 
 @keyframes coin-spin {
-  0%   { transform: rotateY(0deg); }
-  100% { transform: rotateY(360deg); }
+  0%   { transform: perspective(200px) rotateY(0deg); }
+  100% { transform: perspective(200px) rotateY(360deg); }
 }
 
 /* Logo NES FACOM inline com o copyright no rodapé */
