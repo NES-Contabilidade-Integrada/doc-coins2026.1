@@ -27,7 +27,7 @@ Este guia explica como gerar o executável do nosso projeto e detalha os princip
 
 ---
 
-## Configuração do Ambiente de Desenvolvimento
+## Configuração do Ambiente de Desenvolvimento {#configuracao-do-ambiente-de-desenvolvimento}
 
 Para executar o projeto localmente em modo desenvolvimento, siga os passos abaixo.
 
@@ -60,7 +60,7 @@ A geração do executável acontece de duas maneiras:
 ### Execução Manual
 
 !!! info "Pré-requisito"
-    É necessário que as dependências do projeto estejam instaladas antes da execução deste comando. Consulte a seção [Configuração do Ambiente de Desenvolvimento](#configuração-do-ambiente-de-desenvolvimento).
+    É necessário que as dependências do projeto estejam instaladas antes da execução deste comando. Consulte a seção [Configuração do Ambiente de Desenvolvimento](#configuracao-do-ambiente-de-desenvolvimento).
 
 ```bash
 npm run make:win
