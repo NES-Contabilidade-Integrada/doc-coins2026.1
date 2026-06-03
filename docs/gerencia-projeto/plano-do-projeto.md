@@ -233,13 +233,13 @@ Os incrementos planejados consistem em funcionalidades adicionais previstas para
 
 ### 9.1 Preparação do Ambiente de Desenvolvimento
 
-O COIN’S é um aplicativo desktop, executado localmente. Para executar o sistema, basta seguir o passo a passo descrito no arquivo README.md do repositório oficial:
+O COIN’S é distribuído como um **executável instalável** — o usuário final não precisa configurar nenhum ambiente. O instalador está disponível na página de [Releases do repositório](https://github.com/NES-Contabilidade-Integrada/coins2026.1/releases/latest).
 
-[https://github.com/NES-Contabilidade-Integrada/coins/blob/main/README.md](https://github.com/NES-Contabilidade-Integrada/coins/blob/main/README.md)
+Para quem precisa **gerar o executável**, o processo completo está documentado em: [Geração do Executável](https://nes-contabilidade-integrada.github.io/doc-coins2026.1/devops/geracao-executavel/)
 
-Link da geração do executável:
+Para **configurar o ambiente de desenvolvimento** — instalação de dependências, execução em modo desenvolvimento e geração do build — o passo a passo está no README do repositório de código:
 
-[https://docs.google.com/document/d/1b\_eht1n-qZuhE2UQDKL7gDRMEorrpAL0xdJHC\_dhaDc/edit?usp=drive\_link](https://docs.google.com/document/d/1b_eht1n-qZuhE2UQDKL7gDRMEorrpAL0xdJHC_dhaDc/edit?usp=drive_link)
+[https://github.com/NES-Contabilidade-Integrada/coins2026.1](https://github.com/NES-Contabilidade-Integrada/coins2026.1)
 
 
 
