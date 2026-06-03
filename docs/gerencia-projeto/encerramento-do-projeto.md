@@ -106,7 +106,7 @@ Essa métrica avalia a aderência do time ao planejamento estabelecido para cada
 
 `<Descrever o resultado e os principais fatores que causaram variações no decorrer das sprints.>`
 
-A planilha detalhada com o comparativo planejado vs. entregue encontra-se disponível no link a seguir: `<inserir link>`.
+A planilha detalhada com o comparativo planejado vs. entregue será disponibilizada ao final do projeto.
 
 ---
 
