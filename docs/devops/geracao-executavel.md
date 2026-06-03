@@ -60,7 +60,7 @@ A geração do executável acontece de duas maneiras:
 1. Execução manual do comando:
 
    !!! info "Pré-requisito"
-       Antes de gerar o executável, certifique-se de ter instalado as dependências do projeto com `npm install` (veja a seção [Configuração do Ambiente de Desenvolvimento](#configuração-do-ambiente-de-desenvolvimento)).
+       É necessário que as dependências do projeto estejam instaladas antes da execução deste comando. Consulte a seção [Configuração do Ambiente de Desenvolvimento](#configuração-do-ambiente-de-desenvolvimento).
 
    ```bash
    npm run make:win
