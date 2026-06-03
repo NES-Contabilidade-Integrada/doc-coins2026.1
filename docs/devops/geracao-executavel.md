@@ -3,17 +3,23 @@
 ## Histórico de Versões
 
 | Versão | Data | Descrição | Autor |
-| :---: | :---: | :--- | :--- |
+| :---: | :---: | :---: | :---: |
 | 1.0 | 16/10/2025 | Adicionando versão inicial do documento | Pedro Nicoletti Sotoma |
 | 2.0 | 02/06/2026 | Atualizando documento para nova versão do COIN'S | Vinicius Carneiro |
 
 ## Histórico de Revisões
 
 | Versão | Data | Revisor | Observação |
-| :---: | :---: | :--- | :--- |
+| :---: | :---: | :---: | :---: |
 | 1.0 | 25/11/2025 | Fernanda Pessoa | Aprovada |
 
----
+## Sumário
+
+- [Introdução](#introdução)
+- [Configuração do Ambiente de Desenvolvimento](#configuração-do-ambiente-de-desenvolvimento)
+- [Geração do Executável](#geração-do-executável)
+- [Problemas conhecidos e complexidades envolvidas](#problemas-conhecidos-e-complexidades-envolvidas)
+- [Conclusão](#conclusão)
 
 ## Introdução
 
@@ -51,37 +57,26 @@ npm start
 
 A geração do executável acontece de duas maneiras:
 
-### Geração Manual
+1. Execução manual do comando:
 
-!!! info "Pré-requisito"
-    Antes de gerar o executável, certifique-se de ter instalado as dependências do projeto com `npm install` (veja a seção [Configuração do Ambiente de Desenvolvimento](#configuração-do-ambiente-de-desenvolvimento)).
+   !!! info "Pré-requisito"
+       Antes de gerar o executável, certifique-se de ter instalado as dependências do projeto com `npm install` (veja a seção [Configuração do Ambiente de Desenvolvimento](#configuração-do-ambiente-de-desenvolvimento)).
 
-**1.** Execute o comando:
+   ```bash
+   npm run make:win
+   ```
 
-```bash
-npm run make:win
-```
+   Essa facilidade no processo de gerar o executável acontece graças ao Electron Forge, que cuida do empacotamento e da otimização do executável, evitando um aplicativo final desnecessariamente pesado. Ao mesmo tempo, o conjunto de tecnologias e dependências utilizados pode gerar uma complexidade de configuração do projeto para que tudo funcione harmonicamente, que será o assunto do próximo tópico.
 
-Essa facilidade no processo de gerar o executável acontece graças ao Electron Forge, que cuida do empacotamento e da otimização do executável, evitando um aplicativo final desnecessariamente pesado. Ao mesmo tempo, o conjunto de tecnologias e dependências utilizados pode gerar uma complexidade de configuração do projeto para que tudo funcione harmonicamente, que será o assunto do próximo tópico.
+2. Execução automática via GitHub Actions:
 
-**2.** Após finalizado o processo, abra a pasta gerada, entre no diretório `Make` e navegue até o diretório `x64`.
-
-**3.** Execute o arquivo `Setup.exe`.
-
-!!! warning "Aviso do Windows"
-    O Windows pode alertar que o arquivo é desconhecido ou "perigoso". Isso ocorre porque o executável não possui assinatura de código comercial — a execução não oferece risco algum.
-
-**4.** Aguarde a finalização da instalação. O aplicativo estará pronto para uso.
-
-### Geração Automática via GitHub Actions
-
-Sempre que um Pull Request é aprovado e incorporado à branch de release, o pipeline de integração contínua executa o processo de build e empacotamento da aplicação, gerando automaticamente um novo executável.
+   Sempre que um Pull Request é aprovado e incorporado à branch de release, o pipeline de integração contínua executa o processo de build e empacotamento da aplicação, gerando automaticamente um novo executável.
 
 Dessa forma, não é necessário gerar o executável manualmente para cada alteração aceita na release. O comando manual deve ser utilizado apenas em casos de teste local, validação antes do PR ou situações em que seja necessário reproduzir o processo de empacotamento fora do pipeline.
 
 ---
 
-## Problemas Conhecidos e Complexidades Envolvidas
+## Problemas conhecidos e complexidades envolvidas
 
 A integração entre TypeScript, Vue3 + Vite, Express e Knex com better-sqlite3 em um ambiente Electron introduz desafios específicos. A seguir, detalhamos os pontos de atenção nos principais arquivos de configuração.
 
