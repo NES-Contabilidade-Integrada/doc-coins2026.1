@@ -57,20 +57,20 @@ npm start
 
 A geração do executável acontece de duas maneiras:
 
-1. Execução manual do comando:
+### Execução Manual
 
-   !!! info "Pré-requisito"
-       É necessário que as dependências do projeto estejam instaladas antes da execução deste comando. Consulte a seção [Configuração do Ambiente de Desenvolvimento](#configuração-do-ambiente-de-desenvolvimento).
+!!! info "Pré-requisito"
+    É necessário que as dependências do projeto estejam instaladas antes da execução deste comando. Consulte a seção [Configuração do Ambiente de Desenvolvimento](#configuração-do-ambiente-de-desenvolvimento).
 
-   ```bash
-   npm run make:win
-   ```
+```bash
+npm run make:win
+```
 
-   Essa facilidade no processo de gerar o executável acontece graças ao Electron Forge, que cuida do empacotamento e da otimização do executável, evitando um aplicativo final desnecessariamente pesado. Ao mesmo tempo, o conjunto de tecnologias e dependências utilizados pode gerar uma complexidade de configuração do projeto para que tudo funcione harmonicamente, que será o assunto do próximo tópico.
+Essa facilidade no processo de gerar o executável acontece graças ao Electron Forge, que cuida do empacotamento e da otimização do executável, evitando um aplicativo final desnecessariamente pesado. Ao mesmo tempo, o conjunto de tecnologias e dependências utilizados pode gerar uma complexidade de configuração do projeto para que tudo funcione harmonicamente, que será o assunto do próximo tópico.
 
-2. Execução automática via GitHub Actions:
+### Execução Automática via GitHub Actions
 
-   Sempre que um Pull Request é aprovado e incorporado à branch de release, o pipeline de integração contínua executa o processo de build e empacotamento da aplicação, gerando automaticamente um novo executável.
+Sempre que um Pull Request é aprovado e incorporado à branch de release, o pipeline de integração contínua executa o processo de build e empacotamento da aplicação, gerando automaticamente um novo executável.
 
 Dessa forma, não é necessário gerar o executável manualmente para cada alteração aceita na release. O comando manual deve ser utilizado apenas em casos de teste local, validação antes do PR ou situações em que seja necessário reproduzir o processo de empacotamento fora do pipeline.
 
