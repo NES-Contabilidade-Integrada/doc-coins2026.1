@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dicionario-de-dados" class="md-skip">
+        <a href="#dicionario-de-dados-sistema-coins" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -2348,7 +2348,7 @@
   
 
 
-<h1 id="dicionario-de-dados">Dicionário de Dados</h1>
+<h1 id="dicionario-de-dados-sistema-coins">Dicionário de Dados – Sistema COIN'S</h1>
 <p><strong>Histórico de Versões</strong></p>
 <table>
 <thead>
@@ -2378,9 +2378,15 @@
 <td style="text-align: center;">Atualização do esquema: novas tabelas account_types, actors e apuracoes; renomeação de tabelas; novos campos</td>
 <td style="text-align: center;">Fernanda Pessoa</td>
 </tr>
+<tr>
+<td style="text-align: center;">2.0</td>
+<td style="text-align: center;">01/06/2026</td>
+<td style="text-align: center;">Reconciliação com as migrations reais da branch develop: documentação das tabelas implementadas, correção de nomes e campos divergentes, adição das tabelas dre_groups e dre_group_account_roots; nota sobre estado da branch main</td>
+<td style="text-align: center;">Claude (revisão técnica automatizada)</td>
+</tr>
 </tbody>
 </table>
-<p><strong>Histórico de Revisões (tamanho 14)</strong></p>
+<p><strong>Histórico de Revisões</strong></p>
 <table>
 <thead>
 <tr>
@@ -2398,16 +2404,10 @@
 <td>Aprovada</td>
 </tr>
 <tr>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td></td>
+<td style="text-align: center;">2.0</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td>Pendente de revisão</td>
 </tr>
 </tbody>
 </table>
@@ -2416,9 +2416,26 @@
 <p><a href="#estrutura-de-tabelas">2. Estrutura de Tabelas   2</a></p>
 <p><a href="#relacionamentos-entre-tabelas">3. Relacionamentos entre Tabelas  6</a></p>
 <h2 id="introdução">Introdução</h2>
-<p>O banco de dados do Sistema COIN'S (Contabilidade Integrada Simplificada) foi desenvolvido para gerenciar informações contábeis de empresas, permitindo o registro de lançamentos no Livro Diário e Livro Razão.<br />
-O modelo é composto por sete tabelas de negócio: <code>account_types</code>, <code>actors</code>, <code>chart_of_account</code>, <code>company</code>, <code>apuracoes</code>, <code>journal_entry</code> e <code>journal_entry_line</code>. Além dessas, existem tabelas de infraestrutura de migração (<code>knex_migrations</code>, <code>knex_migrations_lock</code> e <code>app_data_migrations</code>), gerenciadas pelo framework e não documentadas neste dicionário.</p>
+<p>O banco de dados do Sistema COIN'S (Contabilidade Integrada Simplificada) foi desenvolvido para gerenciar informações contábeis de empresas, permitindo o registro de lançamentos no Livro Diário e Livro Razão.</p>
+<blockquote>
+<p><strong>Nota (v2.0 — Reconciliação com as migrations reais):</strong></p>
+<p>Este documento foi atualizado com base nas migrations presentes na <strong>branch <code>develop</code></strong> (<code>my-app/main/migrations/</code>). A v1.2 descrevia 7 tabelas de negócio, mas divergia da implementação real em múltiplos pontos. A seguir, um resumo do estado atual:</p>
+<p><strong>Branch <code>main</code></strong> (4 migrations antigas, em processo de substituição pela baseline):
+Apenas <code>chart_of_account</code>, <code>company</code>, <code>journal_entry</code> e <code>journal_entry_line</code> existem.</p>
+<p><strong>Branch <code>develop</code></strong> (5 migrations novas, baseline + evoluções):
+Schema completo com <strong>9 tabelas implementadas</strong>, conforme descrito nas seções abaixo.</p>
+<p><strong>Divergências encontradas entre a v1.2 e a implementação real:</strong>
+- A tabela documentada como <code>apuracoes</code> foi implementada com o nome <strong><code>apuration</code></strong>
+- Os campos da tabela foram renomeados (ex: <code>data_apuracao</code> → <code>apuration_date</code>, <code>tipo</code> → <code>type</code>, <code>valor</code> → <code>amount</code>, <code>conta_destino_id</code> → <code>destination_account_id</code>)
+- <code>apuration.type</code> aceita os valores 1 (Lucro), 2 (Prejuízo) e <strong>3 (Nulo)</strong> — a v1.2 documentava apenas 1 e 2
+- <code>apuration.destination_account_id</code> é <strong>nullable</strong> — a v1.2 documentava como NOT NULL
+- <code>account_types</code> foi criada com <strong>8 tipos</strong> seed (a v1.2 não especificava os valores)
+- <code>actors</code> foi criada com <strong>2 atores</strong> seed (Usuário e Sistema de Apuração)
+- Duas tabelas completamente novas, <strong>não documentadas na v1.2</strong>: <code>dre_groups</code> e <code>dre_group_account_roots</code></p>
+<p>Além das tabelas de infraestrutura (<code>knex_migrations</code>, <code>knex_migrations_lock</code>, <code>app_data_migrations</code>), não há outras tabelas implementadas.</p>
+</blockquote>
 <h2 id="estrutura-de-tabelas">Estrutura de Tabelas</h2>
+<hr />
 <p>Tabela: account_types</p>
 <table>
 <thead>
@@ -2446,10 +2463,54 @@ O modelo é composto por sete tabelas de negócio: <code>account_types</code>, <
 <td style="text-align: left;">Não</td>
 <td style="text-align: left;">Único</td>
 <td style="text-align: left;">-</td>
-<td style="text-align: left;">Descrição do tipo de conta (ex: Ativo, Passivo).</td>
+<td style="text-align: left;">Descrição do tipo de conta.</td>
 </tr>
 </tbody>
 </table>
+<p>Valores pré-populados (seed):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">id</th>
+<th style="text-align: left;">descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Ativo</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Passivo</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Patrimônio Líquido</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Resultado - Receita</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Resultado - Custo e Despesa</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Apuração do Resultado do Exercício (ARE)</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Lucros Acumulados</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Prejuízos Acumulados</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <p>Tabela: actors</p>
 <table>
 <thead>
@@ -2481,6 +2542,26 @@ O modelo é composto por sete tabelas de negócio: <code>account_types</code>, <
 </tr>
 </tbody>
 </table>
+<p>Valores pré-populados (seed):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">id</th>
+<th style="text-align: left;">descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Usuário</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Sistema de Apuração</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <p>Tabela: chart_of_account</p>
 <table>
 <thead>
@@ -2564,10 +2645,11 @@ O modelo é composto por sete tabelas de negócio: <code>account_types</code>, <
 <td style="text-align: left;">Sim</td>
 <td style="text-align: left;">FK → account_types.id</td>
 <td style="text-align: left;">-</td>
-<td style="text-align: left;">Tipo de conta contábil associado.</td>
+<td style="text-align: left;">Tipo de conta contábil associado. Populado automaticamente pela migration com base na classificação hierárquica.</td>
 </tr>
 </tbody>
 </table>
+<hr />
 <p>Tabela: company</p>
 <table>
 <thead>
@@ -2623,7 +2705,11 @@ O modelo é composto por sete tabelas de negócio: <code>account_types</code>, <
 </tr>
 </tbody>
 </table>
-<p>Tabela: apuracoes</p>
+<hr />
+<p>Tabela: apuration</p>
+<blockquote>
+<p><strong>Nota (v2.0):</strong> A v1.2 documentava esta tabela com o nome <code>apuracoes</code> e campos em português. A implementação usa o nome <code>apuration</code> com campos em inglês. A tabela também passou por uma evolução posterior (migration <code>20260508000000_apuracao_nula_support</code>) que tornou <code>destination_account_id</code> nullable e ampliou <code>type</code> para aceitar o valor 3.</p>
+</blockquote>
 <table>
 <thead>
 <tr>
@@ -2653,7 +2739,7 @@ O modelo é composto por sete tabelas de negócio: <code>account_types</code>, <
 <td style="text-align: left;">Data de criação do registro.</td>
 </tr>
 <tr>
-<td style="text-align: left;">data_apuracao</td>
+<td style="text-align: left;">apuration_date</td>
 <td style="text-align: left;">DATE</td>
 <td style="text-align: left;">Não</td>
 <td style="text-align: left;">-</td>
@@ -2661,31 +2747,32 @@ O modelo é composto por sete tabelas de negócio: <code>account_types</code>, <
 <td style="text-align: left;">Data de referência da apuração.</td>
 </tr>
 <tr>
-<td style="text-align: left;">tipo</td>
+<td style="text-align: left;">type</td>
 <td style="text-align: left;">INTEGER</td>
 <td style="text-align: left;">Não</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">-</td>
-<td style="text-align: left;">Tipo da apuração: 1 ou 2.</td>
+<td style="text-align: left;">Tipo da apuração: 1 (Lucro), 2 (Prejuízo) ou 3 (Resultado Nulo).</td>
 </tr>
 <tr>
-<td style="text-align: left;">valor</td>
-<td style="text-align: left;">FLOAT</td>
+<td style="text-align: left;">amount</td>
+<td style="text-align: left;">DECIMAL(14,2)</td>
 <td style="text-align: left;">Não</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">Valor apurado.</td>
 </tr>
 <tr>
-<td style="text-align: left;">conta_destino_id</td>
+<td style="text-align: left;">destination_account_id</td>
 <td style="text-align: left;">TEXT</td>
-<td style="text-align: left;">Não</td>
+<td style="text-align: left;"><strong>Sim</strong></td>
 <td style="text-align: left;">FK → chart_of_account.id</td>
 <td style="text-align: left;">-</td>
-<td style="text-align: left;">Conta contábil de destino da apuração.</td>
+<td style="text-align: left;">Conta contábil de destino da apuração. Nullable quando <code>type = 3</code> (resultado nulo não possui conta destino).</td>
 </tr>
 </tbody>
 </table>
+<hr />
 <p>Tabela: journal_entry</p>
 <table>
 <thead>
@@ -2718,14 +2805,14 @@ O modelo é composto por sete tabelas de negócio: <code>account_types</code>, <
 <tr>
 <td style="text-align: left;">description</td>
 <td style="text-align: left;">TEXT</td>
-<td style="text-align: left;">Sim</td>
+<td style="text-align: left;"><strong>Sim</strong>*</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">Histórico ou observação do lançamento.</td>
 </tr>
 <tr>
 <td style="text-align: left;">amount</td>
-<td style="text-align: left;">FLOAT</td>
+<td style="text-align: left;">DECIMAL(14,2)</td>
 <td style="text-align: left;">Não</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">-</td>
@@ -2761,18 +2848,22 @@ O modelo é composto por sete tabelas de negócio: <code>account_types</code>, <
 <td style="text-align: left;">Não</td>
 <td style="text-align: left;">FK → actors.id</td>
 <td style="text-align: left;">-</td>
-<td style="text-align: left;">Ator responsável pelo lançamento.</td>
+<td style="text-align: left;">Ator responsável pelo lançamento. Lançamentos manuais usam actor_id = 1 (Usuário); apurações automáticas usam actor_id = 2 (Sistema de Apuração).</td>
 </tr>
 <tr>
 <td style="text-align: left;">apuration_id</td>
 <td style="text-align: left;">INTEGER</td>
 <td style="text-align: left;">Sim</td>
-<td style="text-align: left;">FK → apuracoes.id</td>
+<td style="text-align: left;">FK → apuration.id</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">Apuração associada ao lançamento, quando aplicável.</td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p><strong>*Nota (v2.0 — <code>description</code>):</strong> A coluna <code>description</code> é <strong>nullable no banco de dados</strong> (não há migration que a torne <code>NOT NULL</code>). No entanto, a camada de aplicação torna este campo <strong>obrigatório</strong>: o Service e o Controller rejeitam lançamentos sem histórico com HTTP 400. Nenhum lançamento sem <code>description</code> pode ser criado pela API.</p>
+</blockquote>
+<hr />
 <p>Tabela: journal_entry_line</p>
 <table>
 <thead>
@@ -2820,7 +2911,7 @@ O modelo é composto por sete tabelas de negócio: <code>account_types</code>, <
 </tr>
 <tr>
 <td style="text-align: left;">amount</td>
-<td style="text-align: left;">FLOAT</td>
+<td style="text-align: left;">DECIMAL(14,2)</td>
 <td style="text-align: left;">Não</td>
 <td style="text-align: left;">-</td>
 <td style="text-align: left;">-</td>
@@ -2836,6 +2927,138 @@ O modelo é composto por sete tabelas de negócio: <code>account_types</code>, <
 </tr>
 </tbody>
 </table>
+<hr />
+<p>Tabela: dre_groups <em>(adicionada na v2.0 — não documentada na v1.2)</em></p>
+<p>Esta tabela armazena os grupos da Demonstração do Resultado do Exercício (DRE), permitindo classificar contas contábeis em categorias para fins de apuração e exibição do resultado.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: left;">Nulo</th>
+<th style="text-align: left;">Chave</th>
+<th style="text-align: left;">Padrão</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">TEXT</td>
+<td style="text-align: left;">Não</td>
+<td style="text-align: left;">PK</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Identificador único do grupo (slug textual, ex: <code>gross_revenue</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;">key</td>
+<td style="text-align: left;">TEXT</td>
+<td style="text-align: left;">Não</td>
+<td style="text-align: left;">Único</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Chave funcional do grupo, usada para lookup no código.</td>
+</tr>
+<tr>
+<td style="text-align: left;">title</td>
+<td style="text-align: left;">TEXT</td>
+<td style="text-align: left;">Não</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Título legível do grupo (ex: "Receita Bruta").</td>
+</tr>
+<tr>
+<td style="text-align: left;">nature</td>
+<td style="text-align: left;">TEXT</td>
+<td style="text-align: left;">Não</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Natureza do grupo: <code>revenue</code> (receita), <code>expense</code> (despesa) ou <code>mixed</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">created_at</td>
+<td style="text-align: left;">DATETIME</td>
+<td style="text-align: left;">Sim</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">CURRENT_TIMESTAMP</td>
+<td style="text-align: left;">Data de criação do registro.</td>
+</tr>
+<tr>
+<td style="text-align: left;">updated_at</td>
+<td style="text-align: left;">DATETIME</td>
+<td style="text-align: left;">Sim</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">CURRENT_TIMESTAMP</td>
+<td style="text-align: left;">Data da última atualização.</td>
+</tr>
+</tbody>
+</table>
+<p>Grupos pré-populados (seed): <code>gross_revenue</code>, <code>revenue_deductions</code>, <code>cmv_cpv</code>, <code>operational_expenses</code>, <code>other_operational_revenue</code>, <code>other_operational_expenses</code>, <code>financial_revenue</code>, <code>financial_expenses</code>, <code>non_operational_revenue</code>, <code>non_operational_expenses</code>, <code>income_taxes</code>.</p>
+<hr />
+<p>Tabela: dre_group_account_roots <em>(adicionada na v2.0 — não documentada na v1.2)</em></p>
+<p>Tabela de associação entre grupos de DRE e as contas raiz do Plano de Contas que os compõem. Permite configurar quais contas (e seus descendentes) pertencem a cada grupo.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: left;">Nulo</th>
+<th style="text-align: left;">Chave</th>
+<th style="text-align: left;">Padrão</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">Não</td>
+<td style="text-align: left;">PK (auto-increment)</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Identificador único da associação.</td>
+</tr>
+<tr>
+<td style="text-align: left;">dre_group_id</td>
+<td style="text-align: left;">TEXT</td>
+<td style="text-align: left;">Não</td>
+<td style="text-align: left;">FK → dre_groups.id</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Grupo de DRE ao qual a conta raiz pertence.</td>
+</tr>
+<tr>
+<td style="text-align: left;">chart_of_account_id</td>
+<td style="text-align: left;">TEXT</td>
+<td style="text-align: left;">Não</td>
+<td style="text-align: left;">FK → chart_of_account.id</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Conta contábil raiz do grupo.</td>
+</tr>
+<tr>
+<td style="text-align: left;">include_descendants</td>
+<td style="text-align: left;">BOOLEAN</td>
+<td style="text-align: left;">Não</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">true</td>
+<td style="text-align: left;">Se verdadeiro, todas as contas filhas da raiz também pertencem ao grupo.</td>
+</tr>
+<tr>
+<td style="text-align: left;">created_at</td>
+<td style="text-align: left;">DATETIME</td>
+<td style="text-align: left;">Sim</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">CURRENT_TIMESTAMP</td>
+<td style="text-align: left;">Data de criação do registro.</td>
+</tr>
+<tr>
+<td style="text-align: left;">updated_at</td>
+<td style="text-align: left;">DATETIME</td>
+<td style="text-align: left;">Sim</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">CURRENT_TIMESTAMP</td>
+<td style="text-align: left;">Data da última atualização.</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h2 id="relacionamentos-entre-tabelas">Relacionamentos entre Tabelas</h2>
 <table>
 <thead>
@@ -2884,16 +3107,28 @@ O modelo é composto por sete tabelas de negócio: <code>account_types</code>, <
 <td style="text-align: left;">Um ator pode ser responsável por vários lançamentos.</td>
 </tr>
 <tr>
-<td style="text-align: left;">apuracoes.id</td>
+<td style="text-align: left;">apuration.id</td>
 <td style="text-align: left;">journal_entry.apuration_id</td>
 <td style="text-align: left;">1:N</td>
 <td style="text-align: left;">Uma apuração pode estar associada a vários lançamentos.</td>
 </tr>
 <tr>
 <td style="text-align: left;">chart_of_account.id</td>
-<td style="text-align: left;">apuracoes.conta_destino_id</td>
+<td style="text-align: left;">apuration.destination_account_id</td>
 <td style="text-align: left;">1:N</td>
-<td style="text-align: left;">Uma conta pode ser destino de várias apurações.</td>
+<td style="text-align: left;">Uma conta pode ser destino de várias apurações (quando type ≠ 3).</td>
+</tr>
+<tr>
+<td style="text-align: left;">dre_groups.id</td>
+<td style="text-align: left;">dre_group_account_roots.dre_group_id</td>
+<td style="text-align: left;">1:N</td>
+<td style="text-align: left;">Um grupo de DRE possui várias contas raiz.</td>
+</tr>
+<tr>
+<td style="text-align: left;">chart_of_account.id</td>
+<td style="text-align: left;">dre_group_account_roots.chart_of_account_id</td>
+<td style="text-align: left;">1:N</td>
+<td style="text-align: left;">Uma conta pode ser raiz em vários grupos de DRE.</td>
 </tr>
 </tbody>
 </table>
@@ -2919,7 +3154,7 @@ O modelo é composto por sete tabelas de negócio: <code>account_types</code>, <
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="26 de maio de 2026 23:39:32 UTC">26 de maio de 2026 23:39:32</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="3 de junho de 2026 01:12:49 UTC">3 de junho de 2026 01:12:49</span>
   </span>
 
     
