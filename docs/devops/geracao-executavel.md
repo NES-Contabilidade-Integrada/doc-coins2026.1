@@ -53,6 +53,9 @@ A geração do executável acontece de duas maneiras:
 
 ### Geração Manual
 
+!!! info "Pré-requisito"
+    Antes de gerar o executável, certifique-se de ter instalado as dependências do projeto com `npm install` (veja a seção [Configuração do Ambiente de Desenvolvimento](#configuração-do-ambiente-de-desenvolvimento)).
+
 **1.** Execute o comando:
 
 ```bash
