@@ -21,21 +21,58 @@ Este guia explica como gerar o executável do nosso projeto e detalha os princip
 
 ---
 
+## Configuração do Ambiente de Desenvolvimento
+
+Para executar o projeto localmente em modo desenvolvimento, siga os passos abaixo.
+
+**1.** Clone o repositório e entre no diretório da aplicação:
+
+```bash
+cd .\my-app\
+```
+
+**2.** Instale as dependências:
+
+```bash
+npm install
+```
+
+**3.** Execute o projeto em modo desenvolvimento:
+
+```bash
+npm start
+```
+
+> Não é necessário configurar variáveis de ambiente para este projeto.
+
+---
+
 ## Geração do Executável
 
 A geração do executável acontece de duas maneiras:
 
-1. Execução manual do comando:
+### Geração Manual
 
-   ```bash
-   npm run make:win
-   ```
+**1.** Execute o comando:
 
-  Essa facilidade no processo de gerar o executável acontece graças ao Electron Forge, que cuida do empacotamento e da otimização do executável, evitando um aplicativo final desnecessariamente pesado. Ao mesmo tempo, o conjunto de tecnologias e dependências utilizados pode gerar uma complexidade de configuração do projeto para que tudo funcione harmonicamente, que será o assunto do próximo tópico.
+```bash
+npm run make:win
+```
 
-2. Execução automática via GitHub Actions:
+Essa facilidade no processo de gerar o executável acontece graças ao Electron Forge, que cuida do empacotamento e da otimização do executável, evitando um aplicativo final desnecessariamente pesado. Ao mesmo tempo, o conjunto de tecnologias e dependências utilizados pode gerar uma complexidade de configuração do projeto para que tudo funcione harmonicamente, que será o assunto do próximo tópico.
 
-   Sempre que um Pull Request é aprovado e incorporado à branch de release, o pipeline de integração contínua executa o processo de build e empacotamento da aplicação, gerando automaticamente um novo executável.
+**2.** Após finalizado o processo, abra a pasta gerada, entre no diretório `Make` e navegue até o diretório `x64`.
+
+**3.** Execute o arquivo `Setup.exe`.
+
+!!! warning "Aviso do Windows"
+    O Windows pode alertar que o arquivo é desconhecido ou "perigoso". Isso ocorre porque o executável não possui assinatura de código comercial — a execução não oferece risco algum.
+
+**4.** Aguarde a finalização da instalação. O aplicativo estará pronto para uso.
+
+### Geração Automática via GitHub Actions
+
+Sempre que um Pull Request é aprovado e incorporado à branch de release, o pipeline de integração contínua executa o processo de build e empacotamento da aplicação, gerando automaticamente um novo executável.
 
 Dessa forma, não é necessário gerar o executável manualmente para cada alteração aceita na release. O comando manual deve ser utilizado apenas em casos de teste local, validação antes do PR ou situações em que seja necessário reproduzir o processo de empacotamento fora do pipeline.
 
