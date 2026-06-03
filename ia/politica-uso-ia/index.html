@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../gerencia-projeto/politica-uso-ia/">
+        <link rel="prev" href="../../qualidade-testes/plano-de-testes/">
       
       
-        <link rel="next" href="../../gerencia-projeto/plano-do-projeto/">
+        <link rel="next" href="../instrucoes-do-copilot/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Instruções do Copilot - Documentação do COIN'S</title>
+        <title>Política de Uso de IA - Documentação do COIN'S</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#instrucoes-do-copilot" class="md-skip">
+        <a href="#politica-de-uso-de-ia" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Instruções do Copilot
+              Política de Uso de IA
             
           </span>
         </div>
@@ -345,7 +345,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../gerencia-projeto/politica-uso-ia/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -389,7 +389,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../visao-geral/" class="md-tabs__link">
+        <a href="../../devops/visao-geral/" class="md-tabs__link">
           
   
   
@@ -1467,34 +1467,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../../gerencia-projeto/politica-uso-ia/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Política de Uso de IA
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1514,7 +1486,7 @@
   <span class="md-ellipsis">
     
   
-    Instruções do Copilot
+    Política de Uso de IA
   
 
     
@@ -1532,7 +1504,7 @@
   <span class="md-ellipsis">
     
   
-    Instruções do Copilot
+    Política de Uso de IA
   
 
     
@@ -1558,10 +1530,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#historico-de-versoes" class="md-nav__link">
+  <a href="#introdução" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Histórico de Versões
+        Introdução
       
     </span>
   </a>
@@ -1569,10 +1541,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#historico-de-revisoes" class="md-nav__link">
+  <a href="#princípios-gerais" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Histórico de Revisões
+        Princípios Gerais
       
     </span>
   </a>
@@ -1580,33 +1552,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#decisao-da-equipe-de-desenvolvimento" class="md-nav__link">
+  <a href="#especificação-de-demandas-e-entendimento-do-negócio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Decisão da Equipe de Desenvolvimento
+        Especificação de Demandas e Entendimento do Negócio
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#guia-de-revisao-de-pull-requests" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Guia de Revisão de Pull Requests
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Guia de Revisão de Pull Requests">
+    <nav class="md-nav" aria-label="Especificação de Demandas e Entendimento do Negócio">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-expectativas-centrais" class="md-nav__link">
+  <a href="#qualidade-da-especificação" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Expectativas Centrais
+        Qualidade da especificação
       
     </span>
   </a>
@@ -1614,10 +1575,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-backend-main" class="md-nav__link">
+  <a href="#contexto-de-negócio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Backend (main/)
+        Contexto de negócio
       
     </span>
   </a>
@@ -1625,54 +1586,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-electron-main-e-preload" class="md-nav__link">
+  <a href="#o-que-não-delegar-à-ia-sem-especificação-adequada" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Electron Main e Preload
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-frontend-renderer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Frontend (renderer/)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-testes-e-gates-de-qualidade" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Testes e Gates de Qualidade
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-seguranca-performance-e-operacoes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Segurança, Performance e Operações
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-documentacao-e-experiencia-do-desenvolvedor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. Documentação e Experiência do Desenvolvedor
+        O que não delegar à IA sem especificação adequada
       
     </span>
   </a>
@@ -1685,22 +1602,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#agente-personalizado-para-documentacao-e-commits" class="md-nav__link">
+  <a href="#revisão-humana" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Agente Personalizado para Documentação e Commits
+        Revisão Humana
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Agente Personalizado para Documentação e Commits">
+    <nav class="md-nav" aria-label="Revisão Humana">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#como-usar-o-agente" class="md-nav__link">
+  <a href="#obrigatoriedade-de-revisão" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Como Usar o Agente
+        Obrigatoriedade de revisão
       
     </span>
   </a>
@@ -1708,10 +1625,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#boas-praticas-de-documentacao" class="md-nav__link">
+  <a href="#o-que-revisar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Boas Práticas de Documentação
+        O que revisar
       
     </span>
   </a>
@@ -1719,10 +1636,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#commits-semanticos" class="md-nav__link">
+  <a href="#validação-com-o-negócio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Commits Semânticos
+        Validação com o negócio
       
     </span>
   </a>
@@ -1735,10 +1652,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#referencias-e-fundamentacao" class="md-nav__link">
+  <a href="#utilização-de-agents-e-skills-personalizados" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Referências e Fundamentação
+        Utilização de Agents e Skills Personalizados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilização de Agents e Skills Personalizados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agents-disponíveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agents disponíveis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-disponíveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills disponíveis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar-cada-recurso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando usar cada recurso
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responsabilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Responsabilidades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boas-práticas-resumidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boas Práticas Resumidas
       
     </span>
   </a>
@@ -1749,6 +1727,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instrucoes-do-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instruções do Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2023,7 +2029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../visao-geral/" class="md-nav__link">
+      <a href="../../devops/visao-geral/" class="md-nav__link">
         
   
   
@@ -2051,7 +2057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diretrizes-gerencia-configuracao/" class="md-nav__link">
+      <a href="../../devops/diretrizes-gerencia-configuracao/" class="md-nav__link">
         
   
   
@@ -2079,7 +2085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../modelo-ramificacao/" class="md-nav__link">
+      <a href="../../devops/modelo-ramificacao/" class="md-nav__link">
         
   
   
@@ -2107,7 +2113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../versionamento/" class="md-nav__link">
+      <a href="../../devops/versionamento/" class="md-nav__link">
         
   
   
@@ -2135,7 +2141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../padrao-commits/" class="md-nav__link">
+      <a href="../../devops/padrao-commits/" class="md-nav__link">
         
   
   
@@ -2163,7 +2169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fluxo/" class="md-nav__link">
+      <a href="../../devops/fluxo/" class="md-nav__link">
         
   
   
@@ -2191,7 +2197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dod/" class="md-nav__link">
+      <a href="../../devops/dod/" class="md-nav__link">
         
   
   
@@ -2219,7 +2225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infraestrutura/" class="md-nav__link">
+      <a href="../../devops/infraestrutura/" class="md-nav__link">
         
   
   
@@ -2247,7 +2253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pull-request-template/" class="md-nav__link">
+      <a href="../../devops/pull-request-template/" class="md-nav__link">
         
   
   
@@ -2275,7 +2281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../geracao-executavel/" class="md-nav__link">
+      <a href="../../devops/geracao-executavel/" class="md-nav__link">
         
   
   
@@ -2451,10 +2457,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#historico-de-versoes" class="md-nav__link">
+  <a href="#introdução" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Histórico de Versões
+        Introdução
       
     </span>
   </a>
@@ -2462,10 +2468,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#historico-de-revisoes" class="md-nav__link">
+  <a href="#princípios-gerais" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Histórico de Revisões
+        Princípios Gerais
       
     </span>
   </a>
@@ -2473,33 +2479,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#decisao-da-equipe-de-desenvolvimento" class="md-nav__link">
+  <a href="#especificação-de-demandas-e-entendimento-do-negócio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Decisão da Equipe de Desenvolvimento
+        Especificação de Demandas e Entendimento do Negócio
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#guia-de-revisao-de-pull-requests" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Guia de Revisão de Pull Requests
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Guia de Revisão de Pull Requests">
+    <nav class="md-nav" aria-label="Especificação de Demandas e Entendimento do Negócio">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-expectativas-centrais" class="md-nav__link">
+  <a href="#qualidade-da-especificação" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Expectativas Centrais
+        Qualidade da especificação
       
     </span>
   </a>
@@ -2507,10 +2502,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-backend-main" class="md-nav__link">
+  <a href="#contexto-de-negócio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Backend (main/)
+        Contexto de negócio
       
     </span>
   </a>
@@ -2518,54 +2513,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-electron-main-e-preload" class="md-nav__link">
+  <a href="#o-que-não-delegar-à-ia-sem-especificação-adequada" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Electron Main e Preload
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-frontend-renderer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Frontend (renderer/)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-testes-e-gates-de-qualidade" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Testes e Gates de Qualidade
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-seguranca-performance-e-operacoes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Segurança, Performance e Operações
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-documentacao-e-experiencia-do-desenvolvedor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. Documentação e Experiência do Desenvolvedor
+        O que não delegar à IA sem especificação adequada
       
     </span>
   </a>
@@ -2578,22 +2529,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#agente-personalizado-para-documentacao-e-commits" class="md-nav__link">
+  <a href="#revisão-humana" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Agente Personalizado para Documentação e Commits
+        Revisão Humana
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Agente Personalizado para Documentação e Commits">
+    <nav class="md-nav" aria-label="Revisão Humana">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#como-usar-o-agente" class="md-nav__link">
+  <a href="#obrigatoriedade-de-revisão" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Como Usar o Agente
+        Obrigatoriedade de revisão
       
     </span>
   </a>
@@ -2601,10 +2552,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#boas-praticas-de-documentacao" class="md-nav__link">
+  <a href="#o-que-revisar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Boas Práticas de Documentação
+        O que revisar
       
     </span>
   </a>
@@ -2612,10 +2563,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#commits-semanticos" class="md-nav__link">
+  <a href="#validação-com-o-negócio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Commits Semânticos
+        Validação com o negócio
       
     </span>
   </a>
@@ -2628,10 +2579,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#referencias-e-fundamentacao" class="md-nav__link">
+  <a href="#utilização-de-agents-e-skills-personalizados" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Referências e Fundamentação
+        Utilização de Agents e Skills Personalizados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilização de Agents e Skills Personalizados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agents-disponíveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agents disponíveis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-disponíveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills disponíveis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar-cada-recurso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando usar cada recurso
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responsabilidades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Responsabilidades
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boas-práticas-resumidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boas Práticas Resumidas
       
     </span>
   </a>
@@ -2658,125 +2670,279 @@
   
 
 
-<h1 id="instrucoes-do-copilot">Instruções do Copilot</h1>
-<h2 id="historico-de-versoes">Histórico de Versões</h2>
+<h1 id="politica-de-uso-de-ia">Política de Uso de IA</h1>
+<p><strong>Histórico de Versões</strong></p>
 <table>
 <thead>
 <tr>
 <th style="text-align: center;">Versão</th>
 <th style="text-align: center;">Data</th>
-<th style="text-align: left;">Descrição</th>
-<th style="text-align: left;">Autor</th>
+<th style="text-align: center;">Descrição</th>
+<th style="text-align: center;">Autor</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">1.0</td>
-<td style="text-align: center;">02/06/2026</td>
-<td style="text-align: left;">Criação do documento</td>
-<td style="text-align: left;">Equipe de Desenvolvimento</td>
+<td style="text-align: center;">07/05/2026</td>
+<td style="text-align: center;">Criação do documento</td>
+<td style="text-align: center;">Fernanda Pessoa</td>
 </tr>
 </tbody>
 </table>
-<h2 id="historico-de-revisoes">Histórico de Revisões</h2>
+<p><strong>Histórico de Revisões</strong></p>
 <table>
 <thead>
 <tr>
 <th style="text-align: center;">Versão</th>
 <th style="text-align: center;">Data</th>
-<th style="text-align: left;">Revisor</th>
-<th style="text-align: left;">Observação</th>
+<th style="text-align: center;">Revisor</th>
+<th>Observação</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td>Pendente</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sumário</strong></p>
+<ul>
+<li><a href="#introdução">1. Introdução</a></li>
+<li><a href="#princípios-gerais">2. Princípios Gerais</a></li>
+<li><a href="#especificação-de-demandas-e-entendimento-do-negócio">3. Especificação de Demandas e Entendimento do Negócio</a></li>
+<li><a href="#qualidade-da-especificação">3.1 Qualidade da especificação</a></li>
+<li><a href="#contexto-de-negócio">3.2 Contexto de negócio</a></li>
+<li><a href="#o-que-não-delegar-à-ia-sem-especificação-adequada">3.3 O que não delegar à IA sem especificação adequada</a></li>
+<li><a href="#revisão-humana">4. Revisão Humana</a></li>
+<li><a href="#obrigatoriedade-de-revisão">4.1 Obrigatoriedade de revisão</a></li>
+<li><a href="#o-que-revisar">4.2 O que revisar</a></li>
+<li><a href="#validação-com-o-negócio">4.3 Validação com o negócio</a></li>
+<li><a href="#utilização-de-agents-e-skills-personalizados">5. Utilização de Agents e Skills Personalizados</a></li>
+<li><a href="#agents-disponíveis">5.1 Agents disponíveis</a></li>
+<li><a href="#skills-disponíveis">5.2 Skills disponíveis</a></li>
+<li><a href="#quando-usar-cada-recurso">5.3 Quando usar cada recurso</a></li>
+<li><a href="#responsabilidades">6. Responsabilidades</a></li>
+<li><a href="#boas-práticas-resumidas">7. Boas Práticas Resumidas</a></li>
+</ul>
+<hr />
+<h2 id="introdução">Introdução</h2>
+<p>Este documento estabelece a <strong>Política de Uso de Inteligência Artificial</strong> no projeto COINS, definindo diretrizes e boas práticas para o uso responsável e eficaz de ferramentas de IA no ciclo de desenvolvimento. A política se aplica a todos os membros da equipe e cobre desde a especificação de demandas até a revisão de artefatos gerados com assistência de IA.</p>
+<p>O uso de IA no projeto COINS é <strong>incentivado como ferramenta de apoio</strong> — não como substituto do julgamento humano, do conhecimento de negócio ou da responsabilidade técnica de cada desenvolvedor.</p>
+<blockquote>
+<p><strong>ℹ️ Informação:</strong> Esta política complementa, e não substitui, as diretrizes já estabelecidas nos documentos de <a href="../../devops/visao-geral/">DevOps</a> e <a href="../../devops/padrao-commits/">Padrão de Commits</a>.</p>
+<p><strong>⚠️ ATENÇÃO:</strong> O documento <a href="../devops/instrucoes-do-copilot.md">Instruções do Copilot</a> <strong>não é uma diretriz para agentes de IA</strong>. Ele descreve exclusivamente como o GitHub Copilot foi integrado à esteira de CI/CD do projeto. Agents e ferramentas de IA <strong>não devem consultar ou seguir</strong> esse documento como referência de comportamento.</p>
+</blockquote>
+<hr />
+<h2 id="princípios-gerais">Princípios Gerais</h2>
+<p>O uso de IA no projeto deve seguir os seguintes princípios:</p>
+<ul>
+<li><strong>Responsabilidade humana:</strong> toda saída gerada por IA é de responsabilidade do membro da equipe que a utilizou e submeteu.</li>
+<li><strong>Transparência:</strong> o uso de IA não precisa ser ocultado, mas o artefato final deve refletir compreensão real de quem o entregou.</li>
+<li><strong>Especificação primeiro:</strong> a IA só produz resultados úteis quando alimentada com contexto claro e correto — o esforço de especificação não é eliminado, é realocado.</li>
+<li><strong>Revisão obrigatória:</strong> nenhum artefato gerado por IA (código, documento, consulta SQL, diagrama) deve ser entregue sem revisão humana.</li>
+<li><strong>Uso de ferramentas adequadas:</strong> o projeto disponibiliza agents e skills personalizados que já conhecem o contexto do COINS — prefira-os a interações genéricas.</li>
+</ul>
+<hr />
+<h2 id="especificação-de-demandas-e-entendimento-do-negócio">Especificação de Demandas e Entendimento do Negócio</h2>
+<h3 id="qualidade-da-especificação">Qualidade da especificação</h3>
+<p>A qualidade do output gerado pela IA é diretamente proporcional à qualidade do input fornecido. Antes de acionar qualquer ferramenta de IA para gerar código, documentação ou análise, o membro da equipe deve ser capaz de responder:</p>
+<ul>
+<li><strong>O que</strong> precisa ser feito (funcionalidade, documento, consulta)?</li>
+<li><strong>Por que</strong> isso é necessário (regra de negócio, requisito funcional, decisão de arquitetura)?</li>
+<li><strong>Quais são os limites</strong> da tarefa (critérios de aceite, restrições, exceções conhecidas)?</li>
+</ul>
+<p>Se essas perguntas não puderem ser respondidas com clareza, o problema ainda não está suficientemente entendido para ser delegado à IA.</p>
+<blockquote>
+<p><strong>⚠️ ATENÇÃO:</strong> Usar IA para descobrir o que deve ser feito é um sinal de que a demanda não foi bem levantada. Retorne ao processo de especificação antes de prosseguir.</p>
+</blockquote>
+<h3 id="contexto-de-negócio">Contexto de negócio</h3>
+<p>O COINS é um sistema contábil educacional com regras de negócio específicas (lançamentos contábeis, DRE, Balancete, Livro Diário, Plano de Contas). Ao acionar a IA para tarefas que envolvam regras contábeis, forneça sempre o contexto adequado:</p>
+<ul>
+<li>Referencie os documentos de <a href="../../requisitos/apuracao-regras/">Apuração de Regras</a> e <a href="../../requisitos/DRE-regras/">DRE e Regras</a> ao formular prompts sobre cálculos contábeis.</li>
+<li>Inclua o trecho relevante da <a href="../../requisitos/especificacao-de-requisitos-de-software/">Especificação de Requisitos</a> quando gerar código relacionado a um RF específico.</li>
+<li>Mencione restrições do domínio: contas analíticas vs. sintéticas, partidas dobradas, limites de lançamentos, etc.</li>
+</ul>
+<h3 id="o-que-não-delegar-à-ia-sem-especificação-adequada">O que não delegar à IA sem especificação adequada</h3>
+<p>As seguintes tarefas <strong>exigem especificação explícita</strong> antes de acionar qualquer ferramenta de IA:</p>
+<ul>
+<li>Geração ou alteração de migrações de banco de dados.</li>
+<li>Implementação de regras de validação contábil.</li>
+<li>Alterações em endpoints da API que afetam contratos existentes.</li>
+<li>Criação de requisitos funcionais ou critérios de aceite.</li>
+<li>Decisões de arquitetura.</li>
+</ul>
+<hr />
+<h2 id="revisão-humana">Revisão Humana</h2>
+<h3 id="obrigatoriedade-de-revisão">Obrigatoriedade de revisão</h3>
+<p><strong>Todo artefato gerado com assistência de IA deve passar por revisão humana</strong> antes de ser considerado entregue. Isso se aplica a:</p>
+<ul>
+<li>Código-fonte (qualquer linguagem ou camada).</li>
+<li>Documentação técnica (requisitos, arquitetura, decisões).</li>
+<li>Consultas SQL e migrações de banco de dados.</li>
+<li>Mensagens de commit e descrições de Pull Request.</li>
+<li>Diagramas e especificações geradas automaticamente.</li>
+</ul>
+<p>A revisão deve ser feita por <strong>quem vai assinar o artefato</strong> — não basta revisar superficialmente para aprovar o que a IA gerou.</p>
+<h3 id="o-que-revisar">O que revisar</h3>
+<p>Ao revisar um artefato gerado por IA, verifique:</p>
+<p><strong>Para código:</strong></p>
+<ul>
+<li>A lógica está correta e cobre os critérios de aceite do requisito?</li>
+<li>Há efeitos colaterais não intencionais em outros módulos?</li>
+<li>O código segue os padrões arquiteturais do projeto (controllers → services → repositories)?</li>
+<li>Não há vulnerabilidades introduzidas (SQL injection, exposição de dados, etc.)?</li>
+<li>Os testes foram atualizados ou criados?</li>
+</ul>
+<p><strong>Para documentação:</strong></p>
+<ul>
+<li>O conteúdo é factualmente correto para o domínio contábil do COINS?</li>
+<li>A terminologia é consistente com o <a href="../../requisitos/glossario-de-termos/">Glossário de Termos</a>?</li>
+<li>A formatação segue as <a href="../../.github/skills/boas-praticas-markdown.md">Boas Práticas de Markdown</a> do projeto?</li>
+<li>O documento está rastreável (links internos funcionando, seções referenciadas corretamente)?</li>
+</ul>
+<p><strong>Para SQL e migrações:</strong></p>
+<ul>
+<li>A migration tem <code>up</code> e <code>down</code> definidos?</li>
+<li>Operações destrutivas têm salvaguardas?</li>
+<li>A consulta usa parâmetros vinculados (sem interpolação de string)?</li>
+</ul>
+<h3 id="validação-com-o-negócio">Validação com o negócio</h3>
+<p>Artefatos que afetam <strong>regras de negócio contábeis</strong> devem ser validados junto ao responsável pelo domínio (product owner, professor orientador ou especialista contábil), independentemente de terem sido gerados com ou sem IA. A IA não possui conhecimento do contexto institucional do COINS e pode gerar lógicas plausíveis mas incorretas para o domínio.</p>
+<hr />
+<h2 id="utilização-de-agents-e-skills-personalizados">Utilização de Agents e Skills Personalizados</h2>
+<p>O projeto COINS disponibiliza recursos de IA <strong>já configurados com o contexto do sistema</strong>. Esses recursos devem ser preferidos a interações genéricas com modelos de linguagem, pois reduzem o esforço de contextualização e produzem outputs mais consistentes com os padrões do projeto.</p>
+<h3 id="agents-disponíveis">Agents disponíveis</h3>
+<table>
+<thead>
+<tr>
+<th>Agent</th>
+<th>Arquivo</th>
+<th>Finalidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docs-agent</code></td>
+<td><code>.github/agents/docs-agent.agent.md</code></td>
+<td>Revisão de documentação Markdown, qualidade de commits e boas práticas do projeto</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Como usar o <code>docs-agent</code>:</strong></p>
+<ul>
+<li>Para revisar a qualidade de um documento antes de abrir PR, invoque o agent com o arquivo em questão.</li>
+<li>Para verificar se uma mensagem de commit segue o padrão semântico do projeto.</li>
+<li>Para validar formatação Markdown segundo as convenções COINS.</li>
+</ul>
+<blockquote>
+<p><strong>💡 Dica:</strong> O <code>docs-agent</code> conhece as convenções do projeto (prefixos <code>CA-N.</code>, <code>EX- N.</code>, estrutura de RF, etc.) — aproveite isso ao revisar a ERS ou documentos de requisitos.</p>
+</blockquote>
+<h3 id="skills-disponíveis">Skills disponíveis</h3>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Quando usar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>boas-praticas-markdown</code></td>
+<td>Ao criar ou revisar qualquer documento <code>.md</code> na pasta <code>docs/</code></td>
+</tr>
+<tr>
+<td><code>padrao-especificacao-requisitos</code></td>
+<td>Ao criar ou editar requisitos funcionais na ERS</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Como invocar uma skill no Claude Code:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Exemplo de invocação via CLI</span>
+/boas-praticas-markdown
+/padrao-especificacao-requisitos
+</code></pre></div>
+<p>As skills são pré-carregadas com o contexto necessário e guiam o modelo para seguir os padrões estabelecidos — use-as <strong>antes</strong> de gerar conteúdo, não apenas para corrigir depois.</p>
+<h3 id="quando-usar-cada-recurso">Quando usar cada recurso</h3>
+<table>
+<thead>
+<tr>
+<th>Situação</th>
+<th>Recurso recomendado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Criar novo documento de requisito</td>
+<td>Skill <code>padrao-especificacao-requisitos</code></td>
+</tr>
+<tr>
+<td>Revisar formatação de documento existente</td>
+<td>Skill <code>boas-praticas-markdown</code></td>
+</tr>
+<tr>
+<td>Validar qualidade de commit ou PR</td>
+<td>Agent <code>docs-agent</code></td>
+</tr>
+<tr>
+<td>Gerar código de backend (controller/service/repository)</td>
+<td>Claude Code com contexto do PR e requisito associado</td>
+</tr>
+<tr>
+<td>Revisar PR antes de aprovação</td>
+<td>GitHub Copilot (integrado ao CI) + revisão humana obrigatória</td>
+</tr>
+<tr>
+<td>Criar consulta SQL complexa</td>
+<td>Claude Code + revisão obrigatória por outro membro</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="decisao-da-equipe-de-desenvolvimento">Decisão da Equipe de Desenvolvimento</h2>
-<p>A definição do uso do GitHub Copilot nas revisões de Pull Requests foi estruturada de forma colaborativa pela equipe de desenvolvimento. Durante as discussões internas, estabeleceram-se os critérios sobre como a ferramenta deve participar do processo de revisão, considerando seu papel como apoio técnico complementar. O objetivo é permitir que o Copilot auxilie na identificação de melhorias, inconsistências e oportunidades de refatoração, atuando como reforço ao processo de análise, sem substituir a avaliação humana. Essa abordagem contribui para padronizar verificações recorrentes, fortalecer a qualidade das entregas e tornar o fluxo de revisão mais eficiente.</p>
+<h2 id="responsabilidades">Responsabilidades</h2>
+<table>
+<thead>
+<tr>
+<th>Papel</th>
+<th>Responsabilidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Desenvolvedor</strong></td>
+<td>Especificar adequadamente antes de usar IA; revisar todo output gerado; assinar o artefato final com compreensão real do conteúdo</td>
+</tr>
+<tr>
+<td><strong>Revisor de PR</strong></td>
+<td>Avaliar se código ou documentação gerada por IA está correto, não apenas se parece correto; não aprovar PRs sem entender as mudanças</td>
+</tr>
+<tr>
+<td><strong>Gerente de Projeto</strong></td>
+<td>Garantir que a equipe siga esta política; atualizar o documento conforme novas ferramentas forem adotadas</td>
+</tr>
+<tr>
+<td><strong>Responsável pelo Domínio</strong></td>
+<td>Validar artefatos que afetam regras de negócio contábeis, independentemente de como foram gerados</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="guia-de-revisao-de-pull-requests">Guia de Revisão de Pull Requests</h2>
-<h3 id="1-expectativas-centrais">1. Expectativas Centrais</h3>
+<h2 id="boas-práticas-resumidas">Boas Práticas Resumidas</h2>
+<p>Antes de usar qualquer ferramenta de IA no projeto COINS, verifique:</p>
 <ul>
-<li>Revisar diffs de forma holística; sinalizar mudanças de lógica que afetam o fluxo de dados entre o processo principal do Electron, a API Express, a camada de banco de dados e o renderer Vue.</li>
-<li>Rejeitar PRs que quebrem a compilação TypeScript, linting, testes unitários Jest ou cobertura end-to-end com Playwright. Apontar testes ausentes ou desatualizados quando o comportamento muda.</li>
-<li>Garantir a higiene do repositório: mudanças em <code>package.json</code> devem incluir o arquivo de lock correspondente; migrações devem atualizar os artefatos SQL gerados quando aplicável; atualizações de documentação devem acompanhar as mudanças de funcionalidade.</li>
+<li>[ ] Você consegue explicar a demanda sem depender da IA para entendê-la?</li>
+<li>[ ] Você forneceu contexto suficiente (requisito, regra de negócio, restrições)?</li>
+<li>[ ] Está usando os agents e skills do projeto em vez de interação genérica?</li>
+<li>[ ] Você vai revisar o output antes de submeter?</li>
+<li>[ ] Se o artefato envolve regra contábil, está planejando validação com o responsável pelo domínio?</li>
+<li>[ ] O artefato final reflete sua compreensão real — e não apenas o que a IA gerou?</li>
 </ul>
-<h3 id="2-backend-main">2. Backend (<code>main/</code>)</h3>
-<ul>
-<li>Confirmar que os controllers apenas orquestram requisições e delegam para services/repositories; regras de negócio pertencem aos services, lógica SQL/Knex nos repositories.</li>
-<li>Validar queries Knex quanto ao uso de parameter binding (sem interpolação de strings), uso adequado de transações em escritas multi-etapa e alinhamento com as definições de schema de entidades em <code>main/entities/</code>.</li>
-<li>Quando migrações (<code>main/migrations/</code>) ou seeds (<code>main/seed/</code>) mudarem, garantir que repositories/services e testes correspondentes reflitam o novo schema. Verificar se novas migrações possuem passos de down e evitam operações destrutivas sem salvaguardas.</li>
-<li>Para mudanças nas rotas Express em <code>main/server.ts</code> e pastas de controllers, garantir a existência de validações (ex.: campos obrigatórios, verificações de formato UUID) e que as respostas estejam em conformidade com os Swagger docs existentes.</li>
-</ul>
-<h3 id="3-electron-main-e-preload">3. Electron Main e Preload</h3>
-<ul>
-<li>Verificar que mudanças em <code>main/main.ts</code> e <code>main/preload.ts</code> mantenham os canais IPC tipados (contratos <code>contextBridge.exposeInMainWorld</code>). Não permitir acesso direto do renderer a APIs Node além da whitelist do preload.</li>
-<li>Garantir que atualizações em <code>electron-forge</code>, Vite e scripts de build mantenham paridade entre as configs <code>.vite/</code> e <code>forge.config.ts</code>. Rejeitar PRs que quebrem targets de plataforma definidos nos scripts de <code>package.json</code>.</li>
-</ul>
-<h3 id="4-frontend-renderer">4. Frontend (<code>renderer/</code>)</h3>
-<ul>
-<li>Verificar que componentes Vue permaneçam composition-friendly: estado em <code>stores/</code>, lógica reutilizável em <code>utils/</code> ou composables, lógica de UI apenas em components.</li>
-<li>Aplicar padrões de uso do Vuetify e temas consistentes; garantir que novos componentes importem tokens compartilhados (ex.: <code>renderer/assets/</code>, <code>renderer/plugins/vuetify.ts</code>).</li>
-<li>Para atualizações do router, confirmar que rotas carregadas por lazy-loading e guards estejam alinhados com as expectativas de autenticação/autorização.</li>
-<li>Garantir que tipos compartilhados em <code>renderer/types/</code> estejam sincronizados com os DTOs do backend; sinalizar tipos duplicados ou divergentes.</li>
-</ul>
-<h3 id="5-testes-e-gates-de-qualidade">5. Testes e Gates de Qualidade</h3>
-<ul>
-<li>Exigir atualizações nos testes unitários Jest (<code>main/tests</code>, <code>renderer/tests</code>) ou specs Playwright quando o comportamento mudar. Rejeitar PRs que pulem testes ou enfraqueçam asserções.</li>
-<li>Garantir que <code>main/tests/setup.ts</code> ou outros fixtures sejam ajustados quando os schemas do banco de dados evoluírem.</li>
-<li>Sinalizar atualizações ausentes no Swagger (<code>main/swagger.ts</code>) quando contratos de API mudarem.</li>
-</ul>
-<h3 id="6-seguranca-performance-e-operacoes">6. Segurança, Performance e Operações</h3>
-<ul>
-<li>Monitorar secrets ou credenciais adicionados ao repositório; insistir no uso de variáveis de ambiente e carregamento <code>.env</code> via helpers existentes.</li>
-<li>Sinalizar operações bloqueantes em request handlers ou componentes do renderer que possam congelar a UI. Preferir trabalho assíncrono, em lote ou em stream quando possível.</li>
-<li>Garantir que logging e tratamento de erros sigam os padrões existentes; sem <code>console.log</code> em caminhos de produção.</li>
-<li>Verificar fallback gracioso para funcionalidades específicas de plataforma (instaladores Windows, builds mac/Linux) quando scripts de build ou configs mudarem.</li>
-</ul>
-<h3 id="7-documentacao-e-experiencia-do-desenvolvedor">7. Documentação e Experiência do Desenvolvedor</h3>
-<ul>
-<li>Exigir atualizações no README ou docs inline quando workflows, scripts ou etapas de ambiente mudarem.</li>
-<li>Confirmar que os docs Swagger/OpenAPI estejam precisos para novos endpoints ou mudanças de schema.</li>
-<li>Incentivar mensagens de commit descritivas e descrições de PR com evidências de teste e avaliação de risco.</li>
-</ul>
-<p>O Copilot deve bloquear a aprovação se algum problema crítico permanecer sem resolução. Sugestões são bem-vindas, mas aprovações verdes exigem confiança de que o comportamento em runtime, a integridade dos dados e as ferramentas do desenvolvedor permanecem intactos.</p>
-<hr />
-<h2 id="agente-personalizado-para-documentacao-e-commits">Agente Personalizado para Documentação e Commits</h2>
-<p>Foi criado um agente personalizado chamado <code>docs-agent</code> para auxiliar na manutenção de boas práticas de documentação e no uso de commits semânticos no projeto.</p>
-<h3 id="como-usar-o-agente">Como Usar o Agente</h3>
-<ul>
-<li>Para revisar a qualidade da documentação: invoque o agente com consultas relacionadas à documentação.</li>
-<li>Para verificar commits: o agente pode analisar mensagens de commit e sugerir correções para seguir o padrão semântico.</li>
-</ul>
-<h3 id="boas-praticas-de-documentacao">Boas Práticas de Documentação</h3>
-<p>O agente enfatiza:</p>
-<ul>
-<li>Clareza e concisão nos documentos.</li>
-<li>Formatação Markdown compatível com MkDocs.</li>
-<li>Estrutura consistente.</li>
-<li>Inclusão de diagramas e exemplos relevantes.</li>
-<li>Manutenção de links de navegação precisos.</li>
-</ul>
-<h3 id="commits-semanticos">Commits Semânticos</h3>
-<p>O agente reforça o uso do formato conventional commit:</p>
-<ul>
-<li><code>type(scope): description</code></li>
-<li>Tipos comuns: feat, fix, docs, style, refactor, test, chore</li>
-<li>Descrições em modo imperativo, curtas (até 72 caracteres).</li>
-</ul>
-<p>Para mais detalhes, consulte o arquivo <code>.github/agents/docs-agent.agent.md</code>.</p>
-<hr />
-<h2 id="referencias-e-fundamentacao">Referências e Fundamentação</h2>
-<ul>
-<li><a href="https://docs.github.com/en/copilot">Documentação Oficial do GitHub Copilot</a></li>
-</ul>
+<blockquote>
+<p><strong>ℹ️ Informação:</strong> Esta política será revisada ao início de cada semestre letivo para incorporar novas ferramentas adotadas pelo projeto e lições aprendidas pela equipe.</p>
+</blockquote>
 
 
 
@@ -2799,7 +2965,7 @@
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2 de junho de 2026 13:24:33 UTC">2 de junho de 2026 13:24:33</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="7 de maio de 2026 23:58:02 UTC">7 de maio de 2026 23:58:02</span>
   </span>
 
     
@@ -2809,7 +2975,7 @@
     <span class="md-icon" title="Criado em">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="6 de maio de 2026 01:53:17 UTC">6 de maio de 2026 01:53:17</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="7 de maio de 2026 23:58:02 UTC">7 de maio de 2026 23:58:02</span>
   </span>
 
     
