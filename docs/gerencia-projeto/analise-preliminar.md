@@ -10,6 +10,7 @@
 
 | Versão | Data | Revisor | Observação |
 | :---: | :---: | :---: | :---: |
+| 1.0 | 3 de jun. de 2026 | Elise Lissa | Aprovado |
 
 ---
 

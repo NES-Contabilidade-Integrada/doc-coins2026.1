@@ -4,8 +4,8 @@
 
 | Versão | Data | Descrição | Autor |
 | :---: | :---: | :---: | :---: |
-| 1.0 | 23/03/2026 |  | Elise Lissa Hasegawa |
-| 1.1 | 22/04/2026 |  | Elise Lissa Hasegawa |
+| 1.0 | 23/03/2026 | Adicionar equipe, funcionalidades e planejamento | Elise Lissa Hasegawa |
+| 1.1 | 22/04/2026 | Nomenclatura, atualização de links e planejamento | Elise Lissa Hasegawa |
 | 3.0 | 01/06/2026 | Atualização do cronograma e da tabela de Funcionalidades de Consolidação para registrar entrega da Exportação de Relatórios Contábeis nas Sprints 2 e 3 | Fernanda Pessoa |
 | 3.1 |  |  |  |
 
@@ -13,45 +13,45 @@
 
 | Versão | Data | Autor | Observação |
 | :---: | :---: | :---: | ----- |
-|  |  |  | Aprovada |
+| 3.1 | 3 de jun. de 2026 | Elise Lissa | Aprovado |
 
 **Sumário**
 
-[1\. Introdução	3](#introdução)
+[1\. Introdução](#introdução)
 
-[2\. Proponentes	3](#proponentes)
+[2\. Proponentes](#proponentes)
 
-[3\. Escopo do Projeto	3](#escopo-do-projeto)
+[3\. Escopo do Projeto](#escopo-do-projeto)
 
-[2.1 Funcionalidades do MVP	3](#2.1-funcionalidades-do-mvp)
+[2.1 Funcionalidades do MVP](#2.1-funcionalidades-do-mvp)
 
-[2.2 Funcionalidades Complementares ao MVP	4](#2.2-funcionalidades-complementares-ao-mvp)
+[2.2 Funcionalidades Complementares ao MVP](#2.2-funcionalidades-complementares-ao-mvp)
 
-[2.3 Funcionalidades de Consolidação	4](#2.3-funcionalidades-de-consolidação)
+[2.3 Funcionalidades de Consolidação](#2.3-funcionalidades-de-consolidação)
 
-[2.4 Incrementos para Próximas Versões	5](#2.4-incrementos-para-próximas-versões)
+[2.4 Incrementos para Próximas Versões](#2.4-incrementos-para-próximas-versões)
 
-[4\. Equipe e Infraestrutura	6](#equipe-e-infraestrutura)
+[4\. Equipe e Infraestrutura](#equipe-e-infraestrutura)
 
-[5\. Cronograma do Projeto	7](#cronograma-do-projeto)
+[5\. Cronograma do Projeto](#cronograma-do-projeto)
 
-[6\. Riscos	8](#riscos)
+[6\. Riscos](#riscos)
 
-[7\. Planejamento de Gerência de Dados	8](#planejamento-de-gerência-de-dados)
+[7\. Planejamento de Gerência de Dados](#planejamento-de-gerência-de-dados)
 
-[8\. Planejamento do Acompanhamento do Projeto	8](#planejamento-do-acompanhamento-do-projeto)
+[8\. Planejamento do Acompanhamento do Projeto](#planejamento-do-acompanhamento-do-projeto)
 
-[9\. Planejamento da Comunicação	9](#planejamento-da-comunicação)
+[9\. Planejamento da Comunicação](#planejamento-da-comunicação)
 
-[10\. Ferramentas e Tecnologias de Desenvolvimento	9](#ferramentas-e-tecnologias-de-desenvolvimento)
+[10\. Ferramentas e Tecnologias de Desenvolvimento](#ferramentas-e-tecnologias-de-desenvolvimento)
 
-[11\. Projeto de Interface e Interação	10](#projeto-de-interface-e-interação)
+[11\. Projeto de Interface e Interação](#projeto-de-interface-e-interação)
 
-[12\. Arquitetura de Software	11](#arquitetura-de-software)
+[12\. Arquitetura de Software](#arquitetura-de-software)
 
-[13\. Validação, Verificação & Teste	11](#validação,-verificação-&-teste)
+[13\. Validação, Verificação & Teste](#validação,-verificação-&-teste)
 
-[14\. Análise de Viabilidade e Comprometimento	12](#análise-de-viabilidade-e-comprometimento)
+[14\. Análise de Viabilidade e Comprometimento](#análise-de-viabilidade-e-comprometimento)
 
 ## Introdução {#introdução}
 Este documento apresenta o Plano de Projeto para o desenvolvimento do Sistema COIN'S (Contabilidade Integrada). O sistema tem como objetivo oferecer uma plataforma prática e didática para que os alunos dos primeiros semestres do curso de Ciências Contábeis da UFMS tenham um contato inicial com as práticas contábeis.  
