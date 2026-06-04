@@ -8,9 +8,6 @@
 | 2.0 | Gerência de Configuração | Amanda Gois | 10 de mar. de 2026 |
 | 3.0 | Método de Descoberta | Elise Lissa Hasegawa | 10 de mar. de 2026 |
 | 4.0 | NotebookLLM, Planning Poker, Mkdocs, Executável automático, Migração do BD, Testes, Agents e Skills | Elise Lissa Hasegawa | 2 de jun. de 2026 |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
 
 **Histórico de Revisão**
 
