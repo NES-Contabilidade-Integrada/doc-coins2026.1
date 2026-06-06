@@ -100,8 +100,8 @@ Funcionalidades implementadas em 2025/2 que não integravam o escopo do MVP, mas
 Funcionalidades implementadas em 2026.1 que encerram o ciclo contábil do sistema, tornando-o completo e autônomo:
 
 * **Apuração do Resultado do Exercício:** Calcular automaticamente o resultado do exercício com base nos dados registrados e apresentar o resultado final na interface do sistema.
-* **Geração do Balanço Patrimonial**: Elaborar o balanço patrimonial de forma automatizada a partir dos dados registrados e apresentá-lo visualmente na interface.
 * **Geração da Demonstração do Resultado do Exercício (DRE)**: Criar automaticamente o demonstrativo de resultados com base nos lançamentos contábeis e exibi-lo de forma estruturada em tela.
+* **Geração do Balanço Patrimonial**: Elaborar o balanço patrimonial de forma automatizada a partir dos dados registrados e apresentá-lo visualmente na interface.
 * **Exportação de Relatórios Contábeis**: Permitir a exportação dos demonstrativos e relatórios para formatos compatíveis (ex.: PDF, XLSX).
 
 | Módulo | Funcionalidade | Link de Acesso | Status |
