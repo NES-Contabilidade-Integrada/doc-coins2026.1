@@ -275,9 +275,6 @@ Os artefatos oficiais de teste estão distribuídos da seguinte forma:
 Documento que descreve a estratégia geral de testes, tipos aplicados, critérios de entrada/saída e abordagem adotada.
 [Plano do Projeto](https://docs.google.com/document/d/1XogaSN2T2aq22X2BNMwlFlzndOfwDwhcQEkXrJsNhKw/edit?usp=sharing)
 
-**Matriz de rastreabilidade:**
-Responsável por mapear requisitos funcionais aos casos de teste e às evidências de execução, garantindo rastreabilidade completa entre o escopo e as validações.
-
 **Casos de teste:**
 Testes E2E com Playwright.
 [Casos de teste - E2E](https://docs.google.com/document/d/1_fC4yM7P6VXOWBw06KzTC0eE3m--QW6s4Vxe3CA8QaQ/edit?usp=sharing)
