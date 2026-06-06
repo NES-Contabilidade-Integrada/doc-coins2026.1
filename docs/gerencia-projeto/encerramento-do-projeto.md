@@ -141,3 +141,7 @@ O Plano do Projeto apresenta a sequência planejada de funcionalidades que devem
 O teste de usabilidade realizado fornece insights relevantes sobre clareza da interface, fluxo de navegação e percepção dos usuários. É recomendável que futuras decisões de interface e arquitetura considerem essas evidências para aprimorar a experiência de uso e apoiar melhor os objetivos pedagógicos do sistema.
 
 Link para o relatório de usabilidade: [Relatório de Teste de Usabilidade](../ihc/relatorio-teste-usabilidade.md)
+
+#### 5.1.3. Utilizar os Agents e Skills Personalizados do Projeto
+
+Caso a equipe opte por utilizar agente de IA no desenvolvimento, o repositório de documentação conta com agents e skills personalizados para o contexto do projeto, localizados em `.github/agents/` e `.github/skills/`. Esses artefatos encapsulam convenções e padrões específicos do COIN'S — como o padrão de especificação de requisitos e as boas práticas de Markdown adotadas — e devem ser priorizados em relação a instruções genéricas do agente, garantindo consistência com o restante da documentação.
