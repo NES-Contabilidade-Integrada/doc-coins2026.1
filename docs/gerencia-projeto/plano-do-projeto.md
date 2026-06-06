@@ -7,7 +7,7 @@
 | 1.0 | 23/03/2026 |  | Elise Lissa Hasegawa |
 | 1.1 | 22/04/2026 |  | Elise Lissa Hasegawa |
 | 3.0 | 01/06/2026 | Atualização do cronograma e da tabela de Funcionalidades de Consolidação para registrar entrega da Exportação de Relatórios Contábeis nas Sprints 2 e 3 | Fernanda Pessoa |
-| 3.1 |  |  |  |
+| 3.1 | 06/06/2026 | Reversão do cronograma ao planejamento original; atualização dos sprints na tabela de Funcionalidades de Consolidação para refletir o plano inicial | Fernanda Pessoa |
 
 **Histórico de Revisão**
 
@@ -106,11 +106,11 @@ Funcionalidades implementadas em 2026.1 que encerram o ciclo contábil do sistem
 
 | Módulo | Funcionalidade | Link de Acesso | Status |
 | :---- | :---- | :---- | :---- |
-| Módulo 5 \- Apuração | Apuração do Resultado do Exercício | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/33](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/33) | Implementado - Sprint 1 |
+| Módulo 5 \- Apuração | Apuração do Resultado do Exercício | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/33](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/33) | Implementado - Sprint 2 |
 | Módulo 6 \- Demonstração do Resultado do Exercício | Geração da Demonstração do Resultado do Exercício (DRE) | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/99](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/99) | Implementado - Sprint 3 |
-| Módulo 7 \- Balanço Patrimonial | Geração do Balanço Patrimonial | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197) | Implementado - Sprint 2 |
+| Módulo 7 \- Balanço Patrimonial | Geração do Balanço Patrimonial | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197) | Implementado |
 | Módulo 6 \- Demonstração do Resultado do Exercício | Exportação de Relatórios Contábeis (DRE) | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/99](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/99) | Implementado - Sprint 3 |
-| Módulo 7 \- Balanço Patrimonial | Exportação de Relatórios Contábeis (Balanço Patrimonial) | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197) | Implementado - Sprint 2 |
+| Módulo 7 \- Balanço Patrimonial | Exportação de Relatórios Contábeis (Balanço Patrimonial) | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197) | Implementado |
 
 _Observação: inicialmente, a Exportação de Relatórios Contábeis foi planejada como uma funcionalidade independente. Durante o desenvolvimento, optou-se por acoplar a exportação diretamente ao módulo correspondente, tornando-a parte integrante de cada demonstrativo._
 
@@ -160,10 +160,10 @@ Os incrementos planejados consistem em funcionalidades adicionais previstas para
 
 | Sprint | Período | Funcionalidade |
 | :---- | :---- | :---- |
-| Sprint 0 | 02 a 26/03 | Levantamento de requisitos e resolução de bugs. |
-| Sprint 1 | 30/03 a 16/04 | Apuração do Resultado do Exercício |
-| Sprint 2 | 22/04 a 11/05 | Geração do Balanço Patrimonial, Exportação de Relatórios Contábeis (Balanço Patrimonial) |
-| Sprint 3 | 12/05 a 01/06 | Geração da Demonstração do Resultado do Exercício (DRE), Exportação de Relatórios Contábeis (DRE) |
+| Sprint 0 | 02 a 26/03 | Descoberta e levantamento de requisitos |
+| Sprint 1 | 30/03 a 16/04 | Correção de bugs e melhorias estruturais |
+| Sprint 2 | 22/04 a 11/05 | Apuração do Resultado do Exercício |
+| Sprint 3 | 12/05 a 01/06 | Demonstração do Resultado do Exercício (DRE) |
 
  
 

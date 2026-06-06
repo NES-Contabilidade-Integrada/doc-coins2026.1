@@ -5,6 +5,7 @@
 | Versão | Data | Descrição | Autor |
 | :---: | :---: | :---: | :---: |
 | 1.0 | 01/06/2026 | Versão inicial do documento | Fernanda Pessoa |
+| 1.1 | 06/06/2026 | Preenchimento da seção 3.2 com comparativo planejado vs. executado por sprint | Fernanda Pessoa |
 
 **Histórico de Revisões**
 
@@ -104,9 +105,18 @@ Essa métrica compara o total de funcionalidades planejadas no Plano do Projeto 
 
 Essa métrica avalia a aderência do time ao planejamento estabelecido para cada Sprint, considerando o que estava previsto versus o que foi efetivamente entregue dentro do ciclo.
 
-`<Descrever o resultado e os principais fatores que causaram variações no decorrer das sprints.>`
+| Sprint | Planejado | Executado |
+| ------ | --------- | --------- |
+| Sprint 0 | Descoberta e levantamento de requisitos | Descoberta, levantamento de requisitos, correção de bugs e melhorias estruturais |
+| Sprint 1 | Correção de bugs e melhorias estruturais | Apuração do Resultado do Exercício |
+| Sprint 2 | Apuração do Resultado do Exercício | Demonstração do Resultado do Exercício (DRE) + Exportação de Relatórios (DRE) |
+| Sprint 3 | Demonstração do Resultado do Exercício (DRE) | Balanço Patrimonial + Exportação de Relatórios (Balanço Patrimonial) |
 
-A planilha detalhada com o comparativo planejado vs. entregue será disponibilizada ao final do projeto.
+_Tabela 3 - Comparativo entre entrega planejada e executada por sprint._
+
+A principal variação ocorreu na Sprint 0: o time optou por absorver as correções de bugs e melhorias estruturais — originalmente previstas para a Sprint 1 — ainda naquele ciclo, antecipando a estabilização da base de código. Essa decisão deslocou todas as entregas subsequentes em uma sprint: a Apuração passou para a Sprint 1, a DRE (com exportação) para a Sprint 2, e o Balanço Patrimonial (com exportação) foi entregue na Sprint 3. O escopo total do semestre foi cumprido integralmente, sem supressão de funcionalidades.
+
+A planilha detalhada com o comparativo planejado vs. entregue está disponível no board do projeto: [GitHub Projects](https://github.com/orgs/NES-Contabilidade-Integrada/projects/9/views/1)
 
 ---
 
