@@ -56,16 +56,6 @@ nav:
   - Início: index.md
   - Uso do Sistema:
       - Exemplos de Lançamentos: uso-do-sistema/exemplos-lancamentos.md
-  - Arquitetura:
-      - Especificação Arquitetural: arquitetura/especificacao-arquitetural.md
-      - Diagramas C4: arquitetura/diagramas-c4.md
-      - Visão de Implementação: arquitetura/visao-de-implementacao.md
-      - Registro de Decisões Arquiteturais: arquitetura/adr-coins.md
-  - Requisitos:
-      - Especificação de Requisitos de Software: requisitos/especificacao-de-requisitos-de-software.md
-      - Modelo de Descoberta: requisitos/modelo-de-descoberta.md
-      - Glossário de Termos: requisitos/glossario-de-termos.md
-      - Fundamento e Estrutura de Requisitos: requisitos/fundamento-estrutura-requisitos.md
   - IHC:
       - Visão Geral: ihc/visao-geral.md
       - Identidade Visual: ihc/identidade-visual.md
@@ -73,19 +63,24 @@ nav:
       - Termo de Consentimento: ihc/termo-consentimento-usabilidade.md
       - Roteiro de Teste de Usabilidade: ihc/roteiro-teste-usabilidade.md
       - Relatório de Teste de Usabilidade: ihc/relatorio-teste-usabilidade.md
+  - Requisitos:
+      - Especificação de Requisitos de Software: requisitos/especificacao-de-requisitos-de-software.md
+      - Modelo de Descoberta: requisitos/modelo-de-descoberta.md
+      - Glossário de Termos: requisitos/glossario-de-termos.md
+      - Fundamento e Estrutura de Requisitos: requisitos/fundamento-estrutura-requisitos.md
+  - Arquitetura:
+      - Especificação Arquitetural: arquitetura/especificacao-arquitetural.md
+      - Diagramas C4: arquitetura/diagramas-c4.md
+      - Visão de Implementação: arquitetura/visao-de-implementacao.md
+      - Registro de Decisões Arquiteturais: arquitetura/adr-coins.md
   - Banco de Dados:
       - Documentação do Modelo de Dados: banco-de-dados/documentacao-modelo-dados.md
       - Dicionário de Dados: banco-de-dados/dicionario-dados.md
-  - Qualidade e Testes:
-      - Plano de Testes: qualidade-testes/plano-de-testes.md
   - IA:
       - Política de Uso de IA: ia/politica-uso-ia.md
       - Instruções do Copilot: ia/instrucoes-do-copilot.md
-  - Gerência de Projeto:
-      - Análise Preliminar: gerencia-projeto/analise-preliminar.md
-      - Plano de Projeto: gerencia-projeto/plano-do-projeto.md
-      - Encerramento do Projeto: gerencia-projeto/encerramento-do-projeto.md
-      - Template de Documento: gerencia-projeto/template-de-documento.md
+  - Qualidade e Testes:
+      - Plano de Testes: qualidade-testes/plano-de-testes.md
   - DevOps:
       - Visão Geral: devops/visao-geral.md
       - Diretrizes de Gerência de Configuração: devops/diretrizes-gerencia-configuracao.md
@@ -97,6 +92,11 @@ nav:
       - CI/CD: devops/infraestrutura.md
       - Pull Request Template: devops/pull-request-template.md
       - Geração do Executável: devops/geracao-executavel.md
+  - Gerência de Projeto:
+      - Análise Preliminar: gerencia-projeto/analise-preliminar.md
+      - Plano de Projeto: gerencia-projeto/plano-do-projeto.md
+      - Encerramento do Projeto: gerencia-projeto/encerramento-do-projeto.md
+      - Template de Documento: gerencia-projeto/template-de-documento.md
   - Decisões:
       - Diário de Decisões: decisoes/decisoes.md
       - Decisões Importadas: decisoes/diario-de-decisoes-importado.md
