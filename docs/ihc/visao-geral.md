@@ -57,7 +57,7 @@ O projeto mantém um arquivo Figma bem estruturado, com as cores padrão do sist
 
 ### Protótipo de baixa fidelidade
 
-Elaborado nas fases iniciais do projeto para validar a estrutura e a navegação das telas sem compromisso com estética. Permite iterar rapidamente sobre a disposição dos elementos e os fluxos principais antes de investir no detalhamento visual.
+Elaborado no início do projeto para validar a estrutura e a navegação das telas sem compromisso com estética. Com o amadurecimento do protótipo de alta fidelidade, o de baixa fidelidade deixou de ser utilizado: as novas telas passaram a ser projetadas diretamente no protótipo de alta fidelidade, reutilizando os componentes já consolidados.
 
 **Link:** [Protótipo de Baixa Fidelidade — Figma](https://www.figma.com/design/Z3hfLoenhr73I3u5BRU5lP/COIN-S---Contabilidade-Integrada?node-id=29-811&t=LffhAJRG1CydnNoW-1)
 
