@@ -16,17 +16,36 @@
 ## Sumário
 
 1. [Introdução](#introdução)
-2. [Figma](#figma)
-3. [Prototipação](#prototipação)
-4. [Identidade Visual](#identidade-visual)
-5. [Jornada do Usuário](#jornada-do-usuário)
-6. [Testes de Usabilidade](#testes-de-usabilidade)
+2. [Figma Make](#figma-make)
+3. [Figma](#figma)
+4. [Prototipação](#prototipação)
+5. [Identidade Visual](#identidade-visual)
+6. [Jornada do Usuário](#jornada-do-usuário)
+7. [Testes de Usabilidade](#testes-de-usabilidade)
 
 ---
 
 ## Introdução
 
 A área de Interface Humano-Computador (IHC) do projeto abrange desde a definição da identidade visual até a validação da experiência de uso por meio de testes com usuários reais. O objetivo é garantir que o sistema seja intuitivo, acessível e coerente em todas as telas, atendendo ao perfil dos estudantes de Ciências Contábeis para quem foi projetado.
+
+---
+
+## Figma Make
+
+No início do desenvolvimento das novas telas, havia uma incerteza legítima sobre quais componentes deveriam compor cada tela — quais informações exibir, como estruturar o fluxo e o que o proponente efetivamente precisaria ver. Essa dúvida era mútua: nem a equipe tinha clareza sobre o que implementar, nem o proponente conseguia especificar com precisão o que esperava encontrar.
+
+Para superar esse impasse, o **Figma Make** foi utilizado como ferramenta de exploração e prototipação rápida. Com ele, foi possível gerar telas funcionais em pouco tempo, testando diferentes arranjos de componentes e estruturas de informação sem compromisso com a identidade visual do sistema. O resultado foi especialmente útil na tela de **Apuração do Resultado** e na **DRE**, cujos fluxos e regras de negócio eram complexos o suficiente para demandar validação visual antes de qualquer implementação.
+
+As telas geradas no Figma Make serviram de ponto de partida para conversas objetivas com o proponente, que pôde reagir ao que via em vez de tentar descrever o que imaginava. Esse processo acelerou significativamente a compreensão das regras de negócio e permitiu alinhar expectativas antes mesmo de abrir o Figma.
+
+![Apuração — Resumo do Resultado no Figma Make](assets/apuracao-figma-make.png)
+
+![Apuração — Lançamentos de Encerramento no Figma Make](assets/apuracao-figma-make2.png)
+
+![Demonstrações no Figma Make](assets/demonstracoes-figma-make.png)
+
+Após essa etapa de descoberta, a migração para o protótipo no Figma tornou-se necessária: o Figma Make não oferece suporte à identidade visual do COIN'S — paleta de cores, componentes customizados e o padrão visual consolidado ao longo do projeto. O Figma, portanto, permanece como a fonte de verdade para decisões de interface.
 
 ---
 

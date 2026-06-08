@@ -45,15 +45,14 @@ O sistema foi criado para preencher uma lacuna no curso de Ciências Contábeis:
 
 A documentação reúne os principais entregáveis do projeto, organizados por área de responsabilidade:
 
-- **[Arquitetura](arquitetura/especificacao-arquitetural.md)**: visão de alto nível, especificação arquitetural, diagramas e decisões estruturais.
-- **[Requisitos](requisitos/especificacao-de-requisitos-de-software.md)**: requisitos de produto e software, regras de negócio para apuração de DRE e Balanço Patrimonial.
-- **[Banco de Dados](banco-de-dados/index.md)**: modelo de dados, dicionário e documentação do modelo lógico.
 - **[IHC](ihc/visao-geral.md)**: identidade visual, protótipos, Figma e testes de usabilidade.
-- **[Interface e Experiência](gerencia-projeto/plano-do-projeto.md#projeto-de-interface-e-interação)**: protótipos, visão de implementação e critérios de usabilidade.
-- **[Qualidade e Testes](qualidade-testes/plano-de-testes.md)**: plano de testes, critérios de aceitação e estratégias de validação.
+- **[Requisitos](requisitos/especificacao-de-requisitos-de-software.md)**: requisitos de produto e software, regras de negócio para apuração de DRE e Balanço Patrimonial.
+- **[Arquitetura](arquitetura/especificacao-arquitetural.md)**: visão de alto nível, especificação arquitetural, diagramas e decisões estruturais.
+- **[Banco de Dados](banco-de-dados/documentacao-modelo-dados.md)**: modelo de dados, dicionário e documentação do modelo lógico.
 - **[IA](ia/politica-uso-ia.md)**: política de uso de inteligência artificial e instruções do GitHub Copilot.
-- **[Gerência de Projeto](gerencia-projeto/plano-do-projeto.md)**: planejamento, cronograma, equipe e análise preliminar.
+- **[Qualidade e Testes](qualidade-testes/plano-de-testes.md)**: plano de testes, critérios de aceitação e estratégias de validação.
 - **[DevOps](devops/visao-geral.md)**: infraestrutura proposta, fluxo de trabalho e práticas de integração contínua.
+- **[Gerência de Projeto](gerencia-projeto/plano-do-projeto.md)**: planejamento, cronograma, equipe e análise preliminar.
 - **[Decisões](decisoes/decisoes.md)**: registro de decisões técnicas e de projeto que sustentam a solução.
 
 ---

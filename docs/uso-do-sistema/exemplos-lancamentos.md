@@ -12,6 +12,9 @@ Este manual apresenta três cenários de teste para o sistema: lucro, resultado 
 
 ## Exemplos de lançamentos
 
+!!! info "Três cenários disponíveis"
+    Esta seção cobre **Lucro**, **Resultado Neutro** e **Prejuízo**. Navegue pelas abas para ver os lançamentos e resultados esperados de cada caso.
+
 === "Lucro"
 
     ### Objetivo do teste
@@ -40,8 +43,7 @@ Este manual apresenta três cenários de teste para o sistema: lucro, resultado 
     | Item | Valor esperado |
     |------|---------------|
     | Total de Receitas | R$ 60.500,00 |
-    | Total de Custos e Despesas | R$ 34.500,00 |
-    | Deduções da Receita | R$ 5.000,00 |
+    | Total de Custos e Despesas | R$ 39.500,00 |
     | Resultado do Período | R$ 21.000,00 |
     | Tipo de Resultado | **Lucro** |
 
@@ -51,7 +53,7 @@ Este manual apresenta três cenários de teste para o sistema: lucro, resultado 
     |-------|----------------------|
     | Encerramento das receitas | O sistema debita as contas de receita para zerá-las e credita a conta de Apuração do Resultado do Exercício. |
     | Encerramento de custos e despesas | O sistema credita as contas de custos e despesas para zerá-las e debita a conta de Apuração do Resultado do Exercício. |
-    | Confronto da apuração | O sistema compara receitas, deduções, custos e despesas para identificar o lucro. |
+    | Confronto da apuração | O sistema compara o total de receitas e o total de custos e despesas para identificar o lucro. |
     | Transferência do resultado | Como houve lucro, o sistema debita Apuração do Resultado do Exercício e credita Lucros Acumulados. |
 
     Após clicar em **Realizar Apuração**, os lançamentos devem ser efetivados no Livro Diário. Também deve ser possível acessar o Histórico de Apurações, verificar a apuração realizada e, se necessário, desfazê-la.
