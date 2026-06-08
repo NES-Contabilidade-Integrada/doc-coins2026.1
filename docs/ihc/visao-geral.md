@@ -33,19 +33,15 @@ A área de Interface Humano-Computador (IHC) do projeto abrange desde a definiç
 
 ## Figma Make
 
-No início do desenvolvimento das novas telas, havia uma incerteza legítima sobre quais componentes deveriam compor cada tela — quais informações exibir, como estruturar o fluxo e o que o proponente efetivamente precisaria ver. Essa dúvida era mútua: nem a equipe tinha clareza sobre o que implementar, nem o proponente conseguia especificar com precisão o que esperava encontrar.
+O **Figma Make** foi utilizado como ferramenta de exploração rápida nas telas de **Apuração**, **DRE** e **Balanço Patrimonial** — telas cujos fluxos e regras de negócio eram complexos e que nem a equipe nem o proponente conseguiam especificar com clareza antes de ver algo concreto. As telas geradas serviram de ponto de partida para conversas objetivas, acelerando a validação do funcionamento esperado e o entendimento das regras de negócio.
 
-Para superar esse impasse, o **Figma Make** foi utilizado como ferramenta de exploração e prototipação rápida. Com ele, foi possível gerar telas funcionais em pouco tempo, testando diferentes arranjos de componentes e estruturas de informação sem compromisso com a identidade visual do sistema. O resultado foi especialmente útil na tela de **Apuração do Resultado** e na **DRE**, cujos fluxos e regras de negócio eram complexos o suficiente para demandar validação visual antes de qualquer implementação.
-
-As telas geradas no Figma Make serviram de ponto de partida para conversas objetivas com o proponente, que pôde reagir ao que via em vez de tentar descrever o que imaginava. Esse processo acelerou significativamente a compreensão das regras de negócio e permitiu alinhar expectativas antes mesmo de abrir o Figma.
+Após essa etapa, a migração para o Figma tornou-se necessária: o Figma Make não suporta a identidade visual do COIN'S — paleta, componentes customizados e padrão visual consolidado ao longo do projeto.
 
 ![Apuração — Resumo do Resultado no Figma Make](assets/apuracao-figma-make.png)
 
 ![Apuração — Lançamentos de Encerramento no Figma Make](assets/apuracao-figma-make2.png)
 
 ![Demonstrações no Figma Make](assets/demonstracoes-figma-make.png)
-
-Após essa etapa de descoberta, a migração para o protótipo no Figma tornou-se necessária: o Figma Make não oferece suporte à identidade visual do COIN'S — paleta de cores, componentes customizados e o padrão visual consolidado ao longo do projeto. O Figma, portanto, permanece como a fonte de verdade para decisões de interface.
 
 ---
 
