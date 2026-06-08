@@ -16,9 +16,9 @@
 ## Sumário
 
 1. [Introdução](#introdução)
-2. [Figma Make](#figma-make)
-3. [Figma](#figma)
-4. [Prototipação](#prototipação)
+2. [Figma](#figma)
+3. [Prototipação](#prototipação)
+4. [Figma Make](#figma-make)
 5. [Identidade Visual](#identidade-visual)
 6. [Jornada do Usuário](#jornada-do-usuário)
 7. [Testes de Usabilidade](#testes-de-usabilidade)
@@ -28,20 +28,6 @@
 ## Introdução
 
 A área de Interface Humano-Computador (IHC) do projeto abrange desde a definição da identidade visual até a validação da experiência de uso por meio de testes com usuários reais. O objetivo é garantir que o sistema seja intuitivo, acessível e coerente em todas as telas, atendendo ao perfil dos estudantes de Ciências Contábeis para quem foi projetado.
-
----
-
-## Figma Make
-
-O **Figma Make** foi utilizado como ferramenta de exploração rápida nas telas de **Apuração**, **DRE** e **Balanço Patrimonial** — telas cujos fluxos e regras de negócio eram complexos e que nem a equipe nem o proponente conseguiam especificar com clareza antes de ver algo concreto. As telas geradas serviram de ponto de partida para conversas objetivas, acelerando a validação do funcionamento esperado e o entendimento das regras de negócio.
-
-Após essa etapa, a migração para o Figma tornou-se necessária: o Figma Make não suporta a identidade visual do COIN'S — paleta, componentes customizados e padrão visual consolidado ao longo do projeto.
-
-![Apuração — Resumo do Resultado no Figma Make](assets/apuracao-figma-make.png)
-
-![Apuração — Lançamentos de Encerramento no Figma Make](assets/apuracao-figma-make2.png)
-
-![Demonstrações no Figma Make](assets/demonstracoes-figma-make.png)
 
 ---
 
@@ -66,6 +52,20 @@ Elaborado no início do projeto para validar a estrutura e a navegação das tel
 Desenvolvido no Figma, representa fielmente a interface final do sistema — com paleta de cores, tipografia, ícones e comportamento dos componentes. O protótipo de alta fidelidade contempla os principais fluxos do sistema, como o registro de lançamentos, a apuração do resultado e a geração de demonstrativos contábeis.
 
 **Link:** [Protótipo de Alta Fidelidade — Figma](https://www.figma.com/design/Z3hfLoenhr73I3u5BRU5lP/COIN-S---Contabilidade-Integrada?node-id=199-2979&t=LffhAJRG1CydnNoW-1)
+
+---
+
+## Figma Make
+
+O **Figma Make** foi utilizado como ferramenta de exploração rápida nas telas de **Apuração**, **DRE** e **Balanço Patrimonial** — telas cujos fluxos e regras de negócio eram complexos e que nem a equipe nem o proponente conseguiam especificar com clareza antes de ver algo concreto. As telas geradas serviram de ponto de partida para conversas objetivas, acelerando a validação do funcionamento esperado e o entendimento das regras de negócio.
+
+Após essa etapa, a migração para o Figma tornou-se necessária: o Figma Make não suporta a identidade visual do COIN'S — paleta, componentes customizados e padrão visual consolidado ao longo do projeto.
+
+![Apuração — Resumo do Resultado no Figma Make](assets/apuracao-figma-make.png)
+
+![Apuração — Lançamentos de Encerramento no Figma Make](assets/apuracao-figma-make2.png)
+
+![Demonstrações no Figma Make](assets/demonstracoes-figma-make.png)
 
 ---
 
