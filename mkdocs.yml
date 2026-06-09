@@ -82,8 +82,7 @@ nav:
       - Instruções do Copilot: ia/instrucoes-do-copilot.md
   - Qualidade e Testes:
       - Plano de Teste: qualidade-testes/plano-de-teste.md
-      - Casos de Teste Funcionais: qualidade-testes/casos-de-teste-funcionais.md
-      - Relatório de Testes: qualidade-testes/relatorio-de-testes.md
+      - Casos de Teste: qualidade-testes/casos-de-teste-funcionais.md
   - DevOps:
       - Visão Geral: devops/visao-geral.md
       - Diretrizes de Gerência de Configuração: devops/diretrizes-gerencia-configuracao.md

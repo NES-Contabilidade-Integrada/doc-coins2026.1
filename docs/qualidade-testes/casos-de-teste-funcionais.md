@@ -1,4 +1,4 @@
-# Casos de Teste Funcionais — NES Coins 2026.1
+# Casos de Teste — NES Coins 2026.1
 
 ## Histórico de Versões
 
@@ -16,33 +16,33 @@
 
 ## Sumário
 
-[1. Convenções](#convenções)
+[1. Introdução](#introdução)
 
-[2. Menu de Navegação](#menu-de-navegação)
+[2. Convenções](#convenções)
 
-[3. Empresa](#empresa)
+[3. Menu de Navegação](#menu-de-navegação)
 
-[4. Plano de Contas](#plano-de-contas)
+[4. Empresa](#empresa)
 
-[5. Diário Geral](#diário-geral)
+[5. Plano de Contas](#plano-de-contas)
 
-[6. Razão Geral](#razão-geral)
+[6. Diário Geral](#diário-geral)
 
-[7. Balancete de Verificação](#balancete-de-verificação)
+[7. Razão Geral](#razão-geral)
 
-[8. Balanço Patrimonial](#balanço-patrimonial)
+[8. Balancete de Verificação](#balancete-de-verificação)
 
-[9. DRE — Demonstração do Resultado](#dre--demonstração-do-resultado)
+[9. Balanço Patrimonial](#balanço-patrimonial)
 
-[10. Apuração de Resultado](#apuração-de-resultado)
+[10. DRE — Demonstração do Resultado](#dre--demonstração-do-resultado)
 
-[11. Testes de Aceitação](#testes-de-aceitação)
+[11. Apuração de Resultado](#apuração-de-resultado)
 
 [12. Testes E2E — Fluxos Completos](#testes-e2e--fluxos-completos)
 
-[13. Testes de Integração — Erros de API](#testes-de-integração--erros-de-api)
+## Introdução {#introdução}
 
-[14. Resumo Geral](#resumo-geral)
+Este documento reúne os casos de teste funcionais e E2E do sistema NES Coins 2026.1. Cobrem o comportamento esperado da interface nos nove módulos da aplicação, bem como os fluxos de negócio completos de ponta a ponta. Casos de teste unitários, de integração e de sistema são tratados separadamente.
 
 ## Convenções {#convenções}
 
@@ -55,13 +55,11 @@
 ### Tipo
 
 - **Funcional:** verifica comportamento esperado da interface e dados.
-- **Aceitação:** valida regra de negócio contábil.
 - **E2E:** simula fluxo completo do usuário real.
-- **Integração:** verifica comportamento da UI diante de erros de API.
 
 ### Status
 
-- **Automatizado:** caso coberto por teste Playwright ou Jest.
+- **Automatizado:** caso coberto por teste Playwright.
 - **Manual:** caso sem automação.
 
 ## Menu de Navegação {#menu-de-navegação}
@@ -424,35 +422,6 @@
 | Resultado Esperado | Módulo exibe "Não há valores a serem apurados" |
 | Critério de Aprovação | `emptyState` contém texto esperado em até 20s |
 
-## Testes de Aceitação {#testes-de-aceitação}
-
-### Plano de Contas — Integridade
-
-**Arquivo:** `playwright/specs/acceptance/chart-of-accounts/account-integrity.spec.ts`
-
-| ID | Título | Prioridade | Tipo | Status |
-| :---: | :--- | :---: | :--- | :---: |
-| ACC-COA-01 | Contas do plano atendem às regras de integridade referencial | Alta | Aceitação | Automatizado |
-| ACC-COA-02 | Estrutura hierárquica do plano de contas é válida | Alta | Aceitação | Automatizado |
-
-### Diário Geral — Validações de Lançamento
-
-**Arquivo:** `playwright/specs/acceptance/general-journal/journal-entry-validations.spec.ts`
-
-| ID | Título | Prioridade | Tipo | Status |
-| :---: | :--- | :---: | :--- | :---: |
-| REG-GJ-01 | Lançamento com débito diferente de crédito é rejeitado | Alta | Aceitação | Automatizado |
-| REG-GJ-02 | Lançamento sem data é rejeitado | Alta | Aceitação | Automatizado |
-| REG-GJ-03 | Lançamento sem histórico é rejeitado | Média | Aceitação | Automatizado |
-| REG-GJ-04 | Lançamento com conta inválida é rejeitado | Alta | Aceitação | Automatizado |
-| REG-GJ-05 | Lançamento com valor zero é rejeitado | Alta | Aceitação | Automatizado |
-| REG-GJ-06 | Lançamento com valor negativo é rejeitado | Alta | Aceitação | Automatizado |
-| REG-GJ-07 | Lançamento com uma só conta (sem par D/C) é rejeitado | Alta | Aceitação | Automatizado |
-| REG-GJ-08 | Lançamento múltiplo balanceado é aceito | Alta | Aceitação | Automatizado |
-| REG-GJ-09 | Lançamento múltiplo desbalanceado é rejeitado | Alta | Aceitação | Automatizado |
-| REG-GJ-10 | Data futura em lançamento é tratada corretamente | Média | Aceitação | Automatizado |
-| REG-GJ-11 | Data inválida (formato errado) é rejeitada | Média | Aceitação | Automatizado |
-
 ## Testes E2E — Fluxos Completos {#testes-e2e--fluxos-completos}
 
 ### Fluxo Contábil Completo
@@ -483,79 +452,3 @@
 | E2E-DRE-01 | Fluxo: lançamentos de receita e despesa → DRE exibe lucro | Alta | E2E | Automatizado |
 | E2E-DRE-02 | Fluxo: lançamentos com despesa > receita → DRE exibe prejuízo | Alta | E2E | Automatizado |
 
-## Testes de Integração — Erros de API {#testes-de-integração--erros-de-api}
-
-### Apuração
-
-| ID | Título | Prioridade | Tipo | Status |
-| :---: | :--- | :---: | :--- | :---: |
-| AP-INT-01 | Erro de API na carga do módulo exibe mensagem de erro | Alta | Integração | Automatizado |
-| AP-INT-02 | Erro de API ao realizar apuração exibe feedback ao usuário | Alta | Integração | Automatizado |
-| AP-INT-03 | Erro de API ao carregar histórico exibe estado de erro | Média | Integração | Automatizado |
-| AP-INT-04 | Erro de API ao desfazer apuração exibe mensagem | Alta | Integração | Automatizado |
-
-### Balancete
-
-| ID | Título | Prioridade | Tipo | Status |
-| :---: | :--- | :---: | :--- | :---: |
-| INT-BS-01 | Erro de API na carga do Balancete exibe estado de erro | Alta | Integração | Automatizado |
-| INT-BS-02 | Erro de API com filtro aplicado exibe mensagem adequada | Média | Integração | Automatizado |
-
-### DRE
-
-| ID | Título | Prioridade | Tipo | Status |
-| :---: | :--- | :---: | :--- | :---: |
-| DRE-INT-01 | Erro de API na carga inicial da DRE exibe estado de erro | Alta | Integração | Automatizado |
-| DRE-INT-02 | Erro 500 exibe mensagem genérica de erro | Alta | Integração | Automatizado |
-| DRE-INT-03 | Erro de rede exibe feedback ao usuário | Alta | Integração | Automatizado |
-| DRE-INT-04 | Erro ao exportar CSV exibe mensagem de falha | Média | Integração | Automatizado |
-| DRE-INT-05 | Erro ao exportar PDF exibe mensagem de falha | Média | Integração | Automatizado |
-| DRE-INT-06 | Timeout de API exibe indicador de carregamento e erro | Média | Integração | Automatizado |
-| DRE-INT-07 | Erro em filtro de período exibe mensagem | Média | Integração | Automatizado |
-| DRE-INT-08 | Erro 404 exibe estado vazio com mensagem | Média | Integração | Automatizado |
-| DRE-INT-09 | Retry após erro funciona corretamente | Baixa | Integração | Automatizado |
-| DRE-INT-10 | Múltiplos erros consecutivos mantêm UI estável | Baixa | Integração | Automatizado |
-
-### Diário Geral
-
-| ID | Título | Prioridade | Tipo | Status |
-| :---: | :--- | :---: | :--- | :---: |
-| INT-GJ-01 | Erro ao salvar lançamento exibe mensagem de falha | Alta | Integração | Automatizado |
-| INT-GJ-02 | Erro ao excluir lançamento exibe mensagem de falha | Alta | Integração | Automatizado |
-| INT-GJ-03 | Erro na carga da lista de lançamentos exibe estado de erro | Alta | Integração | Automatizado |
-
-### Razão Geral
-
-| ID | Título | Prioridade | Tipo | Status |
-| :---: | :--- | :---: | :--- | :---: |
-| INT-GL-01 | Erro de API no Razão Geral exibe estado de erro | Alta | Integração | Automatizado |
-
-## Resumo Geral {#resumo-geral}
-
-| Categoria | Módulo | Casos |
-| :--- | :--- | :---: |
-| Funcional | Menu | 2 |
-| Funcional | Empresa | 1 |
-| Funcional | Plano de Contas | 8 |
-| Funcional | Diário Geral | 14 |
-| Funcional | Razão Geral | 14 |
-| Funcional | Balancete | 12 |
-| Funcional | Balanço Patrimonial | 9 |
-| Funcional | DRE | 35 |
-| Funcional | Apuração | 31 |
-| **Subtotal Funcional** | | **126** |
-| Aceitação | Plano de Contas | 2 |
-| Aceitação | Diário Geral | 11 |
-| **Subtotal Aceitação** | | **13** |
-| E2E | Fluxo Contábil | 3 |
-| E2E | Fluxo Apuração | 2 |
-| E2E | Fluxo DRE | 2 |
-| **Subtotal E2E** | | **7** |
-| Integração | Apuração | 4 |
-| Integração | Balancete | 2 |
-| Integração | DRE | 10 |
-| Integração | Diário Geral | 3 |
-| Integração | Razão Geral | 1 |
-| **Subtotal Integração** | | **20** |
-| Unitários | Todos os módulos | 300 |
-| **TOTAL GERAL** | | **466** |
