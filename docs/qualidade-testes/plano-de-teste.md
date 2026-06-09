@@ -12,7 +12,7 @@
 
 | Versão | Data | Revisor | Observação |
 | :---: | :---: | :--- | :--- |
-| 1.0 | 09/06/2026 | Eduardo Henrique | Pendente |
+| 1.0 | 09/06/2026 | Eduardo Henrique | Aprovado |
 
 ---
 
