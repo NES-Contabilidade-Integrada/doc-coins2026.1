@@ -78,6 +78,7 @@ nav:
       - Dicionário de Dados: banco-de-dados/dicionario-dados.md
   - IA:
       - Política de Uso de IA: ia/politica-uso-ia.md
+      - Workspace de Agentes: ia/workspace-agentes.md
       - Instruções do Copilot: ia/instrucoes-do-copilot.md
   - Qualidade e Testes:
       - Plano de Testes: qualidade-testes/plano-de-testes.md
