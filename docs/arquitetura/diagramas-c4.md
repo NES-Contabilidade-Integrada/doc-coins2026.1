@@ -6,16 +6,22 @@ Visualizações arquiteturais do sistema no modelo C4, contendo os níveis de Co
 
 ## Diagrama C4 - Contexto
 
-![Diagrama C4 - Contexto](assets/c4-contexto.svg)
+<p align="center">
+  <img src="assets/c4-contexto.svg" alt="Diagrama C4 - Contexto" />
+</p>
 
 ---
 
 ## Diagrama C4 - Container
 
-![Diagrama C4 - Container](assets/c4-container.svg)
+<p align="center">
+  <img src="assets/c4-container.svg" alt="Diagrama C4 - Container" />
+</p>
 
 ---
 
 ## Diagrama C4 - Componentes
 
-![Diagrama C4 - Componentes](assets/c4-componente.svg)
+<p align="center">
+  <img src="assets/c4-componente.svg" alt="Diagrama C4 - Componentes" />
+</p>
