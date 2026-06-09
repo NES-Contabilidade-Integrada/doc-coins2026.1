@@ -13,7 +13,8 @@
 
 | Versão | Data | Autor | Observação |
 | :---: | :---: | :---: | ----- |
-| 3.1 | 3 de jun. de 2026 | Elise Lissa | Aprovado |
+| 3.0 | 3 de jun. de 2026 | Elise Lissa | Aprovado |
+| 3.1 | 9 de jun. de 2026 | Elise Lissa | Aprovado |
 
 **Sumário**
 
