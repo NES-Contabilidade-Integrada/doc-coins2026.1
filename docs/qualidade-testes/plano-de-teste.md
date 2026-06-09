@@ -315,3 +315,5 @@ O ciclo de testes é aprovado quando **100% dos testes Jest e Playwright passam*
 ## Critérios de Suspensão e Retomada {#critérios-de-suspensão-e-retomada}
 
 Em caso de defeito de infraestrutura — onde os testes passam localmente mas reprovam nas GitHub Actions — é possível mergear a PR, desde que haja o veredito explícito do QA autorizando o merge nessas condições.
+
+Em caso de falha por mudança de regra de negócio — onde o comportamento do sistema foi intencionalmente alterado e o teste reflete a regra antiga — a mitigação é atualizar o teste para refletir o novo comportamento esperado antes do merge. O teste não deve ser removido nem ignorado; deve ser corrigido para validar a nova regra. Essa situação requer revisão do QA para confirmar que a mudança de expectativa está alinhada com a especificação.
