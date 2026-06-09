@@ -19,6 +19,7 @@
     ```
     main
     develop
+    release-candidate
     Subtask/**
     ```
 
@@ -32,14 +33,101 @@
     .github/workflows/ci.yml
     ```
 
-      **2. Push**
+    **2. Push**
 
     Executada automaticamente quando ocorre push direto nas branches:
 
     ```
     main
     develop
+    release-candidate
+    Subtask/**
     ```
+
+=== "Pipeline E2E"
+
+    A pipeline de testes E2E executa a suite Playwright contra o aplicativo Electron empacotado.
+
+    **Acionada nas seguintes situações:**
+
+    Pull Requests abertos ou atualizados e push direto nas branches:
+
+    ```
+    main
+    develop
+    release-candidate
+    Subtask/**
+    ```
+
+    A execução ocorre apenas quando há alterações nos seguintes caminhos:
+
+    ```
+    my-app/playwright/**
+    my-app/renderer/**
+    my-app/main/**
+    .github/workflows/ci-e2e.yml
+    ```
+
+    **Etapas executadas:**
+
+    1. Checkout com `fetch-depth: 0` (necessário para análise de diff)
+    2. Configuração do Node.js 20 e `npm ci`
+    3. Instalação do Playwright e Chromium (`npx playwright install --with-deps chromium`)
+    4. Configuração do display virtual Xvfb (1920×1080) e permissões do `chrome-sandbox` para Electron
+    5. Build da aplicação (`npx electron-forge package`)
+    6. Reset do banco de dados (`npm run reset:db`)
+    7. Determinação da estratégia de execução (ver abaixo)
+    8. Execução dos testes conforme estratégia
+    9. Upload de artefatos `.playwright-results/` (retenção: 7 dias)
+    10. Comentário automático no PR com resultado e link para download dos artefatos
+
+    **Estratégia de execução:**
+
+    | Branch | Estratégia | Suites executadas |
+    | :--- | :--- | :--- |
+    | `main` / `release-candidate` | Completa | `functional`, `integration`, `regression`, `e2e` |
+    | Feature / Subtask | Seletiva (path-based) | Apenas módulos afetados + `regression` |
+
+    Na estratégia seletiva, mudanças em `playwright/pages/`, `playwright/utils/` ou `playwright/fixtures/` disparam a suite completa por impactarem todos os módulos.
+
+=== "Release Automático"
+
+    O workflow de release é acionado automaticamente ao merge de uma PR nas branches principais e gera o executável Windows com versionamento semântico automático.
+
+    **Acionado quando:**
+
+    Pull Request é **mergeada** (não apenas aberta) nas branches:
+
+    ```
+    main
+    release-candidate
+    ```
+
+    Também pode ser disparado manualmente via `workflow_dispatch` (build manual — ver abaixo).
+
+    **Etapas executadas:**
+
+    1. Checkout com `fetch-depth: 0`
+    2. Cálculo da próxima versão via conventional commits:
+        - `feat!` / `BREAKING CHANGE` → incrementa **MAJOR**
+        - `feat` → incrementa **MINOR**
+        - `fix` / outros → incrementa **PATCH**
+    3. Geração de changelog com IA (GPT-4o-mini via GitHub Models) resumindo os commits em português
+    4. Atualização da versão no `package.json`
+    5. Instalação de dependências (`npm ci`)
+    6. Build do executável Windows (`npm run make`)
+    7. Criação da GitHub Release com o artefato `.exe`
+
+    **Versionamento por branch:**
+
+    | Branch | Tipo de tag | Exemplo | Marcação |
+    | :--- | :--- | :--- | :--- |
+    | `main` | Estável | `v1.2.0` | Latest |
+    | `release-candidate` | Pre-release | `v1.2.0-rc.1` | Pre-release |
+
+    **Build manual:**
+
+    O workflow `build-windows.yml` permite gerar um executável manualmente via `workflow_dispatch`, informando a tag desejada (ex: `v1.2.3`). Útil para reprocessar uma release ou gerar uma versão fora do ciclo automático.
 
 === "Revisão do Copilot"
 
