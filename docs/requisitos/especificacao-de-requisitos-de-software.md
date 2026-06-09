@@ -1214,5 +1214,5 @@ Os dados devem ficar salvos localmente na pasta do usuário (banco local do apli
 O sistema deve ser capaz de operar de forma autônoma (modo offline), sem a necessidade de uma conexão com a internet ativa para a execução de suas funcionalidades.
 
 #### Responsividade
-A interface deve ser responsiva, adaptando-se a diferentes resoluções de tela, sem distorções ou sobreposição de elementos.
+A interface deve ser responsiva, adaptando-se a diferentes resoluções de tela, sem distorções ou sobreposição de elementos. O sistema deve também suportar zoom, permitindo que o usuário amplie ou reduza a visualização sem quebra de layout.
 

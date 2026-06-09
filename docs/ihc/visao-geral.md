@@ -19,9 +19,10 @@
 1. [Introdução](#introdução)
 2. [Figma](#figma)
 3. [Prototipação](#prototipação)
-4. [Identidade Visual](#identidade-visual)
-5. [Jornada do Usuário](#jornada-do-usuário)
-6. [Testes de Usabilidade](#testes-de-usabilidade)
+4. [Figma Make](#figma-make)
+5. [Identidade Visual](#identidade-visual)
+6. [Jornada do Usuário](#jornada-do-usuário)
+7. [Testes de Usabilidade](#testes-de-usabilidade)
 
 ---
 
@@ -43,7 +44,7 @@ O projeto mantém um arquivo Figma bem estruturado, com as cores padrão do sist
 
 ### Protótipo de baixa fidelidade
 
-Elaborado nas fases iniciais do projeto para validar a estrutura e a navegação das telas sem compromisso com estética. Permite iterar rapidamente sobre a disposição dos elementos e os fluxos principais antes de investir no detalhamento visual.
+Elaborado no início do projeto para validar a estrutura e a navegação das telas sem compromisso com estética. Com o amadurecimento do protótipo de alta fidelidade, o de baixa fidelidade deixou de ser utilizado: as novas telas passaram a ser projetadas diretamente no protótipo de alta fidelidade, reutilizando os componentes já consolidados.
 
 **Link:** [Protótipo de Baixa Fidelidade — Figma](https://www.figma.com/design/Z3hfLoenhr73I3u5BRU5lP/COIN-S---Contabilidade-Integrada?node-id=29-811&t=LffhAJRG1CydnNoW-1)
 
@@ -52,6 +53,20 @@ Elaborado nas fases iniciais do projeto para validar a estrutura e a navegação
 Desenvolvido no Figma, representa fielmente a interface final do sistema — com paleta de cores, tipografia, ícones e comportamento dos componentes. O protótipo de alta fidelidade contempla os principais fluxos do sistema, como o registro de lançamentos, a apuração do resultado e a geração de demonstrativos contábeis.
 
 **Link:** [Protótipo de Alta Fidelidade — Figma](https://www.figma.com/design/Z3hfLoenhr73I3u5BRU5lP/COIN-S---Contabilidade-Integrada?node-id=199-2979&t=LffhAJRG1CydnNoW-1)
+
+---
+
+## Figma Make
+
+O **Figma Make** foi utilizado como ferramenta de exploração rápida nas telas de **Apuração**, **DRE** e **Balanço Patrimonial** — telas cujos fluxos e regras de negócio eram complexos e que nem a equipe nem o proponente conseguiam especificar com clareza antes de ver algo concreto. As telas geradas serviram de ponto de partida para conversas objetivas, acelerando a validação do funcionamento esperado e o entendimento das regras de negócio.
+
+Após essa etapa, a migração para o Figma tornou-se necessária: o Figma Make não suporta a identidade visual do COIN'S — paleta, componentes customizados e padrão visual consolidado ao longo do projeto.
+
+![Apuração — Resumo do Resultado no Figma Make](assets/apuracao-figma-make.png)
+
+![Apuração — Lançamentos de Encerramento no Figma Make](assets/apuracao-figma-make2.png)
+
+![Demonstrações no Figma Make](assets/demonstracoes-figma-make.png)
 
 ---
 

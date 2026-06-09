@@ -28,6 +28,7 @@
   - [5.1 Agents disponíveis](#agents-disponíveis)
   - [5.2 Skills disponíveis](#skills-disponíveis)
   - [5.3 Quando usar cada recurso](#quando-usar-cada-recurso)
+  - [5.4 Documentação completa do workspace de agentes](./workspace-agentes.md)
 - [6. Responsabilidades](#responsabilidades)
 - [7. Boas Práticas Resumidas](#boas-práticas-resumidas)
 
@@ -140,13 +141,16 @@ Artefatos que afetam **regras de negócio contábeis** devem ser validados junto
 
 O projeto COINS disponibiliza recursos de IA **já configurados com o contexto do sistema**. Esses recursos devem ser preferidos a interações genéricas com modelos de linguagem, pois reduzem o esforço de contextualização e produzem outputs mais consistentes com os padrões do projeto.
 
+O projeto possui **dois ecossistemas de agentes distintos** — um para o repositório de documentação e outro para o repositório de código-fonte. Ambos compartilham a mesma visão e princípios, mas cada um é especificado e configurado dentro do seu próprio repositório. Para uma descrição completa da organização, consulte o documento [Workspace de Agentes de IA](./workspace-agentes.md).
+
 ### Agents disponíveis {#agents-disponíveis}
 
-| Agent | Arquivo | Finalidade |
-|-------|---------|------------|
-| `docs-agent` | `.github/agents/docs-agent.agent.md` | Revisão de documentação Markdown, qualidade de commits e boas práticas do projeto |
+| Agent | Repositório | Arquivo | Finalidade |
+|-------|-------------|---------|------------|
+| `docs-agent` | Documentação | `.github/agents/docs-agent.agent.md` | Revisão de documentação Markdown, qualidade de commits e boas práticas do projeto |
+| Agentes de codificação | Código-fonte | `.agents/` (workspace completo) | Implementação de funcionalidades seguindo regras de domínio e padrões arquiteturais |
 
-**Como usar o `docs-agent`:**
+**Como usar o `docs-agent`** (agente de documentação):
 
 - Para revisar a qualidade de um documento antes de abrir PR, invoque o agent com o arquivo em questão.
 - Para verificar se uma mensagem de commit segue o padrão semântico do projeto.
@@ -154,17 +158,35 @@ O projeto COINS disponibiliza recursos de IA **já configurados com o contexto d
 
 > **💡 Dica:** O `docs-agent` conhece as convenções do projeto (prefixos `CA-N.`, `EX- N.`, estrutura de RF, etc.) — aproveite isso ao revisar a ERS ou documentos de requisitos.
 
+**Como usar os agentes de codificação** (repositório de código):
+
+Os agentes de codificação operam a partir do workspace `.agents/` no repositório de código-fonte. Toda sessão começa com a leitura do `README.md` do workspace, seguida das regras técnicas (`rules/`) e do contexto de domínio (`context/`) relevantes para a tarefa. A skill `apply-prompt` é o ponto de entrada obrigatório para qualquer implementação.
+
+> **Atenção:** Agentes operando **neste repositório de documentação** não devem seguir as instruções contidas no `.agents/` do repositório de código. Aquela estrutura é destinada exclusivamente a tarefas de codificação.
+
 ### Skills disponíveis {#skills-disponíveis}
+
+**Repositório de documentação** — invocadas via `/nome-da-skill` no Claude Code:
 
 | Skill | Quando usar |
 |-------|-------------|
 | `boas-praticas-markdown` | Ao criar ou revisar qualquer documento `.md` na pasta `docs/` |
 | `padrao-especificacao-requisitos` | Ao criar ou editar requisitos funcionais na ERS |
 
-**Como invocar uma skill no Claude Code:**
+**Repositório de código** — definidas em `.agents/skills/`:
+
+| Skill | Quando usar |
+|-------|-------------|
+| `apply-prompt` | Ponto de entrada obrigatório para implementar qualquer funcionalidade |
+| `save-context` | Quando um prompt introduz conceito de domínio ou regra de negócio nova |
+| `save-rule` | Quando um prompt introduz padrão técnico ou convenção nova |
+| `analyse-rule` | Para analisar se o código segue os padrões técnicos documentados |
+| `analyse-context` | Para analisar se o código respeita as regras de domínio contábil |
+| `create-skill` | Para criar uma nova skill seguindo o padrão adotado |
+
+**Como invocar uma skill de documentação no Claude Code:**
 
 ```bash
-# Exemplo de invocação via CLI
 /boas-praticas-markdown
 /padrao-especificacao-requisitos
 ```
@@ -173,14 +195,16 @@ As skills são pré-carregadas com o contexto necessário e guiam o modelo para 
 
 ### Quando usar cada recurso {#quando-usar-cada-recurso}
 
-| Situação | Recurso recomendado |
-|----------|-------------------|
-| Criar novo documento de requisito | Skill `padrao-especificacao-requisitos` |
-| Revisar formatação de documento existente | Skill `boas-praticas-markdown` |
-| Validar qualidade de commit ou PR | Agent `docs-agent` |
-| Gerar código de backend (controller/service/repository) | Claude Code com contexto do PR e requisito associado |
-| Revisar PR antes de aprovação | GitHub Copilot (integrado ao CI) + revisão humana obrigatória |
-| Criar consulta SQL complexa | Claude Code + revisão obrigatória por outro membro |
+| Situação | Repositório | Recurso recomendado |
+|----------|-------------|-------------------|
+| Criar novo documento de requisito | Documentação | Skill `padrao-especificacao-requisitos` |
+| Revisar formatação de documento existente | Documentação | Skill `boas-praticas-markdown` |
+| Validar qualidade de commit ou PR de documentação | Documentação | Agent `docs-agent` |
+| Implementar nova funcionalidade | Código | Skill `apply-prompt` (ponto de entrada obrigatório) |
+| Registrar nova regra de negócio identificada | Código | Skill `save-context` |
+| Verificar conformidade arquitetural do código | Código | Skill `analyse-rule` |
+| Revisar PR de código antes de aprovação | Código | GitHub Copilot (integrado ao CI) + revisão humana obrigatória |
+| Criar consulta SQL complexa | Código | Claude Code + revisão obrigatória por outro membro |
 
 ---
 

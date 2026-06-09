@@ -5,7 +5,7 @@
 | Versão | Data | Descrição | Autor |
 | :---: | :---: | :---: | :---: |
 | 1.0 | 11/11/2025 | Adicionando Primeira versão do documento  | Pedro Nicoletti Sotoma |
-| 2.0 | 01/06/2026 | Atualização com base no working directory (branch develop): novos módulos de domínio (Apuração, DRE, Balanço Patrimonial), reorganização da pasta de testes E2E para `playwright/`, decomposição da camada de banco de dados, ajuste de CORS | Claude (revisão técnica automatizada) |
+| 2.0 | 01/06/2026 | Atualização com base no working directory (branch develop): novos módulos de domínio (Apuração, DRE, Balanço Patrimonial), reorganização da pasta de testes E2E para `playwright/`, decomposição da camada de banco de dados, ajuste de CORS | Lohan Toledo Tosta |
 
 **Histórico de Revisões** 
 
@@ -47,7 +47,7 @@
 [4\. Infraestrutura de CI/CD	7](#infraestrutura-de-cicd)
 
 ## Introdução 
-Este documento tem como objetivo descrever a arquitetura do Sistema COIN'S, seguindo o modelo de visualização arquitetural de software C4[^1]. 
+Este documento tem como objetivo descrever a arquitetura do Sistema COIN'S, seguindo o modelo de visualização arquitetural de software C4<sup>1</sup>. 
 
 O C4 é o padrão ideal para representar a arquitetura porque equilibra clareza, consistência e praticidade. Ele comunica o que importa em cada nível de detalhe, é simples de manter, se integra às ferramentas modernas de desenvolvimento e fortalece a governança técnica da organização.
 
@@ -80,7 +80,7 @@ O banco de dados local foi escolhido por ser **leve, embarcado e adequado ao uso
 ### Padrão Arquitetural
 O sistema é formado por uma arquitetura monolítica modularizada em camadas. Essa decisão foi tomada considerando o contexto de um software offline desktop, visando a facilidade de integração entre banco/backend/frontend. O diretório `main` fica responsável por encapsular a lógica e as camadas do backend enquanto o diretório `renderer` fica responsável pelo frontend.
 
-Para uma definição mais técnica da responsabilidade de cada camada, visualizar o documento de Visão de Implementação: [https://docs.google.com/document/d/1O2Qf1cnLYiqCjFxQCzfQZ4MwuyMp6zRecco6XBTN5NA/edit?tab=t.0](https://docs.google.com/document/d/1O2Qf1cnLYiqCjFxQCzfQZ4MwuyMp6zRecco6XBTN5NA/edit?tab=t.0) 
+Para uma definição mais técnica da responsabilidade de cada camada, visualizar o documento de [Visão de Implementação](./visao-de-implementacao.md).
 
 > **Arquivo editável disponível no repositório:** O arquivo `Diagrama_C4_COINS.drawio` está na raiz do repositório e pode ser aberto e editado diretamente no [draw.io](https://app.diagrams.net/) para atualizar qualquer diagrama C4.
 
@@ -90,8 +90,7 @@ O modelo C4 considera as estruturas estáticas de um sistema de software em term
 ### Nível 1 – Diagrama de Contexto 
 O diagrama de contexto do sistema mostra o **Sistema COIN'S** e como ele se encaixa no mundo em termos das pessoas que o utilizam e dos outros sistemas de software com os quais ele interage.
 
-**Link do diagrama (alta resolução / online):**  
-[https://app.diagrams.net/\#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc\#%7B"pageId"%3A"zNMGI6wU0Mi8Qe2H5Q59"%7D](https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"zNMGI6wU0Mi8Qe2H5Q59"%7D) 
+**Ver diagrama:** [Diagrama C4 – Contexto](./diagramas-c4.md#diagrama-c4---contexto)
 
 O diagrama evidencia:
 
@@ -107,8 +106,7 @@ O diagrama de container detalha a estrutura interna do sistema, evidenciando os 
 * **Banco de Dados (SQLite3)**: armazena dados localmente.  
 * **Camada de Acesso a Dados (Knex)**: abstrai as operações SQL e garante consistência.
 
-**Link do diagrama (alta resolução / online):**  
-[https://app.diagrams.net/\#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc\#%7B"pageId"%3A"7UhaJ9ljh7ebol46HkWr"%7D](https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"7UhaJ9ljh7ebol46HkWr"%7D) 
+**Ver diagrama:** [Diagrama C4 – Container](./diagramas-c4.md#diagrama-c4---container)
 
 ### Nível 3 – Diagrama de Componentes 
 O diagrama de componentes amplia o container principal (aplicação desktop) e mostra os **componentes internos** que compõem a aplicação.
@@ -125,8 +123,7 @@ Entre os principais componentes:
 >
 > A pasta de testes E2E foi renomeada de `e2e/` para `playwright/`, mantendo a mesma estrutura interna. A categoria `regression/` foi renomeada para `acceptance/`. Foram adicionados page objects para os novos módulos (`Apuracao.ts`, `Dre.ts`) e novos spec files de ponta a ponta (`apuracao-workflow.spec.ts`, `dre-workflow.spec.ts`).
 
-**Link do diagrama (alta resolução / online):**  
-[https://app.diagrams.net/\#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc\#%7B"pageId"%3A"2XVK7RYDKxdhMDquu4st"%7D](https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"2XVK7RYDKxdhMDquu4st"%7D) 
+**Ver diagrama:** [Diagrama C4 – Componentes](./diagramas-c4.md#diagrama-c4---componentes)
 
 ### Nível 4 – Código 
 Neste nível, podem ser representados diagramas de classes ou entidades para os componentes mais importantes.
