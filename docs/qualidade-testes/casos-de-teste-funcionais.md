@@ -4,7 +4,7 @@
 
 | Versão | Data | Descrição | Autor |
 | :---: | :---: | :--- | :--- |
-| 1.0 | 09/06/2026 | Criação do documento | Squad SIA2 |
+| 1.0 | 09/06/2026 | Criação do documento | Amanda Gois |
 
 ## Histórico de Revisões
 
