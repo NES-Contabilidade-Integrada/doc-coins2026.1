@@ -12,7 +12,7 @@
         <link rel="prev" href="../../banco-de-dados/dicionario-dados/">
       
       
-        <link rel="next" href="../instrucoes-do-copilot/">
+        <link rel="next" href="../workspace-agentes/">
       
       
         
@@ -1324,6 +1324,8 @@
       
         
       
+        
+      
     
     
     
@@ -1636,6 +1638,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workspace-agentes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace de Agentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2725,6 +2755,7 @@
 <li><a href="#agents-disponíveis">5.1 Agents disponíveis</a></li>
 <li><a href="#skills-disponíveis">5.2 Skills disponíveis</a></li>
 <li><a href="#quando-usar-cada-recurso">5.3 Quando usar cada recurso</a></li>
+<li><a href="../workspace-agentes/">5.4 Documentação completa do workspace de agentes</a></li>
 <li><a href="#responsabilidades">6. Responsabilidades</a></li>
 <li><a href="#boas-práticas-resumidas">7. Boas Práticas Resumidas</a></li>
 </ul>
@@ -2815,11 +2846,13 @@
 <hr />
 <h2 id="utilização-de-agents-e-skills-personalizados">Utilização de Agents e Skills Personalizados</h2>
 <p>O projeto COINS disponibiliza recursos de IA <strong>já configurados com o contexto do sistema</strong>. Esses recursos devem ser preferidos a interações genéricas com modelos de linguagem, pois reduzem o esforço de contextualização e produzem outputs mais consistentes com os padrões do projeto.</p>
+<p>O projeto possui <strong>dois ecossistemas de agentes distintos</strong> — um para o repositório de documentação e outro para o repositório de código-fonte. Ambos compartilham a mesma visão e princípios, mas cada um é especificado e configurado dentro do seu próprio repositório. Para uma descrição completa da organização, consulte o documento <a href="../workspace-agentes/">Workspace de Agentes de IA</a>.</p>
 <h3 id="agents-disponíveis">Agents disponíveis</h3>
 <table>
 <thead>
 <tr>
 <th>Agent</th>
+<th>Repositório</th>
 <th>Arquivo</th>
 <th>Finalidade</th>
 </tr>
@@ -2827,12 +2860,19 @@
 <tbody>
 <tr>
 <td><code>docs-agent</code></td>
+<td>Documentação</td>
 <td><code>.github/agents/docs-agent.agent.md</code></td>
 <td>Revisão de documentação Markdown, qualidade de commits e boas práticas do projeto</td>
 </tr>
+<tr>
+<td>Agentes de codificação</td>
+<td>Código-fonte</td>
+<td><code>.agents/</code> (workspace completo)</td>
+<td>Implementação de funcionalidades seguindo regras de domínio e padrões arquiteturais</td>
+</tr>
 </tbody>
 </table>
-<p><strong>Como usar o <code>docs-agent</code>:</strong></p>
+<p><strong>Como usar o <code>docs-agent</code></strong> (agente de documentação):</p>
 <ul>
 <li>Para revisar a qualidade de um documento antes de abrir PR, invoque o agent com o arquivo em questão.</li>
 <li>Para verificar se uma mensagem de commit segue o padrão semântico do projeto.</li>
@@ -2841,7 +2881,13 @@
 <blockquote>
 <p><strong>💡 Dica:</strong> O <code>docs-agent</code> conhece as convenções do projeto (prefixos <code>CA-N.</code>, <code>EX- N.</code>, estrutura de RF, etc.) — aproveite isso ao revisar a ERS ou documentos de requisitos.</p>
 </blockquote>
+<p><strong>Como usar os agentes de codificação</strong> (repositório de código):</p>
+<p>Os agentes de codificação operam a partir do workspace <code>.agents/</code> no repositório de código-fonte. Toda sessão começa com a leitura do <code>README.md</code> do workspace, seguida das regras técnicas (<code>rules/</code>) e do contexto de domínio (<code>context/</code>) relevantes para a tarefa. A skill <code>apply-prompt</code> é o ponto de entrada obrigatório para qualquer implementação.</p>
+<blockquote>
+<p><strong>Atenção:</strong> Agentes operando <strong>neste repositório de documentação</strong> não devem seguir as instruções contidas no <code>.agents/</code> do repositório de código. Aquela estrutura é destinada exclusivamente a tarefas de codificação.</p>
+</blockquote>
 <h3 id="skills-disponíveis">Skills disponíveis</h3>
+<p><strong>Repositório de documentação</strong> — invocadas via <code>/nome-da-skill</code> no Claude Code:</p>
 <table>
 <thead>
 <tr>
@@ -2860,9 +2906,43 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Como invocar uma skill no Claude Code:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Exemplo de invocação via CLI</span>
-/boas-praticas-markdown
+<p><strong>Repositório de código</strong> — definidas em <code>.agents/skills/</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Quando usar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>apply-prompt</code></td>
+<td>Ponto de entrada obrigatório para implementar qualquer funcionalidade</td>
+</tr>
+<tr>
+<td><code>save-context</code></td>
+<td>Quando um prompt introduz conceito de domínio ou regra de negócio nova</td>
+</tr>
+<tr>
+<td><code>save-rule</code></td>
+<td>Quando um prompt introduz padrão técnico ou convenção nova</td>
+</tr>
+<tr>
+<td><code>analyse-rule</code></td>
+<td>Para analisar se o código segue os padrões técnicos documentados</td>
+</tr>
+<tr>
+<td><code>analyse-context</code></td>
+<td>Para analisar se o código respeita as regras de domínio contábil</td>
+</tr>
+<tr>
+<td><code>create-skill</code></td>
+<td>Para criar uma nova skill seguindo o padrão adotado</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Como invocar uma skill de documentação no Claude Code:</strong></p>
+<div class="highlight"><pre><span></span><code>/boas-praticas-markdown
 /padrao-especificacao-requisitos
 </code></pre></div>
 <p>As skills são pré-carregadas com o contexto necessário e guiam o modelo para seguir os padrões estabelecidos — use-as <strong>antes</strong> de gerar conteúdo, não apenas para corrigir depois.</p>
@@ -2871,32 +2951,49 @@
 <thead>
 <tr>
 <th>Situação</th>
+<th>Repositório</th>
 <th>Recurso recomendado</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Criar novo documento de requisito</td>
+<td>Documentação</td>
 <td>Skill <code>padrao-especificacao-requisitos</code></td>
 </tr>
 <tr>
 <td>Revisar formatação de documento existente</td>
+<td>Documentação</td>
 <td>Skill <code>boas-praticas-markdown</code></td>
 </tr>
 <tr>
-<td>Validar qualidade de commit ou PR</td>
+<td>Validar qualidade de commit ou PR de documentação</td>
+<td>Documentação</td>
 <td>Agent <code>docs-agent</code></td>
 </tr>
 <tr>
-<td>Gerar código de backend (controller/service/repository)</td>
-<td>Claude Code com contexto do PR e requisito associado</td>
+<td>Implementar nova funcionalidade</td>
+<td>Código</td>
+<td>Skill <code>apply-prompt</code> (ponto de entrada obrigatório)</td>
 </tr>
 <tr>
-<td>Revisar PR antes de aprovação</td>
+<td>Registrar nova regra de negócio identificada</td>
+<td>Código</td>
+<td>Skill <code>save-context</code></td>
+</tr>
+<tr>
+<td>Verificar conformidade arquitetural do código</td>
+<td>Código</td>
+<td>Skill <code>analyse-rule</code></td>
+</tr>
+<tr>
+<td>Revisar PR de código antes de aprovação</td>
+<td>Código</td>
 <td>GitHub Copilot (integrado ao CI) + revisão humana obrigatória</td>
 </tr>
 <tr>
 <td>Criar consulta SQL complexa</td>
+<td>Código</td>
 <td>Claude Code + revisão obrigatória por outro membro</td>
 </tr>
 </tbody>
@@ -2965,7 +3062,7 @@
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="7 de maio de 2026 23:58:02 UTC">7 de maio de 2026 23:58:02</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="9 de junho de 2026 00:00:57 UTC">9 de junho de 2026 00:00:57</span>
   </span>
 
     

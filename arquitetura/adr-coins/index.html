@@ -1279,6 +1279,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#adr-008-infraestrutura-de-cicd-com-github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-008 Infraestrutura de CI/CD com GitHub Actions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-009-testes-e2e-com-playwright-contra-executável-compilado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-009 Testes E2E com Playwright contra Executável Compilado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-010-expansão-do-domínio-contábil--apuração-dre-e-balanço-patrimonial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-010 Expansão do Domínio Contábil — Apuração, DRE e Balanço Patrimonial
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1429,6 +1462,8 @@
       
         
       
+        
+      
     
     
     
@@ -1489,6 +1524,34 @@
     
   
     Política de Uso de IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ia/workspace-agentes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace de Agentes
   
 
     
@@ -2372,6 +2435,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#adr-008-infraestrutura-de-cicd-com-github-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-008 Infraestrutura de CI/CD com GitHub Actions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-009-testes-e2e-com-playwright-contra-executável-compilado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-009 Testes E2E com Playwright contra Executável Compilado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adr-010-expansão-do-domínio-contábil--apuração-dre-e-balanço-patrimonial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADR-010 Expansão do Domínio Contábil — Apuração, DRE e Balanço Patrimonial
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2465,6 +2561,24 @@
 <td style="text-align: left;">Adicionando ADR para uso do Copilot</td>
 <td style="text-align: left;">Wagner Rodrigues</td>
 </tr>
+<tr>
+<td style="text-align: left;">2.0.0</td>
+<td style="text-align: left;">02/06/2026</td>
+<td style="text-align: left;">Adicionando ADR-008: Infraestrutura de CI/CD com GitHub Actions</td>
+<td style="text-align: left;">Lohan Toledo Tosta</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.1.0</td>
+<td style="text-align: left;">02/06/2026</td>
+<td style="text-align: left;">Adicionando ADR-009: Testes E2E com Playwright contra executável compilado</td>
+<td style="text-align: left;">Lohan Toledo Tosta</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.2.0</td>
+<td style="text-align: left;">02/06/2026</td>
+<td style="text-align: left;">Adicionando ADR-010: Expansão do domínio contábil — Apuração, DRE e Balanço Patrimonial</td>
+<td style="text-align: left;">Lohan Toledo Tosta</td>
+</tr>
 </tbody>
 </table>
 <p><strong>Histórico de revisões</strong></p>
@@ -2542,6 +2656,9 @@
 <p><a href="#adr-005-banco-de-dados-para-armazenamento-local"><strong>ADR-005 Banco de Dados para Armazenamento Local  11</strong></a></p>
 <p><a href="#adr-006-ferramenta-de-build-e-distribuição-do-aplicativo"><strong>ADR-006 Ferramenta de build e distribuição do aplicativo 13</strong></a></p>
 <p><a href="#adr-007-uso-do-github-copilot-nas-revisões-de-código-do-sistema-coins"><strong>ADR-007 Uso do GitHub Copilot nas Revisões de Código do Sistema COINS    15</strong></a></p>
+<p><a href="#adr-008-infraestrutura-de-cicd-com-github-actions"><strong>ADR-008 Infraestrutura de CI/CD com GitHub Actions</strong></a></p>
+<p><a href="#adr-009-testes-e2e-com-playwright-contra-executável-compilado"><strong>ADR-009 Testes E2E com Playwright contra Executável Compilado</strong></a></p>
+<p><a href="#adr-010-expansão-do-domínio-contábil--apuração-dre-e-balanço-patrimonial"><strong>ADR-010 Expansão do Domínio Contábil — Apuração, DRE e Balanço Patrimonial</strong></a></p>
 <h2 id="adr-001-plataforma-do-sistema"><strong>ADR-001 Plataforma do Sistema</strong></h2>
 <p><strong>Descrição:</strong> A equipe da disciplina de PDS2 (Práticas de Desenvolvimento de Software 2) está desenvolvendo um novo sistema para alunos cursando os semestres iniciais do curso de Ciências Contábeis.</p>
 <p><strong>Contexto:</strong></p>
@@ -2715,6 +2832,118 @@
 <ul>
 <li>O Sistema COIN'S necessita de um framework capaz de criar interfaces reativas, suportar componentes modulares e funcionar bem dentro do ecossistema Electron.</li>
 </ul>
+<hr />
+<h2 id="adr-008-infraestrutura-de-cicd-com-github-actions"><strong>ADR-008 Infraestrutura de CI/CD com GitHub Actions</strong></h2>
+<p><strong>Descrição:</strong> Com a maturidade do projeto e a adição de novos módulos de domínio, a equipe identificou a necessidade de automatizar validação de qualidade e geração de artefatos de distribuição.</p>
+<p><strong>Contexto:</strong></p>
+<ul>
+<li>O projeto passou a contar com testes unitários (Vitest) e testes E2E (Playwright), mas sua execução era manual e suscetível a omissões.</li>
+<li>A geração do instalador <code>.exe</code> e a publicação de releases eram realizadas localmente, sem rastreabilidade.</li>
+<li>O repositório já estava hospedado no GitHub, tornando o GitHub Actions a opção de menor atrito para integração contínua.</li>
+</ul>
+<p><strong>Decisão:</strong></p>
+<ul>
+<li>Adotar GitHub Actions como plataforma de CI/CD, com quatro workflows dedicados: <code>ci.yml</code>, <code>ci-e2e.yml</code>, <code>build-windows.yml</code> e <code>release.yml</code>.</li>
+</ul>
+<p><strong>Justificativa:</strong></p>
+<ul>
+<li><strong>Integração nativa com o repositório:</strong> O GitHub Actions é acionado diretamente por eventos do repositório (push, pull request, tags), sem configuração de webhooks externos.</li>
+<li><strong>Runners Windows disponíveis:</strong> O Electron Forge exige um ambiente Windows para gerar o instalador <code>.exe</code>. O GitHub Actions oferece <code>windows-latest</code> como runner gerenciado, eliminando dependência de máquina local.</li>
+<li><strong>Separação de responsabilidades por workflow:</strong> Dividir em quatro workflows (unitários, E2E, build, release) permite falha rápida e reexecução seletiva, sem necessidade de reexecutar toda a pipeline.</li>
+<li><strong>Sem custo adicional:</strong> Para repositórios públicos, o GitHub Actions é gratuito.</li>
+</ul>
+<p><strong>Consequências:</strong></p>
+<ul>
+<li><strong>Positivas</strong></li>
+<li>Todo push e pull request tem qualidade verificada automaticamente antes do merge.</li>
+<li>A geração do <code>.exe</code> e a publicação da release passam a ser rastreáveis e reproduzíveis.</li>
+<li>Erros introduzidos por novos commits são detectados no contexto da branch, não apenas após o merge.</li>
+<li><strong>Negativas</strong></li>
+<li>O workflow <code>ci-e2e.yml</code> tem tempo de execução elevado (compilação completa do Electron + execução do Playwright), aumentando o tempo de feedback no PR.</li>
+<li>Dependência de disponibilidade dos runners gerenciados do GitHub.</li>
+</ul>
+<p><strong>Alternativas Consideradas:</strong></p>
+<ul>
+<li><strong>Execução manual local:</strong></li>
+<li><strong>Prós:</strong> Sem custo, sem configuração.</li>
+<li><strong>Contras:</strong> Suscetível a omissões; sem rastreabilidade no histórico do repositório.</li>
+<li><strong>Motivo da Rejeição:</strong> Incompatível com o crescimento do projeto e com a cobertura de testes que passou a existir.</li>
+</ul>
+<hr />
+<h2 id="adr-009-testes-e2e-com-playwright-contra-executável-compilado"><strong>ADR-009 Testes E2E com Playwright contra Executável Compilado</strong></h2>
+<p><strong>Descrição:</strong> O projeto precisava de uma estratégia de testes que validasse o comportamento real da aplicação desktop do ponto de vista do usuário final, incluindo a interface gráfica e a integração entre frontend, backend e banco de dados.</p>
+<p><strong>Contexto:</strong></p>
+<ul>
+<li>Os testes unitários (Vitest) validam lógica isolada de cada service, mas não cobrem fluxos contábeis completos nem interações de UI.</li>
+<li>A aplicação é distribuída como executável gerado pelo Electron Forge. Testar apenas o ambiente de desenvolvimento não garante que o artefato de distribuição funciona corretamente.</li>
+<li>Era necessário cobrir os novos módulos (Apuração, DRE, Balanço Patrimonial) com testes de fluxo completo.</li>
+</ul>
+<p><strong>Decisão:</strong></p>
+<ul>
+<li>Adotar <strong>Playwright</strong> como framework de testes E2E, com os testes executando contra o <strong>executável compilado</strong> gerado pelo Electron Forge — não contra o modo de desenvolvimento.</li>
+<li>Organizar os testes na pasta <code>playwright/</code> com quatro categorias: <code>functional/</code>, <code>integration/</code>, <code>e2e/</code> e <code>acceptance/</code>.</li>
+</ul>
+<p><strong>Justificativa:</strong></p>
+<ul>
+<li><strong>Validação do artefato real:</strong> Testar o binário compilado garante que o que é distribuído aos usuários é o mesmo que passou pela suíte de testes, eliminando divergências entre ambiente de dev e de produção.</li>
+<li><strong>Suporte a Electron:</strong> O Playwright tem suporte oficial a aplicações Electron, permitindo lançar e interagir com o processo principal e o renderer de forma integrada.</li>
+<li><strong>Cobertura em múltiplos níveis:</strong> A separação em <code>functional</code> (UI por módulo), <code>integration</code> (API REST), <code>e2e</code> (fluxos ponta a ponta) e <code>acceptance</code> (regras de negócio) permite identificar rapidamente em qual nível um defeito se manifesta.</li>
+<li><strong>Page Object Model (POM):</strong> A adoção do POM na camada <code>playwright/pages/</code> desacopla os seletores de UI dos casos de teste, reduzindo custo de manutenção quando componentes mudam.</li>
+</ul>
+<p><strong>Consequências:</strong></p>
+<ul>
+<li><strong>Positivas</strong></li>
+<li>Defeitos que surgem apenas no executável compilado (ex: caminhos de recursos, permissões de arquivo) são detectados antes da release.</li>
+<li>Novos módulos são cobertos com testes de fluxo completo, incluindo cenários contábeis reais.</li>
+<li><strong>Negativas</strong></li>
+<li>O tempo de execução da suíte E2E é elevado, pois exige compilação completa da aplicação antes dos testes.</li>
+<li>O middleware de CORS do Express precisou ser alterado para aceitar qualquer origem (<code>*</code>), pois o Playwright em modo headless faz requisições ao servidor local sem origem definida. Essa mudança é uma consequência direta desta decisão.</li>
+</ul>
+<p><strong>Alternativas Consideradas:</strong></p>
+<ul>
+<li><strong>Testar em modo de desenvolvimento (sem compilar):</strong></li>
+<li><strong>Prós:</strong> Execução mais rápida; sem necessidade de Electron Forge no CI.</li>
+<li><strong>Contras:</strong> Não valida o artefato que será distribuído; pode mascarar problemas de empacotamento.</li>
+<li><strong>Motivo da Rejeição:</strong> O objetivo principal é garantir a qualidade do produto entregue ao usuário final.</li>
+</ul>
+<hr />
+<h2 id="adr-010-expansão-do-domínio-contábil--apuração-dre-e-balanço-patrimonial"><strong>ADR-010 Expansão do Domínio Contábil — Apuração, DRE e Balanço Patrimonial</strong></h2>
+<p><strong>Descrição:</strong> O sistema COIN'S na v1.x cobria apenas os módulos de Plano de Contas e Lançamentos Contábeis. Para completar o ciclo contábil básico exigido pelo contexto pedagógico, foram adicionados três novos módulos de domínio.</p>
+<p><strong>Contexto:</strong></p>
+<ul>
+<li>O fluxo contábil completo requer: registrar lançamentos → apurar o resultado → gerar DRE → gerar Balanço Patrimonial. Sem os três últimos módulos, o sistema não atendia ao objetivo pedagógico da disciplina de Ciências Contábeis.</li>
+<li>Cada novo módulo precisava ser representado em todas as camadas da arquitetura (migrations, entities, repositories, services, controllers, frontend pages e components), respeitando o padrão arquitetural já estabelecido.</li>
+<li>As migrations existentes precisavam ser reorganizadas para suportar o schema incremental dos novos módulos sem quebrar instalações existentes.</li>
+</ul>
+<p><strong>Decisão:</strong></p>
+<ul>
+<li>Adicionar os módulos <strong>Apuração</strong>, <strong>DRE (Demonstração do Resultado do Exercício)</strong> e <strong>Balanço Patrimonial</strong> ao sistema, com representação completa em todas as camadas.</li>
+<li>Consolidar as 4 migrations originais em uma <strong>migration de baseline</strong> (<code>20260331195800_baseline.ts</code>) e adicionar migrations incrementais para cada evolução do schema.</li>
+<li>Para DRE e Balanço Patrimonial, <strong>não criar repositories dedicados</strong> — os services operam diretamente com queries, dado que esses módulos são essencialmente consultas de agregação sem estado próprio.</li>
+</ul>
+<p><strong>Justificativa:</strong></p>
+<ul>
+<li><strong>Completude do ciclo contábil:</strong> Os três módulos formam a sequência natural do fluxo pedagógico: apuração de resultado → demonstração → balanço.</li>
+<li><strong>Baseline de migrations:</strong> Consolidar as migrations originais em uma única baseline simplifica a inicialização de novos ambientes e torna o histórico de schema incremental legível.</li>
+<li><strong>Ausência de repository para DRE e Balanço Patrimonial:</strong> Esses módulos não têm entidades próprias com CRUD completo — são cálculos derivados de dados existentes. Um repository seria uma abstração sem benefício real.</li>
+<li><strong>Exportação CSV no Balanço Patrimonial:</strong> A necessidade de exportação foi tratada como um service separado (<code>BalanceSheetStatementCsvService</code>), mantendo a responsabilidade única do service principal.</li>
+</ul>
+<p><strong>Consequências:</strong></p>
+<ul>
+<li><strong>Positivas</strong></li>
+<li>O sistema passa a cobrir o ciclo contábil completo, tornando-se funcionalmente completo para o contexto pedagógico.</li>
+<li>A organização por módulo de domínio em todas as camadas (<code>Apuracao/</code>, <code>Demonstracao/</code>, <code>BalancoPatrimonial/</code>) mantém a coesão e facilita navegação no código.</li>
+<li><strong>Negativas</strong></li>
+<li>O crescimento do número de camadas e arquivos aumenta o custo de onboarding de novos membros na equipe.</li>
+<li>A ausência de repository em DRE e Balanço Patrimonial cria uma inconsistência de padrão em relação aos demais módulos, exigindo que futuros mantenedores entendam o motivo da diferença.</li>
+</ul>
+<p><strong>Alternativas Consideradas:</strong></p>
+<ul>
+<li><strong>Manter repositories para todos os módulos por consistência:</strong></li>
+<li><strong>Prós:</strong> Padrão uniforme em todo o backend.</li>
+<li><strong>Contras:</strong> Repositories vazios ou com um único método de consulta agregada seriam apenas boilerplate sem valor real.</li>
+<li><strong>Motivo da Rejeição:</strong> Complexidade sem benefício no contexto atual.</li>
+</ul>
 
 
 
@@ -2737,7 +2966,7 @@
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="26 de maio de 2026 22:58:33 UTC">26 de maio de 2026 22:58:33</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="9 de junho de 2026 00:00:57 UTC">9 de junho de 2026 00:00:57</span>
   </span>
 
     

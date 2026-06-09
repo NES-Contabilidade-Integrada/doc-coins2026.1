@@ -1551,6 +1551,8 @@
       
         
       
+        
+      
     
     
     
@@ -1611,6 +1613,34 @@
     
   
     Política de Uso de IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ia/workspace-agentes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace de Agentes
   
 
     
@@ -2658,7 +2688,7 @@
 <td style="text-align: center;">2.0</td>
 <td style="text-align: center;">01/06/2026</td>
 <td style="text-align: center;">Atualização com base no working directory (branch develop): novos módulos de domínio (Apuração, DRE, Balanço Patrimonial), reorganização da pasta de testes E2E para <code>playwright/</code>, decomposição da camada de banco de dados, ajuste de CORS</td>
-<td style="text-align: center;">Claude (revisão técnica automatizada)</td>
+<td style="text-align: center;">Lohan Toledo Tosta</td>
 </tr>
 </tbody>
 </table>
@@ -2704,7 +2734,7 @@
 <p><a href="#diagramas-suplementares-–-diagrama-de-implantação">3.5. Diagramas suplementares – Diagrama de Implantação 6</a></p>
 <p><a href="#infraestrutura-de-cicd">4. Infraestrutura de CI/CD    7</a></p>
 <h2 id="introducao">Introdução</h2>
-<p>Este documento tem como objetivo descrever a arquitetura do Sistema COIN'S, seguindo o modelo de visualização arquitetural de software C4[^1]. </p>
+<p>Este documento tem como objetivo descrever a arquitetura do Sistema COIN'S, seguindo o modelo de visualização arquitetural de software C4<sup>1</sup>. </p>
 <p>O C4 é o padrão ideal para representar a arquitetura porque equilibra clareza, consistência e praticidade. Ele comunica o que importa em cada nível de detalhe, é simples de manter, se integra às ferramentas modernas de desenvolvimento e fortalece a governança técnica da organização.</p>
 <p>Mesmo em um contexto de software desktop monolítico e offline, com escopo inicial pequeno, o uso do modelo C4 faz sentido por promover clareza estrutural desde o início do projeto, facilitando a evolução futura da aplicação — seja para modularização, integração online ou expansão arquitetural. Além disso, o C4 permite documentar decisões arquiteturais de forma leve e acessível, garantindo que o conhecimento do sistema não se perca com o tempo e possa ser facilmente comunicado a novos desenvolvedores ou stakeholders.</p>
 <h2 id="escopo">Escopo</h2>
@@ -2729,7 +2759,7 @@ Essa escolha mantém a <strong>separação lógica entre frontend e backend</str
 </ul>
 <h3 id="padrao-arquitetural">Padrão Arquitetural</h3>
 <p>O sistema é formado por uma arquitetura monolítica modularizada em camadas. Essa decisão foi tomada considerando o contexto de um software offline desktop, visando a facilidade de integração entre banco/backend/frontend. O diretório <code>main</code> fica responsável por encapsular a lógica e as camadas do backend enquanto o diretório <code>renderer</code> fica responsável pelo frontend.</p>
-<p>Para uma definição mais técnica da responsabilidade de cada camada, visualizar o documento de Visão de Implementação: <a href="https://docs.google.com/document/d/1O2Qf1cnLYiqCjFxQCzfQZ4MwuyMp6zRecco6XBTN5NA/edit?tab=t.0">https://docs.google.com/document/d/1O2Qf1cnLYiqCjFxQCzfQZ4MwuyMp6zRecco6XBTN5NA/edit?tab=t.0</a> </p>
+<p>Para uma definição mais técnica da responsabilidade de cada camada, visualizar o documento de <a href="../visao-de-implementacao/">Visão de Implementação</a>.</p>
 <blockquote>
 <p><strong>Arquivo editável disponível no repositório:</strong> O arquivo <code>Diagrama_C4_COINS.drawio</code> está na raiz do repositório e pode ser aberto e editado diretamente no <a href="https://app.diagrams.net/">draw.io</a> para atualizar qualquer diagrama C4.</p>
 </blockquote>
@@ -2737,8 +2767,7 @@ Essa escolha mantém a <strong>separação lógica entre frontend e backend</str
 <p>O modelo C4 considera as estruturas estáticas de um sistema de software em termos de containers (aplicativos, armazenamentos de dados, microservices, etc.), componentes e código. Também considera as pessoas que usam os sistemas de software que construímos.</p>
 <h3 id="nivel-1-diagrama-de-contexto">Nível 1 – Diagrama de Contexto</h3>
 <p>O diagrama de contexto do sistema mostra o <strong>Sistema COIN'S</strong> e como ele se encaixa no mundo em termos das pessoas que o utilizam e dos outros sistemas de software com os quais ele interage.</p>
-<p><strong>Link do diagrama (alta resolução / online):</strong><br />
-<a href="https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B&quot;pageId&quot;%3A&quot;zNMGI6wU0Mi8Qe2H5Q59&quot;%7D">https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"zNMGI6wU0Mi8Qe2H5Q59"%7D</a> </p>
+<p><strong>Ver diagrama:</strong> <a href="../diagramas-c4/#diagrama-c4---contexto">Diagrama C4 – Contexto</a></p>
 <p>O diagrama evidencia:</p>
 <ul>
 <li>O <strong>usuário principal</strong>, que interage diretamente com o aplicativo desktop.  </li>
@@ -2753,8 +2782,7 @@ Essa escolha mantém a <strong>separação lógica entre frontend e backend</str
 <li><strong>Banco de Dados (SQLite3)</strong>: armazena dados localmente.  </li>
 <li><strong>Camada de Acesso a Dados (Knex)</strong>: abstrai as operações SQL e garante consistência.</li>
 </ul>
-<p><strong>Link do diagrama (alta resolução / online):</strong><br />
-<a href="https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B&quot;pageId&quot;%3A&quot;7UhaJ9ljh7ebol46HkWr&quot;%7D">https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"7UhaJ9ljh7ebol46HkWr"%7D</a> </p>
+<p><strong>Ver diagrama:</strong> <a href="../diagramas-c4/#diagrama-c4---container">Diagrama C4 – Container</a></p>
 <h3 id="nivel-3-diagrama-de-componentes">Nível 3 – Diagrama de Componentes</h3>
 <p>O diagrama de componentes amplia o container principal (aplicação desktop) e mostra os <strong>componentes internos</strong> que compõem a aplicação.</p>
 <p>Entre os principais componentes:</p>
@@ -2768,8 +2796,7 @@ Essa escolha mantém a <strong>separação lógica entre frontend e backend</str
 <p><strong>Nota (v2.0 — Testes E2E):</strong></p>
 <p>A pasta de testes E2E foi renomeada de <code>e2e/</code> para <code>playwright/</code>, mantendo a mesma estrutura interna. A categoria <code>regression/</code> foi renomeada para <code>acceptance/</code>. Foram adicionados page objects para os novos módulos (<code>Apuracao.ts</code>, <code>Dre.ts</code>) e novos spec files de ponta a ponta (<code>apuracao-workflow.spec.ts</code>, <code>dre-workflow.spec.ts</code>).</p>
 </blockquote>
-<p><strong>Link do diagrama (alta resolução / online):</strong><br />
-<a href="https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B&quot;pageId&quot;%3A&quot;2XVK7RYDKxdhMDquu4st&quot;%7D">https://app.diagrams.net/#G1c1DKeRUihqU2T4k0uf1OzZv9n-dHTEJc#%7B"pageId"%3A"2XVK7RYDKxdhMDquu4st"%7D</a> </p>
+<p><strong>Ver diagrama:</strong> <a href="../diagramas-c4/#diagrama-c4---componentes">Diagrama C4 – Componentes</a></p>
 <h3 id="nivel-4-codigo">Nível 4 – Código</h3>
 <p>Neste nível, podem ser representados diagramas de classes ou entidades para os componentes mais importantes.</p>
 <p>No caso do Sistema COIN'S, recomenda-se a elaboração de um Diagrama de Entidade-Relacionamento (DER) com base no schema do banco SQLite3, destacando tabelas, colunas e relacionamentos. </p>
@@ -2856,7 +2883,7 @@ O sistema é distribuído como um executável único via Electron Forge, contend
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="3 de junho de 2026 01:08:52 UTC">3 de junho de 2026 01:08:52</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="9 de junho de 2026 00:00:57 UTC">9 de junho de 2026 00:00:57</span>
   </span>
 
     
