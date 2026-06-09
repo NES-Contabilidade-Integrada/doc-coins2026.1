@@ -48,7 +48,7 @@ Use a hierarquia de títulos de forma **semântica e consistente**:
 - Use H2 para seções principais
 - Use H3 para subseções
 - Use H4+ para detalhes e especificações
-- Evite repetir o nome do projeto **COINS** no título principal, no nome do documento ou na etiqueta de navegação quando o repositório já identifica o projeto
+- **Nunca inclua "COIN'S" ou "COINS" no título (`#`) de nenhum documento** — o repositório já pertence ao projeto, tornando o nome redundante. Exceção: `docs/index.md`, que é a homepage e apresenta o projeto pelo nome completo.
 
 ---
 

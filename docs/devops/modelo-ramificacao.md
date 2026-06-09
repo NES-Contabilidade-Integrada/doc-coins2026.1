@@ -1,63 +1,76 @@
 # Modelo de Ramificação
 
-O modelo de ramificação utilizado no projeto COINS é o **GitFlow**. Este modelo organiza o desenvolvimento em torno de duas branches principais com ciclos de vida infinitos e várias branches de suporte para facilitar o desenvolvimento paralelo e a entrega contínua.
+## Histórico de Versões
+
+| Versão | Data | Descrição | Autor |
+| :---: | :---: | :--- | :--- |
+| 1.0 | 02/06/2026 | Criação do documento | Amanda Caroline de Gois Balcaçar |
+
+## Histórico de Revisões
+
+| Versão | Data | Revisor | Observação |
+| :---: | :---: | :--- | :--- |
+
+---
+
+## Introdução
+
+O modelo de ramificação utilizado no projeto COIN'S é o **GitFlow**. Este modelo organiza o desenvolvimento em torno de duas branches principais com ciclos de vida infinitos e várias branches de suporte para facilitar o desenvolvimento paralelo e a entrega contínua.
+
+---
+
+## Diagrama
 
 ```mermaid
 gitGraph
-    %% 1. Estado Inicial
     commit id: "Inicial" tag: "v1.0.0"
 
-    %% 2. Base de desenvolvimento
-    branch develop
+    branch develop order: 3
     checkout develop
     commit id: "Ajuste develop"
 
-    %% 3. Feature com Subtasks A e B
-    branch feature
-    checkout feature
-    commit id: "Feature Start"
+    branch feature/funcionalidade order: 4
+    checkout feature/funcionalidade
+    commit id: "Início da feature"
 
-    branch subtaskA
-    checkout subtaskA
+    branch subtask/tarefa-a order: 5
+    checkout subtask/tarefa-a
     commit id: "Tarefa A"
 
-    checkout feature
-    branch subtaskB
-    checkout subtaskB
+    checkout feature/funcionalidade
+    branch subtask/tarefa-b order: 6
+    checkout subtask/tarefa-b
     commit id: "Tarefa B"
 
-    %% Finalizando Subtasks na Feature
-    checkout feature
-    merge subtaskA
-    merge subtaskB
-    commit id: "Feature Done"
+    checkout feature/funcionalidade
+    merge subtask/tarefa-a
+    merge subtask/tarefa-b
+    commit id: "Feature concluída"
 
-    %% 4. Finalizando a Feature na Develop
     checkout develop
-    merge feature
+    merge feature/funcionalidade
 
-    %% 5. Hotfix (Direto da Main)
-    checkout main
-    branch hotfix
-    checkout hotfix
-    commit id: "Fix Urgente"
+    branch release/1.1.0 order: 2
+    checkout release/1.1.0
+    commit id: "Preparação da release"
 
-    %% 6. Finalizando Hotfix (Main e Develop)
     checkout main
-    merge hotfix tag: "v1.0.1"
+    merge release/1.1.0 tag: "v1.1.0"
     checkout develop
-    merge hotfix
+    merge release/1.1.0
 
-    %% 7. Release Branch
-    checkout develop
-    branch "release-1.1.0"
-    checkout "release-1.1.0"
-    commit id: "Finalizando Release"
-
-    %% 8. Finalizando Release (Main e Develop)
     checkout main
-    merge "release-1.1.0" tag: "v1.1.0"
+    branch hotfix/correcao order: 1
+    checkout hotfix/correcao
+    commit id: "Correção urgente"
+
+    checkout main
+    merge hotfix/correcao tag: "v1.1.1"
+    checkout develop
+    merge hotfix/correcao
 ```
+
+---
 
 ## Branches Principais
 
@@ -70,6 +83,8 @@ gitGraph
 
 - **Propósito**: Integração de todas as funcionalidades prontas para o próximo ciclo de entrega. É a branch principal de trabalho da equipe.
 - **Processo**: Recebe _merges_ contínuos das branches de `feature` concluídas. É onde os testes integrados são realizados.
+
+---
 
 ## Branches de Suporte
 

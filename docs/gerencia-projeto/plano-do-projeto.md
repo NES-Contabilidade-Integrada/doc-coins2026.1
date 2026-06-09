@@ -6,8 +6,8 @@
 | :---: | :---: | :---: | :---: |
 | 1.0 | 23/03/2026 |  | Elise Lissa Hasegawa |
 | 1.1 | 22/04/2026 |  | Elise Lissa Hasegawa |
-| 3.0 |  |  |  |
-| 3.1 |  |  |  |
+| 3.0 | 01/06/2026 | Atualização do cronograma e da tabela de Funcionalidades de Consolidação para registrar entrega da Exportação de Relatórios Contábeis nas Sprints 2 e 3 | Fernanda Pessoa |
+| 3.1 | 06/06/2026 | Reversão do cronograma ao planejamento original; atualização dos sprints na tabela de Funcionalidades de Consolidação para refletir o plano inicial | Fernanda Pessoa |
 
 **Histórico de Revisão**
 
@@ -23,11 +23,13 @@
 
 [3\. Escopo do Projeto	3](#escopo-do-projeto)
 
-[2.1 Funcionalidades do MVP (Versão Inicial)	3](#2.1-funcionalidades-do-mvp-\(versão-inicial---2025.2\))
+[2.1 Funcionalidades do MVP	3](#2.1-funcionalidades-do-mvp)
 
-[2.2 Funcionalidades Complementares (Pós-MVP)	4](#2.2-funcionalidades-de-expansão-\(2026.1\))
+[2.2 Funcionalidades Complementares ao MVP	4](#2.2-funcionalidades-complementares-ao-mvp)
 
-[2.3 Incrementos Planejados	5](#2.3-incrementos-planejados)
+[2.3 Funcionalidades de Consolidação	4](#2.3-funcionalidades-de-consolidação)
+
+[2.4 Incrementos para Próximas Versões	5](#2.4-incrementos-para-próximas-versões)
 
 [4\. Equipe e Infraestrutura	6](#equipe-e-infraestrutura)
 
@@ -51,14 +53,12 @@
 
 [14\. Análise de Viabilidade e Comprometimento	12](#análise-de-viabilidade-e-comprometimento)
 
-## 
-
 ## Introdução {#introdução}
-Este documento apresenta o Plano de Projeto para o desenvolvimento do Sistema COIN’S (Contabilidade Integrada). O sistema tem como objetivo oferecer uma plataforma prática e didática para que os alunos dos primeiros semestres do curso de Ciências Contábeis da UFMS tenham um contato inicial com as práticas contábeis.  
-Atualmente, os softwares contábeis avançados são utilizados apenas nos últimos semestres do curso. O COIN’S busca preencher essa lacuna, proporcionando aos alunos uma experiência introdutória que facilita a compreensão dos conceitos básicos e serve como motivação para o aprendizado contínuo.
+Este documento apresenta o Plano de Projeto para o desenvolvimento do Sistema COIN'S (Contabilidade Integrada). O sistema tem como objetivo oferecer uma plataforma prática e didática para que os alunos dos primeiros semestres do curso de Ciências Contábeis da UFMS tenham um contato inicial com as práticas contábeis.  
+Atualmente, os softwares contábeis avançados são utilizados apenas nos últimos semestres do curso. O COIN'S busca preencher essa lacuna, proporcionando aos alunos uma experiência introdutória que facilita a compreensão dos conceitos básicos e serve como motivação para o aprendizado contínuo.
 
 ## Proponentes {#proponentes}
-Os proponentes são os responsáveis por solicitar, validar e acompanhar o desenvolvimento do Sistema COIN’S ao longo do semestre, atuando como representantes do curso de Ciências Contábeis e garantindo alinhamento acadêmico-pedagógico do projeto.
+Os proponentes são os responsáveis por solicitar, validar e acompanhar o desenvolvimento do Sistema COIN'S ao longo do semestre, atuando como representantes do curso de Ciências Contábeis e garantindo alinhamento acadêmico-pedagógico do projeto.
 
 | Nome | Telefone | E-mail |
 | :---- | :---- | :---- |
@@ -66,53 +66,78 @@ Os proponentes são os responsáveis por solicitar, validar e acompanhar o desen
 | Aluno Jean Pleutim | \+55 67 9208-3908 | jean\_pleutim@ufms.br |
 
 ## Escopo do Projeto {#escopo-do-projeto}
-O escopo do Sistema COIN’S define as funcionalidades que serão desenvolvidas ao longo do projeto, seguindo um plano incremental baseado na priorização definida durante a entrevista com o proponente. O desenvolvimento será dividido em etapas, dando continuidade à implementação do sistema que iniciou em 2025\.
+O escopo do Sistema COIN'S define as funcionalidades que serão desenvolvidas ao longo do projeto, seguindo um plano incremental baseado na priorização definida durante a entrevista com o proponente. O desenvolvimento será dividido em etapas, dando continuidade à implementação do sistema que iniciou em 2025\.
 
-### 2.1 Funcionalidades do MVP (Versão Inicial \- 2025.2) As funcionalidades essenciais que compõem o MVP são:
+### 2.1 Funcionalidades do MVP
+
+As funcionalidades essenciais que compõem o MVP, entregues em 2025/2, são:
 
 * **Exibição do Plano de Contas Padrão:** Disponibilizar um plano de contas pré-definido para consulta pelos usuários.  
 * **Gerenciamento de Lançamentos Contábeis:** Permitir o cadastro, edição, exclusão e consulta dos lançamentos contábeis seguindo o Plano de Contas Padrão.  
 * **Visualização de Lançamentos no Livro Diário:** Exibir, de forma organizada, todos os lançamentos registrados no sistema.
 
-| Épico | Funcionalidade | Link de Acesso | Status |
+| Módulo | Funcionalidade | Link de Acesso | Status |
 | :---- | :---- | :---- | :---- |
-| Épico 1 \- Plano de Contas | Exibição do Plano de Contas Padrão | [https://github.com/NES-Contabilidade-Integrada/coins/issues/11](https://github.com/NES-Contabilidade-Integrada/coins/issues/11)  | Implementado Anteriormente |
-| Épico 2 \- Empresa | Gerenciamento de Lançamentos Contábeis | [https://github.com/NES-Contabilidade-Integrada/coins/issues/12](https://github.com/NES-Contabilidade-Integrada/coins/issues/12)  | Implementado Anteriormente |
-| Épico 2 \- Empresa | Visualização de Lançamentos no Livro Diário | [https://github.com/NES-Contabilidade-Integrada/coins/issues/12](https://github.com/NES-Contabilidade-Integrada/coins/issues/12)  | Implementado Anteriormente |
+| Módulo 1 \- Plano de Contas | Exibição do Plano de Contas Padrão | [https://github.com/NES-Contabilidade-Integrada/coins/issues/11](https://github.com/NES-Contabilidade-Integrada/coins/issues/11) | Implementado |
+| Módulo 2 \- Livro Diário | Gerenciamento de Lançamentos Contábeis | [https://github.com/NES-Contabilidade-Integrada/coins/issues/12](https://github.com/NES-Contabilidade-Integrada/coins/issues/12) | Implementado |
+| Módulo 2 \- Livro Diário | Visualização de Lançamentos no Livro Diário | [https://github.com/NES-Contabilidade-Integrada/coins/issues/12](https://github.com/NES-Contabilidade-Integrada/coins/issues/12) | Implementado |
 
 
-### 2.2 Funcionalidades de expansão (2026.1) As funcionalidades complementares agregam valor ao sistema e serão desenvolvidas após a entrega do MVP:
+### 2.2 Funcionalidades Complementares ao MVP
 
-* **Transferência Automática para o Livro Razão:** Realizar a movimentação dos lançamentos do Livro Diário para o Livro Razão.  
-* **Geração do Balancete de Verificação:** Permitir a conferência dos saldos contábeis por meio da exibição do balancete detalhado em tela.  
-* **Apuração do Resultado do Exercício:** Calcular automaticamente o resultado do exercício com base nos dados registrados e apresentar o resultado final na interface do sistema.  
-* **Geração da Demonstração do Resultado do Exercício (DRE)**: Criar automaticamente o demonstrativo de resultados com base nos lançamentos contábeis e exibi-lo de forma estruturada em tela.  
-* **Geração do Balanço Patrimonial**: Elaborar o balanço patrimonial de forma automatizada a partir dos dados registrados e apresentá-lo visualmente na interface.  
+Funcionalidades implementadas em 2025/2 que não integravam o escopo do MVP, mas foram entregues naquele semestre, ampliando a base do sistema:
+
+* **Transferência Automática para o Livro Razão:** Realizar a movimentação dos lançamentos do Livro Diário para o Livro Razão.
+* **Geração do Balancete de Verificação:** Permitir a conferência dos saldos contábeis por meio da exibição do balancete detalhado em tela.
+
+| Módulo | Funcionalidade | Link de Acesso | Status |
+| :---- | :---- | :---- | :---- |
+| Módulo 3 \- Livro Razão | Transferência para o Livro Razão | [https://github.com/NES-Contabilidade-Integrada/coins/issues/87](https://github.com/NES-Contabilidade-Integrada/coins/issues/87) | Implementado |
+| Módulo 4 \- Balancete de Verificação | Geração do Balancete de Verificação | [https://github.com/NES-Contabilidade-Integrada/coins/issues/38](https://github.com/NES-Contabilidade-Integrada/coins/issues/38) | Implementado |
+
+### 2.3 Funcionalidades de Consolidação
+
+Funcionalidades implementadas em 2026.1 que encerram o ciclo contábil do sistema, tornando-o completo e autônomo:
+
+* **Apuração do Resultado do Exercício:** Calcular automaticamente o resultado do exercício com base nos dados registrados e apresentar o resultado final na interface do sistema.
+* **Geração da Demonstração do Resultado do Exercício (DRE)**: Criar automaticamente o demonstrativo de resultados com base nos lançamentos contábeis e exibi-lo de forma estruturada em tela.
+* **Geração do Balanço Patrimonial**: Elaborar o balanço patrimonial de forma automatizada a partir dos dados registrados e apresentá-lo visualmente na interface.
 * **Exportação de Relatórios Contábeis**: Permitir a exportação dos demonstrativos e relatórios para formatos compatíveis (ex.: PDF, XLSX).
 
-
-| Épico | Funcionalidade | Link de Acesso | Status |
+| Módulo | Funcionalidade | Link de Acesso | Status |
 | :---- | :---- | :---- | :---- |
-| Épico 3 \- Livro Razão | Transferência para o Livro Razão | [https://github.com/NES-Contabilidade-Integrada/coins/issues/87](https://github.com/NES-Contabilidade-Integrada/coins/issues/87)  | Implementado Anteriormente |
-| Épico 4 \- Balancete de Verificação | Geração do Balancete de Verificação | [https://github.com/NES-Contabilidade-Integrada/coins/issues/38](https://github.com/NES-Contabilidade-Integrada/coins/issues/38)  | Implementado Anteriormente |
-| Não existente | Apuração do Resultado do Exercício | Não existente | Implementado na Sprint 1 |
-| Não existente | Geração da Demonstração do Resultado do Exercício (DRE) | Não existente | A ser implementado |
-| Não existente | Geração do Balanço Patrimonial | Não existente | A ser implementado |
-| Não existente | Exportação de Relatórios Contábeis | Não existente | Próximas versões |
+| Módulo 5 \- Apuração | Apuração do Resultado do Exercício | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/33](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/33) | Implementado - Sprint 2 |
+| Módulo 6 \- Demonstração do Resultado do Exercício | Geração da Demonstração do Resultado do Exercício (DRE) | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/99](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/99) | Implementado - Sprint 3 |
+| Módulo 7 \- Balanço Patrimonial | Geração do Balanço Patrimonial | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197) | Implementado |
+| Módulo 6 \- Demonstração do Resultado do Exercício | Exportação de Relatórios Contábeis (DRE) | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/99](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/99) | Implementado - Sprint 3 |
+| Módulo 7 \- Balanço Patrimonial | Exportação de Relatórios Contábeis (Balanço Patrimonial) | [https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197](https://github.com/NES-Contabilidade-Integrada/coins2026.1/issues/197) | Implementado |
 
-### 
+_Observação: inicialmente, a Exportação de Relatórios Contábeis foi planejada como uma funcionalidade independente. Durante o desenvolvimento, optou-se por acoplar a exportação diretamente ao módulo correspondente, tornando-a parte integrante de cada demonstrativo._
 
-### 2.3 Incrementos Planejados Os incrementos planejados consistem em funcionalidades adicionais previstas para versões futuras, visando ampliar a flexibilidade e a interatividade do sistema:
+### 2.4 Melhorias e Correções Estruturais
+
+Além das novas funcionalidades de consolidação, em 2026/1 foram realizadas melhorias estruturais e correções de bugs identificados no semestre anterior:
+
+| Melhoria | Descrição | Status |
+| :---- | :---- | :---- |
+| Executável como ícone único | O instalador passou a gerar um único arquivo executável com ícone próprio, eliminando a necessidade de extração de zip. | Implementado |
+| Testes automatizados E2E | Implementação de testes end-to-end com Playwright cobrindo as funcionalidades críticas do sistema. | Implementado |
+| Compatibilidade com versões anteriores | Correção de incompatibilidade de banco de dados que impedia o sistema de funcionar com dados gerados por versões anteriores. | Implementado |
+| Correções de bugs | Bugs identificados e registrados ao longo de 2025/2 foram corrigidos na Sprint 0 de 2026/1. | Implementado |
+
+### 2.5 Incrementos para Próximas Versões
+
+Os incrementos planejados consistem em funcionalidades adicionais previstas para versões futuras, visando ampliar a flexibilidade e a interatividade do sistema:
 
 * **Gerenciamento Personalizado de Contas:** Permitir a inclusão, edição e exclusão de novas contas no plano contábil de acordo com a necessidade do usuário, sem alterar as contas estáticas do plano.  
 * **Importação e Exportação de Dados Empresariais:** Facilitar a integração de dados com outros sistemas por meio da importação e exportação de informações das empresas.  
 * **Gerenciamento de Empresas:** Cadastrar, atualizar, listar e excluir dados de empresas no sistema.
 
-| Épico | Funcionalidade | Link de Acesso | Status |
+| Módulo | Funcionalidade | Link de Acesso | Status |
 | :---- | :---- | :---- | :---- |
-| Não existente | Gerenciamento Personalizado de Contas | Não existente | Próximas versões |
-| Não existente | Importação e Exportação de Dados Empresariais | Não existente | Próximas versões |
-| Não existente | Gerenciamento de Empresas | Não existente | Próximas versões |
+| — | Gerenciamento Personalizado de Contas | — | Próximas versões |
+| — | Importação e Exportação de Dados Empresariais | — | Próximas versões |
+| — | Gerenciamento de Empresas | — | Próximas versões |
 
 ## Equipe e Infraestrutura {#equipe-e-infraestrutura}
    
@@ -133,12 +158,12 @@ O escopo do Sistema COIN’S define as funcionalidades que serão desenvolvidas 
 ## Cronograma do Projeto {#cronograma-do-projeto}
    
 
-| Sprint | Período | Funcionalidade | Feature |
-| :---- | :---- | :---- | :---- |
-| Sprint 0 | 02 a 26/03 | Levantamento de requisitos e resolução de bugs. |   |
-| Sprint 1 | 30/03 a 16/04 | Apuração do Resultado do Exercício |  |
-| Sprint 2 | 22/04 a 11/05 | Geração da Demonstração do Resultado do Exercício (DRE) |  |
-| Sprint 3 | 12/05 a 01/06 | Geração do Balanço Patrimonial  |  |
+| Sprint | Período | Funcionalidade |
+| :---- | :---- | :---- |
+| Sprint 0 | 02 a 26/03 | Descoberta e levantamento de requisitos |
+| Sprint 1 | 30/03 a 16/04 | Correção de bugs e melhorias estruturais |
+| Sprint 2 | 22/04 a 11/05 | Apuração do Resultado do Exercício |
+| Sprint 3 | 12/05 a 01/06 | Demonstração do Resultado do Exercício (DRE) |
 
  
 
@@ -206,66 +231,64 @@ O escopo do Sistema COIN’S define as funcionalidades que serão desenvolvidas 
 | Banco de Dados | SQLite  | Banco local simples, leve e adequado ao propósito educacional do sistema |
 | Sprint Retrospective | Miro | Utilizado para conduzir retrospectivas visuais e colaborativas, facilitando discussões da equipe. |
 
-    **9.1 Preparação do ambiente de desenvolvimento**
+### 9.1 Preparação do Ambiente de Desenvolvimento
 
-    O COIN’S é um aplicativo desktop, executado localmente. Para executar o sistema, basta seguir o passo a passo descrito no arquivo README.md do repositório oficial: 
+O COIN’S é distribuído como um **executável instalável** — o usuário final não precisa configurar nenhum ambiente. O instalador está disponível na página de [Releases do repositório](https://github.com/NES-Contabilidade-Integrada/coins2026.1/releases/latest).
 
-    [https://github.com/NES-Contabilidade-Integrada/coins/blob/main/README.md](https://github.com/NES-Contabilidade-Integrada/coins/blob/main/README.md) 
+Para quem precisa **gerar o executável**, o processo completo está documentado em: [Geração do Executável](https://nes-contabilidade-integrada.github.io/doc-coins2026.1/devops/geracao-executavel/)
 
-    
+Para **configurar o ambiente de desenvolvimento** — instalação de dependências, execução em modo desenvolvimento e geração do build — o passo a passo está no README do repositório de código:
 
-    Link da geração do executável:
+[https://github.com/NES-Contabilidade-Integrada/coins2026.1](https://github.com/NES-Contabilidade-Integrada/coins2026.1)
 
-    [https://docs.google.com/document/d/1b\_eht1n-qZuhE2UQDKL7gDRMEorrpAL0xdJHC\_dhaDc/edit?usp=drive\_link](https://docs.google.com/document/d/1b_eht1n-qZuhE2UQDKL7gDRMEorrpAL0xdJHC_dhaDc/edit?usp=drive_link) 
 
-    
 
 ## Projeto de Interface e Interação {#projeto-de-interface-e-interação}
-    Os protótipos de interface foram desenvolvidos no Figma e validados com os proponentes ao longo das sprints. Estes protótipos serviram como base para a construção das telas do sistema. Além disso, antes de serem criados protótipos, trabalhamos com Sketchs (esboços a mão) para validar as ideias iniciais.   
-      
-    Sketchs disponíveis em: [https://drive.google.com/drive/folders/16aMUyvXe49CFAoiDYZO-J0BOQJ\_HPYPh?usp=sharing](https://drive.google.com/drive/folders/16aMUyvXe49CFAoiDYZO-J0BOQJ_HPYPh?usp=sharing)   
-      
-    Protótipos disponíveis em:  
-    [https://www.figma.com/design/Z3hfLoenhr73I3u5BRU5lP/COIN-S---Contabilidade-Integrada?node-id=199-2979\&t=s9hH0eGFNNkmnlwo-1](https://www.figma.com/design/Z3hfLoenhr73I3u5BRU5lP/COIN-S---Contabilidade-Integrada?node-id=199-2979&t=s9hH0eGFNNkmnlwo-1)  
-      
-    O processo de prototipação e validação  segue o fluxo definido em BPMN, garantindo clareza no de validação com os proponentes.  
-      
-    Modelo BPMN do fluxo de interação:  
-    [https://drive.google.com/drive/folders/1HkFLJtOT9pKymSfiwGUwvJVbgP38gO9e](https://drive.google.com/drive/folders/1HkFLJtOT9pKymSfiwGUwvJVbgP38gO9e)   
-    
+
+Os protótipos de interface foram desenvolvidos no Figma e validados com os proponentes ao longo das sprints. Estes protótipos serviram como base para a construção das telas do sistema. Além disso, antes de serem criados protótipos, trabalhamos com esboços a mão para validar as ideias iniciais.
+
+Sketchs disponíveis em: [https://drive.google.com/drive/folders/16aMUyvXe49CFAoiDYZO-J0BOQJ\_HPYPh?usp=sharing](https://drive.google.com/drive/folders/16aMUyvXe49CFAoiDYZO-J0BOQJ_HPYPh?usp=sharing)
+
+Protótipos disponíveis em: [https://www.figma.com/design/Z3hfLoenhr73I3u5BRU5lP/COIN-S---Contabilidade-Integrada?node-id=199-2979\&t=s9hH0eGFNNkmnlwo-1](https://www.figma.com/design/Z3hfLoenhr73I3u5BRU5lP/COIN-S---Contabilidade-Integrada?node-id=199-2979&t=s9hH0eGFNNkmnlwo-1)
+
+O fluxo de interação do usuário com o sistema está documentado no Fluxograma da Jornada do Usuário.
+
+Fluxograma da Jornada do Usuário: [Jornada do Usuário](https://nes-contabilidade-integrada.github.io/doc-coins2026.1/ihc/jornada-usuario/)
+
 
 ## Arquitetura de Software {#arquitetura-de-software}
-    A arquitetura do Sistema COIN’S está detalhada no artefato específico dedicado à Arquitetura de Software, que descreve os componentes, camadas, interações e decisões arquiteturais adotadas.  
-    Este plano de projeto apenas referencia esse documento como a fonte oficial das definições arquiteturais.  
-      
-    Documentação completa disponível em: [https://docs.google.com/document/d/14JxRcIGH7QDPQTHxo652JSl\_OJUCMZCo/edit?usp=drive\_link\&ouid=108261102528406926829\&rtpof=true\&sd=true](https://docs.google.com/document/d/14JxRcIGH7QDPQTHxo652JSl_OJUCMZCo/edit?usp=drive_link&ouid=108261102528406926829&rtpof=true&sd=true)   
-    
+
+A arquitetura do Sistema COIN’S está detalhada no artefato específico dedicado à Arquitetura de Software, que descreve os componentes, camadas, interações e decisões arquiteturais adotadas.
+
+Este plano de projeto apenas referencia esse documento como a fonte oficial das definições arquiteturais.
+
+Documentação completa disponível em: [Especificação Arquitetural](https://nes-contabilidade-integrada.github.io/doc-coins2026.1/arquitetura/especificacao-arquitetural/)
+
 
 ## Validação, Verificação & Teste {#validação,-verificação-&-teste}
-      
-    A estratégia de Validação e Verificação do Sistema COIN’S foi definida para garantir que todas as funcionalidades atendam aos requisitos especificados e que o sistema opere de forma estável, coerente e alinhada ao objetivo educacional do projeto.  
-    Os artefatos oficiais de teste estão distribuídos da seguinte forma:  
-      
-    **Plano de testes:**   
-    Documento que descreve a estratégia geral de testes, tipos aplicados, critérios de entrada/saída e abordagem adotada.   
-    [Plano do Projeto](https://docs.google.com/document/d/1XogaSN2T2aq22X2BNMwlFlzndOfwDwhcQEkXrJsNhKw/edit?usp=sharing)  
-      
-    **Matriz de rastreabilidade:**   
-    Responsável por mapear requisitos funcionais aos casos de teste e às evidências de execução, garantindo rastreabilidade completa entre o escopo e as validações.   
-      
-    **Casos de teste:**  
-    	Testes E2E com Playwright.  
-    [Casos de teste - E2E](https://docs.google.com/document/d/1_fC4yM7P6VXOWBw06KzTC0eE3m--QW6s4Vxe3CA8QaQ/edit?usp=sharing)  
-      
-    **Issues registradas no Github:**  
-    Os bugs foram registradas como Issues no GitHub, sendo visualizadas com o filtro *is:issue type:Bug*  
-    [https://github.com/orgs/NES-Contabilidade-Integrada/projects/9/views/1](https://github.com/orgs/NES-Contabilidade-Integrada/projects/9/views/1)   
-    
+
+A estratégia de Validação e Verificação do Sistema COIN’S foi definida para garantir que todas as funcionalidades atendam aos requisitos especificados e que o sistema opere de forma estável, coerente e alinhada ao objetivo educacional do projeto.
+
+Os artefatos oficiais de teste estão distribuídos da seguinte forma:
+
+**Plano de testes:**
+Documento que descreve a estratégia geral de testes, tipos aplicados, critérios de entrada/saída e abordagem adotada.
+[Plano do Projeto](https://docs.google.com/document/d/1XogaSN2T2aq22X2BNMwlFlzndOfwDwhcQEkXrJsNhKw/edit?usp=sharing)
+
+**Casos de teste:**
+Testes E2E com Playwright.
+[Casos de teste - E2E](https://docs.google.com/document/d/1_fC4yM7P6VXOWBw06KzTC0eE3m--QW6s4Vxe3CA8QaQ/edit?usp=sharing)
+
+**Issues registradas no Github:**
+Os bugs foram registrados como Issues no GitHub, sendo visualizados com o filtro *is:issue type:Bug*
+[https://github.com/orgs/NES-Contabilidade-Integrada/projects/9/views/1](https://github.com/orgs/NES-Contabilidade-Integrada/projects/9/views/1)
+
 
 ## Análise de Viabilidade e Comprometimento {#análise-de-viabilidade-e-comprometimento}
-    Nesta seção é feito o registro da análise de viabilidade do projeto. A Tabela 8 apresenta cada aspecto avaliado e o resultado da análise.  
-      
-    
+
+Nesta seção é feito o registro da análise de viabilidade do projeto, apresentando cada aspecto avaliado e o resultado da análise.
+
+
 
 | Aspecto | É viável? | Justificativa |
 | :---- | :---- | :---- |

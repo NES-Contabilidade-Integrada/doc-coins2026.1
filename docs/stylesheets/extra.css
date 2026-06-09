@@ -1,0 +1,117 @@
+:root {
+  --md-primary-fg-color: #003649;
+  --md-primary-fg-color--light: #005270;
+  --md-primary-fg-color--dark: #002233;
+  --md-accent-fg-color: #0088B7;
+}
+
+/* Centralizar rodapé */
+.md-footer-meta__inner {
+  justify-content: center;
+  text-align: center;
+}
+
+/* Ocultar link "Made with Material for MkDocs" */
+.md-copyright__highlight a {
+  display: none;
+}
+.md-copyright__highlight::before {
+  content: none;
+}
+
+/* Headings uniformes em todas as páginas */
+.md-content h1,
+.md-content h2,
+.md-content h3,
+.md-content h4,
+.md-content h5,
+.md-content h6,
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  color: #003649 !important;
+}
+
+/* Cards de disciplinas menores */
+.md-typeset .grid.cards > ul > li {
+  padding: 0.6rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+/* Tabelas e abas centralizadas */
+.centered-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.centered-table table {
+  width: auto;
+  min-width: 400px;
+}
+
+.centered-table .tabbed-set {
+  width: 100%;
+  max-width: 600px;
+}
+
+.centered-table .tabbed-content table {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+
+.centered-table .tabbed-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Centralizar abas de navegação no header */
+.md-tabs__list {
+  justify-content: center;
+}
+
+/* Logo maior no header */
+.md-header__button.md-logo img {
+  height: 48px;
+  width: auto;
+}
+
+/* Coin spin on hover */
+.md-header__button.md-logo:hover {
+  opacity: 1;
+}
+
+.md-header__button.md-logo:hover .logo-coin {
+  animation: coin-spin 1.2s linear infinite;
+}
+
+@keyframes coin-spin {
+  0%   { transform: perspective(200px) rotateY(0deg); }
+  100% { transform: perspective(200px) rotateY(360deg); }
+}
+
+/* Logo NES FACOM inline com o copyright no rodapé */
+.md-copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.md-copyright::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-image: url('../assets/logo-nes-facom.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+  flex-shrink: 0;
+}

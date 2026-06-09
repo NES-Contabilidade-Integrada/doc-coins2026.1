@@ -77,19 +77,15 @@
 
 [**29\. Receita Operacional Líquida	8**](#receita-operacional-líquida)
 
-## 
+## Objetivos
 
-## **Objetivos**
-
-Este documento registra o glossário de termos do Sistema COIN’S (Contabilidade Integrada). Por meio dele, são especificados os termos contábeis de forma a explicar de forma clara e simples o significado de termos técnicos e jargões utilizados na área da contabilidade. Por meio deste, é possível facilitar a compreensão e a comunicação, tanto para profissionais da área quanto para pessoas alheias ao domínio contábil, como desenvolvedores. Dessa forma, atua como uma ferramenta de desmistificação e educação que transforma o que é complexo e técnico em algo compreensível para um público mais amplo, contribuindo para uma melhor gestão financeira e maior transparência.
+Este documento registra o glossário de termos do Sistema COIN'S (Contabilidade Integrada). Por meio dele, são especificados os termos contábeis de forma a explicar de forma clara e simples o significado de termos técnicos e jargões utilizados na área da contabilidade. Por meio deste, é possível facilitar a compreensão e a comunicação, tanto para profissionais da área quanto para pessoas alheias ao domínio contábil, como desenvolvedores. Dessa forma, atua como uma ferramenta de desmistificação e educação que transforma o que é complexo e técnico em algo compreensível para um público mais amplo, contribuindo para uma melhor gestão financeira e maior transparência.
 
 ## Apuração do Resultado do Exercício {#apuração-do-resultado-do-exercício}
 Processo de cálculo do lucro ou prejuízo obtido por uma empresa em determinado período contábil.
 
 ## Ativo {#ativo}
 Conjunto de bens e direitos da entidade, com capacidade de gerar benefícios econômicos futuros. Exemplo: caixa, estoque, veículos, contas a receber.
-
-Exemplo: caixa, estoque, veículos, contas a receber.
 
 Natureza: Devedora.
 
@@ -99,7 +95,7 @@ Relatório contábil que reúne os saldos de todas as contas em determinada data
 ## Balancete de Verificação {#balancete-de-verificação}
 Tipo específico de balancete que apresenta os saldos de todas as contas em determinado período, permitindo a conferência da igualdade entre débitos e créditos.
 
-No COIN’S, o balancete é gerado para uma empresa específica e é utilizado como instrumento de controle e verificação da consistência dos lançamentos.
+No COIN'S, o balancete é gerado para uma empresa específica e é utilizado como instrumento de controle e verificação da consistência dos lançamentos.
 
 ## Balanço Patrimonial {#balanço-patrimonial}
 Relatório contábil que apresenta, em determinada data, a posição patrimonial e financeira da empresa, estruturado em Ativo, Passivo e Patrimônio Líquido.
@@ -109,7 +105,7 @@ Evidencia, em um “retrato” de determinado momento, quais são os bens, direi
 ## Conta Analítica {#conta-analítica}
 Conta que não possui subdivisões e que pode ser utilizada diretamente em lançamentos contábeis.
 
-No sistema COIN’S, apenas contas analíticas são válidas para movimentações financeiras.
+No sistema COIN'S, apenas contas analíticas são válidas para movimentações financeiras.
 
 ## Conta Contábil {#conta-contábil}
 Elemento individual do Plano de Contas, que representa uma categoria de movimentação, como Caixa, Banco, Fornecedores, Clientes, etc.
@@ -153,7 +149,7 @@ Tributo federal que incide sobre o lucro das empresas, variando conforme o regim
 ## Lançamento Contábil {#lançamento-contábil}
 Registro de um fato contábil em livros ou sistemas, obedecendo ao método das partidas dobradas (um débito e um crédito de mesmo valor).
 
-No contexto do sistema COIN’S, é o registro de movimentação financeira em débito e crédito, sempre associado a contas do Plano de Contas e vinculado a uma empresa específica.
+No contexto do sistema COIN'S, é o registro de movimentação financeira em débito e crédito, sempre associado a contas do Plano de Contas e vinculado a uma empresa específica.
 
 ## Lançamento nos Razonetes {#lançamento-nos-razonetes}
 Representação visual, em forma de razonete (em “T”), dos lançamentos contábeis realizados, facilitando o estudo e a conferência dos débitos e créditos.
@@ -176,8 +172,6 @@ Natureza: Credora.
 
 ## Patrimônio Líquido {#patrimônio-líquido}
 Representa os recursos próprios da empresa, resultantes da diferença entre Ativo e Passivo. Inclui capital social, reservas e lucros ou prejuízos acumulados.
-
-Exemplo: caixa, estoque, veículos, contas a receber.
 
 Natureza: Credora.
 

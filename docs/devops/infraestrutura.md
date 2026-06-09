@@ -43,7 +43,7 @@
 
 === "Revisão do Copilot"
 
-    O GitHub Copilot foi integrado ao processo de desenvolvimento do sistema COINS com o objetivo de aprimorar a qualidade do código e aumentar a eficiência das revisões técnicas. A ferramenta atua como um mecanismo complementar de análise automatizada, auxiliando na identificação de problemas e na manutenção dos padrões estabelecidos neste documento.
+    O GitHub Copilot foi integrado ao processo de desenvolvimento do sistema COIN'S com o objetivo de aprimorar a qualidade do código e aumentar a eficiência das revisões técnicas. A ferramenta atua como um mecanismo complementar de análise automatizada, auxiliando na identificação de problemas e na manutenção dos padrões estabelecidos neste documento.
 
     ## Instruções do Copilot
 

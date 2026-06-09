@@ -1,6 +1,23 @@
 # Versionamento
 
+## Histórico de Versões
+
+| Versão | Data | Descrição | Autor |
+| :---: | :---: | :--- | :--- |
+| 1.0 | 02/06/2026 | Criação do documento | Amanda Caroline de Gois Balcaçar |
+
+## Histórico de Revisões
+
+| Versão | Data | Revisor | Observação |
+| :---: | :---: | :--- | :--- |
+
+---
+
+## Introdução
+
 O projeto adota o **Versionamento Semântico (SemVer)** para padronizar a evolução do software e comunicar claramente o impacto de cada alteração.
+
+---
 
 ## Estrutura da Versão
 
@@ -31,7 +48,7 @@ No fluxo do projeto, as tags são aplicadas nos momentos de **Release** e **Hotf
 !!! info "Importante"
 As tags devem ser sempre prefixadas com a letra `v` (ex: `v1.0.4`). Elas funcionam como "fotografias" do estado do código em um momento específico do tempo, garantindo que possamos voltar a qualquer versão estável se necessário.
 
-### Exemplo de Fluxo:
+### Exemplo de Fluxo
 
 1. Começamos em `v1.0.0`.
 2. Adicionamos uma tela de login -> vira `v1.1.0` (MINOR).
