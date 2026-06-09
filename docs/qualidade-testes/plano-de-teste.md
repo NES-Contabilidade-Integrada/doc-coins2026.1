@@ -4,7 +4,9 @@
 
 | Versão | Data | Descrição | Autor |
 | :---: | :---: | :--- | :--- |
-| 1.0 | 09/06/2026 | Criação do documento | Amanda Gois |
+| 1.0 | 25/03/2026 | Criação do plano inicial com análise da situação atual | Amanda Gois |
+| 1.1 | 15/04/2026 | Atualização do conteúdo sobre o plano | Amanda Gois |
+| 1.2 | 09/06/2026 | Reestruturação no padrão IEEE 829; cobertura completa dos 466 testes automatizados | Amanda Gois |
 
 ## Histórico de Revisões
 
@@ -20,31 +22,33 @@
 
 [2. Introdução](#introdução)
 
-[3. Itens de Teste](#itens-de-teste)
+[3. Análise da Situação Atual](#análise-da-situação-atual)
 
-[4. Funcionalidades a Testar](#funcionalidades-a-testar)
+[4. Itens de Teste](#itens-de-teste)
 
-[5. Funcionalidades a Não Testar](#funcionalidades-a-não-testar)
+[5. Funcionalidades a Testar](#funcionalidades-a-testar)
 
-[6. Abordagem de Teste](#abordagem-de-teste)
+[6. Funcionalidades a Não Testar](#funcionalidades-a-não-testar)
 
-[7. Critérios de Entrada e Saída](#critérios-de-entrada-e-saída)
+[7. Abordagem de Teste](#abordagem-de-teste)
 
-[8. Critérios de Aprovação e Reprovação](#critérios-de-aprovação-e-reprovação)
+[8. Critérios de Entrada e Saída](#critérios-de-entrada-e-saída)
 
-[9. Critérios de Suspensão e Retomada](#critérios-de-suspensão-e-retomada)
+[9. Critérios de Aprovação e Reprovação](#critérios-de-aprovação-e-reprovação)
 
-[10. Entregas do Teste](#entregas-do-teste)
+[10. Critérios de Suspensão e Retomada](#critérios-de-suspensão-e-retomada)
 
-[11. Ambiente de Teste](#ambiente-de-teste)
+[11. Entregas do Teste](#entregas-do-teste)
 
-[12. Responsabilidades](#responsabilidades)
+[12. Ambiente de Teste](#ambiente-de-teste)
 
-[13. Riscos e Mitigações](#riscos-e-mitigações)
+[13. Responsabilidades](#responsabilidades)
 
-[14. Cronograma](#cronograma)
+[14. Riscos e Mitigações](#riscos-e-mitigações)
 
-[15. Aprovação](#aprovação)
+[15. Cronograma](#cronograma)
+
+[16. Aprovação](#aprovação)
 
 ## Identificação {#identificação}
 
@@ -78,6 +82,12 @@ O plano cobre todos os módulos funcionais da aplicação desktop (Electron + Vu
 - Playwright Testing Library Documentation
 - Jest Testing Framework Documentation
 - Código-fonte: `my-app/playwright/specs/` e `my-app/main/tests/`
+
+## Análise da Situação Atual {#análise-da-situação-atual}
+
+Antes da implementação da suite Playwright, a cobertura de testes do sistema era composta exclusivamente por testes unitários desenvolvidos com Jest. Esses testes validavam funções isoladas, cálculos e componentes do React, mas deixavam uma lacuna na validação de fluxos completos de usuário e na integração real entre o frontend (Renderer) e o backend (Main/Electron).
+
+A introdução do Playwright como ferramenta de automação de interface endereçou essa lacuna, viabilizando testes funcionais, de integração, de aceitação e E2E diretamente sobre o aplicativo Electron empacotado.
 
 ## Itens de Teste {#itens-de-teste}
 
@@ -190,6 +200,7 @@ Cobrem lógica de negócio, serviços e controllers do processo main.
 | Múltiplas empresas simultâneas | Fora do escopo desta versão |
 | Integração com sistemas externos | Não previsto para 2026.1 |
 | Testes de carga / performance | Sistema desktop mono-usuário |
+| Testes de rede e latência | Executável opera majoritariamente offline; chamadas locais tornam testes de latência de rede irrelevantes |
 | Testes de segurança (pentest) | Cobertos por processo separado |
 | Backup e restauração de banco | Fora do escopo desta iteração |
 
@@ -216,8 +227,10 @@ A estratégia adota a pirâmide de testes:
 ### Abordagem de Dados de Teste
 
 - **Fixtures JSON:** dados contábeis padronizados em `playwright/fixtures/`.
-- **Setup/Teardown:** cada suite cria e remove seus próprios lançamentos via `beforeAll`/`afterAll`.
+- **Setup/Teardown:** cada suite cria e remove seus próprios lançamentos via `beforeAll`/`afterAll` através do script `e2e/utils/app.fixture.ts`.
 - **Estado isolado:** testes não dependem de dados persistentes entre suites.
+- **Page Objects (`e2e/pages/`):** 7 classes que centralizam seletores da interface (ex: `JournalPage`, `CompanyPage`), permitindo atualizações de UI sem quebrar múltiplos testes.
+- **Funções globais (`e2e/utils/globalFunctions.ts`):** central de utilitários compartilhados por toda a suite.
 
 ### Ferramentas
 
