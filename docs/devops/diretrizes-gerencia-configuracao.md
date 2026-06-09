@@ -5,17 +5,20 @@
 | Versão | Data | Descrição | Autor |
 | :---: | :---: | :--- | :--- |
 | 1.0 | 12/08 | Definição inicial | Wagner Rodrigues |
-| 1.1 | 17/10 |  | Wagner Rodrigues da Silva |
-| 1.2 |  | Revisão do Copilot | Wagner Rodrigues da Silva |
+| 1.1 | 17/10 |  Adição de Informações | Wagner Rodrigues da Silva |
+| 1.2 | 20/10 | Revisão do Copilot | Wagner Rodrigues da Silva |
 | 1.2.1 | 10/03 | Atualização do Modelo e adição de Versionamento | Amanda Caroline de Gois |
-| 1.2.1 | 15/04 | Atualiza build automatico e modelo branch | Amanda Caroline de Gois Balcaçar |
+| 1.2.1 | 15/04/2026 | Atualiza build automatico e modelo branch | Amanda Gois |
+| 1.2.2 | 09/06/2026 | Adiciona release-candidate como trigger de build automático | Amanda Gois |
 
 ## Histórico de Revisões
 
 | Versão | Data | Revisor | Observação |
 | :---: | :---: | :--- | :--- |
-| 1.0 | 27/08 | Pedro Nicoletti | Aprovada |
-|  |  | Maria Istela | Aprovada |
+| 1.0 | 27/08 | Pedro Nicoletti | Aprovado |
+| 1.2.1 | 27/08 | Pedro Nicoletti | Aprovado |
+| 1.2.2 | 09/06/2026 | Vinicius Carneiro | Aprovado |
+
 
 ---
 
