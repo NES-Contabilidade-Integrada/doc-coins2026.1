@@ -53,7 +53,10 @@ nav:
       - Documentação do Modelo de Dados: banco-de-dados/documentacao-modelo-dados.md
       - Dicionário de Dados: banco-de-dados/dicionario-dados.md
   - Qualidade e Testes:
-      - Plano de Testes: qualidade-testes/plano-de-testes.md
+      - Plano de Testes (legado): qualidade-testes/plano-de-testes.md
+      - Plano de Teste: qualidade-testes/plano-de-teste.md
+      - Casos de Teste Funcionais: qualidade-testes/casos-de-teste-funcionais.md
+      - Relatório de Testes: qualidade-testes/relatorio-de-testes.md
   - Gerência de Projeto:
       - Plano de Projeto: gerencia-projeto/plano-do-projeto.md
       - Política de Uso de IA: gerencia-projeto/politica-uso-ia.md

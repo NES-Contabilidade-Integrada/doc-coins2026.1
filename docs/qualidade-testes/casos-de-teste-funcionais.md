@@ -28,18 +28,18 @@
 
 ## Índice de Módulos
 
-1. [Menu de Navegação](#1-menu-de-navegação)
+1. [Menu de Navegação](#1-menu-de-navegacao)
 2. [Empresa](#2-empresa)
 3. [Plano de Contas](#3-plano-de-contas)
-4. [Diário Geral](#4-diário-geral)
-5. [Razão Geral](#5-razão-geral)
-6. [Balancete de Verificação](#6-balancete-de-verificação)
-7. [Balanço Patrimonial](#7-balanço-patrimonial)
-8. [DRE — Demonstração do Resultado](#8-dre--demonstração-do-resultado)
-9. [Apuração de Resultado](#9-apuração-de-resultado)
-10. [Testes de Aceitação](#10-testes-de-aceitação)
-11. [Testes E2E — Fluxos Completos](#11-testes-e2e--fluxos-completos)
-12. [Testes de Integração — Erros de API](#12-testes-de-integração--erros-de-api)
+4. [Diário Geral](#4-diario-geral)
+5. [Razão Geral](#5-razao-geral)
+6. [Balancete de Verificação](#6-balancete-de-verificacao)
+7. [Balanço Patrimonial](#7-balanco-patrimonial)
+8. [DRE — Demonstração do Resultado](#8-dre-demonstracao-do-resultado)
+9. [Apuração de Resultado](#9-apuracao-de-resultado)
+10. [Testes de Aceitação](#10-testes-de-aceitacao)
+11. [Testes E2E — Fluxos Completos](#11-testes-e2e-fluxos-completos)
+12. [Testes de Integração — Erros de API](#12-testes-de-integracao-erros-de-api)
 
 ---
 
