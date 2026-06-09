@@ -6,7 +6,7 @@
 | :---: | :---: | :--- | :--- |
 | 1.0 | 25/03/2026 | Criação do plano inicial com análise da situação atual | Amanda Gois |
 | 1.1 | 15/04/2026 | Atualização do conteúdo sobre o plano | Amanda Gois |
-| 1.2 | 09/06/2026 | Reestruturação no padrão IEEE 829; cobertura completa dos 466 testes automatizados | Amanda Gois |
+| 1.2 | 09/06/2026 | Reestruturação no padrão do MKdocs; cobertura completa dos 466 testes automatizados | Amanda Gois |
 
 ## Histórico de Revisões
 
@@ -28,11 +28,13 @@
 
 [5. Abordagem de Teste](#abordagem-de-teste)
 
-[6. Critérios de Entrada e Saída](#critérios-de-entrada-e-saída)
+[6. Arquitetura dos Testes](#arquitetura-dos-testes)
 
-[7. Critérios de Aprovação e Reprovação](#critérios-de-aprovação-e-reprovação)
+[7. Critérios de Entrada e Saída](#critérios-de-entrada-e-saída)
 
-[8. Critérios de Suspensão e Retomada](#critérios-de-suspensão-e-retomada)
+[8. Critérios de Aprovação e Reprovação](#critérios-de-aprovação-e-reprovação)
+
+[9. Critérios de Suspensão e Retomada](#critérios-de-suspensão-e-retomada)
 
 ## Introdução {#introdução}
 
@@ -242,6 +244,56 @@ Na estratégia seletiva, alterações em `playwright/pages/`, `playwright/utils/
 - Cobertura de código unitário: mínimo **80%** de linhas nos módulos críticos (DRE, GJ, AP).
 - Cobertura funcional: todos os IDs de caso documentados devem ter teste implementado.
 - Regressão: suites completas executadas antes de cada merge para `release-candidate`.
+
+## Arquitetura dos Testes {#arquitetura-dos-testes}
+
+### Estrutura de Diretórios
+
+```
+my-app/
+├── playwright/
+│   ├── specs/
+│   │   ├── functional/        # testes funcionais por módulo
+│   │   │   ├── apuracao/
+│   │   │   ├── balance-sheet/
+│   │   │   ├── balanco-patrimonial/
+│   │   │   ├── chart-of-accounts/
+│   │   │   ├── company/
+│   │   │   ├── dre/
+│   │   │   ├── general-journal/
+│   │   │   ├── general-ledger/
+│   │   │   └── menu/
+│   │   ├── acceptance/        # testes de sistema (regras de negócio)
+│   │   ├── integration/       # testes de integração (erros de API)
+│   │   └── e2e/               # fluxos completos de negócio
+│   ├── pages/                 # Page Objects (7 classes)
+│   ├── fixtures/              # dados contábeis padronizados
+│   └── utils/
+│       ├── app.fixture.ts     # setup e teardown de banco
+│       └── globalFunctions.ts # utilitários compartilhados
+└── main/
+    └── tests/                 # testes unitários Jest
+```
+
+### Camadas de Suporte
+
+**Page Objects (`playwright/pages/`):** cada módulo tem uma classe que centraliza todos os seletores e ações da interface (ex: `JournalPage`, `CompanyPage`, `DREPage`). Quando a UI muda, apenas o Page Object precisa ser atualizado — os testes não quebram.
+
+**Fixtures (`playwright/fixtures/`):** dados contábeis em JSON (plano de contas, lançamentos padrão) usados como base para setup dos testes. São versionados no repositório para garantir reprodutibilidade.
+
+**app.fixture.ts:** script de setup e teardown executado em `beforeAll`/`afterAll`. Cria os lançamentos necessários via `window.request` e os remove ao final, garantindo isolamento entre suites.
+
+**globalFunctions.ts:** funções utilitárias compartilhadas (ex: esperar por elemento, formatar datas, limpar banco) que evitam duplicação entre arquivos de teste.
+
+### Execução Estratégica
+
+O script `select-tests.sh` determina dinamicamente quais suites executar com base no diff da branch:
+
+1. **Detecção de mudanças:** executa `git diff main...HEAD` para listar os arquivos alterados.
+2. **Mapeamento de módulos:** arquivos em `specs/functional/dre/` → suite `dre`; em `specs/functional/general-journal/` → suite `general-journal`; e assim por diante.
+3. **Regressão obrigatória:** independentemente do que foi alterado, os testes de regressão (`regression`) sempre são incluídos para proteger as regras contábeis críticas.
+4. **Arquivos globais disparam suite completa:** mudanças em `pages/`, `utils/` ou `fixtures/` impactam potencialmente todas as suites — nesse caso o script ignora a seletividade e executa tudo.
+5. **Branches de entrega sempre executam tudo:** em `main` e `release-candidate`, a estratégia é forçosamente `all`, sem passar pelo script de seleção.
 
 ## Critérios de Entrada e Saída {#critérios-de-entrada-e-saída}
 
