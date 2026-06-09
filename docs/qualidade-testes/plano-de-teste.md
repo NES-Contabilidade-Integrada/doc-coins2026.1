@@ -1,66 +1,98 @@
 # Plano de Teste — NES Coins 2026.1
 
-**Versão:** 1.0
-**Data:** 09/06/2026
-**Autor:** Squad SIA2
-**Referência:** IEEE 829 — Standard for Software Test Documentation
+## Histórico de Versões
+
+| Versão | Data | Descrição | Autor |
+| :---: | :---: | :--- | :--- |
+| 1.0 | 09/06/2026 | Criação do documento | Squad SIA2 |
+
+## Histórico de Revisões
+
+| Versão | Data | Revisor | Observação |
+| :---: | :---: | :--- | :--- |
+| 1.0 | 09/06/2026 | — | Pendente |
 
 ---
 
-## 1. Identificação do Documento
+## Sumário
+
+[1. Identificação](#identificação)
+
+[2. Introdução](#introdução)
+
+[3. Itens de Teste](#itens-de-teste)
+
+[4. Funcionalidades a Testar](#funcionalidades-a-testar)
+
+[5. Funcionalidades a Não Testar](#funcionalidades-a-não-testar)
+
+[6. Abordagem de Teste](#abordagem-de-teste)
+
+[7. Critérios de Entrada e Saída](#critérios-de-entrada-e-saída)
+
+[8. Critérios de Aprovação e Reprovação](#critérios-de-aprovação-e-reprovação)
+
+[9. Critérios de Suspensão e Retomada](#critérios-de-suspensão-e-retomada)
+
+[10. Entregas do Teste](#entregas-do-teste)
+
+[11. Ambiente de Teste](#ambiente-de-teste)
+
+[12. Responsabilidades](#responsabilidades)
+
+[13. Riscos e Mitigações](#riscos-e-mitigações)
+
+[14. Cronograma](#cronograma)
+
+[15. Aprovação](#aprovação)
+
+## Identificação {#identificação}
 
 | Campo | Valor |
-|---|---|
+| :--- | :--- |
 | Projeto | NES Coins 2026.1 — Sistema Contábil Integrado |
 | Versão do Sistema | 2026.1 |
 | Branch de Referência | release-candidate |
-| Documento | Plano de Teste v1.0 |
-| Data de Criação | 09/06/2026 |
 | Equipe Responsável | Squad SIA2 |
 | Contato | squad-sia2@seazone.com.br |
 
----
+## Introdução {#introdução}
 
-## 2. Introdução
+### Objetivo
 
-### 2.1 Objetivo
+Este documento descreve o planejamento e a abordagem de teste do sistema NES Coins 2026.1. O objetivo é definir o escopo, a estratégia, os critérios de qualidade e as responsabilidades associadas às atividades de verificação e validação do software.
 
-Este documento descreve o planejamento e a abordagem de teste do sistema NES Coins 2026.1, um sistema de contabilidade integrada. O objetivo é definir o escopo, a estratégia, os critérios de qualidade e as responsabilidades associadas às atividades de verificação e validação do software.
-
-### 2.2 Escopo
+### Escopo
 
 O plano cobre todos os módulos funcionais da aplicação desktop (Electron + Vue.js), validando comportamento de interface, integridade de dados contábeis, cálculos financeiros e fluxos de negócio de ponta a ponta.
 
-### 2.3 Público-Alvo
+### Público-Alvo
 
 - Equipe de desenvolvimento (Squad SIA2)
 - QA e revisores de qualidade
 - Stakeholders do produto
 
-### 2.4 Referências
+### Referências
 
 - IEEE 829: Standard for Software Test Documentation
-- IEEE 830: Software Requirements Specifications
 - Playwright Testing Library Documentation
 - Jest Testing Framework Documentation
 - Código-fonte: `my-app/playwright/specs/` e `my-app/main/tests/`
 
----
+## Itens de Teste {#itens-de-teste}
 
-## 3. Itens de Teste
+### Sistema sob Teste
 
-### 3.1 Sistema sob Teste
-
-**NES Coins 2026.1** é uma aplicação desktop de contabilidade empresarial construída com:
+**NES Coins 2026.1** é uma aplicação desktop de contabilidade empresarial:
 
 - **Frontend:** Vue.js 3 + Vuetify (Electron App)
 - **Backend:** Node.js (processo main do Electron)
 - **Banco de Dados:** SQLite (local)
 
-### 3.2 Módulos Cobertos
+### Módulos Cobertos
 
 | Módulo | Sigla | Descrição |
-|---|---|---|
+| :--- | :---: | :--- |
 | Diário Geral | GJ | Registro, edição e exclusão de lançamentos contábeis |
 | Razão Geral | GL | Visualização de movimentações por conta |
 | Balancete de Verificação | BS | Demonstrativo de saldos devedores e credores |
@@ -71,181 +103,206 @@ O plano cobre todos os módulos funcionais da aplicação desktop (Electron + Vu
 | Empresa | CO | Configuração e identificação da empresa |
 | Menu de Navegação | MENU | Estrutura de abas e navegação entre módulos |
 
-### 3.3 Versões e Configurações
+### Versões e Configurações
 
 | Item | Versão/Configuração |
-|---|---|
+| :--- | :--- |
 | Node.js | conforme `.nvmrc` do projeto |
 | Playwright | conforme `package.json` |
 | Jest | conforme `jest.config.js` |
-| SO de Execução | Linux / Windows / macOS |
 | Browser (Playwright) | Electron (Chromium embutido) |
 
----
+## Funcionalidades a Testar {#funcionalidades-a-testar}
 
-## 4. Funcionalidades a Testar
-
-### 4.1 Testes Funcionais — Interface e Comportamento (Playwright)
+### Testes Funcionais — Interface e Comportamento
 
 Verificam comportamento visual, navegação, filtros e exibição de dados em cada módulo.
 
 | Módulo | Arquivos | Casos |
-|---|---|---|
-| Apuração | 4 spec files | 31 casos |
-| Balancete | 3 spec files | 12 casos |
-| Balanço Patrimonial | 1 spec file | 9 casos |
-| Plano de Contas | 1 spec file | 8 casos |
-| Empresa | 1 spec file | 1 caso |
-| DRE | 4 spec files | 35 casos |
-| Diário Geral | 4 spec files | 14 casos |
-| Razão Geral | 3 spec files | 14 casos |
-| Menu | 1 spec file | 2 casos |
-| **Total Funcional** | **22 arquivos** | **128 casos** |
+| :--- | :---: | :---: |
+| Apuração | 4 | 31 |
+| Balancete | 3 | 12 |
+| Balanço Patrimonial | 1 | 9 |
+| Plano de Contas | 1 | 8 |
+| Empresa | 1 | 1 |
+| DRE | 4 | 35 |
+| Diário Geral | 4 | 14 |
+| Razão Geral | 3 | 14 |
+| Menu | 1 | 2 |
+| **Total Funcional** | **22** | **126** |
 
-### 4.2 Testes de Aceitação (Playwright)
+### Testes de Aceitação
 
 Validam regras de negócio críticas e integridade de dados contábeis.
 
 | Módulo | Arquivos | Casos |
-|---|---|---|
-| Plano de Contas — Integridade | 1 spec file | 2 casos |
-| Diário Geral — Validações de Lançamento | 1 spec file | 11 casos |
-| **Total Aceitação** | **2 arquivos** | **13 casos** |
+| :--- | :---: | :---: |
+| Plano de Contas — Integridade | 1 | 2 |
+| Diário Geral — Validações | 1 | 11 |
+| **Total Aceitação** | **2** | **13** |
 
-### 4.3 Testes E2E — Fluxos Completos (Playwright)
+### Testes E2E — Fluxos Completos
 
 Simulam fluxos completos de trabalho do usuário real.
 
 | Fluxo | Arquivo | Casos |
-|---|---|---|
-| Fluxo Contábil Completo | `accounting-workflow.spec.ts` | 3 casos |
-| Fluxo de Apuração | `apuracao-workflow.spec.ts` | 2 casos |
-| Fluxo de DRE | `dre-workflow.spec.ts` | 2 casos |
-| **Total E2E** | **3 arquivos** | **7 casos** |
+| :--- | :--- | :---: |
+| Fluxo Contábil Completo | `accounting-workflow.spec.ts` | 3 |
+| Fluxo de Apuração | `apuracao-workflow.spec.ts` | 2 |
+| Fluxo de DRE | `dre-workflow.spec.ts` | 2 |
+| **Total E2E** | **3** | **7** |
 
-### 4.4 Testes de Integração — Tratamento de Erros de API (Playwright)
+### Testes de Integração — Erros de API
 
 Verificam comportamento da UI quando a API retorna erros.
 
 | Módulo | Arquivo | Casos |
-|---|---|---|
-| Apuração | `apuracao/api-errors.spec.ts` | 4 casos |
-| Balancete | `balance-sheet/api-errors.spec.ts` | 2 casos |
-| DRE | `dre/api-errors.spec.ts` | 10 casos |
-| Diário Geral | `general-journal/api-errors.spec.ts` | 3 casos |
-| Razão Geral | `general-ledger/api-errors.spec.ts` | 1 caso |
-| **Total Integração** | **5 arquivos** | **20 casos** |
+| :--- | :--- | :---: |
+| Apuração | `apuracao/api-errors.spec.ts` | 4 |
+| Balancete | `balance-sheet/api-errors.spec.ts` | 2 |
+| DRE | `dre/api-errors.spec.ts` | 10 |
+| Diário Geral | `general-journal/api-errors.spec.ts` | 3 |
+| Razão Geral | `general-ledger/api-errors.spec.ts` | 1 |
+| **Total Integração** | **5** | **20** |
 
-### 4.5 Testes Unitários (Jest)
+### Testes Unitários
 
 Cobrem lógica de negócio, serviços e controllers do processo main.
 
 | Módulo | Arquivos | Casos |
-|---|---|---|
-| Apuração | 2 arquivos | 40 casos |
-| Balanço Patrimonial | 5 arquivos | 22 casos |
-| Demonstração BP (Statement) | 3 arquivos | 35 casos |
-| Plano de Contas | 2 arquivos | 13 casos |
-| Empresa | 2 arquivos | 12 casos |
-| DRE | 2 arquivos | 71 casos |
-| Razão Geral | 2 arquivos | 15 casos |
-| Diário Geral | 2 arquivos | 56 casos |
-| Helpers / Utilitários | 3 arquivos | 36 casos |
-| **Total Unitários** | **23 arquivos** | **300 casos** |
+| :--- | :---: | :---: |
+| Apuração | 2 | 40 |
+| Balanço Patrimonial | 5 | 22 |
+| Demonstração BP | 3 | 35 |
+| Plano de Contas | 2 | 13 |
+| Empresa | 2 | 12 |
+| DRE | 2 | 71 |
+| Razão Geral | 2 | 15 |
+| Diário Geral | 2 | 56 |
+| Helpers / Utilitários | 3 | 36 |
+| **Total Unitários** | **23** | **300** |
 
----
-
-## 5. Funcionalidades a Não Testar
+## Funcionalidades a Não Testar {#funcionalidades-a-não-testar}
 
 | Funcionalidade | Justificativa |
-|---|---|
+| :--- | :--- |
 | Autenticação / Login | Módulo não implementado na versão atual |
 | Múltiplas empresas simultâneas | Fora do escopo desta versão |
-| Integração com sistemas externos (ERP, bancos) | Não previsto para 2026.1 |
-| Testes de carga / performance | Fora do escopo; sistema desktop mono-usuário |
+| Integração com sistemas externos | Não previsto para 2026.1 |
+| Testes de carga / performance | Sistema desktop mono-usuário |
 | Testes de segurança (pentest) | Cobertos por processo separado |
 | Backup e restauração de banco | Fora do escopo desta iteração |
 
----
+## Abordagem de Teste {#abordagem-de-teste}
 
-## 6. Abordagem de Teste
-
-### 6.1 Estratégia Geral
+### Estratégia Geral
 
 A estratégia adota a pirâmide de testes:
 
-```
-        [E2E — 7 casos]
-       [Aceitação — 13 casos]
-     [Funcional — 128 casos]
-    [Integração — 20 casos]
-  [Unitários — 300 casos]
-```
+- **Base (Unitários — 300 casos):** cobre lógica isolada de serviços e controllers.
+- **Camada intermediária (Funcional/Integração — 146 casos):** cobre comportamento da UI e integração com API.
+- **Topo (E2E — 7 casos):** cobre fluxos críticos de negócio de ponta a ponta.
 
-- **Base larga (unitários):** cobre lógica isolada de serviços e controllers
-- **Camada intermediária (funcional/integração):** cobre comportamento da UI e integração com API
-- **Topo estreito (E2E):** cobre fluxos críticos de negócio completos
-
-### 6.2 Tipos de Teste
+### Tipos de Teste
 
 | Tipo | Ferramenta | Escopo |
-|---|---|---|
-| Unitário | Jest + TypeScript | Serviços, Controllers, Helpers — processo main |
-| Funcional | Playwright + Electron | Interface, filtros, cálculos, exibição de dados |
-| Integração | Playwright + Electron | Comportamento UI com erros de API (HTTP mocking) |
-| Aceitação | Playwright + Electron | Regras de negócio e validações contábeis |
-| E2E | Playwright + Electron | Fluxos de trabalho completos do usuário |
+| :--- | :--- | :--- |
+| Unitário | Jest + TypeScript | Serviços, Controllers, Helpers |
+| Funcional | Playwright + Electron | Interface, filtros, cálculos, exibição |
+| Integração | Playwright + Electron | Comportamento UI com erros de API |
+| Aceitação | Playwright + Electron | Regras de negócio contábeis |
+| E2E | Playwright + Electron | Fluxos de trabalho completos |
 
-### 6.3 Abordagem de Dados de Teste
+### Abordagem de Dados de Teste
 
-- **Fixtures JSON:** dados contábeis padronizados em `playwright/fixtures/`
-- **Setup/Teardown:** cada suite cria e remove seus próprios lançamentos via `beforeAll`/`afterAll`
-- **Estado isolado:** testes não dependem de dados persistentes de outras suites
-- **Dados reais:** fixtures utilizam contas do plano de contas padrão da empresa configurada
+- **Fixtures JSON:** dados contábeis padronizados em `playwright/fixtures/`.
+- **Setup/Teardown:** cada suite cria e remove seus próprios lançamentos via `beforeAll`/`afterAll`.
+- **Estado isolado:** testes não dependem de dados persistentes entre suites.
 
-### 6.4 Ferramentas
+### Ferramentas
 
 | Ferramenta | Finalidade |
-|---|---|
+| :--- | :--- |
 | Jest | Execução de testes unitários |
 | Playwright | Automação de interface (Electron) |
 | TypeScript | Linguagem dos testes |
 | Page Object Model | Abstração de locators Playwright |
-| GitHub Actions / CI | Execução automatizada em pipeline |
+| GitHub Actions | Execução automatizada em pipeline |
 
-### 6.5 Critérios de Cobertura
+### Execução na Pipeline de CI/CD
 
-- Cobertura de código unitário: mínimo **80%** de linhas nos módulos críticos (DRE, GJ, AP)
-- Cobertura funcional: todos os IDs de caso documentados devem ter teste implementado
-- Regressão: suites completas executadas antes de cada merge para `release-candidate`
+O projeto possui dois workflows independentes no GitHub Actions, ambos ativados por Pull Request ou Push nas branches principais.
 
----
+**Workflow 1 — CI: Testes Unitários Backend (`ci.yml`)**
 
-## 7. Critérios de Entrada e Saída
+| Gatilho | Branches | Paths observados |
+| :--- | :--- | :--- |
+| Pull Request / Push | `main`, `develop`, `release-candidate`, `Subtask/**` | `my-app/main/**`, `package.json`, `jest.config.js` |
 
-### 7.1 Critérios de Entrada (pré-requisitos para iniciar os testes)
+Etapas executadas:
 
-- Código compilado sem erros em `main` e `renderer`
-- Banco de dados local inicializado com dados de seed do plano de contas padrão
-- Variáveis de ambiente de teste configuradas
-- Dependências instaladas (`npm install`)
+1. Checkout do código e configuração do Node.js 20
+2. Instalação de dependências (`npm ci`)
+3. Execução dos testes unitários com cobertura (`npm run test:unit -- --coverage`)
+4. Análise do relatório de cobertura (threshold: **80%** para statements, branches, functions e lines)
+5. Comentário automático no PR com relatório de cobertura e dicas contextuais de melhoria
 
-### 7.2 Critérios de Saída (conclusão dos testes)
+**Workflow 2 — CI: Testes Playwright (`ci-e2e.yml`)**
 
-- Todos os casos de teste executados
-- Taxa de aprovação ≥ 95% nos testes funcionais
-- 100% de aprovação nos testes de aceitação e E2E
-- Nenhum defeito bloqueante (severity 1) em aberto
-- Relatório de testes gerado e revisado
+| Gatilho | Branches | Paths observados |
+| :--- | :--- | :--- |
+| Pull Request / Push | `main`, `develop`, `release-candidate`, `Subtask/**` | `my-app/playwright/**`, `my-app/renderer/**`, `my-app/main/**` |
 
----
+Etapas executadas:
 
-## 8. Critérios de Aprovação e Reprovação
+1. Checkout (com `fetch-depth: 0` para análise de diff)
+2. Configuração do Node.js 20 e `npm ci`
+3. Instalação do Playwright e Chromium (`npx playwright install --with-deps chromium`)
+4. Configuração do display virtual Xvfb (1920x1080) e permissões do `chrome-sandbox` para Electron
+5. Build completo da aplicação (`npx electron-forge package`)
+6. Reset do banco de dados (`npm run reset:db`)
+7. Determinação da estratégia de execução (ver abaixo)
+8. Execução dos testes conforme estratégia
+9. Upload de artefatos `.playwright-results/` (retenção: 7 dias)
+10. Comentário automático no PR com resultado e link para download dos artefatos
 
-### 8.1 Aprovação do Ciclo de Teste
+**Estratégia de Execução Playwright**
+
+| Branch | Estratégia | Suites executadas |
+| :--- | :--- | :--- |
+| `main` / `release-candidate` | Completa | `functional`, `integration`, `regression`, `e2e` |
+| Feature / Subtask | Seletiva (path-based) | Apenas módulos afetados pelos arquivos alterados + `regression` |
+
+Na estratégia seletiva, alterações em `playwright/pages/`, `playwright/utils/` ou `playwright/fixtures/` disparam a suite completa, pois impactam todos os módulos.
+
+### Critérios de Cobertura
+
+- Cobertura de código unitário: mínimo **80%** de linhas nos módulos críticos (DRE, GJ, AP).
+- Cobertura funcional: todos os IDs de caso documentados devem ter teste implementado.
+- Regressão: suites completas executadas antes de cada merge para `release-candidate`.
+
+## Critérios de Entrada e Saída {#critérios-de-entrada-e-saída}
+
+### Critérios de Entrada
+
+- Código compilado sem erros em `main` e `renderer`.
+- Banco de dados local inicializado com dados de seed do plano de contas padrão.
+- Dependências instaladas (`npm install`).
+
+### Critérios de Saída
+
+- Todos os casos de teste executados.
+- Taxa de aprovação ≥ 95% nos testes funcionais.
+- 100% de aprovação nos testes de aceitação e E2E.
+- Nenhum defeito bloqueante (severity 1) em aberto.
+- Relatório de testes gerado e revisado.
+
+## Critérios de Aprovação e Reprovação {#critérios-de-aprovação-e-reprovação}
+
+### Aprovação do Ciclo de Teste
 
 | Critério | Threshold |
-|---|---|
+| :--- | :---: |
 | Taxa de aprovação — Unitários | ≥ 98% |
 | Taxa de aprovação — Funcional | ≥ 95% |
 | Taxa de aprovação — Integração | ≥ 95% |
@@ -254,118 +311,97 @@ A estratégia adota a pirâmide de testes:
 | Defeitos Severity 1 abertos | 0 |
 | Defeitos Severity 2 abertos | ≤ 2 (com mitigação documentada) |
 
-### 8.2 Severidade de Defeitos
+### Severidade de Defeitos
 
 | Severity | Descrição | Exemplos |
-|---|---|---|
+| :---: | :--- | :--- |
 | S1 — Bloqueante | Impede operação central do sistema | Lançamento não salva, DRE não exibe |
-| S2 — Crítico | Comportamento incorreto em função principal | Cálculo errado no resultado, filtro não funciona |
+| S2 — Crítico | Comportamento incorreto em função principal | Cálculo errado, filtro não funciona |
 | S3 — Moderado | Funcionalidade degradada, workaround possível | Layout quebrado, tooltip ausente |
 | S4 — Menor | Problema cosmético sem impacto funcional | Espaçamento, texto truncado |
 
----
+## Critérios de Suspensão e Retomada {#critérios-de-suspensão-e-retomada}
 
-## 9. Critérios de Suspensão e Retomada
-
-### 9.1 Suspensão
+### Suspensão
 
 Os testes serão suspensos quando:
-- Mais de 20% dos casos bloquearem por defeito único de infraestrutura
-- Aplicação não inicializar corretamente no ambiente de teste
-- Banco de dados corrompido ou inacessível
 
-### 9.2 Retomada
+- Mais de 20% dos casos bloquearem por defeito único de infraestrutura.
+- A aplicação não inicializar corretamente no ambiente de teste.
+- O banco de dados estiver corrompido ou inacessível.
+
+### Retomada
 
 Os testes serão retomados quando:
-- Defeito bloqueante for corrigido e validado
-- Ambiente de teste restabelecido
-- Suite de smoke test (E2E) passar integralmente
 
----
+- O defeito bloqueante for corrigido e validado.
+- O ambiente de teste for restabelecido.
+- A suite de smoke test (E2E) passar integralmente.
 
-## 10. Entregas do Teste
+## Entregas do Teste {#entregas-do-teste}
 
-| Entrega | Descrição | Responsável |
-|---|---|---|
-| Plano de Teste | Este documento | Squad SIA2 |
-| Casos de Teste Funcionais | `casos-de-teste-funcionais.md` | Squad SIA2 |
-| Relatório de Testes | `relatorio-de-testes.md` | Squad SIA2 |
-| Evidências de Execução | Screenshots / vídeos Playwright (`.playwright-results/`) | CI/CD |
-| Relatório de Cobertura Jest | `coverage/` | CI/CD |
+| Entrega | Descrição |
+| :--- | :--- |
+| Plano de Teste | Este documento |
+| Casos de Teste Funcionais | `casos-de-teste-funcionais.md` |
+| Relatório de Testes | `relatorio-de-testes.md` |
+| Evidências de Execução | Screenshots / vídeos Playwright (`.playwright-results/`) |
+| Relatório de Cobertura Jest | `coverage/` |
 
----
+## Ambiente de Teste {#ambiente-de-teste}
 
-## 11. Ambiente de Teste
-
-### 11.1 Ambiente Local (desenvolvimento)
+### Ambiente Local
 
 | Componente | Especificação |
-|---|---|
+| :--- | :--- |
 | SO | Linux (Ubuntu 22.04+) / Windows 11 / macOS 13+ |
 | Runtime | Node.js 20+ |
-| Electron | conforme `package.json` (devDependencies) |
 | Banco de Dados | SQLite — arquivo local gerado automaticamente |
 | Playwright workers | 1 (serial — Electron não suporta paralelo nativo) |
 
-### 11.2 Ambiente CI/CD
+### Ambiente CI/CD
 
 | Componente | Especificação |
-|---|---|
+| :--- | :--- |
 | Plataforma | GitHub Actions |
 | Runner | ubuntu-latest |
 | Artefatos | `.playwright-results/`, `coverage/` |
 | Trigger | Pull Request → `release-candidate`, `main` |
 
-### 11.3 Dados de Teste
-
-- Plano de contas padrão pré-carregado via seed no banco
-- Fixtures em `playwright/fixtures/*.json`
-- Nenhum dado sensível ou de produção utilizado
-
----
-
-## 12. Responsabilidades
+## Responsabilidades {#responsabilidades}
 
 | Papel | Responsabilidade |
-|---|---|
+| :--- | :--- |
 | Desenvolvedor | Escrever testes unitários; corrigir defeitos encontrados |
 | QA / Squad SIA2 | Manter testes Playwright; documentar casos; executar ciclos de teste |
 | Tech Lead | Revisar plano e relatório; aprovar critérios de qualidade |
 | CI/CD | Executar suites automaticamente em cada PR |
 
----
-
-## 13. Riscos e Mitigações
+## Riscos e Mitigações {#riscos-e-mitigações}
 
 | Risco | Probabilidade | Impacto | Mitigação |
-|---|---|---|---|
+| :--- | :---: | :---: | :--- |
 | Flakiness em testes Playwright (timeouts) | Média | Médio | Revisão de timeouts e locators; retry configurado |
-| Dados de seed inconsistentes entre ambientes | Baixa | Alto | Fixtures versionadas no repositório |
-| Ambiente CI diferente do local | Média | Médio | Containerização; testes de smoke no CI |
-| Regressão em módulo não coberto por testes | Baixa | Alto | Ampliar cobertura funcional progressivamente |
+| Dados de seed inconsistentes | Baixa | Alto | Fixtures versionadas no repositório |
+| Regressão em módulo não coberto | Baixa | Alto | Ampliar cobertura funcional progressivamente |
 | Demora no setup E2E (beforeAll pesado) | Alta | Baixo | Paralelismo controlado; teardown garantido |
 
----
+## Cronograma {#cronograma}
 
-## 14. Cronograma
+| Atividade | Status |
+| :--- | :--- |
+| Implementação de testes unitários | Concluído |
+| Implementação de testes funcionais Playwright | Concluído |
+| Implementação de testes de aceitação | Concluído |
+| Implementação de testes E2E | Concluído |
+| Implementação de testes de integração | Concluído |
+| Execução do ciclo de testes — release-candidate | Em andamento |
+| Geração do relatório final | Em andamento |
 
-| Atividade | Responsável | Status |
-|---|---|---|
-| Escrita do plano de teste | Squad SIA2 | Concluído |
-| Implementação de testes unitários | Squad SIA2 | Concluído |
-| Implementação de testes funcionais Playwright | Squad SIA2 | Concluído |
-| Implementação de testes de aceitação | Squad SIA2 | Concluído |
-| Implementação de testes E2E | Squad SIA2 | Concluído |
-| Implementação de testes de integração | Squad SIA2 | Concluído |
-| Execução do ciclo de testes — release-candidate | Squad SIA2 | Em andamento |
-| Geração do relatório final | Squad SIA2 | Em andamento |
+## Aprovação {#aprovação}
 
----
-
-## 15. Aprovação
-
-| Papel | Nome | Data | Assinatura |
-|---|---|---|---|
-| Tech Lead | | | |
-| QA Responsável | Squad SIA2 | 09/06/2026 | |
-| Product Owner | | | |
+| Papel | Data | Assinatura |
+| :--- | :---: | :--- |
+| QA Responsável (Squad SIA2) | 09/06/2026 | |
+| Tech Lead | | |
+| Product Owner | | |
