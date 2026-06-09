@@ -34,7 +34,7 @@ O modelo de ramificação utilizado é o GitFlow, conforme ilustrado na figura a
    1. **Propósito:** Correções urgentes no ambiente de produção (*bugs* críticos que não podem esperar pelo ciclo normal de release).  
    2. **Processo:** A branch hotfix é criada diretamente a partir de main (na versão que contém o erro). Após a correção, a branch hotfix é integrada (*merge*) em main (recebendo uma *tag*) e também em develop (para garantir que a correção esteja no código em desenvolvimento).  
 3. **release-candidate:**  
-   1. **Propósito:** Preparar uma nova versão para produção. É o ambiente dedicado para a realização de testes finais do sistema e testes de aceitação do usuário.   
+   1. **Propósito:** Preparar uma nova versão para produção. É o ambiente dedicado para a realização de testes finais do sistema e testes de aceitação do usuário. Todo merge de PR nesta branch também aciona automaticamente o workflow de Release Automático via GitHub Actions, gerando um executável de release candidate (RC) para validação.  
    2. **Processo:**  Logo após a estabilização e a validação de todos os testes, a branch release é mergeada em main (recebendo uma *tag* de versão) e também em develop (para garantir que os *fixes* da *release* entrem no ciclo de desenvolvimento).  
 4. **develop:**  
    1. **Propósito:** Integração de todas as *features* prontas para o próximo ciclo de *release*. É a *branch* principal de desenvolvimento.  

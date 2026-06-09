@@ -114,7 +114,7 @@ Validam regras de negócio críticas e integridade de dados contábeis.
 | Diário Geral — Validações | 1 | 11 |
 | **Total Sistema** | **2** | **13** |
 
-### Testes E2E — Fluxos Completos
+### Testes E2E 
 
 Simulam fluxos completos de trabalho do usuário real.
 
@@ -125,7 +125,7 @@ Simulam fluxos completos de trabalho do usuário real.
 | Fluxo de DRE | `dre-workflow.spec.ts` | 2 |
 | **Total E2E** | **3** | **7** |
 
-### Testes de Integração — Erros de API
+### Testes de Integração
 
 Verificam comportamento da UI quando a API retorna erros.
 

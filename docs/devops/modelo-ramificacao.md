@@ -50,14 +50,14 @@ gitGraph
     checkout develop
     merge feature/funcionalidade
 
-    branch release/1.1.0 order: 2
-    checkout release/1.1.0
+    branch release-candidate order: 2
+    checkout release-candidate
     commit id: "Preparação da release"
 
     checkout main
-    merge release/1.1.0 tag: "v1.1.0"
+    merge release-candidate tag: "v1.1.0"
     checkout develop
-    merge release/1.1.0
+    merge release-candidate
 
     checkout main
     branch hotfix/correcao order: 1
@@ -94,7 +94,7 @@ gitGraph
 - **Processo**: Criada a partir da `develop`. Após concluída, testada e revisada, é integrada (via _Pull Request_) de volta na `develop`.
 - **Nomenclatura**: `feature/nome-da-funcionalidade` ou `feature/ID-da-issue`.
 
-### release/
+### release-candidate
 
 - **Propósito**: Preparação de uma nova versão para produção. Ambiente dedicado para testes finais e homologação.
 - **Processo**: Criada a partir da `develop` quando as funcionalidades planejadas estão prontas. Após a validação, é mergeada na `main` (com tag de versão) e devolvida para a `develop` caso existam correções feitas durante o período de release.
