@@ -4,12 +4,13 @@
 
 | Versão | Data | Descrição | Autor |
 | :---: | :---: | :--- | :--- |
-| 1.0 | 02/06/2026 | Criação do documento | Amanda Caroline de Gois Balcaçar |
+| 1.0 | 02/06/2026 | Criação do documento | Amanda Gois |
 
 ## Histórico de Revisões
 
 | Versão | Data | Revisor | Observação |
 | :---: | :---: | :--- | :--- |
+| 1.0 | 09/06/2026 | Vinicius Carneiro | Aprovado |
 
 ---
 
