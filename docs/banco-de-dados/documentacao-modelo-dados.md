@@ -60,15 +60,9 @@ Sua estrutura atual é composta por nove tabelas de negócio:
 - **dre\_groups:** define os grupos da Demonstração do Resultado do Exercício (DRE). Pré-populado com 11 grupos via migration.
 - **dre\_group\_account\_roots:** associa contas raiz do Plano de Contas a grupos de DRE.
 
-## DER (Diagrama entidade relacionamento) {#der-(diagrama-entidade-relacionamento)}
+## Diagrama ER (Diagrama de relacionamento de entidade) 
 
-> **Nota (v2.0):** O DER original (v1.2) foi gerado com base no modelo planejado e permanece em PDF no Drive (link abaixo) para referência histórica. **Ele não reflete o schema atual.** Um DER atualizado deve ser gerado a partir do DBML da seção 3.1.
-
-Versão em PDF no Drive em:   
-[https://drive.google.com/drive/u/1/folders/1gNYYj-rfqD-diTy5nt39V9tuCNshJ-2j](https://drive.google.com/drive/u/1/folders/1gNYYj-rfqD-diTy5nt39V9tuCNshJ-2j) 
-
-## Script para criação das tabelas {#script-para-criação-das-tabelas}
-O script com o SQL para criação das tabelas está no Drive em: [https://drive.google.com/drive/u/1/folders/1gNYYj-rfqD-diTy5nt39V9tuCNshJ-2j](https://drive.google.com/drive/u/1/folders/1gNYYj-rfqD-diTy5nt39V9tuCNshJ-2j) 
+![Diagrama ERD do Sistema COIN'S](assets/Diagrama%20ERD.png)
 
 ### 3.1 DBML Atual (v2.0 — estado real da branch develop)
 
