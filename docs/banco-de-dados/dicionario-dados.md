@@ -1,4 +1,4 @@
-# Dicionário de Dados – Sistema COIN'S
+# Dicionário de Dados
 
 **Histórico de Versões**
 
