@@ -7,7 +7,7 @@
 | 1.0 | 19/08 | Criação inicial do documento de Dicionário de Dados  | Fernanda Pessoa |
 | 1.1 | 22/10 | Pequenas correções de definições de atributos | Pedro Nicoletti Sotoma |
 | 1.2 | 06/05 | Atualização do esquema: novas tabelas account\_types, actors e apuracoes; renomeação de tabelas; novos campos | Fernanda Pessoa |
-| 2.0 | 01/06/2026 | Reconciliação com as migrations reais da branch develop: documentação das tabelas implementadas, correção de nomes e campos divergentes, adição das tabelas dre\_groups e dre\_group\_account\_roots; nota sobre estado da branch main | Claude (revisão técnica automatizada) |
+| 2.0 | 01/06/2026 | Reconciliação com as migrations reais da branch develop: documentação das tabelas implementadas, correção de nomes e campos divergentes, adição das tabelas dre\_groups e dre\_group\_account\_roots; nota sobre estado da branch main | Lohan Toledo Tosta |
 
 **Histórico de Revisões**
 

@@ -7,7 +7,7 @@
 | 1.0 | 27/09 | Criação do documento com introdução, DER e script | Fernanda Pessoa |
 | 1.1 | 22/10 | Pequena correção no atributo parent\_classification | Pedro Nicoletti Sotoma |
 | 1.2 | 06/05 | Atualização do modelo: novas tabelas (account\_types, actors, apuracoes), renomeação de tabelas e novos campos | Fernanda Pessoa |
-| 2.0 | 01/06/2026 | Reconciliação com as migrations reais da branch develop: DBML corrigido com nomes e tipos reais, tabelas dre\_groups e dre\_group\_account\_roots adicionadas, divergências da v1.2 documentadas | Claude (revisão técnica automatizada) |
+| 2.0 | 01/06/2026 | Reconciliação com as migrations reais da branch develop: DBML corrigido com nomes e tipos reais, tabelas dre\_groups e dre\_group\_account\_roots adicionadas, divergências da v1.2 documentadas | Lohan Toledo Tosta |
 
 **Histórico de Revisões**
 

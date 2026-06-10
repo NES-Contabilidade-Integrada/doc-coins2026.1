@@ -6,7 +6,7 @@
 | :---: | :---: | :---: | :---: |
 | 1.0 | 28/10 | Adiciona versão inicial do documento de Visão de Implementação | Pedro Nicoletti Sotoma |
 | 1.1 | 11/11 | Ajustando links do Sumário | Pedro Nicoletti Sotoma |
-| 2.0 | 01/06/2026 | Atualização com base no working directory (branch develop): novas camadas do frontend (Stores, Utils/Composables, Types, Constants, Layout, Plugins); novos módulos de domínio backend e frontend (Apuração, DRE, Balanço Patrimonial); decomposição da camada de banco de dados; reorganização dos testes E2E para `playwright/` | Claude (revisão técnica automatizada) |
+| 2.0 | 01/06/2026 | Atualização com base no working directory (branch develop): novas camadas do frontend (Stores, Utils/Composables, Types, Constants, Layout, Plugins); novos módulos de domínio backend e frontend (Apuração, DRE, Balanço Patrimonial); decomposição da camada de banco de dados; reorganização dos testes E2E para `playwright/` | Lohan Toledo Tosta |
 
 **Histórico de Revisões** 
 
