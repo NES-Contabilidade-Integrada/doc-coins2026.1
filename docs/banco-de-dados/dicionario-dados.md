@@ -1,4 +1,4 @@
-# Dicionário de Dados – Sistema COIN'S
+# Dicionário de Dados
 
 **Histórico de Versões**
 
@@ -25,7 +25,7 @@
 [3\. Relacionamentos entre Tabelas	6](#relacionamentos-entre-tabelas)
 
 ## Introdução {#introdução}
-O banco de dados do Sistema COIN'S (Contabilidade Integrada Simplificada) foi desenvolvido para gerenciar informações contábeis de empresas, permitindo o registro de lançamentos no Livro Diário e Livro Razão.
+O banco de dados do Sistema COIN'S (Contabilidade Integrada) foi desenvolvido para gerenciar informações contábeis de empresas, permitindo o registro de lançamentos no Livro Diário e Livro Razão.
 
 > **Nota (v2.0 — Reconciliação com as migrations reais):**
 >

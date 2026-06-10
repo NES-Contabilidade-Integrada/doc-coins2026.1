@@ -17,7 +17,7 @@ theme:
     - content.code.copy
     - content.code.annotate
 
-repo_url: https://github.com/NES-Contabilidade-Integrada/coins2026.1/releases/latest
+repo_url: https://nes-contabilidade-integrada.github.io/doc-coins2026.1/assets/COIN.S.exe
 repo_name: Download COIN'S
 
 copyright: Núcleo de Práticas de Engenharia de Software | UFMS

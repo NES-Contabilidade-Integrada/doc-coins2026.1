@@ -132,7 +132,7 @@ No caso do Sistema COIN'S, recomenda-se a elaboração de um Diagrama de Entidad
 
 **Ver diagrama:** [Diagrama ERD – Documentação do Modelo de Dados](../banco-de-dados/documentacao-modelo-dados.md#der-diagrama-entidade-relacionamento)
 
-![Diagrama ERD do Sistema COIN'S](../banco-de-dados/assets/Diagrama%20ERD.png)
+![Modelo físico relacional do banco de dados](../banco-de-dados/assets/Diagrama%20ERD.png)
 
 ### Diagramas suplementares – Diagrama de Implantação 
 Por se tratar de um sistema monolítico offline, não é necessário um diagrama de implantação detalhado.  
