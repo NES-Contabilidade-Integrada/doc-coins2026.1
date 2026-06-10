@@ -1,4 +1,4 @@
-# Workspace de Agentes de IA — COINS
+# Workspace de Agentes de IA
 
 **Histórico de Versões**
 
