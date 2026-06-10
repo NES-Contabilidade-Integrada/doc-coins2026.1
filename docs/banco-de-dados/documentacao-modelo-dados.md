@@ -62,7 +62,7 @@ Sua estrutura atual é composta por nove tabelas de negócio:
 
 ## Diagrama ER (Diagrama de relacionamento de entidade) 
 
-![Diagrama ERD do Sistema COIN'S](assets/Diagrama%20ERD.png)
+![Modelo físico relacional do banco de dados](assets/Diagrama%20ERD.png)
 
 ### 3.1 DBML Atual (v2.0 — estado real da branch develop)
 
