@@ -1,10 +1,11 @@
-# Infraestrutura
+# Pipeline
 
 ## Histórico de Versões
 
 | Versão | Data | Descrição | Autor |
 | :---: | :---: | :--- | :--- |
 | 1.0 | 09/06/2026 | Criação do documento com Pipeline CI, E2E e Release Automático | Amanda Gois |
+| 1.1 | 09/06/2026 | Renomeia título para Pipeline; corrige triggers e paths do pipeline de testes | Amanda Gois |
 
 ## Histórico de Revisões
 
@@ -54,16 +55,15 @@
     main
     develop
     release-candidate
-    Subtask/**
     ```
 
-=== "Pipeline E2E"
+=== "Pipeline de Testes"
 
-    A pipeline de testes E2E executa a suite Playwright contra o aplicativo Electron empacotado.
+    A pipeline de testes executa a suite Playwright contra o aplicativo Electron empacotado.
 
     **Acionada nas seguintes situações:**
 
-    Pull Requests abertos ou atualizados e push direto nas branches:
+    **1. Pull Requests** — abertos ou atualizados nas branches:
 
     ```
     main
@@ -72,12 +72,22 @@
     Subtask/**
     ```
 
+    **2. Push** — direto nas branches:
+
+    ```
+    main
+    release-candidate
+    ```
+
     A execução ocorre apenas quando há alterações nos seguintes caminhos:
 
     ```
     my-app/playwright/**
     my-app/renderer/**
     my-app/main/**
+    my-app/package.json
+    my-app/playwright.config.ts
+    my-app/scripts/select-tests.sh
     .github/workflows/ci-e2e.yml
     ```
 
@@ -99,7 +109,7 @@
     | Branch | Estratégia | Suites executadas |
     | :--- | :--- | :--- |
     | `main` / `release-candidate` | Completa | `functional`, `integration`, `regression`, `e2e` |
-    | Feature / Subtask | Seletiva (path-based) | Apenas módulos afetados + `regression` |
+    | `develop` / `Subtask/**` | Seletiva (path-based) | Apenas módulos afetados + `regression` |
 
     Na estratégia seletiva, mudanças em `playwright/pages/`, `playwright/utils/` ou `playwright/fixtures/` disparam a suite completa por impactarem todos os módulos.
 

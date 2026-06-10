@@ -6,6 +6,7 @@
 | :---: | :---: | :--- | :--- |
 | 1.0 | 02/06/2026 | Criação do documento | Amanda Gois |
 | 1.1 | 09/06/2026 | Corrige nome da branch release para release-candidate | Amanda Gois |
+| 1.2 | 09/06/2026 | Remove feature e hotfix; atualiza branches para estrutura real do projeto | Amanda Gois |
 
 ## Histórico de Revisões
 
@@ -25,92 +26,78 @@ O modelo de ramificação utilizado no projeto COIN'S é o **GitFlow**. Este mod
 
 ```mermaid
 gitGraph
-    commit id: "Inicial" tag: "v1.0.0"
+    commit id: "v1.0.0" tag: "v1.0.0"
 
-    branch develop order: 3
+    branch release-candidate order: 1
+    branch develop order: 2
     checkout develop
-    commit id: "Ajuste develop"
+    commit id: "Integração"
 
-    branch feature/funcionalidade order: 4
-    checkout feature/funcionalidade
-    commit id: "Início da feature"
+    branch feature/tela-dre order: 3
+    checkout feature/tela-dre
+    commit id: "Início feature"
 
-    branch subtask/tarefa-a order: 5
-    checkout subtask/tarefa-a
-    commit id: "Tarefa A"
+    branch Subtask/dre-backend order: 4
+    checkout Subtask/dre-backend
+    commit id: "Backend DRE"
 
-    checkout feature/funcionalidade
-    branch subtask/tarefa-b order: 6
-    checkout subtask/tarefa-b
-    commit id: "Tarefa B"
+    checkout feature/tela-dre
+    merge Subtask/dre-backend
 
-    checkout feature/funcionalidade
-    merge subtask/tarefa-a
-    merge subtask/tarefa-b
-    commit id: "Feature concluída"
+    branch Subtask/dre-frontend order: 5
+    checkout Subtask/dre-frontend
+    commit id: "Frontend DRE"
+
+    checkout feature/tela-dre
+    merge Subtask/dre-frontend
 
     checkout develop
-    merge feature/funcionalidade
+    merge feature/tela-dre
 
-    branch release-candidate order: 2
     checkout release-candidate
-    commit id: "Preparação da release"
+    merge develop tag: "v1.1.0-rc.1"
 
     checkout main
     merge release-candidate tag: "v1.1.0"
     checkout develop
     merge release-candidate
-
-    checkout main
-    branch hotfix/correcao order: 1
-    checkout hotfix/correcao
-    commit id: "Correção urgente"
-
-    checkout main
-    merge hotfix/correcao tag: "v1.1.1"
-    checkout develop
-    merge hotfix/correcao
 ```
 
 ---
 
 ## Branches Principais
 
-### 1. main
+### main
 
-- **Propósito**: Contém o código de produção, sempre estável e pronto para a versão final.
-- **Processo**: Recebe _merges_ apenas de branches de `release` ou, em emergências, de `hotfix`. Nunca se deve desenvolver ou commitar diretamente nesta branch.
-
-### 2. develop
-
-- **Propósito**: Integração de todas as funcionalidades prontas para o próximo ciclo de entrega. É a branch principal de trabalho da equipe.
-- **Processo**: Recebe _merges_ contínuos das branches de `feature` concluídas. É onde os testes integrados são realizados.
-
----
-
-## Branches de Suporte
-
-### feature/
-
-- **Propósito**: Desenvolvimento isolado de novas funcionalidades ou grandes alterações.
-- **Processo**: Criada a partir da `develop`. Após concluída, testada e revisada, é integrada (via _Pull Request_) de volta na `develop`.
-- **Nomenclatura**: `feature/nome-da-funcionalidade` ou `feature/ID-da-issue`.
+- **Propósito**: Código de produção estável. Todo merge aqui dispara automaticamente o workflow de Release, gerando um instalador `.exe` com tag estável (ex: `v1.1.0`) marcado como *Latest*.
+- **Processo**: Recebe merges apenas da `release-candidate` após validação completa de todos os testes (Jest + Playwright) pelo QA. Nunca desenvolver diretamente nesta branch.
 
 ### release-candidate
 
-- **Propósito**: Preparação de uma nova versão para produção. Ambiente dedicado para testes finais e homologação.
-- **Processo**: Criada a partir da `develop` quando as funcionalidades planejadas estão prontas. Após a validação, é mergeada na `main` (com tag de versão) e devolvida para a `develop` caso existam correções feitas durante o período de release.
-
-### hotfix/
-
-- **Propósito**: Correções urgentes no ambiente de produção (bugs críticos).
-- **Processo**: Criada diretamente a partir da `main`. Após a correção, é integrada na `main` (nova tag) e também na `develop`.
-
-### subtask/
-
-- **Propósito**: Utilizada para dividir uma `feature` muito grande em partes menores ou para tarefas internas pontuais.
-- **Processo**: Geralmente criada a partir de uma branch `feature` ou da `develop`. Deve ser mergeada de volta na sua branch de origem após a conclusão.
+- **Propósito**: Branch fixa de homologação. Recebe o código da `develop` quando as funcionalidades da sprint estão prontas para validação. Todo merge aqui gera automaticamente um executável de pré-release com tag RC (ex: `v1.1.0-rc.1`) para o QA testar.
+- **Processo**: Após aprovação em todos os testes, é mergeada na `main` para gerar o executável oficial de produção.
 
 ---
 
-> **Nota**: Todo merge para as branches `develop` e `main` deve ser realizado via **Pull Request** com revisão por pares.
+## Branches de Desenvolvimento
+
+### develop
+
+- **Propósito**: Integração contínua entre frontend e backend. Branch principal de trabalho da equipe.
+- **Processo**: Recebe merges das branches `feature/` concluídas via Pull Request. Quando as funcionalidades da sprint estão integradas e validadas, é mergeada na `release-candidate`.
+
+### feature/
+
+- **Propósito**: Desenvolvimento de uma nova funcionalidade ou tela completa do sistema.
+- **Processo**: Criada a partir de `develop`. Recebe merges das `Subtask/` que a compõem. Após concluída e revisada via Pull Request, é mergeada de volta na `develop`.
+- **Nomenclatura**: `feature/nome-da-funcionalidade` (ex: `feature/tela-dre`).
+
+### Subtask/
+
+- **Propósito**: Tarefas individuais dentro de uma feature. Usada quando uma tela ou funcionalidade é dividida entre múltiplos desenvolvedores — por exemplo, frontend e backend da mesma tela em paralelo.
+- **Processo**: Criada a partir de `feature/`. Após concluída e revisada via Pull Request, é mergeada de volta na `feature/` correspondente.
+- **Nomenclatura**: `Subtask/nome-da-tarefa` (ex: `Subtask/dre-filtros-backend`).
+
+---
+
+> **Nota**: Todo merge para `feature/`, `develop` e `release-candidate` deve ser realizado via **Pull Request** com revisão por pares.

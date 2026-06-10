@@ -10,6 +10,7 @@
 | 1.2.1 | 10/03 | Atualização do Modelo e adição de Versionamento | Amanda Caroline de Gois |
 | 1.2.1 | 15/04/2026 | Atualiza build automatico e modelo branch | Amanda Gois |
 | 1.2.2 | 09/06/2026 | Adiciona release-candidate como trigger de build automático | Amanda Gois |
+| 1.3 | 09/06/2026 | Remove modelo de ramificação; atualiza fluxo básico e build | Amanda Gois |
 
 ## Histórico de Revisões
 
@@ -25,49 +26,26 @@
 ## Introdução {#introdução}
 Este documento estabelece as **Diretrizes de Gerência de Configuração** para o sistema **COIN'S**. Ele define o conjunto de normas, padrões e procedimentos essenciais para o gerenciamento eficaz de mudanças, controle de versão e manutenção da qualidade do código-fonte. O objetivo é garantir a integridade, a estabilidade e a rastreabilidade do desenvolvimento ao longo do ciclo de vida do sistema. 
 
-## Modelo de Ramificação {#modelo-de-ramificação}
-O modelo de ramificação utilizado é o GitFlow, conforme ilustrado na figura abaixo e descrito a seguir.  
-
-**![][image1]**
-
-1. **main:**  
-   1. **Propósito:** Contém o código de produção, sempre estável e pronto para envio do executável (arquivo .exe). Qualquer push ou merge nesta branch dispara automaticamente o workflow de Release Automático via GitHub Actions gerando um novo executável com a tag nova.  
-   2. **Processo:** Recebe ***merges*** apenas de *branches* de release ou, em emergências, de hotfix. Nunca deve ser desenvolvida diretamente.  
-2. **hotfix:**  
-   1. **Propósito:** Correções urgentes no ambiente de produção (*bugs* críticos que não podem esperar pelo ciclo normal de release).  
-   2. **Processo:** A branch hotfix é criada diretamente a partir de main (na versão que contém o erro). Após a correção, a branch hotfix é integrada (*merge*) em main (recebendo uma *tag*) e também em develop (para garantir que a correção esteja no código em desenvolvimento).  
-3. **release-candidate:**  
-   1. **Propósito:** Preparar uma nova versão para produção. É o ambiente dedicado para a realização de testes finais do sistema e testes de aceitação do usuário. Todo merge de PR nesta branch também aciona automaticamente o workflow de Release Automático via GitHub Actions, gerando um executável de release candidate (RC) para validação.  
-   2. **Processo:**  Logo após a estabilização e a validação de todos os testes, a branch release é mergeada em main (recebendo uma *tag* de versão) e também em develop (para garantir que os *fixes* da *release* entrem no ciclo de desenvolvimento).  
-4. **develop:**  
-   1. **Propósito:** Integração de todas as *features* prontas para o próximo ciclo de *release*. É a *branch* principal de desenvolvimento.  
-   2. **Processo:** A branch develop recebe *merges* contínuos das *branches* feature concluídas. Este é o local oficial onde o QA realizará os testes integrados do módulo.  
-5. **feature:**  
-   1. **Propósito:** Desenvolvimento isolado de novas funcionalidades ou grandes alterações.  
-   2. **Processo:** A branch feature é criada a partir de develop. O desenvolvimento é feito aqui. Após concluída, testada e revisada, é integrada (via *merge*) de volta em develop.  
-6. **subtask:**  
-   1. **Propósito:** Subtask não é padrão no Gitflow. Pode ser uma variação usada para dividir uma feature muito grande em partes menores, ou para *branches* de tarefas internas/menores que não justificam uma feature completa.  
-   2. **Processo:** Geralmente uma subtask é criada a partir da feature principal ou de develop. Ela é mergeada de volta na sua *branch* de origem (feature ou develop) após a sua conclusão.
-
 ## 3\. Fluxo Básico {#3.-fluxo-básico}
 
-O fluxo de desenvolvimento segue a criação de novas branches a partir da branch **develop**, garantindo um isolamento das mudanças e fluxo contínuo de desenvolvimento. Para iniciar um desenvolvimento, deve-se criar uma nova branch utilizando a convenção:
+O fluxo parte de branches `feature/` para novas funcionalidades, que são subdivididas em `Subtask/` quando envolvem múltiplos desenvolvedores. As features são integradas em `develop`, promovidas para `release-candidate` e, após validação do QA, mergeadas na `main`.
+
+Convenção de nomenclatura:
 
 ```
-<tipo>/<descrição-curta>	
+feature/<nome-da-funcionalidade>
+Subtask/<nome-da-tarefa>
 ```
 
 Exemplos:
 
-```css
-feat/login-page
-fix/api-timeout
+```
+feature/tela-dre
+Subtask/dre-filtros-backend
+Subtask/dre-tabela-frontend
 ```
 
-Após a implementação da tarefa, o desenvolvedor deve abrir uma **Pull Request (PR)** direcionada ao branch **develop**, descrevendo claramente o escopo da mudança.
-
-Com os testes validados, a PR aprovada e ao final da sprint, é criada uma **branch de release**, responsável por consolidar as funcionalidades concluídas. Após os testes finais, a release é integrada (merge) na **main**, onde o código é empacotado para disponibilização ao proponente.
-
+Ao finalizar cada subtask, o desenvolvedor abre um **Pull Request** para a `feature/` correspondente. Com todas as subtasks integradas, abre-se um PR da `feature/` para `develop`. Com as funcionalidades da sprint prontas, abre-se um PR de `develop` para `release-candidate`, gerando um executável de pré-release para validação pelo QA. Aprovados todos os testes, o PR final de `release-candidate` para `main` gera o executável oficial de produção.
 ## 4\. Padrão de Commit Semântico
 
 A adoção do Padrão de Commit Semântico não é apenas uma convenção, mas um requisito técnico que traz benefícios cruciais para a gestão de projetos e o ciclo de vida do software:
@@ -143,31 +121,30 @@ A **Definição de Pronto (DoD)** é um conjunto de critérios de qualidade e pa
 **Revisão e Aprovação**
 
 * Revisão por pelo menos 1 revisor técnico aprovado.
+* Comentário de aprovação no PR pelo revisor.
 
 ## 9\. Automação de Build e Geração do Executável
 
-O sistema COIN'S utiliza o framework Electron (com Squirrel.Windows) para empacotamento desktop. A geração do instalador (.exe) é totalmente automatizada via GitHub Actions, garantindo que a versão em produção seja sempre fiel ao código da branch main.
+A geração do instalador `.exe` é totalmente automatizada via GitHub Actions (workflow `release.yml`), acionada pelo merge de uma PR nas branches principais.
 
-**Fluxo de Integração e Entrega Contínua (CI/CD)**
+**Gatilhos de Geração**
 
-O processo de build segue o fluxo:
+| Branch | Tipo de release | Tag gerada | Marcação |
+| :--- | :--- | :--- | :--- |
+| `main` | Estável | `v1.2.0` | Latest |
+| `release-candidate` | Pré-release | `v1.2.0-rc.1` | Pre-release |
 
-```javascript
-Código (main) → Disparo do workflow release.yml.
-Validação → Execução obrigatória de testes unitários (Jest) e E2E (Playwright).
-Build → Compilação de TypeScript e empacotamento via electron-builder.
-Distribuição → Criação de uma GitHub Release com o instalador disponível para download
-```
+**Versionamento automático:**
 
-O executável aparece na aba Releases do Github da seguinte forma
+A versão é calculada com base nos commits desde a última tag estável, seguindo o padrão de commit semântico:
 
-**![][image2]**
+* `feat!` / `BREAKING CHANGE` → incrementa **MAJOR**
+* `feat` → incrementa **MINOR**
+* `fix` / outros → incrementa **PATCH**
 
-**Gatilhos de Geração** 
+O workflow atualiza o `package.json`, gera o executável via `npm run make` e publica uma GitHub Release com o instalador `.exe`. Um resumo em português das mudanças é gerado automaticamente via IA (GPT-4o-mini).
 
-* **Por Push na main:** Gera uma release automática com o SHA do commit para fins de rastreabilidade.  
-* **Por Tag de Versão (v\*):** Ao realizar um git push origin v1.2.3, o workflow build-windows.yml é acionado. Ele atualiza o package.json e gera o executável oficial daquela versão semântica.
-
+**Build manual:** O workflow `build-windows.yml` permite gerar um executável manualmente via `workflow_dispatch`, informando a tag desejada. Útil para reprocessar uma release fora do ciclo automático.
 ## 10\. Revisão do copilot {#10.-revisão-do-copilot}
 
 O GitHub Copilot foi integrado ao processo de desenvolvimento do sistema COIN'S com o objetivo de aprimorar a qualidade do código e aumentar a eficiência das revisões técnicas. A ferramenta atua como um mecanismo complementar de análise automatizada, auxiliando na identificação de problemas e na manutenção dos padrões estabelecidos neste documento.

@@ -1,16 +1,16 @@
-# Casos de Teste — NES Coins 2026.1
+# Casos de Teste 
 
 ## Histórico de Versões
 
 | Versão | Data | Descrição | Autor |
 | :---: | :---: | :--- | :--- |
-| 1.0 | 09/06/2026 | Criação do documento | Amanda Gois |
+| 1.0 | 09/06/2026 | Criação do documento | Amanda Caroline de Gois |
 
 ## Histórico de Revisões
 
 | Versão | Data | Revisor | Observação |
 | :---: | :---: | :--- | :--- |
-| 1.0 | 09/06/2026 | Eduardo Henrique | Aprovado |
+| 1.0 | 09/06/2026 | Eduardo Henrique Alves | Aprovado |
 
 ---
 

@@ -88,8 +88,7 @@ nav:
       - Diretrizes de Gerência de Configuração: devops/diretrizes-gerencia-configuracao.md
       - Modelo de Ramificação: devops/modelo-ramificacao.md
       - Fluxo: devops/fluxo.md
-      - DoD: devops/dod.md
-      - CI/CD: devops/infraestrutura.md
+      - Pipeline: devops/pipeline.md
       - Pull Request Template: devops/pull-request-template.md
       - Geração do Executável: devops/geracao-executavel.md
   - Gerência de Projeto:

@@ -1,18 +1,18 @@
-# Plano de Teste — NES Coins 2026.1
+# Plano de Teste 
 
 ## Histórico de Versões
 
 | Versão | Data | Descrição | Autor |
 | :---: | :---: | :--- | :--- |
-| 1.0 | 25/03/2026 | Criação do plano inicial com análise da situação atual | Amanda Gois |
-| 1.1 | 15/04/2026 | Atualização do conteúdo sobre o plano | Amanda Gois |
+| 1.0 | 25/03/2026 | Criação do plano inicial com análise da situação atual | Amanda Caroline de Gois |
+| 1.1 | 15/04/2026 | Atualização do conteúdo sobre o plano | Amanda Caroline de Gois |
 | 1.2 | 09/06/2026 | Reestruturação no padrão do MKdocs; cobertura completa dos 466 testes automatizados | Amanda Gois |
 
 ## Histórico de Revisões
 
 | Versão | Data | Revisor | Observação |
 | :---: | :---: | :--- | :--- |
-| 1.0 | 09/06/2026 | Eduardo Henrique | Aprovado |
+| 1.0 | 09/06/2026 | Eduardo Henrique Alves | Aprovado |
 
 ---
 
