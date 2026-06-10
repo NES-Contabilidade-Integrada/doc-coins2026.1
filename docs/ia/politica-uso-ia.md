@@ -184,7 +184,7 @@ Os agentes de codificação operam a partir do workspace `.agents/` no repositó
 | `analyse-context` | Para analisar se o código respeita as regras de domínio contábil |
 | `create-skill` | Para criar uma nova skill seguindo o padrão adotado |
 
-**Como invocar uma skill de documentação no Claude Code:**
+**Como invocar uma skill de documentação:**
 
 ```bash
 /boas-praticas-markdown
