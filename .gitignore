@@ -28,3 +28,7 @@ Thumbs.db
 
 # Superpowers brainstorm sessions
 .superpowers/
+
+# Arquivos de trabalho locais (não devem subir ao repositório)
+*.xlsx
+*.xls
