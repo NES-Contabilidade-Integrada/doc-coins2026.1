@@ -1,0 +1,5065 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../plano-de-teste/">
+      
+      
+        <link rel="next" href="../../devops/visao-geral/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Casos de Teste - Documentação do COIN'S</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#casos-de-teste" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Documentação do COIN&#39;S" class="md-header__button md-logo" aria-label="Documentação do COIN'S" data-md-component="logo">
+      <img src="../../assets/logo.png" alt="COINS logo" class="logo-coin" />
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentação do COIN'S
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Casos de Teste
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/NES-Contabilidade-Integrada/coins2026.1/releases/latest" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Download COIN'S
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../uso-do-sistema/exemplos-lancamentos/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Uso do Sistema
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ihc/visao-geral/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  IHC
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../requisitos/especificacao-de-requisitos-de-software/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Requisitos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../arquitetura/especificacao-arquitetural/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Arquitetura
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../banco-de-dados/documentacao-modelo-dados/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Banco de Dados
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ia/politica-uso-ia/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  IA
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../plano-de-teste/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Qualidade e Testes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../devops/visao-geral/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  DevOps
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../gerencia-projeto/analise-preliminar/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Gerência de Projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../decisoes/decisoes/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Decisões
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentação do COIN&#39;S" class="md-nav__button md-logo" aria-label="Documentação do COIN'S" data-md-component="logo">
+      <img src="../../assets/logo.png" alt="COINS logo" class="logo-coin" />
+    </a>
+    Documentação do COIN'S
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/NES-Contabilidade-Integrada/coins2026.1/releases/latest" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Download COIN'S
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso do Sistema
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Uso do Sistema
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uso-do-sistema/exemplos-lancamentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exemplos de Lançamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IHC
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IHC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ihc/visao-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ihc/identidade-visual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Identidade Visual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ihc/jornada-usuario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jornada do Usuário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ihc/termo-consentimento-usabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Termo de Consentimento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ihc/roteiro-teste-usabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roteiro de Teste de Usabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ihc/relatorio-teste-usabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatório de Teste de Usabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Requisitos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requisitos/especificacao-de-requisitos-de-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificação de Requisitos de Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requisitos/modelo-de-descoberta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Descoberta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requisitos/glossario-de-termos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossário de Termos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requisitos/fundamento-estrutura-requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fundamento e Estrutura de Requisitos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Arquitetura
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/especificacao-arquitetural/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificação Arquitetural
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/diagramas-c4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diagramas C4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/visao-de-implementacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão de Implementação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/adr-coins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Registro de Decisões Arquiteturais
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Banco de Dados
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Banco de Dados
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../banco-de-dados/documentacao-modelo-dados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentação do Modelo de Dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../banco-de-dados/dicionario-dados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dicionário de Dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ia/politica-uso-ia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Política de Uso de IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ia/workspace-agentes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace de Agentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ia/instrucoes-do-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instruções do Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qualidade e Testes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Qualidade e Testes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plano-de-teste/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plano de Teste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos de Teste
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos de Teste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versões
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-revisoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Revisões
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sumario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sumário
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introdução" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convenções" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convenções
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Convenções">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prioridade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prioridade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menu-de-navegação" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Menu de Navegação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Menu de Navegação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#detalhamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detalhamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empresa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empresa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plano-de-contas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plano de Contas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diário-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diário Geral
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diário Geral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exibicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exibição
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crud-de-lancamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CRUD de Lançamentos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionalidades-avancadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionalidades Avançadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integracao-cross-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integração Cross-Module
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detalhamento-casos-criticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detalhamento — Casos Críticos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#razão-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Razão Geral
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Razão Geral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exibicao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exibição
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cálculos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#balancete-de-verificação" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Balancete de Verificação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Balancete de Verificação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exibicao_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exibição
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtros_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detalhamento-caso-critico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detalhamento — Caso Crítico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#balanço-patrimonial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Balanço Patrimonial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dre--demonstração-do-resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DRE — Demonstração do Resultado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DRE — Demonstração do Resultado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interface-e-navegacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface e Navegação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cálculos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtros_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detalhamento-caso-critico_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detalhamento — Caso Crítico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apuração-de-resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apuração de Resultado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Apuração de Resultado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exibicao-do-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exibição do Módulo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculos-e-logica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cálculos e Lógica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-de-prejuizo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenário de Prejuízo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-vazio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado Vazio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-de-apuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo de Apuração
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detalhamento-casos-criticos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detalhamento — Casos Críticos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-e2e--fluxos-completos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testes E2E — Fluxos Completos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes E2E — Fluxos Completos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-contabil-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo Contábil Completo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-de-apuracao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo de Apuração
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-de-dre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo de DRE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DevOps
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/visao-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/diretrizes-gerencia-configuracao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diretrizes de Gerência de Configuração
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/modelo-ramificacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Ramificação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/fluxo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fluxo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/pull-request-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pull Request Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/geracao-executavel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geração do Executável
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gerência de Projeto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gerência de Projeto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gerencia-projeto/analise-preliminar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise Preliminar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gerencia-projeto/plano-do-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plano de Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gerencia-projeto/encerramento-do-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encerramento do Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gerencia-projeto/template-de-documento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Template de Documento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decisões
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Decisões
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../decisoes/decisoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário de Decisões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../decisoes/diario-de-decisoes-importado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decisões Importadas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versões
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-revisoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Revisões
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sumario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sumário
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introdução" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convenções" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convenções
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Convenções">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prioridade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prioridade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#menu-de-navegação" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Menu de Navegação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Menu de Navegação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#detalhamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detalhamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empresa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empresa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plano-de-contas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plano de Contas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diário-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diário Geral
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diário Geral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exibicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exibição
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crud-de-lancamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CRUD de Lançamentos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionalidades-avancadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionalidades Avançadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integracao-cross-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integração Cross-Module
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detalhamento-casos-criticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detalhamento — Casos Críticos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#razão-geral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Razão Geral
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Razão Geral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exibicao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exibição
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cálculos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#balancete-de-verificação" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Balancete de Verificação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Balancete de Verificação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exibicao_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exibição
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtros_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detalhamento-caso-critico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detalhamento — Caso Crítico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#balanço-patrimonial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Balanço Patrimonial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dre--demonstração-do-resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DRE — Demonstração do Resultado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DRE — Demonstração do Resultado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interface-e-navegacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface e Navegação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cálculos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtros_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detalhamento-caso-critico_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detalhamento — Caso Crítico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apuração-de-resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apuração de Resultado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Apuração de Resultado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exibicao-do-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exibição do Módulo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculos-e-logica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cálculos e Lógica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-de-prejuizo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cenário de Prejuízo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estado-vazio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estado Vazio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-de-apuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo de Apuração
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detalhamento-casos-criticos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detalhamento — Casos Críticos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-e2e--fluxos-completos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testes E2E — Fluxos Completos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes E2E — Fluxos Completos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-contabil-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo Contábil Completo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-de-apuracao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo de Apuração
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-de-dre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo de DRE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="casos-de-teste">Casos de Teste</h1>
+<h2 id="historico-de-versoes">Histórico de Versões</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Versão</th>
+<th style="text-align: center;">Data</th>
+<th style="text-align: left;">Descrição</th>
+<th style="text-align: left;">Autor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: center;">09/06/2026</td>
+<td style="text-align: left;">Criação do documento</td>
+<td style="text-align: left;">Amanda Caroline de Gois</td>
+</tr>
+</tbody>
+</table>
+<h2 id="historico-de-revisoes">Histórico de Revisões</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Versão</th>
+<th style="text-align: center;">Data</th>
+<th style="text-align: left;">Revisor</th>
+<th style="text-align: left;">Observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: center;">09/06/2026</td>
+<td style="text-align: left;">Eduardo Henrique Alves</td>
+<td style="text-align: left;">Aprovado</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sumario">Sumário</h2>
+<p><a href="#introdução">1. Introdução</a></p>
+<p><a href="#convenções">2. Convenções</a></p>
+<p><a href="#menu-de-navegação">3. Menu de Navegação</a></p>
+<p><a href="#empresa">4. Empresa</a></p>
+<p><a href="#plano-de-contas">5. Plano de Contas</a></p>
+<p><a href="#diário-geral">6. Diário Geral</a></p>
+<p><a href="#razão-geral">7. Razão Geral</a></p>
+<p><a href="#balancete-de-verificação">8. Balancete de Verificação</a></p>
+<p><a href="#balanço-patrimonial">9. Balanço Patrimonial</a></p>
+<p><a href="#dre--demonstração-do-resultado">10. DRE — Demonstração do Resultado</a></p>
+<p><a href="#apuração-de-resultado">11. Apuração de Resultado</a></p>
+<p><a href="#testes-e2e--fluxos-completos">12. Testes E2E — Fluxos Completos</a></p>
+<h2 id="introdução">Introdução</h2>
+<p>Este documento reúne os casos de teste funcionais e E2E do sistema NES Coins 2026.1. Cobrem o comportamento esperado da interface nos nove módulos da aplicação, bem como os fluxos de negócio completos de ponta a ponta. Casos de teste unitários, de integração e de sistema são tratados separadamente.</p>
+<h2 id="convenções">Convenções</h2>
+<h3 id="prioridade">Prioridade</h3>
+<ul>
+<li><strong>Alta:</strong> funcionalidade central do negócio contábil; falha impede uso do sistema.</li>
+<li><strong>Média:</strong> funcionalidade importante; falha degrada a experiência mas há workaround.</li>
+<li><strong>Baixa:</strong> funcionalidade auxiliar; falha cosmética ou raramente exercitada.</li>
+</ul>
+<h3 id="tipo">Tipo</h3>
+<ul>
+<li><strong>Funcional:</strong> verifica comportamento esperado da interface e dados.</li>
+<li><strong>E2E:</strong> simula fluxo completo do usuário real.</li>
+</ul>
+<h3 id="status">Status</h3>
+<ul>
+<li><strong>Automatizado:</strong> caso coberto por teste Playwright.</li>
+<li><strong>Manual:</strong> caso sem automação.</li>
+</ul>
+<h2 id="menu-de-navegação">Menu de Navegação</h2>
+<p><strong>Arquivo:</strong> <code>playwright/specs/functional/menu/menu.spec.ts</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">MENU-01</td>
+<td style="text-align: left;">Menu principal exibe todas as abas esperadas</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">MENU-02</td>
+<td style="text-align: left;">Navegação entre abas altera o conteúdo exibido</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="detalhamento">Detalhamento</h3>
+<p><strong>MENU-01 — Menu principal exibe todas as abas esperadas</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Pré-condições</td>
+<td style="text-align: left;">Aplicação iniciada com empresa configurada</td>
+</tr>
+<tr>
+<td style="text-align: left;">Passos</td>
+<td style="text-align: left;">1. Iniciar a aplicação; 2. Observar o menu de abas</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resultado Esperado</td>
+<td style="text-align: left;">Abas Diário Geral, Razão Geral, Balancete, Apuração, Demonstrações e Plano de Contas visíveis</td>
+</tr>
+<tr>
+<td style="text-align: left;">Critério de Aprovação</td>
+<td style="text-align: left;">Todos os itens de menu presentes e clicáveis</td>
+</tr>
+</tbody>
+</table>
+<p><strong>MENU-02 — Navegação entre abas altera o conteúdo exibido</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Pré-condições</td>
+<td style="text-align: left;">Aplicação iniciada</td>
+</tr>
+<tr>
+<td style="text-align: left;">Passos</td>
+<td style="text-align: left;">1. Clicar em cada aba do menu; 2. Verificar que o conteúdo muda</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resultado Esperado</td>
+<td style="text-align: left;">Cada aba exibe seu respectivo módulo sem erros de renderização</td>
+</tr>
+<tr>
+<td style="text-align: left;">Critério de Aprovação</td>
+<td style="text-align: left;">Nenhuma aba exibe tela em branco ou erro de componente</td>
+</tr>
+</tbody>
+</table>
+<h2 id="empresa">Empresa</h2>
+<p><strong>Arquivo:</strong> <code>playwright/specs/functional/company/company.spec.ts</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">CO-01</td>
+<td style="text-align: left;">Dados da empresa são exibidos corretamente</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h2 id="plano-de-contas">Plano de Contas</h2>
+<p><strong>Arquivo:</strong> <code>playwright/specs/functional/chart-of-accounts/chart-of-accounts.spec.ts</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">COA-01</td>
+<td style="text-align: left;">Módulo Plano de Contas é acessível pelo menu</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">COA-02</td>
+<td style="text-align: left;">Lista de contas é exibida com colunas corretas</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">COA-03</td>
+<td style="text-align: left;">Contas são agrupadas por classe (Ativo, Passivo, etc.)</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">COA-04</td>
+<td style="text-align: left;">Código e descrição de cada conta são exibidos</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">COA-05</td>
+<td style="text-align: left;">Natureza D/C de cada conta é exibida</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">COA-06</td>
+<td style="text-align: left;">Filtro ou busca de conta por código funciona</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">COA-07</td>
+<td style="text-align: left;">Hierarquia de contas (pai/filho) é exibida corretamente</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">COA-08</td>
+<td style="text-align: left;">Contas analíticas são distinguíveis das sintéticas</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h2 id="diário-geral">Diário Geral</h2>
+<p><strong>Arquivos:</strong> <code>playwright/specs/functional/general-journal/*.spec.ts</code></p>
+<h3 id="exibicao">Exibição</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">GJ-01</td>
+<td style="text-align: left;">Módulo Diário Geral exibe tabela de lançamentos</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GJ-02</td>
+<td style="text-align: left;">Tabela exibe colunas Data, Débito, Crédito, Histórico, Valor</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="crud-de-lancamentos">CRUD de Lançamentos</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">GJ-03</td>
+<td style="text-align: left;">Adicionar lançamento simples com sucesso</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GJ-04</td>
+<td style="text-align: left;">Adicionar lançamento múltiplo com sucesso</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GJ-05</td>
+<td style="text-align: left;">Editar lançamento — alterar valor e histórico</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GJ-06</td>
+<td style="text-align: left;">Editar lançamento — adicionar e remover conta</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GJ-07</td>
+<td style="text-align: left;">Excluir lançamento individual</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GJ-08</td>
+<td style="text-align: left;">Excluir todos os lançamentos</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="funcionalidades-avancadas">Funcionalidades Avançadas</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">GJ-09</td>
+<td style="text-align: left;">Exportar lançamentos para CSV</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GJ-10</td>
+<td style="text-align: left;">Filtrar lançamentos por período</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GJ-11</td>
+<td style="text-align: left;">Ordenar lançamentos por coluna</td>
+<td style="text-align: center;">Baixa</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="integracao-cross-module">Integração Cross-Module</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">GJ-12</td>
+<td style="text-align: left;">Lançamento criado reflete no Razão Geral</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GJ-13</td>
+<td style="text-align: left;">Lançamento criado reflete no Balancete</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GJ-14</td>
+<td style="text-align: left;">Lançamento criado reflete na Apuração</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="detalhamento-casos-criticos">Detalhamento — Casos Críticos</h3>
+<p><strong>GJ-03 — Adicionar lançamento simples com sucesso</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Pré-condições</td>
+<td style="text-align: left;">Módulo Diário Geral aberto; plano de contas com contas disponíveis</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dados de entrada</td>
+<td style="text-align: left;">Data: data atual; Débito: código de conta de despesa; Crédito: código de conta de ativo; Valor: R$ 100,00; Histórico: texto livre</td>
+</tr>
+<tr>
+<td style="text-align: left;">Passos</td>
+<td style="text-align: left;">1. Clicar em "Adicionar Lançamento"; 2. Preencher campos; 3. Clicar em "Salvar"</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resultado Esperado</td>
+<td style="text-align: left;">Toast de sucesso exibido; nova linha aparece na tabela com o histórico informado</td>
+</tr>
+<tr>
+<td style="text-align: left;">Critério de Aprovação</td>
+<td style="text-align: left;"><code>successToast</code> visível em até 10s; linha com o histórico encontrada na tabela</td>
+</tr>
+</tbody>
+</table>
+<p><strong>GJ-07 — Excluir lançamento individual</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Pré-condições</td>
+<td style="text-align: left;">Lançamento de teste existente na tabela</td>
+</tr>
+<tr>
+<td style="text-align: left;">Passos</td>
+<td style="text-align: left;">1. Localizar o lançamento; 2. Clicar no ícone de exclusão; 3. Confirmar no dialog</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resultado Esperado</td>
+<td style="text-align: left;">Toast de exclusão exibido; linha removida da tabela</td>
+</tr>
+<tr>
+<td style="text-align: left;">Critério de Aprovação</td>
+<td style="text-align: left;"><code>deletedToast</code> visível; linha do lançamento não encontrada na tabela</td>
+</tr>
+</tbody>
+</table>
+<p><strong>GJ-08 — Excluir todos os lançamentos</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Pré-condições</td>
+<td style="text-align: left;">Pelo menos um lançamento existente</td>
+</tr>
+<tr>
+<td style="text-align: left;">Passos</td>
+<td style="text-align: left;">1. Clicar no ícone de engrenagem; 2. Clicar em "Excluir Todos os Lançamentos"; 3. Confirmar</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resultado Esperado</td>
+<td style="text-align: left;">Toast de confirmação exibido; tabela exibe 0 linhas e mensagem "sem dados"</td>
+</tr>
+<tr>
+<td style="text-align: left;">Critério de Aprovação</td>
+<td style="text-align: left;"><code>allDeletedToast</code> visível; <code>tableRows</code> count = 0; <code>noDataMessage</code> visível</td>
+</tr>
+</tbody>
+</table>
+<h2 id="razão-geral">Razão Geral</h2>
+<p><strong>Arquivos:</strong> <code>playwright/specs/functional/general-ledger/*.spec.ts</code></p>
+<h3 id="exibicao_1">Exibição</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">GL-01</td>
+<td style="text-align: left;">Módulo Razão Geral é acessível pelo menu</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GL-02</td>
+<td style="text-align: left;">Lista de contas com movimentação é exibida</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GL-03</td>
+<td style="text-align: left;">Detalhe de movimentações de uma conta é exibido</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GL-04</td>
+<td style="text-align: left;">Saldo final de cada conta é exibido</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="filtros">Filtros</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">GL-05</td>
+<td style="text-align: left;">Filtro por conta específica funciona</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GL-06</td>
+<td style="text-align: left;">Filtro por período (data início) funciona</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GL-07</td>
+<td style="text-align: left;">Filtro por período (data fim) funciona</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GL-08</td>
+<td style="text-align: left;">Filtro combinado conta + período funciona</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GL-09</td>
+<td style="text-align: left;">Limpar filtros restaura listagem completa</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GL-10</td>
+<td style="text-align: left;">Estado vazio exibido quando nenhum resultado</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="calculos">Cálculos</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">GL-11</td>
+<td style="text-align: left;">Saldo devedor calculado corretamente</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GL-12</td>
+<td style="text-align: left;">Saldo credor calculado corretamente</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GL-13</td>
+<td style="text-align: left;">Saldo acumulado por lançamento está correto</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">GL-14</td>
+<td style="text-align: left;">Saldo final bate com soma dos lançamentos</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h2 id="balancete-de-verificação">Balancete de Verificação</h2>
+<p><strong>Arquivos:</strong> <code>playwright/specs/functional/balance-sheet/*.spec.ts</code></p>
+<h3 id="exibicao_2">Exibição</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">BS-01</td>
+<td style="text-align: left;">Módulo Balancete é acessível pelo menu</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">BS-02</td>
+<td style="text-align: left;">Tabela exibe colunas Conta, Saldo Devedor, Saldo Credor</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">BS-03</td>
+<td style="text-align: left;">Contas com movimentação aparecem na listagem</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="filtros_1">Filtros</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">BS-04</td>
+<td style="text-align: left;">Filtro por período inicial funciona</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">BS-05</td>
+<td style="text-align: left;">Filtro por período final funciona</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">BS-06</td>
+<td style="text-align: left;">Filtro combinado de período funciona</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">BS-07</td>
+<td style="text-align: left;">Filtro por conta funciona</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">BS-08</td>
+<td style="text-align: left;">Filtro por tipo de conta funciona</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">BS-09</td>
+<td style="text-align: left;">Limpar filtros restaura visualização padrão</td>
+<td style="text-align: center;">Baixa</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resumo">Resumo</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">BS-10</td>
+<td style="text-align: left;">Seção de resumo exibe totais de débito e crédito</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">BS-11</td>
+<td style="text-align: left;">Total Devedor = Total Credor (equilíbrio contábil)</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">BS-12</td>
+<td style="text-align: left;">Exportação do balancete está disponível</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="detalhamento-caso-critico">Detalhamento — Caso Crítico</h3>
+<p><strong>BS-11 — Total Devedor = Total Credor (equilíbrio contábil)</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Pré-condições</td>
+<td style="text-align: left;">Lançamentos contábeis registrados com débito e crédito balanceados</td>
+</tr>
+<tr>
+<td style="text-align: left;">Passos</td>
+<td style="text-align: left;">1. Navegar ao Balancete; 2. Verificar seção de resumo; 3. Comparar totais devedor e credor</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resultado Esperado</td>
+<td style="text-align: left;">Total Devedor == Total Credor</td>
+</tr>
+<tr>
+<td style="text-align: left;">Critério de Aprovação</td>
+<td style="text-align: left;">Valores iguais; nenhum alerta de desbalanceamento exibido</td>
+</tr>
+<tr>
+<td style="text-align: left;">Observação</td>
+<td style="text-align: left;">Falha indica lançamento inválido ou bug de cálculo — severity S1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="balanço-patrimonial">Balanço Patrimonial</h2>
+<p><strong>Arquivo:</strong> <code>playwright/specs/functional/balanco-patrimonial/display.spec.ts</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">BP-01</td>
+<td style="text-align: left;">Aba Balanço Patrimonial está visível em Demonstrações</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">BP-02</td>
+<td style="text-align: left;">Seção ATIVO é exibida com seus grupos</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">BP-03</td>
+<td style="text-align: left;">Seção PASSIVO é exibida com seus grupos</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">BP-04</td>
+<td style="text-align: left;">Seção PATRIMÔNIO LÍQUIDO é exibida</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">BP-05</td>
+<td style="text-align: left;">Total do Ativo exibido corretamente</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">BP-06</td>
+<td style="text-align: left;">Total do Passivo + PL exibido corretamente</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">BP-07</td>
+<td style="text-align: left;">Ativo Total = Passivo Total + PL (equação contábil)</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">BP-08</td>
+<td style="text-align: left;">Botão Exportar CSV está visível</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">BP-09</td>
+<td style="text-align: left;">Botão Exportar PDF está visível</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dre--demonstração-do-resultado">DRE — Demonstração do Resultado</h2>
+<p><strong>Arquivos:</strong> <code>playwright/specs/functional/dre/*.spec.ts</code></p>
+<h3 id="interface-e-navegacao">Interface e Navegação</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">DRE-UI-01</td>
+<td style="text-align: left;">Aba DEMONSTRAÇÕES visível no menu</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-02</td>
+<td style="text-align: left;">Aba DRE ativa por padrão ao entrar em Demonstrações</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-03</td>
+<td style="text-align: left;">Aba BALANÇO PATRIMONIAL visível na seção Demonstrações</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-04</td>
+<td style="text-align: left;">Filtro Período Inicial carregado com primeiro dia do ano atual</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-05</td>
+<td style="text-align: left;">Filtro Período Final carregado com último dia do ano atual</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-06</td>
+<td style="text-align: left;">Tabela DRE visível com 14 linhas</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-07</td>
+<td style="text-align: left;">Tabela DRE tem colunas Ord. / Descrição / Valor / D/C</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-08</td>
+<td style="text-align: left;">Linhas de subtotal estão destacadas (highlighted)</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-09</td>
+<td style="text-align: left;">Linhas da DRE na ordem correta</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-10</td>
+<td style="text-align: left;">Card Receita Líquida visível</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-11</td>
+<td style="text-align: left;">Card Lucro Bruto visível</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-12</td>
+<td style="text-align: left;">Card LAJIR visível</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-13</td>
+<td style="text-align: left;">Card LAIR visível</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-14</td>
+<td style="text-align: left;">Seção de resultado final visível</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-15</td>
+<td style="text-align: left;">Resultado final exibe label do tipo (Lucro, Prejuízo ou Nulo)</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-16</td>
+<td style="text-align: left;">Botão Exportar CSV visível</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-17</td>
+<td style="text-align: left;">Botão Exportar PDF visível</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-18</td>
+<td style="text-align: left;">Aba BP exibe Balanço Patrimonial ou estado vazio</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-19</td>
+<td style="text-align: left;">Seção "COMPOSIÇÃO DAS CONTAS" é exibida</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-20</td>
+<td style="text-align: left;">Clique em "Exportar PDF" abre dialog de preview</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-UI-21</td>
+<td style="text-align: left;">Dialog de preview fecha ao clicar Cancelar</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="calculos_1">Cálculos</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">DRE-CALC-01</td>
+<td style="text-align: left;">Receita Bruta exibe soma das receitas brutas</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-CALC-02</td>
+<td style="text-align: left;">Deduções calculadas corretamente</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-CALC-03</td>
+<td style="text-align: left;">Receita Líquida = Receita Bruta − Deduções</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-CALC-04</td>
+<td style="text-align: left;">Custo dos Produtos Vendidos exibido corretamente</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-CALC-05</td>
+<td style="text-align: left;">Lucro Bruto = Receita Líquida − CPV</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-CALC-06</td>
+<td style="text-align: left;">LAJIR calculado após despesas operacionais</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-CALC-07</td>
+<td style="text-align: left;">Resultado Líquido do Período calculado corretamente</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-CALC-08</td>
+<td style="text-align: left;">Linha 7 da DRE com dados reais</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-CALC-09</td>
+<td style="text-align: left;">Linha 9 da DRE com dados reais</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-CALC-10</td>
+<td style="text-align: left;">Linha 11 da DRE com dados reais</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-CALC-11</td>
+<td style="text-align: left;">Linha 12 da DRE com dados reais</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="filtros_2">Filtros</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">DRE-FLT-01</td>
+<td style="text-align: left;">Filtro por período inicial altera valores da DRE</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-FLT-02</td>
+<td style="text-align: left;">Filtro por período final altera valores da DRE</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-FLT-03</td>
+<td style="text-align: left;">Filtro de período completo funciona corretamente</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-FLT-04</td>
+<td style="text-align: left;">Filtro com período sem lançamentos exibe zeros</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-FLT-05</td>
+<td style="text-align: left;">Filtro reseta para padrão (ano atual) ao limpar</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">DRE-FLT-06</td>
+<td style="text-align: left;">Data inválida no filtro exibe mensagem de erro</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="detalhamento-caso-critico_1">Detalhamento — Caso Crítico</h3>
+<p><strong>DRE-CALC-07 — Resultado Líquido do Período calculado corretamente</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Pré-condições</td>
+<td style="text-align: left;">Lançamentos de receita (R$ 5.000,00) e despesa (R$ 2.000,00) registrados e apurados</td>
+</tr>
+<tr>
+<td style="text-align: left;">Passos</td>
+<td style="text-align: left;">1. Navegar à DRE; 2. Verificar linha "Resultado Líquido do Período"</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resultado Esperado</td>
+<td style="text-align: left;">Resultado Líquido = R$ 3.000,00 (Lucro)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Critério de Aprovação</td>
+<td style="text-align: left;">Linha 13 exibe valor 3.000,00; classificação "C" (credor)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="apuração-de-resultado">Apuração de Resultado</h2>
+<p><strong>Arquivos:</strong> <code>playwright/specs/functional/apuracao/*.spec.ts</code></p>
+<h3 id="exibicao-do-modulo">Exibição do Módulo</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">AP-01</td>
+<td style="text-align: left;">Aba APURAÇÃO está visível no menu de abas</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-02</td>
+<td style="text-align: left;">Card de filtro exibe campo de data e botão de histórico</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-03</td>
+<td style="text-align: left;">Seção RESUMO DO RESULTADO exibe os três cards de totais</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-04</td>
+<td style="text-align: left;">Tabela CONTAS DE RESULTADO exibe as cinco colunas corretas</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-05</td>
+<td style="text-align: left;">Tabela CONTAS DE RESULTADO exibe pelo menos uma linha</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-06</td>
+<td style="text-align: left;">Seção RESULTADO FINAL exibe tipo e conta destino</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-07</td>
+<td style="text-align: left;">Botão "Realizar Apuração" está visível e habilitado</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-08</td>
+<td style="text-align: left;">Modal de histórico abre e fecha corretamente</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="calculos-e-logica">Cálculos e Lógica</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">AP-CAL-01</td>
+<td style="text-align: left;">Total de Receitas exibe o valor correto</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-CAL-02</td>
+<td style="text-align: left;">Total de Custos e Despesas exibe o valor correto</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-CAL-03</td>
+<td style="text-align: left;">Resultado do período calculado corretamente (receitas − custos)</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-CAL-04</td>
+<td style="text-align: left;">Tipo de resultado exibido como "Lucro" quando receitas &gt; despesas</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-CAL-05</td>
+<td style="text-align: left;">Conta destino exibida como "Lucros Acumulados" para resultado positivo</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-CAL-06</td>
+<td style="text-align: left;">Conta de receita aparece na tabela de contas de resultado</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-CAL-07</td>
+<td style="text-align: left;">Conta de despesa aparece na tabela de contas de resultado</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-CAL-08</td>
+<td style="text-align: left;">Tipo de conta exibido como "Receita" e "Custo e Despesa" nas linhas</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-CAL-09</td>
+<td style="text-align: left;">Card Resultado do Período exibe label "Lucro" ou "Prejuízo"</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cenario-de-prejuizo">Cenário de Prejuízo</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">AP-PRE-01</td>
+<td style="text-align: left;">Resultado negativo exibido como "Prejuízo"</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-PRE-02</td>
+<td style="text-align: left;">Conta destino para prejuízo é "Prejuízos Acumulados"</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-PRE-03</td>
+<td style="text-align: left;">Total de Custos supera Total de Receitas nos cards</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-PRE-04</td>
+<td style="text-align: left;">Resultado do Período exibe valor negativo</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-PRE-05</td>
+<td style="text-align: left;">Label do card de resultado exibe "Prejuízo"</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="estado-vazio">Estado Vazio</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">AP-EMPTY-01</td>
+<td style="text-align: left;">Módulo exibe estado vazio quando não há lançamentos</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-EMPTY-02</td>
+<td style="text-align: left;">Botão "Realizar Apuração" está desabilitado sem lançamentos</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-EMPTY-03</td>
+<td style="text-align: left;">Cards de totais exibem zero sem lançamentos</td>
+<td style="text-align: center;">Média</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fluxo-de-apuracao">Fluxo de Apuração</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">AP-FLOW-01</td>
+<td style="text-align: left;">Clicar em "Realizar Apuração" abre dialog de confirmação</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-FLOW-02</td>
+<td style="text-align: left;">Confirmar apuração executa o processo com sucesso</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-FLOW-03</td>
+<td style="text-align: left;">Após apuração, contas de resultado mostram saldo zerado</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-FLOW-04</td>
+<td style="text-align: left;">Após apuração, registro aparece no histórico de apurações</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-FLOW-05</td>
+<td style="text-align: left;">Desfazer apuração restaura contas de resultado</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">AP-FLOW-06</td>
+<td style="text-align: left;">Cancelar dialog de apuração não executa o processo</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">Funcional</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="detalhamento-casos-criticos_1">Detalhamento — Casos Críticos</h3>
+<p><strong>AP-CAL-03 — Resultado do período calculado corretamente</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Pré-condições</td>
+<td style="text-align: left;">Lançamento de receita (R$ 5.000,00) e despesa (R$ 2.000,00) criados</td>
+</tr>
+<tr>
+<td style="text-align: left;">Passos</td>
+<td style="text-align: left;">1. Navegar à Apuração; 2. Aguardar carregamento; 3. Verificar card "Resultado do Período"</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resultado Esperado</td>
+<td style="text-align: left;">Card exibe R$ 3.000,00</td>
+</tr>
+<tr>
+<td style="text-align: left;">Critério de Aprovação</td>
+<td style="text-align: left;"><code>getResultAmount()</code> contém "3.000,00"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>AP-FLOW-02 — Confirmar apuração executa o processo com sucesso</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Campo</th>
+<th style="text-align: left;">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Pré-condições</td>
+<td style="text-align: left;">Contas de resultado com saldos; data de apuração preenchida</td>
+</tr>
+<tr>
+<td style="text-align: left;">Passos</td>
+<td style="text-align: left;">1. Clicar em "Realizar Apuração"; 2. Confirmar no dialog; 3. Aguardar conclusão</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resultado Esperado</td>
+<td style="text-align: left;">Módulo exibe "Não há valores a serem apurados"</td>
+</tr>
+<tr>
+<td style="text-align: left;">Critério de Aprovação</td>
+<td style="text-align: left;"><code>emptyState</code> contém texto esperado em até 20s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="testes-e2e--fluxos-completos">Testes E2E — Fluxos Completos</h2>
+<h3 id="fluxo-contabil-completo">Fluxo Contábil Completo</h3>
+<p><strong>Arquivo:</strong> <code>playwright/specs/e2e/accounting-workflow.spec.ts</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">E2E-01</td>
+<td style="text-align: left;">Fluxo: criar lançamento → verificar Razão Geral</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">E2E</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">E2E-02</td>
+<td style="text-align: left;">Fluxo: criar lançamento → verificar Balancete</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">E2E</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">E2E-03</td>
+<td style="text-align: left;">Fluxo: criar lançamentos → verificar DRE atualizada</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">E2E</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fluxo-de-apuracao_1">Fluxo de Apuração</h3>
+<p><strong>Arquivo:</strong> <code>playwright/specs/e2e/apuracao-workflow.spec.ts</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">E2E-AP-01</td>
+<td style="text-align: left;">Fluxo completo: lançamentos → apuração → DRE reflete resultado</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">E2E</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">E2E-AP-02</td>
+<td style="text-align: left;">Fluxo: apuração → desfazer → contas restauradas</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">E2E</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fluxo-de-dre">Fluxo de DRE</h3>
+<p><strong>Arquivo:</strong> <code>playwright/specs/e2e/dre-workflow.spec.ts</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID</th>
+<th style="text-align: left;">Título</th>
+<th style="text-align: center;">Prioridade</th>
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">E2E-DRE-01</td>
+<td style="text-align: left;">Fluxo: lançamentos de receita e despesa → DRE exibe lucro</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">E2E</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+<tr>
+<td style="text-align: center;">E2E-DRE-02</td>
+<td style="text-align: left;">Fluxo: lançamentos com despesa &gt; receita → DRE exibe prejuízo</td>
+<td style="text-align: center;">Alta</td>
+<td style="text-align: left;">E2E</td>
+<td style="text-align: center;">Automatizado</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Última atualização">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="10 de junho de 2026 00:20:25 UTC">10 de junho de 2026 00:20:25</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Criado em">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="9 de junho de 2026 22:30:15 UTC">9 de junho de 2026 22:30:15</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Núcleo de Práticas de Engenharia de Software | UFMS
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

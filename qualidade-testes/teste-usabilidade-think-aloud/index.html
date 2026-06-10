@@ -1,0 +1,3647 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Plano de Teste de Usabilidade — Think Aloud - Documentação do COIN'S</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#plano-de-teste-de-usabilidade-think-aloud" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Documentação do COIN&#39;S" class="md-header__button md-logo" aria-label="Documentação do COIN'S" data-md-component="logo">
+      <img src="../../assets/logo.png" alt="COINS logo" class="logo-coin" />
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentação do COIN'S
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Plano de Teste de Usabilidade — Think Aloud
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/NES-Contabilidade-Integrada/coins2026.1/releases/latest" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Download COIN'S
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../uso-do-sistema/exemplos-lancamentos/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Uso do Sistema
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ihc/visao-geral/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  IHC
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../requisitos/especificacao-de-requisitos-de-software/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Requisitos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../arquitetura/especificacao-arquitetural/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Arquitetura
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../banco-de-dados/documentacao-modelo-dados/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Banco de Dados
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ia/politica-uso-ia/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  IA
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../plano-de-teste/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Qualidade e Testes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../devops/visao-geral/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  DevOps
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../gerencia-projeto/analise-preliminar/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Gerência de Projeto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../decisoes/decisoes/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Decisões
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentação do COIN&#39;S" class="md-nav__button md-logo" aria-label="Documentação do COIN'S" data-md-component="logo">
+      <img src="../../assets/logo.png" alt="COINS logo" class="logo-coin" />
+    </a>
+    Documentação do COIN'S
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/NES-Contabilidade-Integrada/coins2026.1/releases/latest" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Download COIN'S
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uso do Sistema
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Uso do Sistema
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uso-do-sistema/exemplos-lancamentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exemplos de Lançamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IHC
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IHC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ihc/visao-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ihc/identidade-visual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Identidade Visual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ihc/jornada-usuario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jornada do Usuário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ihc/termo-consentimento-usabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Termo de Consentimento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ihc/roteiro-teste-usabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roteiro de Teste de Usabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ihc/relatorio-teste-usabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatório de Teste de Usabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Requisitos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requisitos/especificacao-de-requisitos-de-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificação de Requisitos de Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requisitos/modelo-de-descoberta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Descoberta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requisitos/glossario-de-termos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossário de Termos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requisitos/fundamento-estrutura-requisitos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fundamento e Estrutura de Requisitos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Arquitetura
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/especificacao-arquitetural/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Especificação Arquitetural
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/diagramas-c4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diagramas C4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/visao-de-implementacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão de Implementação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitetura/adr-coins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Registro de Decisões Arquiteturais
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Banco de Dados
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Banco de Dados
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../banco-de-dados/documentacao-modelo-dados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentação do Modelo de Dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../banco-de-dados/dicionario-dados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dicionário de Dados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ia/politica-uso-ia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Política de Uso de IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ia/workspace-agentes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workspace de Agentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ia/instrucoes-do-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instruções do Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Qualidade e Testes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Qualidade e Testes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plano-de-teste/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plano de Teste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../casos-de-teste-funcionais/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Casos de Teste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DevOps
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/visao-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/diretrizes-gerencia-configuracao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diretrizes de Gerência de Configuração
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/modelo-ramificacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Ramificação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/fluxo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fluxo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/pull-request-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pull Request Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../devops/geracao-executavel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geração do Executável
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gerência de Projeto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gerência de Projeto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gerencia-projeto/analise-preliminar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise Preliminar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gerencia-projeto/plano-do-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plano de Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gerencia-projeto/encerramento-do-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encerramento do Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gerencia-projeto/template-de-documento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Template de Documento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decisões
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Decisões
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../decisoes/decisoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diário de Decisões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../decisoes/diario-de-decisoes-importado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decisões Importadas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-coins-contabilidade-integrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sistema COIN'S — Contabilidade Integrada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sumario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sumário
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-perfil-dos-participantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Perfil dos Participantes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ambiente-e-materiais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Ambiente e Materiais
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Ambiente e Materiais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-configuracao-fisica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Configuração física
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-gravacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Gravação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-materiais-necessarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Materiais necessários
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-referencia-de-lancamentos-uso-exclusivo-do-moderador-nao-entregar-ao-participante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Referência de lançamentos — uso exclusivo do moderador (NÃO entregar ao participante)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-gabarito-uso-exclusivo-do-moderador-nao-entregar-ao-participante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Gabarito — uso exclusivo do moderador (NÃO entregar ao participante)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-procedimento-da-sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Procedimento da Sessão
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-roteiro-do-moderador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Roteiro do Moderador
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Roteiro do Moderador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-abertura-ler-em-voz-alta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Abertura (ler em voz alta)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-pratica-de-think-aloud-tarefa-neutra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Prática de think aloud (tarefa neutra)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-durante-as-tarefas-intervencoes-permitidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Durante as tarefas — intervenções permitidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-debriefing-apos-questionario-sus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Debriefing (após questionário SUS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-tarefas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Tarefas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Tarefas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t1-exploracao-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T1 — Exploração inicial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t2-registrar-lancamentos-contabeis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T2 — Registrar lançamentos contábeis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t3-gerar-e-interpretar-o-balancete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T3 — Gerar e interpretar o Balancete
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t4-apuracao-do-resultado-e-desfazer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T4 — Apuração do Resultado e Desfazer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t5-visualizar-e-exportar-a-dre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        T5 — Visualizar e exportar a DRE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-guia-de-observacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Guia de Observação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Guia de Observação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-conclusao-de-tarefas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Conclusão de tarefas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-erros-e-impedimentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Erros e impedimentos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-passos-extras-e-atritos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Passos extras e atritos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-navegacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Navegação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-citacoes-do-think-aloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 Citações do think-aloud
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76-reacoes-nao-verbais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6 Reações não verbais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#77-satisfacao-imediata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.7 Satisfação imediata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#78-sugestoes-espontaneas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.8 Sugestões espontâneas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#79-perguntas-diretas-ao-participante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.9 Perguntas diretas ao participante
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-formulario-de-registro-por-sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Formulário de Registro por Sessão
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Formulário de Registro por Sessão">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registro-por-tarefa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registro por tarefa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incidentes-criticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Incidentes críticos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas-gerais-da-sessao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notas gerais da sessão
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-formulario-de-percepcao-pos-sessao-sus-adaptado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Formulário de Percepção Pós-Sessão (SUS adaptado)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-analise-e-consolidacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Análise e Consolidação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Análise e Consolidação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#priorizacao-de-problemas-encontrados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Priorização de problemas encontrados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-estado-inicial-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Estado Inicial do Sistema
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="plano-de-teste-de-usabilidade-think-aloud">Plano de Teste de Usabilidade — Think Aloud</h1>
+<h2 id="sistema-coins-contabilidade-integrada">Sistema COIN'S — Contabilidade Integrada</h2>
+<p><strong>Histórico de Versões</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Versão</th>
+<th style="text-align: center;">Data</th>
+<th>Descrição</th>
+<th style="text-align: center;">Autor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1.0</td>
+<td style="text-align: center;">25/05/2026</td>
+<td>Versão inicial</td>
+<td style="text-align: center;">—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sumario">Sumário</h2>
+<ol>
+<li><a href="#1-objetivo">Objetivo</a></li>
+<li><a href="#2-perfil-dos-participantes">Perfil dos Participantes</a></li>
+<li><a href="#3-ambiente-e-materiais">Ambiente e Materiais</a></li>
+<li><a href="#4-procedimento-da-sessão">Procedimento da Sessão</a></li>
+<li><a href="#5-roteiro-do-moderador">Roteiro do Moderador</a></li>
+<li><a href="#6-tarefas">Tarefas</a></li>
+<li><a href="#7-guia-de-observação">Guia de Observação</a></li>
+<li><a href="#8-formulário-de-registro-por-sessão">Formulário de Registro por Sessão</a></li>
+<li><a href="#9-formulário-de-percepção-pós-sessão-sus-adaptado">Formulário de Percepção Pós-Sessão (SUS adaptado)</a></li>
+<li><a href="#10-análise-e-consolidação">Análise e Consolidação</a></li>
+<li><a href="#11-estado-inicial-do-sistema">Estado Inicial do Sistema</a></li>
+</ol>
+<p><strong>Tarefas (5):</strong> T1 Exploração · T2 Lançamentos · T3 Balancete · T4 Apuração e Desfazer · T5 DRE</p>
+<hr />
+<h2 id="1-objetivo">1. Objetivo</h2>
+<p>Identificar problemas de usabilidade no COIN'S por meio da observação direta de estudantes de Ciências Contábeis realizando tarefas contábeis reais no sistema.</p>
+<p><strong>Abordagem metodológica:</strong> Think Aloud com probing concorrente (abordagem híbrida). O participante verbaliza pensamentos continuamente durante as tarefas (Think Aloud clássico); em momentos pontuais, o moderador formula perguntas diretas durante a execução para elicitar interpretação de relatórios e resultados (probing concorrente). Essa combinação é adotada quando a verbalização espontânea é insuficiente para capturar a compreensão semântica de elementos visuais como Balancete e DRE.</p>
+<p><strong>Perguntas específicas que o teste deve responder:</strong></p>
+<ul>
+<li>Os usuários conseguem navegar entre os módulos sem orientação?</li>
+<li>O formulário de lançamento contábil (códigos de conta, débito/crédito, validações) é compreendido sem treinamento?</li>
+<li>As mensagens de erro são claras o suficiente para o usuário corrigir o que está errado?</li>
+<li>O fluxo de Apuração — que exibe uma prévia antes de confirmar — é entendido como tal (prévia vs. ação real)?</li>
+<li>A restrição "desfazer apenas a apuração mais recente" é percebida e compreendida?</li>
+<li>A DRE e o Balancete comunicam visualmente o resultado (lucro/prejuízo) de forma clara?</li>
+</ul>
+<hr />
+<h2 id="2-perfil-dos-participantes">2. Perfil dos Participantes</h2>
+<table>
+<thead>
+<tr>
+<th>Critério</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Curso</strong></td>
+<td>Ciências Contábeis — UFMS</td>
+</tr>
+<tr>
+<td><strong>Período</strong></td>
+<td>1º ou 2º semestre (usuário-alvo primário)</td>
+</tr>
+<tr>
+<td><strong>Experiência contábil</strong></td>
+<td>Cursando ou recém-concluído Contabilidade Básica/Introdução à Contabilidade</td>
+</tr>
+<tr>
+<td><strong>Experiência com sistemas contábeis profissionais</strong></td>
+<td>Nenhuma ou mínima (objetivo do sistema é justamente ser a primeira exposição)</td>
+</tr>
+<tr>
+<td><strong>Quantidade recomendada</strong></td>
+<td>5 participantes (suficiente para identificar ~85% dos problemas recorrentes)</td>
+</tr>
+<tr>
+<td><strong>Exclusão</strong></td>
+<td>Participantes que já usaram o COIN'S em versões anteriores</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Nota de recrutamento:</strong> Priorizar alunos que nunca viram o sistema. Evitar alunos que participaram do desenvolvimento ou dos testes automatizados.</p>
+</blockquote>
+<hr />
+<h2 id="3-ambiente-e-materiais">3. Ambiente e Materiais</h2>
+<h3 id="31-configuracao-fisica">3.1 Configuração física</h3>
+<ul>
+<li>Computador com o COIN'S instalado e em estado inicial (ver <a href="#11-estado-inicial-do-sistema">Seção 11</a>)</li>
+<li>Mesa e cadeira confortáveis</li>
+<li>Moderador sentado ao lado (não à frente) do participante para não intimidar</li>
+<li>Observador silencioso opcional — posicionado atrás e fora do campo de visão do participante</li>
+</ul>
+<h3 id="32-gravacao">3.2 Gravação</h3>
+<ul>
+<li>Gravar tela + áudio com ferramenta de captura (OBS, Loom ou similar)</li>
+<li>Solicitar consentimento por escrito antes de iniciar</li>
+<li>Informar que a gravação é para análise interna e não será divulgada</li>
+</ul>
+<h3 id="33-materiais-necessarios">3.3 Materiais necessários</h3>
+<ul>
+<li>[ ] Termo de consentimento (1 via para o participante, 1 via para o arquivo)</li>
+<li>[ ] Este documento impresso (roteiro do moderador + guia de observação)</li>
+<li>[ ] Formulário de registro em branco (1 por sessão) — <a href="#8-formulário-de-registro-por-sessão">Seção 8</a></li>
+<li>[ ] Formulário SUS adaptado impresso — <a href="#9-formulário-de-percepção-pós-sessão-sus-adaptado">Seção 9</a></li>
+<li>[ ] Caneta para o observador anotar</li>
+<li>[ ] Referência de lançamentos impressa (uso exclusivo do moderador — ver Seção 3.4)</li>
+</ul>
+<h3 id="34-referencia-de-lancamentos-uso-exclusivo-do-moderador-nao-entregar-ao-participante">3.4 Referência de lançamentos — uso exclusivo do moderador (NÃO entregar ao participante)</h3>
+<blockquote>
+<p>As orientações abaixo são transmitidas verbalmente durante a tarefa T2. O moderador lê cada lançamento em voz alta conforme o participante avança.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Lançamento</th>
+<th>Débito</th>
+<th>Crédito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>CAIXA GERAL</td>
+<td>VENDA DE MERCADORIAS</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ALUGUÉIS DE IMÓVEIS</td>
+<td>CAIXA GERAL</td>
+</tr>
+<tr>
+<td>3</td>
+<td>MATERIAL DE ESCRITÓRIO</td>
+<td>CONTAS A PAGAR</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>O participante escolhe livremente os valores — o importante é que débito e crédito estejam equilibrados. Consulte o Plano de Contas no sistema para encontrar os códigos.</p>
+</blockquote>
+<hr />
+<h3 id="35-gabarito-uso-exclusivo-do-moderador-nao-entregar-ao-participante">3.5 Gabarito — uso exclusivo do moderador (NÃO entregar ao participante)</h3>
+<blockquote>
+<p>O participante deve consultar o Plano de Contas no sistema para encontrar os códigos. Este gabarito serve apenas para o moderador acompanhar se o participante chegou às contas corretas.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Lançamento</th>
+<th>Débito</th>
+<th>Crédito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 — Venda de mercadorias à vista</td>
+<td>CAIXA GERAL — <code>1.1.1.01.001</code></td>
+<td>VENDA DE MERCADORIAS — <code>5.1.1.01.002</code></td>
+</tr>
+<tr>
+<td>2 — Pagamento de aluguel</td>
+<td>ALUGUÉIS DE IMÓVEIS — <code>4.2.2.02.001</code></td>
+<td>CAIXA GERAL — <code>1.1.1.01.001</code></td>
+</tr>
+<tr>
+<td>3 — Material de escritório a prazo</td>
+<td>MATERIAL DE ESCRITÓRIO — <code>4.2.2.04.006</code></td>
+<td>CONTAS A PAGAR — <code>2.1.5.01.001</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Armadilha esperada — conta sintética:</strong>
+A conta <code>CAIXA</code> (classificação <code>1.1.1.01</code>) existe no Plano de Contas mas é <strong>sintética</strong> (<code>is_analytic: false</code>). O participante pode tentá-la antes de encontrar <code>CAIXA GERAL</code> (<code>1.1.1.01.001</code>), que é a analítica correta. Isso é um comportamento de observação valioso — anotar se ocorreu.</p>
+<p><strong>Valores:</strong> livres — participante escolhe. Anotar os valores registrados para referência durante a edição.</p>
+<hr />
+<h2 id="4-procedimento-da-sessao">4. Procedimento da Sessão</h2>
+<table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th style="text-align: center;">Duração estimada</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recepção e consentimento</td>
+<td style="text-align: center;">5 min</td>
+<td>Apresentação, termo de consentimento, objetivo geral sem revelar detalhes</td>
+</tr>
+<tr>
+<td>Aquecimento</td>
+<td style="text-align: center;">5 min</td>
+<td>Perguntas sobre experiência contábil e uso de sistemas</td>
+</tr>
+<tr>
+<td>Instrução think aloud</td>
+<td style="text-align: center;">5 min</td>
+<td>Explicar e praticar a técnica com tarefa neutra</td>
+</tr>
+<tr>
+<td>Tarefas (T1 a T5)</td>
+<td style="text-align: center;">35–45 min</td>
+<td>Execução com verbalização</td>
+</tr>
+<tr>
+<td>Questionário pós-sessão</td>
+<td style="text-align: center;">5 min</td>
+<td>Formulário SUS adaptado</td>
+</tr>
+<tr>
+<td>Debriefing</td>
+<td style="text-align: center;">10 min</td>
+<td>Entrevista de encerramento</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: center;"><strong>~60 min</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-roteiro-do-moderador">5. Roteiro do Moderador</h2>
+<h3 id="51-abertura-ler-em-voz-alta">5.1 Abertura (ler em voz alta)</h3>
+<blockquote>
+<p>"Olá, obrigado por participar. Hoje vamos testar um sistema chamado COIN'S, desenvolvido para estudantes de Ciências Contábeis.</p>
+<p>Quero deixar claro: <strong>estamos testando o sistema, não você</strong>. Não existe resposta certa ou errada. Se você encontrar dificuldade, é exatamente isso que precisamos saber — isso nos ajuda a melhorar o sistema.</p>
+<p>Vou pedir que você use o sistema em voz alta, verbalizando tudo o que estiver pensando enquanto faz as tarefas — o que está vendo, o que está tentando fazer, o que está confuso, o que está esperando que aconteça. É como se você estivesse pensando em voz alta.</p>
+<p>Eu não vou te ajudar durante as tarefas, mesmo que você travar — mas posso lembrar você de continuar verbalizando se parar. Se você desistir de uma tarefa, tudo bem, seguimos para a próxima.</p>
+<p>Alguma dúvida antes de começar?"</p>
+</blockquote>
+<h3 id="52-pratica-de-think-aloud-tarefa-neutra">5.2 Prática de think aloud (tarefa neutra)</h3>
+<p>Antes das tarefas do sistema, peça ao participante para verbalizar enquanto abre um aplicativo qualquer do computador (calculadora, bloco de notas). Corrija gentilmente se o participante parar de verbalizar ou começar a explicar para você em vez de pensar em voz alta.</p>
+<h3 id="53-durante-as-tarefas-intervencoes-permitidas">5.3 Durante as tarefas — intervenções permitidas</h3>
+<table>
+<thead>
+<tr>
+<th>Situação</th>
+<th>O que dizer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Participante para de verbalizar</td>
+<td><em>"Continue pensando em voz alta."</em></td>
+</tr>
+<tr>
+<td>Participante pede confirmação de acerto</td>
+<td><em>"O que você acha? Continue."</em></td>
+</tr>
+<tr>
+<td>Participante pergunta como fazer</td>
+<td><em>"O que você tentaria fazer?"</em></td>
+</tr>
+<tr>
+<td>Participante desiste e fica em silêncio</td>
+<td><em>"Tudo bem, podemos passar para a próxima tarefa."</em></td>
+</tr>
+<tr>
+<td>Participante trava &gt;2 minutos sem progresso</td>
+<td>Anote, e se julgar necessário para não frustrar demais: <em>"Pode pular essa parte, vamos para o próximo passo."</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nunca</strong> diga "certo", "errado", "quase lá", ou qualquer avaliação do desempenho.</p>
+<h3 id="54-debriefing-apos-questionario-sus">5.4 Debriefing (após questionário SUS)</h3>
+<p>Perguntas para encerramento:</p>
+<ol>
+<li>"Qual parte do sistema você achou mais difícil? Por quê?"</li>
+<li>"Teve alguma coisa que você esperava que o sistema fizesse de um jeito e ele fez diferente?"</li>
+<li>"Quando o sistema exibiu mensagens de erro, ficou claro o que você deveria fazer para corrigir?"</li>
+<li>"O que você mais gostou no sistema?"</li>
+<li>"Se você pudesse mudar uma coisa, o que seria?"</li>
+</ol>
+<hr />
+<h2 id="6-tarefas">6. Tarefas</h2>
+<blockquote>
+<p><strong>Instrução para o moderador:</strong> Leia as orientações de cada tarefa em voz alta. Não dê dicas adicionais. Inicie o cronômetro assim que terminar de ler.</p>
+</blockquote>
+<hr />
+<h3 id="t1-exploracao-inicial">T1 — Exploração inicial</h3>
+<p><strong>Duração máxima:</strong> 5 minutos</p>
+<p><strong>O que ler ao participante:</strong></p>
+<blockquote>
+<p><em>"Explore o sistema. Diga o que está vendo, o que acha que ele faz e onde você pode ir."</em></p>
+</blockquote>
+<hr />
+<h3 id="t2-registrar-lancamentos-contabeis">T2 — Registrar lançamentos contábeis</h3>
+<p><strong>Duração máxima:</strong> 18 minutos</p>
+<p><strong>O que ler ao participante:</strong></p>
+<blockquote>
+<p><em>"Registre os três lançamentos que vou passar. Use a empresa cadastrada. Você escolhe os valores — débito e crédito devem estar equilibrados."</em></p>
+</blockquote>
+<p>Ler cada lançamento e aguardar o registro antes de passar ao próximo:</p>
+<ol>
+<li>
+<blockquote>
+<p><em>"Débito: CAIXA GERAL. Crédito: VENDA DE MERCADORIAS."</em></p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p><em>"Débito: ALUGUÉIS DE IMÓVEIS. Crédito: CAIXA GERAL."</em></p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p><em>"Débito: MATERIAL DE ESCRITÓRIO. Crédito: CONTAS A PAGAR."</em></p>
+</blockquote>
+</li>
+</ol>
+<p>Após os três lançamentos registrados:</p>
+<blockquote>
+<p><em>"Corrija o valor do primeiro lançamento — use um valor diferente do que registrou."</em></p>
+</blockquote>
+<hr />
+<h3 id="t3-gerar-e-interpretar-o-balancete">T3 — Gerar e interpretar o Balancete</h3>
+<p><strong>Duração máxima:</strong> 8 minutos</p>
+<p><strong>O que ler ao participante:</strong></p>
+<blockquote>
+<p><em>"Verifique se o total de débitos e créditos dos lançamentos do mês atual estão iguais."</em></p>
+</blockquote>
+<p>Após o participante localizar o relatório:</p>
+<blockquote>
+<p><em>"O que esse relatório está dizendo sobre o resultado da empresa?"</em></p>
+</blockquote>
+<hr />
+<h3 id="t4-apuracao-do-resultado-e-desfazer">T4 — Apuração do Resultado e Desfazer</h3>
+<p><strong>O que ler ao participante:</strong></p>
+<p><strong>Parte A — Realizar a apuração:</strong></p>
+<blockquote>
+<p><em>"Encerre o período contábil e obtenha o resultado do exercício da empresa."</em></p>
+</blockquote>
+<p><strong>Parte B — Verificar saldos após o encerramento (ler após a confirmação):</strong></p>
+<blockquote>
+<p><em>"Verifique os saldos das contas e o resultado da empresa."</em></p>
+</blockquote>
+<p><strong>Parte C — Desfazer (ler após a verificação dos saldos):</strong></p>
+<blockquote>
+<p><em>"Você esqueceu de registrar um lançamento antes de encerrar o período. Reverta o que acabou de fazer."</em></p>
+</blockquote>
+<hr />
+<h3 id="t5-visualizar-e-exportar-a-dre">T5 — Visualizar e exportar a DRE</h3>
+<p><strong>O que ler ao participante (após desfazer, registrar o lançamento esquecido e re-apurar):</strong></p>
+<blockquote>
+<p><em>"Descubra qual foi o lucro líquido da empresa nesse período."</em></p>
+</blockquote>
+<p>Após o participante localizar o valor:</p>
+<blockquote>
+<p><em>"Exporte esse relatório em PDF e em CSV."</em></p>
+</blockquote>
+<hr />
+<h2 id="7-guia-de-observacao">7. Guia de Observação</h2>
+<p>Use este guia em paralelo ao Formulário de Registro. Para cada tarefa, marque os comportamentos observados.</p>
+<h3 id="71-conclusao-de-tarefas">7.1 Conclusão de tarefas</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Código</th>
+<th>Comportamento a observar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>C1</strong></td>
+<td>Sucesso na tarefa sem ajuda — anotar caminho percorrido</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>C2</strong></td>
+<td>Falha na tarefa — anotar ponto de bloqueio</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-erros-e-impedimentos">7.2 Erros e impedimentos</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Código</th>
+<th>Comportamento a observar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>E1</strong></td>
+<td>Erro crítico — bloqueia execução durante a tarefa</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>E2</strong></td>
+<td>Erro recuperável — cliques incorretos, participante se corrige</td>
+</tr>
+</tbody>
+</table>
+<h3 id="73-passos-extras-e-atritos">7.3 Passos extras e atritos</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Código</th>
+<th>Comportamento a observar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>A1</strong></td>
+<td>Ações desnecessárias: rolagens, voltas, menus reabertos</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>A2</strong></td>
+<td>Hesitações e pausas longas</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>A3</strong></td>
+<td>Silêncio ou cursor parado por mais de 2s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="74-navegacao">7.4 Navegação</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Código</th>
+<th>Comportamento a observar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>N1</strong></td>
+<td>Ordem real das telas visitadas — registrar sequência</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>N2</strong></td>
+<td>Uso do botão "Voltar" (intencional vs. acidental)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>N3</strong></td>
+<td>Atalhos acionados</td>
+</tr>
+</tbody>
+</table>
+<h3 id="75-citacoes-do-think-aloud">7.5 Citações do think-aloud</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Código</th>
+<th>Comportamento a observar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>T1</strong></td>
+<td>Frases que expressem emoções ou expectativas — transcrever literalmente</td>
+</tr>
+</tbody>
+</table>
+<h3 id="76-reacoes-nao-verbais">7.6 Reações não verbais</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Código</th>
+<th>Comportamento a observar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>R1</strong></td>
+<td>Expressões faciais, suspiros, risos, frustrações — anotar momento e tarefa</td>
+</tr>
+</tbody>
+</table>
+<h3 id="77-satisfacao-imediata">7.7 Satisfação imediata</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Código</th>
+<th>Comportamento a observar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>S1</strong></td>
+<td>Tom de voz e comentários ao concluir cada tarefa</td>
+</tr>
+</tbody>
+</table>
+<h3 id="78-sugestoes-espontaneas">7.8 Sugestões espontâneas</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Código</th>
+<th>Comportamento a observar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>SU1</strong></td>
+<td>Ideias ou melhorias mencionadas sem serem solicitadas — transcrever literalmente</td>
+</tr>
+</tbody>
+</table>
+<h3 id="79-perguntas-diretas-ao-participante">7.9 Perguntas diretas ao participante</h3>
+<p>Fazer ao final de cada bloco de tarefas, antes do debriefing geral:</p>
+<ol>
+<li>
+<blockquote>
+<p><em>"A hierarquia por blocos do Plano de Contas foi útil ou confusa?"</em></p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p><em>"Os filtros automáticos foram perceptíveis durante a busca?"</em></p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p><em>"Consultar o Plano de Contas e adicionar um lançamento ao mesmo tempo foi fácil ou difícil?"</em></p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p><em>"Você usaria a função de importar ou exportar dados? Para quê?"</em></p>
+</blockquote>
+</li>
+</ol>
+<hr />
+<h2 id="8-formulario-de-registro-por-sessao">8. Formulário de Registro por Sessão</h2>
+<blockquote>
+<p>Preencher um formulário por participante durante a sessão.</p>
+</blockquote>
+<hr />
+<p><strong>Participante #:</strong> <strong><em>_</em>_ &nbsp;&nbsp; <strong>Data:</strong> </strong><strong><em>_</em></strong><em> &nbsp;&nbsp; <strong>Moderador:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong></em></p>
+<p><strong>Período/Semestre:</strong> ______ &nbsp;&nbsp; <strong>Já usou software contábil antes?</strong> ( ) Sim ( ) Não</p>
+<hr />
+<h3 id="registro-por-tarefa">Registro por tarefa</h3>
+<p>Para cada tarefa, registre:
+- <strong>Tempo</strong> (início → conclusão ou abandono)
+- <strong>Resultado</strong>: ✅ concluiu sem ajuda | ⚠️ concluiu com dificuldade | ❌ não concluiu
+- <strong>Observações</strong>: verbalizações relevantes, comportamentos marcantes, erros cometidos</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Tarefa</th>
+<th style="text-align: center;">Tempo (min)</th>
+<th style="text-align: center;">Resultado</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">T1 — Exploração inicial</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">T2 — Lançamentos</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">T3 — Balancete</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">T4 — Apuração e Desfazer</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">T5 — DRE</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="incidentes-criticos">Incidentes críticos</h3>
+<p>Liste aqui qualquer momento de bloqueio prolongado, erro recorrente, verbalização de frustração ou confusão significativa:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">#</th>
+<th style="text-align: center;">Tarefa</th>
+<th>O que aconteceu</th>
+<th>Possível causa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="notas-gerais-da-sessao">Notas gerais da sessão</h3>
+<p><em>Espaço livre para observações do moderador sobre o comportamento geral do participante, padrões percebidos, ou qualquer coisa relevante não capturada acima.</em></p>
+<div class="highlight"><pre><span></span><code>_______________________________________________________________________________
+
+_______________________________________________________________________________
+
+_______________________________________________________________________________
+</code></pre></div>
+<hr />
+<h2 id="9-formulario-de-percepcao-pos-sessao-sus-adaptado">9. Formulário de Percepção Pós-Sessão (SUS adaptado)</h2>
+<blockquote>
+<p>Entregar ao participante após concluir todas as tarefas. Resposta em escala de 1 a 5:
+<strong>1 = Discordo totalmente</strong> | <strong>5 = Concordo totalmente</strong></p>
+</blockquote>
+<p><strong>Participante #:</strong> <strong><em>_</em>_ &nbsp;&nbsp; <strong>Data:</strong> </strong><strong><em>_</em></strong>_</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">#</th>
+<th>Afirmação</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>Eu me sentiria confortável em usar este sistema com frequência.</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>Achei o sistema desnecessariamente complexo.</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>Consegui realizar as tarefas sem precisar de ajuda externa.</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>Precisaria de muito treinamento para usar este sistema com confiança.</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>As funções do sistema estavam bem integradas e coerentes entre si.</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td>Havia muita inconsistência no sistema (coisas que funcionavam de formas diferentes).</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td>A maioria das pessoas aprenderia a usar este sistema rapidamente.</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td>Achei o sistema difícil de usar.</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td>Me senti confiante ao usar o sistema.</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td>Precisei aprender muita coisa antes de conseguir usar o sistema.</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Cálculo do SUS Score:</strong> Itens ímpares (1,3,5,7,9): subtrair 1 de cada resposta. Itens pares (2,4,6,8,10): subtrair a resposta de 5. Somar todos os resultados e multiplicar por 2,5. Score ≥ 68 = usabilidade aceitável.</p>
+</blockquote>
+<p><strong>Comentário aberto:</strong></p>
+<blockquote>
+<p><em>O que você diria para um colega que fosse usar o sistema pela primeira vez?</em></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>_______________________________________________________________________________
+
+_______________________________________________________________________________
+</code></pre></div>
+<hr />
+<h2 id="10-analise-e-consolidacao">10. Análise e Consolidação</h2>
+<p>Após todas as sessões, consolidar os dados nesta tabela:</p>
+<table>
+<thead>
+<tr>
+<th>Tarefa</th>
+<th style="text-align: center;">P1</th>
+<th style="text-align: center;">P2</th>
+<th style="text-align: center;">P3</th>
+<th style="text-align: center;">P4</th>
+<th style="text-align: center;">P5</th>
+<th style="text-align: center;">Taxa de sucesso</th>
+<th style="text-align: center;">Tempo médio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T1 — Exploração</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>T2 — Lançamentos</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>T3 — Balancete</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>T4 — Apuração e Desfazer</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>T5 — DRE</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legenda:</strong> ✅ = concluiu sem ajuda | ⚠️ = com dificuldade | ❌ = não concluiu</p>
+<h3 id="priorizacao-de-problemas-encontrados">Priorização de problemas encontrados</h3>
+<p>Para cada problema identificado, classificar:</p>
+<table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Tarefas afetadas</th>
+<th style="text-align: center;">Frequência (de 5)</th>
+<th style="text-align: center;">Severidade (1–4)</th>
+<th style="text-align: center;">Prioridade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Escala de severidade:</strong>
+- <strong>1</strong> — Cosmético (não impede uso)
+- <strong>2</strong> — Menor (causa atraso, participante recupera sozinho)
+- <strong>3</strong> — Maior (bloqueia tarefa, participante precisou de ajuda ou abandonou)
+- <strong>4</strong> — Crítico (impede conclusão por maioria dos participantes)</p>
+<hr />
+<h2 id="11-estado-inicial-do-sistema">11. Estado Inicial do Sistema</h2>
+<p>Para garantir consistência entre sessões, o sistema deve ser reiniciado para o estado abaixo antes de cada participante.</p>
+<p><strong>Checklist de preparação:</strong></p>
+<ul>
+<li>[ ] Abrir o sistema</li>
+<li>[ ] Verificar que a empresa estática está presente (nome e CNPJ visíveis)</li>
+<li>[ ] Verificar que o Livro Diário está <strong>vazio</strong> (sem lançamentos)</li>
+<li>[ ] Se houver lançamentos de sessão anterior: usar a função "Deletar dados da Empresa" para limpar</li>
+<li>[ ] Verificar que o histórico de Apurações está <strong>vazio</strong></li>
+<li>[ ] Fechar e reabrir o sistema para garantir estado limpo</li>
+<li>[ ] Iniciar gravação de tela + áudio</li>
+<li>[ ] Abrir o sistema na tela inicial (menu lateral exibindo "Empresas")</li>
+</ul>
+<blockquote>
+<p><strong>Atenção:</strong> A função "Deletar dados da Empresa" remove apenas lançamentos — a empresa e o Plano de Contas são preservados. Isso é o comportamento esperado para a preparação.</p>
+</blockquote>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Última atualização">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="9 de junho de 2026 22:35:25 UTC">9 de junho de 2026 22:35:25</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Criado em">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="9 de junho de 2026 22:35:25 UTC">9 de junho de 2026 22:35:25</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Núcleo de Práticas de Engenharia de Software | UFMS
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

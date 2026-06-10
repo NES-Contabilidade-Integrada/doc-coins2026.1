@@ -6,7 +6,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../diretrizes-gerencia-configuracao/" rel="prev"/>
-<link href="../versionamento/" rel="next"/>
+<link href="../fluxo/" rel="next"/>
 <link href="../../assets/logo.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
 <title>Modelo de Ramificação - Documentação do COIN'S</title>
@@ -177,7 +177,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../qualidade-testes/plano-de-testes/">
+<a class="md-tabs__link" href="../../qualidade-testes/plano-de-teste/">
           
   
   
@@ -678,11 +678,23 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../qualidade-testes/plano-de-testes/">
+<a class="md-nav__link" href="../../qualidade-testes/plano-de-teste/">
 <span class="md-ellipsis">
     
   
-    Plano de Testes
+    Plano de Teste
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../qualidade-testes/casos-de-teste-funcionais/">
+<span class="md-ellipsis">
+    
+  
+    Casos de Teste
   
 
     
@@ -815,19 +827,19 @@
 <nav aria-label="Branches Principais" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#1-main">
+<a class="md-nav__link" href="#main">
 <span class="md-ellipsis">
       
-        1. main
+        main
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-develop">
+<a class="md-nav__link" href="#release-candidate">
 <span class="md-ellipsis">
       
-        2. develop
+        release-candidate
       
     </span>
 </a>
@@ -836,15 +848,24 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#branches-de-suporte">
+<a class="md-nav__link" href="#branches-de-desenvolvimento">
 <span class="md-ellipsis">
       
-        Branches de Suporte
+        Branches de Desenvolvimento
       
     </span>
 </a>
-<nav aria-label="Branches de Suporte" class="md-nav">
+<nav aria-label="Branches de Desenvolvimento" class="md-nav">
 <ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#develop">
+<span class="md-ellipsis">
+      
+        develop
+      
+    </span>
+</a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#feature">
 <span class="md-ellipsis">
@@ -855,28 +876,10 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#release">
-<span class="md-ellipsis">
-      
-        release/
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hotfix">
-<span class="md-ellipsis">
-      
-        hotfix/
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#subtask">
 <span class="md-ellipsis">
       
-        subtask/
+        Subtask/
       
     </span>
 </a>
@@ -886,30 +889,6 @@
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../versionamento/">
-<span class="md-ellipsis">
-    
-  
-    Versionamento
-  
-
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../padrao-commits/">
-<span class="md-ellipsis">
-    
-  
-    Padrão de Commits
-  
-
-    
-  </span>
-</a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../fluxo/">
@@ -924,23 +903,11 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../dod/">
+<a class="md-nav__link" href="../pipeline/">
 <span class="md-ellipsis">
     
   
-    DoD
-  
-
-    
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../infraestrutura/">
-<span class="md-ellipsis">
-    
-  
-    CI/CD
+    Pipeline
   
 
     
@@ -1159,19 +1126,19 @@
 <nav aria-label="Branches Principais" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#1-main">
+<a class="md-nav__link" href="#main">
 <span class="md-ellipsis">
       
-        1. main
+        main
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#2-develop">
+<a class="md-nav__link" href="#release-candidate">
 <span class="md-ellipsis">
       
-        2. develop
+        release-candidate
       
     </span>
 </a>
@@ -1180,15 +1147,24 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#branches-de-suporte">
+<a class="md-nav__link" href="#branches-de-desenvolvimento">
 <span class="md-ellipsis">
       
-        Branches de Suporte
+        Branches de Desenvolvimento
       
     </span>
 </a>
-<nav aria-label="Branches de Suporte" class="md-nav">
+<nav aria-label="Branches de Desenvolvimento" class="md-nav">
 <ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#develop">
+<span class="md-ellipsis">
+      
+        develop
+      
+    </span>
+</a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#feature">
 <span class="md-ellipsis">
@@ -1199,28 +1175,10 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#release">
-<span class="md-ellipsis">
-      
-        release/
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hotfix">
-<span class="md-ellipsis">
-      
-        hotfix/
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#subtask">
 <span class="md-ellipsis">
       
-        subtask/
+        Subtask/
       
     </span>
 </a>
@@ -1251,7 +1209,19 @@
 <td style="text-align: center;">1.0</td>
 <td style="text-align: center;">02/06/2026</td>
 <td style="text-align: left;">Criação do documento</td>
-<td style="text-align: left;">Amanda Caroline de Gois Balcaçar</td>
+<td style="text-align: left;">Amanda Gois</td>
+</tr>
+<tr>
+<td style="text-align: center;">1.1</td>
+<td style="text-align: center;">09/06/2026</td>
+<td style="text-align: left;">Corrige nome da branch release para release-candidate</td>
+<td style="text-align: left;">Amanda Gois</td>
+</tr>
+<tr>
+<td style="text-align: center;">1.2</td>
+<td style="text-align: center;">09/06/2026</td>
+<td style="text-align: left;">Remove feature e hotfix; atualiza branches para estrutura real do projeto</td>
+<td style="text-align: left;">Amanda Gois</td>
 </tr>
 </tbody>
 </table>
@@ -1267,10 +1237,10 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td style="text-align: center;">1.1</td>
+<td style="text-align: center;">09/06/2026</td>
+<td style="text-align: left;">Vinicius Carneiro</td>
+<td style="text-align: left;">Aprovado</td>
 </tr>
 </tbody>
 </table>
@@ -1280,97 +1250,83 @@
 <hr/>
 <h2 id="diagrama">Diagrama</h2>
 <div class="mermaid">gitGraph
-    commit id: "Inicial" tag: "v1.0.0"
+    commit id: "v1.0.0" tag: "v1.0.0"
 
-    branch develop order: 3
+    branch release-candidate order: 1
+    branch develop order: 2
     checkout develop
-    commit id: "Ajuste develop"
+    commit id: "Integração"
 
-    branch feature/funcionalidade order: 4
-    checkout feature/funcionalidade
-    commit id: "Início da feature"
+    branch feature/tela-dre order: 3
+    checkout feature/tela-dre
+    commit id: "Início feature"
 
-    branch subtask/tarefa-a order: 5
-    checkout subtask/tarefa-a
-    commit id: "Tarefa A"
+    branch Subtask/dre-backend order: 4
+    checkout Subtask/dre-backend
+    commit id: "Backend DRE"
 
-    checkout feature/funcionalidade
-    branch subtask/tarefa-b order: 6
-    checkout subtask/tarefa-b
-    commit id: "Tarefa B"
+    checkout feature/tela-dre
+    merge Subtask/dre-backend
 
-    checkout feature/funcionalidade
-    merge subtask/tarefa-a
-    merge subtask/tarefa-b
-    commit id: "Feature concluída"
+    branch Subtask/dre-frontend order: 5
+    checkout Subtask/dre-frontend
+    commit id: "Frontend DRE"
+
+    checkout feature/tela-dre
+    merge Subtask/dre-frontend
 
     checkout develop
-    merge feature/funcionalidade
+    merge feature/tela-dre
 
-    branch release/1.1.0 order: 2
-    checkout release/1.1.0
-    commit id: "Preparação da release"
+    checkout release-candidate
+    merge develop tag: "v1.1.0-rc.1"
 
     checkout main
-    merge release/1.1.0 tag: "v1.1.0"
+    merge release-candidate tag: "v1.1.0"
     checkout develop
-    merge release/1.1.0
-
-    checkout main
-    branch hotfix/correcao order: 1
-    checkout hotfix/correcao
-    commit id: "Correção urgente"
-
-    checkout main
-    merge hotfix/correcao tag: "v1.1.1"
-    checkout develop
-    merge hotfix/correcao
+    merge release-candidate
 </div>
 <hr/>
 <h2 id="branches-principais">Branches Principais</h2>
-<h3 id="1-main">1. main</h3>
+<h3 id="main">main</h3>
 <ul>
-<li><strong>Propósito</strong>: Contém o código de produção, sempre estável e pronto para a versão final.</li>
-<li><strong>Processo</strong>: Recebe <em>merges</em> apenas de branches de <code>release</code> ou, em emergências, de <code>hotfix</code>. Nunca se deve desenvolver ou commitar diretamente nesta branch.</li>
+<li><strong>Propósito</strong>: Código de produção estável. Todo merge aqui dispara automaticamente o workflow de Release, gerando um instalador <code>.exe</code> com tag estável (ex: <code>v1.1.0</code>) marcado como <em>Latest</em>.</li>
+<li><strong>Processo</strong>: Recebe merges apenas da <code>release-candidate</code> após validação completa de todos os testes (Jest + Playwright) pelo QA. Nunca desenvolver diretamente nesta branch.</li>
 </ul>
-<h3 id="2-develop">2. develop</h3>
+<h3 id="release-candidate">release-candidate</h3>
 <ul>
-<li><strong>Propósito</strong>: Integração de todas as funcionalidades prontas para o próximo ciclo de entrega. É a branch principal de trabalho da equipe.</li>
-<li><strong>Processo</strong>: Recebe <em>merges</em> contínuos das branches de <code>feature</code> concluídas. É onde os testes integrados são realizados.</li>
+<li><strong>Propósito</strong>: Branch fixa de homologação. Recebe o código da <code>develop</code> quando as funcionalidades da sprint estão prontas para validação. Todo merge aqui gera automaticamente um executável de pré-release com tag RC (ex: <code>v1.1.0-rc.1</code>) para o QA testar.</li>
+<li><strong>Processo</strong>: Após aprovação em todos os testes, é mergeada na <code>main</code> para gerar o executável oficial de produção.</li>
 </ul>
 <hr/>
-<h2 id="branches-de-suporte">Branches de Suporte</h2>
+<h2 id="branches-de-desenvolvimento">Branches de Desenvolvimento</h2>
+<h3 id="develop">develop</h3>
+<ul>
+<li><strong>Propósito</strong>: Integração contínua entre frontend e backend. Branch principal de trabalho da equipe.</li>
+<li><strong>Processo</strong>: Recebe merges das branches <code>feature/</code> concluídas via Pull Request. Quando as funcionalidades da sprint estão integradas e validadas, é mergeada na <code>release-candidate</code>.</li>
+</ul>
 <h3 id="feature">feature/</h3>
 <ul>
-<li><strong>Propósito</strong>: Desenvolvimento isolado de novas funcionalidades ou grandes alterações.</li>
-<li><strong>Processo</strong>: Criada a partir da <code>develop</code>. Após concluída, testada e revisada, é integrada (via <em>Pull Request</em>) de volta na <code>develop</code>.</li>
-<li><strong>Nomenclatura</strong>: <code>feature/nome-da-funcionalidade</code> ou <code>feature/ID-da-issue</code>.</li>
+<li><strong>Propósito</strong>: Desenvolvimento de uma nova funcionalidade ou tela completa do sistema.</li>
+<li><strong>Processo</strong>: Criada a partir de <code>develop</code>. Recebe merges das <code>Subtask/</code> que a compõem. Após concluída e revisada via Pull Request, é mergeada de volta na <code>develop</code>.</li>
+<li><strong>Nomenclatura</strong>: <code>feature/nome-da-funcionalidade</code> (ex: <code>feature/tela-dre</code>).</li>
 </ul>
-<h3 id="release">release/</h3>
+<h3 id="subtask">Subtask/</h3>
 <ul>
-<li><strong>Propósito</strong>: Preparação de uma nova versão para produção. Ambiente dedicado para testes finais e homologação.</li>
-<li><strong>Processo</strong>: Criada a partir da <code>develop</code> quando as funcionalidades planejadas estão prontas. Após a validação, é mergeada na <code>main</code> (com tag de versão) e devolvida para a <code>develop</code> caso existam correções feitas durante o período de release.</li>
-</ul>
-<h3 id="hotfix">hotfix/</h3>
-<ul>
-<li><strong>Propósito</strong>: Correções urgentes no ambiente de produção (bugs críticos).</li>
-<li><strong>Processo</strong>: Criada diretamente a partir da <code>main</code>. Após a correção, é integrada na <code>main</code> (nova tag) e também na <code>develop</code>.</li>
-</ul>
-<h3 id="subtask">subtask/</h3>
-<ul>
-<li><strong>Propósito</strong>: Utilizada para dividir uma <code>feature</code> muito grande em partes menores ou para tarefas internas pontuais.</li>
-<li><strong>Processo</strong>: Geralmente criada a partir de uma branch <code>feature</code> ou da <code>develop</code>. Deve ser mergeada de volta na sua branch de origem após a conclusão.</li>
+<li><strong>Propósito</strong>: Tarefas individuais dentro de uma feature. Usada quando uma tela ou funcionalidade é dividida entre múltiplos desenvolvedores — por exemplo, frontend e backend da mesma tela em paralelo.</li>
+<li><strong>Processo</strong>: Criada a partir de <code>feature/</code>. Após concluída e revisada via Pull Request, é mergeada de volta na <code>feature/</code> correspondente.</li>
+<li><strong>Nomenclatura</strong>: <code>Subtask/nome-da-tarefa</code> (ex: <code>Subtask/dre-filtros-backend</code>).</li>
 </ul>
 <hr/>
 <blockquote>
-<p><strong>Nota</strong>: Todo merge para as branches <code>develop</code> e <code>main</code> deve ser realizado via <strong>Pull Request</strong> com revisão por pares.</p>
+<p><strong>Nota</strong>: Todo merge para <code>feature/</code>, <code>develop</code> e <code>release-candidate</code> deve ser realizado via <strong>Pull Request</strong> com revisão por pares.</p>
 </blockquote>
 <aside class="md-source-file">
 <span class="md-source-file__fact">
 <span class="md-icon" title="Última atualização">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="3 de junho de 2026 01:47:34 UTC">3 de junho de 2026 01:47:34</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="10 de junho de 2026 00:20:25 UTC">10 de junho de 2026 00:20:25</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Criado em">
