@@ -122,9 +122,9 @@ A planilha detalhada com o comparativo planejado vs. entregue está disponível 
 
 ## 4. Parecer de Encerramento
 
-Diante do exposto nas seções anteriores do presente relatório, o projeto atual foi considerado finalizado, tendo o produto entregue sido considerado `<aceito ou rejeitado>` pelo(a) patrocinador(a) do projeto.
+Diante do exposto nas seções anteriores do presente relatório, o projeto atual foi considerado finalizado, tendo o produto entregue sido considerado **aceito** pelo(a) patrocinador(a) do projeto.
 
-O feedback final e oficial pode ser consultado no seguinte link: `<inserir link>`
+O feedback final e oficial pode ser consultado no seguinte link: [Avaliação Formal dos Proponentes](https://drive.google.com/drive/folders/1sgNv1QG4VcDq36tNcK7JW_XTM-UiIJDt?usp=drive_link)
 
 ---
 
