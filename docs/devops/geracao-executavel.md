@@ -3,15 +3,17 @@
 ## Histórico de Versões
 
 | Versão | Data | Descrição | Autor |
-| :---: | :---: | :---: | :---: |
+| :---: | :---: | :--- | :--- |
 | 1.0 | 16/10/2025 | Adicionando versão inicial do documento | Pedro Nicoletti Sotoma |
 | 2.0 | 02/06/2026 | Atualizando documento para nova versão do COIN'S | Vinicius Carneiro |
+| 2.1 | 09/06/2026 | Atualiza execução automática com info de tags e branches | Amanda Gois |
 
 ## Histórico de Revisões
 
 | Versão | Data | Revisor | Observação |
-| :---: | :---: | :---: | :---: |
+| :---: | :---: | :--- | :--- |
 | 1.0 | 25/11/2025 | Fernanda Pessoa | Aprovada |
+| 2.0 | 09/06/2026 | Vinicius Carneiro | Aprovado |
 
 ## Sumário
 
@@ -70,9 +72,16 @@ Essa facilidade no processo de gerar o executável acontece graças ao Electron 
 
 ### Execução Automática via GitHub Actions
 
-Sempre que um Pull Request é aprovado e incorporado à branch de release, o pipeline de integração contínua executa o processo de build e empacotamento da aplicação, gerando automaticamente um novo executável.
+Sempre que um Pull Request é mergeado nas branches `main` ou `release-candidate`, o workflow `release.yml` executa o build e publica automaticamente um executável com versionamento semântico.
 
-Dessa forma, não é necessário gerar o executável manualmente para cada alteração aceita na release. O comando manual deve ser utilizado apenas em casos de teste local, validação antes do PR ou situações em que seja necessário reproduzir o processo de empacotamento fora do pipeline.
+| Branch | Executável gerado | Tag | Marcação |
+| :--- | :--- | :--- | :--- |
+| `main` | Release oficial de produção | `v1.2.0` | Latest |
+| `release-candidate` | Pré-release para validação do QA | `v1.2.0-rc.1` | Pre-release |
+
+A versão é calculada automaticamente com base nos commits (feat → MINOR, fix → PATCH, BREAKING → MAJOR). O `package.json` é atualizado, o executável gerado via `npm run make` e a GitHub Release criada com um changelog resumido em português pela IA.
+
+O comando manual deve ser utilizado apenas para testes locais ou situações em que seja necessário reproduzir o empacotamento fora do pipeline.
 
 ---
 

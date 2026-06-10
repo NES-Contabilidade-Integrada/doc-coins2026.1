@@ -24,3 +24,7 @@ Thumbs.db
 # Arquivos de agentes de IA (não devem subir ao repositório)
 CLAUDE.md
 .claude/
+Thumbs.db
+
+# Superpowers brainstorm sessions
+.superpowers/

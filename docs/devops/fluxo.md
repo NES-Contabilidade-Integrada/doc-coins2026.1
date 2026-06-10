@@ -4,12 +4,15 @@
 
 | Versão | Data | Descrição | Autor |
 | :---: | :---: | :--- | :--- |
-| 1.0 | 02/06/2026 | Criação do documento | Amanda Caroline de Gois Balcaçar |
+| 1.0 | 02/06/2026 | Criação do documento | Amanda Gois |
+| 1.1 | 09/06/2026 | Remove template de PR duplicado do fluxo.md | Amanda Gois |
+| 1.2 | 09/06/2026 | Atualiza fluxo para Subtask e release-candidate fixo | Amanda Gois |
 
 ## Histórico de Revisões
 
 | Versão | Data | Revisor | Observação |
 | :---: | :---: | :--- | :--- |
+| 1.1 | 09/06/2026 | Vinicius Carneiro | Aprovado |
 
 ---
 
@@ -23,87 +26,47 @@ O processo de desenvolvimento no COIN'S é projetado para garantir a qualidade d
 
 === "Ciclo de Desenvolvimento"
 
-    ### 1. Início da Tarefa
-    Toda nova implementação de um Módulo deve começar a partir da branch `develop`. Use a convenção de nomenclatura para manter o repositório organizado:
+    ### 1. Início da Feature
+    Uma nova funcionalidade começa com a criação de uma branch `feature/` a partir de `develop`:
 
     ```bash
     git checkout develop
     git pull origin develop
-    git checkout -b <tipo>/<descrição-curta>
+    git checkout -b feature/<nome-da-funcionalidade>
     ```
 
-    **Tipos comuns:**
-    *   `feat/`: Novas funcionalidades.
-    *   `fix/`: Correção de bugs.
-    *   `docs/`: Documentação.
-
-    #### Criação da Branch Subtask a partir da Feature
-    A partir da branch Feature criada para implementação de um Módulo, deve-se criar uma branch Subtask para implementação de cada tarefa separada.
+    ### 2. Criação das Subtasks
+    Quando a feature envolve múltiplos desenvolvedores (ex: frontend + backend da mesma tela), cria-se uma branch `Subtask/` por tarefa a partir da `feature/`:
 
     ```bash
-    git checkout feat/<nome-da-feature>
-    git checkout -b feat/<nome-da-tarefa>
+    git checkout feature/<nome-da-funcionalidade>
+    git checkout -b Subtask/<nome-da-tarefa>
     ```
 
-    ### 2. Implementação e Sincronia
-    Durante o desenvolvimento, mantenha sua branch atualizada com a `develop` para evitar conflitos grandes no final:
+    **Exemplos:**
+
+    ```
+    Subtask/dre-filtros-backend
+    Subtask/dre-tabela-frontend
+    ```
+
+    ### 3. Implementação e Sincronia
+    Durante o desenvolvimento, mantenha sua branch atualizada para evitar conflitos:
     ```bash
     git fetch origin
-    git rebase origin/develop
+    git rebase origin/feature/<nome-da-funcionalidade>
     ```
 
-    ### 3. Abertura de Pull Request (PR)
-    Ao finalizar a tarefa, envie sua branch para o GitHub e abra um PR para a branch `develop`.
+    ### 4. Abertura de Pull Request (PR)
+    - `Subtask/` → PR para a `feature/` correspondente.
+    - `feature/` → PR para `develop` após todas as subtasks mergeadas.
     *   Preencha o **Template de PR** obrigatório.
     *   Solicite a revisão de pelo menos um colega.
 
-    ### 4. Ciclo de Release
-    Ao final de cada sprint, após a validação das funcionalidades na `develop`, criamos uma **branch de release**.
-    *   Testes finais de QA/Homologação.
-    *   Merge final na `main` com geração de tag.
+    ### 5. Ciclo de Release
+    Ao final da sprint, com as funcionalidades integradas na `develop`, abre-se um PR de `develop` para a branch fixa **`release-candidate`**.
 
-=== "Template de Pull Request"
+    O merge na `release-candidate` dispara automaticamente o workflow de Release, gerando um executável de pré-release (ex: `v1.1.0-rc.1`) para o QA validar.
 
-    Este é o padrão que deve ser seguido em todas as submissões de código.
+    Se todos os testes (Jest + Playwright) passarem e o QA aprovar, abre-se o PR final de `release-candidate` para `main`, gerando o executável oficial de produção com tag estável (ex: `v1.1.0`).
 
-    ```markdown
-    ## 📌 Descrição
-    - O que foi alterado?
-    - Por que foi alterado?
-    - Contexto adicional, se necessário.
-
-    ---
-
-    ## 📝 Tipo de Mudança
-    - [ ] 🐛 Bugfix
-    - [ ] ✨ Feature
-    - [ ] 🔧 Refactor
-    - [ ] 🧹 Chore
-    - [ ] 📖 Documentação
-    - [ ] 🚀 Performance
-
-    ---
-
-    ## 🔗 Issue Relacionada
-    - Closes #
-
-    ---
-
-    ## ✅ Checklist de Qualidade
-    - [ ] Código compila sem erros ⚡
-    - [ ] Testes adicionados ou atualizados 🧪
-    - [ ] Documentação atualizada 📚
-    - [ ] Segue padrões de código/lint 🛠️
-
-    ---
-
-    ## 📷 Evidências
-    (Prints, logs ou GIFs aqui)
-
-    ---
-
-    ## ⚙️ Ambientes de Teste
-    - [ ] Dev
-    - [ ] Staging
-    - [ ] Produção
-    ```
