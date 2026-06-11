@@ -53,7 +53,6 @@ A documentação reúne os principais entregáveis do projeto, organizados por �
 - **[Qualidade e Testes](qualidade-testes/plano-de-testes.md)**: plano de testes, critérios de aceitação e estratégias de validação.
 - **[DevOps](devops/visao-geral.md)**: infraestrutura proposta, fluxo de trabalho e práticas de integração contínua.
 - **[Gerência de Projeto](gerencia-projeto/plano-do-projeto.md)**: planejamento, cronograma, equipe e análise preliminar.
-- **[Decisões](decisoes/decisoes.md)**: registro de decisões técnicas e de projeto que sustentam a solução.
 
 ---
 
