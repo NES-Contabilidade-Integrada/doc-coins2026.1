@@ -209,7 +209,7 @@ Os incrementos planejados consistem em funcionalidades adicionais previstas para
 | Comunicação | Responsável | Canal de Comunicação | Momento da Comunicação |
 | :---- | :---- | :---- | :---- |
 | Revisão de PR | Devs | Discord | Momento da abertura |
-| Atualização de entregas | Gerente de Projetos | Google Meet | Ao final de cada Sprint |
+| Atualização de entregas | Gerente de Projetos | Google Meet ou presencialmente na FACOM | Ao final de cada Sprint |
 | Alinhamento de informações/dúvidas com proponentes | Gerente de Projetos (participação de demais membros permitida) | WhatsApp (grupo dos proponentes) | Conforme necessidade |
 | Reunião semanal | Equipe \+ Orientadora | Presencial / Meet | Quinta-feira |
 | Comunicação de impedimentos | Qualquer membro | WhatsApp do time | Imediato |
