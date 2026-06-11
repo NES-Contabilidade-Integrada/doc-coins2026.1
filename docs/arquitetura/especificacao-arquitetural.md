@@ -130,9 +130,9 @@ Neste nível, podem ser representados diagramas de classes ou entidades para os 
 
 No caso do Sistema COIN'S, recomenda-se a elaboração de um Diagrama de Entidade-Relacionamento (DER) com base no schema do banco SQLite3, destacando tabelas, colunas e relacionamentos. 
 
-**Link para documentação do DER:** [https://docs.google.com/document/d/1NIrxoi\_JZqYGeUrJK2uUcePTO2prriPYV1HKR5y8Hxo/edit?tab=t.0](https://docs.google.com/document/d/1NIrxoi_JZqYGeUrJK2uUcePTO2prriPYV1HKR5y8Hxo/edit?tab=t.0)  
+**Ver diagrama:** [Diagrama ERD – Documentação do Modelo de Dados](../banco-de-dados/documentacao-modelo-dados.md#der-diagrama-entidade-relacionamento)
 
-> **Nota (v2.0):** O DER existente foi elaborado com base no modelo planejado da v1.2, que diverge do schema implementado. Ver Documentação do Modelo de Dados v2.0 para o schema atual.
+![Modelo físico relacional do banco de dados](../banco-de-dados/assets/Diagrama%20ERD.png)
 
 ### Diagramas suplementares – Diagrama de Implantação 
 Por se tratar de um sistema monolítico offline, não é necessário um diagrama de implantação detalhado.  

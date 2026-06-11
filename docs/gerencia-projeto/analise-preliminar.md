@@ -10,7 +10,8 @@
 
 | Versão | Data | Revisor | Observação |
 | :---: | :---: | :---: | :---: |
-| 1.0 | 3 de jun. de 2026 | Elise Lissa | Aprovado |
+| 1.0 | 03/06/2026 | Elise Lissa Hasegawa | Aprovado |
+| 1.0 | 10/06/2026 | Eduardo Alves | Aprovado |
 
 ---
 

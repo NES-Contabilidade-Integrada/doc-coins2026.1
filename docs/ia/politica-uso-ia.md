@@ -10,7 +10,7 @@
 
 | Versão | Data | Revisor | Observação |
 | :---: | :---: | :---: | ----- |
-| 1.0 | | | Pendente |
+| 1.0 | 10/06/2026 | Eduardo Alves | Aprovado |
 
 **Sumário**
 
@@ -166,7 +166,7 @@ Os agentes de codificação operam a partir do workspace `.agents/` no repositó
 
 ### Skills disponíveis {#skills-disponíveis}
 
-**Repositório de documentação** — invocadas via `/nome-da-skill` no Claude Code:
+**Repositório de documentação** — invocadas via `/nome-da-skill`:
 
 | Skill | Quando usar |
 |-------|-------------|
@@ -184,7 +184,7 @@ Os agentes de codificação operam a partir do workspace `.agents/` no repositó
 | `analyse-context` | Para analisar se o código respeita as regras de domínio contábil |
 | `create-skill` | Para criar uma nova skill seguindo o padrão adotado |
 
-**Como invocar uma skill de documentação no Claude Code:**
+**Como invocar uma skill de documentação:**
 
 ```bash
 /boas-praticas-markdown
@@ -204,7 +204,7 @@ As skills são pré-carregadas com o contexto necessário e guiam o modelo para 
 | Registrar nova regra de negócio identificada | Código | Skill `save-context` |
 | Verificar conformidade arquitetural do código | Código | Skill `analyse-rule` |
 | Revisar PR de código antes de aprovação | Código | GitHub Copilot (integrado ao CI) + revisão humana obrigatória |
-| Criar consulta SQL complexa | Código | Claude Code + revisão obrigatória por outro membro |
+| Criar consulta SQL complexa | Código | Assistente de IA + revisão obrigatória por outro membro |
 
 ---
 

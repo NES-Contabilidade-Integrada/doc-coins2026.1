@@ -36,7 +36,7 @@
 
 ## Introdução {#introdução}
 
-O Sistema COIN'S (Contabilidade Integrada Simplificada) foi desenvolvido com o objetivo de proporcionar uma plataforma didática e prática para o ensino e simulação de processos contábeis.
+O Sistema COIN'S (Contabilidade Integrada) foi desenvolvido com o objetivo de proporcionar uma plataforma didática e prática para o ensino e simulação de processos contábeis.
 
 Durante a elaboração da sua Especificação de Requisitos de Software, foi adotada uma estrutura textual organizada por épicos e requisitos funcionais, em vez dos modelos tradicionais baseados em histórias de usuário ou casos de uso.
 

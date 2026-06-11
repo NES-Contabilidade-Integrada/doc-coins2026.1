@@ -1,4 +1,4 @@
-# Documentação do Modelo de Dados – Sistema COIN'S
+# Documentação do Modelo de Dados
 
 **Histórico de Versões**
 
@@ -7,7 +7,7 @@
 | 1.0 | 27/09 | Criação do documento com introdução, DER e script | Fernanda Pessoa |
 | 1.1 | 22/10 | Pequena correção no atributo parent\_classification | Pedro Nicoletti Sotoma |
 | 1.2 | 06/05 | Atualização do modelo: novas tabelas (account\_types, actors, apuracoes), renomeação de tabelas e novos campos | Fernanda Pessoa |
-| 2.0 | 01/06/2026 | Reconciliação com as migrations reais da branch develop: DBML corrigido com nomes e tipos reais, tabelas dre\_groups e dre\_group\_account\_roots adicionadas, divergências da v1.2 documentadas | Claude (revisão técnica automatizada) |
+| 2.0 | 01/06/2026 | Reconciliação com as migrations reais da branch develop: DBML corrigido com nomes e tipos reais, tabelas dre\_groups e dre\_group\_account\_roots adicionadas, divergências da v1.2 documentadas | Lohan Toledo Tosta |
 
 **Histórico de Revisões**
 
@@ -60,15 +60,9 @@ Sua estrutura atual é composta por nove tabelas de negócio:
 - **dre\_groups:** define os grupos da Demonstração do Resultado do Exercício (DRE). Pré-populado com 11 grupos via migration.
 - **dre\_group\_account\_roots:** associa contas raiz do Plano de Contas a grupos de DRE.
 
-## DER (Diagrama entidade relacionamento) {#der-(diagrama-entidade-relacionamento)}
+## Diagrama ER (Diagrama de relacionamento de entidade) 
 
-> **Nota (v2.0):** O DER original (v1.2) foi gerado com base no modelo planejado e permanece em PDF no Drive (link abaixo) para referência histórica. **Ele não reflete o schema atual.** Um DER atualizado deve ser gerado a partir do DBML da seção 3.1.
-
-Versão em PDF no Drive em:   
-[https://drive.google.com/drive/u/1/folders/1gNYYj-rfqD-diTy5nt39V9tuCNshJ-2j](https://drive.google.com/drive/u/1/folders/1gNYYj-rfqD-diTy5nt39V9tuCNshJ-2j) 
-
-## Script para criação das tabelas {#script-para-criação-das-tabelas}
-O script com o SQL para criação das tabelas está no Drive em: [https://drive.google.com/drive/u/1/folders/1gNYYj-rfqD-diTy5nt39V9tuCNshJ-2j](https://drive.google.com/drive/u/1/folders/1gNYYj-rfqD-diTy5nt39V9tuCNshJ-2j) 
+![Modelo físico relacional do banco de dados](assets/Diagrama%20ERD.png)
 
 ### 3.1 DBML Atual (v2.0 — estado real da branch develop)
 
@@ -206,103 +200,6 @@ Table dre_group_account_roots {
   Indexes {
     (dre_group_id)        [name: 'idx_dre_group_account_roots_group']
     (chart_of_account_id) [name: 'idx_dre_group_account_roots_account']
-  }
-}
-```
-
-### 3.2 DBML Histórico (v1.2 — modelo planejado original)
-
-O DBML abaixo é preservado para referência histórica. Ele reflete o modelo pretendido na v1.2 e **não corresponde ao schema implementado** — ver tabela de divergências na Introdução.
-
-```dbml
-// ---- account_types ----
-Table account_types {
-  id        integer [pk]
-  descricao text    [not null, unique]
-}
-
-// ---- actors ----
-Table actors {
-  id        integer [pk]
-  descricao text    [not null, unique]
-}
-
-// ---- company ----
-Table company {
-  id         text      [pk]
-  name       text      [not null]
-  cnpj       text      [not null, unique]
-  created_at timestamp [default: `CURRENT_TIMESTAMP`]
-  updated_at timestamp [default: `CURRENT_TIMESTAMP`]
-
-  Indexes {
-    (cnpj) [name: 'idx_company_cnpj']
-    (name) [name: 'idx_company_name']
-  }
-}
-
-// ---- chart_of_account ----
-Table chart_of_account {
-  id                    text      [pk]
-  code                  text      [not null, unique]
-  classification        text      [not null, unique]
-  description           text      [not null]
-  is_analytic           boolean   [not null, default: false, note: 'true=Analítica | false=Sintética']
-  created_at            timestamp [default: `CURRENT_TIMESTAMP`]
-  updated_at            timestamp [default: `CURRENT_TIMESTAMP`]
-  parent_classification text      [ref: > chart_of_account.classification]
-  account_type_id       integer   [null, ref: > account_types.id]
-
-  Indexes {
-    (code)            [name: 'idx_chart_of_account_code']
-    (account_type_id) [name: 'idx_chart_of_account_account_type_id']
-  }
-}
-
-// ---- apuracoes ----
-Table apuracoes {
-  id               text     [pk]
-  created_at       datetime [default: `CURRENT_TIMESTAMP`]
-  data_apuracao    date     [not null]
-  tipo             integer  [not null, note: 'CHECK: IN (1, 2)']
-  valor            float    [not null]
-  conta_destino_id text     [not null, ref: > chart_of_account.id]
-
-  Indexes {
-    (data_apuracao)    [name: 'idx_apuracoes_data_apuracao']
-    (tipo)             [name: 'idx_apuracoes_tipo']
-    (conta_destino_id) [name: 'idx_apuracoes_conta_destino_id']
-  }
-}
-
-// ---- journal_entry ----
-Table journal_entry {
-  id            text      [pk]
-  company_id    text      [not null, ref: > company.id]
-  description   text
-  amount        float     [not null, note: 'CHECK: > 0']
-  is_compound   integer   [not null, default: 0, note: '1=composto | 0=simples']
-  created_at    timestamp [default: `CURRENT_TIMESTAMP`]
-  updated_at    timestamp [default: `CURRENT_TIMESTAMP`]
-  actor_id      integer   [not null, ref: > actors.id]
-  apuration_id  integer   [null, ref: > apuracoes.id]
-
-  Indexes {
-    (company_id) [name: 'idx_journal_company']
-  }
-}
-
-// ---- journal_entry_line ----
-Table journal_entry_line {
-  id               text      [pk]
-  journal_entry_id text      [not null, ref: > journal_entry.id]
-  account_code     text      [not null, ref: > chart_of_account.id]
-  entry_type       varchar   [not null, note: "D=Débito | C=Crédito"]
-  amount           float     [not null, note: '> 0']
-  created_at       timestamp [default: `CURRENT_TIMESTAMP`]
-
-  Indexes {
-    (journal_entry_id) [name: 'idx_jel_entry']
   }
 }
 ```

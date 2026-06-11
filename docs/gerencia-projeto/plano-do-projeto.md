@@ -13,8 +13,9 @@
 
 | Versão | Data | Autor | Observação |
 | :---: | :---: | :---: | ----- |
-| 3.0 | 3 de jun. de 2026 | Elise Lissa | Aprovado |
-| 3.1 | 9 de jun. de 2026 | Elise Lissa | Aprovado |
+| 3.0 | 03/06/2026 | Elise Lissa | Aprovado |
+| 3.1 | 09/06/2026 | Elise Lissa | Aprovado |
+| 3.1 | 10/06/2026 | Eduardo Alves | Aprovado |
 
 **Sumário**
 
