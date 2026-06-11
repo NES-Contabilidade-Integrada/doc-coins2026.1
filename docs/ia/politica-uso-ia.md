@@ -160,7 +160,9 @@ O projeto possui **dois ecossistemas de agentes distintos** — um para o reposi
 
 **Como usar os agentes de codificação** (repositório de código):
 
-Os agentes de codificação operam a partir do workspace `.agents/` no repositório de código-fonte. Toda sessão começa com a leitura do `README.md` do workspace, seguida das regras técnicas (`rules/`) e do contexto de domínio (`context/`) relevantes para a tarefa. A skill `apply-prompt` é o ponto de entrada obrigatório para qualquer implementação.
+O repositório de código-fonte possui seu próprio workspace de agentes, localizado em `.agents/`. Ele inclui contexto de domínio contábil (`context/`), regras técnicas por camada (`rules/`) e um conjunto de skills especializadas (`skills/`). Toda sessão de codificação com IA deve começar pela leitura do `README.md` do workspace, e a skill `apply-prompt` é o ponto de entrada obrigatório para qualquer implementação.
+
+> **💡 Dica:** A estrutura completa do workspace de codificação — organização de pastas, skills disponíveis, fluxo típico de sessão e modelo de governança — está documentada em [Workspace de Agentes de IA](./workspace-agentes.md).
 
 > **Atenção:** Agentes operando **neste repositório de documentação** não devem seguir as instruções contidas no `.agents/` do repositório de código. Aquela estrutura é destinada exclusivamente a tarefas de codificação.
 
