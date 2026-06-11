@@ -145,7 +145,7 @@ Link para o relatório de usabilidade: [Relatório de Teste de Usabilidade](../i
 
 #### 5.1.3. Adotar uma Política de Revisão via Pull Requests e Abandonar o Histórico de Versão Individual
 
-Durante este ciclo, a equipe migrou os documentos do Google Drive para o MkDocs no meio do projeto, em um período em que ainda não havia uma política de revisão bem definida. Dado o volume elevado de documentos a migrar em curto espaço de tempo, optou-se por manter o histórico de versão e revisão em cada documento individualmente — prática herdada do Drive — para preservar a rastreabilidade formal enquanto a transição era concluída.
+Durante este ciclo, a equipe migrou os documentos do Google Drive para o MkDocs no meio do projeto, em um período em que ainda não havia uma política de revisão via Pull Requests estabelecida — vale notar que, embora existisse uma política de revisão de documentos prevista no processo, ela tampouco era praticada de forma consistente, nem mesmo no Drive. Dado o volume elevado de documentos a migrar em curto espaço de tempo, optou-se por manter o histórico de versão e revisão em cada documento individualmente — prática herdada do Drive — para preservar a rastreabilidade formal enquanto a transição era concluída.
 
 Com a migração completa, essa prática deixa de ser necessária. O Git já oferece controle de versão completo e auditável por natureza: cada commit registra o que mudou, quem alterou e quando, e os Pull Requests adicionam uma camada de revisão estruturada antes que qualquer alteração seja incorporada ao repositório. Manter tabelas de histórico nos próprios documentos, nesse contexto, gera redundância e aumenta o custo de manutenção sem agregar rastreabilidade real.
 
