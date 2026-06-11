@@ -156,4 +156,10 @@ Recomenda-se, portanto, que a equipe futura:
 
 #### 5.1.4. Utilizar os Agents e Skills Personalizados do Projeto
 
-Caso a equipe opte por utilizar agente de IA no desenvolvimento, o repositório de documentação conta com agents e skills personalizados para o contexto do projeto, localizados em `.github/agents/` e `.github/skills/`. Esses artefatos encapsulam convenções e padrões específicos do COIN'S — como o padrão de especificação de requisitos e as boas práticas de Markdown adotadas — e devem ser priorizados em relação a instruções genéricas do agente, garantindo consistência com o restante da documentação.
+O projeto COINS possui dois ecossistemas de agentes de IA distintos, um por repositório, que devem ser priorizados em relação a interações genéricas com modelos de linguagem.
+
+**Repositório de documentação (`doc-coins2026.1`):** os agents e skills estão em `.github/agents/` e `.github/skills/`. Eles encapsulam convenções específicas do projeto — padrão de especificação de requisitos, boas práticas de Markdown, estrutura de commits semânticos — e devem ser usados sempre que a equipe for criar ou revisar documentação.
+
+**Repositório de código-fonte (`coins`):** o workspace de agentes vive em `.agents/` e é substancialmente mais complexo. Inclui contexto de domínio contábil (`context/`), regras técnicas por camada (`rules/`) e um conjunto de skills de codificação (`skills/`). Toda sessão de codificação com IA deve começar pela leitura do `README.md` do workspace, e a skill `apply-prompt` é o ponto de entrada obrigatório para qualquer implementação.
+
+A documentação completa de ambos os ecossistemas, incluindo quando usar cada recurso, está em [Workspace de Agentes de IA](../ia/workspace-agentes.md).
