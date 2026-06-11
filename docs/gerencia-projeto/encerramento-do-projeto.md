@@ -92,7 +92,6 @@ Nesta seção é feita uma análise comparativa entre o planejamento original e 
 | Métrica | Resultado |
 | ------- | :-------: |
 | Percentual de escopo implementado | 100% |
-| Percentual de entregas planejadas por Sprint | `<valor>` |
 
 _Tabela 2 - Comparação entre planejado e real._
 
@@ -106,20 +105,6 @@ O insumo recebido da equipe do semestre anterior — na forma de bugs e débitos
 
 Como resultado, o time avançou além do escopo original: além de entregar a DRE conforme planejado, o semestre foi encerrado com o Balanço Patrimonial Líquido também implementado. Ambas as demonstrações contam com opção de exportação integrada, totalizando 100% do escopo planejado cumprido — com entrega adicional em relação ao que estava previsto.
 
-### 3.2. Percentual de Entregas Planejadas por Sprint
-
-Essa métrica avalia a aderência do time ao planejamento estabelecido para cada Sprint, considerando o que estava previsto versus o que foi efetivamente entregue dentro do ciclo.
-
-| Sprint | Planejado | Executado |
-| ------ | --------- | --------- |
-| Sprint 0 | Descoberta e levantamento de requisitos | Descoberta, levantamento de requisitos, correção de bugs e melhorias estruturais |
-| Sprint 1 | Correção de bugs e melhorias estruturais | Apuração do Resultado do Exercício |
-| Sprint 2 | Apuração do Resultado do Exercício | Demonstração do Resultado do Exercício (DRE) + Exportação de Relatórios (DRE) |
-| Sprint 3 | Demonstração do Resultado do Exercício (DRE) | Balanço Patrimonial + Exportação de Relatórios (Balanço Patrimonial) |
-
-_Tabela 3 - Comparativo entre entrega planejada e executada por sprint._
-
-A principal variação ocorreu na Sprint 0: o time optou por absorver as correções de bugs e melhorias estruturais — originalmente previstas para a Sprint 1 — ainda naquele ciclo, antecipando a estabilização da base de código. Essa decisão deslocou todas as entregas subsequentes em uma sprint: a Apuração passou para a Sprint 1, a DRE (com exportação) para a Sprint 2, e o Balanço Patrimonial (com exportação) foi entregue na Sprint 3. O escopo total do semestre foi cumprido integralmente, sem supressão de funcionalidades.
 
 A planilha detalhada com o comparativo planejado vs. entregue está disponível no board do projeto: [GitHub Projects](https://github.com/orgs/NES-Contabilidade-Integrada/projects/9/views/1)
 
