@@ -10,7 +10,7 @@
 ## Histórico de Revisões
 
 | Versão | Data | Revisor | Observação |
-| :---: | :---: | :--- | :--- |
+| 1.1 | 10/06/2026 | Elise Lissa Hasegawa | Aprovado |
 
 ---
 
