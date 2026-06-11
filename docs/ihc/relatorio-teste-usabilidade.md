@@ -225,9 +225,3 @@ Alterou o valor do lançamento; disse que ao alterar o valor do crédito, o déb
 - Imaginou que era necessário finalizar e refez a apuração, foi para a aba da demonstração e inseriu o período de 01 de janeiro até 31 de dezembro, verificou que o lucro foi o mesmo, achou interessante o destaque para o resultado final da DRE e gostou do expandir na composição das contas.
 - Para exportar, foi inicialmente no botão de configurações, pois estava na aba do balanço patrimonial; depois retornou à aba da DRE e baixou o PDF.
 - Disse que a exportação seria interessante para todas as partes, inclusive do livro diário.
-
----
-
-## Resultados Consolidados
-
-![Média das avaliações por tarefa — visão do facilitador](assets/media-facilitador.jpg)
