@@ -26,6 +26,7 @@
 | 1.2 | 25/09/2025 | Jerfferson Júnior | Aprovada |
 | 3.0 | 30/10/2025 | Jerfferson Júnior | Aprovada |
 | 4.2 | 25/11/2025 | Jerfferson Júnior | Aprovada |
+| 4.7 | 10/06/2026 | Elise Lissa | Aprovada |
 
 **Sumário**
 
