@@ -41,13 +41,18 @@
 
 ### Nomenclatura Módulo {#nomenclatura-módulo}
 
-De acordo com o documento de Encerramento de Projeto, onde foi feita uma sugestão do grupo anterior para reavaliar a terminologia utilizada para agrupamento de funcionalidades, adotamos o termo "módulo".
+O documento de Encerramento de Projeto do ciclo anterior continha uma sugestão para reavaliar a terminologia utilizada para agrupamento de funcionalidades.
+
+O termo **"épico"** foi empregado como forma de agrupar conjuntos de funcionalidades, porém, no contexto de metodologias ágeis, "épico" pressupõe a existência de histórias de usuário derivadas, o que não foi adotado nesta iniciativa. Isso gerava imprecisão conceitual na comunicação da equipe e na documentação do projeto.
+
+Adotamos o termo **"Módulo"** para agrupamento de funcionalidades, em substituição ao termo "épico", garantindo maior precisão conceitual alinhada ao modelo de desenvolvimento utilizado.
 
 Link: [Encerramento de Projeto](https://docs.google.com/document/d/11KY8ArqVIogDCkI6RawZNqcKAulH6ye9AHBqHHUv7ig/edit?usp=sharing)
 
 ### Modelo de Descoberta {#modelo-de-descoberta}
 
 Após uma apresentação para o grupo de possíveis modelos para utilizar no projeto, e realizar um trade-off, decidimos usar o método de Entrevistas para levantamento de requisitos. As outras técnicas e métodos considerados, suas vantagens e desvantagens podem ser visualizados no board da plataforma Miro.
+A adoção do método de Entrevistas, traz como consequências: a coleta de requisitos mais direcionada e aprofundada com os stakeholders e maior clareza sobre as necessidades reais dos usuários e do proponente.
 
 Link: [https://miro.com/app/board/uXjVG0HEXeY=/?share\_link\_id=578964212735](https://miro.com/app/board/uXjVG0HEXeY=/?share_link_id=578964212735)
 
