@@ -179,7 +179,7 @@ Os incrementos planejados consistem em funcionalidades adicionais previstas para
    Os artefatos e código do projeto estão armazenados em:  
      
 * Repositório GitHub: [https://github.com/NES-Contabilidade-Integrada/coins2026.1](https://github.com/NES-Contabilidade-Integrada/coins2026.1)  
-* Board de tarefas (Projects): dentro do repositório  
+* Board de tarefas (Projects): [https://github.com/orgs/NES-Contabilidade-Integrada/projects/9/views/1](https://github.com/orgs/NES-Contabilidade-Integrada/projects/9/views/1)  
 * Repositório de documentos (Google Drive): [https://drive.google.com/drive/folders/1dSzfMOYWT6Y\_vLQtLixwUQxB1kRvvvQ1](https://drive.google.com/drive/folders/1dSzfMOYWT6Y_vLQtLixwUQxB1kRvvvQ1)   
 * Documentação com MKdocs: [https://nes-contabilidade-integrada.github.io/doc-coins2026.1/](https://nes-contabilidade-integrada.github.io/doc-coins2026.1/)  
   
