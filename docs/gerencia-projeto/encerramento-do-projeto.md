@@ -91,7 +91,7 @@ Nesta seção é feita uma análise comparativa entre o planejamento original e 
 
 | Métrica | Resultado |
 | ------- | :-------: |
-| Percentual de escopo implementado | `<valor>` |
+| Percentual de escopo implementado | 100% |
 | Percentual de entregas planejadas por Sprint | `<valor>` |
 
 _Tabela 2 - Comparação entre planejado e real._
@@ -100,7 +100,11 @@ _Tabela 2 - Comparação entre planejado e real._
 
 Essa métrica compara o total de funcionalidades planejadas no Plano do Projeto com o total de funcionalidades efetivamente implementadas ao final do semestre.
 
-`<Descrever o resultado e os fatores que influenciaram positiva ou negativamente o cumprimento do escopo.>`
+O escopo planejado previa o desenvolvimento até a Demonstração do Resultado do Exercício (DRE), com os relatórios de exportação tratados como módulos à parte, somando-se às funcionalidades principais de cada entrega.
+
+O insumo recebido da equipe do semestre anterior — na forma de bugs e débitos técnicos acumulados — levou o time a dedicar a Sprint 0 integralmente à correção e às melhorias estruturais, tarefa originalmente prevista para a Sprint 1. Essa antecipação estabilizou a base de código e permitiu que a Apuração do Resultado do Exercício fosse iniciada já na Sprint 1, mantendo o ritmo de entregas subsequentes.
+
+Como resultado, o time avançou além do escopo original: além de entregar a DRE conforme planejado, o semestre foi encerrado com o Balanço Patrimonial Líquido também implementado. Ambas as demonstrações contam com opção de exportação integrada, totalizando 100% do escopo planejado cumprido — com entrega adicional em relação ao que estava previsto.
 
 ### 3.2. Percentual de Entregas Planejadas por Sprint
 
