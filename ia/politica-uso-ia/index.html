@@ -2736,8 +2736,9 @@
 <p><strong>💡 Dica:</strong> O <code>docs-agent</code> conhece as convenções do projeto (prefixos <code>CA-N.</code>, <code>EX- N.</code>, estrutura de RF, etc.) — aproveite isso ao revisar a ERS ou documentos de requisitos.</p>
 </blockquote>
 <p><strong>Como usar os agentes de codificação</strong> (repositório de código):</p>
-<p>Os agentes de codificação operam a partir do workspace <code>.agents/</code> no repositório de código-fonte. Toda sessão começa com a leitura do <code>README.md</code> do workspace, seguida das regras técnicas (<code>rules/</code>) e do contexto de domínio (<code>context/</code>) relevantes para a tarefa. A skill <code>apply-prompt</code> é o ponto de entrada obrigatório para qualquer implementação.</p>
+<p>O repositório de código-fonte possui seu próprio workspace de agentes, localizado em <code>.agents/</code>. Ele inclui contexto de domínio contábil (<code>context/</code>), regras técnicas por camada (<code>rules/</code>) e um conjunto de skills especializadas (<code>skills/</code>). Toda sessão de codificação com IA deve começar pela leitura do <code>README.md</code> do workspace, e a skill <code>apply-prompt</code> é o ponto de entrada obrigatório para qualquer implementação.</p>
 <blockquote>
+<p><strong>💡 Dica:</strong> A estrutura completa do workspace de codificação — organização de pastas, skills disponíveis, fluxo típico de sessão e modelo de governança — está documentada em <a href="../workspace-agentes/">Workspace de Agentes de IA</a>.</p>
 <p><strong>Atenção:</strong> Agentes operando <strong>neste repositório de documentação</strong> não devem seguir as instruções contidas no <code>.agents/</code> do repositório de código. Aquela estrutura é destinada exclusivamente a tarefas de codificação.</p>
 </blockquote>
 <h3 id="skills-disponíveis">Skills disponíveis</h3>
@@ -2916,7 +2917,7 @@
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="11 de junho de 2026 00:13:13 UTC">11 de junho de 2026 00:13:13</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="11 de junho de 2026 04:11:40 UTC">11 de junho de 2026 04:11:40</span>
   </span>
 
     
