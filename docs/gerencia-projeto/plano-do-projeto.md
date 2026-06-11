@@ -264,7 +264,7 @@ A arquitetura do Sistema COIN’S está detalhada no artefato específico dedica
 
 Este plano de projeto apenas referencia esse documento como a fonte oficial das definições arquiteturais.
 
-Documentação completa disponível em: [Especificação Arquitetural](https://nes-contabilidade-integrada.github.io/doc-coins2026.1/arquitetura/especificacao-arquitetural/)
+Documentação completa disponível em: [Especificação Arquitetural](https://nes-contabilidade-integrada.github.io/doc-coins2026.1/arquitetura/especificacao-arquitetural/) | [Diagramas C4](https://nes-contabilidade-integrada.github.io/doc-coins2026.1/arquitetura/diagramas-c4/)
 
 
 ## Validação, Verificação & Teste {#validação,-verificação-&-teste}
@@ -298,8 +298,7 @@ Nesta seção é feito o registro da análise de viabilidade do projeto, apresen
 | Comercial | Sim | O produto atende a uma necessidade real da comunidade acadêmica, proporcionando aos alunos de Ciências Contábeis contato inicial com práticas contábeis. Tem potencial de uso em disciplinas iniciais e projetos de extensão. |
 | Legal | Sim | O sistema não lida com dados sensíveis reais, não viola normas regulatórias e segue boas práticas de registro contábil educacional. Não há qualquer funcionalidade que infrinja leis ou regulamentações vigentes. |
 
-    
 
-    Com base na análise apresentada, o projeto COIN’S é considerado totalmente viável nos aspectos técnico, comercial e legal.
+Com base na análise apresentada, o projeto COIN’S é considerado totalmente viável nos aspectos técnico, comercial e legal.
 
-    Dessa forma, todos os membros do projeto consideram o plano aqui descrito aprovado.
+Dessa forma, todos os membros do projeto consideram o plano aqui descrito aprovado.

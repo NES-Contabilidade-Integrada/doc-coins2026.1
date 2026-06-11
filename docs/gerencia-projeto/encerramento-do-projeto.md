@@ -143,6 +143,17 @@ O teste de usabilidade realizado fornece insights relevantes sobre clareza da in
 
 Link para o relatório de usabilidade: [Relatório de Teste de Usabilidade](../ihc/relatorio-teste-usabilidade.md)
 
-#### 5.1.3. Utilizar os Agents e Skills Personalizados do Projeto
+#### 5.1.3. Adotar uma Política de Revisão via Pull Requests e Abandonar o Histórico de Versão Individual
+
+Durante este ciclo, a equipe migrou os documentos do Google Drive para o MkDocs no meio do projeto, em um período em que ainda não havia uma política de revisão bem definida. Dado o volume elevado de documentos a migrar em curto espaço de tempo, optou-se por manter o histórico de versão e revisão em cada documento individualmente — prática herdada do Drive — para preservar a rastreabilidade formal enquanto a transição era concluída.
+
+Com a migração completa, essa prática deixa de ser necessária. O Git já oferece controle de versão completo e auditável por natureza: cada commit registra o que mudou, quem alterou e quando, e os Pull Requests adicionam uma camada de revisão estruturada antes que qualquer alteração seja incorporada ao repositório. Manter tabelas de histórico nos próprios documentos, nesse contexto, gera redundância e aumenta o custo de manutenção sem agregar rastreabilidade real.
+
+Recomenda-se, portanto, que a equipe futura:
+
+- Estabeleça uma política clara de revisão via Pull Requests, definindo critérios de aprovação, responsáveis por revisar e fluxo de merge;
+- Remova as tabelas de histórico de versão e revisão dos documentos individuais no MkDocs, delegando integralmente esse controle ao Git.
+
+#### 5.1.4. Utilizar os Agents e Skills Personalizados do Projeto
 
 Caso a equipe opte por utilizar agente de IA no desenvolvimento, o repositório de documentação conta com agents e skills personalizados para o contexto do projeto, localizados em `.github/agents/` e `.github/skills/`. Esses artefatos encapsulam convenções e padrões específicos do COIN'S — como o padrão de especificação de requisitos e as boas práticas de Markdown adotadas — e devem ser priorizados em relação a instruções genéricas do agente, garantindo consistência com o restante da documentação.
