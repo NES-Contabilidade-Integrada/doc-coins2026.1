@@ -13,7 +13,7 @@
 
 | Versão | Data | Autor | Observação |
 | :---: | :---: | :---: | ----- |
-|  |  |  | Aprovada |
+| 1.0 | 10/06/2026 | Eduardo Alves | Aprovado |
 
 **Sumário**
 
