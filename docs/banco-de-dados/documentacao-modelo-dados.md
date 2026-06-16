@@ -60,7 +60,7 @@ Sua estrutura atual é composta por nove tabelas de negócio:
 - **dre\_groups:** define os grupos da Demonstração do Resultado do Exercício (DRE). Pré-populado com 11 grupos via migration.
 - **dre\_group\_account\_roots:** associa contas raiz do Plano de Contas a grupos de DRE.
 
-## Diagrama ER (Diagrama de relacionamento de entidade) 
+## Diagrama Modelo Relacional
 
 ![Modelo físico relacional do banco de dados](assets/Diagrama%20ERD.png)
 
