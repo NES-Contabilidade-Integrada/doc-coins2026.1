@@ -1,0 +1,5 @@
+email: nes.contabilidade.integrada@gmail.com
+email: nes.contabilidade.integrada2@gmail.com
+senha: nes-pds2
+
+obs: foi criado um segundo email para utilização do Miro, pois chegou ao limite.
